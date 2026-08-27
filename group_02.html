@@ -19,7 +19,7 @@ textarea{width:100%;box-sizing:border-box;min-height:55px;border:1px solid #bbb;
 </style></head><body>
 <header><h1>Platinum Redux GBA Approval — Group 2</h1>
 <div class="sub">Platinum Redux 2.9.3 TC6 • NDS battle art converted to 64×64 GBA review sprites</div></header>
-<div class="wrap"><div class="nav"><a class="btn" href="index.html">All Groups</a><a class="btn" href="group_01.html">Previous</a><a class="btn" href="group_03.html">Next</a><button onclick="exportCSV("Platinum_Redux_GBA_Group_02")">Export this group&apos;s decisions</button></div><div class="notice">
+<div class="wrap"><div class="notice"><b id="savedCount"></b><br>Your choices are saved locally as you tap them.</div><div class="nav"><a class="btn" href="index.html">All Groups</a><a class="btn" href="group_01.html">Previous</a><a class="btn" href="group_03.html">Next</a><button onclick="downloadCSV("Platinum_Redux_GBA_Group_02")">Download CSV</button><button onclick="showExportPanel("Platinum_Redux_GBA_Group_02")">Show/Copy CSV</button><button onclick="shareCSV("Platinum_Redux_GBA_Group_02")">Share CSV</button></div><div class="notice">
       This is the dedicated Platinum Redux pass you were missing. These are the <b>213 filtered changed-type/regional visual candidates</b>,
       rather than the ordinary duplicate sprites from the full 493-sprite extraction.
       All images are embedded directly in this page.
@@ -373,36 +373,109 @@ textarea{width:100%;box-sizing:border-box;min-height:55px;border:1px solid #bbb;
             <label><input type="radio" name="d_50" value="MAYBE" onchange="saveChoice(this)"> Maybe</label>
           </div>
           <textarea placeholder="Optional note" oninput="saveNote(this)"></textarea>
-        </div></div><div class="nav"><a class="btn" href="index.html">All Groups</a><a class="btn" href="group_01.html">Previous</a><a class="btn" href="group_03.html">Next</a><button onclick="exportCSV("Platinum_Redux_GBA_Group_02")">Export this group&apos;s decisions</button></div></div><script>
-function storeKey(id){return 'mercury_platinum_redux_'+id}
-function saveChoice(el){
- const c=el.closest('[data-key]'), k=storeKey(c.dataset.key);
- const o=JSON.parse(localStorage.getItem(k)||'{}');o.decision=el.value;
- localStorage.setItem(k,JSON.stringify(o));
+        </div></div><div class="nav"><a class="btn" href="index.html">All Groups</a><a class="btn" href="group_01.html">Previous</a><a class="btn" href="group_03.html">Next</a><button onclick="downloadCSV("Platinum_Redux_GBA_Group_02")">Download CSV</button><button onclick="showExportPanel("Platinum_Redux_GBA_Group_02")">Show/Copy CSV</button><button onclick="shareCSV("Platinum_Redux_GBA_Group_02")">Share CSV</button></div></div><script>
+function k(id){return 'mercury_pr_full493_'+id}
+function saveR(el){
+ const c=el.closest('[data-key]'), key=k(c.dataset.key);
+ const o=JSON.parse(localStorage.getItem(key)||'{}');
+ o.decision=el.value;
+ localStorage.setItem(key,JSON.stringify(o));
+ updateSavedCount();
 }
-function saveNote(el){
- const c=el.closest('[data-key]'), k=storeKey(c.dataset.key);
- const o=JSON.parse(localStorage.getItem(k)||'{}');o.notes=el.value;
- localStorage.setItem(k,JSON.stringify(o));
+function saveN(el){
+ const c=el.closest('[data-key]'), key=k(c.dataset.key);
+ const o=JSON.parse(localStorage.getItem(key)||'{}');
+ o.notes=el.value;
+ localStorage.setItem(key,JSON.stringify(o));
 }
 function restore(){
  document.querySelectorAll('[data-key]').forEach(c=>{
-  const o=JSON.parse(localStorage.getItem(storeKey(c.dataset.key))||'{}');
-  if(o.decision){const r=c.querySelector('input[value="'+o.decision+'"]');if(r)r.checked=true}
-  const t=c.querySelector('textarea');if(t&&o.notes)t.value=o.notes;
+  const o=JSON.parse(localStorage.getItem(k(c.dataset.key))||'{}');
+  if(o.decision){
+    const r=c.querySelector('input[value="'+o.decision+'"]');
+    if(r)r.checked=true;
+  }
+  const t=c.querySelector('textarea');
+  if(t&&o.notes)t.value=o.notes;
  });
+ updateSavedCount();
 }
-function esc(s){s=String(s??'');return /[",\n]/.test(s)?'"'+s.replaceAll('"','""')+'"':s}
-function exportCSV(name){
- const rows=[['approval_id','display_name','decision','notes']];
+function esc(s){
+ s=String(s??'');
+ return /[",
+]/.test(s)?'"'+s.replaceAll('"','""')+'"':s;
+}
+function collectRows(){
+ const rows=[['dex','display_name','decision','notes']];
  document.querySelectorAll('[data-key]').forEach(c=>{
-  const o=JSON.parse(localStorage.getItem(storeKey(c.dataset.key))||'{}');
-  rows.push([c.dataset.id,c.dataset.name,o.decision||'',o.notes||'']);
+  const o=JSON.parse(localStorage.getItem(k(c.dataset.key))||'{}');
+  rows.push([c.dataset.dex||c.dataset.id||'',c.dataset.name,o.decision||'',o.notes||'']);
  });
- const csv=rows.map(r=>r.map(esc).join(',')).join('\n');
- const b=new Blob([csv],{type:'text/csv'});
- const a=document.createElement('a');a.href=URL.createObjectURL(b);a.download=name+'_decisions.csv';a.click();
- setTimeout(()=>URL.revokeObjectURL(a.href),1000);
+ return rows;
+}
+function buildCSV(){
+ return collectRows().map(r=>r.map(esc).join(',')).join('
+');
+}
+function updateSavedCount(){
+ let n=0, total=0;
+ document.querySelectorAll('[data-key]').forEach(c=>{
+   total++;
+   const o=JSON.parse(localStorage.getItem(k(c.dataset.key))||'{}');
+   if(o.decision)n++;
+ });
+ const el=document.getElementById('savedCount');
+ if(el)el.textContent=n+' of '+total+' decisions saved on this device';
+}
+function showExportPanel(name){
+ const csv=buildCSV();
+ const box=document.getElementById('exportBox');
+ const ta=document.getElementById('csvText');
+ if(ta)ta.value=csv;
+ if(box)box.style.display='block';
+}
+async function copyCSV(){
+ const csv=buildCSV();
+ try{
+   await navigator.clipboard.writeText(csv);
+   alert('CSV copied. Paste it into Notes, Files, Mail, or send it back to ChatGPT.');
+ }catch(e){
+   const ta=document.getElementById('csvText');
+   if(ta){ta.value=csv;ta.focus();ta.select();}
+   alert('Copy was blocked. The CSV is selected below so you can use Copy manually.');
+ }
+}
+async function shareCSV(name){
+ const csv=buildCSV();
+ try{
+   const file=new File([csv], name+'_decisions.csv', {type:'text/csv'});
+   if(navigator.canShare && navigator.canShare({files:[file]})){
+     await navigator.share({files:[file],title:name+' decisions'});
+     return;
+   }
+ }catch(e){}
+ try{
+   await navigator.share({title:name+' decisions',text:csv});
+ }catch(e){
+   showExportPanel(name);
+   alert('Share is not available here. Use Copy CSV below.');
+ }
+}
+function downloadCSV(name){
+ const csv=buildCSV();
+ try{
+   const blob=new Blob([csv],{type:'text/csv;charset=utf-8'});
+   const url=URL.createObjectURL(blob);
+   const a=document.createElement('a');
+   a.href=url;
+   a.download=name+'_decisions.csv';
+   document.body.appendChild(a);
+   a.click();
+   setTimeout(()=>{URL.revokeObjectURL(url);a.remove();},1500);
+   setTimeout(()=>showExportPanel(name),300);
+ }catch(e){
+   showExportPanel(name);
+ }
 }
 window.addEventListener('DOMContentLoaded',restore);
 </script></body></html>
