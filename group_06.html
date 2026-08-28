@@ -19,12 +19,12 @@ textarea{width:100%;box-sizing:border-box;min-height:55px;border:1px solid #bbb;
 </style></head><body>
 <header><h1>Platinum Redux GBA Approval — Group 6</h1>
 <div class="sub">Platinum Redux 2.9.3 TC6 • NDS battle art converted to 64×64 GBA review sprites</div></header>
-<div class="wrap"><div class="notice"><b id="savedCount"></b><br>Your choices are saved locally as you tap them.</div><div class="nav"><a class="btn" href="index.html">All Groups</a><a class="btn" href="group_05.html">Previous</a><a class="btn" href="group_07.html">Next</a><button onclick="downloadCSV("Platinum_Redux_GBA_Group_06")">Download CSV</button><button onclick="showExportPanel("Platinum_Redux_GBA_Group_06")">Show/Copy CSV</button><button onclick="shareCSV("Platinum_Redux_GBA_Group_06")">Share CSV</button></div><div class="notice">
+<div class="wrap"><div id="counter" style="font-weight:700;margin:8px 0"></div><div class="notice"><b id="savedCount"></b><br>Your choices are saved locally as you tap them.</div><div class="nav"><a class="btn" href="index.html">All Groups</a><a class="btn" href="group_05.html">Previous</a><a class="btn" href="group_07.html">Next</a><button onclick="exportCSV()">Export this group's decisions</button></div><div class="notice">
       This is the dedicated Platinum Redux pass you were missing. These are the <b>213 filtered changed-type/regional visual candidates</b>,
       rather than the ordinary duplicate sprites from the full 493-sprite extraction.
       All images are embedded directly in this page.
     </div><div class="grid">
-        <div class="card" data-key="PR-126" data-id="126" data-name="Platinum Redux Numel">
+        <div class="card" data-id="126" data-name="Platinum Redux Numel">
           <div class="muted">National Dex #322</div>
           <h2>Platinum Redux Numel</h2>
           <div class="types"><b>Gen IV:</b> Fire/Ground<br>
@@ -36,9 +36,9 @@ textarea{width:100%;box-sizing:border-box;min-height:55px;border:1px solid #bbb;
             <label><input type="radio" name="d_126" value="DECLINE" onchange="saveChoice(this)"> Decline</label>
             <label><input type="radio" name="d_126" value="MAYBE" onchange="saveChoice(this)"> Maybe</label>
           </div>
-          <textarea placeholder="Optional note" oninput="saveNote(this)"></textarea>
+          <textarea class="notes" placeholder="Optional note" oninput="saveNote(this)"></textarea>
         </div>
-        <div class="card" data-key="PR-127" data-id="127" data-name="Platinum Redux Camerupt">
+        <div class="card" data-id="127" data-name="Platinum Redux Camerupt">
           <div class="muted">National Dex #323</div>
           <h2>Platinum Redux Camerupt</h2>
           <div class="types"><b>Gen IV:</b> Fire/Ground<br>
@@ -50,9 +50,9 @@ textarea{width:100%;box-sizing:border-box;min-height:55px;border:1px solid #bbb;
             <label><input type="radio" name="d_127" value="DECLINE" onchange="saveChoice(this)"> Decline</label>
             <label><input type="radio" name="d_127" value="MAYBE" onchange="saveChoice(this)"> Maybe</label>
           </div>
-          <textarea placeholder="Optional note" oninput="saveNote(this)"></textarea>
+          <textarea class="notes" placeholder="Optional note" oninput="saveNote(this)"></textarea>
         </div>
-        <div class="card" data-key="PR-128" data-id="128" data-name="Platinum Redux Torkoal">
+        <div class="card" data-id="128" data-name="Platinum Redux Torkoal">
           <div class="muted">National Dex #324</div>
           <h2>Platinum Redux Torkoal</h2>
           <div class="types"><b>Gen IV:</b> Fire<br>
@@ -64,9 +64,9 @@ textarea{width:100%;box-sizing:border-box;min-height:55px;border:1px solid #bbb;
             <label><input type="radio" name="d_128" value="DECLINE" onchange="saveChoice(this)"> Decline</label>
             <label><input type="radio" name="d_128" value="MAYBE" onchange="saveChoice(this)"> Maybe</label>
           </div>
-          <textarea placeholder="Optional note" oninput="saveNote(this)"></textarea>
+          <textarea class="notes" placeholder="Optional note" oninput="saveNote(this)"></textarea>
         </div>
-        <div class="card" data-key="PR-129" data-id="129" data-name="Platinum Redux Grumpig">
+        <div class="card" data-id="129" data-name="Platinum Redux Grumpig">
           <div class="muted">National Dex #326</div>
           <h2>Platinum Redux Grumpig</h2>
           <div class="types"><b>Gen IV:</b> Psychic<br>
@@ -78,9 +78,9 @@ textarea{width:100%;box-sizing:border-box;min-height:55px;border:1px solid #bbb;
             <label><input type="radio" name="d_129" value="DECLINE" onchange="saveChoice(this)"> Decline</label>
             <label><input type="radio" name="d_129" value="MAYBE" onchange="saveChoice(this)"> Maybe</label>
           </div>
-          <textarea placeholder="Optional note" oninput="saveNote(this)"></textarea>
+          <textarea class="notes" placeholder="Optional note" oninput="saveNote(this)"></textarea>
         </div>
-        <div class="card" data-key="PR-130" data-id="130" data-name="Platinum Redux Spinda">
+        <div class="card" data-id="130" data-name="Platinum Redux Spinda">
           <div class="muted">National Dex #327</div>
           <h2>Platinum Redux Spinda</h2>
           <div class="types"><b>Gen IV:</b> Normal<br>
@@ -92,9 +92,9 @@ textarea{width:100%;box-sizing:border-box;min-height:55px;border:1px solid #bbb;
             <label><input type="radio" name="d_130" value="DECLINE" onchange="saveChoice(this)"> Decline</label>
             <label><input type="radio" name="d_130" value="MAYBE" onchange="saveChoice(this)"> Maybe</label>
           </div>
-          <textarea placeholder="Optional note" oninput="saveNote(this)"></textarea>
+          <textarea class="notes" placeholder="Optional note" oninput="saveNote(this)"></textarea>
         </div>
-        <div class="card" data-key="PR-131" data-id="131" data-name="Platinum Redux Flygon">
+        <div class="card" data-id="131" data-name="Platinum Redux Flygon">
           <div class="muted">National Dex #330</div>
           <h2>Platinum Redux Flygon</h2>
           <div class="types"><b>Gen IV:</b> Ground/Dragon<br>
@@ -106,9 +106,9 @@ textarea{width:100%;box-sizing:border-box;min-height:55px;border:1px solid #bbb;
             <label><input type="radio" name="d_131" value="DECLINE" onchange="saveChoice(this)"> Decline</label>
             <label><input type="radio" name="d_131" value="MAYBE" onchange="saveChoice(this)"> Maybe</label>
           </div>
-          <textarea placeholder="Optional note" oninput="saveNote(this)"></textarea>
+          <textarea class="notes" placeholder="Optional note" oninput="saveNote(this)"></textarea>
         </div>
-        <div class="card" data-key="PR-132" data-id="132" data-name="Platinum Redux Altaria">
+        <div class="card" data-id="132" data-name="Platinum Redux Altaria">
           <div class="muted">National Dex #334</div>
           <h2>Platinum Redux Altaria</h2>
           <div class="types"><b>Gen IV:</b> Dragon/Flying<br>
@@ -120,9 +120,9 @@ textarea{width:100%;box-sizing:border-box;min-height:55px;border:1px solid #bbb;
             <label><input type="radio" name="d_132" value="DECLINE" onchange="saveChoice(this)"> Decline</label>
             <label><input type="radio" name="d_132" value="MAYBE" onchange="saveChoice(this)"> Maybe</label>
           </div>
-          <textarea placeholder="Optional note" oninput="saveNote(this)"></textarea>
+          <textarea class="notes" placeholder="Optional note" oninput="saveNote(this)"></textarea>
         </div>
-        <div class="card" data-key="PR-133" data-id="133" data-name="Platinum Redux Zangoose">
+        <div class="card" data-id="133" data-name="Platinum Redux Zangoose">
           <div class="muted">National Dex #335</div>
           <h2>Platinum Redux Zangoose</h2>
           <div class="types"><b>Gen IV:</b> Normal<br>
@@ -134,9 +134,9 @@ textarea{width:100%;box-sizing:border-box;min-height:55px;border:1px solid #bbb;
             <label><input type="radio" name="d_133" value="DECLINE" onchange="saveChoice(this)"> Decline</label>
             <label><input type="radio" name="d_133" value="MAYBE" onchange="saveChoice(this)"> Maybe</label>
           </div>
-          <textarea placeholder="Optional note" oninput="saveNote(this)"></textarea>
+          <textarea class="notes" placeholder="Optional note" oninput="saveNote(this)"></textarea>
         </div>
-        <div class="card" data-key="PR-134" data-id="134" data-name="Platinum Redux Seviper">
+        <div class="card" data-id="134" data-name="Platinum Redux Seviper">
           <div class="muted">National Dex #336</div>
           <h2>Platinum Redux Seviper</h2>
           <div class="types"><b>Gen IV:</b> Poison<br>
@@ -148,9 +148,9 @@ textarea{width:100%;box-sizing:border-box;min-height:55px;border:1px solid #bbb;
             <label><input type="radio" name="d_134" value="DECLINE" onchange="saveChoice(this)"> Decline</label>
             <label><input type="radio" name="d_134" value="MAYBE" onchange="saveChoice(this)"> Maybe</label>
           </div>
-          <textarea placeholder="Optional note" oninput="saveNote(this)"></textarea>
+          <textarea class="notes" placeholder="Optional note" oninput="saveNote(this)"></textarea>
         </div>
-        <div class="card" data-key="PR-135" data-id="135" data-name="Platinum Redux Lunatone">
+        <div class="card" data-id="135" data-name="Platinum Redux Lunatone">
           <div class="muted">National Dex #337</div>
           <h2>Platinum Redux Lunatone</h2>
           <div class="types"><b>Gen IV:</b> Rock/Psychic<br>
@@ -162,9 +162,9 @@ textarea{width:100%;box-sizing:border-box;min-height:55px;border:1px solid #bbb;
             <label><input type="radio" name="d_135" value="DECLINE" onchange="saveChoice(this)"> Decline</label>
             <label><input type="radio" name="d_135" value="MAYBE" onchange="saveChoice(this)"> Maybe</label>
           </div>
-          <textarea placeholder="Optional note" oninput="saveNote(this)"></textarea>
+          <textarea class="notes" placeholder="Optional note" oninput="saveNote(this)"></textarea>
         </div>
-        <div class="card" data-key="PR-136" data-id="136" data-name="Platinum Redux Crawdaunt">
+        <div class="card" data-id="136" data-name="Platinum Redux Crawdaunt">
           <div class="muted">National Dex #342</div>
           <h2>Platinum Redux Crawdaunt</h2>
           <div class="types"><b>Gen IV:</b> Water/Dark<br>
@@ -176,9 +176,9 @@ textarea{width:100%;box-sizing:border-box;min-height:55px;border:1px solid #bbb;
             <label><input type="radio" name="d_136" value="DECLINE" onchange="saveChoice(this)"> Decline</label>
             <label><input type="radio" name="d_136" value="MAYBE" onchange="saveChoice(this)"> Maybe</label>
           </div>
-          <textarea placeholder="Optional note" oninput="saveNote(this)"></textarea>
+          <textarea class="notes" placeholder="Optional note" oninput="saveNote(this)"></textarea>
         </div>
-        <div class="card" data-key="PR-137" data-id="137" data-name="Platinum Redux Milotic">
+        <div class="card" data-id="137" data-name="Platinum Redux Milotic">
           <div class="muted">National Dex #350</div>
           <h2>Platinum Redux Milotic</h2>
           <div class="types"><b>Gen IV:</b> Water<br>
@@ -190,9 +190,9 @@ textarea{width:100%;box-sizing:border-box;min-height:55px;border:1px solid #bbb;
             <label><input type="radio" name="d_137" value="DECLINE" onchange="saveChoice(this)"> Decline</label>
             <label><input type="radio" name="d_137" value="MAYBE" onchange="saveChoice(this)"> Maybe</label>
           </div>
-          <textarea placeholder="Optional note" oninput="saveNote(this)"></textarea>
+          <textarea class="notes" placeholder="Optional note" oninput="saveNote(this)"></textarea>
         </div>
-        <div class="card" data-key="PR-138" data-id="138" data-name="Platinum Redux Castform">
+        <div class="card" data-id="138" data-name="Platinum Redux Castform">
           <div class="muted">National Dex #351</div>
           <h2>Platinum Redux Castform</h2>
           <div class="types"><b>Gen IV:</b> Normal<br>
@@ -204,9 +204,9 @@ textarea{width:100%;box-sizing:border-box;min-height:55px;border:1px solid #bbb;
             <label><input type="radio" name="d_138" value="DECLINE" onchange="saveChoice(this)"> Decline</label>
             <label><input type="radio" name="d_138" value="MAYBE" onchange="saveChoice(this)"> Maybe</label>
           </div>
-          <textarea placeholder="Optional note" oninput="saveNote(this)"></textarea>
+          <textarea class="notes" placeholder="Optional note" oninput="saveNote(this)"></textarea>
         </div>
-        <div class="card" data-key="PR-139" data-id="139" data-name="Platinum Redux Kecleon">
+        <div class="card" data-id="139" data-name="Platinum Redux Kecleon">
           <div class="muted">National Dex #352</div>
           <h2>Platinum Redux Kecleon</h2>
           <div class="types"><b>Gen IV:</b> Normal<br>
@@ -218,9 +218,9 @@ textarea{width:100%;box-sizing:border-box;min-height:55px;border:1px solid #bbb;
             <label><input type="radio" name="d_139" value="DECLINE" onchange="saveChoice(this)"> Decline</label>
             <label><input type="radio" name="d_139" value="MAYBE" onchange="saveChoice(this)"> Maybe</label>
           </div>
-          <textarea placeholder="Optional note" oninput="saveNote(this)"></textarea>
+          <textarea class="notes" placeholder="Optional note" oninput="saveNote(this)"></textarea>
         </div>
-        <div class="card" data-key="PR-140" data-id="140" data-name="Platinum Redux Banette">
+        <div class="card" data-id="140" data-name="Platinum Redux Banette">
           <div class="muted">National Dex #354</div>
           <h2>Platinum Redux Banette</h2>
           <div class="types"><b>Gen IV:</b> Ghost<br>
@@ -232,9 +232,9 @@ textarea{width:100%;box-sizing:border-box;min-height:55px;border:1px solid #bbb;
             <label><input type="radio" name="d_140" value="DECLINE" onchange="saveChoice(this)"> Decline</label>
             <label><input type="radio" name="d_140" value="MAYBE" onchange="saveChoice(this)"> Maybe</label>
           </div>
-          <textarea placeholder="Optional note" oninput="saveNote(this)"></textarea>
+          <textarea class="notes" placeholder="Optional note" oninput="saveNote(this)"></textarea>
         </div>
-        <div class="card" data-key="PR-141" data-id="141" data-name="Platinum Redux Tropius">
+        <div class="card" data-id="141" data-name="Platinum Redux Tropius">
           <div class="muted">National Dex #357</div>
           <h2>Platinum Redux Tropius</h2>
           <div class="types"><b>Gen IV:</b> Grass/Flying<br>
@@ -246,9 +246,9 @@ textarea{width:100%;box-sizing:border-box;min-height:55px;border:1px solid #bbb;
             <label><input type="radio" name="d_141" value="DECLINE" onchange="saveChoice(this)"> Decline</label>
             <label><input type="radio" name="d_141" value="MAYBE" onchange="saveChoice(this)"> Maybe</label>
           </div>
-          <textarea placeholder="Optional note" oninput="saveNote(this)"></textarea>
+          <textarea class="notes" placeholder="Optional note" oninput="saveNote(this)"></textarea>
         </div>
-        <div class="card" data-key="PR-142" data-id="142" data-name="Platinum Redux Chimecho">
+        <div class="card" data-id="142" data-name="Platinum Redux Chimecho">
           <div class="muted">National Dex #358</div>
           <h2>Platinum Redux Chimecho</h2>
           <div class="types"><b>Gen IV:</b> Psychic<br>
@@ -260,9 +260,9 @@ textarea{width:100%;box-sizing:border-box;min-height:55px;border:1px solid #bbb;
             <label><input type="radio" name="d_142" value="DECLINE" onchange="saveChoice(this)"> Decline</label>
             <label><input type="radio" name="d_142" value="MAYBE" onchange="saveChoice(this)"> Maybe</label>
           </div>
-          <textarea placeholder="Optional note" oninput="saveNote(this)"></textarea>
+          <textarea class="notes" placeholder="Optional note" oninput="saveNote(this)"></textarea>
         </div>
-        <div class="card" data-key="PR-143" data-id="143" data-name="Platinum Redux Absol">
+        <div class="card" data-id="143" data-name="Platinum Redux Absol">
           <div class="muted">National Dex #359</div>
           <h2>Platinum Redux Absol</h2>
           <div class="types"><b>Gen IV:</b> Dark<br>
@@ -274,9 +274,9 @@ textarea{width:100%;box-sizing:border-box;min-height:55px;border:1px solid #bbb;
             <label><input type="radio" name="d_143" value="DECLINE" onchange="saveChoice(this)"> Decline</label>
             <label><input type="radio" name="d_143" value="MAYBE" onchange="saveChoice(this)"> Maybe</label>
           </div>
-          <textarea placeholder="Optional note" oninput="saveNote(this)"></textarea>
+          <textarea class="notes" placeholder="Optional note" oninput="saveNote(this)"></textarea>
         </div>
-        <div class="card" data-key="PR-144" data-id="144" data-name="Platinum Redux Wynaut">
+        <div class="card" data-id="144" data-name="Platinum Redux Wynaut">
           <div class="muted">National Dex #360</div>
           <h2>Platinum Redux Wynaut</h2>
           <div class="types"><b>Gen IV:</b> Psychic<br>
@@ -288,9 +288,9 @@ textarea{width:100%;box-sizing:border-box;min-height:55px;border:1px solid #bbb;
             <label><input type="radio" name="d_144" value="DECLINE" onchange="saveChoice(this)"> Decline</label>
             <label><input type="radio" name="d_144" value="MAYBE" onchange="saveChoice(this)"> Maybe</label>
           </div>
-          <textarea placeholder="Optional note" oninput="saveNote(this)"></textarea>
+          <textarea class="notes" placeholder="Optional note" oninput="saveNote(this)"></textarea>
         </div>
-        <div class="card" data-key="PR-145" data-id="145" data-name="Platinum Redux Glalie">
+        <div class="card" data-id="145" data-name="Platinum Redux Glalie">
           <div class="muted">National Dex #362</div>
           <h2>Platinum Redux Glalie</h2>
           <div class="types"><b>Gen IV:</b> Ice<br>
@@ -302,9 +302,9 @@ textarea{width:100%;box-sizing:border-box;min-height:55px;border:1px solid #bbb;
             <label><input type="radio" name="d_145" value="DECLINE" onchange="saveChoice(this)"> Decline</label>
             <label><input type="radio" name="d_145" value="MAYBE" onchange="saveChoice(this)"> Maybe</label>
           </div>
-          <textarea placeholder="Optional note" oninput="saveNote(this)"></textarea>
+          <textarea class="notes" placeholder="Optional note" oninput="saveNote(this)"></textarea>
         </div>
-        <div class="card" data-key="PR-146" data-id="146" data-name="Platinum Redux Clamperl">
+        <div class="card" data-id="146" data-name="Platinum Redux Clamperl">
           <div class="muted">National Dex #366</div>
           <h2>Platinum Redux Clamperl</h2>
           <div class="types"><b>Gen IV:</b> Water<br>
@@ -316,9 +316,9 @@ textarea{width:100%;box-sizing:border-box;min-height:55px;border:1px solid #bbb;
             <label><input type="radio" name="d_146" value="DECLINE" onchange="saveChoice(this)"> Decline</label>
             <label><input type="radio" name="d_146" value="MAYBE" onchange="saveChoice(this)"> Maybe</label>
           </div>
-          <textarea placeholder="Optional note" oninput="saveNote(this)"></textarea>
+          <textarea class="notes" placeholder="Optional note" oninput="saveNote(this)"></textarea>
         </div>
-        <div class="card" data-key="PR-147" data-id="147" data-name="Platinum Redux Huntail">
+        <div class="card" data-id="147" data-name="Platinum Redux Huntail">
           <div class="muted">National Dex #367</div>
           <h2>Platinum Redux Huntail</h2>
           <div class="types"><b>Gen IV:</b> Water<br>
@@ -330,9 +330,9 @@ textarea{width:100%;box-sizing:border-box;min-height:55px;border:1px solid #bbb;
             <label><input type="radio" name="d_147" value="DECLINE" onchange="saveChoice(this)"> Decline</label>
             <label><input type="radio" name="d_147" value="MAYBE" onchange="saveChoice(this)"> Maybe</label>
           </div>
-          <textarea placeholder="Optional note" oninput="saveNote(this)"></textarea>
+          <textarea class="notes" placeholder="Optional note" oninput="saveNote(this)"></textarea>
         </div>
-        <div class="card" data-key="PR-148" data-id="148" data-name="Platinum Redux Gorebyss">
+        <div class="card" data-id="148" data-name="Platinum Redux Gorebyss">
           <div class="muted">National Dex #368</div>
           <h2>Platinum Redux Gorebyss</h2>
           <div class="types"><b>Gen IV:</b> Water<br>
@@ -344,9 +344,9 @@ textarea{width:100%;box-sizing:border-box;min-height:55px;border:1px solid #bbb;
             <label><input type="radio" name="d_148" value="DECLINE" onchange="saveChoice(this)"> Decline</label>
             <label><input type="radio" name="d_148" value="MAYBE" onchange="saveChoice(this)"> Maybe</label>
           </div>
-          <textarea placeholder="Optional note" oninput="saveNote(this)"></textarea>
+          <textarea class="notes" placeholder="Optional note" oninput="saveNote(this)"></textarea>
         </div>
-        <div class="card" data-key="PR-149" data-id="149" data-name="Platinum Redux Luvdisc">
+        <div class="card" data-id="149" data-name="Platinum Redux Luvdisc">
           <div class="muted">National Dex #370</div>
           <h2>Platinum Redux Luvdisc</h2>
           <div class="types"><b>Gen IV:</b> Water<br>
@@ -358,9 +358,9 @@ textarea{width:100%;box-sizing:border-box;min-height:55px;border:1px solid #bbb;
             <label><input type="radio" name="d_149" value="DECLINE" onchange="saveChoice(this)"> Decline</label>
             <label><input type="radio" name="d_149" value="MAYBE" onchange="saveChoice(this)"> Maybe</label>
           </div>
-          <textarea placeholder="Optional note" oninput="saveNote(this)"></textarea>
+          <textarea class="notes" placeholder="Optional note" oninput="saveNote(this)"></textarea>
         </div>
-        <div class="card" data-key="PR-150" data-id="150" data-name="Platinum Redux Salamence">
+        <div class="card" data-id="150" data-name="Platinum Redux Salamence">
           <div class="muted">National Dex #373</div>
           <h2>Platinum Redux Salamence</h2>
           <div class="types"><b>Gen IV:</b> Dragon/Flying<br>
@@ -372,110 +372,104 @@ textarea{width:100%;box-sizing:border-box;min-height:55px;border:1px solid #bbb;
             <label><input type="radio" name="d_150" value="DECLINE" onchange="saveChoice(this)"> Decline</label>
             <label><input type="radio" name="d_150" value="MAYBE" onchange="saveChoice(this)"> Maybe</label>
           </div>
-          <textarea placeholder="Optional note" oninput="saveNote(this)"></textarea>
-        </div></div><div class="nav"><a class="btn" href="index.html">All Groups</a><a class="btn" href="group_05.html">Previous</a><a class="btn" href="group_07.html">Next</a><button onclick="downloadCSV("Platinum_Redux_GBA_Group_06")">Download CSV</button><button onclick="showExportPanel("Platinum_Redux_GBA_Group_06")">Show/Copy CSV</button><button onclick="shareCSV("Platinum_Redux_GBA_Group_06")">Share CSV</button></div></div><script>
-function k(id){return 'mercury_pr_full493_'+id}
-function saveR(el){
- const c=el.closest('[data-key]'), key=k(c.dataset.key);
- const o=JSON.parse(localStorage.getItem(key)||'{}');
- o.decision=el.value;
- localStorage.setItem(key,JSON.stringify(o));
- updateSavedCount();
+          <textarea class="notes" placeholder="Optional note" oninput="saveNote(this)"></textarea>
+        </div></div><div class="nav"><a class="btn" href="index.html">All Groups</a><a class="btn" href="group_05.html">Previous</a><a class="btn" href="group_07.html">Next</a><button onclick="exportCSV()">Export this group's decisions</button></div></div><script>
+function escCSV(v){v=(v??'').toString(); return '"'+v.replaceAll('"','""')+'"';}
+
+function oldJsonKey(id){return 'mercury_pr_full493_PR-'+id;}
+function filteredJsonKey(id){return 'mercury_platinum_redux_filtered_'+id;}
+function decisionKey(id){return 'mercury_platinum_redux_213_'+id+'_decision';}
+function noteKey(id){return 'mercury_platinum_redux_213_'+id+'_note';}
+
+function saveChoice(el){
+  const card=el.closest('.card');
+  const id=card.dataset.id;
+  localStorage.setItem(decisionKey(id),el.value);
+
+  const old=JSON.parse(localStorage.getItem(filteredJsonKey(id))||'{}');
+  old.decision=el.value;
+  localStorage.setItem(filteredJsonKey(id),JSON.stringify(old));
+
+  updateCount();
 }
-function saveN(el){
- const c=el.closest('[data-key]'), key=k(c.dataset.key);
- const o=JSON.parse(localStorage.getItem(key)||'{}');
- o.notes=el.value;
- localStorage.setItem(key,JSON.stringify(o));
+
+function saveNote(el){
+  const card=el.closest('.card');
+  const id=card.dataset.id;
+  localStorage.setItem(noteKey(id),el.value);
+
+  const old=JSON.parse(localStorage.getItem(filteredJsonKey(id))||'{}');
+  old.notes=el.value;
+  localStorage.setItem(filteredJsonKey(id),JSON.stringify(old));
 }
+
 function restore(){
- document.querySelectorAll('[data-key]').forEach(c=>{
-  const o=JSON.parse(localStorage.getItem(k(c.dataset.key))||'{}');
-  if(o.decision){
-    const r=c.querySelector('input[value="'+o.decision+'"]');
-    if(r)r.checked=true;
-  }
-  const t=c.querySelector('textarea');
-  if(t&&o.notes)t.value=o.notes;
- });
- updateSavedCount();
+  document.querySelectorAll('.card').forEach(card=>{
+    const id=card.dataset.id;
+
+    // Recover from this 213-browser's prior storage if it exists.
+    const oldFiltered=JSON.parse(localStorage.getItem(filteredJsonKey(id))||'{}');
+
+    // Also try the previous generic/full Platinum Redux storage.
+    const oldFull=JSON.parse(localStorage.getItem(oldJsonKey(id))||'{}');
+
+    const d=
+      localStorage.getItem(decisionKey(id)) ||
+      oldFiltered.decision ||
+      oldFull.decision ||
+      '';
+
+    const n=
+      localStorage.getItem(noteKey(id)) ||
+      oldFiltered.notes ||
+      oldFull.notes ||
+      '';
+
+    if(d){
+      const r=card.querySelector('input[value="'+d+'"]');
+      if(r)r.checked=true;
+    }
+    const notes=card.querySelector('.notes');
+    if(notes)notes.value=n;
+  });
+  updateCount();
 }
-function esc(s){
- s=String(s??'');
- return /[",
-]/.test(s)?'"'+s.replaceAll('"','""')+'"':s;
+
+function updateCount(){
+  let a=0,d=0,m=0;
+  document.querySelectorAll('.card').forEach(c=>{
+    const x=c.querySelector('input[type=radio]:checked');
+    if(x){
+      if(x.value==='APPROVE')a++;
+      else if(x.value==='DECLINE')d++;
+      else m++;
+    }
+  });
+  const counter=document.getElementById('counter');
+  if(counter)counter.textContent=`Approved ${a} • Declined ${d} • Maybe ${m}`;
 }
-function collectRows(){
- const rows=[['dex','display_name','decision','notes']];
- document.querySelectorAll('[data-key]').forEach(c=>{
-  const o=JSON.parse(localStorage.getItem(k(c.dataset.key))||'{}');
-  rows.push([c.dataset.dex||c.dataset.id||'',c.dataset.name,o.decision||'',o.notes||'']);
- });
- return rows;
+
+function exportCSV(){
+  let rows=[['approval_id','display_name','decision','notes']];
+  document.querySelectorAll('.card').forEach(c=>{
+    const x=c.querySelector('input[type=radio]:checked');
+    const notes=c.querySelector('.notes');
+    rows.push([
+      c.dataset.id,
+      c.dataset.name,
+      x?x.value:'',
+      notes?notes.value:''
+    ]);
+  });
+
+  const text=rows.map(r=>r.map(escCSV).join(',')).join(String.fromCharCode(10));
+  const blob=new Blob([text],{type:'text/csv'});
+  const a=document.createElement('a');
+  a.href=URL.createObjectURL(blob);
+  a.download=document.title.replaceAll(' ','_')+'_decisions.csv';
+  a.click();
+  URL.revokeObjectURL(a.href);
 }
-function buildCSV(){
- return collectRows().map(r=>r.map(esc).join(',')).join('
-');
-}
-function updateSavedCount(){
- let n=0, total=0;
- document.querySelectorAll('[data-key]').forEach(c=>{
-   total++;
-   const o=JSON.parse(localStorage.getItem(k(c.dataset.key))||'{}');
-   if(o.decision)n++;
- });
- const el=document.getElementById('savedCount');
- if(el)el.textContent=n+' of '+total+' decisions saved on this device';
-}
-function showExportPanel(name){
- const csv=buildCSV();
- const box=document.getElementById('exportBox');
- const ta=document.getElementById('csvText');
- if(ta)ta.value=csv;
- if(box)box.style.display='block';
-}
-async function copyCSV(){
- const csv=buildCSV();
- try{
-   await navigator.clipboard.writeText(csv);
-   alert('CSV copied. Paste it into Notes, Files, Mail, or send it back to ChatGPT.');
- }catch(e){
-   const ta=document.getElementById('csvText');
-   if(ta){ta.value=csv;ta.focus();ta.select();}
-   alert('Copy was blocked. The CSV is selected below so you can use Copy manually.');
- }
-}
-async function shareCSV(name){
- const csv=buildCSV();
- try{
-   const file=new File([csv], name+'_decisions.csv', {type:'text/csv'});
-   if(navigator.canShare && navigator.canShare({files:[file]})){
-     await navigator.share({files:[file],title:name+' decisions'});
-     return;
-   }
- }catch(e){}
- try{
-   await navigator.share({title:name+' decisions',text:csv});
- }catch(e){
-   showExportPanel(name);
-   alert('Share is not available here. Use Copy CSV below.');
- }
-}
-function downloadCSV(name){
- const csv=buildCSV();
- try{
-   const blob=new Blob([csv],{type:'text/csv;charset=utf-8'});
-   const url=URL.createObjectURL(blob);
-   const a=document.createElement('a');
-   a.href=url;
-   a.download=name+'_decisions.csv';
-   document.body.appendChild(a);
-   a.click();
-   setTimeout(()=>{URL.revokeObjectURL(url);a.remove();},1500);
-   setTimeout(()=>showExportPanel(name),300);
- }catch(e){
-   showExportPanel(name);
- }
-}
+
 window.addEventListener('DOMContentLoaded',restore);
 </script></body></html>
