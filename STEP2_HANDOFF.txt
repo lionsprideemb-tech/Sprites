@@ -1,0 +1,35 @@
+POKEMON MERCURY REDUX — PRE-PHASE 3 SPRITE INTEGRATION STEP 2
+
+TARGET
+Import the 243 user-approved Elite Redux sprite sets from pinned source commit:
+8bf8bf062e40724cc07569d84c67763f20e4d00e
+
+QUEUE
+243 approved entries
+125 explicit Redux forms => Delta in Mercury player-facing naming
+1215 required source files:
+- 243 front sprites
+- 243 back sprites
+- 243 party icons
+- 243 normal palettes
+- 243 shiny palettes
+
+CURRENT STATE
+The Step 2 import map, exact asset manifest, Delta naming map, browser collector,
+and local validation/import script are complete.
+
+WHY THE COLLECTOR EXISTS
+The build container cannot directly retrieve the public GitHub repository archive.
+ER243_ASSET_COLLECTOR.html performs the source acquisition in a normal browser
+using the exact pinned raw GitHub paths. It does not choose or change any sprites.
+
+NEXT ACTION
+Open ER243_ASSET_COLLECTOR.html in Safari/Chrome or host it on the same GitHub Pages
+site used for the sprite reviewers. Press:
+"Collect 243 approved sprite sets"
+
+Then upload:
+Mercury_ER243_Approved_Assets_8bf8bf0.zip
+
+After that upload, import_er243_assets.py can stage and validate the complete batch
+inside the isolated Mercury integration fork. The sealed Phase 2 source remains untouched.
