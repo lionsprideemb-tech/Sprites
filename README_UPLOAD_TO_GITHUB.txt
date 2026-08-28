@@ -1,18 +1,14 @@
-POKEMON MERCURY REDUX — STEP 2 GITHUB READY
+POKEMON MERCURY REDUX — STEP 3B GITHUB READY
 
-IMPORTANT:
-GitHub Pages loads index.html automatically.
+Use the same GitHub Pages process that worked for Step 2.
 
-To use this:
-1. Open the SAME GitHub repository/folder that currently hosts your sprite approval page.
-2. Replace its current index.html with the index.html in this package.
-3. Upload the other files in this package beside it.
-4. Commit the changes.
-5. Reload your GitHub Pages URL.
-6. You should see a GREEN banner saying:
-   STEP 2 COLLECTOR IS LIVE
-7. Press "Collect 243 approved sprite sets".
-8. Wait until all 1,215 files are processed and the ZIP downloads.
-9. Upload that ZIP back to ChatGPT.
+1. Replace the current Pages index.html with this index.html.
+2. Commit.
+3. Reload the Pages URL.
+4. Confirm the green banner: STEP 3B EXACT DATA COLLECTOR — LIVE
+5. Press "Collect Step 3B source data".
+6. Upload Mercury_STEP3B_ER_Config_3073176.zip back to ChatGPT.
 
-If you still see the old sprite-review homepage, GitHub Pages is still serving the old index.html or a different folder/branch.
+Exact source:
+Elite-Redux/er-config
+commit 3073176bb3a5abf7a1fe52c23e61bcdf580e4685
