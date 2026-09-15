@@ -93,20 +93,20 @@ def make_auto_preview(frames: list[Image.Image]) -> Image.Image:
 
 
 def make_workboard(reference: Image.Image, preview: Image.Image) -> Image.Image:
-    # Top: official selected frames at native 32x32.
-    # Middle: nearest-neighbor 16x32 mechanical preview enlarged 2x for inspection.
-    # Bottom: blank 16x32 target cells enlarged 2x for redraw planning.
+    # Top 32 px: official selected frames at native 32x32.
+    # Middle 64 px: mechanical 16x32 preview enlarged 2x for inspection.
+    # Bottom 32 px: blank 32x32 cells representing the nine 16x32 targets at 2x.
     width = 32 * 9
-    height = 32 * 3
+    height = 32 + 64 + 32
     board = Image.new("RGBA", (width, height), (255, 255, 255, 255))
     board.alpha_composite(reference, (0, 0))
 
     preview_2x = preview.resize((288, 64), Image.Resampling.NEAREST)
-    board.alpha_composite(preview_2x.crop((0, 0, 288, 32)), (0, 32))
+    board.alpha_composite(preview_2x, (0, 32))
 
     # Draw simple 32x32 target-cell outlines without introducing antialiasing.
     pixels = board.load()
-    y0 = 64
+    y0 = 96
     for cell in range(9):
         x0 = cell * 32
         for x in range(x0, x0 + 32):
