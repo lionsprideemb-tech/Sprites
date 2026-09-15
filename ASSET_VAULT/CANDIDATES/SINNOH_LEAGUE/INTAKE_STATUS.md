@@ -1,5 +1,14 @@
 # Intake status
 
-Verified upstream sources are pinned for Aaron, Bertha, Lucian, and Cynthia. Binary transfer into this repository is in progress; all imported PNGs/palettes must match the recorded upstream Git blob SHA exactly before this batch is considered transferred.
+Transferred and checksum-verified against upstream Git blob SHA:
+- Aaron PNG + palette
+- Bertha PNG + palette
+- Lucian PNG + palette
+- Cynthia PNG + palette
 
-Flint remains a separate sourcing gap.
+All eight destination blobs exactly match the source hashes recorded in `UPSTREAM_HASHES.txt`.
+
+Remaining gap:
+- Flint overworld must be sourced separately or rebuilt against Platinum source.
+
+Status remains **CANDIDATE ONLY** pending Platinum-faithfulness review.
