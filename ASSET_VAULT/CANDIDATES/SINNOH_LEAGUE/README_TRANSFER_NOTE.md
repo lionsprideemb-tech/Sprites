@@ -1,0 +1,1 @@
+Binary files in this batch are only considered transferred when the destination Git blob SHA exactly equals the recorded upstream SHA in UPSTREAM_HASHES.txt. Do not promote this folder to APPROVED until both checksum and Platinum-faithfulness review pass.
