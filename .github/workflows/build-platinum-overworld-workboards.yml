@@ -1,0 +1,48 @@
+name: Build Platinum overworld workboards
+
+on:
+  push:
+    paths:
+      - '.github/workflows/build-platinum-overworld-workboards.yml'
+      - 'ASSET_VAULT/03_SINNOH_GBA_CONVERSIONS/TOOLS/platinum_field_to_gba_workboard.py'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build-workboards:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Mercury asset vault
+        uses: actions/checkout@v4
+
+      - name: Checkout pinned Platinum source
+        uses: actions/checkout@v4
+        with:
+          repository: pret/pokeplatinum
+          ref: 7a0637607bc070516c20a5bf3a9cd71c76b7a894
+          path: vendor/pokeplatinum
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install Pillow
+        run: python -m pip install --disable-pip-version-check pillow
+
+      - name: Generate Roark Gardenia Candice Flint workboards
+        run: |
+          python ASSET_VAULT/03_SINNOH_GBA_CONVERSIONS/TOOLS/platinum_field_to_gba_workboard.py \
+            vendor/pokeplatinum \
+            generated_workboards \
+            --characters roark gardenia candice flint
+
+      - name: Upload derived workboards
+        uses: actions/upload-artifact@v4
+        with:
+          name: platinum-overworld-workboards
+          path: generated_workboards/
+          if-no-files-found: error
+          retention-days: 30
