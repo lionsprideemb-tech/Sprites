@@ -11,7 +11,36 @@ The official `pokeplatinum` field character sheets are:
 - sixteen stacked 32×32 frames
 - transparency at palette index 0
 
-The character itself occupies substantially less than the full 32×32 canvas, so the correct conversion is **not** to scale a DS screenshot or resize the entire 32×32 frame.
+The character itself occupies substantially less than the full 32×32 canvas.
+
+## Engine finding: native 32×32 is supported
+
+`pokeemerald` already supports 32×32 object-event graphics with the normal object-event system. Examples in the vanilla source use:
+- `.width = 32`
+- `.height = 32`
+- `gObjectEventBaseOam_32x32`
+- `sOamTables_32x32`
+- 32×32 frame images
+
+Therefore Mercury does **not** need to compress a Platinum major-character sprite into 16 pixels of width simply to make it compatible with the GBA engine.
+
+### Fidelity-first default for named Sinnoh characters
+
+For major named Sinnoh characters, the preferred first candidate is now:
+- keep the Platinum artwork at native 32×32 frame scale
+- retain the original indexed palette where technically possible
+- reorder the required frames into Emerald's 9-frame walking layout
+- use a 288×32 sheet containing nine 32×32 frames
+- configure the object event for a 32×32 OAM/subsprite footprint
+
+This is a **format conversion**, not a visual redesign. It preserves Platinum's silhouette and pixel work much more faithfully.
+
+A 16×32 redraw remains available as a fallback when:
+- in-engine scale proves visually inconsistent,
+- VRAM/palette constraints require it,
+- or a specific NPC genuinely benefits from the standard narrow footprint.
+
+Do not choose 16×32 merely because most vanilla Emerald NPCs use it.
 
 ## Direction/frame structure
 
@@ -21,35 +50,58 @@ The sixteen Platinum frames resolve as four groups of four:
 3. left-facing frames: 8–11
 4. right-facing frames: 12–15
 
-For an Emerald-style 9-frame overworld sheet, retain one neutral and two walk-step frames for the three stored directions. Right-facing can be mirrored in-engine from the left-facing frames where appropriate.
+Emerald's standard 9-frame object-event order stores three directions and mirrors west for east.
 
-Working source-frame mapping for the 9-frame GBA sheet:
-- Front idle: 4
-- Back idle: 0
-- Left idle: 8
-- Front walk A: 5
-- Front walk B: 7
-- Back walk A: 1
-- Back walk B: 3
-- Left walk A: 9
-- Left walk B: 11
+Source-frame mapping for the 9-frame GBA sheet:
+- Front/South idle: 4
+- Back/North idle: 0
+- Left/West idle: 8
+- Front/South walk A: 5
+- Front/South walk B: 7
+- Back/North walk A: 1
+- Back/North walk B: 3
+- Left/West walk A: 9
+- Left/West walk B: 11
 
-This mapping must be visually verified per character before final approval.
+Compact mapping: `[4, 0, 8, 5, 7, 1, 3, 9, 11]`.
 
-## Pixel-art conversion rules
+The mapping is source-verified against Platinum's generic field-walk setup and Emerald's standard animation table.
 
-1. Crop to the visible character bounds inside each 32×32 source frame; never resize the transparent outer canvas.
-2. Preserve the Platinum silhouette, costume details, hair shape, and major color relationships.
-3. Target Emerald-compatible 16×32 frames where the character can be represented cleanly. If an essential silhouette cannot survive at 16 px width, use a justified 32×32 object-event footprint rather than mutilating the design.
-4. Keep the final palette at 16 colors maximum including transparency.
-5. Prefer manual pixel cleanup after reduction. No bilinear/bicubic filtering.
-6. Align all frames to a consistent foot baseline to prevent walking jitter.
-7. Preserve head/body scale across idle and step frames; do not resize each pose independently in a way that causes animation pumping.
-8. Compare final conversions side-by-side against the actual Platinum source and against already accepted Mercury Sinnoh overworld scale.
-9. Do not mark a conversion `MERCURY_APPROVED` until it passes palette, transparency, silhouette, animation, and in-engine movement checks.
+## Native-32 technical target
 
-## Existing conversion comparison
+- frame size: 32×32
+- frames: 9
+- sheet size: 288×32
+- 4bpp / maximum 16 colors including transparency
+- standard Emerald animation indices 0–8
+- east-facing animation produced through horizontal flip of the west-facing frames
+- object-event OAM footprint: 32×32
+- graphics conversion geometry: 4 tiles wide × 4 tiles high per frame
 
-The current Team Aqua-style GBA candidates use 144×32 sheets representing nine 16×32 frames. They are useful as a format/scale comparison, but Platinum remains the authority for character appearance.
+## 16×32 fallback target
+
+When a narrow redraw is deliberately chosen:
+- frame size: 16×32
+- frames: 9
+- sheet size: 144×32
+- preserve aspect ratio; never shrink the whole transparent 32×32 canvas
+- use one union crop across all selected poses to avoid animation pumping
+- align every pose to one stable foot baseline
+- manual pixel cleanup is mandatory after any reduction
+
+## Art and QA rules
+
+1. Platinum is the visual authority for silhouette, costume, hair, pose and major color relationships.
+2. No bilinear/bicubic filtering for pixel-art conversion.
+3. Keep the final palette at 16 colors maximum including transparency.
+4. Preserve a stable foot baseline across the walk cycle.
+5. Verify east-facing mirroring in engine.
+6. Compare the candidate side-by-side with the actual Platinum source and nearby Mercury NPC scale.
+7. Verify palette conversion, transparency, VRAM footprint and object-event alignment in the actual Mercury engine.
+8. Do not mark anything `MERCURY_APPROVED` until it passes visual and in-engine QA.
+
+## Current recovery decision
+
+Roark, Gardenia, Candice and Flint should receive **native 32×32 Platinum-format-conversion candidates first**. The automatically reduced 16×32 previews are retained only for comparison and must not be treated as final art.
 
 Status: specification locked for the missing-major-character recovery pass.
