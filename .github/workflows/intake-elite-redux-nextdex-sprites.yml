@@ -1,0 +1,125 @@
+name: Intake Elite Redux Nextdex Sprites
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - ".github/workflows/intake-elite-redux-nextdex-sprites.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  intake:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Clone ER-nextdex sprite source
+        run: |
+          set -euo pipefail
+          rm -rf /tmp/ER-nextdex
+          git clone --depth=1 --filter=blob:none --sparse https://github.com/ForwardFeed/ER-nextdex.git /tmp/ER-nextdex
+          git -C /tmp/ER-nextdex sparse-checkout set static/sprites
+
+      - name: Stage source pack
+        run: |
+          set -euo pipefail
+          DEST="DS_CUSTOM_LIBRARY/packs/Elite_Redux_ER_nextdex"
+          rm -rf "$DEST"
+          mkdir -p "$DEST"
+          cp -a /tmp/ER-nextdex/static/sprites/. "$DEST/"
+
+          SOURCE_SHA="$(git -C /tmp/ER-nextdex rev-parse HEAD)"
+          COUNT="$(find "$DEST" -type f -iname '*.png' | wc -l | tr -d ' ')"
+
+          cat > "$DEST/SOURCE_INFO.txt" <<EOF
+          Source: https://github.com/ForwardFeed/ER-nextdex
+          Source path: static/sprites
+          Source commit: $SOURCE_SHA
+          Intake date: $(date -u +%Y-%m-%dT%H:%M:%SZ)
+          PNG count: $COUNT
+
+          Naming convention commonly includes:
+          <FORM>.png
+          <FORM>_BACK.png
+          <FORM>_SHINY.png
+          <FORM>_BACK_SHINY.png
+
+          This pack is preserved as source material. Do not treat all assets as native DS-ready
+          without the separate dimension/palette/style audit.
+          EOF
+
+          echo "source_sha=$SOURCE_SHA" >> "$GITHUB_ENV"
+          echo "png_count=$COUNT" >> "$GITHUB_ENV"
+
+      - name: Build intake inventory
+        shell: python
+        run: |
+          from pathlib import Path
+          from collections import defaultdict
+          import csv, json, re
+
+          root=Path("DS_CUSTOM_LIBRARY/packs/Elite_Redux_ER_nextdex")
+          files=sorted(root.glob("*.png"))
+          suffixes=[
+              ("_BACK_SHINY","back_shiny"),
+              ("_SHINY","front_shiny"),
+              ("_BACK","back"),
+          ]
+          groups=defaultdict(set)
+
+          def split(stem):
+              for suf,slot in suffixes:
+                  if stem.endswith(suf):
+                      return stem[:-len(suf)],slot
+              return stem,"front"
+
+          for p in files:
+              key,slot=split(p.stem)
+              groups[key].add(slot)
+
+          rows=[]
+          for key,slots in sorted(groups.items()):
+              rows.append({
+                  "key":key,
+                  "front":"front" in slots,
+                  "back":"back" in slots,
+                  "front_shiny":"front_shiny" in slots,
+                  "back_shiny":"back_shiny" in slots,
+                  "complete_4way":all(x in slots for x in ("front","back","front_shiny","back_shiny")),
+                  "redux_named":"REDUX" in key,
+                  "mega_named":"MEGA" in key,
+              })
+
+          out=Path("DS_CUSTOM_LIBRARY/cleanup-audit")
+          out.mkdir(parents=True,exist_ok=True)
+          csv_path=out/"elite_redux_nextdex_inventory.csv"
+          with csv_path.open("w",newline="") as f:
+              w=csv.DictWriter(f,fieldnames=rows[0].keys())
+              w.writeheader(); w.writerows(rows)
+
+          summary={
+              "source":"ForwardFeed/ER-nextdex",
+              "png_files":len(files),
+              "normalized_design_keys":len(rows),
+              "complete_front_back_shiny_sets":sum(r["complete_4way"] for r in rows),
+              "redux_named_keys":sum(r["redux_named"] for r in rows),
+              "redux_named_complete_sets":sum(r["redux_named"] and r["complete_4way"] for r in rows),
+              "mega_named_keys":sum(r["mega_named"] for r in rows),
+              "mega_named_complete_sets":sum(r["mega_named"] and r["complete_4way"] for r in rows),
+          }
+          (out/"elite_redux_nextdex_summary.json").write_text(json.dumps(summary,indent=2)+"\n")
+          print(json.dumps(summary,indent=2))
+
+      - name: Commit source pack
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add DS_CUSTOM_LIBRARY/packs/Elite_Redux_ER_nextdex                   DS_CUSTOM_LIBRARY/cleanup-audit/elite_redux_nextdex_inventory.csv                   DS_CUSTOM_LIBRARY/cleanup-audit/elite_redux_nextdex_summary.json
+          if git diff --cached --quiet; then
+            echo "No changes"
+            exit 0
+          fi
+          git commit -m "Intake Elite Redux Nextdex sprite library"
+          git push
