@@ -1,0 +1,232 @@
+name: Collect Actual DS Hack Sprite Assets
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/collect-actual-ds-hack-sprites.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install tools
+        run: |
+          sudo apt-get update -y
+          sudo apt-get install -y p7zip-full unzip file
+          python -m pip install requests beautifulsoup4 gdown
+          mkdir -p /tmp/actual-hack-sprites
+
+      - name: Fetch Banished Platinum public Mega sprite resource
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import requests,re,subprocess,json,hashlib
+          from bs4 import BeautifulSoup
+          from urllib.parse import urljoin
+
+          page='https://www.eeveeexpo.com/resources/651/'
+          sess=requests.Session(); sess.headers.update({'User-Agent':'Mozilla/5.0'})
+          dest=Path('DS_CUSTOM_LIBRARY/hack-packs/Banished_Platinum_Free_Megas')
+          dest.mkdir(parents=True,exist_ok=True)
+          tmp=Path('/tmp/actual-hack-sprites/banished')
+          report={'source':'Banished Platinum - Free to Use Mega Evolutions','page':page}
+
+          urls=[]
+          for u in [page,page.rstrip('/')+'/download']:
+              r=sess.get(u,timeout=30,allow_redirects=True)
+              ctype=r.headers.get('content-type','').lower()
+              report.setdefault('pages',[]).append({'url':u,'final':r.url,'status':r.status_code,'ctype':ctype,'bytes':len(r.content)})
+              if len(r.content)>10000 and any(x in ctype for x in ['zip','rar','7z','octet-stream']):
+                  tmp.write_bytes(r.content); urls=[r.url]; break
+              soup=BeautifulSoup(r.text,'html.parser')
+              for a in soup.find_all('a',href=True):
+                  href=urljoin(r.url,a['href'])
+                  if any(x in href.lower() for x in ['mediafire.com/file/','drive.google.com/','mega.nz/','.zip','.rar','.7z']):
+                      urls.append(href)
+          urls=list(dict.fromkeys(urls))
+          report['discovered_links']=urls
+
+          def mediafire_direct(url):
+              r=sess.get(url,timeout=30)
+              soup=BeautifulSoup(r.text,'html.parser')
+              a=soup.select_one('a#downloadButton')
+              if a and a.get('href','').startswith('http'): return a['href']
+              m=re.search(r'https?://download\d+\.mediafire\.com/[^"\'<> ]+',r.text)
+              return m.group(0).replace('&amp;','&') if m else None
+
+          archive=None
+          if tmp.exists() and tmp.stat().st_size>10000:
+              archive=tmp
+          else:
+              for u in urls:
+                  try:
+                      direct=mediafire_direct(u) if 'mediafire.com/file/' in u else u
+                      if not direct: continue
+                      rr=sess.get(direct,timeout=120,allow_redirects=True)
+                      if len(rr.content)>10000:
+                          archive=Path('/tmp/actual-hack-sprites/banished.archive')
+                          archive.write_bytes(rr.content)
+                          report['archive_url']=direct
+                          report['archive_bytes']=len(rr.content)
+                          report['archive_sha256']=hashlib.sha256(rr.content).hexdigest()
+                          break
+                  except Exception:
+                      pass
+
+          if archive:
+              q=subprocess.run(['7z','x','-y',f'-o{dest}',str(archive)],text=True,capture_output=True)
+              report['extract_rc']=q.returncode
+              report['status']='SPRITES_EXTRACTED' if q.returncode==0 else 'ARCHIVE_EXTRACT_FAILED'
+          else:
+              report['status']='ACTUAL_ARCHIVE_NOT_RESOLVED'
+
+          imgs=[p for p in dest.rglob('*') if p.is_file() and p.suffix.lower() in {'.png','.gif','.bmp','.jpg','.jpeg'}]
+          report['actual_sprite_image_files']=len(imgs)
+          Path('DS_CUSTOM_LIBRARY/actual_fetch_banished_megas.json').write_text(json.dumps(report,indent=2))
+          print(json.dumps(report,indent=2))
+          PY
+
+      - name: Target Altered Platinum separate sprite ZIP
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import requests,re,json,subprocess,shutil,hashlib
+
+          folder='https://drive.google.com/drive/folders/1ooydJKGFE3AajHm1w8sCUx0Z8J2vo95q?usp=sharing'
+          dest=Path('DS_CUSTOM_LIBRARY/hack-packs/Altered_Platinum_Custom_Sprites')
+          dest.mkdir(parents=True,exist_ok=True)
+          report={'source':'Altered Platinum custom sprites','folder':folder}
+
+          # First inspect public folder HTML for sprite-named files and Drive IDs.
+          sess=requests.Session(); sess.headers.update({'User-Agent':'Mozilla/5.0'})
+          r=sess.get(folder,timeout=30)
+          html=r.text
+          report['folder_status']=r.status_code
+          report['folder_bytes']=len(r.content)
+
+          # Drive embeds visible filenames and IDs in page data. Capture candidate IDs near sprite filenames.
+          candidates=[]
+          for m in re.finditer(r'([^"]{0,150}(?:sprite|sprites)[^"]{0,150})',html,re.I):
+              chunk=m.group(1)
+              ids=re.findall(r'[A-Za-z0-9_-]{20,}',chunk)
+              candidates.extend(ids)
+          candidates=list(dict.fromkeys(candidates))
+          report['candidate_ids_from_html']=candidates[:100]
+
+          tmp=Path('/tmp/actual-hack-sprites/altered')
+          tmp.mkdir(parents=True,exist_ok=True)
+
+          # Also ask gdown to continue past inaccessible old versions if supported.
+          p=subprocess.run(['gdown','--folder','--remaining-ok',folder,'-O',str(tmp)],text=True,capture_output=True)
+          report['gdown_rc']=p.returncode
+          report['gdown_stdout_tail']=p.stdout[-5000:]
+          report['gdown_stderr_tail']=p.stderr[-5000:]
+
+          allfiles=[x for x in tmp.rglob('*') if x.is_file()]
+          sprite_archives=[x for x in allfiles if x.suffix.lower() in {'.zip','.rar','.7z'} and 'sprite' in x.name.lower()]
+          report['downloaded_files']=len(allfiles)
+          report['sprite_archives_found']=[x.name for x in sprite_archives]
+
+          for arc in sprite_archives:
+              q=subprocess.run(['7z','x','-y',f'-o{dest}',str(arc)],text=True,capture_output=True)
+              report.setdefault('extractions',[]).append({'file':arc.name,'rc':q.returncode})
+
+          # If candidate IDs exist, attempt direct downloads and retain only archives/images.
+          for i,fid in enumerate(candidates):
+              out=tmp/f'candidate_{i}'
+              q=subprocess.run(['gdown',fid,'-O',str(out)],text=True,capture_output=True)
+              if q.returncode!=0 or not out.exists(): continue
+              ftype=subprocess.run(['file','-b',str(out)],text=True,capture_output=True).stdout.lower()
+              if any(x in ftype for x in ['zip archive','rar archive','7-zip archive']):
+                  x=subprocess.run(['7z','x','-y',f'-o{dest}',str(out)],text=True,capture_output=True)
+                  report.setdefault('candidate_extractions',[]).append({'id':fid,'rc':x.returncode,'type':ftype.strip()})
+
+          imgs=[p for p in dest.rglob('*') if p.is_file() and p.suffix.lower() in {'.png','.gif','.bmp','.jpg','.jpeg'}]
+          report['actual_sprite_image_files']=len(imgs)
+          report['status']='SPRITES_EXTRACTED' if imgs else 'ACTUAL_SPRITE_ZIP_NOT_YET_RECOVERED'
+          Path('DS_CUSTOM_LIBRARY/actual_fetch_altered_platinum.json').write_text(json.dumps(report,indent=2))
+          print(json.dumps({k:v for k,v in report.items() if k not in ['gdown_stdout_tail','gdown_stderr_tail']},indent=2))
+          PY
+
+      - name: Build hard actual-sprite audit
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import csv,json,collections,hashlib
+
+          image_exts={'.png','.gif','.bmp','.jpg','.jpeg'}
+          rows=[]
+
+          # Generic packs are actual source assets.
+          base=Path('DS_CUSTOM_LIBRARY/packs')
+          if base.exists():
+              for p in base.rglob('*'):
+                  if p.is_file() and p.suffix.lower() in image_exts:
+                      rel=p.relative_to(base)
+                      source=rel.parts[0]
+                      rows.append({'source':source,'bucket':'GENERIC_SOURCE_ASSET','path':p.as_posix(),'sha256':hashlib.sha256(p.read_bytes()).hexdigest()})
+
+          # Hack packs count only actual extracted/source assets. Reference previews are excluded.
+          base=Path('DS_CUSTOM_LIBRARY/hack-packs')
+          if base.exists():
+              for p in base.rglob('*'):
+                  if p.is_file() and p.suffix.lower() in image_exts:
+                      rel=p.relative_to(base)
+                      source=rel.parts[0]
+                      rows.append({'source':source,'bucket':'HACK_SOURCE_ASSET','path':p.as_posix(),'sha256':hashlib.sha256(p.read_bytes()).hexdigest()})
+
+          with open('DS_CUSTOM_LIBRARY/actual_sprite_assets.csv','w',newline='') as f:
+              w=csv.DictWriter(f,fieldnames=['source','bucket','path','sha256']); w.writeheader(); w.writerows(rows)
+
+          counts=collections.Counter((r['source'],r['bucket']) for r in rows)
+
+          # Sources that are registered but have no actual source asset bytes remain explicitly not collected.
+          registered=[]
+          mf=Path('DS_CUSTOM_LIBRARY/hack_source_manifest.csv')
+          if mf.exists():
+              with mf.open(newline='') as f:
+                  registered=list(csv.DictReader(f))
+
+          hack_status=[]
+          for r in registered:
+              project=r['project']
+              key=project.replace('Pokemon ','').replace('Pokémon ','').replace(' ','_')
+              # loose matching because folder names use normalized project names
+              matches=[(s,b,c) for (s,b),c in counts.items() if b=='HACK_SOURCE_ASSET' and (key.lower() in s.lower() or s.lower() in key.lower())]
+              n=sum(c for _,_,c in matches)
+              hack_status.append({
+                  'project':project,
+                  'actual_sprite_files':n,
+                  'status':'SPRITES_COLLECTED' if n>0 else 'SOURCE_ONLY_OR_BLOCKED'
+              })
+
+          summary={
+              'actual_sprite_image_files_total':len(rows),
+              'generic_actual_image_files':sum(1 for r in rows if r['bucket']=='GENERIC_SOURCE_ASSET'),
+              'hack_actual_image_files':sum(1 for r in rows if r['bucket']=='HACK_SOURCE_ASSET'),
+              'hack_source_status':hack_status,
+              'excluded_from_counts':'DS_CUSTOM_LIBRARY/hack-reference-previews',
+              'rule':'A source is not considered collected unless actual sprite/image asset bytes are present in packs or hack-packs.'
+          }
+          Path('DS_CUSTOM_LIBRARY/actual_sprite_audit_summary.json').write_text(json.dumps(summary,indent=2))
+          print(json.dumps(summary,indent=2))
+          PY
+
+      - name: Commit actual assets and audit
+        run: |
+          git config user.name "Mercury Actual Sprite Intake Bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add DS_CUSTOM_LIBRARY/hack-packs DS_CUSTOM_LIBRARY/actual_fetch_banished_megas.json DS_CUSTOM_LIBRARY/actual_fetch_altered_platinum.json DS_CUSTOM_LIBRARY/actual_sprite_assets.csv DS_CUSTOM_LIBRARY/actual_sprite_audit_summary.json .github/workflows/collect-actual-ds-hack-sprites.yml
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "sprites: collect and audit actual DS sprite assets"
+          git pull --rebase origin main
+          git push origin main
