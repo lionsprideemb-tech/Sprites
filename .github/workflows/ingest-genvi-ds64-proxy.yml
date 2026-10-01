@@ -1,0 +1,186 @@
+name: Ingest Gen VI DS-style 64x64 Direct Assets
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/ingest-genvi-ds64-proxy.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  ingest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install tools
+        run: |
+          python -m pip install requests beautifulsoup4 pillow
+
+      - name: Crawl Gen VI DS-style resource through proxy and fetch images
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import requests,re,json,hashlib,shutil,io
+          from bs4 import BeautifulSoup
+          from urllib.parse import urljoin,urlparse
+          from PIL import Image
+
+          thread='https://www.pokecommunity.com/threads/gen-vi-ds-style-64x64-pokemon-sprite-resource.314422/'
+          dest=Path('DS_CUSTOM_LIBRARY/packs/GenVI_DS_64x64')
+          if dest.exists():
+              shutil.rmtree(dest)
+          dest.mkdir(parents=True,exist_ok=True)
+
+          sess=requests.Session()
+          sess.headers.update({'User-Agent':'Mozilla/5.0'})
+          urls=[]
+
+          for page_num in range(1,55):
+              url=thread if page_num==1 else thread.rstrip('/')+f'/page-{page_num}'
+              bodies=[]
+              try:
+                  r=sess.get(url,timeout=30)
+                  if r.status_code==200:
+                      bodies.append(r.text)
+              except Exception:
+                  pass
+              try:
+                  proxy='https://r.jina.ai/http://' + url.split('://',1)[1]
+                  r=sess.get(proxy,timeout=45)
+                  if r.status_code==200:
+                      bodies.append(r.text)
+              except Exception:
+                  pass
+
+              for body in bodies:
+                  soup=BeautifulSoup(body,'html.parser')
+                  for tag in soup.find_all(['a','img']):
+                      raw=tag.get('href') or tag.get('src')
+                      if not raw: continue
+                      u=urljoin(url,raw)
+                      low=u.lower()
+                      if any(host in low for host in ['dropbox.com/','imgur.com/','i.imgur.com/','attachments/']) and any(ext in low for ext in ['.png','.gif','.jpg','.jpeg','attachments/']):
+                          urls.append(u)
+                  urls += re.findall(r'https?://[^\s\)\]\>"\']+(?:png|gif|jpg|jpeg)(?:\?[^\s\)\]\>"\']*)?',body,re.I)
+
+          cleaned=[]
+          seen=set()
+          for u in urls:
+              u=u.replace('&amp;','&')
+              if 'dropbox.com/' in u and 'raw=1' not in u:
+                  u += ('&' if '?' in u else '?')+'raw=1'
+              if 'imgur.com/' in u and 'i.imgur.com/' not in u and re.search(r'/[A-Za-z0-9]+$',u):
+                  # bare imgur page links aren't guaranteed direct; skip
+                  continue
+              if u not in seen:
+                  seen.add(u); cleaned.append(u)
+
+          recs=[]
+          sha_seen=set()
+          for i,u in enumerate(cleaned):
+              try:
+                  rr=sess.get(u,timeout=45,allow_redirects=True)
+              except Exception:
+                  continue
+              if rr.status_code!=200 or len(rr.content)<100:
+                  continue
+              try:
+                  im=Image.open(io.BytesIO(rr.content))
+                  w,h=im.size
+                  fmt=(im.format or '').lower()
+              except Exception:
+                  continue
+              if fmt not in {'png','gif','jpeg','jpg','bmp'}:
+                  continue
+              sha=hashlib.sha256(rr.content).hexdigest()
+              if sha in sha_seen: continue
+              sha_seen.add(sha)
+              name=Path(urlparse(u).path).name or f'asset_{i:05d}.{fmt}'
+              name=re.sub(r'[^A-Za-z0-9._-]+','_',name)
+              if '.' not in name:
+                  name += '.png' if fmt=='png' else f'.{fmt}'
+              out=dest/f'{i:05d}_{name}'
+              out.write_bytes(rr.content)
+              recs.append({
+                  'path':out.as_posix(),'source_url':u,
+                  'width':w,'height':h,'format':fmt,
+                  'bytes':len(rr.content),'sha256':sha
+              })
+
+          report={
+              'thread':thread,
+              'candidate_image_urls':len(cleaned),
+              'unique_actual_images_collected':len(recs),
+              'files':recs
+          }
+          Path('DS_CUSTOM_LIBRARY/fetch_report_genvi_direct.json').write_text(json.dumps(report,indent=2))
+          print(json.dumps({
+              'candidate_image_urls':len(cleaned),
+              'unique_actual_images_collected':len(recs)
+          },indent=2))
+          PY
+
+      - name: Rebuild strict actual sprite audit
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import csv,json,collections,hashlib,re
+
+          exts={'.png','.gif','.bmp','.jpg','.jpeg'}
+          rows=[]
+          for base,bucket in [
+            (Path('DS_CUSTOM_LIBRARY/packs'),'GENERIC_SOURCE_ASSET'),
+            (Path('DS_CUSTOM_LIBRARY/hack-packs'),'HACK_SOURCE_ASSET')
+          ]:
+              if not base.exists(): continue
+              for p in sorted(base.rglob('*')):
+                  if p.is_file() and p.suffix.lower() in exts:
+                      if 'Platinum_Redux_Embedded_Sprites/sprite-candidates/' in p.as_posix():
+                          continue
+                      rel=p.relative_to(base)
+                      source=rel.parts[0] if rel.parts else ''
+                      rows.append({
+                        'source':source,'bucket':bucket,'path':p.as_posix(),
+                        'sha256':hashlib.sha256(p.read_bytes()).hexdigest()
+                      })
+
+          with open('DS_CUSTOM_LIBRARY/actual_sprite_assets.csv','w',newline='') as f:
+              w=csv.DictWriter(f,fieldnames=['source','bucket','path','sha256'])
+              w.writeheader(); w.writerows(rows)
+
+          sc=collections.Counter(x['source'] for x in rows)
+          summary={
+              'actual_sprite_image_files_total':len(rows),
+              'generic_actual_image_files':sum(1 for x in rows if x['bucket']=='GENERIC_SOURCE_ASSET'),
+              'hack_actual_image_files':sum(1 for x in rows if x['bucket']=='HACK_SOURCE_ASSET'),
+              'source_counts':dict(sorted(sc.items())),
+              'rule':'Only actual image asset bytes count. Links, patches, docs, screenshots/reference previews do not.'
+          }
+          # Preserve hack status from existing summary if available.
+          old=Path('DS_CUSTOM_LIBRARY/actual_sprite_audit_summary.json')
+          if old.exists():
+              try:
+                  o=json.loads(old.read_text())
+                  summary['hack_source_status']=o.get('hack_source_status',[])
+                  summary['excluded_from_counts']=o.get('excluded_from_counts','DS_CUSTOM_LIBRARY/hack-reference-previews')
+              except Exception:
+                  pass
+          Path('DS_CUSTOM_LIBRARY/actual_sprite_audit_summary.json').write_text(json.dumps(summary,indent=2))
+          print(json.dumps(summary,indent=2))
+          PY
+
+      - name: Commit Gen VI actual sprite intake
+        run: |
+          git config user.name "Mercury Actual Sprite Intake Bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add DS_CUSTOM_LIBRARY/packs/GenVI_DS_64x64 DS_CUSTOM_LIBRARY/fetch_report_genvi_direct.json DS_CUSTOM_LIBRARY/actual_sprite_assets.csv DS_CUSTOM_LIBRARY/actual_sprite_audit_summary.json .github/workflows/ingest-genvi-ds64-proxy.yml
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "sprites: ingest Gen VI DS-style 64x64 actual assets"
+          git pull --rebase origin main
+          git push origin main
