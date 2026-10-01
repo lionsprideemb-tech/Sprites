@@ -1,0 +1,293 @@
+name: Fetch Remaining Native DS Sources
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/fetch-remaining-native-ds-sources.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  fetch-remaining:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install tools
+        run: |
+          sudo apt-get update -y
+          sudo apt-get install -y p7zip-full unzip file megatools || true
+          python -m pip install requests beautifulsoup4 gdown
+          mkdir -p /tmp/native-ds-remaining
+
+      - name: Fetch Google Drive packs
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import subprocess, json, hashlib
+
+          packs=[
+            ('Earthretha','132CMW3fNuYPMRbx-_aZ15Ue10Y4_thxS'),
+            ('DS_Styled_Gen5_8','1VczsCaM1f6kZmG-kczwPxC7P8WKa44K8'),
+            ('Gen7_DS_Backsprites','1L-w9yM9GATOjgvRsN9daUpacoflA9aXp'),
+          ]
+          root=Path('DS_CUSTOM_LIBRARY/packs')
+          tmp=Path('/tmp/native-ds-remaining')
+          report=[]
+
+          for name,file_id in packs:
+              rec={'name':name,'file_id':file_id}
+              out=tmp/(name+'.download')
+              p=subprocess.run(['gdown',file_id,'-O',str(out)],text=True,capture_output=True)
+              rec['gdown_rc']=p.returncode
+              rec['stdout']=p.stdout[-1000:]
+              rec['stderr']=p.stderr[-1000:]
+              if p.returncode!=0 or not out.exists():
+                  rec['status']='DOWNLOAD_FAILED'
+                  report.append(rec); continue
+              rec['download_bytes']=out.stat().st_size
+              rec['sha256']=hashlib.sha256(out.read_bytes()).hexdigest()
+              dest=root/name
+              dest.mkdir(parents=True,exist_ok=True)
+              q=subprocess.run(['7z','x','-y',f'-o{dest}',str(out)],text=True,capture_output=True)
+              rec['extract_rc']=q.returncode
+              if q.returncode==0:
+                  rec['status']='EXTRACTED'
+              else:
+                  # If it is a single image or other raw file, retain it rather than discard.
+                  raw=dest/'downloaded_source'
+                  raw.write_bytes(out.read_bytes())
+                  rec['status']='DOWNLOADED_UNEXTRACTED'
+                  rec['file_type']=subprocess.run(['file','-b',str(out)],text=True,capture_output=True).stdout.strip()
+              report.append(rec)
+
+          Path('DS_CUSTOM_LIBRARY/fetch_report_google_drive_remaining.json').write_text(json.dumps(report,indent=2))
+          print(json.dumps(report,indent=2))
+          PY
+
+      - name: Fetch MediaFire aggregate and Mega Flygon packs
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import requests, re, subprocess, json, hashlib
+          from bs4 import BeautifulSoup
+
+          packs=[
+            ('Fakemon_Festival_Full','https://www.mediafire.com/file/7hnfdqwjeww6vuq/Fakemon_Festival_Pack.rar/file'),
+            ('Mega_Flygon','https://www.mediafire.com/file/p6ahb12amtvju4n/Articuno%2527s_mega_flygon.zip/file'),
+          ]
+          root=Path('DS_CUSTOM_LIBRARY/packs')
+          tmp=Path('/tmp/native-ds-remaining')
+          sess=requests.Session()
+          sess.headers.update({'User-Agent':'Mozilla/5.0'})
+          report=[]
+
+          def resolve(url):
+              r=sess.get(url,timeout=30)
+              r.raise_for_status()
+              soup=BeautifulSoup(r.text,'html.parser')
+              a=soup.select_one('a#downloadButton')
+              if a and a.get('href','').startswith('http'):
+                  return a['href']
+              m=re.search(r'https?://download\d+\.mediafire\.com/[^"\'<> ]+',r.text)
+              return m.group(0).replace('&amp;','&') if m else None
+
+          for name,url in packs:
+              rec={'name':name,'page_url':url}
+              try:
+                  direct=resolve(url)
+                  rec['resolved_url']=direct
+                  if not direct:
+                      rec['status']='RESOLVE_FAILED'; report.append(rec); continue
+                  rr=sess.get(direct,timeout=120)
+                  rr.raise_for_status()
+                  arc=tmp/(name+'.archive')
+                  arc.write_bytes(rr.content)
+                  rec['download_bytes']=len(rr.content)
+                  rec['sha256']=hashlib.sha256(rr.content).hexdigest()
+                  dest=root/name
+                  dest.mkdir(parents=True,exist_ok=True)
+                  q=subprocess.run(['7z','x','-y',f'-o{dest}',str(arc)],text=True,capture_output=True)
+                  rec['extract_rc']=q.returncode
+                  rec['status']='EXTRACTED' if q.returncode==0 else 'EXTRACT_FAILED'
+                  if q.returncode!=0:
+                      rec['stderr']=q.stderr[-1000:]
+              except Exception as e:
+                  rec['status']='ERROR'; rec['error']=repr(e)
+              report.append(rec)
+
+          Path('DS_CUSTOM_LIBRARY/fetch_report_mediafire_remaining.json').write_text(json.dumps(report,indent=2))
+          print(json.dumps(report,indent=2))
+          PY
+
+      - name: Fetch MEGA-hosted packs
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import subprocess, json, shutil
+
+          packs=[
+            ('Shiny_Icons_Gen1_9','https://mega.nz/file/d8dSzIYC#YK5Jctgl6VQ2GWPdzvXk_UnNgHIYOHgRXoUMW_qa90Q'),
+            ('Mega_Flygon_Animated_Gen5','https://mega.nz/file/KiYzwAhB#RNgmKsf6XCVw1NdxCWC-3xzJgJYaMcTvRwvmWVW0mVM'),
+          ]
+          root=Path('DS_CUSTOM_LIBRARY/packs')
+          tmp=Path('/tmp/native-ds-remaining')
+          report=[]
+          tool=shutil.which('megadl')
+
+          for name,url in packs:
+              rec={'name':name,'url':url,'tool':tool or 'NOT_INSTALLED'}
+              dest=root/name
+              dest.mkdir(parents=True,exist_ok=True)
+              if not tool:
+                  rec['status']='FETCH_BLOCKED_NO_MEGA_CLI'
+                  report.append(rec); continue
+              dl=tmp/name
+              dl.mkdir(parents=True,exist_ok=True)
+              p=subprocess.run([tool,'--path',str(dl),url],text=True,capture_output=True)
+              rec['megadl_rc']=p.returncode
+              rec['stdout']=p.stdout[-1000:]
+              rec['stderr']=p.stderr[-1000:]
+              files=[x for x in dl.rglob('*') if x.is_file()]
+              if p.returncode!=0 or not files:
+                  rec['status']='DOWNLOAD_FAILED'
+                  report.append(rec); continue
+              for f in files:
+                  # Try extraction; otherwise copy raw source file.
+                  q=subprocess.run(['7z','x','-y',f'-o{dest}',str(f)],text=True,capture_output=True)
+                  if q.returncode!=0:
+                      shutil.copy2(f,dest/f.name)
+              rec['downloaded_files']=[x.name for x in files]
+              rec['status']='FETCHED'
+              report.append(rec)
+
+          Path('DS_CUSTOM_LIBRARY/fetch_report_mega_remaining.json').write_text(json.dumps(report,indent=2))
+          print(json.dumps(report,indent=2))
+          PY
+
+      - name: Crawl Gen VI DS-style resource
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import requests, re, json
+          from bs4 import BeautifulSoup
+          from urllib.parse import urljoin
+
+          url='https://www.pokecommunity.com/threads/gen-vi-ds-style-64x64-pokemon-sprite-resource.314422/'
+          dest=Path('DS_CUSTOM_LIBRARY/packs/GenVI_DS_64x64')
+          dest.mkdir(parents=True,exist_ok=True)
+          sess=requests.Session()
+          sess.headers.update({'User-Agent':'Mozilla/5.0'})
+          rec={'name':'GenVI_DS_64x64','page_url':url,'downloaded_images':[],'discovered_links':[]}
+
+          try:
+              r=sess.get(url,timeout=30)
+              r.raise_for_status()
+              soup=BeautifulSoup(r.text,'html.parser')
+              candidates=[]
+              for tag in soup.find_all(['img','a']):
+                  raw=tag.get('src') if tag.name=='img' else tag.get('href')
+                  if not raw: continue
+                  u=urljoin(r.url,raw)
+                  low=u.lower()
+                  if any(low.endswith(ext) for ext in ['.png','.gif','.jpg','.jpeg','.zip','.rar','.7z']) or 'attachment' in low:
+                      candidates.append(u)
+              candidates=list(dict.fromkeys(candidates))
+              rec['discovered_links']=candidates
+
+              idx=0
+              for u in candidates:
+                  try:
+                      rr=sess.get(u,timeout=30,allow_redirects=True)
+                      ctype=rr.headers.get('content-type','').lower()
+                      if rr.status_code!=200 or len(rr.content)<200:
+                          continue
+                      if any(x in ctype for x in ['image/png','image/gif','image/jpeg']):
+                          ext='.png' if 'png' in ctype else ('.gif' if 'gif' in ctype else '.jpg')
+                          p=dest/f'page_asset_{idx:04d}{ext}'
+                          p.write_bytes(rr.content)
+                          rec['downloaded_images'].append({'path':p.as_posix(),'source_url':u,'bytes':len(rr.content)})
+                          idx+=1
+                  except Exception:
+                      pass
+              rec['status']='FETCHED_PAGE_ASSETS' if rec['downloaded_images'] else 'NO_DIRECT_IMAGE_ASSETS'
+          except Exception as e:
+              rec['status']='ERROR'; rec['error']=repr(e)
+
+          Path('DS_CUSTOM_LIBRARY/fetch_report_genvi_resource.json').write_text(json.dumps(rec,indent=2))
+          print(json.dumps(rec,indent=2))
+          PY
+
+      - name: Rebuild master inventory and source coverage
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import csv, json, hashlib, collections
+
+          root=Path('DS_CUSTOM_LIBRARY/packs')
+          exts={'.png','.gif','.bmp','.jpg','.jpeg','.pal'}
+          rows=[]
+          for p in sorted(root.rglob('*')):
+              if not p.is_file() or p.suffix.lower() not in exts:
+                  continue
+              rel=p.relative_to(root)
+              pack=rel.parts[0] if rel.parts else ''
+              b=p.read_bytes()
+              rows.append({
+                'pack':pack,'path':p.as_posix(),'ext':p.suffix.lower(),
+                'bytes':len(b),'sha256':hashlib.sha256(b).hexdigest()
+              })
+          with open('DS_CUSTOM_LIBRARY/native_ds_master_inventory.csv','w',newline='') as f:
+              w=csv.DictWriter(f,fieldnames=['pack','path','ext','bytes','sha256'])
+              w.writeheader(); w.writerows(rows)
+
+          counts=collections.Counter(r['pack'] for r in rows)
+
+          expected=[
+            'DrPrettyman_DS_64x64','Festival_Altaira','Festival_Atsui','Festival_BiggusWeeabus',
+            'Festival_Dulcet','Festival_Lumio','Festival_Magiscarf','Festival_Odisea',
+            'Festival_PansyGum','Festival_Piacarrot','Festival_PrincessPhoenix','Festival_Scotsman',
+            'Festival_Misc','Mikitari','Earthretha','DS_Styled_Gen5_8','Gen7_DS_Backsprites',
+            'Shiny_Icons_Gen1_9','Mega_Flygon','Mega_Flygon_Animated_Gen5','GenVI_DS_64x64'
+          ]
+
+          coverage=[]
+          for name in expected:
+              n=counts.get(name,0)
+              coverage.append({
+                'source':name,
+                'sprite_file_count':n,
+                'collection_status':'COLLECTED' if n>0 else 'NO_SPRITE_FILES_COLLECTED'
+              })
+
+          summary={
+            'total_sprite_files':len(rows),
+            'pack_counts':dict(sorted(counts.items())),
+            'source_coverage':coverage,
+            'sources_expected':len(expected),
+            'sources_with_sprite_files':sum(1 for x in coverage if x['sprite_file_count']>0),
+            'pipeline_stage':'SOURCE_COLLECTION_ONLY',
+            'visual_approval_performed':False,
+            'implementation_performed':False
+          }
+          Path('DS_CUSTOM_LIBRARY/native_ds_master_inventory_summary.json').write_text(json.dumps(summary,indent=2))
+          Path('DS_CUSTOM_LIBRARY/source_collection_coverage.json').write_text(json.dumps(coverage,indent=2))
+          print(json.dumps(summary,indent=2))
+          PY
+
+      - name: Commit remaining intake
+        run: |
+          git config user.name "Mercury DS Source Intake Bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add DS_CUSTOM_LIBRARY/packs DS_CUSTOM_LIBRARY/fetch_report_*remaining.json DS_CUSTOM_LIBRARY/fetch_report_genvi_resource.json DS_CUSTOM_LIBRARY/native_ds_master_inventory.csv DS_CUSTOM_LIBRARY/native_ds_master_inventory_summary.json DS_CUSTOM_LIBRARY/source_collection_coverage.json .github/workflows/fetch-remaining-native-ds-sources.yml
+          if git diff --cached --quiet; then
+            echo "No changes"
+            exit 0
+          fi
+          git commit -m "sprites: fetch remaining native DS source libraries"
+          git push origin main
