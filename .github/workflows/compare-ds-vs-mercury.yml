@@ -1,0 +1,235 @@
+name: Compare DS vs Mercury GBA Sprite Libraries
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/compare-ds-vs-mercury.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  compare:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Clone Mercury DS repository
+        run: |
+          rm -rf /tmp/platinum-modern-ds
+          git clone --depth 1 --branch work/sprites-audit-20260930 \
+            https://github.com/lionsprideemb-tech/platinum-modern-ds.git \
+            /tmp/platinum-modern-ds
+
+      - name: Build cross-library comparison
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import csv, json, re, collections
+
+          dsroot=Path('DS_CUSTOM_LIBRARY/packs/DrPrettyman_DS_64x64')
+          mercury=Path('/tmp/platinum-modern-ds')
+          out=Path('DS_CUSTOM_LIBRARY/comparison')
+          out.mkdir(parents=True,exist_ok=True)
+
+          # ---- DS index ----
+          ds_assets=collections.defaultdict(lambda: collections.defaultdict(list))
+
+          def norm(s):
+              s=s.lower().strip()
+              s=s.replace('_','-').replace(' ','-')
+              s=re.sub(r'[^a-z0-9-]+','-',s)
+              s=re.sub(r'-+','-',s).strip('-')
+              return s
+
+          # Files typically live in sprites-processed/{front,back,front-shiny,...}/name.png
+          for p in dsroot.rglob('*'):
+              if not p.is_file() or p.suffix.lower() not in {'.png','.gif','.bmp'}:
+                  continue
+              name=norm(p.stem)
+              rel=p.relative_to(dsroot).as_posix()
+              cat=''
+              parts=p.relative_to(dsroot).parts
+              if parts and parts[0]=='sprites-processed' and len(parts)>=3:
+                  cat=parts[1]
+              elif parts and parts[0]=='floating-pokemon':
+                  # filenames like back__foo.png / back-shiny__foo.png
+                  stem=p.stem
+                  if '__' in stem:
+                      prefix, species = stem.split('__',1)
+                      name=norm(species)
+                      cat=norm(prefix)
+              if not cat:
+                  cat='other'
+              ds_assets[name][cat].append(rel)
+
+          # ---- Mercury GBA/custom index ----
+          mercury_keys=set()
+          mercury_paths=collections.defaultdict(list)
+
+          # Parse any manifest/inventory text files for hg_engine sprite folders.
+          text_files=list((mercury/'sprite-work').rglob('*.txt')) + list((mercury/'sprite-work').rglob('*.tsv')) + list((mercury/'sprite-work').rglob('*.csv'))
+          rx=re.compile(r'(?:hg_engine_ready/)?data/graphics/sprites/([^/\\\t]+)[/\\]')
+          for tf in text_files:
+              try:
+                  txt=tf.read_text(errors='ignore')
+              except Exception:
+                  continue
+              for m in rx.finditer(txt):
+                  key=norm(m.group(1))
+                  mercury_keys.add(key)
+                  mercury_paths[key].append(f'{tf.relative_to(mercury)} :: {m.group(0)}')
+
+          # Also derive keys from actual staged raw batch base64 names using manifest.tsv
+          for mf in (mercury/'sprite-work').rglob('manifest.tsv'):
+              try:
+                  for line in mf.read_text(errors='ignore').splitlines():
+                      m=rx.search(line)
+                      if m:
+                          key=norm(m.group(1))
+                          mercury_keys.add(key)
+                          mercury_paths[key].append(f'{mf.relative_to(mercury)} :: {line[:300]}')
+              except Exception:
+                  pass
+
+          # Search authoritative/custom source dirs too.
+          for base in [
+              mercury/'sprite-work'/'authoritative-sources',
+              mercury/'sprite-work'/'nds-conversions'
+          ]:
+              if base.exists():
+                  for p in base.iterdir():
+                      if p.is_dir():
+                          key=norm(p.name)
+                          mercury_keys.add(key)
+                          mercury_paths[key].append(str(p.relative_to(mercury)))
+
+          # Extra known replacement ledger names
+          ledger=mercury/'sprite-work'/'NDS_REPLACEMENT_LEDGER_2026-10-01.json'
+          rebuild_status={}
+          if ledger.exists():
+              data=json.loads(ledger.read_text())
+              for row in data.get('deleted_now',[]):
+                  key=norm(row.get('species',''))
+                  rebuild_status[key]=row.get('status','')
+                  mercury_keys.add(key)
+                  mercury_paths[key].append(str(ledger.relative_to(mercury)))
+
+          # ---- Match logic ----
+          def base_candidates(k):
+              # exact first, then mild canonicalization differences
+              c=[k]
+              swaps=[
+                  ('-mega-z','-mega-z'),
+                  ('mega-',''),
+              ]
+              return c
+
+          rows=[]
+          exact=0
+          partial=0
+          for key in sorted(mercury_keys):
+              ds=ds_assets.get(key)
+              match_type='NONE'
+              matched_key=''
+              if ds:
+                  match_type='EXACT_NAME'
+                  matched_key=key
+                  exact+=1
+              else:
+                  # conservative alias matching only: underscore/hyphen already normalized.
+                  # Try common order reversal "mega-species" -> "species-mega"
+                  alt=None
+                  if key.startswith('mega-'):
+                      alt=key[5:]+'-mega'
+                  elif key.endswith('-mega'):
+                      alt='mega-'+key[:-5]
+                  if alt and alt in ds_assets:
+                      ds=ds_assets[alt]
+                      matched_key=alt
+                      match_type='MEGA_ORDER_ALIAS'
+                      partial+=1
+
+              cats=set(ds.keys()) if ds else set()
+              has_front=any('front' in c and 'shiny' not in c for c in cats)
+              has_back=any('back' in c and 'shiny' not in c for c in cats)
+              has_shiny_front=any('front' in c and 'shiny' in c for c in cats)
+              has_shiny_back=any('back' in c and 'shiny' in c for c in cats)
+
+              status=rebuild_status.get(key,'')
+              if status=='REBUILD_NATIVE_NDS':
+                  recommendation='NATIVE_NDS_REMAKE'
+              elif match_type!='NONE' and has_front and has_back:
+                  recommendation='USE_DS'
+              elif match_type!='NONE':
+                  recommendation='KEEP_BOTH_FOR_REVIEW'
+              else:
+                  recommendation='CONVERT_GBA'
+
+              rows.append({
+                  'mercury_key':key,
+                  'match_type':match_type,
+                  'ds_key':matched_key,
+                  'ds_front':has_front,
+                  'ds_back':has_back,
+                  'ds_shiny_front':has_shiny_front,
+                  'ds_shiny_back':has_shiny_back,
+                  'ds_asset_count':sum(len(v) for v in ds.values()) if ds else 0,
+                  'mercury_replacement_status':status,
+                  'recommendation':recommendation,
+                  'mercury_reference_count':len(mercury_paths[key]),
+              })
+
+          with open(out/'ds_vs_mercury_gba_comparison.csv','w',newline='') as f:
+              w=csv.DictWriter(f,fieldnames=list(rows[0].keys()) if rows else ['mercury_key'])
+              w.writeheader(); w.writerows(rows)
+
+          # DS-only custom/form-ish keys that may be useful additions.
+          form_markers=('mega','galar','alola','hisui','paldea','redux','delta','primal','origin','therian','totem','gigantamax','gmax','starter','eternamax')
+          ds_customish=[]
+          for key,assets in sorted(ds_assets.items()):
+              if any(m in key for m in form_markers):
+                  ds_customish.append({
+                      'ds_key':key,
+                      'asset_count':sum(len(v) for v in assets.values()),
+                      'categories':'|'.join(sorted(assets.keys())),
+                      'already_in_mercury': key in mercury_keys
+                  })
+          with open(out/'ds_custom_form_candidates.csv','w',newline='') as f:
+              w=csv.DictWriter(f,fieldnames=['ds_key','asset_count','categories','already_in_mercury'])
+              w.writeheader(); w.writerows(ds_customish)
+
+          counts=collections.Counter(r['recommendation'] for r in rows)
+          summary={
+              'mercury_keys_total':len(rows),
+              'ds_species_form_keys_total':len(ds_assets),
+              'exact_name_matches':exact,
+              'alias_matches':partial,
+              'recommendation_counts':dict(counts),
+              'ds_custom_form_candidates':len(ds_customish),
+              'notes':[
+                  'USE_DS means a native DS front+back match exists by conservative species/form naming.',
+                  'CONVERT_GBA means no DS match was found in the currently fetched DrPrettyman library.',
+                  'NATIVE_NDS_REMAKE respects the Mercury replacement ledger and overrides ordinary matching.',
+                  'This is a name/coverage pass, not final visual approval; matched art still needs quality/provenance review.'
+              ]
+          }
+          (out/'comparison_summary.json').write_text(json.dumps(summary,indent=2))
+          print(json.dumps(summary,indent=2))
+          PY
+
+      - name: Commit comparison reports
+        run: |
+          git config user.name "Mercury Sprite Compare Bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add DS_CUSTOM_LIBRARY/comparison .github/workflows/compare-ds-vs-mercury.yml
+          if git diff --cached --quiet; then
+            echo "No changes"
+            exit 0
+          fi
+          git commit -m "Compare DS sprite library against Mercury GBA/custom set"
+          git push origin main
