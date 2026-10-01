@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Mercury Redux — DS Sprite Approval</title>
+<style>
+:root{--bg:#0e1624;--panel:#172338;--panel2:#1e2d46;--text:#eef5ff;--muted:#9fb0c7;--line:#31445f;--blue:#58a6ff;--green:#3fb950;--red:#f85149;--amber:#d29922}
+*{box-sizing:border-box}body{margin:0;background:linear-gradient(180deg,#0b1320,#111b2b 280px);color:var(--text);font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+header{position:sticky;top:0;z-index:20;background:rgba(14,22,36,.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.wrap{max-width:1440px;margin:auto;padding:14px 18px}.top{display:flex;gap:12px;align-items:center;flex-wrap:wrap}.title{font-weight:800;font-size:20px;margin-right:auto}.pill{background:#20304a;border:1px solid var(--line);padding:7px 10px;border-radius:999px;font-size:13px}
+.controls{display:grid;grid-template-columns:minmax(220px,1fr) repeat(3,auto);gap:8px;margin-top:10px}
+input,select,button{border:1px solid var(--line);background:#101a2a;color:var(--text);border-radius:9px;padding:10px 12px;font:inherit}
+button{cursor:pointer;font-weight:700}button:hover{border-color:var(--blue)}button.primary{background:#173b65;border-color:#2f6fae}
+main{max-width:1440px;margin:auto;padding:18px}.intro{background:var(--panel);border:1px solid var(--line);padding:14px;border-radius:12px;margin-bottom:14px;color:var(--muted);line-height:1.45}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:13px}.card{background:var(--panel);border:1px solid var(--line);border-radius:13px;overflow:hidden;display:flex;flex-direction:column}
+.card.multi{border-color:#916c1d;box-shadow:0 0 0 1px rgba(210,153,34,.15)}.head{padding:12px 12px 8px}.name{font-size:17px;font-weight:800;text-transform:capitalize}.meta{font-size:12px;color:var(--muted);margin-top:3px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.spritebox{height:220px;margin:0 12px;background:linear-gradient(45deg,#e7edf4 25%,#cfd8e4 25%,#cfd8e4 50%,#e7edf4 50%,#e7edf4 75%,#cfd8e4 75%);background-size:20px 20px;border-radius:10px;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.spritebox img{width:192px;height:192px;object-fit:contain;image-rendering:pixelated;image-rendering:crisp-edges}.choices{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;padding:12px}.choices button{padding:8px 6px;font-size:13px}
+.approve.active{background:#123d21;border-color:var(--green)}.reject.active{background:#4a1818;border-color:var(--red)}.maybe.active{background:#4a3714;border-color:var(--amber)}
+.badge{display:inline-block;font-size:11px;padding:3px 7px;border-radius:999px;background:#2b3c57;color:#d8e7fa;margin-left:6px}.badge.multi{background:#503d13;color:#ffd978}
+.groupTitle{grid-column:1/-1;margin:12px 0 0;padding:10px 3px;font-size:18px;font-weight:800;border-bottom:1px solid var(--line)}
+.empty{grid-column:1/-1;text-align:center;color:var(--muted);padding:50px}.footerNote{color:var(--muted);font-size:12px;margin-top:18px;text-align:center}.progress{height:7px;background:#24344d;border-radius:999px;overflow:hidden;margin-top:10px}.progress>div{height:100%;background:linear-gradient(90deg,#2f81f7,#3fb950);width:0}
+@media(max-width:720px){.controls{grid-template-columns:1fr 1fr}.controls input{grid-column:1/-1}.spritebox{height:200px}.spritebox img{width:178px;height:178px}.wrap,main{padding-left:10px;padding-right:10px}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <div class="top">
+    <div class="title">Pokémon Mercury Redux — DS Sprite Approval</div>
+    <div class="pill" id="shown">Loading…</div>
+    <div class="pill" id="done">0 reviewed</div>
+  </div>
+  <div class="progress"><div id="bar"></div></div>
+  <div class="controls">
+    <input id="search" placeholder="Search Pokémon/form or source…">
+    <select id="filter"><option value="all">All custom designs</option><option value="unreviewed">Unreviewed</option><option value="approved">Approved</option><option value="rejected">Rejected</option><option value="maybe">Maybe</option><option value="multi">Multiple designs only</option></select>
+    <button id="export">Export decisions CSV</button>
+    <button id="backup" class="primary">Backup JSON</button>
+  </div>
+</div></header>
+
+<main>
+  <div class="intro">
+    This page shows the full deduplicated <b>custom DS-ready sprite approval pool</b>. Exact duplicates and custom palette-only recolors are already excluded. If the same custom Pokémon/form has genuinely different designs, every design stays here for you to choose between. Decisions autosave on this device.
+  </div>
+  <div class="grid" id="grid"><div class="empty">Loading sprite manifest…</div></div>
+  <div class="footerNote">Mercury Redux DS sprite review • Source: DS_READY_MASTER</div>
+</main>
+
+<script>
+const REPO='lionsprideemb-tech/Sprites';
+const BRANCH='main';
+const RAW='https://raw.githubusercontent.com/'+REPO+'/'+BRANCH+'/';
+const MANIFEST=RAW+'DS_CUSTOM_LIBRARY/DS_READY_MASTER/ds_ready_front_design_manifest.csv';
+const STORAGE='mercury-ds-sprite-approval-v1';
+let rows=[], decisions={};
+
+function parseCSV(text){
+  const out=[]; let row=[], field='', q=false;
+  for(let i=0;i<text.length;i++){
+    const c=text[i], n=text[i+1];
+    if(q){
+      if(c==='"'&&n==='"'){field+='"';i++}
+      else if(c==='"')q=false; else field+=c;
+    } else {
+      if(c==='"')q=true;
+      else if(c===','){row.push(field);field=''}
+      else if(c==='\n'){row.push(field);out.push(row);row=[];field=''}
+      else if(c!=='\r')field+=c;
+    }
+  }
+  if(field||row.length){row.push(field);out.push(row)}
+  const head=out.shift()||[];
+  return out.filter(r=>r.length>1).map(r=>Object.fromEntries(head.map((h,i)=>[h,r[i]??''])));
+}
+function pretty(s){return s.replaceAll('-',' ').replace(/\b\w/g,m=>m.toUpperCase())}
+function imgURL(path){return RAW+path.split('/').map(encodeURIComponent).join('/')}
+function key(r){return r.identity+'|'+r.structural_hash}
+function save(){localStorage.setItem(STORAGE,JSON.stringify(decisions));renderStats()}
+function load(){try{decisions=JSON.parse(localStorage.getItem(STORAGE)||'{}')}catch{decisions={}}}
+function setDecision(k,v){decisions[k]=v;save();render()}
+function renderStats(){
+  const total=rows.length, reviewed=rows.filter(r=>decisions[key(r)]).length;
+  document.getElementById('done').textContent=reviewed+' / '+total+' reviewed';
+  document.getElementById('bar').style.width=(total?reviewed/total*100:0)+'%';
+}
+function render(){
+  const q=document.getElementById('search').value.trim().toLowerCase();
+  const f=document.getElementById('filter').value;
+  let list=rows.filter(r=>{
+    const d=decisions[key(r)]||'';
+    if(q && !(r.identity+' '+r.source).toLowerCase().includes(q))return false;
+    if(f==='unreviewed'&&d)return false;
+    if(f==='approved'&&d!=='approve')return false;
+    if(f==='rejected'&&d!=='reject')return false;
+    if(f==='maybe'&&d!=='maybe')return false;
+    if(f==='multi'&&r.multi_design_for_approval!=='True')return false;
+    return true;
+  });
+  const groups=new Map();
+  for(const r of list){if(!groups.has(r.identity))groups.set(r.identity,[]);groups.get(r.identity).push(r)}
+  const grid=document.getElementById('grid'); grid.innerHTML='';
+  for(const [ident,items] of [...groups.entries()].sort((a,b)=>a[0].localeCompare(b[0]))){
+    if(items.length>1 || items[0].multi_design_for_approval==='True'){
+      const h=document.createElement('div');h.className='groupTitle';h.textContent=pretty(ident)+' — '+items.length+' design options';grid.appendChild(h);
+    }
+    items.forEach((r,i)=>{
+      const k=key(r), d=decisions[k]||'', multi=r.multi_design_for_approval==='True';
+      const c=document.createElement('article');c.className='card'+(multi?' multi':'');
+      c.innerHTML=`
+        <div class="head"><div class="name">${pretty(r.identity)} ${multi?'<span class="badge multi">COMPARE</span>':'<span class="badge">CUSTOM</span>'}</div>
+        <div class="meta">${r.source} • ${r.bucket}${multi?' • option '+(i+1):''}</div></div>
+        <div class="spritebox"><img loading="lazy" alt="${pretty(r.identity)}" src="${imgURL(r.front_path)}"></div>
+        <div class="choices">
+          <button class="approve ${d==='approve'?'active':''}">✓ Approve</button>
+          <button class="maybe ${d==='maybe'?'active':''}">? Maybe</button>
+          <button class="reject ${d==='reject'?'active':''}">✕ Reject</button>
+        </div>`;
+      c.querySelector('.approve').onclick=()=>setDecision(k,d==='approve'?'':'approve');
+      c.querySelector('.maybe').onclick=()=>setDecision(k,d==='maybe'?'':'maybe');
+      c.querySelector('.reject').onclick=()=>setDecision(k,d==='reject'?'':'reject');
+      grid.appendChild(c);
+    });
+  }
+  if(!list.length)grid.innerHTML='<div class="empty">No sprites match this filter.</div>';
+  document.getElementById('shown').textContent=list.length+' shown';
+  renderStats();
+}
+function download(name,text,type='text/plain'){
+  const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([text],{type}));a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(a.href),500)
+}
+document.getElementById('search').oninput=render;
+document.getElementById('filter').onchange=render;
+document.getElementById('export').onclick=()=>{
+  const lines=['identity,source,front_path,structural_hash,decision'];
+  for(const r of rows){const d=decisions[key(r)]||'';lines.push([r.identity,r.source,r.front_path,r.structural_hash,d].map(x=>'"'+String(x).replaceAll('"','""')+'"').join(','))}
+  download('mercury_ds_sprite_decisions.csv',lines.join('\n'),'text/csv');
+};
+document.getElementById('backup').onclick=()=>download('mercury_ds_sprite_approval_backup.json',JSON.stringify({version:1,exported:new Date().toISOString(),decisions},null,2),'application/json');
+
+(async()=>{
+  load();
+  try{
+    const res=await fetch(MANIFEST,{cache:'no-store'}); if(!res.ok)throw new Error('HTTP '+res.status);
+    const all=parseCSV(await res.text());
+    rows=all.filter(r=>r.is_official==='False');
+    render();
+  }catch(e){
+    document.getElementById('grid').innerHTML='<div class="empty">Could not load the DS-ready manifest. '+e.message+'</div>';
+  }
+})();
+</script>
+</body>
+</html>
