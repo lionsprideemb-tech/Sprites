@@ -1,0 +1,189 @@
+name: Extract Platinum Redux Embedded Sprites
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/extract-platinum-redux-embedded-sprites.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  extract:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install tools
+        run: |
+          sudo apt-get update -y
+          sudo apt-get install -y unzip file
+          python -m pip install gdown pillow openpyxl
+          rm -rf /tmp/platinum-redux-docs
+          mkdir -p /tmp/platinum-redux-docs
+
+      - name: Fetch workbook and extract embedded image assets
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import subprocess, zipfile, shutil, json, hashlib, io
+          from PIL import Image
+
+          fid='1ZBX85oUoZKwwNcbpumM0bRH9uWSa7fiM'
+          xlsx=Path('/tmp/platinum-redux-docs/Platinum_Redux_v4.0_docs.xlsx')
+          dest=Path('DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites')
+          if dest.exists():
+              shutil.rmtree(dest)
+          dest.mkdir(parents=True,exist_ok=True)
+
+          p=subprocess.run(['gdown',fid,'-O',str(xlsx)],text=True,capture_output=True)
+          report={
+            'source_file_id':fid,
+            'gdown_rc':p.returncode,
+            'downloaded_bytes':xlsx.stat().st_size if xlsx.exists() else 0,
+            'embedded_media_total':0,
+            'image_files_recovered':0,
+            'likely_sprite_images':0,
+            'images':[]
+          }
+
+          if p.returncode==0 and xlsx.exists():
+              with zipfile.ZipFile(xlsx) as z:
+                  media=[n for n in z.namelist() if n.startswith('xl/media/') and not n.endswith('/')]
+                  report['embedded_media_total']=len(media)
+
+                  for i,name in enumerate(media):
+                      data=z.read(name)
+                      ext=Path(name).suffix.lower()
+                      if ext not in {'.png','.gif','.bmp','.jpg','.jpeg'}:
+                          continue
+                      try:
+                          im=Image.open(io.BytesIO(data))
+                          w,h=im.size
+                          mode=im.mode
+                          has_alpha=('A' in mode) or ('transparency' in im.info)
+                      except Exception:
+                          continue
+
+                      # Keep all embedded images separately, but label DS-sprite-like candidates.
+                      out=dest/'all-embedded'/f'{i:04d}_{Path(name).name}'
+                      out.parent.mkdir(parents=True,exist_ok=True)
+                      out.write_bytes(data)
+
+                      # DS battlers are often 64–160-ish source canvases; allow larger sheets.
+                      sprite_like=(
+                          (16 <= w <= 256 and 16 <= h <= 256)
+                          or (has_alpha and w <= 512 and h <= 512)
+                      )
+                      if sprite_like:
+                          sdst=dest/'sprite-candidates'/f'{i:04d}_{Path(name).name}'
+                          sdst.parent.mkdir(parents=True,exist_ok=True)
+                          sdst.write_bytes(data)
+
+                      report['images'].append({
+                        'source_member':name,
+                        'path':out.as_posix(),
+                        'width':w,'height':h,'mode':mode,
+                        'has_alpha_or_transparency':bool(has_alpha),
+                        'sprite_like_candidate':bool(sprite_like),
+                        'bytes':len(data),
+                        'sha256':hashlib.sha256(data).hexdigest()
+                      })
+
+                  report['image_files_recovered']=len(report['images'])
+                  report['likely_sprite_images']=sum(1 for x in report['images'] if x['sprite_like_candidate'])
+
+          report['status']='SPRITES_COLLECTED' if report['likely_sprite_images'] else 'NO_EMBEDDED_SPRITES_FOUND'
+          Path('DS_CUSTOM_LIBRARY/platinum_redux_embedded_sprite_report.json').write_text(json.dumps(report,indent=2))
+          print(json.dumps({
+            'embedded_media_total':report['embedded_media_total'],
+            'image_files_recovered':report['image_files_recovered'],
+            'likely_sprite_images':report['likely_sprite_images'],
+            'status':report['status']
+          },indent=2))
+          PY
+
+      - name: Rebuild strict actual sprite audit
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import csv,json,collections,hashlib,re
+
+          exts={'.png','.gif','.bmp','.jpg','.jpeg'}
+          rows=[]
+          for base,bucket in [
+            (Path('DS_CUSTOM_LIBRARY/packs'),'GENERIC_SOURCE_ASSET'),
+            (Path('DS_CUSTOM_LIBRARY/hack-packs'),'HACK_SOURCE_ASSET')
+          ]:
+              if not base.exists(): continue
+              for p in sorted(base.rglob('*')):
+                  if p.is_file() and p.suffix.lower() in exts:
+                      # Avoid double-counting copies under all-embedded + sprite-candidates.
+                      if 'Platinum_Redux_Embedded_Sprites/sprite-candidates/' in p.as_posix():
+                          continue
+                      rel=p.relative_to(base)
+                      source=rel.parts[0] if rel.parts else ''
+                      rows.append({
+                        'source':source,'bucket':bucket,'path':p.as_posix(),
+                        'sha256':hashlib.sha256(p.read_bytes()).hexdigest()
+                      })
+
+          with open('DS_CUSTOM_LIBRARY/actual_sprite_assets.csv','w',newline='') as f:
+              w=csv.DictWriter(f,fieldnames=['source','bucket','path','sha256'])
+              w.writeheader(); w.writerows(rows)
+
+          counts=collections.Counter((x['source'],x['bucket']) for x in rows)
+          hack_counts={s:c for (s,b),c in counts.items() if b=='HACK_SOURCE_ASSET'}
+
+          aliases={
+            'Pokemon Altered Platinum':['Altered_Platinum_Custom_Sprites'],
+            'Pokemon Banished Platinum':['Banished_Platinum_Free_Megas'],
+            'Pokemon Platinum Redux':['Platinum_Redux_Embedded_Sprites']
+          }
+          registered=[]
+          mf=Path('DS_CUSTOM_LIBRARY/hack_source_manifest.csv')
+          if mf.exists():
+              with mf.open(newline='') as f:
+                  registered=list(csv.DictReader(f))
+
+          status=[]
+          def norm(s):
+              return re.sub(r'[^a-z0-9]+','',s.lower().replace('pokemon','').replace('pokémon',''))
+          for row in registered:
+              proj=row['project']
+              n=sum(hack_counts.get(s,0) for s in aliases.get(proj,[]))
+              if not n:
+                  np=norm(proj)
+                  n=sum(c for s,c in hack_counts.items() if np in norm(s) or norm(s) in np)
+              status.append({
+                'project':proj,
+                'actual_sprite_files':n,
+                'status':'SPRITES_COLLECTED' if n else 'SOURCE_ONLY_OR_BLOCKED'
+              })
+
+          summary={
+              'actual_sprite_image_files_total':len(rows),
+              'generic_actual_image_files':sum(1 for x in rows if x['bucket']=='GENERIC_SOURCE_ASSET'),
+              'hack_actual_image_files':sum(1 for x in rows if x['bucket']=='HACK_SOURCE_ASSET'),
+              'hack_pack_counts':dict(sorted(hack_counts.items())),
+              'hack_source_status':status,
+              'excluded_from_counts':'DS_CUSTOM_LIBRARY/hack-reference-previews',
+              'rule':'Only actual image asset bytes count. Links, patches, docs, screenshots/reference previews do not.'
+          }
+          Path('DS_CUSTOM_LIBRARY/actual_sprite_audit_summary.json').write_text(json.dumps(summary,indent=2))
+          print(json.dumps(summary,indent=2))
+          PY
+
+      - name: Commit Platinum Redux embedded assets
+        run: |
+          git config user.name "Mercury Actual Sprite Recovery Bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites DS_CUSTOM_LIBRARY/platinum_redux_embedded_sprite_report.json DS_CUSTOM_LIBRARY/actual_sprite_assets.csv DS_CUSTOM_LIBRARY/actual_sprite_audit_summary.json .github/workflows/extract-platinum-redux-embedded-sprites.yml
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "sprites: extract embedded Platinum Redux image assets"
+          git pull --rebase origin main
+          git push origin main
