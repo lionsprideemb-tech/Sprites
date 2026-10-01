@@ -1,0 +1,28 @@
+{
+  "staged_special_forms": 194,
+  "complete_staged": 194,
+  "missing_source_files": 0,
+  "high_priority": [
+    {
+      "key": "absol-mega-z",
+      "status": "STAGED"
+    },
+    {
+      "key": "lucario-mega-z",
+      "status": "STAGED"
+    },
+    {
+      "key": "baxcalibur-mega",
+      "status": "STAGED"
+    },
+    {
+      "key": "golisopod-mega",
+      "status": "STAGED"
+    },
+    {
+      "key": "garchomp-mega-z",
+      "status": "NOT_IN_DS_REPLACEMENT_SET"
+    }
+  ],
+  "policy": "Staging only. No Mercury GBA/custom originals are deleted or overwritten."
+}
