@@ -115,9 +115,20 @@ jobs:
                               idx[c].add(k)
                               break
 
+          # Some official Mega form IDs are semantically distinct in data while sharing
+          # the exact same battle appearance.  Mega Meowstic is one visual design for
+          # both genders, so the female data form legitimately reuses the male Mega art.
+          mega_visual_aliases={
+              'meowstic-female-mega':'meowstic-male-mega',
+          }
+
           def resolve_component_key(k, cat, kind):
               if k in idx[cat]:
                   return k
+              if kind=='MEGA':
+                  alias=mega_visual_aliases.get(k,'')
+                  if alias and alias in idx[cat]:
+                      return alias
               # Vanilla species with mandatory/form-specific filenames: accept a concrete
               # species form when the bare species key does not exist.
               if kind=='VANILLA_SPECIES':
@@ -350,6 +361,7 @@ jobs:
                   'Official/canonical palette sources, shiny paths, and known official palette-form families are excluded from recolor deletion.',
                   'Vanilla base-species coverage accepts a concrete non-Mega form filename when the bare species filename does not exist.',
                   'Validated PokeDot Mega intake folders can satisfy Mega front/back/shiny/icon coverage without modifying the protected vanilla core.',
+                  'Official visual aliases may satisfy multiple semantic form IDs when the Mega appearance is identical; Mega Meowstic male/female is one such case.',
                   'This pass writes deletion candidates only; it does not delete image files.'
               ]
           }
