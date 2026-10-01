@@ -19,6 +19,7 @@ main{max-width:1440px;margin:auto;padding:18px}.intro{background:var(--panel);bo
 .spritebox img{width:192px;height:192px;object-fit:contain;image-rendering:pixelated;image-rendering:crisp-edges}.choices{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;padding:12px}.choices button{padding:8px 6px;font-size:13px}
 .approve.active{background:#123d21;border-color:var(--green)}.reject.active{background:#4a1818;border-color:var(--red)}.maybe.active{background:#4a3714;border-color:var(--amber)}
 .badge{display:inline-block;font-size:11px;padding:3px 7px;border-radius:999px;background:#2b3c57;color:#d8e7fa;margin-left:6px}.badge.multi{background:#503d13;color:#ffd978}
+.labels{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}.labelname{font-size:13px;font-weight:700;color:#e8f1ff}.type{display:inline-block;font-size:11px;font-weight:800;padding:4px 8px;border-radius:999px;border:1px solid #4a5f7c;background:#24364f;color:#fff;text-transform:uppercase;letter-spacing:.35px}.type.unknown{opacity:.65}
 .groupTitle{grid-column:1/-1;margin:12px 0 0;padding:10px 3px;font-size:18px;font-weight:800;border-bottom:1px solid var(--line)}
 .empty{grid-column:1/-1;text-align:center;color:var(--muted);padding:50px}.footerNote{color:var(--muted);font-size:12px;margin-top:18px;text-align:center}.progress{height:7px;background:#24344d;border-radius:999px;overflow:hidden;margin-top:10px}.progress>div{height:100%;background:linear-gradient(90deg,#2f81f7,#3fb950);width:0}
 @media(max-width:720px){.controls{grid-template-columns:1fr 1fr}.controls input{grid-column:1/-1}.spritebox{height:200px}.spritebox img{width:178px;height:178px}.wrap,main{padding-left:10px;padding-right:10px}}
@@ -53,8 +54,9 @@ const REPO='lionsprideemb-tech/Sprites';
 const BRANCH='main';
 const RAW='https://raw.githubusercontent.com/'+REPO+'/'+BRANCH+'/';
 const MANIFEST=RAW+'DS_CUSTOM_LIBRARY/DS_READY_MASTER/ds_ready_front_design_manifest.csv';
+const TYPEMAP=RAW+'DS_CUSTOM_LIBRARY/DS_READY_MASTER/mercury_name_type_map.json';
 const STORAGE='mercury-ds-sprite-approval-v1';
-let rows=[], decisions={}, familyMap={}, familyLabels={};
+let rows=[], decisions={}, familyMap={}, familyLabels={}, typeMap={};
 
 function parseCSV(text){
   const out=[]; let row=[], field='', q=false;
@@ -75,6 +77,26 @@ function parseCSV(text){
   return out.filter(r=>r.length>1).map(r=>Object.fromEntries(head.map((h,i)=>[h,r[i]??''])));
 }
 function pretty(s){return s.replaceAll('-',' ').replace(/\b\w/g,m=>m.toUpperCase())}
+function typeRecord(r){
+  const id=r.identity.toLowerCase();
+  const tries=[id,baseSpecies(id)];
+  // Common Mega naming reorder fallbacks.
+  if(id.includes('-mega-')){
+    const p=id.split('-mega-');tries.push('mega-'+p[0]+'-'+p[1]);
+  }else if(id.endsWith('-mega'))tries.push('mega-'+id.slice(0,-5));
+  for(const k of tries)if(typeMap[k])return typeMap[k];
+  return null;
+}
+function typeHTML(r){
+  const t=typeRecord(r);
+  if(!t)return '<span class="type unknown">TYPE TBD</span>';
+  const bits=[t.type1,t.type2].filter(Boolean).map(x=>'<span class="type">'+x+'</span>').join('');
+  return bits||'<span class="type unknown">TYPE TBD</span>';
+}
+function displayName(r){
+  const t=typeRecord(r);
+  return (t&&t.name)?t.name:pretty(r.identity);
+}
 function imgURL(path){return RAW+path.split('/').map(encodeURIComponent).join('/')}
 function key(r){return r.identity+'|'+r.structural_hash}
 function save(){localStorage.setItem(STORAGE,JSON.stringify(decisions));renderStats()}
@@ -197,7 +219,8 @@ function render(){
         const k=key(r), d=decisions[k]||'', multi=r.multi_design_for_approval==='True';
         const c=document.createElement('article');c.className='card'+(multi?' multi':'');
         c.innerHTML=`
-          <div class="head"><div class="name">${pretty(r.identity)} ${multi?'<span class="badge multi">COMPARE</span>':'<span class="badge">CUSTOM</span>'}</div>
+          <div class="head"><div class="name">${displayName(r)} ${multi?'<span class="badge multi">COMPARE</span>':'<span class="badge">CUSTOM</span>'}</div>
+          <div class="labels"><span class="labelname">Name: ${displayName(r)}</span>${typeHTML(r)}</div>
           <div class="meta">${r.source} • ${r.bucket}${multi?' • design '+(i+1)+' of '+items.length:''}</div></div>
           <div class="spritebox"><img loading="lazy" alt="${pretty(r.identity)}" src="${imgURL(r.front_path)}"></div>
           <div class="choices">
@@ -231,8 +254,15 @@ document.getElementById('backup').onclick=()=>download('mercury_ds_sprite_approv
 (async()=>{
   load();
   try{
-    const res=await fetch(MANIFEST,{cache:'no-store'}); if(!res.ok)throw new Error('HTTP '+res.status);
-    const all=parseCSV(await res.text());
+    const [manifestRes,typeRes]=await Promise.all([
+      fetch(MANIFEST,{cache:'no-store'}),
+      fetch(TYPEMAP,{cache:'no-store'})
+    ]);
+    if(!manifestRes.ok)throw new Error('Manifest HTTP '+manifestRes.status);
+    const all=parseCSV(await manifestRes.text());
+    if(typeRes.ok){
+      try{typeMap=(await typeRes.json()).entries||{}}catch{typeMap={}}
+    }
     rows=all.filter(r=>r.is_official==='False');
     document.getElementById('shown').textContent=rows.length+' custom designs';
     render();
