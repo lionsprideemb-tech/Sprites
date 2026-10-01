@@ -1,11 +1,11 @@
 {
-  "actual_sprite_image_files_total": 31259,
-  "unique_exact_image_hashes": 25247,
+  "actual_sprite_image_files_total": 31240,
+  "unique_exact_image_hashes": 25228,
   "duplicate_file_copies": 6012,
   "exact_duplicate_groups": 3757,
   "cross_source_exact_duplicate_groups": 1285,
   "generic_actual_image_files": 28830,
-  "hack_actual_image_files": 2429,
+  "hack_actual_image_files": 2410,
   "source_counts": {
     "Altered_Platinum_Custom_Sprites": 2,
     "Banished_Platinum_Free_Megas": 44,
@@ -37,7 +37,6 @@
     "Mikitari": 720,
     "Platinum_Redux_Embedded_Sprites": 433,
     "Platinum_Unlocked_New_Shinies": 447,
-    "Project_721_Thread_Sprites": 19,
     "Shiny_Icons_Gen1_9": 1424,
     "SoothingSilver_Embedded_Images": 43
   },
@@ -86,8 +85,8 @@
     },
     {
       "project": "Project 721",
-      "actual_sprite_files": 19,
-      "status": "SPRITES_COLLECTED",
+      "actual_sprite_files": 0,
+      "status": "KNOWN_SPRITE_SOURCE_UNRECOVERED",
       "note": ""
     },
     {

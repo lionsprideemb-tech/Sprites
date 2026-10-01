@@ -1,7 +1,7 @@
 {
   "status_counts": {
-    "ACTUAL_SPRITES_COLLECTED": 40,
-    "KNOWN_SPRITE_SOURCE_UNRECOVERED": 3,
+    "ACTUAL_SPRITES_COLLECTED": 38,
+    "KNOWN_SPRITE_SOURCE_UNRECOVERED": 4,
     "NO_UNIQUE_SPRITES_AFTER_DEDUP": 1,
     "UNRECOVERABLE_OR_BLOCKED": 1
   },
@@ -28,6 +28,13 @@
       "note": "Known to contain custom/replacement sprites; no loose public sprite bytes recovered yet."
     },
     {
+      "source": "Project 721",
+      "source_class": "REGISTERED_DS_HACK",
+      "actual_sprite_files": 0,
+      "status": "KNOWN_SPRITE_SOURCE_UNRECOVERED",
+      "note": ""
+    },
+    {
       "source": "GenVI_DS_64x64_LEGACY_THREAD",
       "source_class": "LEGACY_RESOURCE",
       "actual_sprite_files": 0,
@@ -36,7 +43,7 @@
     }
   ],
   "collection_complete": false,
-  "physical_actual_image_files": 31259,
-  "unique_exact_image_hashes": 25247,
+  "physical_actual_image_files": 31240,
+  "unique_exact_image_hashes": 25228,
   "rule": "Collection is only complete when actual sprite bytes are present or a source is proven to add no unique assets after dedup. Blocked sources remain explicit."
 }
