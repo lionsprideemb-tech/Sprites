@@ -1,0 +1,135 @@
+name: Fetch Platinum Unlocked Actual Sprite Archive
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/fetch-platinum-unlocked-shiny-sprites.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Sync latest main
+        run: git pull --rebase origin main
+
+      - name: Install tools
+        run: |
+          sudo apt-get update -y
+          sudo apt-get install -y p7zip-full unzip file
+          python -m pip install requests beautifulsoup4
+
+      - name: Resolve MediaFire and extract actual sprites
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import requests,re,subprocess,shutil,json,hashlib
+          from bs4 import BeautifulSoup
+
+          page='https://www.mediafire.com/file/2enq67wglcb180c/New_shinys.zip/file'
+          sess=requests.Session()
+          sess.headers.update({'User-Agent':'Mozilla/5.0'})
+          r=sess.get(page,timeout=30)
+          r.raise_for_status()
+          soup=BeautifulSoup(r.text,'html.parser')
+          a=soup.select_one('a#downloadButton')
+          direct=a.get('href') if a else None
+          if not direct:
+              m=re.search(r'https?://download\d+\.mediafire\.com/[^"\'<> ]+',r.text)
+              direct=m.group(0).replace('&amp;','&') if m else None
+
+          report={'source':'Pokemon Platinum Unlocked','page_url':page,'resolved_url':direct}
+          dest=Path('DS_CUSTOM_LIBRARY/hack-packs/Platinum_Unlocked_New_Shinies')
+          if dest.exists(): shutil.rmtree(dest)
+          dest.mkdir(parents=True,exist_ok=True)
+
+          if direct:
+              rr=sess.get(direct,timeout=120)
+              rr.raise_for_status()
+              arc=Path('/tmp/platinum_unlocked_shinies.zip')
+              arc.write_bytes(rr.content)
+              report['archive_bytes']=len(rr.content)
+              report['archive_sha256']=hashlib.sha256(rr.content).hexdigest()
+              q=subprocess.run(['7z','x','-y',f'-o{dest}',str(arc)],text=True,capture_output=True)
+              report['extract_rc']=q.returncode
+
+          exts={'.png','.gif','.bmp','.jpg','.jpeg','.webp'}
+          imgs=[]
+          for p in sorted(dest.rglob('*')):
+              if p.is_file() and p.suffix.lower() in exts:
+                  imgs.append({
+                    'path':p.as_posix(),
+                    'bytes':p.stat().st_size,
+                    'sha256':hashlib.sha256(p.read_bytes()).hexdigest()
+                  })
+          report['actual_sprite_image_files']=len(imgs)
+          report['asset_class']='SHINY_RECOLOR_SOURCE'
+          report['status']='SPRITES_COLLECTED' if imgs else 'NO_IMAGES_EXTRACTED'
+          report['files']=imgs
+          Path('DS_CUSTOM_LIBRARY/platinum_unlocked_sprite_report.json').write_text(json.dumps(report,indent=2))
+          print(json.dumps({
+            'actual_sprite_image_files':len(imgs),
+            'asset_class':report['asset_class'],
+            'status':report['status']
+          },indent=2))
+          PY
+
+      - name: Rebuild strict audit
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import csv,json,collections,hashlib,re
+          exts={'.png','.gif','.bmp','.jpg','.jpeg','.webp'}
+          rows=[]
+          for base,bucket in [(Path('DS_CUSTOM_LIBRARY/packs'),'GENERIC_SOURCE_ASSET'),(Path('DS_CUSTOM_LIBRARY/hack-packs'),'HACK_SOURCE_ASSET')]:
+              if not base.exists(): continue
+              for p in sorted(base.rglob('*')):
+                  if p.is_file() and p.suffix.lower() in exts:
+                      if 'Platinum_Redux_Embedded_Sprites/sprite-candidates/' in p.as_posix(): continue
+                      rel=p.relative_to(base)
+                      source=rel.parts[0] if rel.parts else ''
+                      rows.append({'source':source,'bucket':bucket,'path':p.as_posix(),'sha256':hashlib.sha256(p.read_bytes()).hexdigest()})
+          with open('DS_CUSTOM_LIBRARY/actual_sprite_assets.csv','w',newline='') as f:
+              w=csv.DictWriter(f,fieldnames=['source','bucket','path','sha256']); w.writeheader(); w.writerows(rows)
+          sc=collections.Counter(x['source'] for x in rows)
+          old={}
+          sp=Path('DS_CUSTOM_LIBRARY/actual_sprite_audit_summary.json')
+          if sp.exists():
+              try: old=json.loads(sp.read_text())
+              except Exception: pass
+          hs=old.get('hack_source_status',[])
+          for h in hs:
+              if h.get('project')=='Pokemon Platinum Unlocked regional-form project':
+                  n=sc.get('Platinum_Unlocked_New_Shinies',0)
+                  h['actual_sprite_files']=n
+                  h['status']='SPRITES_COLLECTED' if n else 'SOURCE_ONLY_OR_BLOCKED'
+                  h['note']='Collected asset bucket is shiny/recolor source art, not proof of regional-form design sprites.'
+          summary={
+            'actual_sprite_image_files_total':len(rows),
+            'generic_actual_image_files':sum(1 for x in rows if x['bucket']=='GENERIC_SOURCE_ASSET'),
+            'hack_actual_image_files':sum(1 for x in rows if x['bucket']=='HACK_SOURCE_ASSET'),
+            'source_counts':dict(sorted(sc.items())),
+            'hack_source_status':hs,
+            'excluded_from_counts':old.get('excluded_from_counts','DS_CUSTOM_LIBRARY/hack-reference-previews'),
+            'rule':'Only actual image asset bytes count. Recolor/shiny packs are retained but explicitly tagged and excluded from later new-design approval.'
+          }
+          sp.write_text(json.dumps(summary,indent=2))
+          print(json.dumps(summary,indent=2))
+          PY
+
+      - name: Commit Platinum Unlocked sprite assets
+        run: |
+          git config user.name "Mercury Actual Sprite Recovery Bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add DS_CUSTOM_LIBRARY/hack-packs/Platinum_Unlocked_New_Shinies DS_CUSTOM_LIBRARY/platinum_unlocked_sprite_report.json DS_CUSTOM_LIBRARY/actual_sprite_assets.csv DS_CUSTOM_LIBRARY/actual_sprite_audit_summary.json .github/workflows/fetch-platinum-unlocked-shiny-sprites.yml
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "sprites: collect Platinum Unlocked actual shiny sprite archive"
+          git push origin main
