@@ -1,0 +1,162 @@
+name: Ingest Unique hg-engine Fork Sprites
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/ingest-unique-hg-fork-sprites.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  ingest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Clone upstream and candidate forks
+        run: |
+          rm -rf /tmp/hg-upstream /tmp/hg-fork-19 /tmp/hg-fork-skid
+          git clone --depth 1 https://github.com/BluRosie/hg-engine.git /tmp/hg-upstream
+          git clone --depth 1 https://github.com/19tlancaster/hg-engine.git /tmp/hg-fork-19
+          git clone --depth 1 https://github.com/SkidMarc25/hg-engine.git /tmp/hg-fork-skid
+
+      - name: Copy only new or changed sprite assets from forks
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import hashlib, shutil, json, csv, collections
+
+          upstream=Path('/tmp/hg-upstream/data/graphics/sprites')
+          forks=[
+            ('19tlancaster_hg-engine',Path('/tmp/hg-fork-19/data/graphics/sprites')),
+            ('SkidMarc25_hg-engine',Path('/tmp/hg-fork-skid/data/graphics/sprites'))
+          ]
+          root=Path('DS_CUSTOM_LIBRARY/packs')
+          exts={'.png','.gif','.bmp','.jpg','.jpeg','.webp'}
+
+          def sha(p):
+              return hashlib.sha256(p.read_bytes()).hexdigest()
+
+          upstream_map={}
+          if upstream.exists():
+              for p in upstream.rglob('*'):
+                  if p.is_file() and p.suffix.lower() in exts:
+                      upstream_map[p.relative_to(upstream).as_posix()]=sha(p)
+
+          rows=[]
+          seen_content=set(upstream_map.values())
+
+          for source,srcroot in forks:
+              dest=root/f'HG_Fork_Unique_{source}'
+              if dest.exists():
+                  shutil.rmtree(dest)
+              dest.mkdir(parents=True,exist_ok=True)
+
+              if not srcroot.exists():
+                  continue
+
+              for p in sorted(srcroot.rglob('*')):
+                  if not p.is_file() or p.suffix.lower() not in exts:
+                      continue
+                  rel=p.relative_to(srcroot).as_posix()
+                  h=sha(p)
+                  uph=upstream_map.get(rel)
+
+                  # Keep only assets not byte-identical to upstream.
+                  if uph==h:
+                      continue
+                  # Avoid duplicate content imported from another fork.
+                  if h in seen_content:
+                      continue
+
+                  seen_content.add(h)
+                  out=dest/rel
+                  out.parent.mkdir(parents=True,exist_ok=True)
+                  shutil.copy2(p,out)
+
+                  rows.append({
+                      'source':source,
+                      'relative_path':rel,
+                      'change_type':'NEW_PATH' if uph is None else 'CHANGED_FROM_UPSTREAM',
+                      'sha256':h,
+                      'upstream_sha256':uph or '',
+                      'path':out.as_posix()
+                  })
+
+          with open('DS_CUSTOM_LIBRARY/hg_fork_unique_sprite_inventory.csv','w',newline='') as f:
+              w=csv.DictWriter(f,fieldnames=['source','relative_path','change_type','sha256','upstream_sha256','path'])
+              w.writeheader(); w.writerows(rows)
+
+          counts=collections.Counter(r['source'] for r in rows)
+          types=collections.Counter(r['change_type'] for r in rows)
+          summary={
+              'unique_fork_sprite_assets_imported':len(rows),
+              'by_source':dict(sorted(counts.items())),
+              'by_change_type':dict(sorted(types.items())),
+              'policy':'Only image assets new or changed versus BluRosie/hg-engine are imported. Byte-identical upstream copies are excluded.'
+          }
+          Path('DS_CUSTOM_LIBRARY/hg_fork_unique_sprite_summary.json').write_text(json.dumps(summary,indent=2))
+          print(json.dumps(summary,indent=2))
+          PY
+
+      - name: Rebuild strict actual-sprite audit
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import csv,json,collections,hashlib
+
+          exts={'.png','.gif','.bmp','.jpg','.jpeg','.webp'}
+          rows=[]
+          for base,bucket in [
+            (Path('DS_CUSTOM_LIBRARY/packs'),'GENERIC_SOURCE_ASSET'),
+            (Path('DS_CUSTOM_LIBRARY/hack-packs'),'HACK_SOURCE_ASSET')
+          ]:
+              if not base.exists(): continue
+              for p in sorted(base.rglob('*')):
+                  if p.is_file() and p.suffix.lower() in exts:
+                      if 'Platinum_Redux_Embedded_Sprites/sprite-candidates/' in p.as_posix():
+                          continue
+                      rel=p.relative_to(base)
+                      source=rel.parts[0] if rel.parts else ''
+                      rows.append({
+                          'source':source,'bucket':bucket,'path':p.as_posix(),
+                          'sha256':hashlib.sha256(p.read_bytes()).hexdigest()
+                      })
+
+          with open('DS_CUSTOM_LIBRARY/actual_sprite_assets.csv','w',newline='') as f:
+              w=csv.DictWriter(f,fieldnames=['source','bucket','path','sha256'])
+              w.writeheader(); w.writerows(rows)
+
+          sc=collections.Counter(x['source'] for x in rows)
+          summary_path=Path('DS_CUSTOM_LIBRARY/actual_sprite_audit_summary.json')
+          old={}
+          if summary_path.exists():
+              try: old=json.loads(summary_path.read_text())
+              except Exception: old={}
+          summary={
+              'actual_sprite_image_files_total':len(rows),
+              'generic_actual_image_files':sum(1 for x in rows if x['bucket']=='GENERIC_SOURCE_ASSET'),
+              'hack_actual_image_files':sum(1 for x in rows if x['bucket']=='HACK_SOURCE_ASSET'),
+              'source_counts':dict(sorted(sc.items())),
+              'hack_source_status':old.get('hack_source_status',[]),
+              'excluded_from_counts':old.get('excluded_from_counts','DS_CUSTOM_LIBRARY/hack-reference-previews'),
+              'rule':'Only actual image asset bytes count. Exact upstream duplicates from fork sweeps are excluded before import.'
+          }
+          summary_path.write_text(json.dumps(summary,indent=2))
+          print(json.dumps(summary,indent=2))
+          PY
+
+      - name: Commit unique fork assets
+        run: |
+          git config user.name "Mercury Actual Sprite Intake Bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add DS_CUSTOM_LIBRARY/packs/HG_Fork_Unique_* DS_CUSTOM_LIBRARY/hg_fork_unique_sprite_inventory.csv DS_CUSTOM_LIBRARY/hg_fork_unique_sprite_summary.json DS_CUSTOM_LIBRARY/actual_sprite_assets.csv DS_CUSTOM_LIBRARY/actual_sprite_audit_summary.json .github/workflows/ingest-unique-hg-fork-sprites.yml
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "sprites: ingest unique hg-engine fork sprite assets"
+          git pull --rebase origin main
+          git push origin main
