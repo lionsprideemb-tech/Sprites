@@ -1,0 +1,117 @@
+name: Build Sprite Source Completeness Gate
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/build-sprite-source-completeness.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  gate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Build source completeness status
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import csv,json,collections,re
+
+          audit={}
+          p=Path('DS_CUSTOM_LIBRARY/actual_sprite_audit_summary.json')
+          if p.exists():
+              audit=json.loads(p.read_text())
+
+          source_counts=audit.get('source_counts',{})
+          hack_status=audit.get('hack_source_status',[])
+
+          rows=[]
+
+          # Generic/resource source buckets physically present.
+          for source,count in sorted(source_counts.items()):
+              rows.append({
+                  'source':source,
+                  'source_class':'COLLECTED_ASSET_BUCKET',
+                  'actual_sprite_files':count,
+                  'status':'ACTUAL_SPRITES_COLLECTED' if count>0 else 'NO_ASSETS'
+              })
+
+          # Registered hack sources: status must be explicit even when zero.
+          existing={r['source'] for r in rows}
+          for h in hack_status:
+              src=h['project']
+              if src in existing: continue
+              n=int(h.get('actual_sprite_files',0) or 0)
+              rows.append({
+                  'source':src,
+                  'source_class':'REGISTERED_DS_HACK',
+                  'actual_sprite_files':n,
+                  'status':'ACTUAL_SPRITES_COLLECTED' if n>0 else 'UNRECOVERED_SOURCE'
+              })
+
+          # Known intentionally deduplicated source sweeps.
+          for summary_file,label in [
+              ('DS_CUSTOM_LIBRARY/hg_fork_unique_sprite_summary.json','HG_ENGINE_FORK_SWEEP'),
+              ('DS_CUSTOM_LIBRARY/hgss_project_unique_sprite_summary.json','HGSS_PROJECT_SWEEP')
+          ]:
+              sp=Path(summary_file)
+              if not sp.exists(): continue
+              d=json.loads(sp.read_text())
+              n=d.get('unique_fork_sprite_assets_imported',d.get('unique_project_sprite_assets_imported',0))
+              rows.append({
+                  'source':label,
+                  'source_class':'DEDUP_SWEEP',
+                  'actual_sprite_files':int(n or 0),
+                  'status':'ACTUAL_SPRITES_COLLECTED' if int(n or 0)>0 else 'NO_UNIQUE_SPRITES_AFTER_DEDUP'
+              })
+
+          # Explicit unresolved legacy resource.
+          genvi=Path('DS_CUSTOM_LIBRARY/fetch_report_genvi_direct.json')
+          if genvi.exists():
+              d=json.loads(genvi.read_text())
+              n=int(d.get('unique_actual_images_collected',0) or 0)
+              rows.append({
+                  'source':'GenVI_DS_64x64_LEGACY_THREAD',
+                  'source_class':'LEGACY_RESOURCE',
+                  'actual_sprite_files':n,
+                  'status':'ACTUAL_SPRITES_COLLECTED' if n>0 else 'UNRECOVERABLE_OR_BLOCKED'
+              })
+
+          rows.sort(key=lambda r:(r['status'],r['source'].lower()))
+          with open('DS_CUSTOM_LIBRARY/source_completeness_gate.csv','w',newline='') as f:
+              w=csv.DictWriter(f,fieldnames=['source','source_class','actual_sprite_files','status'])
+              w.writeheader(); w.writerows(rows)
+
+          counts=collections.Counter(r['status'] for r in rows)
+          unresolved=[r for r in rows if r['status'] in {'UNRECOVERED_SOURCE','UNRECOVERABLE_OR_BLOCKED','NO_ASSETS'}]
+          summary={
+              'status_counts':dict(sorted(counts.items())),
+              'unresolved_sources':unresolved,
+              'collection_complete':len(unresolved)==0,
+              'rule':'A source is only complete when actual sprite bytes are collected, or it is explicitly proven to add no unique sprites after exact dedup.'
+          }
+          Path('DS_CUSTOM_LIBRARY/source_completeness_gate.json').write_text(json.dumps(summary,indent=2))
+          print(json.dumps(summary,indent=2))
+          PY
+
+      - name: Commit completeness gate
+        run: |
+          git config user.name "Mercury Sprite Audit Bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add DS_CUSTOM_LIBRARY/source_completeness_gate.csv DS_CUSTOM_LIBRARY/source_completeness_gate.json .github/workflows/build-sprite-source-completeness.yml
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "sprites: add actual-source completeness gate"
+          git pull --rebase origin main || {
+            git rebase --abort || true
+            git pull --ff-only origin main
+            git add DS_CUSTOM_LIBRARY/source_completeness_gate.csv DS_CUSTOM_LIBRARY/source_completeness_gate.json
+            git commit -m "sprites: refresh actual-source completeness gate" || true
+          }
+          git push origin main
