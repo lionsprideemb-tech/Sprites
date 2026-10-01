@@ -1,0 +1,223 @@
+name: Refresh DS Source Master Audit
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/refresh-ds-source-master-audit.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Sync latest main
+        run: git pull --rebase origin main
+
+      - name: Rebuild strict inventory, exact dedup, and completeness gate
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import csv,json,collections,hashlib,re
+
+          exts={'.png','.gif','.bmp','.jpg','.jpeg','.webp'}
+          assets=[]
+
+          for base,bucket in [
+              (Path('DS_CUSTOM_LIBRARY/packs'),'GENERIC_SOURCE_ASSET'),
+              (Path('DS_CUSTOM_LIBRARY/hack-packs'),'HACK_SOURCE_ASSET')
+          ]:
+              if not base.exists(): continue
+              for p in sorted(base.rglob('*')):
+                  if not p.is_file() or p.suffix.lower() not in exts:
+                      continue
+                  # Avoid known duplicate mirror/candidate copies.
+                  if 'Platinum_Redux_Embedded_Sprites/sprite-candidates/' in p.as_posix():
+                      continue
+                  rel=p.relative_to(base)
+                  source=rel.parts[0] if rel.parts else ''
+                  b=p.read_bytes()
+                  assets.append({
+                      'source':source,
+                      'bucket':bucket,
+                      'path':p.as_posix(),
+                      'sha256':hashlib.sha256(b).hexdigest(),
+                      'bytes':len(b)
+                  })
+
+          with open('DS_CUSTOM_LIBRARY/actual_sprite_assets.csv','w',newline='') as f:
+              w=csv.DictWriter(f,fieldnames=['source','bucket','path','sha256','bytes'])
+              w.writeheader(); w.writerows(assets)
+
+          by_hash=collections.defaultdict(list)
+          for a in assets: by_hash[a['sha256']].append(a)
+          groups=[]
+          for h,items in by_hash.items():
+              sources=sorted({x['source'] for x in items})
+              groups.append({
+                  'sha256':h,
+                  'copies':len(items),
+                  'source_count':len(sources),
+                  'sources':'|'.join(sources),
+                  'representative_path':items[0]['path']
+              })
+          groups.sort(key=lambda x:(-x['copies'],x['representative_path']))
+          with open('DS_CUSTOM_LIBRARY/cross_source_exact_hash_groups.csv','w',newline='') as f:
+              w=csv.DictWriter(f,fieldnames=['sha256','copies','source_count','sources','representative_path'])
+              w.writeheader(); w.writerows(groups)
+
+          sc=collections.Counter(a['source'] for a in assets)
+          physical=len(assets)
+          unique=len(by_hash)
+          dupcopies=physical-unique
+          dupgroups=sum(1 for g in groups if g['copies']>1)
+          crossgroups=sum(1 for g in groups if g['source_count']>1)
+
+          # Registered DS-hack status aliases.
+          aliases={
+              'Pokemon Platinum Redux':['Platinum_Redux_Embedded_Sprites'],
+              'Pokemon Altered Platinum':['Altered_Platinum_Custom_Sprites'],
+              'Pokemon Banished Platinum':['Banished_Platinum_Free_Megas'],
+              'Pokemon SoothingSilver':['SoothingSilver_Actual_Sprites','SoothingSilver_Embedded_Images'],
+              'Pokemon Platinum Unlocked regional-form project':['Platinum_Unlocked_New_Shinies'],
+              'Project 721':['Project_721_Thread_Sprites'],
+              'Pokemon Infinite Black 2':['Infinite_Black_2_Unique_Assets'],
+              'Pokemon GoldSoul':['GoldSoul_Reddit_Sprites'],
+              'Pokemon Moon Black 2':['Moon_Black_2_Thread_Sprites'],
+              'Pokemon XYZ NDS':['Pokemon_XYZ_NDS_Thread_Sprites']
+          }
+
+          manifest=[]
+          mf=Path('DS_CUSTOM_LIBRARY/hack_source_manifest.csv')
+          if mf.exists():
+              with mf.open(newline='') as f:
+                  manifest=list(csv.DictReader(f))
+
+          hack_status=[]
+          for row in manifest:
+              proj=row['project']
+              n=sum(sc.get(s,0) for s in aliases.get(proj,[]))
+              status='SPRITES_COLLECTED' if n>0 else 'KNOWN_SPRITE_SOURCE_UNRECOVERED'
+              note=''
+              if proj=='Pokemon Platinum Unlocked regional-form project' and n:
+                  note='447 collected files are shiny/recolor source assets; regional-form design sprites remain separately unverified.'
+              if proj=='Pokemon GoldSoul' and not n:
+                  note='Public Reddit/project references found, but direct sprite media could not be recovered by current collector.'
+              if proj=='Pokemon Moon Black 2' and not n:
+                  note='Known to contain custom/replacement sprites; no loose public sprite bytes recovered yet.'
+              if proj=='Pokemon XYZ NDS' and not n:
+                  note='Public thread exposes named attachments, but attachment bytes remain blocked by PokéCommunity protection.'
+              hack_status.append({
+                  'project':proj,
+                  'actual_sprite_files':n,
+                  'status':status,
+                  'note':note
+              })
+
+          strict_summary={
+              'actual_sprite_image_files_total':physical,
+              'unique_exact_image_hashes':unique,
+              'duplicate_file_copies':dupcopies,
+              'exact_duplicate_groups':dupgroups,
+              'cross_source_exact_duplicate_groups':crossgroups,
+              'generic_actual_image_files':sum(1 for a in assets if a['bucket']=='GENERIC_SOURCE_ASSET'),
+              'hack_actual_image_files':sum(1 for a in assets if a['bucket']=='HACK_SOURCE_ASSET'),
+              'source_counts':dict(sorted(sc.items())),
+              'hack_source_status':hack_status,
+              'rule':'Only actual image asset bytes count. Known candidate/mirror copies are excluded from double-counting.'
+          }
+          Path('DS_CUSTOM_LIBRARY/actual_sprite_audit_summary.json').write_text(json.dumps(strict_summary,indent=2))
+
+          dedup_summary={
+              'total_image_asset_files':physical,
+              'unique_exact_image_hashes':unique,
+              'duplicate_file_copies':dupcopies,
+              'exact_duplicate_groups':dupgroups,
+              'cross_source_exact_duplicate_groups':crossgroups,
+              'source_file_counts':dict(sorted(sc.items())),
+              'note':'Byte-identical dedup only. Recolors, near-duplicates, alternate poses, and design-equivalent redraws are separate until later visual/semantic comparison.'
+          }
+          Path('DS_CUSTOM_LIBRARY/cross_source_dedup_summary.json').write_text(json.dumps(dedup_summary,indent=2))
+
+          # Completeness gate.
+          gate_rows=[]
+          for source,count in sorted(sc.items()):
+              asset_class='COLLECTED_ASSET_BUCKET'
+              status='ACTUAL_SPRITES_COLLECTED'
+              note=''
+              if source=='Platinum_Unlocked_New_Shinies':
+                  note='SHINY_RECOLOR_SOURCE; not a new-design source.'
+              gate_rows.append({
+                  'source':source,'source_class':asset_class,
+                  'actual_sprite_files':count,'status':status,'note':note
+              })
+
+          for h in hack_status:
+              gate_rows.append({
+                  'source':h['project'],
+                  'source_class':'REGISTERED_DS_HACK',
+                  'actual_sprite_files':h['actual_sprite_files'],
+                  'status':'ACTUAL_SPRITES_COLLECTED' if h['actual_sprite_files'] else 'KNOWN_SPRITE_SOURCE_UNRECOVERED',
+                  'note':h['note']
+              })
+
+          gate_rows.append({
+              'source':'HG_ENGINE_FORK_SWEEP',
+              'source_class':'DEDUP_SWEEP',
+              'actual_sprite_files':0,
+              'status':'NO_UNIQUE_SPRITES_AFTER_DEDUP',
+              'note':'19tlancaster and SkidMarc25 sprite trees added no byte-unique images versus upstream.'
+          })
+          gate_rows.append({
+              'source':'GenVI_DS_64x64_LEGACY_THREAD',
+              'source_class':'LEGACY_RESOURCE',
+              'actual_sprite_files':sc.get('GenVI_DS_64x64',0),
+              'status':'ACTUAL_SPRITES_COLLECTED' if sc.get('GenVI_DS_64x64',0) else 'UNRECOVERABLE_OR_BLOCKED',
+              'note':'Legacy PokeCommunity thread is publicly visible but old linked image assets remain inaccessible to automated collector.'
+          })
+
+          with open('DS_CUSTOM_LIBRARY/source_completeness_gate.csv','w',newline='') as f:
+              w=csv.DictWriter(f,fieldnames=['source','source_class','actual_sprite_files','status','note'])
+              w.writeheader(); w.writerows(gate_rows)
+
+          unresolved=[r for r in gate_rows if r['status'] in {'KNOWN_SPRITE_SOURCE_UNRECOVERED','UNRECOVERABLE_OR_BLOCKED'}]
+          status_counts=collections.Counter(r['status'] for r in gate_rows)
+          gate={
+              'status_counts':dict(sorted(status_counts.items())),
+              'unresolved_sources':unresolved,
+              'collection_complete':len(unresolved)==0,
+              'physical_actual_image_files':physical,
+              'unique_exact_image_hashes':unique,
+              'rule':'Collection is only complete when actual sprite bytes are present or a source is proven to add no unique assets after dedup. Blocked sources remain explicit.'
+          }
+          Path('DS_CUSTOM_LIBRARY/source_completeness_gate.json').write_text(json.dumps(gate,indent=2))
+
+          print(json.dumps({
+              'physical_actual_image_files':physical,
+              'unique_exact_image_hashes':unique,
+              'duplicate_file_copies':dupcopies,
+              'unresolved_count':len(unresolved),
+              'unresolved':[x['source'] for x in unresolved]
+          },indent=2))
+          PY
+
+      - name: Commit refreshed master audit
+        run: |
+          git config user.name "Mercury Sprite Master Audit Bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add DS_CUSTOM_LIBRARY/actual_sprite_assets.csv DS_CUSTOM_LIBRARY/actual_sprite_audit_summary.json DS_CUSTOM_LIBRARY/cross_source_exact_hash_groups.csv DS_CUSTOM_LIBRARY/cross_source_dedup_summary.json DS_CUSTOM_LIBRARY/source_completeness_gate.csv DS_CUSTOM_LIBRARY/source_completeness_gate.json .github/workflows/refresh-ds-source-master-audit.yml
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "sprites: refresh complete native DS source audit"
+          for attempt in 1 2 3 4 5; do
+            if git push origin main; then exit 0; fi
+            git pull --rebase origin main
+            sleep 2
+          done
+          exit 1
