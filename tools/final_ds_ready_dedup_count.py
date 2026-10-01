@@ -225,10 +225,26 @@ for ident,items in custom_fronts.items():
     canonical.extend(kept)
 
 canonical=sorted(canonical,key=lambda a:(a["identity"],quality(a)))
+
+# Pair each chosen front with a normal back sprite from the same source/identity.
+back_index=collections.defaultdict(list)
+for a in assets:
+    if a["role"]=="back" and a["path"] not in exact_drop and a["path"] not in recolor_drop:
+        back_index[(a["source"],a["bucket"],a["identity"])].append(a)
+
+def paired_back(a):
+    items=back_index.get((a["source"],a["bucket"],a["identity"]),[])
+    if items:
+        return min(items,key=quality)["path"]
+    # Fallback to same identity across sources if the exact source omitted its back.
+    fallback=[x for x in assets if x["role"]=="back" and x["identity"]==a["identity"] and x["path"] not in exact_drop and x["path"] not in recolor_drop]
+    return min(fallback,key=quality)["path"] if fallback else ""
+
 master=[{
     "identity":a["identity"],"is_official":a["official_identity"],
     "source":a["source"],"bucket":a["bucket"],
-    "front_path":a["path"],"structural_hash":a["structural_hash"],
+    "front_path":a["path"],"back_path":paired_back(a),
+    "structural_hash":a["structural_hash"],
     "exact_hash":a["exact_hash"],"multi_design_for_approval":a["identity"] in multi_ids
 } for a in canonical]
 
@@ -243,7 +259,7 @@ write_csv(OUT/"palette_only_recolors.csv",recolor_rows,
 write_csv(OUT/"custom_multi_design_approval_candidates.csv",multi,
           ["identity","design_option","source","bucket","front_path","structural_hash","exact_hash","action"])
 write_csv(OUT/"ds_ready_front_design_manifest.csv",master,
-          ["identity","is_official","source","bucket","front_path","structural_hash","exact_hash","multi_design_for_approval"])
+          ["identity","is_official","source","bucket","front_path","back_path","structural_hash","exact_hash","multi_design_for_approval"])
 (OUT/"decode_failures.txt").write_text(("\n".join(decode_fail)+"\n") if decode_fail else "")
 
 official_kept=sum(1 for x in master if x["is_official"])
@@ -264,6 +280,8 @@ summary={
     "custom_semantic_identities":custom_identity_count,
     "custom_identities_with_multiple_genuinely_different_designs":len(multi_ids),
     "custom_design_options_preserved_for_approval":len(multi),
+    "custom_designs_with_back_sprite":sum(1 for x in master if (not x["is_official"]) and x["back_path"]),
+    "custom_designs_missing_back_sprite":sum(1 for x in master if (not x["is_official"]) and not x["back_path"]),
     "total_pokemon_form_sprite_designs_before_approval":len(master),
     "official_plus_custom_breakdown":{"official":official_kept,"custom_design_candidates":custom_kept},
     "count_definition":"Count is one preferred normal-front sprite per official form identity plus every genuinely different custom design candidate. Exact duplicates and custom palette-only recolors are excluded. Multiple genuinely different designs for the same custom mon are retained for approval.",
