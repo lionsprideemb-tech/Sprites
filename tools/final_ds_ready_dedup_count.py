@@ -1,6 +1,6 @@
 from pathlib import Path
 from PIL import Image
-import collections, csv, hashlib, json, re
+import collections, csv, hashlib, json, re, urllib.request
 
 ROOT=Path("DS_CUSTOM_LIBRARY")
 OUT=ROOT/"DS_READY_MASTER"
@@ -22,6 +22,20 @@ def norm(s):
     s=str(s).lower().replace("'","").replace("_","-").replace(" ","-")
     s=re.sub(r"[^a-z0-9-]+","-",s)
     return re.sub(r"-+","-",s).strip("-")
+
+# Official forms are protected from recolor collapse.
+official=set()
+api_ok=False
+try:
+    with urllib.request.urlopen("https://pokeapi.co/api/v2/pokemon?limit=10000",timeout=60) as r:
+        data=json.load(r)
+    official={norm(x["name"]) for x in data.get("results",[])}
+    api_ok=True
+except Exception:
+    # Fallback protects at least the base species known from the canonical DS core.
+    core=ROOT/"packs"/"DrPrettyman_DS_64x64"/"sprites-processed"/"front"
+    if core.exists():
+        official={norm(p.stem) for p in core.iterdir() if p.is_file()}
 
 def role(p):
     stem=norm(p.stem); parts=[norm(x) for x in p.parts]; joined="/".join(parts)
@@ -71,9 +85,10 @@ def source(p, root):
     return rel.parts[0] if rel.parts else root.name
 
 def quality(a):
-    if a["bucket"]=="CONVERTED_GBA": tier=0
-    elif a["source"]=="DrPrettyman_DS_64x64": tier=1
-    elif a["source"]=="HG_Engine_DS_Sprites": tier=2
+    # Native DS artwork is preferred over mechanical GBA conversion when the identity matches.
+    if a["source"]=="DrPrettyman_DS_64x64": tier=0
+    elif a["source"]=="HG_Engine_DS_Sprites": tier=1
+    elif a["bucket"] in {"NATIVE_PACK","NATIVE_HACK"}: tier=2
     else: tier=3
     return (tier,len(a["path"]),a["path"])
 
@@ -89,14 +104,15 @@ for root,bucket in ROOTS:
             decode_fail.append(p.as_posix()); continue
         exact,struct,w,h,colors=sig
         comp=role(p)
+        ident=identity(p,comp)
         assets.append({
             "path":p.as_posix(),"bucket":bucket,"source":source(p,root),
-            "role":comp,"identity":identity(p,comp),
+            "role":comp,"identity":ident,"official_identity":ident in official,
             "exact_hash":exact,"structural_hash":struct,
             "width":w,"height":h,"colors":colors
         })
 
-# Same-role exact duplicate check.
+# Exact duplicates: same component and same pixels. Keep best source.
 by_exact=collections.defaultdict(list)
 for a in assets: by_exact[(a["role"],a["exact_hash"])].append(a)
 exact_rows=[]; exact_drop=set()
@@ -112,54 +128,67 @@ for (comp,h),items in by_exact.items():
             "delete_source":a["source"],"keep_source":keep["source"],"exact_hash":h
         })
 
-# Same-role palette-only recolor check. Shiny roles are intentionally excluded.
+# Palette-only recolors are only cleanup candidates when at least one side is custom.
+# Official-vs-official palette forms are protected. Normal and shiny never mix.
+recolor_rows=[]; recolor_drop=set()
 by_struct=collections.defaultdict(list)
 for a in assets:
     if a["path"] in exact_drop or a["role"] not in {"front","back","icon"}: continue
     by_struct[(a["role"],a["structural_hash"])].append(a)
-recolor_rows=[]; recolor_drop=set()
+
 for (comp,h),items in by_struct.items():
     if len(items)<2 or len({x["exact_hash"] for x in items})<2: continue
-    keep=min(items,key=quality)
-    for a in items:
+    official_items=[x for x in items if x["official_identity"]]
+    custom_items=[x for x in items if not x["official_identity"]]
+    if not custom_items:
+        continue
+    # If an official design exists, all custom palette-only variants are cleanup candidates.
+    # Otherwise keep the best custom source and collapse the other pure recolors.
+    keep=min(official_items,key=quality) if official_items else min(custom_items,key=quality)
+    candidates=custom_items if official_items else [x for x in custom_items if x["path"]!=keep["path"]]
+    for a in candidates:
         if a["path"]==keep["path"]: continue
         recolor_drop.add(a["path"])
         recolor_rows.append({
-            "reason":"PALETTE_ONLY_RECOLOR","role":comp,"identity":a["identity"],
+            "reason":"CUSTOM_PALETTE_ONLY_RECOLOR","role":comp,"identity":a["identity"],
             "delete_path":a["path"],"keep_path":keep["path"],
             "delete_source":a["source"],"keep_source":keep["source"],"structural_hash":h
         })
 
-# One Pokemon/form design = one unique normal-front structural design.
-fronts=[a for a in assets if a["role"]=="front"]
-canonical=[]; seen=set()
-for a in sorted(fronts,key=quality):
-    if a["structural_hash"] in seen: continue
-    seen.add(a["structural_hash"]); canonical.append(a)
+fronts=[a for a in assets if a["role"]=="front" and a["path"] not in exact_drop and a["path"] not in recolor_drop]
 
-by_identity=collections.defaultdict(list)
-for a in canonical: by_identity[a["identity"]].append(a)
+# Build final front candidates:
+# - one preferred front per official semantic identity;
+# - all genuinely different structural designs per custom identity.
+official_fronts=collections.defaultdict(list)
+custom_fronts=collections.defaultdict(list)
+for a in fronts:
+    (official_fronts if a["official_identity"] else custom_fronts)[a["identity"]].append(a)
 
-# Preserve genuinely different custom designs for approval.
+canonical=[]
+for ident,items in official_fronts.items():
+    canonical.append(min(items,key=quality))
+
 multi=[]; multi_ids=set()
-core_sources={"DrPrettyman_DS_64x64","HG_Engine_DS_Sprites","DS_Styled_Gen5_8","Gen7_DS_Backsprites","Shiny_Icons_Gen1_9"}
-for ident,items in sorted(by_identity.items()):
-    if len({x["structural_hash"] for x in items})<2: continue
-    custom_signal=(
-        any(t in ident for t in ["mega","redux","delta","primal","apex","battle-bond","nightmare"])
-        or any(x["bucket"]!="NATIVE_PACK" or x["source"] not in core_sources for x in items)
-    )
-    if not custom_signal: continue
-    multi_ids.add(ident)
-    for n,a in enumerate(sorted(items,key=quality),1):
-        multi.append({
-            "identity":ident,"design_option":n,"source":a["source"],"bucket":a["bucket"],
-            "front_path":a["path"],"structural_hash":a["structural_hash"],
-            "exact_hash":a["exact_hash"],"action":"KEEP_FOR_APPROVAL_SHEET"
-        })
+for ident,items in custom_fronts.items():
+    by_visual=collections.defaultdict(list)
+    for a in items: by_visual[a["structural_hash"]].append(a)
+    kept=[min(group,key=quality) for group in by_visual.values()]
+    kept=sorted(kept,key=quality)
+    if len(kept)>1:
+        multi_ids.add(ident)
+        for n,a in enumerate(kept,1):
+            multi.append({
+                "identity":ident,"design_option":n,"source":a["source"],"bucket":a["bucket"],
+                "front_path":a["path"],"structural_hash":a["structural_hash"],
+                "exact_hash":a["exact_hash"],"action":"KEEP_FOR_APPROVAL_SHEET"
+            })
+    canonical.extend(kept)
 
+canonical=sorted(canonical,key=lambda a:(a["identity"],quality(a)))
 master=[{
-    "identity":a["identity"],"source":a["source"],"bucket":a["bucket"],
+    "identity":a["identity"],"is_official":a["official_identity"],
+    "source":a["source"],"bucket":a["bucket"],
     "front_path":a["path"],"structural_hash":a["structural_hash"],
     "exact_hash":a["exact_hash"],"multi_design_for_approval":a["identity"] in multi_ids
 } for a in canonical]
@@ -175,24 +204,32 @@ write_csv(OUT/"palette_only_recolors.csv",recolor_rows,
 write_csv(OUT/"custom_multi_design_approval_candidates.csv",multi,
           ["identity","design_option","source","bucket","front_path","structural_hash","exact_hash","action"])
 write_csv(OUT/"ds_ready_front_design_manifest.csv",master,
-          ["identity","source","bucket","front_path","structural_hash","exact_hash","multi_design_for_approval"])
+          ["identity","is_official","source","bucket","front_path","structural_hash","exact_hash","multi_design_for_approval"])
 (OUT/"decode_failures.txt").write_text(("\n".join(decode_fail)+"\n") if decode_fail else "")
 
+official_kept=sum(1 for x in master if x["is_official"])
+custom_kept=sum(1 for x in master if not x["is_official"])
+custom_identity_count=len(custom_fronts)
 summary={
+    "pokeapi_official_form_index_ok":api_ok,
+    "official_form_names_indexed":len(official),
     "ds_ready_image_files_scanned":len(assets),
     "decoded_failures":len(decode_fail),
-    "front_sprite_files_found":len(fronts),
+    "normal_front_sprite_files_after_component_cleanup":len(fronts),
     "exact_duplicate_component_files":len(exact_rows),
-    "palette_only_recolor_component_files":len(recolor_rows),
-    "unique_front_visual_designs_after_exact_and_recolor_dedup":len(canonical),
-    "semantic_identity_count_among_unique_front_designs":len(by_identity),
+    "custom_palette_only_recolor_component_files":len(recolor_rows),
+    "official_semantic_front_entries_kept":official_kept,
+    "custom_semantic_identities":custom_identity_count,
     "custom_identities_with_multiple_genuinely_different_designs":len(multi_ids),
     "custom_design_options_preserved_for_approval":len(multi),
-    "count_definition":"One Pokemon sprite design is one unique non-shiny FRONT visual after exact duplicates and palette-only recolors are collapsed. Genuinely different designs for the same custom identity are all retained and counted.",
+    "total_pokemon_form_sprite_designs_before_approval":len(master),
+    "official_plus_custom_breakdown":{"official":official_kept,"custom_design_candidates":custom_kept},
+    "count_definition":"Count is one preferred normal-front sprite per official form identity plus every genuinely different custom design candidate. Exact duplicates and custom palette-only recolors are excluded. Multiple genuinely different designs for the same custom mon are retained for approval.",
     "policy":[
         "Normal and shiny roles are never compared against each other.",
-        "No files are deleted by this audit.",
-        "Exact duplicates and palette-only recolors are isolated as cleanup candidates.",
+        "Official form identities are protected from palette-recolor collapse.",
+        "Native DS artwork is preferred over mechanically converted GBA art when the semantic identity is the same.",
+        "No files are deleted by this audit; duplicate/recolor files are isolated in reports.",
         "Different custom-mon designs are preserved for the approval sheet."
     ]
 }
