@@ -1,0 +1,45 @@
+name: Bulk Convert Elite Redux GBA Sources to DS Technical Format
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "DS_CUSTOM_LIBRARY/packs/Elite_Redux_ER_nextdex/**"
+      - "tools/mercury_bulk_gba_to_ds.py"
+      - ".github/workflows/bulk-convert-elite-redux-gba-to-ds.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  convert:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Ensure ER source pack exists
+        run: |
+          set -euo pipefail
+          test -d DS_CUSTOM_LIBRARY/packs/Elite_Redux_ER_nextdex
+          test "$(find DS_CUSTOM_LIBRARY/packs/Elite_Redux_ER_nextdex -maxdepth 1 -type f -iname '*.png' | wc -l)" -gt 0
+
+      - name: Install Pillow
+        run: pip install pillow
+
+      - name: Run technical bulk conversion
+        run: |
+          rm -rf DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk
+          mkdir -p DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk
+          python tools/mercury_bulk_gba_to_ds.py             --source DS_CUSTOM_LIBRARY/packs/Elite_Redux_ER_nextdex             --output DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk             --report-dir DS_CUSTOM_LIBRARY/cleanup-audit
+
+      - name: Commit staged conversions and reports
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk                   DS_CUSTOM_LIBRARY/cleanup-audit/elite_redux_gba_to_ds_design_classification.csv                   DS_CUSTOM_LIBRARY/cleanup-audit/elite_redux_gba_to_ds_slot_audit.csv                   DS_CUSTOM_LIBRARY/cleanup-audit/elite_redux_gba_to_ds_summary.json
+          if git diff --cached --quiet; then
+            echo "No changes"
+            exit 0
+          fi
+          git commit -m "Stage Elite Redux bulk GBA-to-DS technical conversions"
+          git push
