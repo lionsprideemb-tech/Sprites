@@ -87,6 +87,8 @@ function typeRecord(r){
   return null;
 }
 function typeHTML(r){
+  const p=proposedIdentity(r);
+  if(p)return [p.type1,p.type2].filter(Boolean).map(x=>'<span class="type">'+x+'</span>').join('');
   const t=typeRecord(r);
   if(!t)return '<span class="type unknown">TYPE TBD</span>';
   const bits=[t.type1,t.type2].filter(Boolean).map(x=>'<span class="type">'+x+'</span>').join('');
@@ -95,7 +97,13 @@ function typeHTML(r){
 function isOpaqueIdentity(id){
   return /^\d+[\-_ ]*[a-z0-9]*$/i.test(id) || /^\d+[a-z]?[-_]\d+[a-z]?$/i.test(id) || /^sprite[-_]?\d+$/i.test(id);
 }
+function proposedIdentity(r){
+  if(r.identity==='059-1f')return {name:'Proposed Mega Hisuian Arcanine',type1:'Fire',type2:'Rock'};
+  return null;
+}
 function displayName(r){
+  const p=proposedIdentity(r);
+  if(p)return p.name;
   const t=typeRecord(r);
   if(t&&t.name)return t.name;
   if(isOpaqueIdentity(r.identity))return 'UNIDENTIFIED SPRITE';
@@ -145,7 +153,8 @@ const FAMILY_OVERRIDES={
   'revengoose':'zangoose',
   'venagon':'seviper',
   'mega-flygon':'trapinch',
-  'flygon-1':'trapinch'
+  'flygon-1':'trapinch',
+  '059-1f':'growlithe'
 };
 function baseSpecies(id){
   let x=id.toLowerCase();
@@ -199,6 +208,7 @@ async function buildFamilyMap(){
 
   // Assign each custom identity through its stripped/base species.
   for(const r of rows){
+    if(r.identity==='059-1f'){r.family_key='growlithe';familyLabels['growlithe']='Growlithe → Arcanine';continue}
     if(isOpaqueIdentity(r.identity)){r.family_key='__unidentified__'+r.source;continue}
     const base=baseSpecies(r.identity);
     r.family_key=familyMap[base]||base;
@@ -250,11 +260,11 @@ function render(){
     });
     for(const [ident,items] of ordered){
       items.forEach((r,i)=>{
-        const k=key(r), d=decisions[k]||'', multi=r.multi_design_for_approval==='True', unidentified=isOpaqueIdentity(r.identity);
+        const k=key(r), d=decisions[k]||'', multi=r.multi_design_for_approval==='True', unidentified=isOpaqueIdentity(r.identity)&&!proposedIdentity(r);
         const c=document.createElement('article');c.className='card'+(multi?' multi':'')+(unidentified?' unidentified':'');
         c.innerHTML=`
           <div class="head"><div class="name">${displayName(r)} ${unidentified?'<span class="badge unidentified">NEEDS ID</span>':(multi?'<span class="badge multi">COMPARE</span>':'<span class="badge">CUSTOM</span>')}</div>
-          <div class="labels"><span class="labelname">Name: ${unidentified?'Unknown (source ID '+r.identity+')':displayName(r)}</span>${typeHTML(r)}</div>
+          <div class="labels"><span class="labelname">Name: ${unidentified?'Unknown (source ID '+r.identity+')':displayName(r)}</span>${typeHTML(r)}</div>${proposedIdentity(r)?'<div class="meta">Provisional Mercury pitch • source ID '+r.identity+'</div>':''}
           <div class="meta">${r.source} • ${r.bucket}${multi?' • design '+(i+1)+' of '+items.length:''}</div>
           <div class="meta" title="${r.front_path}">Source file: ${r.front_path}</div></div>
           <div class="spritepair">
