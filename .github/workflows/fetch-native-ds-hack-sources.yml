@@ -123,7 +123,9 @@ jobs:
           sources=[
             ('Platinum_Redux','https://www.pokecommunity.com/threads/pok%C3%A9mon-platinum-redux.525725/'),
             ('Altered_Platinum','https://www.pokecommunity.com/threads/pok%C3%A9mon-altered-platinum-sinnohan-forms-increased-difficulty-and-more.466016/'),
-            ('Pokemon_XYZ_NDS','https://www.pokecommunity.com/threads/pok%C3%A9mon-xyz-nds-rom-hack.527852/')
+            ('Pokemon_XYZ_NDS','https://www.pokecommunity.com/threads/pok%C3%A9mon-xyz-nds-rom-hack.527852/'),
+            ('SoothingSilver','https://www.pokecommunity.com/threads/pok%C3%A9mon-soothingsilver-version-1-4-5.540452/'),
+            ('GoldSoul','https://www.reddit.com/r/PokemonROMhacks/comments/17hbx4n/')
           ]
 
           root=Path('DS_CUSTOM_LIBRARY/hack-reference-previews')
@@ -141,6 +143,8 @@ jobs:
                   pages=[url]
                   if name=='Platinum_Redux':
                       pages += [url.rstrip('/')+'/page-2',url.rstrip('/')+'/page-3']
+                  if name=='SoothingSilver':
+                      pages += [url.rstrip('/')+'/page-2']
                   urls=[]
                   for page in pages:
                       r=sess.get(page,timeout=30)
