@@ -1,0 +1,36 @@
+#-------------------------------
+[X]
+Name = Sweetcheep
+InternalName = SWEETCHEEP
+Type1 = FLYING
+Type2 = GRASS
+BaseStats = 45,55,40,30,30,70
+GenderRate = Female50Percent
+GrowthRate = Medium
+BaseEXP = 54
+EffortPoints = 0,0,0,0,0,1
+Rareness = 45
+Happiness = 70
+Abilities = RIPEN,SWEETVEIL
+HiddenAbility = HARVEST
+Moves = 1,PECK,1,GROWL,5,SWEETSCENT,9,LEAFAGE,13,WINGATTACK,17,LEECHSEED,21,BULLETSEED,25,GROWTH,29,AGILITY,33,NATURALGIFT,37,TAKEDOWN,41,SEEDBOMB,45,BRAVEBIRD
+TutorMoves = FLY,SOLARBEAM,SCREECH,REST,SNORE,PROTECT,CHARM,STEELWING,ATTRACT,SUNNYDAY,FACADE,SWIFT,BULLETSEED,UTURN,ROUND,ACROBATICS,RETALIATE,GRASSYTERRAIN,AIRSLASH,BODYSLAM,FOCUSENERGY,TOXIC,SUBSTITUTE,ENDURE,SLEEPTALK,UPROAR,HYPERVOICE,BULKUP,GYROBALL,SEEDBOMB,ENERGYBALL,BRAVEBIRD,POWERWHIP,GRASSKNOT,WORKUP,BODYPRESS,CAPTIVATE,DOUBLEEDGE,DOUBLETEAM,SWAGGER,CONFIDE,TAILWIND,ENDEAVOR
+EggMoves = BRAVEBIRD,DEFOG,HURRICANE,PURSUIT,RAGE,REFRESH,SYNTHESIS,STEELWING,WHIRLWIND,DRILLPECK,INGRAIN,NATUREPOWER,ENDURE
+Compatibility = Flying,Grass
+StepsToHatch = 5120
+Height = 0.3
+Weight = 4.0
+Color = Green
+Shape = Winged
+Habitat = Forest
+Kind = Melon
+Pokedex = Sweetcheep can shoot small black seeds with 2736km/h. Those seeds are indigestible and lead to stomach ache.
+Generation = 9
+BattlerPlayerX = 
+BattlerPlayerY =
+BattlerEnemyX = 
+BattlerEnemyY = 
+BattlerShadowX = 
+BattlerShadowSize = 
+Evolutions = GOURDIZAL,Level,23
+#-------------------------------
