@@ -1,0 +1,137 @@
+name: Triage Remaining Mercury GBA Sprites
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/triage-remaining-gba.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  triage:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Build remaining GBA triage
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import csv, json, collections, re
+
+          comp=Path('DS_CUSTOM_LIBRARY/comparison/ds_vs_mercury_gba_comparison.csv')
+          forms=Path('DS_CUSTOM_LIBRARY/comparison/ds_custom_form_candidates.csv')
+          out=Path('DS_CUSTOM_LIBRARY/comparison')
+          rows=list(csv.DictReader(comp.open()))
+          form_rows=list(csv.DictReader(forms.open()))
+
+          # partial DS coverage map, useful when a form has icon-only support
+          partial={}
+          for r in form_rows:
+              partial[r['ds_key']]=r
+
+          remaining=[r for r in rows if r['recommendation']=='CONVERT_GBA']
+
+          def has_any(k, words):
+              return any(w in k for w in words)
+
+          triaged=[]
+          counts=collections.Counter()
+          for r in remaining:
+              k=r['mercury_key']
+              category='OTHER_CUSTOM_OR_UNKNOWN'
+              action='GBA_TO_DS_CONVERT'
+
+              if has_any(k,['-redux','redux-']):
+                  category='REDUX_OR_DELTA_STYLE'
+                  action='CONVERT_IF_SOURCE_CLEAN_ELSE_REVIEW'
+              elif '-mega' in k or k.startswith('mega-'):
+                  category='CUSTOM_MEGA'
+                  action='CONVERT_IF_SOURCE_CLEAN_ELSE_NATIVE_REMAKE'
+              elif has_any(k,['-galar','-alola','-hisui','-paldea','regional']):
+                  category='REGIONAL_OR_CANON_FORM'
+                  action='SEARCH_MORE_DS_SOURCES_THEN_CONVERT'
+              elif has_any(k,['gmax','gigantamax','primal','origin','therian','totem','eternamax']):
+                  category='SPECIAL_CANON_FORM'
+                  action='SEARCH_MORE_DS_SOURCES_THEN_CONVERT'
+              elif re.search(r'(^|-)delta($|-)',k):
+                  category='DELTA_FORM'
+                  action='CONVERT_IF_SOURCE_CLEAN_ELSE_REVIEW'
+              elif has_any(k,['alternate-form','alternate','cpf-']):
+                  category='ALTERNATE_FORM'
+                  action='VISUAL_REVIEW_THEN_CONVERT'
+              else:
+                  # ordinary canon-ish species/form entries without obvious custom markers
+                  category='BASE_OR_OTHER'
+                  action='SEARCH_MORE_DS_SOURCES_THEN_CONVERT'
+
+              # Known manual remake overrides from current Mercury decisions
+              remake_names={'mega-rhyperior','rhyperior-mega','mega-rhyperior-stage22'}
+              if k in remake_names or 'mega-rhyperior-stage22' in k:
+                  category='MERCURY_ORIGINAL_BAD_SOURCE'
+                  action='NATIVE_NDS_REMAKE'
+
+              ds_partial=partial.get(k)
+              partial_support=''
+              if ds_partial and ds_partial.get('asset_count') not in ('0',''):
+                  cats=ds_partial.get('categories','')
+                  if 'front' not in cats or 'back' not in cats:
+                      partial_support=f"DS_PARTIAL:{cats}"
+
+              counts[(category,action)] += 1
+              triaged.append({
+                  **r,
+                  'triage_category':category,
+                  'next_action':action,
+                  'partial_ds_support':partial_support
+              })
+
+          fieldnames=list(triaged[0].keys()) if triaged else ['mercury_key']
+          with (out/'remaining_gba_triage.csv').open('w',newline='') as f:
+              w=csv.DictWriter(f,fieldnames=fieldnames)
+              w.writeheader(); w.writerows(triaged)
+
+          # focus queues
+          queues={
+              'custom_mega': [r for r in triaged if r['triage_category']=='CUSTOM_MEGA'],
+              'redux_delta': [r for r in triaged if r['triage_category'] in ('REDUX_OR_DELTA_STYLE','DELTA_FORM')],
+              'regional_special': [r for r in triaged if r['triage_category'] in ('REGIONAL_OR_CANON_FORM','SPECIAL_CANON_FORM')],
+              'base_other': [r for r in triaged if r['triage_category'] in ('BASE_OR_OTHER','ALTERNATE_FORM','OTHER_CUSTOM_OR_UNKNOWN')],
+              'native_remake': [r for r in triaged if r['next_action']=='NATIVE_NDS_REMAKE'],
+              'partial_ds_support': [r for r in triaged if r['partial_ds_support']]
+          }
+          for name,items in queues.items():
+              with (out/f'queue_{name}.csv').open('w',newline='') as f:
+                  w=csv.DictWriter(f,fieldnames=fieldnames)
+                  w.writeheader(); w.writerows(items)
+
+          summary={
+              'remaining_total':len(remaining),
+              'category_counts':{},
+              'action_counts':dict(collections.Counter(r['next_action'] for r in triaged)),
+              'queue_counts':{k:len(v) for k,v in queues.items()},
+              'important_note':'This triage is conservative. It does not delete or replace art; it only decides which path each remaining GBA/custom entry should take.'
+          }
+          for (cat,action),n in counts.items():
+              summary['category_counts'][cat]=summary['category_counts'].get(cat,0)+n
+
+          (out/'remaining_gba_triage_summary.json').write_text(json.dumps(summary,indent=2))
+          print(json.dumps(summary,indent=2))
+          PY
+
+      - name: Commit triage reports
+        run: |
+          git config user.name "Mercury Sprite Triage Bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add DS_CUSTOM_LIBRARY/comparison .github/workflows/triage-remaining-gba.yml
+          if git diff --cached --quiet; then
+            echo "No changes"
+            exit 0
+          fi
+          git commit -m "Triage remaining Mercury GBA sprite backlog"
+          git push origin main
