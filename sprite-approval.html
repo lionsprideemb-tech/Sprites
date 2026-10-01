@@ -15,10 +15,9 @@ button{cursor:pointer;font-weight:700}button:hover{border-color:var(--blue)}butt
 main{max-width:1440px;margin:auto;padding:18px}.intro{background:var(--panel);border:1px solid var(--line);padding:14px;border-radius:12px;margin-bottom:14px;color:var(--muted);line-height:1.45}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:13px}.card{background:var(--panel);border:1px solid var(--line);border-radius:13px;overflow:hidden;display:flex;flex-direction:column}
 .card.multi{border-color:#916c1d;box-shadow:0 0 0 1px rgba(210,153,34,.15)}.head{padding:12px 12px 8px}.name{font-size:17px;font-weight:800;text-transform:capitalize}.meta{font-size:12px;color:var(--muted);margin-top:3px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.spritebox{height:220px;margin:0 12px;background:linear-gradient(45deg,#e7edf4 25%,#cfd8e4 25%,#cfd8e4 50%,#e7edf4 50%,#e7edf4 75%,#cfd8e4 75%);background-size:20px 20px;border-radius:10px;display:flex;align-items:center;justify-content:center;overflow:hidden}
-.spritebox img{width:192px;height:192px;object-fit:contain;image-rendering:pixelated;image-rendering:crisp-edges}.choices{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;padding:12px}.choices button{padding:8px 6px;font-size:13px}
+.spritepair{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:0 12px}.spritebox{height:220px;margin:0;background:linear-gradient(45deg,#e7edf4 25%,#cfd8e4 25%,#cfd8e4 50%,#e7edf4 50%,#e7edf4 75%,#cfd8e4 75%);background-size:20px 20px;border-radius:10px;display:flex;flex-direction:column;align-items:center;justify-content:center;overflow:hidden;position:relative}.spritebox img{width:100%;height:190px;object-fit:contain;image-rendering:pixelated;image-rendering:crisp-edges}.viewlabel{position:absolute;left:8px;top:7px;background:rgba(9,18,31,.78);color:#fff;border-radius:999px;padding:3px 7px;font-size:10px;font-weight:800;letter-spacing:.5px}.missingview{font-size:12px;color:#53657d;font-weight:700}.card.unidentified{border-color:#b84f4f;box-shadow:0 0 0 1px rgba(248,81,73,.13)}.choices{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;padding:12px}.choices button{padding:8px 6px;font-size:13px}
 .approve.active{background:#123d21;border-color:var(--green)}.reject.active{background:#4a1818;border-color:var(--red)}.maybe.active{background:#4a3714;border-color:var(--amber)}
-.badge{display:inline-block;font-size:11px;padding:3px 7px;border-radius:999px;background:#2b3c57;color:#d8e7fa;margin-left:6px}.badge.multi{background:#503d13;color:#ffd978}
+.badge{display:inline-block;font-size:11px;padding:3px 7px;border-radius:999px;background:#2b3c57;color:#d8e7fa;margin-left:6px}.badge.multi{background:#503d13;color:#ffd978}.badge.unidentified{background:#5a2020;color:#ffd9d6}
 .labels{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}.labelname{font-size:13px;font-weight:700;color:#e8f1ff}.type{display:inline-block;font-size:11px;font-weight:800;padding:4px 8px;border-radius:999px;border:1px solid #4a5f7c;background:#24364f;color:#fff;text-transform:uppercase;letter-spacing:.35px}.type.unknown{opacity:.65}
 .groupTitle{grid-column:1/-1;margin:12px 0 0;padding:10px 3px;font-size:18px;font-weight:800;border-bottom:1px solid var(--line)}
 .empty{grid-column:1/-1;text-align:center;color:var(--muted);padding:50px}.footerNote{color:var(--muted);font-size:12px;margin-top:18px;text-align:center}.progress{height:7px;background:#24344d;border-radius:999px;overflow:hidden;margin-top:10px}.progress>div{height:100%;background:linear-gradient(90deg,#2f81f7,#3fb950);width:0}
@@ -35,7 +34,7 @@ main{max-width:1440px;margin:auto;padding:18px}.intro{background:var(--panel);bo
   <div class="progress"><div id="bar"></div></div>
   <div class="controls">
     <input id="search" placeholder="Search Pokémon/form or source…">
-    <select id="filter"><option value="all">All custom designs</option><option value="unreviewed">Unreviewed</option><option value="approved">Approved</option><option value="rejected">Rejected</option><option value="maybe">Maybe</option><option value="multi">Multiple designs only</option></select>
+    <select id="filter"><option value="all">All custom designs</option><option value="unreviewed">Unreviewed</option><option value="approved">Approved</option><option value="rejected">Rejected</option><option value="maybe">Maybe</option><option value="multi">Multiple designs only</option><option value="unidentified">Needs identification</option></select>
     <button id="export">Export decisions CSV</button>
     <button id="backup" class="primary">Backup JSON</button>
   </div>
@@ -43,7 +42,7 @@ main{max-width:1440px;margin:auto;padding:18px}.intro{background:var(--panel);bo
 
 <main>
   <div class="intro">
-    This page shows the full deduplicated <b>custom DS-ready sprite approval pool</b>. Exact duplicates and custom palette-only recolors are already excluded. <b>Evolution families are kept together</b>, and if the same Pokémon/form has genuinely different designs, every option stays in that family block for comparison. Decisions autosave on this device.
+    This page shows the full deduplicated <b>custom DS-ready sprite approval pool</b>. Exact duplicates and custom palette-only recolors are already excluded. <b>Evolution families are kept together</b>, every card now shows <b>front + back</b>, and genuinely different designs stay together for comparison. Opaque source-number sprites are clearly marked <b>NEEDS ID</b> instead of pretending the filename is a Pokémon name. Decisions autosave on this device.
   </div>
   <div class="grid" id="grid"><div class="empty">Loading sprite manifest…</div></div>
   <div class="footerNote">Mercury Redux DS sprite review • Source: DS_READY_MASTER</div>
@@ -93,9 +92,42 @@ function typeHTML(r){
   const bits=[t.type1,t.type2].filter(Boolean).map(x=>'<span class="type">'+x+'</span>').join('');
   return bits||'<span class="type unknown">TYPE TBD</span>';
 }
+function isOpaqueIdentity(id){
+  return /^\d+[\-_ ]*[a-z0-9]*$/i.test(id) || /^\d+[a-z]?[-_]\d+[a-z]?$/i.test(id) || /^sprite[-_]?\d+$/i.test(id);
+}
 function displayName(r){
   const t=typeRecord(r);
-  return (t&&t.name)?t.name:pretty(r.identity);
+  if(t&&t.name)return t.name;
+  if(isOpaqueIdentity(r.identity))return 'UNIDENTIFIED SPRITE';
+  return pretty(r.identity);
+}
+function backCandidates(path){
+  const out=[];
+  const swaps=[
+    ['/Front/','/Back/'],['/front/','/back/'],['/Fronts/','/Backs/'],['/fronts/','/backs/'],
+    ['/Battlers Normal/Front/','/Battlers Normal/Back/'],['/Gen 4 Battlers/Fronts/','/Gen 4 Battlers/Backs/']
+  ];
+  for(const [a,b] of swaps)if(path.includes(a))out.push(path.replace(a,b));
+  if(path.endsWith('/front.png'))out.push(path.slice(0,-10)+'/back.png');
+  if(path.endsWith('/anim_front.png'))out.push(path.slice(0,-14)+'/back.png');
+  const base=path.replace(/\.(png|gif|bmp|jpg|jpeg|webp)$/i,'');
+  out.push(base.replace(/_front$/i,'_back')+path.slice(base.length));
+  return [...new Set(out.filter(x=>x!==path))];
+}
+function attachBackFallback(img,r){
+  const candidates=backCandidates(r.front_path);
+  let i=0;
+  const tryNext=()=>{
+    if(i>=candidates.length){
+      img.style.display='none';
+      const m=img.parentElement.querySelector('.missingview');
+      if(m)m.style.display='block';
+      return;
+    }
+    img.src=imgURL(candidates[i++]);
+  };
+  img.onerror=tryNext;
+  tryNext();
 }
 function imgURL(path){return RAW+path.split('/').map(encodeURIComponent).join('/')}
 function key(r){return r.identity+'|'+r.structural_hash}
@@ -140,7 +172,7 @@ async function fetchJSON(url){
   return r.json();
 }
 async function buildFamilyMap(){
-  const unique=[...new Set(rows.map(r=>baseSpecies(r.identity)))];
+  const unique=[...new Set(rows.filter(r=>!isOpaqueIdentity(r.identity)).map(r=>baseSpecies(r.identity)))];
   let idx=0, done=0;
   const workers=Array.from({length:10},async()=>{
     while(true){
@@ -167,6 +199,7 @@ async function buildFamilyMap(){
 
   // Assign each custom identity through its stripped/base species.
   for(const r of rows){
+    if(isOpaqueIdentity(r.identity)){r.family_key='__unidentified__'+r.source;continue}
     const base=baseSpecies(r.identity);
     r.family_key=familyMap[base]||base;
     if(!familyLabels[r.family_key])familyLabels[r.family_key]=pretty(r.family_key);
@@ -189,11 +222,12 @@ function render(){
     if(f==='rejected'&&d!=='reject')return false;
     if(f==='maybe'&&d!=='maybe')return false;
     if(f==='multi'&&r.multi_design_for_approval!=='True')return false;
+    if(f==='unidentified'&&!isOpaqueIdentity(r.identity))return false;
     return true;
   });
   const families=new Map();
   for(const r of list){
-    const fk=r.family_key||baseSpecies(r.identity);
+    const fk=isOpaqueIdentity(r.identity)?('__unidentified__'+r.source):(r.family_key||baseSpecies(r.identity));
     if(!families.has(fk))families.set(fk,new Map());
     const identities=families.get(fk);
     if(!identities.has(r.identity))identities.set(r.identity,[]);
@@ -203,7 +237,7 @@ function render(){
   for(const [fk,identities] of [...families.entries()].sort((a,b)=>(familyLabels[a[0]]||a[0]).localeCompare(familyLabels[b[0]]||b[0]))){
     const familyCount=[...identities.values()].reduce((n,a)=>n+a.length,0);
     const fh=document.createElement('div');fh.className='groupTitle';
-    fh.textContent=(familyLabels[fk]||pretty(fk))+' family — '+familyCount+' custom design'+(familyCount===1?'':'s');
+    fh.textContent=fk.startsWith('__unidentified__')?('Needs identification — '+fk.replace('__unidentified__','')+' — '+familyCount+' sprite'+(familyCount===1?'':'s')):((familyLabels[fk]||pretty(fk))+' family — '+familyCount+' custom design'+(familyCount===1?'':'s'));
     grid.appendChild(fh);
 
     // Preserve evolution-chain order where PokeAPI gave us one, then identity name.
@@ -216,18 +250,23 @@ function render(){
     });
     for(const [ident,items] of ordered){
       items.forEach((r,i)=>{
-        const k=key(r), d=decisions[k]||'', multi=r.multi_design_for_approval==='True';
-        const c=document.createElement('article');c.className='card'+(multi?' multi':'');
+        const k=key(r), d=decisions[k]||'', multi=r.multi_design_for_approval==='True', unidentified=isOpaqueIdentity(r.identity);
+        const c=document.createElement('article');c.className='card'+(multi?' multi':'')+(unidentified?' unidentified':'');
         c.innerHTML=`
-          <div class="head"><div class="name">${displayName(r)} ${multi?'<span class="badge multi">COMPARE</span>':'<span class="badge">CUSTOM</span>'}</div>
-          <div class="labels"><span class="labelname">Name: ${displayName(r)}</span>${typeHTML(r)}</div>
-          <div class="meta">${r.source} • ${r.bucket}${multi?' • design '+(i+1)+' of '+items.length:''}</div></div>
-          <div class="spritebox"><img loading="lazy" alt="${pretty(r.identity)}" src="${imgURL(r.front_path)}"></div>
+          <div class="head"><div class="name">${displayName(r)} ${unidentified?'<span class="badge unidentified">NEEDS ID</span>':(multi?'<span class="badge multi">COMPARE</span>':'<span class="badge">CUSTOM</span>')}</div>
+          <div class="labels"><span class="labelname">Name: ${unidentified?'Unknown (source ID '+r.identity+')':displayName(r)}</span>${typeHTML(r)}</div>
+          <div class="meta">${r.source} • ${r.bucket}${multi?' • design '+(i+1)+' of '+items.length:''}</div>
+          <div class="meta" title="${r.front_path}">Source file: ${r.front_path}</div></div>
+          <div class="spritepair">
+            <div class="spritebox"><span class="viewlabel">FRONT</span><img loading="lazy" alt="${pretty(r.identity)} front" src="${imgURL(r.front_path)}"></div>
+            <div class="spritebox"><span class="viewlabel">BACK</span><img class="backimg" loading="lazy" alt="${pretty(r.identity)} back"><div class="missingview" style="display:none">No matching back sprite found</div></div>
+          </div>
           <div class="choices">
             <button class="approve ${d==='approve'?'active':''}">✓ Approve</button>
             <button class="maybe ${d==='maybe'?'active':''}">? Maybe</button>
             <button class="reject ${d==='reject'?'active':''}">✕ Reject</button>
           </div>`;
+        attachBackFallback(c.querySelector('.backimg'),r);
         c.querySelector('.approve').onclick=()=>setDecision(k,d==='approve'?'':'approve');
         c.querySelector('.maybe').onclick=()=>setDecision(k,d==='maybe'?'':'maybe');
         c.querySelector('.reject').onclick=()=>setDecision(k,d==='reject'?'':'reject');
