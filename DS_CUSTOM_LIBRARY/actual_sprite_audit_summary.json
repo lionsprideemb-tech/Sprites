@@ -1,7 +1,7 @@
 {
-  "actual_sprite_image_files_total": 29352,
+  "actual_sprite_image_files_total": 29799,
   "generic_actual_image_files": 28830,
-  "hack_actual_image_files": 522,
+  "hack_actual_image_files": 969,
   "source_counts": {
     "Altered_Platinum_Custom_Sprites": 2,
     "Banished_Platinum_Free_Megas": 44,
@@ -31,6 +31,7 @@
     "Mega_Flygon_Animated_Gen5": 4,
     "Mikitari": 720,
     "Platinum_Redux_Embedded_Sprites": 433,
+    "Platinum_Unlocked_New_Shinies": 447,
     "Shiny_Icons_Gen1_9": 1424,
     "SoothingSilver_Embedded_Images": 43
   },
@@ -52,8 +53,9 @@
     },
     {
       "project": "Pokemon Platinum Unlocked regional-form project",
-      "actual_sprite_files": 0,
-      "status": "SOURCE_ONLY_OR_BLOCKED"
+      "actual_sprite_files": 447,
+      "status": "SPRITES_COLLECTED",
+      "note": "Collected asset bucket is shiny/recolor source art, not proof of regional-form design sprites."
     },
     {
       "project": "Pokemon SoothingSilver",
@@ -82,5 +84,5 @@
     }
   ],
   "excluded_from_counts": "DS_CUSTOM_LIBRARY/hack-reference-previews",
-  "rule": "Only actual image asset bytes count; upstream-identical project copies are excluded before import."
+  "rule": "Only actual image asset bytes count. Recolor/shiny packs are retained but explicitly tagged and excluded from later new-design approval."
 }
