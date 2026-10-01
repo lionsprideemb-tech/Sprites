@@ -1,0 +1,117 @@
+name: Build Cross-Source Sprite Dedup Index
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/build-cross-source-sprite-dedup.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  dedup:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Build hash and filename-normalized dedup index
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import csv,json,hashlib,collections,re
+
+          exts={'.png','.gif','.bmp','.jpg','.jpeg','.webp'}
+          roots=[
+            (Path('DS_CUSTOM_LIBRARY/packs'),'GENERIC_SOURCE_ASSET'),
+            (Path('DS_CUSTOM_LIBRARY/hack-packs'),'HACK_SOURCE_ASSET')
+          ]
+
+          def norm_name(path):
+              s=Path(path).stem.lower()
+              s=re.sub(r'^(front|back|icon|shiny|sprite)[-_ ]*','',s)
+              s=re.sub(r'[-_ ]*(front|back|shiny|icon|frame2)$','',s)
+              s=re.sub(r'[^a-z0-9]+','-',s).strip('-')
+              return s
+
+          rows=[]
+          for root,bucket in roots:
+              if not root.exists(): continue
+              for p in sorted(root.rglob('*')):
+                  if not p.is_file() or p.suffix.lower() not in exts:
+                      continue
+                  if 'Platinum_Redux_Embedded_Sprites/sprite-candidates/' in p.as_posix():
+                      continue
+                  rel=p.relative_to(root)
+                  source=rel.parts[0] if rel.parts else ''
+                  b=p.read_bytes()
+                  rows.append({
+                    'source':source,
+                    'bucket':bucket,
+                    'path':p.as_posix(),
+                    'sha256':hashlib.sha256(b).hexdigest(),
+                    'bytes':len(b),
+                    'normalized_name':norm_name(p.name)
+                  })
+
+          by_hash=collections.defaultdict(list)
+          for r in rows:
+              by_hash[r['sha256']].append(r)
+
+          groups=[]
+          for sha,items in by_hash.items():
+              sources=sorted({x['source'] for x in items})
+              groups.append({
+                'sha256':sha,
+                'copies':len(items),
+                'source_count':len(sources),
+                'sources':'|'.join(sources),
+                'representative_path':items[0]['path'],
+                'normalized_name':items[0]['normalized_name']
+              })
+
+          groups.sort(key=lambda x:(-x['copies'],x['representative_path']))
+
+          with open('DS_CUSTOM_LIBRARY/cross_source_exact_hash_groups.csv','w',newline='') as f:
+              w=csv.DictWriter(f,fieldnames=['sha256','copies','source_count','sources','representative_path','normalized_name'])
+              w.writeheader(); w.writerows(groups)
+
+          with open('DS_CUSTOM_LIBRARY/cross_source_all_assets_index.csv','w',newline='') as f:
+              w=csv.DictWriter(f,fieldnames=['source','bucket','path','sha256','bytes','normalized_name'])
+              w.writeheader(); w.writerows(rows)
+
+          duplicate_groups=[g for g in groups if g['copies']>1]
+          multi_source_groups=[g for g in groups if g['source_count']>1]
+
+          source_counts=collections.Counter(r['source'] for r in rows)
+          unique_hashes_by_source=collections.Counter()
+          for sha,items in by_hash.items():
+              for s in {x['source'] for x in items}:
+                  unique_hashes_by_source[s]+=1
+
+          summary={
+            'total_image_asset_files':len(rows),
+            'unique_exact_image_hashes':len(by_hash),
+            'duplicate_file_copies':len(rows)-len(by_hash),
+            'exact_duplicate_groups':len(duplicate_groups),
+            'cross_source_exact_duplicate_groups':len(multi_source_groups),
+            'source_file_counts':dict(sorted(source_counts.items())),
+            'source_unique_hash_counts':dict(sorted(unique_hashes_by_source.items())),
+            'note':'This is byte-identical dedup only. Visual near-duplicates/recolors/pose variants are handled later.'
+          }
+          Path('DS_CUSTOM_LIBRARY/cross_source_dedup_summary.json').write_text(json.dumps(summary,indent=2))
+          print(json.dumps(summary,indent=2))
+          PY
+
+      - name: Commit dedup index
+        run: |
+          git config user.name "Mercury Sprite Audit Bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add DS_CUSTOM_LIBRARY/cross_source_exact_hash_groups.csv DS_CUSTOM_LIBRARY/cross_source_all_assets_index.csv DS_CUSTOM_LIBRARY/cross_source_dedup_summary.json .github/workflows/build-cross-source-sprite-dedup.yml
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "sprites: build cross-source exact sprite dedup index"
+          git pull --rebase origin main
+          git push origin main
