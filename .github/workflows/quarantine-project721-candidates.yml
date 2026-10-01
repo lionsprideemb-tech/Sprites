@@ -1,0 +1,62 @@
+name: Quarantine Project 721 Crawler False Positives
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/quarantine-project721-candidates.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  quarantine:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Sync latest main
+        run: git pull --rebase origin main
+
+      - name: Move Project 721 crawler output to reference-only
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import shutil,json
+
+          src=Path('DS_CUSTOM_LIBRARY/hack-packs/Project_721_Thread_Sprites')
+          dst=Path('DS_CUSTOM_LIBRARY/hack-reference-previews/Project_721_Crawler_Candidates')
+          if dst.exists():
+              shutil.rmtree(dst)
+          if src.exists():
+              dst.parent.mkdir(parents=True,exist_ok=True)
+              shutil.move(str(src),str(dst))
+
+          rp=Path('DS_CUSTOM_LIBRARY/project721_sprite_report.json')
+          report={}
+          if rp.exists():
+              try: report=json.loads(rp.read_text())
+              except Exception: report={}
+          report['status']='REFERENCE_ONLY_UNVERIFIED'
+          report['actual_sprite_like_images_collected']=0
+          report['quarantine_reason']='Automated crawl mixed forum UI, trophies, banners, profile images, and ambiguous Pokemon thumbnails. None count as production/source sprites until individually tied to Project 721 assets.'
+          report['quarantined_path']=dst.as_posix()
+          rp.write_text(json.dumps(report,indent=2))
+          PY
+
+      - name: Commit quarantine
+        run: |
+          git config user.name "Mercury Sprite QC Bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add -A DS_CUSTOM_LIBRARY/hack-packs/Project_721_Thread_Sprites DS_CUSTOM_LIBRARY/hack-reference-previews/Project_721_Crawler_Candidates DS_CUSTOM_LIBRARY/project721_sprite_report.json .github/workflows/quarantine-project721-candidates.yml
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "sprites: quarantine ambiguous Project 721 crawler images"
+          for attempt in 1 2 3 4 5; do
+            if git push origin main; then exit 0; fi
+            git pull --rebase origin main
+            sleep 2
+          done
+          exit 1
