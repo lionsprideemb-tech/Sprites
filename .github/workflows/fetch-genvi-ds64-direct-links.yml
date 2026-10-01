@@ -1,0 +1,141 @@
+name: Fetch Gen VI DS 64x64 Direct Sprite Links
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/fetch-genvi-ds64-direct-links.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Fetch all direct sprite assets from Gen VI resource thread
+        run: |
+          python -m pip install requests beautifulsoup4
+          python - <<'PY'
+          from pathlib import Path
+          import requests, re, json, hashlib
+          from bs4 import BeautifulSoup
+          from urllib.parse import urljoin
+
+          base='https://www.pokecommunity.com/threads/gen-vi-ds-style-64x64-pokemon-sprite-resource.314422/'
+          out=Path('DS_CUSTOM_LIBRARY/packs/GenVI_DS_64x64')
+          out.mkdir(parents=True,exist_ok=True)
+          sess=requests.Session()
+          sess.headers.update({'User-Agent':'Mozilla/5.0'})
+          links=[]
+
+          # Crawl all known pages; thread is long and later pages contain QC/replacements/forms.
+          for page_num in range(1,50):
+              url=base if page_num==1 else base.rstrip('/')+f'/page-{page_num}'
+              r=sess.get(url,timeout=30)
+              if r.status_code!=200:
+                  continue
+              soup=BeautifulSoup(r.text,'html.parser')
+
+              # href/src plus lazy-loading attributes
+              for tag in soup.find_all(True):
+                  for attr in ['href','src','data-src','data-url','data-original']:
+                      raw=tag.get(attr)
+                      if not raw: continue
+                      u=urljoin(r.url,raw)
+                      low=u.lower()
+                      if ('i.imgur.com/' in low or 'imgur.com/' in low or 'attachments/' in low) and any(x in low for x in ['.png','.gif','.jpg','.jpeg','attachments/']):
+                          links.append(u)
+
+              # Old XenForo posts can leave plain image URLs in text.
+              links += re.findall(r'https?://i\.imgur\.com/[A-Za-z0-9]+\.(?:png|gif|jpg|jpeg)',r.text,re.I)
+
+          links=list(dict.fromkeys(links))
+          report=[]
+          for i,u in enumerate(links):
+              try:
+                  rr=sess.get(u,timeout=30,allow_redirects=True)
+                  ctype=rr.headers.get('content-type','').lower()
+                  if rr.status_code!=200 or len(rr.content)<100 or 'image' not in ctype:
+                      continue
+                  ext='.png' if 'png' in ctype else ('.gif' if 'gif' in ctype else '.jpg')
+                  # Stable hash-based filename avoids collisions and preserves source URL in manifest.
+                  sha=hashlib.sha256(rr.content).hexdigest()
+                  p=out/f'{i:04d}_{sha[:12]}{ext}'
+                  p.write_bytes(rr.content)
+                  report.append({
+                    'path':p.as_posix(),
+                    'source_url':u,
+                    'bytes':len(rr.content),
+                    'sha256':sha
+                  })
+              except Exception:
+                  pass
+
+          Path('DS_CUSTOM_LIBRARY/fetch_report_genvi_direct.json').write_text(json.dumps({
+            'thread':base,
+            'candidate_links':len(links),
+            'downloaded_images':len(report),
+            'files':report
+          },indent=2))
+          print(json.dumps({'candidate_links':len(links),'downloaded_images':len(report)},indent=2))
+          PY
+
+      - name: Rebuild master inventory summary
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import csv, json, hashlib, collections
+
+          root=Path('DS_CUSTOM_LIBRARY/packs')
+          exts={'.png','.gif','.bmp','.jpg','.jpeg','.pal'}
+          rows=[]
+          for p in sorted(root.rglob('*')):
+              if not p.is_file() or p.suffix.lower() not in exts:
+                  continue
+              rel=p.relative_to(root)
+              pack=rel.parts[0] if rel.parts else ''
+              b=p.read_bytes()
+              rows.append({'pack':pack,'path':p.as_posix(),'ext':p.suffix.lower(),'bytes':len(b),'sha256':hashlib.sha256(b).hexdigest()})
+
+          with open('DS_CUSTOM_LIBRARY/native_ds_master_inventory.csv','w',newline='') as f:
+              w=csv.DictWriter(f,fieldnames=['pack','path','ext','bytes','sha256'])
+              w.writeheader(); w.writerows(rows)
+
+          counts=collections.Counter(r['pack'] for r in rows)
+          expected=[
+            'DrPrettyman_DS_64x64','Festival_Altaira','Festival_Atsui','Festival_BiggusWeeabus',
+            'Festival_Dulcet','Festival_Lumio','Festival_Magiscarf','Festival_Odisea',
+            'Festival_PansyGum','Festival_Piacarrot','Festival_PrincessPhoenix','Festival_Scotsman',
+            'Festival_Misc','Mikitari','Earthretha','DS_Styled_Gen5_8','Gen7_DS_Backsprites',
+            'Shiny_Icons_Gen1_9','Mega_Flygon','Mega_Flygon_Animated_Gen5','GenVI_DS_64x64'
+          ]
+          coverage=[{'source':x,'sprite_file_count':counts.get(x,0),'collection_status':'COLLECTED' if counts.get(x,0)>0 else 'NO_SPRITE_FILES_COLLECTED'} for x in expected]
+          summary={
+            'total_sprite_files':len(rows),
+            'pack_counts':dict(sorted(counts.items())),
+            'source_coverage':coverage,
+            'sources_expected':len(expected),
+            'sources_with_sprite_files':sum(1 for x in coverage if x['sprite_file_count']>0),
+            'pipeline_stage':'SOURCE_COLLECTION_ONLY',
+            'visual_approval_performed':False,
+            'implementation_performed':False
+          }
+          Path('DS_CUSTOM_LIBRARY/native_ds_master_inventory_summary.json').write_text(json.dumps(summary,indent=2))
+          Path('DS_CUSTOM_LIBRARY/source_collection_coverage.json').write_text(json.dumps(coverage,indent=2))
+          print(json.dumps(summary,indent=2))
+          PY
+
+      - name: Commit Gen VI source intake
+        run: |
+          git config user.name "Mercury DS Source Intake Bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add DS_CUSTOM_LIBRARY/packs/GenVI_DS_64x64 DS_CUSTOM_LIBRARY/fetch_report_genvi_direct.json DS_CUSTOM_LIBRARY/native_ds_master_inventory.csv DS_CUSTOM_LIBRARY/native_ds_master_inventory_summary.json DS_CUSTOM_LIBRARY/source_collection_coverage.json .github/workflows/fetch-genvi-ds64-direct-links.yml
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "sprites: collect Gen VI DS-style 64x64 resource"
+          git push origin main
