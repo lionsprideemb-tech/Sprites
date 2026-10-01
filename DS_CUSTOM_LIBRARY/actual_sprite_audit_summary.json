@@ -1,7 +1,7 @@
 {
-  "actual_sprite_image_files_total": 29799,
+  "actual_sprite_image_files_total": 31240,
   "generic_actual_image_files": 28830,
-  "hack_actual_image_files": 969,
+  "hack_actual_image_files": 2410,
   "source_counts": {
     "Altered_Platinum_Custom_Sprites": 2,
     "Banished_Platinum_Free_Megas": 44,
@@ -27,6 +27,7 @@
     "HGSS_Project_Unique_Futura_Engine": 21,
     "HGSS_Project_Unique_Hallowed_Gold": 2,
     "HG_Engine_DS_Sprites": 9238,
+    "Infinite_Black_2_Unique_Assets": 1441,
     "Mega_Flygon": 7,
     "Mega_Flygon_Animated_Gen5": 4,
     "Mikitari": 720,
@@ -80,6 +81,11 @@
     {
       "project": "Pokemon Banished Platinum",
       "actual_sprite_files": 44,
+      "status": "SPRITES_COLLECTED"
+    },
+    {
+      "project": "Pokemon Infinite Black 2",
+      "actual_sprite_files": 1441,
       "status": "SPRITES_COLLECTED"
     }
   ],

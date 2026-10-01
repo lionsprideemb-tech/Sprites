@@ -1,0 +1,10 @@
+{
+  "source_repo": "https://github.com/FrostFalcon/NCB2",
+  "source_project": "Pokemon Infinite Black 2",
+  "unique_actual_assets_imported": 1441,
+  "by_asset_class": {
+    "DEX_SPRITE": 728,
+    "ICON_SPRITE": 713
+  },
+  "policy": "Only actual DexSprites/IconSprites whose image bytes were not already present in the Mercury DS source library are imported."
+}
