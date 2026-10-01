@@ -53,5 +53,5 @@
     }
   ],
   "excluded_from_counts": "DS_CUSTOM_LIBRARY/hack-reference-previews",
-  "rule": "Only actual image asset files in source-asset directories count. Links, patches, docs, screenshots/reference previews do not."
+  "rule": "Only actual image assets count. Links, patches, docs, screenshots/reference previews do not."
 }
