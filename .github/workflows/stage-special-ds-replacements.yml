@@ -1,0 +1,101 @@
+name: Stage Mercury Special DS Replacements
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/stage-special-ds-replacements.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  stage:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Clone Mercury repo
+        run: |
+          rm -rf /tmp/platinum-modern-ds
+          git clone --depth 1 --branch work/sprites-audit-20260930 \
+            https://github.com/lionsprideemb-tech/platinum-modern-ds.git \
+            /tmp/platinum-modern-ds
+
+      - name: Stage special-form replacement pack
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import csv, json, shutil, hashlib
+
+          srcroot=Path('DS_CUSTOM_LIBRARY/packs/DrPrettyman_DS_64x64')
+          manifest=Path('DS_CUSTOM_LIBRARY/replacement-map/priority_special_forms.csv')
+          out=Path('DS_CUSTOM_LIBRARY/staged-specials')
+          if out.exists():
+              shutil.rmtree(out)
+          out.mkdir(parents=True,exist_ok=True)
+
+          rows=list(csv.DictReader(manifest.open()))
+          staged=[]
+          for r in rows:
+              key=r['mercury_key']
+              target=out/key
+              target.mkdir(parents=True,exist_ok=True)
+              record={'mercury_key':key,'ds_key':r['ds_key'],'files':{},'status':'STAGED'}
+              for field in ['front','back','front_shiny','back_shiny','icon','icon_frame2']:
+                  rel=r.get(field,'')
+                  if not rel:
+                      continue
+                  src=srcroot/rel
+                  if not src.exists():
+                      record['status']='MISSING_SOURCE_FILE'
+                      continue
+                  ext=src.suffix.lower() or '.png'
+                  dst=target/(field+ext)
+                  shutil.copy2(src,dst)
+                  record['files'][field]={
+                      'path':dst.as_posix(),
+                      'sha256':hashlib.sha256(dst.read_bytes()).hexdigest(),
+                      'bytes':dst.stat().st_size,
+                  }
+              staged.append(record)
+
+          # Mercury-specific priority ordering
+          priority_names=[
+            'absol-mega-z','lucario-mega-z','baxcalibur-mega','golisopod-mega',
+            'garchomp-mega-z'
+          ]
+          for rec in staged:
+              rec['mercury_priority']='HIGH' if rec['mercury_key'] in priority_names else 'NORMAL'
+
+          (out/'staged_manifest.json').write_text(json.dumps(staged,indent=2))
+          summary={
+              'staged_special_forms':len(staged),
+              'complete_staged':sum(1 for x in staged if x['status']=='STAGED'),
+              'missing_source_files':sum(1 for x in staged if x['status']!='STAGED'),
+              'high_priority':[
+                  {
+                    'key':k,
+                    'status': next((x['status'] for x in staged if x['mercury_key']==k),'NOT_IN_DS_REPLACEMENT_SET')
+                  } for k in priority_names
+              ],
+              'policy':'Staging only. No Mercury GBA/custom originals are deleted or overwritten.'
+          }
+          (out/'staging_summary.json').write_text(json.dumps(summary,indent=2))
+          print(json.dumps(summary,indent=2))
+          PY
+
+      - name: Commit staged pack
+        run: |
+          git config user.name "Mercury Sprite Stage Bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add DS_CUSTOM_LIBRARY/staged-specials .github/workflows/stage-special-ds-replacements.yml
+          if git diff --cached --quiet; then
+            echo "No changes"
+            exit 0
+          fi
+          git commit -m "Stage special-form native DS replacements for Mercury"
+          git push origin main
