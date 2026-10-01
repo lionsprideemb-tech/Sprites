@@ -1,0 +1,146 @@
+name: Build Mercury DS Replacement Manifest
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/build-ds-replacement-manifest.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Build exact asset map
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import csv, json, collections, re
+
+          root=Path('DS_CUSTOM_LIBRARY/packs/DrPrettyman_DS_64x64')
+          comp=Path('DS_CUSTOM_LIBRARY/comparison/ds_vs_mercury_gba_comparison.csv')
+          out=Path('DS_CUSTOM_LIBRARY/replacement-map')
+          out.mkdir(parents=True,exist_ok=True)
+
+          def norm(s):
+              s=s.lower().strip().replace('_','-').replace(' ','-')
+              s=re.sub(r'[^a-z0-9-]+','-',s)
+              return re.sub(r'-+','-',s).strip('-')
+
+          assets=collections.defaultdict(lambda: collections.defaultdict(list))
+          for p in root.rglob('*'):
+              if not p.is_file() or p.suffix.lower() not in {'.png','.gif','.bmp'}:
+                  continue
+              rel=p.relative_to(root)
+              key=norm(p.stem)
+              cat='other'
+              parts=rel.parts
+              if len(parts)>=3 and parts[0]=='sprites-processed':
+                  cat=parts[1]
+              elif parts and parts[0]=='floating-pokemon' and '__' in p.stem:
+                  pref, species=p.stem.split('__',1)
+                  key=norm(species)
+                  cat=norm(pref)
+              assets[key][cat].append(rel.as_posix())
+
+          rows=list(csv.DictReader(comp.open()))
+          use=[r for r in rows if r['recommendation']=='USE_DS']
+
+          def pick(d, wanted):
+              vals=[]
+              for cat,paths in d.items():
+                  c=cat.lower()
+                  if wanted=='front' and c=='front': vals+=paths
+                  elif wanted=='back' and c=='back': vals+=paths
+                  elif wanted=='front_shiny' and ('front' in c and 'shiny' in c and 'female' not in c): vals+=paths
+                  elif wanted=='back_shiny' and ('back' in c and 'shiny' in c and 'female' not in c): vals+=paths
+                  elif wanted=='icon' and c=='icon': vals+=paths
+                  elif wanted=='icon_frame2' and c=='icon-frame2': vals+=paths
+              return sorted(vals)[0] if vals else ''
+
+          mapped=[]
+          for r in use:
+              key=r['ds_key'] or r['mercury_key']
+              d=assets.get(key,{})
+              special=any(x in key for x in [
+                  'mega','redux','delta','galar','alola','hisui','paldea',
+                  'gmax','gigantamax','primal','origin','therian','totem','eternamax'
+              ])
+              mapped.append({
+                  'mercury_key':r['mercury_key'],
+                  'ds_key':key,
+                  'priority':'SPECIAL_FORM' if special else 'STANDARD',
+                  'front':pick(d,'front'),
+                  'back':pick(d,'back'),
+                  'front_shiny':pick(d,'front_shiny'),
+                  'back_shiny':pick(d,'back_shiny'),
+                  'icon':pick(d,'icon'),
+                  'icon_frame2':pick(d,'icon_frame2'),
+                  'ds_asset_count':sum(len(v) for v in d.values()),
+              })
+
+          fields=list(mapped[0].keys()) if mapped else ['mercury_key']
+          with (out/'mercury_ds_replacement_manifest.csv').open('w',newline='') as f:
+              w=csv.DictWriter(f,fieldnames=fields); w.writeheader(); w.writerows(mapped)
+
+          special=[r for r in mapped if r['priority']=='SPECIAL_FORM']
+          with (out/'priority_special_forms.csv').open('w',newline='') as f:
+              w=csv.DictWriter(f,fieldnames=fields); w.writeheader(); w.writerows(special)
+
+          # Mercury project-specific custom Mega shortlist
+          mercury_custom_names=[
+              'absol-mega-z','baxcalibur-mega','golisopod-mega',
+              'lucario-mega-z','garchomp-mega-z'
+          ]
+          project=[]
+          for name in mercury_custom_names:
+              found=next((r for r in mapped if r['ds_key']==name),None)
+              project.append({
+                  'key':name,
+                  'status':'FULL_DS_SET_FOUND' if found and found['front'] and found['back'] else
+                           ('PARTIAL_DS_SET' if found else 'NO_DS_SET'),
+                  'front':found['front'] if found else '',
+                  'back':found['back'] if found else '',
+                  'front_shiny':found['front_shiny'] if found else '',
+                  'back_shiny':found['back_shiny'] if found else '',
+                  'icon':found['icon'] if found else '',
+              })
+          with (out/'mercury_custom_mega_priority.csv').open('w',newline='') as f:
+              w=csv.DictWriter(f,fieldnames=['key','status','front','back','front_shiny','back_shiny','icon'])
+              w.writeheader(); w.writerows(project)
+
+          missing_components=collections.Counter()
+          for r in mapped:
+              for c in ['front','back','front_shiny','back_shiny','icon']:
+                  if not r[c]: missing_components[c]+=1
+
+          summary={
+              'total_ds_replacements':len(mapped),
+              'special_form_replacements':len(special),
+              'standard_replacements':len(mapped)-len(special),
+              'missing_component_counts':dict(missing_components),
+              'mercury_custom_mega_priority':project,
+              'policy':'This manifest stages native DS replacements only. It does not delete GBA originals until imported assets pass visual/in-engine review.'
+          }
+          (out/'replacement_manifest_summary.json').write_text(json.dumps(summary,indent=2))
+          print(json.dumps(summary,indent=2))
+          PY
+
+      - name: Commit replacement map
+        run: |
+          git config user.name "Mercury Sprite Replacement Bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add DS_CUSTOM_LIBRARY/replacement-map .github/workflows/build-ds-replacement-manifest.yml
+          if git diff --cached --quiet; then
+            echo "No changes"
+            exit 0
+          fi
+          git commit -m "Build Mercury native DS sprite replacement map"
+          git push origin main
