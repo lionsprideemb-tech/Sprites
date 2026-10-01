@@ -1,0 +1,283 @@
+name: Audit Vanilla Coverage and Quarantine Duplicate Recolors
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/audit-vanilla-coverage-dedup-recolors.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install image tooling
+        run: python -m pip install --quiet pillow requests
+
+      - name: Build protected vanilla + Mega coverage and delete-candidate quarantine manifests
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          from PIL import Image
+          import collections, csv, hashlib, io, json, os, re, requests, sys, time
+
+          ROOT=Path('DS_CUSTOM_LIBRARY')
+          PACKS=ROOT/'packs'
+          HACKS=ROOT/'hack-packs'
+          CORE=PACKS/'DrPrettyman_DS_64x64'
+          OUT=ROOT/'cleanup-audit'
+          OUT.mkdir(parents=True,exist_ok=True)
+          EXTS={'.png','.gif','.bmp','.jpg','.jpeg','.webp'}
+
+          def norm(s):
+              s=str(s).lower().strip().replace('_','-').replace(' ','-')
+              s=s.replace("'",'')
+              s=re.sub(r'[^a-z0-9-]+','-',s)
+              return re.sub(r'-+','-',s).strip('-')
+
+          # ---------------------------
+          # 1) Canonical required set
+          # ---------------------------
+          species=[]
+          pokemon=[]
+          api_status={'species':'FAILED','pokemon_forms':'FAILED'}
+          try:
+              r=requests.get('https://pokeapi.co/api/v2/pokemon-species?limit=5000',timeout=60)
+              r.raise_for_status()
+              species=[norm(x['name']) for x in r.json()['results']]
+              api_status['species']='OK'
+          except Exception as e:
+              print('species api failed',e)
+
+          try:
+              r=requests.get('https://pokeapi.co/api/v2/pokemon?limit=10000',timeout=60)
+              r.raise_for_status()
+              pokemon=[norm(x['name']) for x in r.json()['results']]
+              api_status['pokemon_forms']='OK'
+          except Exception as e:
+              print('pokemon api failed',e)
+
+          # Fallback: infer base species from canonical front folder if API unavailable.
+          if not species:
+              front=CORE/'sprites-processed'/'front'
+              species=sorted(norm(p.stem) for p in front.glob('*') if p.suffix.lower() in EXTS and 'mega' not in norm(p.stem))
+
+          official_megas=sorted(set(x for x in pokemon if '-mega' in x or x.startswith('mega-')))
+          # Local Mega forms are also protected: official, project-custom, and any already staged native DS Mega form.
+          local_megas=set()
+          for p in CORE.rglob('*'):
+              if p.is_file() and p.suffix.lower() in EXTS and 'mega' in norm(p.stem):
+                  local_megas.add(norm(p.stem))
+          replacement_summary=ROOT/'replacement-map'/'replacement_manifest_summary.json'
+          mercury_custom=[]
+          if replacement_summary.exists():
+              try:
+                  data=json.loads(replacement_summary.read_text())
+                  mercury_custom=[norm(x.get('key','')) for x in data.get('mercury_custom_mega_priority',[]) if x.get('key')]
+              except Exception:
+                  pass
+          all_megas=sorted(set(official_megas)|local_megas|set(mercury_custom))
+
+          # Index protected core components.
+          categories=['front','back','front-shiny','back-shiny','icon']
+          idx={c:set() for c in categories}
+          for c in categories:
+              d=CORE/'sprites-processed'/c
+              if d.exists():
+                  idx[c]={norm(p.stem) for p in d.iterdir() if p.is_file() and p.suffix.lower() in EXTS}
+
+          def coverage_rows(keys, kind):
+              rows=[]
+              for k in sorted(set(keys)):
+                  row={'kind':kind,'key':k}
+                  for c in categories:
+                      row[c]=k in idx[c]
+                  row['complete']=all(row[c] for c in ['front','back','front-shiny','back-shiny','icon'])
+                  rows.append(row)
+              return rows
+
+          vanilla_rows=coverage_rows(species,'VANILLA_SPECIES')
+          mega_rows=coverage_rows(all_megas,'MEGA')
+          fields=['kind','key']+categories+['complete']
+          with (OUT/'vanilla_and_mega_coverage.csv').open('w',newline='') as f:
+              w=csv.DictWriter(f,fieldnames=fields); w.writeheader(); w.writerows(vanilla_rows+mega_rows)
+
+          missing=[r for r in vanilla_rows+mega_rows if not r['complete']]
+          with (OUT/'missing_required_components.csv').open('w',newline='') as f:
+              w=csv.DictWriter(f,fieldnames=fields); w.writeheader(); w.writerows(missing)
+
+          (OUT/'required_vanilla_species.txt').write_text('\n'.join(sorted(set(species)))+'\n')
+          (OUT/'required_mega_forms.txt').write_text('\n'.join(all_megas)+'\n')
+
+          # ---------------------------
+          # 2) Asset inventory
+          # ---------------------------
+          assets=[]
+          for root,bucket in [(PACKS,'GENERIC'),(HACKS,'HACK')]:
+              if not root.exists(): continue
+              for p in root.rglob('*'):
+                  if not p.is_file() or p.suffix.lower() not in EXTS: continue
+                  if 'Platinum_Redux_Embedded_Sprites/sprite-candidates/' in p.as_posix(): continue
+                  b=p.read_bytes()
+                  rel=p.relative_to(root)
+                  source=rel.parts[0] if rel.parts else ''
+                  # Core canonical/native pack is never quarantined by this pass.
+                  protected = (bucket=='GENERIC' and source=='DrPrettyman_DS_64x64')
+                  assets.append({
+                      'path':p.as_posix(),'bucket':bucket,'source':source,'protected':protected,
+                      'sha256':hashlib.sha256(b).hexdigest(),'bytes':len(b)
+                  })
+
+          by_hash=collections.defaultdict(list)
+          for a in assets: by_hash[a['sha256']].append(a)
+
+          source_priority=[
+              'DrPrettyman_DS_64x64','HG_Engine_DS_Sprites','DS_Styled_Gen5_8',
+              'Gen7_DS_Backsprites','Shiny_Icons_Gen1_9'
+          ]
+          pri={s:i for i,s in enumerate(source_priority)}
+          def quality_key(a):
+              return (0 if a['protected'] else 1, pri.get(a['source'],999), -a['bytes'], a['path'])
+
+          exact_delete=[]
+          exact_groups=[]
+          for sha,items in by_hash.items():
+              if len(items)<2: continue
+              keep=min(items,key=quality_key)
+              for a in items:
+                  if a is keep: continue
+                  if a['protected']:
+                      # Never delete protected canonical slots even if pixel-identical.
+                      continue
+                  exact_delete.append({
+                      'reason':'EXACT_DUPLICATE','delete_path':a['path'],'keep_path':keep['path'],
+                      'sha256':sha,'delete_source':a['source'],'keep_source':keep['source']
+                  })
+              exact_groups.append((sha,len(items),keep['path']))
+
+          exact_delete_paths={x['delete_path'] for x in exact_delete}
+
+          # ---------------------------
+          # 3) Pure palette-swap/recolor detection
+          # Canonicalize each image by replacing every opaque RGB(A) color with an ID
+          # based on first appearance. Exact equality of this structural byte stream
+          # means same pixels/shape with only palette values changed.
+          # ---------------------------
+          def structural_signature(path):
+              try:
+                  with Image.open(path) as im:
+                      im.seek(0)
+                      im=im.convert('RGBA')
+                      w,h=im.size
+                      px=list(im.getdata())
+                      cmap={}
+                      nextid=1
+                      out=bytearray()
+                      # dimensions prevent accidental cross-size grouping
+                      out.extend(w.to_bytes(2,'big',signed=False)); out.extend(h.to_bytes(2,'big',signed=False))
+                      for r,g,b,a in px:
+                          if a==0:
+                              out.extend((0,0))
+                              continue
+                          key=(r,g,b,a)
+                          if key not in cmap:
+                              cmap[key]=nextid; nextid+=1
+                          cid=cmap[key]
+                          if cid>65535:
+                              return None
+                          out.extend(cid.to_bytes(2,'big'))
+                      return hashlib.sha256(out).hexdigest(), len(cmap), w, h
+              except Exception:
+                  return None
+
+          struct=collections.defaultdict(list)
+          failed=0
+          for i,a in enumerate(assets,1):
+              if a['path'] in exact_delete_paths:
+                  continue
+              sig=structural_signature(a['path'])
+              if not sig:
+                  failed+=1; continue
+              sh,nc,w,h=sig
+              b=dict(a); b.update({'struct_sig':sh,'colors':nc,'width':w,'height':h})
+              struct[sh].append(b)
+              if i%2500==0: print('struct processed',i,'/',len(assets))
+
+          recolor_delete=[]
+          recolor_groups=[]
+          for sh,items in struct.items():
+              # Need different exact hashes; otherwise this is only an exact dup group.
+              hashes={x['sha256'] for x in items}
+              if len(items)<2 or len(hashes)<2: continue
+              keep=min(items,key=quality_key)
+              recolor_groups.append((sh,len(items),keep['path']))
+              for a in items:
+                  if a['path']==keep['path'] or a['protected']: continue
+                  recolor_delete.append({
+                      'reason':'PURE_PALETTE_RECOLOR','delete_path':a['path'],'keep_path':keep['path'],
+                      'structural_signature':sh,'delete_sha256':a['sha256'],'keep_sha256':keep['sha256'],
+                      'delete_source':a['source'],'keep_source':keep['source']
+                  })
+
+          # Do not double-list exact duplicate paths as recolors.
+          recolor_delete=[x for x in recolor_delete if x['delete_path'] not in exact_delete_paths]
+
+          def write_csv(path,rows,fields):
+              with path.open('w',newline='') as f:
+                  w=csv.DictWriter(f,fieldnames=fields); w.writeheader(); w.writerows(rows)
+
+          write_csv(OUT/'exact_duplicate_delete_candidates.csv',exact_delete,
+                    ['reason','delete_path','keep_path','sha256','delete_source','keep_source'])
+          write_csv(OUT/'pure_recolor_delete_candidates.csv',recolor_delete,
+                    ['reason','delete_path','keep_path','structural_signature','delete_sha256','keep_sha256','delete_source','keep_source'])
+
+          all_delete=[('EXACT_DUPLICATE',x['delete_path'],x['keep_path']) for x in exact_delete]
+          all_delete += [('PURE_PALETTE_RECOLOR',x['delete_path'],x['keep_path']) for x in recolor_delete]
+          with (OUT/'DELETE_CANDIDATES.tsv').open('w') as f:
+              f.write('reason\tdelete_path\tkeep_path\n')
+              for r,p,k in all_delete: f.write(f'{r}\t{p}\t{k}\n')
+
+          summary={
+              'api_status':api_status,
+              'required_vanilla_species':len(set(species)),
+              'vanilla_complete':sum(r['complete'] for r in vanilla_rows),
+              'vanilla_missing_or_partial':sum(not r['complete'] for r in vanilla_rows),
+              'required_mega_forms_union':len(all_megas),
+              'official_megas_from_api':len(official_megas),
+              'local_or_mercury_megas':len(set(all_megas)-set(official_megas)),
+              'mega_complete':sum(r['complete'] for r in mega_rows),
+              'mega_missing_or_partial':sum(not r['complete'] for r in mega_rows),
+              'asset_files_scanned':len(assets),
+              'exact_duplicate_delete_candidates':len(exact_delete),
+              'pure_palette_recolor_delete_candidates':len(recolor_delete),
+              'structural_decode_failures':failed,
+              'safety_policy':[
+                  'DrPrettyman_DS_64x64 is protected and never quarantined by this pass.',
+                  'Official shiny component slots are protected; shiny-vs-normal is not treated as junk recolor.',
+                  'Recolor detection only flags exact same pixel partition/shape with different palette values.',
+                  'This pass writes deletion candidates only; it does not delete image files.'
+              ]
+          }
+          (OUT/'cleanup_summary.json').write_text(json.dumps(summary,indent=2))
+          print(json.dumps(summary,indent=2))
+          PY
+
+      - name: Commit audit reports
+        run: |
+          git config user.name "Mercury Sprite Cleanup Bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add DS_CUSTOM_LIBRARY/cleanup-audit .github/workflows/audit-vanilla-coverage-dedup-recolors.yml
+          if git diff --cached --quiet; then
+            echo "No audit changes"
+            exit 0
+          fi
+          git commit -m "sprites: audit vanilla coverage and isolate duplicate/recolor delete candidates"
+          git pull --rebase origin main
+          git push origin main
