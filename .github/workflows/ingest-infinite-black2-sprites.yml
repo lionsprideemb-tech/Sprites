@@ -1,0 +1,159 @@
+name: Ingest Infinite Black 2 Actual Sprite Assets
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/ingest-infinite-black2-sprites.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  ingest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Sync latest main
+        run: git pull --rebase origin main
+
+      - name: Clone Infinite Black 2 source repo
+        run: |
+          rm -rf /tmp/ib2
+          git clone --depth 1 https://github.com/FrostFalcon/NCB2.git /tmp/ib2
+
+      - name: Import only unique actual sprite/icon images
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import hashlib,shutil,json,csv,collections
+
+          exts={'.png','.gif','.bmp','.jpg','.jpeg','.webp'}
+          current_roots=[Path('DS_CUSTOM_LIBRARY/packs'),Path('DS_CUSTOM_LIBRARY/hack-packs')]
+          existing_hashes=set()
+          for root in current_roots:
+              if not root.exists(): continue
+              for p in root.rglob('*'):
+                  if p.is_file() and p.suffix.lower() in exts:
+                      existing_hashes.add(hashlib.sha256(p.read_bytes()).hexdigest())
+
+          src=Path('/tmp/ib2')
+          dest=Path('DS_CUSTOM_LIBRARY/hack-packs/Infinite_Black_2_Unique_Assets')
+          if dest.exists(): shutil.rmtree(dest)
+          dest.mkdir(parents=True,exist_ok=True)
+
+          rows=[]
+          seen=set(existing_hashes)
+          allowed_roots={'DexSprites':'DEX_SPRITE','IconSprites':'ICON_SPRITE'}
+
+          for top,asset_class in allowed_roots.items():
+              base=src/top
+              if not base.exists(): continue
+              for p in sorted(base.rglob('*')):
+                  if not p.is_file() or p.suffix.lower() not in exts: continue
+                  data=p.read_bytes()
+                  h=hashlib.sha256(data).hexdigest()
+                  if h in seen: continue
+                  seen.add(h)
+                  rel=p.relative_to(src)
+                  out=dest/rel
+                  out.parent.mkdir(parents=True,exist_ok=True)
+                  shutil.copy2(p,out)
+                  rows.append({
+                      'asset_class':asset_class,
+                      'relative_path':rel.as_posix(),
+                      'path':out.as_posix(),
+                      'bytes':len(data),
+                      'sha256':h
+                  })
+
+          with open('DS_CUSTOM_LIBRARY/infinite_black2_unique_asset_inventory.csv','w',newline='') as f:
+              w=csv.DictWriter(f,fieldnames=['asset_class','relative_path','path','bytes','sha256'])
+              w.writeheader(); w.writerows(rows)
+
+          counts=collections.Counter(r['asset_class'] for r in rows)
+          summary={
+              'source_repo':'https://github.com/FrostFalcon/NCB2',
+              'source_project':'Pokemon Infinite Black 2',
+              'unique_actual_assets_imported':len(rows),
+              'by_asset_class':dict(sorted(counts.items())),
+              'policy':'Only actual DexSprites/IconSprites whose image bytes were not already present in the Mercury DS source library are imported.'
+          }
+          Path('DS_CUSTOM_LIBRARY/infinite_black2_unique_asset_summary.json').write_text(json.dumps(summary,indent=2))
+          print(json.dumps(summary,indent=2))
+          PY
+
+      - name: Register source and rebuild strict audit
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import csv,json,collections,hashlib,re
+
+          mf=Path('DS_CUSTOM_LIBRARY/hack_source_manifest.csv')
+          rows=[]
+          if mf.exists():
+              with mf.open(newline='') as f:
+                  rows=list(csv.DictReader(f))
+          fields=['project','platform','source_url','asset_access','custom_scope','credits','status','notes']
+          if not any(r.get('project')=='Pokemon Infinite Black 2' for r in rows):
+              rows.append({
+                  'project':'Pokemon Infinite Black 2',
+                  'platform':'NDS/Black2',
+                  'source_url':'https://github.com/FrostFalcon/NCB2',
+                  'asset_access':'PUBLIC_GITHUB_SPRITE_TREE',
+                  'custom_scope':'Custom sprites plus newer-generation replacements used by Infinite Black 2',
+                  'credits':'Frost Falcon; Ninja Fish; Smogon Sprite Project; Moon Black 2 contributors',
+                  'status':'SPRITES_COLLECTED',
+                  'notes':'Actual public DexSprites/IconSprites imported only when byte-unique versus existing Mercury DS source library.'
+              })
+          with mf.open('w',newline='') as f:
+              w=csv.DictWriter(f,fieldnames=fields); w.writeheader(); w.writerows(rows)
+
+          exts={'.png','.gif','.bmp','.jpg','.jpeg','.webp'}
+          assets=[]
+          for base,bucket in [(Path('DS_CUSTOM_LIBRARY/packs'),'GENERIC_SOURCE_ASSET'),(Path('DS_CUSTOM_LIBRARY/hack-packs'),'HACK_SOURCE_ASSET')]:
+              if not base.exists(): continue
+              for p in sorted(base.rglob('*')):
+                  if p.is_file() and p.suffix.lower() in exts:
+                      if 'Platinum_Redux_Embedded_Sprites/sprite-candidates/' in p.as_posix(): continue
+                      rel=p.relative_to(base)
+                      source=rel.parts[0] if rel.parts else ''
+                      assets.append({'source':source,'bucket':bucket,'path':p.as_posix(),'sha256':hashlib.sha256(p.read_bytes()).hexdigest()})
+
+          with open('DS_CUSTOM_LIBRARY/actual_sprite_assets.csv','w',newline='') as f:
+              w=csv.DictWriter(f,fieldnames=['source','bucket','path','sha256']); w.writeheader(); w.writerows(assets)
+
+          sc=collections.Counter(a['source'] for a in assets)
+          old={}
+          sp=Path('DS_CUSTOM_LIBRARY/actual_sprite_audit_summary.json')
+          if sp.exists():
+              try: old=json.loads(sp.read_text())
+              except Exception: pass
+          hs=[h for h in old.get('hack_source_status',[]) if h.get('project')!='Pokemon Infinite Black 2']
+          n=sc.get('Infinite_Black_2_Unique_Assets',0)
+          hs.append({'project':'Pokemon Infinite Black 2','actual_sprite_files':n,'status':'SPRITES_COLLECTED' if n else 'NO_UNIQUE_SPRITES_AFTER_DEDUP'})
+          summary={
+              'actual_sprite_image_files_total':len(assets),
+              'generic_actual_image_files':sum(1 for a in assets if a['bucket']=='GENERIC_SOURCE_ASSET'),
+              'hack_actual_image_files':sum(1 for a in assets if a['bucket']=='HACK_SOURCE_ASSET'),
+              'source_counts':dict(sorted(sc.items())),
+              'hack_source_status':hs,
+              'excluded_from_counts':old.get('excluded_from_counts','DS_CUSTOM_LIBRARY/hack-reference-previews'),
+              'rule':'Only actual image asset bytes count.'
+          }
+          sp.write_text(json.dumps(summary,indent=2))
+          print(json.dumps(summary,indent=2))
+          PY
+
+      - name: Commit Infinite Black 2 assets
+        run: |
+          git config user.name "Mercury Actual Sprite Intake Bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add DS_CUSTOM_LIBRARY/hack-packs/Infinite_Black_2_Unique_Assets DS_CUSTOM_LIBRARY/infinite_black2_unique_asset_inventory.csv DS_CUSTOM_LIBRARY/infinite_black2_unique_asset_summary.json DS_CUSTOM_LIBRARY/hack_source_manifest.csv DS_CUSTOM_LIBRARY/actual_sprite_assets.csv DS_CUSTOM_LIBRARY/actual_sprite_audit_summary.json .github/workflows/ingest-infinite-black2-sprites.yml
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "sprites: ingest Infinite Black 2 unique actual assets"
+          git push origin main
