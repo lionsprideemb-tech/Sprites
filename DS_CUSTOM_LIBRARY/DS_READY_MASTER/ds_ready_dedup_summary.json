@@ -1,23 +1,26 @@
 {
-  "scan_roots": [
-    "DS_CUSTOM_LIBRARY/packs",
-    "DS_CUSTOM_LIBRARY/hack-packs",
-    "DS_CUSTOM_LIBRARY/converted"
-  ],
+  "pokeapi_official_form_index_ok": false,
+  "official_form_names_indexed": 1547,
   "ds_ready_image_files_scanned": 42635,
   "decoded_failures": 639,
-  "front_sprite_files_found": 7729,
+  "normal_front_sprite_files_after_component_cleanup": 5287,
   "exact_duplicate_component_files": 7871,
-  "palette_only_recolor_component_files": 1185,
-  "unique_front_visual_designs_after_exact_and_recolor_dedup": 5133,
-  "semantic_identity_count_among_unique_front_designs": 3962,
-  "custom_identities_with_multiple_genuinely_different_designs": 1157,
-  "custom_design_options_preserved_for_approval": 2320,
-  "count_definition": "A Pokemon sprite design is one unique non-shiny FRONT visual after exact duplicates and palette-only recolors are collapsed. Genuinely different designs for the same custom identity are all retained and counted.",
-  "important_policy": [
+  "custom_palette_only_recolor_component_files": 405,
+  "official_semantic_front_entries_kept": 1494,
+  "custom_semantic_identities": 2574,
+  "custom_identities_with_multiple_genuinely_different_designs": 35,
+  "custom_design_options_preserved_for_approval": 73,
+  "total_pokemon_form_sprite_designs_before_approval": 4106,
+  "official_plus_custom_breakdown": {
+    "official": 1494,
+    "custom_design_candidates": 2612
+  },
+  "count_definition": "Count is one preferred normal-front sprite per official form identity plus every genuinely different custom design candidate. Exact duplicates and custom palette-only recolors are excluded. Multiple genuinely different designs for the same custom mon are retained for approval.",
+  "policy": [
     "Normal and shiny roles are never compared against each other.",
-    "No files are deleted by this audit.",
-    "Exact duplicates and palette-only recolors are isolated as cleanup candidates.",
+    "Official form identities are protected from palette-recolor collapse.",
+    "Native DS artwork is preferred over mechanically converted GBA art when the semantic identity is the same.",
+    "No files are deleted by this audit; duplicate/recolor files are isolated in reports.",
     "Different custom-mon designs are preserved for the approval sheet."
   ]
 }
