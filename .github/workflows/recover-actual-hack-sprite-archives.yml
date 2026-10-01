@@ -1,0 +1,214 @@
+name: Recover Actual Hack Sprite Archives
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/recover-actual-hack-sprite-archives.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  recover:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install tools
+        run: |
+          sudo apt-get update -y
+          sudo apt-get install -y p7zip-full unzip file
+          python -m pip install requests beautifulsoup4 gdown
+          mkdir -p /tmp/recover-hack-sprites
+
+      - name: Recover Banished Platinum Mega archive by Drive ID
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import subprocess, json, hashlib, shutil
+
+          fid='1THEKgLqfn5eHIeLk6WZL-zgqw_QDJiz7'
+          out=Path('/tmp/recover-hack-sprites/banished.download')
+          dest=Path('DS_CUSTOM_LIBRARY/hack-packs/Banished_Platinum_Free_Megas')
+          if dest.exists():
+              shutil.rmtree(dest)
+          dest.mkdir(parents=True,exist_ok=True)
+
+          p=subprocess.run(['gdown',fid,'-O',str(out)],text=True,capture_output=True)
+          report={
+            'file_id':fid,
+            'gdown_rc':p.returncode,
+            'stdout_tail':p.stdout[-3000:],
+            'stderr_tail':p.stderr[-3000:]
+          }
+          if p.returncode==0 and out.exists():
+              report['download_bytes']=out.stat().st_size
+              report['sha256']=hashlib.sha256(out.read_bytes()).hexdigest()
+              report['file_type']=subprocess.run(['file','-b',str(out)],text=True,capture_output=True).stdout.strip()
+              q=subprocess.run(['7z','x','-y',f'-o{dest}',str(out)],text=True,capture_output=True)
+              report['extract_rc']=q.returncode
+          imgs=[x for x in dest.rglob('*') if x.is_file() and x.suffix.lower() in {'.png','.gif','.bmp','.jpg','.jpeg'}]
+          report['actual_sprite_image_files']=len(imgs)
+          report['status']='SPRITES_COLLECTED' if imgs else 'FAILED_TO_RECOVER_ACTUAL_SPRITES'
+          Path('DS_CUSTOM_LIBRARY/recover_banished_actual.json').write_text(json.dumps(report,indent=2))
+          print(json.dumps(report,indent=2))
+          PY
+
+      - name: Parse Altered Platinum Drive file metadata and recover sprite ZIP only
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import requests,re,json,subprocess,hashlib,html,shutil
+
+          folder='https://drive.google.com/drive/folders/1ooydJKGFE3AajHm1w8sCUx0Z8J2vo95q?usp=sharing'
+          sess=requests.Session()
+          sess.headers.update({'User-Agent':'Mozilla/5.0'})
+          r=sess.get(folder,timeout=30)
+          raw=html.unescape(r.text)
+
+          # Collect Drive-looking IDs and nearby filename text.
+          ids=set(re.findall(r'(?<![A-Za-z0-9_-])([A-Za-z0-9_-]{20,60})(?![A-Za-z0-9_-])',raw))
+          candidates=[]
+          for fid in ids:
+              pos=raw.find(fid)
+              if pos<0: continue
+              window=raw[max(0,pos-500):pos+1200]
+              # Prefer entries whose nearby metadata explicitly mentions sprites.
+              if re.search(r'sprite',window,re.I):
+                  names=re.findall(r'([^"\\]{1,120}\.(?:zip|rar|7z|png|gif))',window,re.I)
+                  candidates.append({'id':fid,'names':list(dict.fromkeys(names))[:8],'window':window[:1500]})
+
+          # Additional structured file-name scan: locate sprite archive names then find IDs nearby.
+          name_hits=[]
+          for m in re.finditer(r'[^"\\]{0,100}(?:sprite|sprites)[^"\\]{0,100}\.(?:zip|rar|7z)',raw,re.I):
+              start=max(0,m.start()-1200); end=min(len(raw),m.end()+1200)
+              win=raw[start:end]
+              near_ids=re.findall(r'(?<![A-Za-z0-9_-])([A-Za-z0-9_-]{20,60})(?![A-Za-z0-9_-])',win)
+              name_hits.append({'name_text':m.group(0),'ids':list(dict.fromkeys(near_ids))[:20]})
+
+          # Merge likely IDs.
+          likely=[]
+          for x in candidates:
+              likely.append(x['id'])
+          for x in name_hits:
+              likely += x['ids']
+          likely=list(dict.fromkeys(likely))
+
+          tmp=Path('/tmp/recover-hack-sprites/altered')
+          tmp.mkdir(parents=True,exist_ok=True)
+          dest=Path('DS_CUSTOM_LIBRARY/hack-packs/Altered_Platinum_Custom_Sprites')
+          if dest.exists():
+              shutil.rmtree(dest)
+          dest.mkdir(parents=True,exist_ok=True)
+
+          attempts=[]
+          for i,fid in enumerate(likely[:80]):
+              out=tmp/f'{i:03d}_{fid}'
+              p=subprocess.run(['gdown',fid,'-O',str(out)],text=True,capture_output=True)
+              rec={'id':fid,'rc':p.returncode}
+              if p.returncode==0 and out.exists():
+                  ftype=subprocess.run(['file','-b',str(out)],text=True,capture_output=True).stdout.strip()
+                  rec['bytes']=out.stat().st_size
+                  rec['file_type']=ftype
+                  if any(x in ftype.lower() for x in ['zip archive','rar archive','7-zip archive']):
+                      q=subprocess.run(['7z','x','-y',f'-o{dest}',str(out)],text=True,capture_output=True)
+                      rec['extract_rc']=q.returncode
+                  elif 'image' in ftype.lower():
+                      ext='.png' if 'png' in ftype.lower() else ('.gif' if 'gif' in ftype.lower() else '.jpg')
+                      shutil.copy2(out,dest/f'raw_{i:03d}{ext}')
+              attempts.append(rec)
+
+          imgs=[x for x in dest.rglob('*') if x.is_file() and x.suffix.lower() in {'.png','.gif','.bmp','.jpg','.jpeg'}]
+          report={
+            'folder':folder,
+            'http_status':r.status_code,
+            'candidate_metadata_entries':candidates[:50],
+            'sprite_filename_hits':name_hits[:50],
+            'likely_ids_tried':likely[:80],
+            'attempts':attempts,
+            'actual_sprite_image_files':len(imgs),
+            'status':'SPRITES_COLLECTED' if imgs else 'SPRITE_ARCHIVE_ID_NOT_RECOVERED'
+          }
+          Path('DS_CUSTOM_LIBRARY/recover_altered_actual.json').write_text(json.dumps(report,indent=2))
+          print(json.dumps({
+            'candidate_metadata_entries':len(candidates),
+            'sprite_filename_hits':len(name_hits),
+            'likely_ids':len(likely),
+            'actual_sprite_image_files':len(imgs),
+            'status':report['status']
+          },indent=2))
+          PY
+
+      - name: Rebuild strict actual-sprite audit
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import csv,json,collections,hashlib,re
+
+          exts={'.png','.gif','.bmp','.jpg','.jpeg'}
+          rows=[]
+          for base,bucket in [
+            (Path('DS_CUSTOM_LIBRARY/packs'),'GENERIC_SOURCE_ASSET'),
+            (Path('DS_CUSTOM_LIBRARY/hack-packs'),'HACK_SOURCE_ASSET')
+          ]:
+              if not base.exists(): continue
+              for p in sorted(base.rglob('*')):
+                  if p.is_file() and p.suffix.lower() in exts:
+                      rel=p.relative_to(base)
+                      source=rel.parts[0] if rel.parts else ''
+                      rows.append({
+                        'source':source,'bucket':bucket,'path':p.as_posix(),
+                        'sha256':hashlib.sha256(p.read_bytes()).hexdigest()
+                      })
+
+          with open('DS_CUSTOM_LIBRARY/actual_sprite_assets.csv','w',newline='') as f:
+              w=csv.DictWriter(f,fieldnames=['source','bucket','path','sha256'])
+              w.writeheader(); w.writerows(rows)
+
+          counts=collections.Counter((x['source'],x['bucket']) for x in rows)
+          hack_counts={s:c for (s,b),c in counts.items() if b=='HACK_SOURCE_ASSET'}
+
+          def norm(s):
+              return re.sub(r'[^a-z0-9]+','',s.lower().replace('pokemon','').replace('pokémon',''))
+
+          registered=[]
+          mf=Path('DS_CUSTOM_LIBRARY/hack_source_manifest.csv')
+          if mf.exists():
+              with mf.open(newline='') as f:
+                  registered=list(csv.DictReader(f))
+          status=[]
+          for row in registered:
+              nproj=norm(row['project'])
+              total=sum(c for src,c in hack_counts.items() if nproj in norm(src) or norm(src) in nproj)
+              status.append({
+                'project':row['project'],
+                'actual_sprite_files':total,
+                'status':'SPRITES_COLLECTED' if total else 'SOURCE_ONLY_OR_BLOCKED'
+              })
+
+          summary={
+            'actual_sprite_image_files_total':len(rows),
+            'generic_actual_image_files':sum(1 for x in rows if x['bucket']=='GENERIC_SOURCE_ASSET'),
+            'hack_actual_image_files':sum(1 for x in rows if x['bucket']=='HACK_SOURCE_ASSET'),
+            'hack_pack_counts':dict(sorted(hack_counts.items())),
+            'hack_source_status':status,
+            'excluded_from_counts':'DS_CUSTOM_LIBRARY/hack-reference-previews',
+            'rule':'Only actual image asset files in source-asset directories count. Links, patches, docs, screenshots/reference previews do not.'
+          }
+          Path('DS_CUSTOM_LIBRARY/actual_sprite_audit_summary.json').write_text(json.dumps(summary,indent=2))
+          print(json.dumps(summary,indent=2))
+          PY
+
+      - name: Commit recovered assets
+        run: |
+          git config user.name "Mercury Actual Sprite Recovery Bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add DS_CUSTOM_LIBRARY/hack-packs DS_CUSTOM_LIBRARY/recover_banished_actual.json DS_CUSTOM_LIBRARY/recover_altered_actual.json DS_CUSTOM_LIBRARY/actual_sprite_assets.csv DS_CUSTOM_LIBRARY/actual_sprite_audit_summary.json .github/workflows/recover-actual-hack-sprite-archives.yml
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "sprites: recover actual Banished and Altered Platinum assets"
+          git pull --rebase origin main
+          git push origin main
