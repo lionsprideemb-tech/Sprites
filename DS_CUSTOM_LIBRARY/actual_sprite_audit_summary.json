@@ -1,6 +1,6 @@
 {
-  "actual_sprite_image_files_total": 29246,
-  "generic_actual_image_files": 28724,
+  "actual_sprite_image_files_total": 29352,
+  "generic_actual_image_files": 28830,
   "hack_actual_image_files": 522,
   "source_counts": {
     "Altered_Platinum_Custom_Sprites": 2,
@@ -22,6 +22,10 @@
     "Festival_PrincessPhoenix": 140,
     "Festival_Scotsman": 52,
     "Gen7_DS_Backsprites": 297,
+    "HGSS_Project_Unique_Clumsycat_HG_Hack": 38,
+    "HGSS_Project_Unique_Dream_Crystal": 45,
+    "HGSS_Project_Unique_Futura_Engine": 21,
+    "HGSS_Project_Unique_Hallowed_Gold": 2,
     "HG_Engine_DS_Sprites": 9238,
     "Mega_Flygon": 7,
     "Mega_Flygon_Animated_Gen5": 4,
@@ -78,5 +82,5 @@
     }
   ],
   "excluded_from_counts": "DS_CUSTOM_LIBRARY/hack-reference-previews",
-  "rule": "Only actual image asset bytes count. Exact upstream duplicates from fork sweeps are excluded before import."
+  "rule": "Only actual image asset bytes count; upstream-identical project copies are excluded before import."
 }
