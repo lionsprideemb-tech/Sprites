@@ -18,6 +18,10 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Sync latest main before recovery
+        run: |
+          git pull --rebase origin main
+
       - name: Install tools
         run: |
           python -m pip install requests beautifulsoup4 pillow
@@ -206,6 +210,9 @@ jobs:
                   w,h=im.size
                   mode=im.mode
                   info=dict(im.info)
+                  fmt=(im.format or '').lower()
+                  if fmt not in {'png','gif','jpeg','jpg','bmp','webp'}:
+                      continue
                   if not sprite_like(w,h,mode,info):
                       continue
 
@@ -213,7 +220,6 @@ jobs:
                   if sha in sha_seen: continue
                   sha_seen.add(sha)
 
-                  fmt=(im.format or 'png').lower()
                   ext='.jpg' if fmt in {'jpeg','jpg'} else f'.{fmt}'
                   out=dest/f'{i:05d}_{sha[:12]}{ext}'
                   out.write_bytes(data)
@@ -322,5 +328,4 @@ jobs:
           git add DS_CUSTOM_LIBRARY/hack-packs/GoldSoul_Thread_Sprites DS_CUSTOM_LIBRARY/hack-packs/Platinum_Unlocked_Thread_Sprites DS_CUSTOM_LIBRARY/hack-packs/Moon_Black_2_Thread_Sprites DS_CUSTOM_LIBRARY/hack-packs/Pokemon_XYZ_NDS_Thread_Sprites DS_CUSTOM_LIBRARY/hack-packs/Project_721_Thread_Sprites DS_CUSTOM_LIBRARY/remaining_hack_sprite_recovery_report.json DS_CUSTOM_LIBRARY/actual_sprite_assets.csv DS_CUSTOM_LIBRARY/actual_sprite_audit_summary.json .github/workflows/recover-remaining-ds-hack-sprites.yml
           if git diff --cached --quiet; then exit 0; fi
           git commit -m "sprites: recover remaining DS hack sprite assets"
-          git pull --rebase origin main
           git push origin main
