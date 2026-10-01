@@ -1,0 +1,180 @@
+name: Extract SoothingSilver Embedded Sprite Images
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/extract-soothingsilver-doc-sprites.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  extract:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install tools
+        run: |
+          python -m pip install requests pillow
+          rm -rf /tmp/soothing-doc
+          mkdir -p /tmp/soothing-doc
+
+      - name: Export Google Doc and extract embedded images
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import requests, zipfile, io, shutil, json, hashlib
+          from PIL import Image
+
+          doc_id='156Dtkz0PQAT39g4cMY7iLPQlyL5jiR6zTyuLgUcHZRQ'
+          url=f'https://docs.google.com/document/d/{doc_id}/export?format=docx'
+          sess=requests.Session()
+          sess.headers.update({'User-Agent':'Mozilla/5.0'})
+          r=sess.get(url,timeout=60)
+          docx=Path('/tmp/soothing-doc/soothingsilver.docx')
+          docx.write_bytes(r.content)
+
+          dest=Path('DS_CUSTOM_LIBRARY/hack-packs/SoothingSilver_Embedded_Images')
+          if dest.exists():
+              shutil.rmtree(dest)
+          dest.mkdir(parents=True,exist_ok=True)
+
+          report={
+              'doc_id':doc_id,
+              'http_status':r.status_code,
+              'downloaded_bytes':len(r.content),
+              'embedded_media_total':0,
+              'actual_image_files':0,
+              'sprite_like_images':0,
+              'files':[]
+          }
+
+          if r.status_code==200:
+              try:
+                  z=zipfile.ZipFile(io.BytesIO(r.content))
+              except Exception:
+                  z=None
+              if z:
+                  media=[n for n in z.namelist() if n.startswith('word/media/') and not n.endswith('/')]
+                  report['embedded_media_total']=len(media)
+                  for i,name in enumerate(media):
+                      data=z.read(name)
+                      ext=Path(name).suffix.lower()
+                      if ext not in {'.png','.gif','.bmp','.jpg','.jpeg'}:
+                          continue
+                      try:
+                          im=Image.open(io.BytesIO(data))
+                          w,h=im.size
+                          mode=im.mode
+                          has_alpha=('A' in mode) or ('transparency' in im.info)
+                      except Exception:
+                          continue
+                      out=dest/f'{i:04d}_{Path(name).name}'
+                      out.write_bytes(data)
+                      # Tag likely battle/icon/follower sprite sheets by reasonable DS asset geometry.
+                      sprite_like=(8 <= w <= 1024 and 8 <= h <= 1024)
+                      report['files'].append({
+                          'path':out.as_posix(),
+                          'width':w,'height':h,'mode':mode,
+                          'has_alpha_or_transparency':bool(has_alpha),
+                          'sprite_like_candidate':bool(sprite_like),
+                          'bytes':len(data),
+                          'sha256':hashlib.sha256(data).hexdigest()
+                      })
+
+          report['actual_image_files']=len(report['files'])
+          report['sprite_like_images']=sum(1 for x in report['files'] if x['sprite_like_candidate'])
+          report['status']='SPRITES_COLLECTED' if report['sprite_like_images'] else 'NO_EMBEDDED_SPRITE_IMAGES'
+          Path('DS_CUSTOM_LIBRARY/soothingsilver_embedded_sprite_report.json').write_text(json.dumps(report,indent=2))
+          print(json.dumps({
+              'embedded_media_total':report['embedded_media_total'],
+              'actual_image_files':report['actual_image_files'],
+              'sprite_like_images':report['sprite_like_images'],
+              'status':report['status']
+          },indent=2))
+          PY
+
+      - name: Rebuild strict actual sprite audit
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import csv,json,collections,hashlib,re
+
+          exts={'.png','.gif','.bmp','.jpg','.jpeg'}
+          rows=[]
+          for base,bucket in [
+            (Path('DS_CUSTOM_LIBRARY/packs'),'GENERIC_SOURCE_ASSET'),
+            (Path('DS_CUSTOM_LIBRARY/hack-packs'),'HACK_SOURCE_ASSET')
+          ]:
+              if not base.exists(): continue
+              for p in sorted(base.rglob('*')):
+                  if p.is_file() and p.suffix.lower() in exts:
+                      if 'Platinum_Redux_Embedded_Sprites/sprite-candidates/' in p.as_posix():
+                          continue
+                      rel=p.relative_to(base)
+                      source=rel.parts[0] if rel.parts else ''
+                      rows.append({
+                          'source':source,'bucket':bucket,'path':p.as_posix(),
+                          'sha256':hashlib.sha256(p.read_bytes()).hexdigest()
+                      })
+
+          with open('DS_CUSTOM_LIBRARY/actual_sprite_assets.csv','w',newline='') as f:
+              w=csv.DictWriter(f,fieldnames=['source','bucket','path','sha256'])
+              w.writeheader(); w.writerows(rows)
+
+          source_counts=collections.Counter(x['source'] for x in rows)
+
+          aliases={
+            'Pokemon Altered Platinum':['Altered_Platinum_Custom_Sprites'],
+            'Pokemon Banished Platinum':['Banished_Platinum_Free_Megas'],
+            'Pokemon Platinum Redux':['Platinum_Redux_Embedded_Sprites'],
+            'Pokemon SoothingSilver':['SoothingSilver_Actual_Sprites','SoothingSilver_Embedded_Images']
+          }
+          registered=[]
+          mf=Path('DS_CUSTOM_LIBRARY/hack_source_manifest.csv')
+          if mf.exists():
+              with mf.open(newline='') as f:
+                  registered=list(csv.DictReader(f))
+
+          status=[]
+          def norm(s):
+              return re.sub(r'[^a-z0-9]+','',s.lower().replace('pokemon','').replace('pokémon',''))
+          for row in registered:
+              proj=row['project']
+              n=sum(source_counts.get(s,0) for s in aliases.get(proj,[]))
+              if not n:
+                  np=norm(proj)
+                  n=sum(c for s,c in source_counts.items() if np in norm(s) or norm(s) in np)
+              status.append({
+                  'project':proj,
+                  'actual_sprite_files':n,
+                  'status':'SPRITES_COLLECTED' if n else 'SOURCE_ONLY_OR_BLOCKED'
+              })
+
+          summary={
+              'actual_sprite_image_files_total':len(rows),
+              'generic_actual_image_files':sum(1 for x in rows if x['bucket']=='GENERIC_SOURCE_ASSET'),
+              'hack_actual_image_files':sum(1 for x in rows if x['bucket']=='HACK_SOURCE_ASSET'),
+              'source_counts':dict(sorted(source_counts.items())),
+              'hack_source_status':status,
+              'excluded_from_counts':'DS_CUSTOM_LIBRARY/hack-reference-previews',
+              'rule':'Only actual image asset bytes count. Links, patches, docs, screenshots/reference previews do not.'
+          }
+          Path('DS_CUSTOM_LIBRARY/actual_sprite_audit_summary.json').write_text(json.dumps(summary,indent=2))
+          print(json.dumps(summary,indent=2))
+          PY
+
+      - name: Commit SoothingSilver embedded assets
+        run: |
+          git config user.name "Mercury Actual Sprite Recovery Bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add DS_CUSTOM_LIBRARY/hack-packs/SoothingSilver_Embedded_Images DS_CUSTOM_LIBRARY/soothingsilver_embedded_sprite_report.json DS_CUSTOM_LIBRARY/actual_sprite_assets.csv DS_CUSTOM_LIBRARY/actual_sprite_audit_summary.json .github/workflows/extract-soothingsilver-doc-sprites.yml
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "sprites: extract SoothingSilver embedded image assets"
+          git pull --rebase origin main
+          git push origin main
