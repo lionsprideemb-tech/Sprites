@@ -50,6 +50,16 @@ jobs:
             curl -fsSL "$BASE/icons/$src.png" -o "$dir/icon.png"
           done
 
+          # Mega Meowstic has no visual gender difference in its Mega form.
+          # Preserve a separate semantic slot for the female form, but reuse the
+          # exact same Mega battle art so the engine can address both form IDs.
+          mkdir -p "$ROOT/meowstic-female-mega"
+          cp "$ROOT/meowstic-male-mega/front.png" "$ROOT/meowstic-female-mega/front.png"
+          cp "$ROOT/meowstic-male-mega/back.png" "$ROOT/meowstic-female-mega/back.png"
+          cp "$ROOT/meowstic-male-mega/front-shiny.png" "$ROOT/meowstic-female-mega/front-shiny.png"
+          cp "$ROOT/meowstic-male-mega/back-shiny.png" "$ROOT/meowstic-female-mega/back-shiny.png"
+          cp "$ROOT/meowstic-male-mega/icon.png" "$ROOT/meowstic-female-mega/icon.png"
+
       - name: Audit dimensions and palette
         shell: python
         run: |
@@ -87,7 +97,8 @@ jobs:
               "source":"AxelLoquendo/PokeDot-Engine",
               "sets_downloaded":len(by),
               "files_downloaded":len(rows),
-              "all_64x64":all(r["ds_canvas_64x64"] for r in rows),
+              "battle_sprites_all_64x64":all(r["ds_canvas_64x64"] for r in rows if r["slot"]!="icon"),
+              "icons_all_128x64":all((r["width"],r["height"])==(128,64) for r in rows if r["slot"]=="icon"),
               "all_16_colors_or_less":all(r["ds_palette_16_or_less"] for r in rows),
               "sets":{
                   k:{
@@ -98,8 +109,8 @@ jobs:
                       "max_opaque_colors":max(x["opaque_colors"] for x in v)
                   } for k,v in sorted(by.items())
               },
-              "excluded_pending":{
-                  "meowstic-female-mega":"PokeDot resource currently points Mega female form at regular MEOWSTIC_F battle sprites; not accepted as a distinct Mega sprite source."
+              "semantic_aliases":{
+                  "meowstic-female-mega":"Uses the same Mega Meowstic art as the male semantic form; separate files are retained for engine/form addressing."
               }
           }
           (out/"pokedot_mega_sprite_technical_summary.json").write_text(json.dumps(summary,indent=2)+"\n")
