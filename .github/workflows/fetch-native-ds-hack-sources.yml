@@ -1,0 +1,234 @@
+name: Fetch Native DS ROM-Hack Sprite Sources
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/fetch-native-ds-hack-sources.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  fetch-hacks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install tools
+        run: |
+          sudo apt-get update -y
+          sudo apt-get install -y p7zip-full unzip file
+          python -m pip install requests beautifulsoup4 gdown
+          mkdir -p /tmp/ds-hack-intake
+
+      - name: Fetch public Drive folders for Platinum Redux and Altered Platinum
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import subprocess, shutil, json, hashlib, re
+
+          sources=[
+            {
+              'name':'Platinum_Redux',
+              'folder_id':'1SiWKcVzJWGw5oZMnLipSYz--gtKy7J9y',
+              'source_url':'https://drive.google.com/drive/folders/1SiWKcVzJWGw5oZMnLipSYz--gtKy7J9y?usp=drive_link',
+              'policy':'Keep image/sprite assets and sprite-specific archives only; skip ROM patches.'
+            },
+            {
+              'name':'Altered_Platinum',
+              'folder_id':'1ooydJKGFE3AajHm1w8sCUx0Z8J2vo95q',
+              'source_url':'https://drive.google.com/drive/folders/1ooydJKGFE3AajHm1w8sCUx0Z8J2vo95q?usp=sharing',
+              'policy':'Creator explicitly offers separate custom sprite archive as free to use with credit appreciated.'
+            }
+          ]
+
+          root=Path('DS_CUSTOM_LIBRARY/hack-packs')
+          temp=Path('/tmp/ds-hack-intake')
+          root.mkdir(parents=True,exist_ok=True)
+          reports=[]
+
+          image_exts={'.png','.gif','.bmp','.jpg','.jpeg'}
+          archive_exts={'.zip','.rar','.7z'}
+
+          for src in sources:
+              name=src['name']
+              dl=temp/name
+              dl.mkdir(parents=True,exist_ok=True)
+              rec={**src,'files_found':0,'images_kept':0,'sprite_archives_extracted':0,'skipped_patch_files':0}
+
+              p=subprocess.run(
+                ['gdown','--folder',src['folder_id'],'-O',str(dl)],
+                text=True,capture_output=True
+              )
+              rec['gdown_rc']=p.returncode
+              rec['stdout']=p.stdout[-3000:]
+              rec['stderr']=p.stderr[-3000:]
+
+              if p.returncode!=0:
+                  rec['status']='FOLDER_FETCH_FAILED'
+                  reports.append(rec)
+                  continue
+
+              allfiles=[x for x in dl.rglob('*') if x.is_file()]
+              rec['files_found']=len(allfiles)
+              out=root/name
+              if out.exists():
+                  shutil.rmtree(out)
+              out.mkdir(parents=True,exist_ok=True)
+
+              for f in allfiles:
+                  low=f.name.lower()
+                  ext=f.suffix.lower()
+
+                  if ext in {'.xdelta','.nds','.ips','.bps'} or 'patch' in low and ext not in image_exts:
+                      rec['skipped_patch_files']+=1
+                      continue
+
+                  # Keep raw images. In Platinum Redux these may be docs/previews, so provenance remains explicit.
+                  if ext in image_exts:
+                      rel=f.relative_to(dl)
+                      dst=out/'raw-images'/rel
+                      dst.parent.mkdir(parents=True,exist_ok=True)
+                      shutil.copy2(f,dst)
+                      rec['images_kept']+=1
+                      continue
+
+                  # Extract only archives that look sprite/art related.
+                  if ext in archive_exts and any(tok in low for tok in ['sprite','form','pokemon','sinnoh','regional','art']):
+                      dest=out/'extracted'/re.sub(r'[^A-Za-z0-9._-]+','_',f.stem)
+                      dest.mkdir(parents=True,exist_ok=True)
+                      q=subprocess.run(['7z','x','-y',f'-o{dest}',str(f)],text=True,capture_output=True)
+                      if q.returncode==0:
+                          rec['sprite_archives_extracted']+=1
+
+              rec['status']='FETCHED'
+              reports.append(rec)
+
+          Path('DS_CUSTOM_LIBRARY/hack_fetch_report_drive.json').write_text(json.dumps(reports,indent=2))
+          print(json.dumps(reports,indent=2))
+          PY
+
+      - name: Fetch public hack preview/reference images
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import requests, json, hashlib, re
+          from bs4 import BeautifulSoup
+          from urllib.parse import urljoin
+
+          sources=[
+            ('Platinum_Redux','https://www.pokecommunity.com/threads/pok%C3%A9mon-platinum-redux.525725/'),
+            ('Altered_Platinum','https://www.pokecommunity.com/threads/pok%C3%A9mon-altered-platinum-sinnohan-forms-increased-difficulty-and-more.466016/'),
+            ('Pokemon_XYZ_NDS','https://www.pokecommunity.com/threads/pok%C3%A9mon-xyz-nds-rom-hack.527852/')
+          ]
+
+          root=Path('DS_CUSTOM_LIBRARY/hack-reference-previews')
+          root.mkdir(parents=True,exist_ok=True)
+          sess=requests.Session()
+          sess.headers.update({'User-Agent':'Mozilla/5.0'})
+          report=[]
+
+          for name,url in sources:
+              dest=root/name
+              dest.mkdir(parents=True,exist_ok=True)
+              rec={'name':name,'source_url':url,'downloaded':[]}
+              try:
+                  # Crawl first three pages where available.
+                  pages=[url]
+                  if name=='Platinum_Redux':
+                      pages += [url.rstrip('/')+'/page-2',url.rstrip('/')+'/page-3']
+                  urls=[]
+                  for page in pages:
+                      r=sess.get(page,timeout=30)
+                      if r.status_code!=200: continue
+                      soup=BeautifulSoup(r.text,'html.parser')
+                      for tag in soup.find_all(['img','a']):
+                          raw=tag.get('src') if tag.name=='img' else tag.get('href')
+                          if not raw: continue
+                          u=urljoin(r.url,raw)
+                          low=u.lower()
+                          if any(x in low for x in ['attachments/','.png','.gif','.jpg','.jpeg','imgur.com']):
+                              urls.append(u)
+                  urls=list(dict.fromkeys(urls))
+
+                  for i,u in enumerate(urls):
+                      try:
+                          rr=sess.get(u,timeout=30,allow_redirects=True)
+                          ctype=rr.headers.get('content-type','').lower()
+                          if rr.status_code!=200 or len(rr.content)<500 or 'image' not in ctype:
+                              continue
+                          ext='.png' if 'png' in ctype else ('.gif' if 'gif' in ctype else '.jpg')
+                          p=dest/f'reference_{i:04d}{ext}'
+                          p.write_bytes(rr.content)
+                          rec['downloaded'].append({
+                            'path':p.as_posix(),
+                            'source_url':u,
+                            'bytes':len(rr.content),
+                            'sha256':hashlib.sha256(rr.content).hexdigest()
+                          })
+                      except Exception:
+                          pass
+                  rec['status']='REFERENCE_IMAGES_FETCHED' if rec['downloaded'] else 'NO_REFERENCE_IMAGES_FETCHED'
+              except Exception as e:
+                  rec['status']='ERROR'; rec['error']=repr(e)
+              report.append(rec)
+
+          Path('DS_CUSTOM_LIBRARY/hack_fetch_report_previews.json').write_text(json.dumps(report,indent=2))
+          print(json.dumps([{r['name']:len(r.get('downloaded',[]))} for r in report],indent=2))
+          PY
+
+      - name: Inventory hack-source images separately
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import csv, json, hashlib, collections
+
+          rows=[]
+          for base,kind in [
+            (Path('DS_CUSTOM_LIBRARY/hack-packs'),'SOURCE_ASSET'),
+            (Path('DS_CUSTOM_LIBRARY/hack-reference-previews'),'REFERENCE_ONLY')
+          ]:
+              if not base.exists(): continue
+              for p in sorted(base.rglob('*')):
+                  if not p.is_file() or p.suffix.lower() not in {'.png','.gif','.bmp','.jpg','.jpeg'}:
+                      continue
+                  rel=p.relative_to(base)
+                  project=rel.parts[0] if rel.parts else ''
+                  b=p.read_bytes()
+                  rows.append({
+                    'project':project,
+                    'kind':kind,
+                    'path':p.as_posix(),
+                    'bytes':len(b),
+                    'sha256':hashlib.sha256(b).hexdigest()
+                  })
+
+          with open('DS_CUSTOM_LIBRARY/hack_sprite_inventory.csv','w',newline='') as f:
+              w=csv.DictWriter(f,fieldnames=['project','kind','path','bytes','sha256'])
+              w.writeheader(); w.writerows(rows)
+
+          counts=collections.Counter((r['project'],r['kind']) for r in rows)
+          summary={
+            'total_hack_images':len(rows),
+            'counts':{f'{k[0]}::{k[1]}':v for k,v in sorted(counts.items())},
+            'important':'REFERENCE_ONLY images are never treated as production sprite assets. They exist only to identify concepts/designs and locate source art.'
+          }
+          Path('DS_CUSTOM_LIBRARY/hack_sprite_inventory_summary.json').write_text(json.dumps(summary,indent=2))
+          print(json.dumps(summary,indent=2))
+          PY
+
+      - name: Commit hack-source intake
+        run: |
+          git config user.name "Mercury DS Hack Source Bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add DS_CUSTOM_LIBRARY/hack-packs DS_CUSTOM_LIBRARY/hack-reference-previews DS_CUSTOM_LIBRARY/hack_fetch_report_drive.json DS_CUSTOM_LIBRARY/hack_fetch_report_previews.json DS_CUSTOM_LIBRARY/hack_sprite_inventory.csv DS_CUSTOM_LIBRARY/hack_sprite_inventory_summary.json .github/workflows/fetch-native-ds-hack-sources.yml
+          if git diff --cached --quiet; then
+            echo "No changes"
+            exit 0
+          fi
+          git commit -m "sprites: ingest native DS ROM-hack sprite sources"
+          git push origin main
