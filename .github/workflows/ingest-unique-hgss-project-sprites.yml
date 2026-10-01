@@ -1,0 +1,147 @@
+name: Ingest Unique HGSS Project Sprites
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/ingest-unique-hgss-project-sprites.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  ingest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Clone upstream and candidate projects
+        run: |
+          rm -rf /tmp/hg-upstream /tmp/dream /tmp/futura /tmp/hallowed /tmp/aurum /tmp/clumsy
+          git clone --depth 1 https://github.com/BluRosie/hg-engine.git /tmp/hg-upstream
+          git clone --depth 1 https://github.com/Simsblock/Pokemon.Dream_Crystal.git /tmp/dream
+          git clone --depth 1 https://github.com/ellaviolet/futura-engine.git /tmp/futura
+          git clone --depth 1 https://github.com/Xyarlo/hallowed-gold.git /tmp/hallowed
+          git clone --depth 1 https://github.com/PokemonAurum/PokemonAurum.git /tmp/aurum
+          git clone --depth 1 https://github.com/clumsycatgirl/pokemon-heart-gold-rom-hack.git /tmp/clumsy
+
+      - name: Import only sprite bytes not present upstream
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import hashlib,shutil,json,csv,collections
+
+          upstream=Path('/tmp/hg-upstream/data/graphics/sprites')
+          projects=[
+            ('Dream_Crystal',Path('/tmp/dream/data/graphics/sprites')),
+            ('Futura_Engine',Path('/tmp/futura/data/graphics/sprites')),
+            ('Hallowed_Gold',Path('/tmp/hallowed/data/graphics/sprites')),
+            ('Pokemon_Aurum',Path('/tmp/aurum/data/graphics/sprites')),
+            ('Clumsycat_HG_Hack',Path('/tmp/clumsy/data/graphics/sprites'))
+          ]
+          exts={'.png','.gif','.bmp','.jpg','.jpeg','.webp'}
+          root=Path('DS_CUSTOM_LIBRARY/packs')
+
+          upstream_hashes=set()
+          upstream_paths={}
+          if upstream.exists():
+              for p in upstream.rglob('*'):
+                  if p.is_file() and p.suffix.lower() in exts:
+                      h=hashlib.sha256(p.read_bytes()).hexdigest()
+                      upstream_hashes.add(h)
+                      upstream_paths[p.relative_to(upstream).as_posix()]=h
+
+          imported_hashes=set(upstream_hashes)
+          rows=[]
+
+          for name,srcroot in projects:
+              dest=root/f'HGSS_Project_Unique_{name}'
+              if dest.exists(): shutil.rmtree(dest)
+              dest.mkdir(parents=True,exist_ok=True)
+              if not srcroot.exists(): continue
+
+              for p in sorted(srcroot.rglob('*')):
+                  if not p.is_file() or p.suffix.lower() not in exts: continue
+                  b=p.read_bytes()
+                  h=hashlib.sha256(b).hexdigest()
+                  rel=p.relative_to(srcroot).as_posix()
+                  if h in imported_hashes:
+                      continue
+                  imported_hashes.add(h)
+                  uph=upstream_paths.get(rel,'')
+                  out=dest/rel
+                  out.parent.mkdir(parents=True,exist_ok=True)
+                  shutil.copy2(p,out)
+                  rows.append({
+                    'source':name,
+                    'relative_path':rel,
+                    'change_type':'NEW_CONTENT',
+                    'upstream_same_path_sha256':uph,
+                    'sha256':h,
+                    'path':out.as_posix()
+                  })
+
+          with open('DS_CUSTOM_LIBRARY/hgss_project_unique_sprite_inventory.csv','w',newline='') as f:
+              w=csv.DictWriter(f,fieldnames=['source','relative_path','change_type','upstream_same_path_sha256','sha256','path'])
+              w.writeheader(); w.writerows(rows)
+
+          counts=collections.Counter(r['source'] for r in rows)
+          summary={
+            'unique_project_sprite_assets_imported':len(rows),
+            'by_source':dict(sorted(counts.items())),
+            'policy':'Only sprite image content not already present byte-identically in BluRosie/hg-engine or an earlier candidate project is imported.'
+          }
+          Path('DS_CUSTOM_LIBRARY/hgss_project_unique_sprite_summary.json').write_text(json.dumps(summary,indent=2))
+          print(json.dumps(summary,indent=2))
+          PY
+
+      - name: Rebuild strict actual asset count
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import csv,json,collections,hashlib
+          exts={'.png','.gif','.bmp','.jpg','.jpeg','.webp'}
+          rows=[]
+          for base,bucket in [(Path('DS_CUSTOM_LIBRARY/packs'),'GENERIC_SOURCE_ASSET'),(Path('DS_CUSTOM_LIBRARY/hack-packs'),'HACK_SOURCE_ASSET')]:
+              if not base.exists(): continue
+              for p in sorted(base.rglob('*')):
+                  if p.is_file() and p.suffix.lower() in exts:
+                      if 'Platinum_Redux_Embedded_Sprites/sprite-candidates/' in p.as_posix(): continue
+                      rel=p.relative_to(base)
+                      source=rel.parts[0] if rel.parts else ''
+                      rows.append({'source':source,'bucket':bucket,'path':p.as_posix(),'sha256':hashlib.sha256(p.read_bytes()).hexdigest()})
+
+          with open('DS_CUSTOM_LIBRARY/actual_sprite_assets.csv','w',newline='') as f:
+              w=csv.DictWriter(f,fieldnames=['source','bucket','path','sha256']); w.writeheader(); w.writerows(rows)
+
+          sc=collections.Counter(x['source'] for x in rows)
+          old={}
+          sp=Path('DS_CUSTOM_LIBRARY/actual_sprite_audit_summary.json')
+          if sp.exists():
+              try: old=json.loads(sp.read_text())
+              except Exception: pass
+          summary={
+            'actual_sprite_image_files_total':len(rows),
+            'generic_actual_image_files':sum(1 for x in rows if x['bucket']=='GENERIC_SOURCE_ASSET'),
+            'hack_actual_image_files':sum(1 for x in rows if x['bucket']=='HACK_SOURCE_ASSET'),
+            'source_counts':dict(sorted(sc.items())),
+            'hack_source_status':old.get('hack_source_status',[]),
+            'excluded_from_counts':old.get('excluded_from_counts','DS_CUSTOM_LIBRARY/hack-reference-previews'),
+            'rule':'Only actual image asset bytes count; upstream-identical project copies are excluded before import.'
+          }
+          sp.write_text(json.dumps(summary,indent=2))
+          print(json.dumps(summary,indent=2))
+          PY
+
+      - name: Commit unique project sprites
+        run: |
+          git config user.name "Mercury Actual Sprite Intake Bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add DS_CUSTOM_LIBRARY/packs/HGSS_Project_Unique_* DS_CUSTOM_LIBRARY/hgss_project_unique_sprite_inventory.csv DS_CUSTOM_LIBRARY/hgss_project_unique_sprite_summary.json DS_CUSTOM_LIBRARY/actual_sprite_assets.csv DS_CUSTOM_LIBRARY/actual_sprite_audit_summary.json .github/workflows/ingest-unique-hgss-project-sprites.yml
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "sprites: ingest unique HGSS project sprite assets"
+          git pull --rebase origin main
+          git push origin main
