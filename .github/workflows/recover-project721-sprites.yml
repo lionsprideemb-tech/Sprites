@@ -1,0 +1,153 @@
+name: Recover Project 721 Sprite Assets
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/recover-project721-sprites.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  recover:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Sync latest main
+        run: git pull --rebase origin main
+
+      - name: Install tools
+        run: python -m pip install requests beautifulsoup4 pillow
+
+      - name: Recover actual Project 721 images
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import requests,re,json,hashlib,shutil,io,html
+          from bs4 import BeautifulSoup
+          from urllib.parse import urljoin,urlparse
+          from PIL import Image
+
+          base='https://projectpokemon.org/home/forums/topic/33493-project-721/'
+          sess=requests.Session()
+          sess.headers.update({'User-Agent':'Mozilla/5.0 MercurySpriteArchive/1.0'})
+          urls=[]
+
+          for page_num in range(1,8):
+              page=base if page_num==1 else base.rstrip('/')+f'/page/{page_num}/'
+              bodies=[]
+              try:
+                  r=sess.get(page,timeout=30)
+                  if r.status_code==200:
+                      bodies.append(r.text)
+              except Exception:
+                  pass
+              try:
+                  proxy='https://r.jina.ai/http://' + page.split('://',1)[1]
+                  r=sess.get(proxy,timeout=45)
+                  if r.status_code==200:
+                      bodies.append(r.text)
+              except Exception:
+                  pass
+
+              for body in bodies:
+                  body=html.unescape(body)
+                  soup=BeautifulSoup(body,'html.parser')
+                  for tag in soup.find_all(['img','a']):
+                      raw=tag.get('src') or tag.get('href') or tag.get('data-src')
+                      if not raw: continue
+                      u=urljoin(page,raw)
+                      low=u.lower()
+                      if any(x in low for x in ['.png','.gif','.jpg','.jpeg','.webp','attachments/','imgur']):
+                          urls.append(u)
+                  urls += re.findall(r'https?://[^\s\)\]\>"\']+',body,re.I)
+
+          cleaned=[]
+          seen=set()
+          for u in urls:
+              u=u.replace('&amp;','&')
+              if not u.startswith('http'): continue
+              if u not in seen:
+                  seen.add(u); cleaned.append(u)
+
+          dest=Path('DS_CUSTOM_LIBRARY/hack-packs/Project_721_Thread_Sprites')
+          if dest.exists(): shutil.rmtree(dest)
+          dest.mkdir(parents=True,exist_ok=True)
+
+          kept=[]
+          seen_hash=set()
+
+          for i,u in enumerate(cleaned):
+              candidates=[u]
+              if 'imgur.com/' in u and 'i.imgur.com/' not in u:
+                  ident=u.rstrip('/').split('/')[-1].split('?')[0]
+                  if ident and '.' not in ident:
+                      candidates=[f'https://i.imgur.com/{ident}.png',f'https://i.imgur.com/{ident}.jpg',u]
+
+              data=None; final=None; im=None
+              for cu in candidates:
+                  try:
+                      rr=sess.get(cu,timeout=35,allow_redirects=True)
+                  except Exception:
+                      continue
+                  if rr.status_code!=200 or len(rr.content)<100:
+                      continue
+                  try:
+                      test=Image.open(io.BytesIO(rr.content)); test.load()
+                  except Exception:
+                      continue
+                  fmt=(test.format or '').lower()
+                  if fmt not in {'png','gif','jpeg','jpg','bmp','webp'}:
+                      continue
+                  data=rr.content; final=cu; im=test
+                  break
+
+              if data is None: continue
+              w,h=im.size
+              alpha=('A' in im.mode) or ('transparency' in im.info)
+              # Project 721 publicly posted individual sprites / sprite sheets.
+              sprite_like=((w<=256 and h<=256) or (alpha and h<=256 and w<=1280))
+              if not sprite_like: continue
+
+              sha=hashlib.sha256(data).hexdigest()
+              if sha in seen_hash: continue
+              seen_hash.add(sha)
+              fmt=(im.format or 'png').lower()
+              ext='.jpg' if fmt in {'jpg','jpeg'} else f'.{fmt}'
+              out=dest/f'{i:05d}_{sha[:12]}{ext}'
+              out.write_bytes(data)
+              kept.append({
+                  'path':out.as_posix(),'source_url':final,
+                  'width':w,'height':h,'mode':im.mode,
+                  'bytes':len(data),'sha256':sha
+              })
+
+          report={
+              'project':'Project 721',
+              'source_url':base,
+              'candidate_urls':len(cleaned),
+              'actual_sprite_like_images_collected':len(kept),
+              'status':'SPRITES_COLLECTED' if kept else 'NO_STANDALONE_SPRITES_RECOVERED',
+              'files':kept
+          }
+          Path('DS_CUSTOM_LIBRARY/project721_sprite_report.json').write_text(json.dumps(report,indent=2))
+          print(json.dumps({
+              'candidate_urls':len(cleaned),
+              'actual_sprite_like_images_collected':len(kept),
+              'status':report['status']
+          },indent=2))
+          PY
+
+      - name: Commit Project 721 assets only
+        run: |
+          git config user.name "Mercury Actual Sprite Recovery Bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add DS_CUSTOM_LIBRARY/hack-packs/Project_721_Thread_Sprites DS_CUSTOM_LIBRARY/project721_sprite_report.json .github/workflows/recover-project721-sprites.yml
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "sprites: recover Project 721 actual sprite assets"
+          git push origin main
