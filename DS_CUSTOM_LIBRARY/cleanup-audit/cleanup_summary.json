@@ -4,13 +4,13 @@
     "pokemon_forms": "OK"
   },
   "required_vanilla_species": 1025,
-  "vanilla_complete": 962,
-  "vanilla_missing_or_partial": 63,
-  "required_mega_forms_union": 102,
+  "vanilla_complete": 1025,
+  "vanilla_missing_or_partial": 0,
+  "required_mega_forms_union": 100,
   "official_megas_from_api": 97,
-  "local_or_mercury_megas": 5,
+  "local_or_mercury_megas": 3,
   "mega_complete": 87,
-  "mega_missing_or_partial": 15,
+  "mega_missing_or_partial": 13,
   "asset_files_scanned": 31240,
   "exact_duplicate_delete_candidates": 5136,
   "pure_palette_recolor_delete_candidates": 1918,
@@ -19,6 +19,7 @@
     "DrPrettyman_DS_64x64 is protected and never quarantined by this pass.",
     "Official shiny component slots are protected; shiny-vs-normal is not treated as junk recolor.",
     "Recolor detection only flags exact same pixel partition/shape with different palette values.",
+    "Vanilla base-species coverage accepts a concrete non-Mega form filename when the bare species filename does not exist.",
     "This pass writes deletion candidates only; it does not delete image files."
   ]
 }
