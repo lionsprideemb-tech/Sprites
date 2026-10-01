@@ -1,0 +1,48 @@
+{
+  "status_counts": {
+    "ACTUAL_SPRITES_COLLECTED": 35,
+    "NO_UNIQUE_SPRITES_AFTER_DEDUP": 1,
+    "UNRECOVERABLE_OR_BLOCKED": 1,
+    "UNRECOVERED_SOURCE": 5
+  },
+  "unresolved_sources": [
+    {
+      "source": "GenVI_DS_64x64_LEGACY_THREAD",
+      "source_class": "LEGACY_RESOURCE",
+      "actual_sprite_files": 0,
+      "status": "UNRECOVERABLE_OR_BLOCKED"
+    },
+    {
+      "source": "Pokemon GoldSoul",
+      "source_class": "REGISTERED_DS_HACK",
+      "actual_sprite_files": 0,
+      "status": "UNRECOVERED_SOURCE"
+    },
+    {
+      "source": "Pokemon Moon Black 2",
+      "source_class": "REGISTERED_DS_HACK",
+      "actual_sprite_files": 0,
+      "status": "UNRECOVERED_SOURCE"
+    },
+    {
+      "source": "Pokemon Platinum Unlocked regional-form project",
+      "source_class": "REGISTERED_DS_HACK",
+      "actual_sprite_files": 0,
+      "status": "UNRECOVERED_SOURCE"
+    },
+    {
+      "source": "Pokemon XYZ NDS",
+      "source_class": "REGISTERED_DS_HACK",
+      "actual_sprite_files": 0,
+      "status": "UNRECOVERED_SOURCE"
+    },
+    {
+      "source": "Project 721",
+      "source_class": "REGISTERED_DS_HACK",
+      "actual_sprite_files": 0,
+      "status": "UNRECOVERED_SOURCE"
+    }
+  ],
+  "collection_complete": false,
+  "rule": "A source is only complete when actual sprite bytes are collected, or it is explicitly proven to add no unique sprites after exact dedup."
+}
