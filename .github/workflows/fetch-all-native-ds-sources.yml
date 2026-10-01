@@ -1,0 +1,201 @@
+name: Fetch All Native DS Sprite Sources
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/fetch-all-native-ds-sources.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install extraction/download tools
+        run: |
+          sudo apt-get update -y
+          sudo apt-get install -y p7zip-full unrar-free unzip curl wget file
+          python -m pip install gdown
+          mkdir -p DS_CUSTOM_LIBRARY/all-native-sources
+          mkdir -p /tmp/ds-fetch
+
+      - name: Fetch source packs
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import csv, json, re, subprocess, urllib.request, html, shutil, os
+
+          manifest=Path('DS_CUSTOM_LIBRARY/source_manifest.csv')
+          outroot=Path('DS_CUSTOM_LIBRARY/all-native-sources')
+          tmproot=Path('/tmp/ds-fetch')
+          rows=list(csv.DictReader(manifest.open()))
+
+          report=[]
+
+          def run(cmd):
+              p=subprocess.run(cmd,text=True,capture_output=True)
+              return p.returncode,p.stdout,p.stderr
+
+          def extract(archive,dest):
+              dest.mkdir(parents=True,exist_ok=True)
+              attempts=[
+                  ['7z','x','-y',f'-o{dest}',str(archive)],
+                  ['unzip','-o',str(archive),'-d',str(dest)],
+                  ['unrar-free','x',str(archive),str(dest)+'/']
+              ]
+              for cmd in attempts:
+                  rc,so,se=run(cmd)
+                  if rc==0:
+                      return True,cmd[0]
+              return False,None
+
+          def fetch_url(url,target):
+              rc,so,se=run(['curl','-fL','--retry','2','-A','Mozilla/5.0',url,'-o',str(target)])
+              return rc==0,se
+
+          def mediafire_direct(page_url):
+              tmp=tmproot/'mediafire_page.html'
+              ok,err=fetch_url(page_url,tmp)
+              if not ok: return None
+              txt=tmp.read_text(errors='ignore')
+              patterns=[
+                r'id=["\']downloadButton["\'][^>]*href=["\']([^"\']+)',
+                r'href=["\'](https?://download[^"\']+mediafire[^"\']+)',
+                r'href=["\'](https?://[^"\']+\.mediafire\.com/[^"\']+)'
+              ]
+              for pat in patterns:
+                  m=re.search(pat,txt,re.I)
+                  if m:
+                      return html.unescape(m.group(1))
+              return None
+
+          for i,row in enumerate(rows):
+              name=row['collection'].strip()
+              safe=re.sub(r'[^A-Za-z0-9._-]+','_',name).strip('_')
+              url=row['direct_download_or_repo'].strip()
+              dest=outroot/safe
+              entry={'collection':name,'url':url,'status':'NOT_ATTEMPTED','files':0}
+
+              if name=='DrPrettyman DS 64x64 repository':
+                  entry['status']='ALREADY_FETCHED_SEPARATELY'
+                  report.append(entry)
+                  continue
+
+              try:
+                  if 'github.com/' in url and not url.endswith('/file'):
+                      rc,so,se=run(['git','clone','--depth','1',url,str(dest)])
+                      entry['status']='FETCHED_REPO' if rc==0 else 'FETCH_FAILED'
+                      if rc!=0: entry['error']=se[-500:]
+                      report.append(entry)
+                      continue
+
+                  archive=tmproot/f'{safe}.download'
+
+                  if 'mediafire.com/file/' in url:
+                      direct=mediafire_direct(url)
+                      entry['resolved_url']=direct
+                      if not direct:
+                          entry['status']='FETCH_BLOCKED_MEDIAFIRE'
+                          report.append(entry)
+                          continue
+                      ok,err=fetch_url(direct,archive)
+
+                  elif 'drive.google.com/file/d/' in url:
+                      m=re.search(r'/file/d/([^/]+)',url)
+                      if not m:
+                          entry['status']='FETCH_BLOCKED_DRIVE_ID'
+                          report.append(entry); continue
+                      fileid=m.group(1)
+                      rc,so,se=run(['gdown','--id',fileid,'-O',str(archive)])
+                      ok=(rc==0)
+                      err=se
+
+                  else:
+                      ok,err=fetch_url(url,archive)
+
+                  if not ok:
+                      entry['status']='FETCH_FAILED'
+                      entry['error']=err[-500:] if err else ''
+                      report.append(entry)
+                      continue
+
+                  kind=run(['file','-b',str(archive)])[1].strip()
+                  entry['download_file_type']=kind
+
+                  # If we got HTML, try extracting an actual archive link from the page.
+                  if 'HTML' in kind or 'text' in kind.lower():
+                      txt=archive.read_text(errors='ignore')
+                      links=re.findall(r'https?://[^"\'<> ]+',txt)
+                      archive_links=[]
+                      for l in links:
+                          l=html.unescape(l)
+                          if any(ext in l.lower() for ext in ['.zip','.rar','.7z']) or 'mediafire.com/file/' in l or 'drive.google.com/file/d/' in l:
+                              archive_links.append(l)
+                      entry['discovered_links']=archive_links[:20]
+                      got=False
+                      for l in archive_links:
+                          if 'mediafire.com/file/' in l:
+                              direct=mediafire_direct(l)
+                              if direct and fetch_url(direct,archive)[0]:
+                                  got=True; entry['resolved_url']=direct; break
+                          elif 'drive.google.com/file/d/' in l:
+                              m=re.search(r'/file/d/([^/]+)',l)
+                              if m and run(['gdown','--id',m.group(1),'-O',str(archive)])[0]==0:
+                                  got=True; entry['resolved_url']=l; break
+                          else:
+                              if fetch_url(l,archive)[0]:
+                                  got=True; entry['resolved_url']=l; break
+                      if not got:
+                          # Preserve page for provenance, but not as sprite pack.
+                          dest.mkdir(parents=True,exist_ok=True)
+                          shutil.copy2(archive,dest/'source_page.html')
+                          entry['status']='FETCH_BLOCKED_HTML_ONLY'
+                          report.append(entry)
+                          continue
+
+                  extracted,method=extract(archive,dest)
+                  if extracted:
+                      entry['status']='FETCHED_EXTRACTED'
+                      entry['extractor']=method
+                  else:
+                      dest.mkdir(parents=True,exist_ok=True)
+                      shutil.copy2(archive,dest/'downloaded_source')
+                      entry['status']='FETCHED_UNEXTRACTED'
+
+              except Exception as e:
+                  entry['status']='ERROR'
+                  entry['error']=repr(e)
+
+              if dest.exists():
+                  entry['files']=sum(1 for p in dest.rglob('*') if p.is_file())
+                  entry['sprite_files']=sum(1 for p in dest.rglob('*') if p.is_file() and p.suffix.lower() in {'.png','.gif','.bmp','.jpg','.jpeg'})
+              report.append(entry)
+
+          (outroot/'fetch_report.json').write_text(json.dumps(report,indent=2))
+          summary={
+            'sources_total':len(report),
+            'status_counts':{},
+            'sprite_files_total':sum(x.get('sprite_files',0) for x in report),
+            'sources_with_sprites':sum(1 for x in report if x.get('sprite_files',0)>0)
+          }
+          for x in report:
+              summary['status_counts'][x['status']]=summary['status_counts'].get(x['status'],0)+1
+          (outroot/'fetch_summary.json').write_text(json.dumps(summary,indent=2))
+          print(json.dumps(summary,indent=2))
+          PY
+
+      - name: Commit intake
+        run: |
+          git config user.name "Mercury Native DS Intake Bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add DS_CUSTOM_LIBRARY/all-native-sources .github/workflows/fetch-all-native-ds-sources.yml
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "Fetch all accessible native DS sprite source packs"
+          git push origin main
