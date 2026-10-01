@@ -1,0 +1,109 @@
+#------------------------------------------------------------------------------------
+#NEW ABILITIES BY KING_WALUIGI (YOU MUST CREDIT ME AS "King_Waluigi" IF YOU USE #THESE) Enjoy! ----------------------------------------------------------------------
+#------------------------------------------------------------------------------------
+
+#For Mega Probopass --- Place in the "abilities.txt"
+	XXX,LODESTONE,Lodestone,"Powers up Electric-type moves."
+#For Mega Probopass --- Place under STEELWORKER in the BattleHandlers_Abilities #script section
+BattleHandlers::DamageCalcUserAbility.add(:LODESTONE,
+  proc { |ability,user,target,move,mults,baseDmg,type|
+   mults[ATK_MULT] *= 1.5 if isConst?(type,PBTypes,:ELECTRIC)
+  }
+)
+#For Mega Weavile --- Place in the "abilities.txt"
+	XXX,FROSTCLAWS,Frost Claws,"Has a chance to Freeze the opponent."
+#For Mega Weavile --- Place under FLAMEBODY in the BattleHandlers_Abilities 
+#script section
+	BattleHandlers::TargetAbilityOnHit.add(:FROSTCLAWS,
+  proc { |ability,user,target,move,battle|
+    next if !move.pbContactMove?(user)
+    next if user.frozen? || battle.pbRandom(100)>=30
+    battle.pbShowAbilitySplash(target)
+    if user.pbCanFreeze?(target,PokeBattle_SceneConstants::USE_ABILITY_SPLASH) &&
+       user.affectedByContactEffect?(PokeBattle_SceneConstants::USE_ABILITY_SPLASH)
+      msg = nil
+      if !PokeBattle_SceneConstants::USE_ABILITY_SPLASH
+        msg = _INTL("{1}'s {2} froze {3}!",target.pbThis,target.abilityName,user.pbThis(true))
+      end
+      user.pbFreeze(target,msg)
+    end
+    battle.pbHideAbilitySplash(target)
+  }
+)
+#For Mega Magmortar --- Place in the "abilities.txt"
+	XXX,MODERNIZE,Modernize,"Every time your Pokemon KO's another, it's Sp.Atk boosts."
+#For Mega Magmortar --- Place under MOXIE in the BattleHandlers_Abilities 
+BattleHandlers::UserAbilityEndOfMove.add(:MODERNIZE,
+  proc { |ability,user,targets,move,battle|
+    next if battle.pbAllFainted?(user.idxOpposingSide)
+    numFainted = 0
+    targets.each { |b| numFainted += 1 if b.damageState.fainted }
+    next if numFainted==0 || !user.pbCanRaiseStatStage?(PBStats::SPATK,user)
+    user.pbRaiseStatStageByAbility(PBStats::SPATK,numFainted,user)
+  }
+)
+#For Mega Mamoswine --- Place in the "abilities.txt"
+	XXX,ICEAGE,Ice Age, "The user summons the power of the Ice Type."
+#For Mega Mamoswine --- Place under STEELWORKER in the BattleHandlers_Abilities 
+BattleHandlers::DamageCalcUserAbility.add(:ICEAGE,
+  proc { |ability,user,target,move,mults,baseDmg,type|
+    mults[ATK_MULT] *= 1.5 if isConst?(type,PBTypes,:ICE)
+  }
+)
+#For Mega Dusknoir --- Place in the "abilities.txt"
+	XXX,EVILEYE,Evil Eye, "The user scares the opponent, lowering their speed."
+#For Mega Dusknoir --- Place under INTIMIDATE in the BattleHandlers_Abilities
+BattleHandlers::AbilityOnSwitchIn.add(:EVILEYE,
+  proc { |ability,battler,battle|
+    battle.pbShowAbilitySplash(battler)
+    battle.eachOtherSideBattler(battler.index) do |b|
+      next if !b.near?(battler)
+      b.pbLowerSpeedStatStageEvileye(battler)
+    end
+    battle.pbHideAbilitySplash(battler)
+  }
+#For Mega Dusknoir --- Place under INTIMIDATE in the Battler_StatChanges
+def pbLowerSpeedStatStageEvileye(user)
+    return false if fainted?
+    # NOTE: Substitute intentially blocks Intimidate even if self has Contrary.
+    if @effects[PBEffects::Substitute]>0
+      if PokeBattle_SceneConstants::USE_ABILITY_SPLASH
+        @battle.pbDisplay(_INTL("{1} is protected by its substitute!",pbThis))
+      else
+        @battle.pbDisplay(_INTL("{1}'s substitute protected it from {2}'s {3}!",
+           pbThis,user.pbThis(true),user.abilityName))
+      end
+      return false
+    end
+    if PokeBattle_SceneConstants::USE_ABILITY_SPLASH
+      return pbLowerStatStageByAbility(PBStats::SPEED,2,user,false)
+    end
+    # NOTE: These checks exist to ensure appropriate messages are shown if
+    #       Intimidate is blocked somehow (i.e. the messages should mention the
+    #       Intimidate ability by name).
+    if !hasActiveAbility?(:CONTRARY)
+      if pbOwnSide.effects[PBEffects::Mist]>0
+        @battle.pbDisplay(_INTL("{1} is protected from {2}'s {3} by Mist!",
+           pbThis,user.pbThis(true),user.abilityName))
+        return false
+      end
+      if abilityActive?
+        if BattleHandlers.triggerStatLossImmunityAbility(@ability,self,PBStats::SPEED,@battle,false) ||
+           BattleHandlers.triggerStatLossImmunityAbilityNonIgnorable(@ability,self,PBStats::SPEED,@battle,false)
+          @battle.pbDisplay(_INTL("{1}'s {2} prevented {3}'s {4} from working!",
+             pbThis,abilityName,user.pbThis(true),user.abilityName))
+          return false
+        end
+      end
+      eachAlly do |b|
+        next if !b.abilityActive?
+        if BattleHandlers.triggerStatLossImmunityAllyAbility(b.ability,b,self,PBStats::SPEED,@battle,false)
+          @battle.pbDisplay(_INTL("{1} is protected from {2}'s {3} by {4}'s {5}!",
+             pbThis,user.pbThis(true),user.abilityName,b.pbThis(true),b.abilityName))
+          return false
+        end
+      end
+    end
+    return false if !pbCanLowerStatStage?(PBStats::SPEED,user)
+    return pbLowerStatStageByCause(PBStats::SPEED,2,user,user.abilityName)
+  end

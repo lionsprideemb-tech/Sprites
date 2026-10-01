@@ -1,7 +1,10 @@
 {
-  "actual_sprite_image_files_total": 19486,
+  "actual_sprite_image_files_total": 19530,
   "generic_actual_image_files": 19486,
-  "hack_actual_image_files": 0,
+  "hack_actual_image_files": 44,
+  "hack_pack_counts": {
+    "Banished_Platinum_Free_Megas": 44
+  },
   "hack_source_status": [
     {
       "project": "Pokemon Platinum Redux",
@@ -45,10 +48,10 @@
     },
     {
       "project": "Pokemon Banished Platinum",
-      "actual_sprite_files": 0,
-      "status": "SOURCE_ONLY_OR_BLOCKED"
+      "actual_sprite_files": 44,
+      "status": "SPRITES_COLLECTED"
     }
   ],
   "excluded_from_counts": "DS_CUSTOM_LIBRARY/hack-reference-previews",
-  "rule": "A source is not considered collected unless actual sprite/image asset bytes are present in packs or hack-packs."
+  "rule": "Only actual image asset files in source-asset directories count. Links, patches, docs, screenshots/reference previews do not."
 }
