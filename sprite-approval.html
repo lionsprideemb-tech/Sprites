@@ -54,8 +54,9 @@ const BRANCH='main';
 const RAW='https://raw.githubusercontent.com/'+REPO+'/'+BRANCH+'/';
 const MANIFEST=RAW+'DS_CUSTOM_LIBRARY/DS_READY_MASTER/ds_ready_front_design_manifest.csv';
 const TYPEMAP=RAW+'DS_CUSTOM_LIBRARY/DS_READY_MASTER/mercury_name_type_map.json';
+const ENRICHED=RAW+'DS_CUSTOM_LIBRARY/DS_READY_MASTER/fakemon_enriched_metadata.json';
 const STORAGE='mercury-ds-sprite-approval-v1';
-let rows=[], decisions={}, familyMap={}, familyLabels={}, typeMap={};
+let rows=[], decisions={}, familyMap={}, familyLabels={}, typeMap={}, enrichedMap={};
 
 function parseCSV(text){
   const out=[]; let row=[], field='', q=false;
@@ -76,7 +77,10 @@ function parseCSV(text){
   return out.filter(r=>r.length>1).map(r=>Object.fromEntries(head.map((h,i)=>[h,r[i]??''])));
 }
 function pretty(s){return s.replaceAll('-',' ').replace(/\b\w/g,m=>m.toUpperCase())}
+function enrichedRecord(r){return enrichedMap[r.identity+'|'+r.structural_hash]||null}
 function typeRecord(r){
+  const e=enrichedRecord(r);
+  if(e&&e.type1&&e.type1!=='TBD')return {name:e.name,type1:e.type1,type2:e.type2,family:e.family};
   const id=r.identity.toLowerCase();
   const tries=[id,baseSpecies(id)];
   // Common Mega naming reorder fallbacks.
@@ -98,7 +102,9 @@ function isOpaqueIdentity(id){
   return /^\d+[\-_ ]*[a-z0-9]*$/i.test(id) || /^\d+[a-z]?[-_]\d+[a-z]?$/i.test(id) || /^sprite[-_]?\d+$/i.test(id);
 }
 function proposedIdentity(r){
-  if(r.identity==='059-1f')return {name:'Proposed Mega Hisuian Arcanine',type1:'Fire',type2:'Rock'};
+  if(r.identity==='059-1f')return {name:'Proposed Mega Hisuian Arcanine',type1:'Fire',type2:'Rock',family:'Growlithe → Hisuian Arcanine'};
+  const e=enrichedRecord(r);
+  if(e&&e.name&&e.type1&&e.type1!=='TBD')return {name:e.name,type1:e.type1,type2:e.type2||'',family:e.family||''};
   return null;
 }
 function displayName(r){
@@ -124,6 +130,8 @@ function backCandidates(path){
 }
 function attachBackFallback(img,r){
   const candidates=[];
+  const e=enrichedRecord(r);
+  if(e&&e.back_path)candidates.push(e.back_path);
   if(r.back_path)candidates.push(r.back_path);
   candidates.push(...backCandidates(r.front_path));
   let i=0;
@@ -143,7 +151,7 @@ function imgURL(path){return RAW+path.split('/').map(encodeURIComponent).join('/
 function key(r){return r.identity+'|'+r.structural_hash}
 function familyDisplay(r){
   const p=proposedIdentity(r);
-  if(p&&r.identity==='059-1f')return 'Growlithe → Hisuian Arcanine';
+  if(p&&p.family)return p.family;
   const t=typeRecord(r);
   if(t&&t.family)return t.family.replace(/\s+family$/i,'');
   const fk=r.family_key||'';
@@ -155,7 +163,8 @@ function setupProblems(r){
   const p=proposedIdentity(r), t=typeRecord(r);
   if(!(p||(t&&t.type1)))probs.push('type');
   if(!(p||familyDisplay(r)))probs.push('family');
-  if(!r.back_path)probs.push('back sprite');
+  const e=enrichedRecord(r);
+  if(!((e&&e.back_path)||r.back_path))probs.push('back sprite');
   if(isOpaqueIdentity(r.identity)&&!p)probs.push('identity');
   return probs;
 }
@@ -341,14 +350,18 @@ document.getElementById('backup').onclick=()=>download('mercury_ds_sprite_approv
 (async()=>{
   load();
   try{
-    const [manifestRes,typeRes]=await Promise.all([
+    const [manifestRes,typeRes,enrichedRes]=await Promise.all([
       fetch(MANIFEST,{cache:'no-store'}),
-      fetch(TYPEMAP,{cache:'no-store'})
+      fetch(TYPEMAP,{cache:'no-store'}),
+      fetch(ENRICHED,{cache:'no-store'})
     ]);
     if(!manifestRes.ok)throw new Error('Manifest HTTP '+manifestRes.status);
     const all=parseCSV(await manifestRes.text());
     if(typeRes.ok){
       try{typeMap=(await typeRes.json()).entries||{}}catch{typeMap={}}
+    }
+    if(enrichedRes.ok){
+      try{enrichedMap=(await enrichedRes.json()).entries||{}}catch{enrichedMap={}}
     }
     rows=all.filter(r=>r.is_official==='False');
     document.getElementById('shown').textContent=rows.length+' custom designs';
