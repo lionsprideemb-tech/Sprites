@@ -2,8 +2,8 @@
   "project": "Project 721",
   "source_url": "https://projectpokemon.org/home/forums/topic/33493-project-721/",
   "candidate_urls": 224,
-  "actual_sprite_like_images_collected": 19,
-  "status": "SPRITES_COLLECTED",
+  "actual_sprite_like_images_collected": 0,
+  "status": "REFERENCE_ONLY_UNVERIFIED",
   "files": [
     {
       "path": "DS_CUSTOM_LIBRARY/hack-packs/Project_721_Thread_Sprites/00000_500291ee24d7.png",
@@ -176,5 +176,7 @@
       "bytes": 1290,
       "sha256": "c9b19667188a7a142b2f9e0841928d3a2137bf476d158c86fa58f6bfb05a5f68"
     }
-  ]
+  ],
+  "quarantine_reason": "Automated crawl mixed forum UI, trophies, banners, profile images, and ambiguous Pokemon thumbnails. None count as production/source sprites until individually tied to Project 721 assets.",
+  "quarantined_path": "DS_CUSTOM_LIBRARY/hack-reference-previews/Project_721_Crawler_Candidates"
 }
