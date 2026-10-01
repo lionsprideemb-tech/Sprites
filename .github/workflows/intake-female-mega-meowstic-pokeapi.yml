@@ -1,0 +1,100 @@
+name: Intake Female Mega Meowstic PokeAPI DS Sprite
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - ".github/workflows/intake-female-mega-meowstic-pokeapi.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  intake:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Pillow
+        run: pip install pillow
+      - name: Download PokeAPI pixel battle sprites
+        shell: bash
+        run: |
+          set -euo pipefail
+          ROOT="DS_CUSTOM_LIBRARY/packs/PokeAPI_Mega_Meowstic_Female"
+          mkdir -p "$ROOT"
+          BASE="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon"
+          curl -fsSL "$BASE/10326.png" -o "$ROOT/front.png"
+          curl -fsSL "$BASE/back/10326.png" -o "$ROOT/back.png"
+          curl -fsSL "$BASE/shiny/10326.png" -o "$ROOT/front-shiny.png"
+          curl -fsSL "$BASE/back/shiny/10326.png" -o "$ROOT/back-shiny.png"
+
+          # Male Mega comparison: verifies this is a genuinely distinct sprite set.
+          mkdir -p "$ROOT/_male_compare"
+          curl -fsSL "$BASE/10314.png" -o "$ROOT/_male_compare/front.png"
+          curl -fsSL "$BASE/back/10314.png" -o "$ROOT/_male_compare/back.png"
+          curl -fsSL "$BASE/shiny/10314.png" -o "$ROOT/_male_compare/front-shiny.png"
+          curl -fsSL "$BASE/back/shiny/10314.png" -o "$ROOT/_male_compare/back-shiny.png"
+
+      - name: Audit DS suitability and distinctness
+        shell: python
+        run: |
+          from pathlib import Path
+          from PIL import Image
+          import hashlib, json, csv
+
+          root=Path("DS_CUSTOM_LIBRARY/packs/PokeAPI_Mega_Meowstic_Female")
+          slots=["front","back","front-shiny","back-shiny"]
+          rows=[]
+          distinct={}
+          for slot in slots:
+              fp=root/f"{slot}.png"
+              mp=root/"_male_compare"/f"{slot}.png"
+              f=Image.open(fp).convert("RGBA")
+              m=Image.open(mp).convert("RGBA")
+              colors=len(set(px for px in f.getdata() if px[3]))
+              female_sha=hashlib.sha256(fp.read_bytes()).hexdigest()
+              male_sha=hashlib.sha256(mp.read_bytes()).hexdigest()
+              same=female_sha==male_sha
+              distinct[slot]=not same
+              rows.append({
+                  "slot":slot,
+                  "width":f.width,
+                  "height":f.height,
+                  "opaque_colors":colors,
+                  "female_sha256":female_sha,
+                  "male_sha256":male_sha,
+                  "distinct_from_male":not same
+              })
+
+          out=Path("DS_CUSTOM_LIBRARY/cleanup-audit")
+          with (out/"female_mega_meowstic_pokeapi_audit.csv").open("w",newline="") as fh:
+              w=csv.DictWriter(fh,fieldnames=rows[0].keys())
+              w.writeheader(); w.writerows(rows)
+
+          summary={
+              "source":"PokeAPI/sprites",
+              "pokemon_id":10326,
+              "name":"meowstic-female-mega",
+              "battle_slots_found":4,
+              "dimensions":sorted({f'{r["width"]}x{r["height"]}' for r in rows}),
+              "max_opaque_colors":max(r["opaque_colors"] for r in rows),
+              "all_distinct_from_male_mega":all(distinct.values()),
+              "distinct_by_slot":distinct,
+              "ds_palette_16_or_less":all(r["opaque_colors"]<=16 for r in rows),
+              "note":"PokeAPI also exposes these under generation-v/black-white for normal front/back, indicating DS-style pixel battle assets. Icon remains sourced separately."
+          }
+          (out/"female_mega_meowstic_pokeapi_summary.json").write_text(json.dumps(summary,indent=2)+"\n")
+          print(json.dumps(summary,indent=2))
+
+      - name: Commit intake
+        run: |
+          rm -rf DS_CUSTOM_LIBRARY/packs/PokeAPI_Mega_Meowstic_Female/_male_compare
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add DS_CUSTOM_LIBRARY/packs/PokeAPI_Mega_Meowstic_Female DS_CUSTOM_LIBRARY/cleanup-audit/female_mega_meowstic_pokeapi_audit.csv DS_CUSTOM_LIBRARY/cleanup-audit/female_mega_meowstic_pokeapi_summary.json
+          if git diff --cached --quiet; then
+            echo "No changes"
+            exit 0
+          fi
+          git commit -m "Intake female Mega Meowstic DS battle sprites"
+          git push
