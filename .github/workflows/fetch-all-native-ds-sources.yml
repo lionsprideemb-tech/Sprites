@@ -18,184 +18,244 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Install extraction/download tools
+      - name: Install extract/download tools
         run: |
           sudo apt-get update -y
-          sudo apt-get install -y p7zip-full unrar-free unzip curl wget file
-          python -m pip install gdown
-          mkdir -p DS_CUSTOM_LIBRARY/all-native-sources
-          mkdir -p /tmp/ds-fetch
+          sudo apt-get install -y p7zip-full unzip file
+          python -m pip install requests beautifulsoup4 gdown
+          mkdir -p /tmp/native-ds-intake
 
-      - name: Fetch source packs
+      - name: Fetch MediaFire and Drive source packs
         run: |
           python - <<'PY'
           from pathlib import Path
-          import csv, json, re, subprocess, urllib.request, html, shutil, os
+          import requests, re, json, subprocess, shutil, hashlib, os
+          from bs4 import BeautifulSoup
 
-          manifest=Path('DS_CUSTOM_LIBRARY/source_manifest.csv')
-          outroot=Path('DS_CUSTOM_LIBRARY/all-native-sources')
-          tmproot=Path('/tmp/ds-fetch')
-          rows=list(csv.DictReader(manifest.open()))
+          packs=[
+            ('Festival_Altaira','https://www.mediafire.com/file/5nfk946xrg2gak3/Altaira.rar/file'),
+            ('Festival_Atsui','https://www.mediafire.com/file/j07nsn7jepegru2/Atsui.rar/file'),
+            ('Festival_BiggusWeeabus','https://www.mediafire.com/file/4kzel6iprr3a9jo/BiggusWeeabus.rar/file'),
+            ('Festival_Dulcet','https://www.mediafire.com/file/dyb3ekoltwfhsnr/Dulcet.rar/file'),
+            ('Festival_Lumio','https://www.mediafire.com/file/mvmutu1rcuj4hdm/Lumio.rar/file'),
+            ('Festival_Magiscarf','https://www.mediafire.com/file/1es51i9ndt6zj6t/Magiscarf.rar/file'),
+            ('Festival_Odisea','https://www.mediafire.com/file/dear8i0z3lr97i0/Odisea.rar/file'),
+            ('Festival_PansyGum','https://www.mediafire.com/file/2dwm67jc9f9hbm2/PansyGum.rar/file'),
+            ('Festival_Piacarrot','https://www.mediafire.com/file/35rys7o3q0z8lqw/Piacarrot.rar/file'),
+            ('Festival_PrincessPhoenix','https://www.mediafire.com/file/v95kkc0xk9w9q7p/PrincessPhoenix.rar/file'),
+            ('Festival_Scotsman','https://www.mediafire.com/file/ptb5g717wiujh07/Scotsman.rar/file'),
+            ('Festival_Misc','https://www.mediafire.com/file/w523mpxnni2zuoy/Misc.rar/file'),
+            ('Mikitari','https://www.mediafire.com/file/7ss3it9vbn9ykgq/Fakemon_Pack.7z/file'),
+          ]
 
+          root=Path('DS_CUSTOM_LIBRARY/packs')
+          temp=Path('/tmp/native-ds-intake')
+          root.mkdir(parents=True,exist_ok=True)
           report=[]
 
-          def run(cmd):
-              p=subprocess.run(cmd,text=True,capture_output=True)
-              return p.returncode,p.stdout,p.stderr
+          sess=requests.Session()
+          sess.headers.update({'User-Agent':'Mozilla/5.0'})
+
+          def mediafire_direct(page_url):
+              r=sess.get(page_url,timeout=30)
+              r.raise_for_status()
+              html=r.text
+              soup=BeautifulSoup(html,'html.parser')
+              # Most MediaFire pages expose the real CDN URL in downloadButton.
+              a=soup.select_one('a#downloadButton')
+              if a and a.get('href','').startswith('http'):
+                  return a['href']
+              # Alternate HTML layouts.
+              for a in soup.find_all('a',href=True):
+                  href=a['href']
+                  if re.search(r'https?://download\d+\.mediafire\.com/',href):
+                      return href
+              m=re.search(r'https?://download\d+\.mediafire\.com/[^"\'<> ]+',html)
+              return m.group(0).replace('&amp;','&') if m else None
 
           def extract(archive,dest):
               dest.mkdir(parents=True,exist_ok=True)
-              attempts=[
-                  ['7z','x','-y',f'-o{dest}',str(archive)],
-                  ['unzip','-o',str(archive),'-d',str(dest)],
-                  ['unrar-free','x',str(archive),str(dest)+'/']
-              ]
-              for cmd in attempts:
-                  rc,so,se=run(cmd)
-                  if rc==0:
-                      return True,cmd[0]
-              return False,None
+              p=subprocess.run(['7z','x','-y',f'-o{dest}',str(archive)],text=True,capture_output=True)
+              return p.returncode,p.stdout[-1000:],p.stderr[-1000:]
 
-          def fetch_url(url,target):
-              rc,so,se=run(['curl','-fL','--retry','2','-A','Mozilla/5.0',url,'-o',str(target)])
-              return rc==0,se
-
-          def mediafire_direct(page_url):
-              tmp=tmproot/'mediafire_page.html'
-              ok,err=fetch_url(page_url,tmp)
-              if not ok: return None
-              txt=tmp.read_text(errors='ignore')
-              patterns=[
-                r'id=["\']downloadButton["\'][^>]*href=["\']([^"\']+)',
-                r'href=["\'](https?://download[^"\']+mediafire[^"\']+)',
-                r'href=["\'](https?://[^"\']+\.mediafire\.com/[^"\']+)'
-              ]
-              for pat in patterns:
-                  m=re.search(pat,txt,re.I)
-                  if m:
-                      return html.unescape(m.group(1))
-              return None
-
-          for i,row in enumerate(rows):
-              name=row['collection'].strip()
-              safe=re.sub(r'[^A-Za-z0-9._-]+','_',name).strip('_')
-              url=row['direct_download_or_repo'].strip()
-              dest=outroot/safe
-              entry={'collection':name,'url':url,'status':'NOT_ATTEMPTED','files':0}
-
-              if name=='DrPrettyman DS 64x64 repository':
-                  entry['status']='ALREADY_FETCHED_SEPARATELY'
-                  report.append(entry)
-                  continue
-
+          for name,url in packs:
+              rec={'name':name,'page_url':url}
               try:
-                  if 'github.com/' in url and not url.endswith('/file'):
-                      rc,so,se=run(['git','clone','--depth','1',url,str(dest)])
-                      entry['status']='FETCHED_REPO' if rc==0 else 'FETCH_FAILED'
-                      if rc!=0: entry['error']=se[-500:]
-                      report.append(entry)
-                      continue
-
-                  archive=tmproot/f'{safe}.download'
-
-                  if 'mediafire.com/file/' in url:
-                      direct=mediafire_direct(url)
-                      entry['resolved_url']=direct
-                      if not direct:
-                          entry['status']='FETCH_BLOCKED_MEDIAFIRE'
-                          report.append(entry)
-                          continue
-                      ok,err=fetch_url(direct,archive)
-
-                  elif 'drive.google.com/file/d/' in url:
-                      m=re.search(r'/file/d/([^/]+)',url)
-                      if not m:
-                          entry['status']='FETCH_BLOCKED_DRIVE_ID'
-                          report.append(entry); continue
-                      fileid=m.group(1)
-                      rc,so,se=run(['gdown','--id',fileid,'-O',str(archive)])
-                      ok=(rc==0)
-                      err=se
-
-                  else:
-                      ok,err=fetch_url(url,archive)
-
-                  if not ok:
-                      entry['status']='FETCH_FAILED'
-                      entry['error']=err[-500:] if err else ''
-                      report.append(entry)
-                      continue
-
-                  kind=run(['file','-b',str(archive)])[1].strip()
-                  entry['download_file_type']=kind
-
-                  # If we got HTML, try extracting an actual archive link from the page.
-                  if 'HTML' in kind or 'text' in kind.lower():
-                      txt=archive.read_text(errors='ignore')
-                      links=re.findall(r'https?://[^"\'<> ]+',txt)
-                      archive_links=[]
-                      for l in links:
-                          l=html.unescape(l)
-                          if any(ext in l.lower() for ext in ['.zip','.rar','.7z']) or 'mediafire.com/file/' in l or 'drive.google.com/file/d/' in l:
-                              archive_links.append(l)
-                      entry['discovered_links']=archive_links[:20]
-                      got=False
-                      for l in archive_links:
-                          if 'mediafire.com/file/' in l:
-                              direct=mediafire_direct(l)
-                              if direct and fetch_url(direct,archive)[0]:
-                                  got=True; entry['resolved_url']=direct; break
-                          elif 'drive.google.com/file/d/' in l:
-                              m=re.search(r'/file/d/([^/]+)',l)
-                              if m and run(['gdown','--id',m.group(1),'-O',str(archive)])[0]==0:
-                                  got=True; entry['resolved_url']=l; break
-                          else:
-                              if fetch_url(l,archive)[0]:
-                                  got=True; entry['resolved_url']=l; break
-                      if not got:
-                          # Preserve page for provenance, but not as sprite pack.
-                          dest.mkdir(parents=True,exist_ok=True)
-                          shutil.copy2(archive,dest/'source_page.html')
-                          entry['status']='FETCH_BLOCKED_HTML_ONLY'
-                          report.append(entry)
-                          continue
-
-                  extracted,method=extract(archive,dest)
-                  if extracted:
-                      entry['status']='FETCHED_EXTRACTED'
-                      entry['extractor']=method
-                  else:
-                      dest.mkdir(parents=True,exist_ok=True)
-                      shutil.copy2(archive,dest/'downloaded_source')
-                      entry['status']='FETCHED_UNEXTRACTED'
-
+                  direct=mediafire_direct(url)
+                  rec['resolved_url']=direct
+                  if not direct:
+                      rec['status']='RESOLVE_FAILED'
+                      report.append(rec); continue
+                  rr=sess.get(direct,timeout=120)
+                  rr.raise_for_status()
+                  arc=temp/(name+'.archive')
+                  arc.write_bytes(rr.content)
+                  rec['download_bytes']=len(rr.content)
+                  rec['sha256']=hashlib.sha256(rr.content).hexdigest()
+                  rc,so,se=extract(arc,root/name)
+                  rec['extract_rc']=rc
+                  rec['status']='EXTRACTED' if rc==0 else 'EXTRACT_FAILED'
+                  if rc!=0:
+                      rec['extract_stdout']=so
+                      rec['extract_stderr']=se
               except Exception as e:
-                  entry['status']='ERROR'
-                  entry['error']=repr(e)
+                  rec['status']='ERROR'
+                  rec['error']=repr(e)
+              report.append(rec)
 
-              if dest.exists():
-                  entry['files']=sum(1 for p in dest.rglob('*') if p.is_file())
-                  entry['sprite_files']=sum(1 for p in dest.rglob('*') if p.is_file() and p.suffix.lower() in {'.png','.gif','.bmp','.jpg','.jpeg'})
-              report.append(entry)
+          # Earthretha Google Drive pack
+          name='Earthretha'
+          dest=root/name
+          dest.mkdir(parents=True,exist_ok=True)
+          arc=temp/'Earthretha.download'
+          rec={'name':name,'page_url':'https://drive.google.com/file/d/132CMW3fNuYPMRbx-_aZ15Ue10Y4_thxS/view'}
+          try:
+              p=subprocess.run(['gdown','--fuzzy',rec['page_url'],'-O',str(arc)],text=True,capture_output=True)
+              rec['gdown_rc']=p.returncode
+              if p.returncode==0 and arc.exists():
+                  rec['download_bytes']=arc.stat().st_size
+                  rec['sha256']=hashlib.sha256(arc.read_bytes()).hexdigest()
+                  rc,so,se=extract(arc,dest)
+                  rec['extract_rc']=rc
+                  rec['status']='EXTRACTED' if rc==0 else 'DOWNLOADED_EXTRACT_FAILED'
+              else:
+                  rec['status']='DOWNLOAD_FAILED'
+                  rec['stderr']=p.stderr[-1000:]
+          except Exception as e:
+              rec['status']='ERROR'; rec['error']=repr(e)
+          report.append(rec)
 
-          (outroot/'fetch_report.json').write_text(json.dumps(report,indent=2))
+          Path('DS_CUSTOM_LIBRARY/fetch_report_direct_archives.json').write_text(json.dumps(report,indent=2))
+          print(json.dumps(report,indent=2))
+          PY
+
+      - name: Resolve Eevee Expo resources and downloadable mirrors
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import requests, re, json, subprocess, hashlib
+          from bs4 import BeautifulSoup
+          from urllib.parse import urljoin
+
+          resources=[
+            ('Fakemon_Festival','https://eeveeexpo.com/resources/654/'),
+            ('DS_Styled_Gen5_8','https://www.eeveeexpo.com/resources/1469/'),
+            ('Gen7_DS_Backsprites','https://eeveeexpo.com/resources/601/'),
+            ('Shiny_Icons_Gen1_9','https://eeveeexpo.com/resources/1026/'),
+            ('Mega_Flygon','https://eeveeexpo.com/resources/1699/'),
+            ('Mega_Flygon_Animated_Gen5','https://eeveeexpo.com/resources/1933/'),
+          ]
+          root=Path('DS_CUSTOM_LIBRARY/packs')
+          tmp=Path('/tmp/native-ds-intake')
+          sess=requests.Session()
+          sess.headers.update({'User-Agent':'Mozilla/5.0'})
+          report=[]
+
+          def candidates_from_html(base,html):
+              soup=BeautifulSoup(html,'html.parser')
+              out=[]
+              for a in soup.find_all('a',href=True):
+                  u=urljoin(base,a['href'])
+                  low=u.lower()
+                  if any(x in low for x in [
+                      'mediafire.com/file/','drive.google.com/','mega.nz/',
+                      '.zip','.rar','.7z','attachments/'
+                  ]):
+                      out.append(u)
+              # preserve order, dedupe
+              seen=set(); final=[]
+              for x in out:
+                  if x not in seen:
+                      seen.add(x); final.append(x)
+              return final
+
+          for name,url in resources:
+              rec={'name':name,'resource_url':url,'discovered_links':[]}
+              try:
+                  for candidate_url in [url,url.rstrip('/')+'/download']:
+                      r=sess.get(candidate_url,timeout=30,allow_redirects=True)
+                      rec.setdefault('pages',[]).append({
+                          'url':candidate_url,
+                          'final_url':r.url,
+                          'status_code':r.status_code,
+                          'content_type':r.headers.get('content-type',''),
+                          'bytes':len(r.content)
+                      })
+                      ctype=r.headers.get('content-type','').lower()
+                      if any(t in ctype for t in ['application/zip','application/x-rar','application/x-7z','application/octet-stream']) and len(r.content)>10000:
+                          arc=tmp/(name+'.archive')
+                          arc.write_bytes(r.content)
+                          dest=root/name
+                          dest.mkdir(parents=True,exist_ok=True)
+                          p=subprocess.run(['7z','x','-y',f'-o{dest}',str(arc)],text=True,capture_output=True)
+                          rec['direct_archive_url']=r.url
+                          rec['extract_rc']=p.returncode
+                          rec['status']='EXTRACTED_DIRECT' if p.returncode==0 else 'DIRECT_ARCHIVE_EXTRACT_FAILED'
+                          break
+                      if 'html' in ctype or '<html' in r.text[:500].lower():
+                          rec['discovered_links'] += candidates_from_html(r.url,r.text)
+                  else:
+                      rec['status']='LINKS_DISCOVERED' if rec['discovered_links'] else 'NO_ARCHIVE_LINK_DISCOVERED'
+              except Exception as e:
+                  rec['status']='ERROR'; rec['error']=repr(e)
+              # de-dupe
+              rec['discovered_links']=list(dict.fromkeys(rec.get('discovered_links',[])))
+              report.append(rec)
+
+          Path('DS_CUSTOM_LIBRARY/fetch_report_eeveeexpo_resolved.json').write_text(json.dumps(report,indent=2))
+          print(json.dumps(report,indent=2))
+          PY
+
+      - name: Build comprehensive source inventory
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import csv, json, hashlib, collections
+
+          root=Path('DS_CUSTOM_LIBRARY/packs')
+          exts={'.png','.gif','.bmp','.jpg','.jpeg','.pal'}
+          rows=[]
+          for p in sorted(root.rglob('*')):
+              if not p.is_file() or p.suffix.lower() not in exts:
+                  continue
+              rel=p.relative_to(root)
+              pack=rel.parts[0] if rel.parts else ''
+              try:
+                  b=p.read_bytes()
+                  rows.append({
+                    'pack':pack,
+                    'path':p.as_posix(),
+                    'ext':p.suffix.lower(),
+                    'bytes':len(b),
+                    'sha256':hashlib.sha256(b).hexdigest()
+                  })
+              except Exception:
+                  pass
+
+          with open('DS_CUSTOM_LIBRARY/native_ds_master_inventory.csv','w',newline='') as f:
+              w=csv.DictWriter(f,fieldnames=['pack','path','ext','bytes','sha256'])
+              w.writeheader(); w.writerows(rows)
+
+          counts=collections.Counter(r['pack'] for r in rows)
           summary={
-            'sources_total':len(report),
-            'status_counts':{},
-            'sprite_files_total':sum(x.get('sprite_files',0) for x in report),
-            'sources_with_sprites':sum(1 for x in report if x.get('sprite_files',0)>0)
+            'total_sprite_files':len(rows),
+            'pack_counts':dict(sorted(counts.items())),
+            'pipeline_stage':'SOURCE_COLLECTION_ONLY',
+            'visual_approval_performed':False,
+            'implementation_performed':False
           }
-          for x in report:
-              summary['status_counts'][x['status']]=summary['status_counts'].get(x['status'],0)+1
-          (outroot/'fetch_summary.json').write_text(json.dumps(summary,indent=2))
+          Path('DS_CUSTOM_LIBRARY/native_ds_master_inventory_summary.json').write_text(json.dumps(summary,indent=2))
           print(json.dumps(summary,indent=2))
           PY
 
-      - name: Commit intake
+      - name: Commit collected sources
         run: |
-          git config user.name "Mercury Native DS Intake Bot"
+          git config user.name "Mercury DS Source Intake Bot"
           git config user.email "actions@users.noreply.github.com"
-          git add DS_CUSTOM_LIBRARY/all-native-sources .github/workflows/fetch-all-native-ds-sources.yml
-          if git diff --cached --quiet; then exit 0; fi
-          git commit -m "Fetch all accessible native DS sprite source packs"
+          git add DS_CUSTOM_LIBRARY/packs DS_CUSTOM_LIBRARY/fetch_report_direct_archives.json DS_CUSTOM_LIBRARY/fetch_report_eeveeexpo_resolved.json DS_CUSTOM_LIBRARY/native_ds_master_inventory.csv DS_CUSTOM_LIBRARY/native_ds_master_inventory_summary.json .github/workflows/fetch-all-native-ds-sources.yml
+          if git diff --cached --quiet; then
+            echo "No changes"
+            exit 0
+          fi
+          git commit -m "sprites: collect additional native DS source packs"
           git push origin main
