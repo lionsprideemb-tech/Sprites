@@ -1,7 +1,7 @@
 {
-  "actual_sprite_image_files_total": 29203,
+  "actual_sprite_image_files_total": 29246,
   "generic_actual_image_files": 28724,
-  "hack_actual_image_files": 479,
+  "hack_actual_image_files": 522,
   "source_counts": {
     "Altered_Platinum_Custom_Sprites": 2,
     "Banished_Platinum_Free_Megas": 44,
@@ -27,7 +27,8 @@
     "Mega_Flygon_Animated_Gen5": 4,
     "Mikitari": 720,
     "Platinum_Redux_Embedded_Sprites": 433,
-    "Shiny_Icons_Gen1_9": 1424
+    "Shiny_Icons_Gen1_9": 1424,
+    "SoothingSilver_Embedded_Images": 43
   },
   "hack_source_status": [
     {
@@ -52,8 +53,8 @@
     },
     {
       "project": "Pokemon SoothingSilver",
-      "actual_sprite_files": 0,
-      "status": "SOURCE_ONLY_OR_BLOCKED"
+      "actual_sprite_files": 43,
+      "status": "SPRITES_COLLECTED"
     },
     {
       "project": "Pokemon GoldSoul",
