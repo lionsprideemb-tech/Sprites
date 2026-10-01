@@ -1,0 +1,28 @@
+{
+  "remaining_total": 871,
+  "category_counts": {
+    "BASE_OR_OTHER": 158,
+    "REDUX_OR_DELTA_STYLE": 207,
+    "CUSTOM_MEGA": 179,
+    "SPECIAL_CANON_FORM": 4,
+    "ALTERNATE_FORM": 321,
+    "MERCURY_ORIGINAL_BAD_SOURCE": 1,
+    "REGIONAL_OR_CANON_FORM": 1
+  },
+  "action_counts": {
+    "SEARCH_MORE_DS_SOURCES_THEN_CONVERT": 163,
+    "CONVERT_IF_SOURCE_CLEAN_ELSE_REVIEW": 207,
+    "CONVERT_IF_SOURCE_CLEAN_ELSE_NATIVE_REMAKE": 179,
+    "VISUAL_REVIEW_THEN_CONVERT": 321,
+    "NATIVE_NDS_REMAKE": 1
+  },
+  "queue_counts": {
+    "custom_mega": 179,
+    "redux_delta": 207,
+    "regional_special": 5,
+    "base_other": 479,
+    "native_remake": 1,
+    "partial_ds_support": 0
+  },
+  "important_note": "This triage is conservative. It does not delete or replace art; it only decides which path each remaining GBA/custom entry should take."
+}
