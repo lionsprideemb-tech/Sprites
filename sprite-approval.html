@@ -29,7 +29,7 @@ main{max-width:1440px;margin:auto;padding:18px}.intro{background:var(--panel);bo
   <div class="top">
     <div class="title">Pokémon Mercury Redux — DS Sprite Approval</div>
     <div class="pill" id="shown">Loading…</div>
-    <div class="pill" id="done">0 reviewed</div>
+    <div class="pill" id="done">0 reviewed</div><div class="pill" id="families">Grouping families…</div>
   </div>
   <div class="progress"><div id="bar"></div></div>
   <div class="controls">
@@ -42,7 +42,7 @@ main{max-width:1440px;margin:auto;padding:18px}.intro{background:var(--panel);bo
 
 <main>
   <div class="intro">
-    This page shows the full deduplicated <b>custom DS-ready sprite approval pool</b>. Exact duplicates and custom palette-only recolors are already excluded. If the same custom Pokémon/form has genuinely different designs, every design stays here for you to choose between. Decisions autosave on this device.
+    This page shows the full deduplicated <b>custom DS-ready sprite approval pool</b>. Exact duplicates and custom palette-only recolors are already excluded. <b>Evolution families are kept together</b>, and if the same Pokémon/form has genuinely different designs, every option stays in that family block for comparison. Decisions autosave on this device.
   </div>
   <div class="grid" id="grid"><div class="empty">Loading sprite manifest…</div></div>
   <div class="footerNote">Mercury Redux DS sprite review • Source: DS_READY_MASTER</div>
@@ -54,7 +54,7 @@ const BRANCH='main';
 const RAW='https://raw.githubusercontent.com/'+REPO+'/'+BRANCH+'/';
 const MANIFEST=RAW+'DS_CUSTOM_LIBRARY/DS_READY_MASTER/ds_ready_front_design_manifest.csv';
 const STORAGE='mercury-ds-sprite-approval-v1';
-let rows=[], decisions={};
+let rows=[], decisions={}, familyMap={}, familyLabels={};
 
 function parseCSV(text){
   const out=[]; let row=[], field='', q=false;
@@ -80,6 +80,77 @@ function key(r){return r.identity+'|'+r.structural_hash}
 function save(){localStorage.setItem(STORAGE,JSON.stringify(decisions));renderStats()}
 function load(){try{decisions=JSON.parse(localStorage.getItem(STORAGE)||'{}')}catch{decisions={}}}
 function setDecision(k,v){decisions[k]=v;save();render()}
+
+const FORM_SUFFIXES=[
+  '-mega-z','-mega-x','-mega-y','-mega','-redux-mega','-redux',
+  '-delta','-primal','-apex','-nightmare','-battle-bond',
+  '-hisuian','-galarian','-alolan','-paldean','-male','-female'
+];
+const FAMILY_OVERRIDES={
+  'revenclaw':'zangoose',
+  'revengoose':'zangoose',
+  'venagon':'seviper',
+  'mega-flygon':'trapinch',
+  'flygon-1':'trapinch'
+};
+function baseSpecies(id){
+  let x=id.toLowerCase();
+  if(FAMILY_OVERRIDES[x])return FAMILY_OVERRIDES[x];
+  // Handle common custom form naming without collapsing the species itself.
+  let prev='';
+  while(prev!==x){
+    prev=x;
+    for(const s of FORM_SUFFIXES){
+      if(x.endsWith(s) && x.length>s.length+1){x=x.slice(0,-s.length);break}
+    }
+  }
+  return FAMILY_OVERRIDES[x]||x;
+}
+function flattenChain(node,out=[]){
+  if(!node)return out;
+  out.push(node.species.name);
+  for(const e of node.evolves_to||[])flattenChain(e,out);
+  return out;
+}
+async function fetchJSON(url){
+  const r=await fetch(url,{cache:'force-cache'});
+  if(!r.ok)throw new Error(String(r.status));
+  return r.json();
+}
+async function buildFamilyMap(){
+  const unique=[...new Set(rows.map(r=>baseSpecies(r.identity)))];
+  let idx=0, done=0;
+  const workers=Array.from({length:10},async()=>{
+    while(true){
+      const i=idx++; if(i>=unique.length)return;
+      const base=unique[i];
+      try{
+        const sp=await fetchJSON('https://pokeapi.co/api/v2/pokemon-species/'+encodeURIComponent(base));
+        const chain=await fetchJSON(sp.evolution_chain.url);
+        const members=[...new Set(flattenChain(chain.chain))];
+        const root=members[0]||base;
+        familyLabels[root]=members.map(pretty).join(' → ');
+        for(const m of members)familyMap[m]=root;
+        familyMap[base]=root;
+      }catch{
+        const root=FAMILY_OVERRIDES[base]||base;
+        familyMap[base]=root;
+        familyLabels[root]=familyLabels[root]||pretty(root);
+      }
+      done++;
+      if(done%20===0)document.getElementById('families').textContent='Families '+done+'/'+unique.length;
+    }
+  });
+  await Promise.all(workers);
+
+  // Assign each custom identity through its stripped/base species.
+  for(const r of rows){
+    const base=baseSpecies(r.identity);
+    r.family_key=familyMap[base]||base;
+    if(!familyLabels[r.family_key])familyLabels[r.family_key]=pretty(r.family_key);
+  }
+  document.getElementById('families').textContent=[...new Set(rows.map(r=>r.family_key))].length+' families';
+}
 function renderStats(){
   const total=rows.length, reviewed=rows.filter(r=>decisions[key(r)]).length;
   document.getElementById('done').textContent=reviewed+' / '+total+' reviewed';
@@ -98,30 +169,48 @@ function render(){
     if(f==='multi'&&r.multi_design_for_approval!=='True')return false;
     return true;
   });
-  const groups=new Map();
-  for(const r of list){if(!groups.has(r.identity))groups.set(r.identity,[]);groups.get(r.identity).push(r)}
+  const families=new Map();
+  for(const r of list){
+    const fk=r.family_key||baseSpecies(r.identity);
+    if(!families.has(fk))families.set(fk,new Map());
+    const identities=families.get(fk);
+    if(!identities.has(r.identity))identities.set(r.identity,[]);
+    identities.get(r.identity).push(r);
+  }
   const grid=document.getElementById('grid'); grid.innerHTML='';
-  for(const [ident,items] of [...groups.entries()].sort((a,b)=>a[0].localeCompare(b[0]))){
-    if(items.length>1 || items[0].multi_design_for_approval==='True'){
-      const h=document.createElement('div');h.className='groupTitle';h.textContent=pretty(ident)+' — '+items.length+' design options';grid.appendChild(h);
-    }
-    items.forEach((r,i)=>{
-      const k=key(r), d=decisions[k]||'', multi=r.multi_design_for_approval==='True';
-      const c=document.createElement('article');c.className='card'+(multi?' multi':'');
-      c.innerHTML=`
-        <div class="head"><div class="name">${pretty(r.identity)} ${multi?'<span class="badge multi">COMPARE</span>':'<span class="badge">CUSTOM</span>'}</div>
-        <div class="meta">${r.source} • ${r.bucket}${multi?' • option '+(i+1):''}</div></div>
-        <div class="spritebox"><img loading="lazy" alt="${pretty(r.identity)}" src="${imgURL(r.front_path)}"></div>
-        <div class="choices">
-          <button class="approve ${d==='approve'?'active':''}">✓ Approve</button>
-          <button class="maybe ${d==='maybe'?'active':''}">? Maybe</button>
-          <button class="reject ${d==='reject'?'active':''}">✕ Reject</button>
-        </div>`;
-      c.querySelector('.approve').onclick=()=>setDecision(k,d==='approve'?'':'approve');
-      c.querySelector('.maybe').onclick=()=>setDecision(k,d==='maybe'?'':'maybe');
-      c.querySelector('.reject').onclick=()=>setDecision(k,d==='reject'?'':'reject');
-      grid.appendChild(c);
+  for(const [fk,identities] of [...families.entries()].sort((a,b)=>(familyLabels[a[0]]||a[0]).localeCompare(familyLabels[b[0]]||b[0]))){
+    const familyCount=[...identities.values()].reduce((n,a)=>n+a.length,0);
+    const fh=document.createElement('div');fh.className='groupTitle';
+    fh.textContent=(familyLabels[fk]||pretty(fk))+' family — '+familyCount+' custom design'+(familyCount===1?'':'s');
+    grid.appendChild(fh);
+
+    // Preserve evolution-chain order where PokeAPI gave us one, then identity name.
+    const chainOrder=(familyLabels[fk]||'').split(' → ').map(x=>x.toLowerCase());
+    const ordered=[...identities.entries()].sort((a,b)=>{
+      const ba=pretty(baseSpecies(a[0])).toLowerCase(), bb=pretty(baseSpecies(b[0])).toLowerCase();
+      const ia=chainOrder.indexOf(ba), ib=chainOrder.indexOf(bb);
+      if(ia>=0||ib>=0)return (ia<0?999:ia)-(ib<0?999:ib) || a[0].localeCompare(b[0]);
+      return a[0].localeCompare(b[0]);
     });
+    for(const [ident,items] of ordered){
+      items.forEach((r,i)=>{
+        const k=key(r), d=decisions[k]||'', multi=r.multi_design_for_approval==='True';
+        const c=document.createElement('article');c.className='card'+(multi?' multi':'');
+        c.innerHTML=`
+          <div class="head"><div class="name">${pretty(r.identity)} ${multi?'<span class="badge multi">COMPARE</span>':'<span class="badge">CUSTOM</span>'}</div>
+          <div class="meta">${r.source} • ${r.bucket}${multi?' • design '+(i+1)+' of '+items.length:''}</div></div>
+          <div class="spritebox"><img loading="lazy" alt="${pretty(r.identity)}" src="${imgURL(r.front_path)}"></div>
+          <div class="choices">
+            <button class="approve ${d==='approve'?'active':''}">✓ Approve</button>
+            <button class="maybe ${d==='maybe'?'active':''}">? Maybe</button>
+            <button class="reject ${d==='reject'?'active':''}">✕ Reject</button>
+          </div>`;
+        c.querySelector('.approve').onclick=()=>setDecision(k,d==='approve'?'':'approve');
+        c.querySelector('.maybe').onclick=()=>setDecision(k,d==='maybe'?'':'maybe');
+        c.querySelector('.reject').onclick=()=>setDecision(k,d==='reject'?'':'reject');
+        grid.appendChild(c);
+      });
+    }
   }
   if(!list.length)grid.innerHTML='<div class="empty">No sprites match this filter.</div>';
   document.getElementById('shown').textContent=list.length+' shown';
@@ -145,6 +234,9 @@ document.getElementById('backup').onclick=()=>download('mercury_ds_sprite_approv
     const res=await fetch(MANIFEST,{cache:'no-store'}); if(!res.ok)throw new Error('HTTP '+res.status);
     const all=parseCSV(await res.text());
     rows=all.filter(r=>r.is_official==='False');
+    document.getElementById('shown').textContent=rows.length+' custom designs';
+    render();
+    await buildFamilyMap();
     render();
   }catch(e){
     document.getElementById('grid').innerHTML='<div class="empty">Could not load the DS-ready manifest. '+e.message+'</div>';
