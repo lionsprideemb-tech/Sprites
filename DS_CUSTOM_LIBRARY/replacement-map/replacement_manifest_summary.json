@@ -1,0 +1,54 @@
+{
+  "total_ds_replacements": 1547,
+  "special_form_replacements": 194,
+  "standard_replacements": 1353,
+  "missing_component_counts": {},
+  "mercury_custom_mega_priority": [
+    {
+      "key": "absol-mega-z",
+      "status": "FULL_DS_SET_FOUND",
+      "front": "sprites-processed/front/absol-mega-z.png",
+      "back": "sprites-processed/back/absol-mega-z.png",
+      "front_shiny": "sprites-processed/front-shiny/absol-mega-z.png",
+      "back_shiny": "sprites-processed/back-shiny/absol-mega-z.png",
+      "icon": "sprites-processed/icon/absol-mega-z.png"
+    },
+    {
+      "key": "baxcalibur-mega",
+      "status": "FULL_DS_SET_FOUND",
+      "front": "sprites-processed/front/baxcalibur-mega.png",
+      "back": "sprites-processed/back/baxcalibur-mega.png",
+      "front_shiny": "sprites-processed/front-shiny/baxcalibur-mega.png",
+      "back_shiny": "sprites-processed/back-shiny/baxcalibur-mega.png",
+      "icon": "sprites-processed/icon/baxcalibur-mega.png"
+    },
+    {
+      "key": "golisopod-mega",
+      "status": "FULL_DS_SET_FOUND",
+      "front": "sprites-processed/front/golisopod-mega.png",
+      "back": "sprites-processed/back/golisopod-mega.png",
+      "front_shiny": "sprites-processed/front-shiny/golisopod-mega.png",
+      "back_shiny": "sprites-processed/back-shiny/golisopod-mega.png",
+      "icon": "sprites-processed/icon/golisopod-mega.png"
+    },
+    {
+      "key": "lucario-mega-z",
+      "status": "FULL_DS_SET_FOUND",
+      "front": "sprites-processed/front/lucario-mega-z.png",
+      "back": "sprites-processed/back/lucario-mega-z.png",
+      "front_shiny": "sprites-processed/front-shiny/lucario-mega-z.png",
+      "back_shiny": "sprites-processed/back-shiny/lucario-mega-z.png",
+      "icon": "sprites-processed/icon/lucario-mega-z.png"
+    },
+    {
+      "key": "garchomp-mega-z",
+      "status": "NO_DS_SET",
+      "front": "",
+      "back": "",
+      "front_shiny": "",
+      "back_shiny": "",
+      "icon": ""
+    }
+  ],
+  "policy": "This manifest stages native DS replacements only. It does not delete GBA originals until imported assets pass visual/in-engine review."
+}
