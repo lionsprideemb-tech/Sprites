@@ -44,6 +44,19 @@ jobs:
               s=s.replace('_','-').replace(' ','-')
               s=re.sub(r'[^a-z0-9-]+','-',s)
               s=re.sub(r'-+','-',s).strip('-')
+              # Mercury's archived inventory sometimes appends the source-library
+              # label to the species/form folder name. It is provenance, not a form.
+              suffixes = [
+                  '-ds01-expanded-community-sprite-library-2026-09-22',
+                  '-expanded-community-sprite-library-2026-09-22',
+              ]
+              changed=True
+              while changed:
+                  changed=False
+                  for suf in suffixes:
+                      if s.endswith(suf):
+                          s=s[:-len(suf)].rstrip('-')
+                          changed=True
               return s
 
           # Files typically live in sprites-processed/{front,back,front-shiny,...}/name.png
