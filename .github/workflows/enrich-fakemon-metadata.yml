@@ -1,0 +1,31 @@
+name: Enrich Fakemon Approval Metadata
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'tools/enrich_fakemon_metadata.py'
+      - 'DS_CUSTOM_LIBRARY/.run-fakemon-enrichment'
+
+permissions:
+  contents: write
+
+jobs:
+  enrich:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Enrich Fakemon metadata
+        run: python tools/enrich_fakemon_metadata.py
+      - name: Commit enrichment
+        run: |
+          git config user.name "Mercury Fakemon Metadata Bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add DS_CUSTOM_LIBRARY/DS_READY_MASTER
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "Enrich Fakemon names types families and back-sprite links"
+          git pull --rebase origin main
+          git push origin main
