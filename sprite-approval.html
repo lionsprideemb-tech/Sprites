@@ -34,7 +34,7 @@ main{max-width:1440px;margin:auto;padding:18px}.intro{background:var(--panel);bo
   <div class="progress"><div id="bar"></div></div>
   <div class="controls">
     <input id="search" placeholder="Search Pokémon/form or source…">
-    <select id="filter"><option value="ready" selected>Ready for approval</option><option value="needssetup">Fakemon / metadata needs setup</option><option value="all">All custom designs</option><option value="unreviewed">Unreviewed</option><option value="approved">Approved</option><option value="rejected">Rejected</option><option value="maybe">Maybe</option><option value="multi">Multiple designs only</option><option value="unidentified">Needs identification</option></select>
+    <select id="filter"><option value="all" selected>All approval-ready designs</option><option value="unreviewed">Unreviewed</option><option value="approved">Approved</option><option value="rejected">Rejected</option><option value="maybe">Maybe</option><option value="multi">Multiple designs only</option><option value="unidentified">Needs identification</option></select>
     <button id="export">Export decisions CSV</button>
     <button id="backup" class="primary">Backup JSON</button>
   </div>
@@ -42,7 +42,7 @@ main{max-width:1440px;margin:auto;padding:18px}.intro{background:var(--panel);bo
 
 <main>
   <div class="intro">
-    This page now separates <b>ready-to-review designs</b> from incomplete Fakemon/source assets. A sprite only enters the default approval view when it has a usable <b>name, type, family placement, front, and back sprite</b>. Incomplete Fakemon stay in the <b>Fakemon / metadata needs setup</b> queue and cannot be accidentally approved until those details are resolved. Evolution families stay together and alternate designs remain grouped for comparison.
+    This page contains only <b>approval-ready custom designs</b>. Every entry shown has a usable <b>name, type, family placement, front sprite, and back sprite</b>. Incomplete or unresolved Fakemon have been removed from the approval pool. Evolution families stay together and alternate designs remain grouped for comparison.
   </div>
   <div class="grid" id="grid"><div class="empty">Loading sprite manifest…</div></div>
   <div class="footerNote">Mercury Redux DS sprite review • Source: DS_READY_MASTER</div>
@@ -271,8 +271,6 @@ function render(){
     if(f==='maybe'&&d!=='maybe')return false;
     if(f==='multi'&&r.multi_design_for_approval!=='True')return false;
     if(f==='unidentified'&&!isOpaqueIdentity(r.identity))return false;
-    if(f==='ready'&&!isReady(r))return false;
-    if(f==='needssetup'&&isReady(r))return false;
     return true;
   });
   const families=new Map();
@@ -363,7 +361,11 @@ document.getElementById('backup').onclick=()=>download('mercury_ds_sprite_approv
     if(enrichedRes.ok){
       try{enrichedMap=(await enrichedRes.json()).entries||{}}catch{enrichedMap={}}
     }
-    rows=all.filter(r=>r.is_official==='False');
+    rows=all.filter(r=>{
+      if(r.is_official!=='False')return false;
+      const e=enrichedMap[r.identity+'|'+r.structural_hash];
+      return !!(e&&e.ready_for_approval);
+    });
     document.getElementById('shown').textContent=rows.length+' custom designs';
     render();
     await buildFamilyMap();
