@@ -9,12 +9,12 @@
   "required_mega_forms_union": 100,
   "official_megas_from_api": 97,
   "local_or_mercury_megas": 3,
-  "mega_complete": 87,
-  "mega_missing_or_partial": 13,
-  "asset_files_scanned": 31240,
+  "mega_complete": 99,
+  "mega_missing_or_partial": 1,
+  "asset_files_scanned": 31300,
   "cross_source_exact_duplicate_delete_candidates": 1289,
   "same_source_identical_semantic_alias_groups_preserved": 2472,
-  "pure_palette_recolor_delete_candidates": 483,
+  "pure_palette_recolor_delete_candidates": 506,
   "structural_decode_failures": 638,
   "safety_policy": [
     "DrPrettyman_DS_64x64 is protected and never quarantined by this pass.",
@@ -23,6 +23,7 @@
     "Recolor detection only flags exact same pixel partition/shape with different palette values.",
     "Official/canonical palette sources, shiny paths, and known official palette-form families are excluded from recolor deletion.",
     "Vanilla base-species coverage accepts a concrete non-Mega form filename when the bare species filename does not exist.",
+    "Validated PokeDot Mega intake folders can satisfy Mega front/back/shiny/icon coverage without modifying the protected vanilla core.",
     "This pass writes deletion candidates only; it does not delete image files."
   ]
 }
