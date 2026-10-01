@@ -43,21 +43,36 @@ jobs:
           links=[]
 
           # OP carries the canonical Dropbox catalog, later pages carry additions/fixes.
+          # PokéCommunity can challenge GitHub-hosted runners, so fall back to a public
+          # text proxy that renders the same public page with outbound links preserved.
           for page_num in range(1,101):
               url=thread if page_num==1 else thread.rstrip('/')+f'/page-{page_num}'
+              bodies=[]
               try:
                   r=sess.get(url,timeout=30)
+                  if r.status_code==200:
+                      bodies.append(r.text)
               except Exception:
-                  continue
-              if r.status_code!=200:
-                  continue
-              soup=BeautifulSoup(r.text,'html.parser')
-              for a in soup.find_all('a',href=True):
-                  u=urljoin(r.url,a['href'])
-                  if 'dropbox.com/' in u and ('raw=1' in u or re.search(r'\.(?:png|gif|jpg|jpeg)(?:\?|$)',u,re.I)):
-                      links.append(u)
-              # Also catch plain Dropbox URLs in text/JS.
-              links += re.findall(r'https?://(?:www\.)?dropbox\.com/[^"\'<>\s]+',r.text,re.I)
+                  pass
+
+              # Fallback for anti-bot/challenge HTML.
+              try:
+                  proxy='https://r.jina.ai/http://' + url.split('://',1)[1]
+                  pr=sess.get(proxy,timeout=45)
+                  if pr.status_code==200:
+                      bodies.append(pr.text)
+              except Exception:
+                  pass
+
+              for body in bodies:
+                  soup=BeautifulSoup(body,'html.parser')
+                  for a in soup.find_all('a',href=True):
+                      u=urljoin(url,a['href'])
+                      if 'dropbox.com/' in u and ('raw=1' in u or re.search(r'\.(?:png|gif|jpg|jpeg)(?:\?|$)',u,re.I)):
+                          links.append(u)
+
+                  # Markdown/text-proxy links and plain URLs.
+                  links += re.findall(r'https?://(?:www\.)?dropbox\.com/[^"\'<>\s\)\]]+',body,re.I)
 
           # Normalize / de-dupe URLs.
           cleaned=[]
