@@ -1,0 +1,185 @@
+name: Extract SoothingSilver Actual Sprite Assets
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/extract-soothingsilver-actual-sprites.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  extract:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install tools
+        run: |
+          sudo apt-get update -y
+          sudo apt-get install -y p7zip-full unzip file
+          python -m pip install gdown pillow
+          rm -rf /tmp/soothingsilver
+          mkdir -p /tmp/soothingsilver
+
+      - name: Fetch Drive folder and inspect archives for image assets
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import subprocess, shutil, json, hashlib
+
+          folder='https://drive.google.com/drive/folders/1p2zv1p-QQ9N0Rx2Vx-9GivPXJ3V8mMbp?usp=sharing'
+          temp=Path('/tmp/soothingsilver')
+          dest=Path('DS_CUSTOM_LIBRARY/hack-packs/SoothingSilver_Actual_Sprites')
+          if dest.exists():
+              shutil.rmtree(dest)
+          dest.mkdir(parents=True,exist_ok=True)
+
+          p=subprocess.run(['gdown',folder,'-O',str(temp)],text=True,capture_output=True)
+
+          archive_exts={'.zip','.rar','.7z'}
+          image_exts={'.png','.gif','.bmp','.jpg','.jpeg'}
+          archives=[]
+          raw_images=[]
+
+          # Copy direct images and extract archives recursively one level deep.
+          for src in sorted(temp.rglob('*')):
+              if not src.is_file(): continue
+              if src.suffix.lower() in image_exts:
+                  rel=src.relative_to(temp)
+                  dst=dest/'raw'/rel
+                  dst.parent.mkdir(parents=True,exist_ok=True)
+                  shutil.copy2(src,dst)
+                  raw_images.append(dst.as_posix())
+              elif src.suffix.lower() in archive_exts:
+                  out=dest/'archives'/src.stem
+                  out.mkdir(parents=True,exist_ok=True)
+                  q=subprocess.run(['7z','x','-y',f'-o{out}',str(src)],text=True,capture_output=True)
+                  archives.append({'archive':src.name,'rc':q.returncode})
+
+          # Extract nested archives if any.
+          for arc in list(dest.rglob('*')):
+              if arc.is_file() and arc.suffix.lower() in archive_exts:
+                  out=arc.parent/(arc.stem+'_nested')
+                  out.mkdir(parents=True,exist_ok=True)
+                  q=subprocess.run(['7z','x','-y',f'-o{out}',str(arc)],text=True,capture_output=True)
+                  archives.append({'archive':arc.as_posix(),'rc':q.returncode,'nested':True})
+
+          images=[]
+          seen=set()
+          for img in sorted(dest.rglob('*')):
+              if not img.is_file() or img.suffix.lower() not in image_exts:
+                  continue
+              sha=hashlib.sha256(img.read_bytes()).hexdigest()
+              if sha in seen:
+                  continue
+              seen.add(sha)
+              images.append({
+                  'path':img.as_posix(),
+                  'bytes':img.stat().st_size,
+                  'sha256':sha
+              })
+
+          report={
+              'source_folder':folder,
+              'gdown_rc':p.returncode,
+              'stdout_tail':p.stdout[-5000:],
+              'stderr_tail':p.stderr[-5000:],
+              'archives_processed':archives,
+              'unique_actual_image_assets':len(images),
+              'status':'SPRITES_COLLECTED' if images else 'NO_ACTUAL_SPRITES_IN_PUBLIC_RELEASE',
+              'files':images
+          }
+          Path('DS_CUSTOM_LIBRARY/soothingsilver_actual_sprite_report.json').write_text(json.dumps(report,indent=2))
+          print(json.dumps({
+              'gdown_rc':p.returncode,
+              'archives_processed':len(archives),
+              'unique_actual_image_assets':len(images),
+              'status':report['status']
+          },indent=2))
+          PY
+
+      - name: Rebuild strict actual sprite audit
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import csv,json,collections,hashlib,re
+
+          exts={'.png','.gif','.bmp','.jpg','.jpeg'}
+          rows=[]
+          for base,bucket in [
+            (Path('DS_CUSTOM_LIBRARY/packs'),'GENERIC_SOURCE_ASSET'),
+            (Path('DS_CUSTOM_LIBRARY/hack-packs'),'HACK_SOURCE_ASSET')
+          ]:
+              if not base.exists(): continue
+              for p in sorted(base.rglob('*')):
+                  if p.is_file() and p.suffix.lower() in exts:
+                      if 'Platinum_Redux_Embedded_Sprites/sprite-candidates/' in p.as_posix():
+                          continue
+                      rel=p.relative_to(base)
+                      source=rel.parts[0] if rel.parts else ''
+                      rows.append({
+                        'source':source,'bucket':bucket,'path':p.as_posix(),
+                        'sha256':hashlib.sha256(p.read_bytes()).hexdigest()
+                      })
+
+          with open('DS_CUSTOM_LIBRARY/actual_sprite_assets.csv','w',newline='') as f:
+              w=csv.DictWriter(f,fieldnames=['source','bucket','path','sha256'])
+              w.writeheader(); w.writerows(rows)
+
+          counts=collections.Counter((x['source'],x['bucket']) for x in rows)
+          hack_counts={s:c for (s,b),c in counts.items() if b=='HACK_SOURCE_ASSET'}
+
+          aliases={
+            'Pokemon Altered Platinum':['Altered_Platinum_Custom_Sprites'],
+            'Pokemon Banished Platinum':['Banished_Platinum_Free_Megas'],
+            'Pokemon Platinum Redux':['Platinum_Redux_Embedded_Sprites'],
+            'Pokemon SoothingSilver':['SoothingSilver_Actual_Sprites']
+          }
+          registered=[]
+          mf=Path('DS_CUSTOM_LIBRARY/hack_source_manifest.csv')
+          if mf.exists():
+              with mf.open(newline='') as f:
+                  registered=list(csv.DictReader(f))
+
+          status=[]
+          def norm(s):
+              return re.sub(r'[^a-z0-9]+','',s.lower().replace('pokemon','').replace('pokémon',''))
+          for row in registered:
+              proj=row['project']
+              n=sum(hack_counts.get(s,0) for s in aliases.get(proj,[]))
+              if not n:
+                  np=norm(proj)
+                  n=sum(c for s,c in hack_counts.items() if np in norm(s) or norm(s) in np)
+              status.append({
+                  'project':proj,
+                  'actual_sprite_files':n,
+                  'status':'SPRITES_COLLECTED' if n else 'SOURCE_ONLY_OR_BLOCKED'
+              })
+
+          summary={
+              'actual_sprite_image_files_total':len(rows),
+              'generic_actual_image_files':sum(1 for x in rows if x['bucket']=='GENERIC_SOURCE_ASSET'),
+              'hack_actual_image_files':sum(1 for x in rows if x['bucket']=='HACK_SOURCE_ASSET'),
+              'hack_pack_counts':dict(sorted(hack_counts.items())),
+              'hack_source_status':status,
+              'excluded_from_counts':'DS_CUSTOM_LIBRARY/hack-reference-previews',
+              'rule':'Only actual image asset bytes count. Links, patches, docs, screenshots/reference previews do not.'
+          }
+          Path('DS_CUSTOM_LIBRARY/actual_sprite_audit_summary.json').write_text(json.dumps(summary,indent=2))
+          print(json.dumps(summary,indent=2))
+          PY
+
+      - name: Commit SoothingSilver assets
+        run: |
+          git config user.name "Mercury Actual Sprite Recovery Bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add DS_CUSTOM_LIBRARY/hack-packs/SoothingSilver_Actual_Sprites DS_CUSTOM_LIBRARY/soothingsilver_actual_sprite_report.json DS_CUSTOM_LIBRARY/actual_sprite_assets.csv DS_CUSTOM_LIBRARY/actual_sprite_audit_summary.json .github/workflows/extract-soothingsilver-actual-sprites.yml
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "sprites: extract SoothingSilver actual image assets"
+          git pull --rebase origin main
+          git push origin main
