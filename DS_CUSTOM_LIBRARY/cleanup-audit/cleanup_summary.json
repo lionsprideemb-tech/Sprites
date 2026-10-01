@@ -13,12 +13,13 @@
   "mega_missing_or_partial": 13,
   "asset_files_scanned": 31240,
   "exact_duplicate_delete_candidates": 5136,
-  "pure_palette_recolor_delete_candidates": 1918,
+  "pure_palette_recolor_delete_candidates": 482,
   "structural_decode_failures": 5,
   "safety_policy": [
     "DrPrettyman_DS_64x64 is protected and never quarantined by this pass.",
     "Official shiny component slots are protected; shiny-vs-normal is not treated as junk recolor.",
     "Recolor detection only flags exact same pixel partition/shape with different palette values.",
+    "Official/canonical palette sources, shiny paths, and known official palette-form families are excluded from recolor deletion.",
     "Vanilla base-species coverage accepts a concrete non-Mega form filename when the bare species filename does not exist.",
     "This pass writes deletion candidates only; it does not delete image files."
   ]
