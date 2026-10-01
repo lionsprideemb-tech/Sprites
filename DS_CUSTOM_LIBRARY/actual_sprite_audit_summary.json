@@ -1,7 +1,11 @@
 {
-  "actual_sprite_image_files_total": 31240,
+  "actual_sprite_image_files_total": 31259,
+  "unique_exact_image_hashes": 25247,
+  "duplicate_file_copies": 6012,
+  "exact_duplicate_groups": 3757,
+  "cross_source_exact_duplicate_groups": 1285,
   "generic_actual_image_files": 28830,
-  "hack_actual_image_files": 2410,
+  "hack_actual_image_files": 2429,
   "source_counts": {
     "Altered_Platinum_Custom_Sprites": 2,
     "Banished_Platinum_Free_Megas": 44,
@@ -33,6 +37,7 @@
     "Mikitari": 720,
     "Platinum_Redux_Embedded_Sprites": 433,
     "Platinum_Unlocked_New_Shinies": 447,
+    "Project_721_Thread_Sprites": 19,
     "Shiny_Icons_Gen1_9": 1424,
     "SoothingSilver_Embedded_Images": 43
   },
@@ -40,55 +45,63 @@
     {
       "project": "Pokemon Platinum Redux",
       "actual_sprite_files": 433,
-      "status": "SPRITES_COLLECTED"
+      "status": "SPRITES_COLLECTED",
+      "note": ""
     },
     {
       "project": "Pokemon Altered Platinum",
       "actual_sprite_files": 2,
-      "status": "SPRITES_COLLECTED"
+      "status": "SPRITES_COLLECTED",
+      "note": ""
     },
     {
       "project": "Pokemon XYZ NDS",
       "actual_sprite_files": 0,
-      "status": "SOURCE_ONLY_OR_BLOCKED"
+      "status": "KNOWN_SPRITE_SOURCE_UNRECOVERED",
+      "note": "Public thread exposes named attachments, but attachment bytes remain blocked by Pok\u00e9Community protection."
     },
     {
       "project": "Pokemon Platinum Unlocked regional-form project",
       "actual_sprite_files": 447,
       "status": "SPRITES_COLLECTED",
-      "note": "Collected asset bucket is shiny/recolor source art, not proof of regional-form design sprites."
+      "note": "447 collected files are shiny/recolor source assets; regional-form design sprites remain separately unverified."
     },
     {
       "project": "Pokemon SoothingSilver",
       "actual_sprite_files": 43,
-      "status": "SPRITES_COLLECTED"
+      "status": "SPRITES_COLLECTED",
+      "note": ""
     },
     {
       "project": "Pokemon GoldSoul",
       "actual_sprite_files": 0,
-      "status": "SOURCE_ONLY_OR_BLOCKED"
+      "status": "KNOWN_SPRITE_SOURCE_UNRECOVERED",
+      "note": "Public Reddit/project references found, but direct sprite media could not be recovered by current collector."
     },
     {
       "project": "Pokemon Moon Black 2",
       "actual_sprite_files": 0,
-      "status": "SOURCE_ONLY_OR_BLOCKED"
+      "status": "KNOWN_SPRITE_SOURCE_UNRECOVERED",
+      "note": "Known to contain custom/replacement sprites; no loose public sprite bytes recovered yet."
     },
     {
       "project": "Project 721",
-      "actual_sprite_files": 0,
-      "status": "SOURCE_ONLY_OR_BLOCKED"
+      "actual_sprite_files": 19,
+      "status": "SPRITES_COLLECTED",
+      "note": ""
     },
     {
       "project": "Pokemon Banished Platinum",
       "actual_sprite_files": 44,
-      "status": "SPRITES_COLLECTED"
+      "status": "SPRITES_COLLECTED",
+      "note": ""
     },
     {
       "project": "Pokemon Infinite Black 2",
       "actual_sprite_files": 1441,
-      "status": "SPRITES_COLLECTED"
+      "status": "SPRITES_COLLECTED",
+      "note": ""
     }
   ],
-  "excluded_from_counts": "DS_CUSTOM_LIBRARY/hack-reference-previews",
-  "rule": "Only actual image asset bytes count."
+  "rule": "Only actual image asset bytes count. Known candidate/mirror copies are excluded from double-counting."
 }

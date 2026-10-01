@@ -1,48 +1,42 @@
 {
   "status_counts": {
-    "ACTUAL_SPRITES_COLLECTED": 35,
+    "ACTUAL_SPRITES_COLLECTED": 40,
+    "KNOWN_SPRITE_SOURCE_UNRECOVERED": 3,
     "NO_UNIQUE_SPRITES_AFTER_DEDUP": 1,
-    "UNRECOVERABLE_OR_BLOCKED": 1,
-    "UNRECOVERED_SOURCE": 5
+    "UNRECOVERABLE_OR_BLOCKED": 1
   },
   "unresolved_sources": [
     {
-      "source": "GenVI_DS_64x64_LEGACY_THREAD",
-      "source_class": "LEGACY_RESOURCE",
+      "source": "Pokemon XYZ NDS",
+      "source_class": "REGISTERED_DS_HACK",
       "actual_sprite_files": 0,
-      "status": "UNRECOVERABLE_OR_BLOCKED"
+      "status": "KNOWN_SPRITE_SOURCE_UNRECOVERED",
+      "note": "Public thread exposes named attachments, but attachment bytes remain blocked by Pok\u00e9Community protection."
     },
     {
       "source": "Pokemon GoldSoul",
       "source_class": "REGISTERED_DS_HACK",
       "actual_sprite_files": 0,
-      "status": "UNRECOVERED_SOURCE"
+      "status": "KNOWN_SPRITE_SOURCE_UNRECOVERED",
+      "note": "Public Reddit/project references found, but direct sprite media could not be recovered by current collector."
     },
     {
       "source": "Pokemon Moon Black 2",
       "source_class": "REGISTERED_DS_HACK",
       "actual_sprite_files": 0,
-      "status": "UNRECOVERED_SOURCE"
+      "status": "KNOWN_SPRITE_SOURCE_UNRECOVERED",
+      "note": "Known to contain custom/replacement sprites; no loose public sprite bytes recovered yet."
     },
     {
-      "source": "Pokemon Platinum Unlocked regional-form project",
-      "source_class": "REGISTERED_DS_HACK",
+      "source": "GenVI_DS_64x64_LEGACY_THREAD",
+      "source_class": "LEGACY_RESOURCE",
       "actual_sprite_files": 0,
-      "status": "UNRECOVERED_SOURCE"
-    },
-    {
-      "source": "Pokemon XYZ NDS",
-      "source_class": "REGISTERED_DS_HACK",
-      "actual_sprite_files": 0,
-      "status": "UNRECOVERED_SOURCE"
-    },
-    {
-      "source": "Project 721",
-      "source_class": "REGISTERED_DS_HACK",
-      "actual_sprite_files": 0,
-      "status": "UNRECOVERED_SOURCE"
+      "status": "UNRECOVERABLE_OR_BLOCKED",
+      "note": "Legacy PokeCommunity thread is publicly visible but old linked image assets remain inaccessible to automated collector."
     }
   ],
   "collection_complete": false,
-  "rule": "A source is only complete when actual sprite bytes are collected, or it is explicitly proven to add no unique sprites after exact dedup."
+  "physical_actual_image_files": 31259,
+  "unique_exact_image_hashes": 25247,
+  "rule": "Collection is only complete when actual sprite bytes are present or a source is proven to add no unique assets after dedup. Blocked sources remain explicit."
 }
