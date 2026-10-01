@@ -1,0 +1,245 @@
+name: Recover Actual Sprite Images from DS Hack Threads
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/recover-hack-thread-sprite-images.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  recover:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install tools
+        run: |
+          python -m pip install requests beautifulsoup4 pillow
+
+      - name: Crawl hack pages and keep only sprite-like image assets
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import requests,re,json,hashlib,shutil,io,math
+          from bs4 import BeautifulSoup
+          from urllib.parse import urljoin,urlparse
+          from PIL import Image
+
+          sources=[
+            {
+              'key':'Moon_Black_2_Thread_Sprites',
+              'project':'Pokemon Moon Black 2',
+              'url':'https://www.pokecommunity.com/threads/pokemon-moon-black-2-september-2020-update-released.405031/',
+              'pages':21
+            },
+            {
+              'key':'Pokemon_XYZ_NDS_Thread_Sprites',
+              'project':'Pokemon XYZ NDS',
+              'url':'https://www.pokecommunity.com/threads/pok%C3%A9mon-xyz-nds-rom-hack.527852/',
+              'pages':3
+            },
+            {
+              'key':'Project_721_Thread_Sprites',
+              'project':'Project 721',
+              'url':'https://projectpokemon.org/home/forums/topic/33493-project-721/',
+              'pages':3
+            }
+          ]
+
+          root=Path('DS_CUSTOM_LIBRARY/hack-packs')
+          sess=requests.Session()
+          sess.headers.update({'User-Agent':'Mozilla/5.0'})
+          reports=[]
+
+          def sprite_like(w,h,mode,info):
+              alpha=('A' in mode) or ('transparency' in info)
+              exact=(w,h) in {(64,64),(80,80),(96,96),(128,128),(160,80),(320,80),(256,64),(512,64)}
+              small=(w<=256 and h<=256)
+              sheet=(h<=160 and w<=1024 and w>=h)
+              return exact or (alpha and (small or sheet))
+
+          for src in sources:
+              dest=root/src['key']
+              if dest.exists(): shutil.rmtree(dest)
+              dest.mkdir(parents=True,exist_ok=True)
+
+              urls=[]
+              for page_num in range(1,src['pages']+1):
+                  base=src['url'] if page_num==1 else src['url'].rstrip('/')+f'/page-{page_num}'
+                  bodies=[]
+                  try:
+                      r=sess.get(base,timeout=30)
+                      if r.status_code==200: bodies.append(r.text)
+                  except Exception:
+                      pass
+                  try:
+                      proxy='https://r.jina.ai/http://' + base.split('://',1)[1]
+                      r=sess.get(proxy,timeout=45)
+                      if r.status_code==200: bodies.append(r.text)
+                  except Exception:
+                      pass
+
+                  for body in bodies:
+                      soup=BeautifulSoup(body,'html.parser')
+                      for tag in soup.find_all(['img','a']):
+                          raw=tag.get('src') or tag.get('href')
+                          if not raw: continue
+                          u=urljoin(base,raw)
+                          low=u.lower()
+                          if any(x in low for x in ['.png','.gif','.jpg','.jpeg','attachments/','proxy.php?image=']):
+                              urls.append(u)
+                      urls += re.findall(r'https?://[^\s\)\]\>"\']+(?:png|gif|jpg|jpeg)(?:\?[^\s\)\]\>"\']*)?',body,re.I)
+
+              cleaned=[]
+              seen=set()
+              for u in urls:
+                  u=u.replace('&amp;','&')
+                  if u not in seen:
+                      seen.add(u); cleaned.append(u)
+
+              kept=[]
+              sha_seen=set()
+              inspected=0
+              for i,u in enumerate(cleaned):
+                  try:
+                      rr=sess.get(u,timeout=45,allow_redirects=True)
+                  except Exception:
+                      continue
+                  if rr.status_code!=200 or len(rr.content)<100:
+                      continue
+                  try:
+                      im=Image.open(io.BytesIO(rr.content))
+                      w,h=im.size
+                      mode=im.mode
+                      info=dict(im.info)
+                      fmt=(im.format or '').lower()
+                  except Exception:
+                      continue
+                  inspected += 1
+                  if not sprite_like(w,h,mode,info):
+                      continue
+                  sha=hashlib.sha256(rr.content).hexdigest()
+                  if sha in sha_seen: continue
+                  sha_seen.add(sha)
+                  name=Path(urlparse(u).path).name or f'asset_{i:05d}.{fmt or "png"}'
+                  name=re.sub(r'[^A-Za-z0-9._-]+','_',name)
+                  if '.' not in name:
+                      name += '.png' if fmt=='png' else f'.{fmt or "png"}'
+                  out=dest/f'{i:05d}_{name}'
+                  out.write_bytes(rr.content)
+                  kept.append({
+                    'path':out.as_posix(),
+                    'source_url':u,
+                    'width':w,'height':h,'mode':mode,
+                    'bytes':len(rr.content),'sha256':sha
+                  })
+
+              reports.append({
+                  'project':src['project'],
+                  'source_url':src['url'],
+                  'candidate_urls':len(cleaned),
+                  'images_inspected':inspected,
+                  'actual_sprite_like_images_collected':len(kept),
+                  'files':kept,
+                  'status':'SPRITES_COLLECTED' if kept else 'NO_STANDALONE_SPRITE_IMAGES_FOUND'
+              })
+
+          Path('DS_CUSTOM_LIBRARY/hack_thread_actual_sprite_report.json').write_text(json.dumps(reports,indent=2))
+          print(json.dumps([
+            {
+              'project':r['project'],
+              'images_inspected':r['images_inspected'],
+              'actual_sprite_like_images_collected':r['actual_sprite_like_images_collected'],
+              'status':r['status']
+            } for r in reports
+          ],indent=2))
+          PY
+
+      - name: Rebuild strict actual-sprite audit
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import csv,json,collections,hashlib,re
+
+          exts={'.png','.gif','.bmp','.jpg','.jpeg'}
+          rows=[]
+          for base,bucket in [
+            (Path('DS_CUSTOM_LIBRARY/packs'),'GENERIC_SOURCE_ASSET'),
+            (Path('DS_CUSTOM_LIBRARY/hack-packs'),'HACK_SOURCE_ASSET')
+          ]:
+              if not base.exists(): continue
+              for p in sorted(base.rglob('*')):
+                  if p.is_file() and p.suffix.lower() in exts:
+                      if 'Platinum_Redux_Embedded_Sprites/sprite-candidates/' in p.as_posix():
+                          continue
+                      rel=p.relative_to(base)
+                      source=rel.parts[0] if rel.parts else ''
+                      rows.append({
+                        'source':source,'bucket':bucket,'path':p.as_posix(),
+                        'sha256':hashlib.sha256(p.read_bytes()).hexdigest()
+                      })
+
+          with open('DS_CUSTOM_LIBRARY/actual_sprite_assets.csv','w',newline='') as f:
+              w=csv.DictWriter(f,fieldnames=['source','bucket','path','sha256'])
+              w.writeheader(); w.writerows(rows)
+
+          sc=collections.Counter(x['source'] for x in rows)
+          aliases={
+            'Pokemon Altered Platinum':['Altered_Platinum_Custom_Sprites'],
+            'Pokemon Banished Platinum':['Banished_Platinum_Free_Megas'],
+            'Pokemon Platinum Redux':['Platinum_Redux_Embedded_Sprites'],
+            'Pokemon SoothingSilver':['SoothingSilver_Actual_Sprites','SoothingSilver_Embedded_Images'],
+            'Pokemon Moon Black 2':['Moon_Black_2_Thread_Sprites'],
+            'Pokemon XYZ NDS':['Pokemon_XYZ_NDS_Thread_Sprites'],
+            'Project 721':['Project_721_Thread_Sprites']
+          }
+          registered=[]
+          mf=Path('DS_CUSTOM_LIBRARY/hack_source_manifest.csv')
+          if mf.exists():
+              with mf.open(newline='') as f:
+                  registered=list(csv.DictReader(f))
+
+          def norm(s):
+              return re.sub(r'[^a-z0-9]+','',s.lower().replace('pokemon','').replace('pokémon',''))
+
+          status=[]
+          for row in registered:
+              proj=row['project']
+              n=sum(sc.get(s,0) for s in aliases.get(proj,[]))
+              if not n:
+                  np=norm(proj)
+                  n=sum(c for s,c in sc.items() if np in norm(s) or norm(s) in np)
+              status.append({
+                'project':proj,
+                'actual_sprite_files':n,
+                'status':'SPRITES_COLLECTED' if n else 'SOURCE_ONLY_OR_BLOCKED'
+              })
+
+          summary={
+              'actual_sprite_image_files_total':len(rows),
+              'generic_actual_image_files':sum(1 for x in rows if x['bucket']=='GENERIC_SOURCE_ASSET'),
+              'hack_actual_image_files':sum(1 for x in rows if x['bucket']=='HACK_SOURCE_ASSET'),
+              'source_counts':dict(sorted(sc.items())),
+              'hack_source_status':status,
+              'excluded_from_counts':'DS_CUSTOM_LIBRARY/hack-reference-previews',
+              'rule':'Only actual sprite-like image bytes count in hack-packs. Generic packs contain actual source assets. Links, patches, docs, and ordinary screenshots do not count.'
+          }
+          Path('DS_CUSTOM_LIBRARY/actual_sprite_audit_summary.json').write_text(json.dumps(summary,indent=2))
+          print(json.dumps(summary,indent=2))
+          PY
+
+      - name: Commit recovered thread sprite assets
+        run: |
+          git config user.name "Mercury Actual Sprite Recovery Bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add DS_CUSTOM_LIBRARY/hack-packs/Moon_Black_2_Thread_Sprites DS_CUSTOM_LIBRARY/hack-packs/Pokemon_XYZ_NDS_Thread_Sprites DS_CUSTOM_LIBRARY/hack-packs/Project_721_Thread_Sprites DS_CUSTOM_LIBRARY/hack_thread_actual_sprite_report.json DS_CUSTOM_LIBRARY/actual_sprite_assets.csv DS_CUSTOM_LIBRARY/actual_sprite_audit_summary.json .github/workflows/recover-hack-thread-sprite-images.yml
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "sprites: recover standalone DS hack sprite images"
+          git pull --rebase origin main
+          git push origin main
