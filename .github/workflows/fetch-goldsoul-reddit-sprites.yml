@@ -1,0 +1,216 @@
+name: Fetch GoldSoul Actual Reddit Sprite Images
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/fetch-goldsoul-reddit-sprites.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Sync latest main
+        run: git pull --rebase origin main
+
+      - name: Install tools
+        run: python -m pip install requests pillow
+
+      - name: Search Reddit JSON and collect actual GoldSoul media
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import requests,json,re,html,hashlib,io,shutil
+          from PIL import Image
+          from urllib.parse import urlparse
+
+          sess=requests.Session()
+          sess.headers.update({'User-Agent':'Mozilla/5.0 MercurySpriteArchive/1.0'})
+          queries=['GoldSoul','Pokemon GoldSoul']
+          posts={}
+          for q in queries:
+              url='https://www.reddit.com/r/PokemonROMhacks/search.json'
+              try:
+                  r=sess.get(url,params={'q':q,'restrict_sr':'1','sort':'new','limit':'100'},timeout=30)
+                  if r.status_code!=200: continue
+                  data=r.json()
+                  for child in data.get('data',{}).get('children',[]):
+                      d=child.get('data',{})
+                      if d.get('id'):
+                          posts[d['id']]=d
+              except Exception:
+                  pass
+
+          # Ensure known image post is included even if Reddit search omits it.
+          for pid in ['17mxg36','17hbx4n']:
+              try:
+                  r=sess.get(f'https://www.reddit.com/comments/{pid}.json',timeout=30)
+                  if r.status_code==200:
+                      arr=r.json()
+                      d=arr[0]['data']['children'][0]['data']
+                      posts[d['id']]=d
+              except Exception:
+                  pass
+
+          urls=[]
+          metadata=[]
+          for pid,d in posts.items():
+              title=d.get('title','')
+              if 'goldsoul' not in title.lower() and 'goldsoul' not in d.get('selftext','').lower():
+                  continue
+              metadata.append({'id':pid,'title':title,'permalink':d.get('permalink','')})
+
+              # Direct URL/post image
+              for field in ['url_overridden_by_dest','url']:
+                  u=d.get(field)
+                  if isinstance(u,str):
+                      urls.append((pid,title,html.unescape(u)))
+
+              # Gallery metadata
+              media=d.get('media_metadata') or {}
+              for mid,m in media.items():
+                  src=((m.get('s') or {}).get('u'))
+                  if src:
+                      urls.append((pid,title,html.unescape(src)))
+                  for p in m.get('p',[]) or []:
+                      if p.get('u'):
+                          urls.append((pid,title,html.unescape(p['u'])))
+
+              # Preview originals
+              for im in ((d.get('preview') or {}).get('images') or []):
+                  src=((im.get('source') or {}).get('url'))
+                  if src:
+                      urls.append((pid,title,html.unescape(src)))
+
+          dest=Path('DS_CUSTOM_LIBRARY/hack-packs/GoldSoul_Reddit_Sprites')
+          if dest.exists(): shutil.rmtree(dest)
+          dest.mkdir(parents=True,exist_ok=True)
+
+          seen_url=set()
+          seen_hash=set()
+          files=[]
+
+          def candidate_urls(u):
+              out=[u]
+              if 'preview.redd.it/' in u:
+                  out.append(u.split('?')[0])
+              if 'imgur.com/' in u and 'i.imgur.com/' not in u:
+                  ident=u.rstrip('/').split('/')[-1].split('?')[0]
+                  if ident and '.' not in ident:
+                      out=[f'https://i.imgur.com/{ident}.png',f'https://i.imgur.com/{ident}.jpg',u]
+              return out
+
+          for idx,(pid,title,u) in enumerate(urls):
+              if u in seen_url: continue
+              seen_url.add(u)
+              data=None; final=None; im=None
+              for cu in candidate_urls(u):
+                  try:
+                      rr=sess.get(cu,timeout=35,allow_redirects=True)
+                  except Exception:
+                      continue
+                  if rr.status_code!=200 or len(rr.content)<100:
+                      continue
+                  try:
+                      test=Image.open(io.BytesIO(rr.content)); test.load()
+                  except Exception:
+                      continue
+                  fmt=(test.format or '').lower()
+                  if fmt not in {'png','gif','jpeg','jpg','bmp','webp'}:
+                      continue
+                  data=rr.content; final=cu; im=test
+                  break
+              if data is None: continue
+
+              h=hashlib.sha256(data).hexdigest()
+              if h in seen_hash: continue
+              seen_hash.add(h)
+
+              w,hh=im.size
+              # Keep compact sprites and sprite sheets; drop huge screenshots/photos.
+              alpha=('A' in im.mode) or ('transparency' in im.info)
+              sprite_like=(w<=1024 and hh<=1024 and (alpha or w<=512 or hh<=512))
+              if not sprite_like: continue
+
+              fmt=(im.format or 'png').lower()
+              ext='.jpg' if fmt in {'jpeg','jpg'} else f'.{fmt}'
+              out=dest/f'{idx:04d}_{pid}_{h[:12]}{ext}'
+              out.write_bytes(data)
+              files.append({
+                  'post_id':pid,'post_title':title,'source_url':final,
+                  'path':out.as_posix(),'width':w,'height':hh,
+                  'mode':im.mode,'bytes':len(data),'sha256':h
+              })
+
+          report={
+              'reddit_queries':queries,
+              'matching_posts':metadata,
+              'actual_image_files':len(files),
+              'status':'SPRITES_COLLECTED' if files else 'NO_ACTUAL_IMAGES_RECOVERED',
+              'files':files
+          }
+          Path('DS_CUSTOM_LIBRARY/goldsoul_reddit_sprite_report.json').write_text(json.dumps(report,indent=2))
+          print(json.dumps({
+              'matching_posts':len(metadata),
+              'actual_image_files':len(files),
+              'status':report['status']
+          },indent=2))
+          PY
+
+      - name: Rebuild strict audit
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import csv,json,collections,hashlib
+          exts={'.png','.gif','.bmp','.jpg','.jpeg','.webp'}
+          rows=[]
+          for base,bucket in [(Path('DS_CUSTOM_LIBRARY/packs'),'GENERIC_SOURCE_ASSET'),(Path('DS_CUSTOM_LIBRARY/hack-packs'),'HACK_SOURCE_ASSET')]:
+              if not base.exists(): continue
+              for p in sorted(base.rglob('*')):
+                  if p.is_file() and p.suffix.lower() in exts:
+                      if 'Platinum_Redux_Embedded_Sprites/sprite-candidates/' in p.as_posix(): continue
+                      rel=p.relative_to(base); source=rel.parts[0] if rel.parts else ''
+                      rows.append({'source':source,'bucket':bucket,'path':p.as_posix(),'sha256':hashlib.sha256(p.read_bytes()).hexdigest()})
+          with open('DS_CUSTOM_LIBRARY/actual_sprite_assets.csv','w',newline='') as f:
+              w=csv.DictWriter(f,fieldnames=['source','bucket','path','sha256']); w.writeheader(); w.writerows(rows)
+          sc=collections.Counter(x['source'] for x in rows)
+          old={}
+          sp=Path('DS_CUSTOM_LIBRARY/actual_sprite_audit_summary.json')
+          if sp.exists():
+              try: old=json.loads(sp.read_text())
+              except Exception: pass
+          hs=old.get('hack_source_status',[])
+          for h in hs:
+              if h.get('project')=='Pokemon GoldSoul':
+                  n=sc.get('GoldSoul_Reddit_Sprites',0)
+                  h['actual_sprite_files']=n
+                  h['status']='SPRITES_COLLECTED' if n else 'SOURCE_ONLY_OR_BLOCKED'
+          summary={
+              'actual_sprite_image_files_total':len(rows),
+              'generic_actual_image_files':sum(1 for x in rows if x['bucket']=='GENERIC_SOURCE_ASSET'),
+              'hack_actual_image_files':sum(1 for x in rows if x['bucket']=='HACK_SOURCE_ASSET'),
+              'source_counts':dict(sorted(sc.items())),
+              'hack_source_status':hs,
+              'excluded_from_counts':old.get('excluded_from_counts','DS_CUSTOM_LIBRARY/hack-reference-previews'),
+              'rule':'Only actual image asset bytes count.'
+          }
+          sp.write_text(json.dumps(summary,indent=2))
+          print(json.dumps(summary,indent=2))
+          PY
+
+      - name: Commit GoldSoul assets
+        run: |
+          git config user.name "Mercury Actual Sprite Recovery Bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add DS_CUSTOM_LIBRARY/hack-packs/GoldSoul_Reddit_Sprites DS_CUSTOM_LIBRARY/goldsoul_reddit_sprite_report.json DS_CUSTOM_LIBRARY/actual_sprite_assets.csv DS_CUSTOM_LIBRARY/actual_sprite_audit_summary.json .github/workflows/fetch-goldsoul-reddit-sprites.yml
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "sprites: collect GoldSoul actual public sprite images"
+          git push origin main
