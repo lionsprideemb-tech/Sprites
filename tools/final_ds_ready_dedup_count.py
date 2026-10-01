@@ -26,21 +26,60 @@ def norm(s):
 # Official forms are protected from recolor collapse.
 official=set()
 api_ok=False
+base_species=set()
+official_megas=set()
+forced_custom=set()
+
+base_file=ROOT/"cleanup-audit"/"required_vanilla_species.txt"
+if base_file.exists():
+    base_species={norm(x) for x in base_file.read_text().splitlines() if x.strip()}
+
+mega_file=ROOT/"cleanup-audit"/"required_mega_forms.txt"
+if mega_file.exists():
+    official_megas={norm(x) for x in mega_file.read_text().splitlines() if x.strip()}
+
+replacement_summary=ROOT/"replacement-map"/"replacement_manifest_summary.json"
+if replacement_summary.exists():
+    try:
+        d=json.loads(replacement_summary.read_text())
+        forced_custom={norm(x.get("key","")) for x in d.get("mercury_custom_mega_priority",[]) if x.get("key")}
+    except Exception:
+        pass
+
 try:
     with urllib.request.urlopen("https://pokeapi.co/api/v2/pokemon?limit=10000",timeout=60) as r:
         data=json.load(r)
     official={norm(x["name"]) for x in data.get("results",[])}
     api_ok=True
 except Exception:
-    # Fallback protects at least the base species known from the canonical DS core.
     core=ROOT/"packs"/"DrPrettyman_DS_64x64"/"sprites-processed"/"front"
     if core.exists():
         official={norm(p.stem) for p in core.iterdir() if p.is_file()}
 
+official |= base_species
+official |= (official_megas - forced_custom)
+
+CUSTOM_TOKENS={"redux","delta","apex","nightmare","fakemon"}
+
+def official_lookup_name(ident):
+    x=ident
+    for suffix in ("-male","-female"):
+        if x.endswith(suffix):
+            x=x[:-len(suffix)]
+    return x
+
+def is_official_identity(ident):
+    lookup=official_lookup_name(ident)
+    if lookup in forced_custom:
+        return False
+    if any(("-"+t) in lookup or lookup.startswith(t+"-") for t in CUSTOM_TOKENS):
+        return False
+    return lookup in official
+
 def role(p):
     stem=norm(p.stem); parts=[norm(x) for x in p.parts]; joined="/".join(parts)
     if "icon" in stem or "/icon/" in joined or "/icons/" in joined: return "icon"
-    shiny=("shiny" in stem or any(x in {"front-shiny","back-shiny","shiny"} for x in parts))
+    shiny=("shiny" in stem or any("shiny" in x for x in parts))
     back=("back" in stem or any(x in {"back","backs","backsprite","backsprites","back-shiny"} for x in parts))
     front=("front" in stem or any(x in {"front","fronts","frontsprite","frontsprites","front-shiny"} for x in parts))
     if back: return "back_shiny" if shiny else "back"
@@ -107,7 +146,7 @@ for root,bucket in ROOTS:
         ident=identity(p,comp)
         assets.append({
             "path":p.as_posix(),"bucket":bucket,"source":source(p,root),
-            "role":comp,"identity":ident,"official_identity":ident in official,
+            "role":comp,"identity":ident,"official_identity":is_official_identity(ident),
             "exact_hash":exact,"structural_hash":struct,
             "width":w,"height":h,"colors":colors
         })
@@ -215,9 +254,12 @@ summary={
     "official_form_names_indexed":len(official),
     "ds_ready_image_files_scanned":len(assets),
     "decoded_failures":len(decode_fail),
+    "normal_front_source_files_scanned":sum(1 for a in assets if a["role"]=="front"),
     "normal_front_sprite_files_after_component_cleanup":len(fronts),
     "exact_duplicate_component_files":len(exact_rows),
+    "front_exact_duplicate_files":sum(1 for x in exact_rows if x["role"]=="front"),
     "custom_palette_only_recolor_component_files":len(recolor_rows),
+    "front_custom_palette_only_recolor_files":sum(1 for x in recolor_rows if x["role"]=="front"),
     "official_semantic_front_entries_kept":official_kept,
     "custom_semantic_identities":custom_identity_count,
     "custom_identities_with_multiple_genuinely_different_designs":len(multi_ids),
