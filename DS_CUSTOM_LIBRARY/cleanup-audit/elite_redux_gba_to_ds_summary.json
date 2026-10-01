@@ -1,0 +1,21 @@
+{
+  "source": "DS_CUSTOM_LIBRARY/packs/Elite_Redux_ER_nextdex",
+  "design_keys": 1919,
+  "slot_files": 7671,
+  "categories": {
+    "DS_TECH_READY_SOURCE": 1917,
+    "INCOMPLETE_SOURCE_SET": 2
+  },
+  "redux_named_designs": 210,
+  "redux_named_categories": {
+    "DS_TECH_READY_SOURCE": 210
+  },
+  "policy": {
+    "artistic_redraw": "NOT AUTOMATED",
+    "source_overwrite": false,
+    "battle_canvas": "64x64",
+    "opaque_palette_limit": 15,
+    "icon_output": "32x64 generated two-frame review placeholder",
+    "oversize_policy": "do not resize; classify NEEDS_ART_REDRAW"
+  }
+}
