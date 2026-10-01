@@ -32,6 +32,7 @@ jobs:
           PACKS=ROOT/'packs'
           HACKS=ROOT/'hack-packs'
           CORE=PACKS/'DrPrettyman_DS_64x64'
+          MEGA_INTAKE=PACKS/'PokeDot_Engine_Mega_Intake'
           OUT=ROOT/'cleanup-audit'
           OUT.mkdir(parents=True,exist_ok=True)
           EXTS={'.png','.gif','.bmp','.jpg','.jpeg','.webp'}
@@ -94,13 +95,25 @@ jobs:
                   pass
           all_megas=sorted(set(official_megas)|local_megas|set(mercury_custom))
 
-          # Index protected core components.
+          # Index protected core components plus the separately validated Mega intake.
           categories=['front','back','front-shiny','back-shiny','icon']
           idx={c:set() for c in categories}
           for c in categories:
               d=CORE/'sprites-processed'/c
               if d.exists():
-                  idx[c]={norm(p.stem) for p in d.iterdir() if p.is_file() and p.suffix.lower() in EXTS}
+                  idx[c].update(norm(p.stem) for p in d.iterdir() if p.is_file() and p.suffix.lower() in EXTS)
+
+          if MEGA_INTAKE.exists():
+              for formdir in MEGA_INTAKE.iterdir():
+                  if not formdir.is_dir():
+                      continue
+                  k=norm(formdir.name)
+                  for c in categories:
+                      for ext in EXTS:
+                          p=formdir/(c+ext)
+                          if p.exists():
+                              idx[c].add(k)
+                              break
 
           def resolve_component_key(k, cat, kind):
               if k in idx[cat]:
@@ -336,6 +349,7 @@ jobs:
                   'Recolor detection only flags exact same pixel partition/shape with different palette values.',
                   'Official/canonical palette sources, shiny paths, and known official palette-form families are excluded from recolor deletion.',
                   'Vanilla base-species coverage accepts a concrete non-Mega form filename when the bare species filename does not exist.',
+                  'Validated PokeDot Mega intake folders can satisfy Mega front/back/shiny/icon coverage without modifying the protected vanilla core.',
                   'This pass writes deletion candidates only; it does not delete image files.'
               ]
           }
