@@ -1,0 +1,7 @@
+MultipleForms.register(:BELSTATUE, {
+  "getForm" => proc { |pkmn|
+    next 1 if pkmn.hasItem?(:SUNSHARD)
+    next 2 if pkmn.hasItem?(:MOONSHARD)
+    next 0
+  }
+})

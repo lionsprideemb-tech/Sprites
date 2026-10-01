@@ -1,0 +1,150 @@
+#-------------------------------
+[LOUDCLAP]
+Name = Loud Clap
+Type = SOUND
+Category = Physical
+Power = 70
+Accuracy = 100
+TotalPP = 10
+Target = NearOther
+FunctionCode = FlinchTarget
+Flags = Contact,CanProtect,CanMirrorMove,Sound
+EffectChance = 30
+Description = Slaps the foes to make a startling sound. It may also make the targets flinch.
+#-------------------------------
+[SPEEDOFSOUND]
+Name = Speed of Sound
+Type = SOUND
+Category = Physical
+Power = 40
+Accuracy = 100
+TotalPP = 30
+Target = NearOther
+Priority = 2
+FunctionCode = None
+Flags = Contact,CanProtect,CanMirrorMove,Sound
+Description = The user rushes at the target in the speed of sound. This move always goes first.
+#-------------------------------
+[GUNGNIRPUNCH]
+Name = Gungnir Punch
+Type = SOUND
+Category = Physical
+Power = 65
+Accuracy = 90
+TotalPP = 10
+Target = NearOther
+Priority = -6
+FunctionCode = SwitchOutTargetDamagingMove
+Flags = Contact,CanProtect,CanMirrorMove,Sound,Punching
+Description = The user punches the target and switches it out another Pokémon in its party. In the wild, the battle ends.
+#-------------------------------
+[POWERSUITE]
+Name = Power Suite
+Type = SOUND
+Category = Special
+Power = 110
+Accuracy = 80
+TotalPP = 5
+Target = NearOther
+FunctionCode = None
+Flags = CanProtect,CanMirrorMove,Sound
+Description = The target is blasted by a beautiful suite.
+#-------------------------------
+[POISONCARROT]
+Name = Poison Carrot
+Type = POISON
+Category = Physical
+Power = 60
+Accuracy = 95
+TotalPP = 25
+Target = NearOther
+FunctionCode = PoisonTarget
+Flags = CanProtect,CanMirrorMove
+EffectChance = 30
+Description = The target is stabbed with a carrot-like blade. It may also poison the target.
+#-------------------------------
+[BETRAY]
+Name = Betray
+Type = DARK
+Category = Physical
+Power = 40
+Accuracy = 100
+TotalPP = 20
+Target = NearAlly
+FunctionCode = RaiseUserAtk2Spd2
+Flags = CanProtect,CanMirrorMove
+EffectChance = 100
+Description = Stabs an ally to sharply raise the user's Attack and Speed.
+#-------------------------------
+[VENOMKICK]
+Name = Venom Kick
+Type = POISON
+Category = Physical
+Power = 40
+Accuracy = 90
+TotalPP = 10
+Target = NearOther
+FunctionCode = HitTwoTimesPoisonTarget
+Flags = Contact,CanProtect,CanMirrorMove
+Description = The user kicks the target twice in a row with a nasty power. It may also poison the target.
+#-------------------------------
+[RAIDKICK]
+Name = Raid Kick
+Type = BUG
+Category = Physical
+Power = 40
+Accuracy = 90
+TotalPP = 10
+Target = NearOther
+FunctionCode = HitTwoTimesFlinchTarget
+Flags = Contact,CanProtect,CanMirrorMove
+Description = The user kicks the target twice in a row with swarm power. It may also flinch the target.
+#-------------------------------
+[FORESTKICK]
+Name = Forest Kick
+Type = GRASS
+Category = Physical
+Power = 40
+Accuracy = 90
+TotalPP = 10
+Target = NearOther
+FunctionCode = HitTwoTimesParalyzeTarget
+Flags = Contact,CanProtect,CanMirrorMove
+Description = The user kicks the target twice in a row with nature power. It may leave the target with paralysis.
+#-------------------------------
+[PULVERIZINGBEAM]
+Name = Pulverizing Beam
+Type = QMARKS
+Category = Special
+Power = 100
+Accuracy = 100
+TotalPP = 15
+Target = NearOther
+FunctionCode = None
+Flags = CanProtect,CanMirrorMove
+Description = The user launches an almighty beam that pulverizes any type of Pokémon.
+#-------------------------------
+[SOULCONTRACT]
+Name = Soul Contract
+Type = PSYCHIC
+Category = Special
+Power = 95
+Accuracy = 100
+TotalPP = 15
+Target = NearOther
+FunctionCode = UseTargetAttackInsteadOfUserAttack
+Flags = CanProtect,CanMirrorMove
+Description = The user turns the foe's power against it. It does more damage the higher the target's Sp. Atk stat.
+#-------------------------------
+[MAGICHANDS]
+Name = Magic Hands
+Type = FAIRY
+Category = Special
+Power = 60
+Accuracy = 100
+TotalPP = 10
+Target = NearOther
+Priority = 2
+FunctionCode = RemoveProtections
+Flags = CanMirrorMove
+Description = An magic attack that hits a target using Protect or Detect. It also lifts the effects of those moves.

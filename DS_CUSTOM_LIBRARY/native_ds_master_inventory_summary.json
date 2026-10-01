@@ -1,7 +1,10 @@
 {
-  "total_sprite_files": 14474,
+  "total_sprite_files": 19486,
   "pack_counts": {
+    "DS_Styled_Gen5_8": 2170,
     "DrPrettyman_DS_64x64": 12730,
+    "Earthretha": 120,
+    "Fakemon_Festival_Full": 990,
     "Festival_Altaira": 117,
     "Festival_Atsui": 75,
     "Festival_BiggusWeeabus": 20,
@@ -14,8 +17,121 @@
     "Festival_Piacarrot": 12,
     "Festival_PrincessPhoenix": 140,
     "Festival_Scotsman": 52,
-    "Mikitari": 720
+    "Gen7_DS_Backsprites": 297,
+    "Mega_Flygon": 7,
+    "Mega_Flygon_Animated_Gen5": 4,
+    "Mikitari": 720,
+    "Shiny_Icons_Gen1_9": 1424
   },
+  "source_coverage": [
+    {
+      "source": "DrPrettyman_DS_64x64",
+      "sprite_file_count": 12730,
+      "collection_status": "COLLECTED"
+    },
+    {
+      "source": "Festival_Altaira",
+      "sprite_file_count": 117,
+      "collection_status": "COLLECTED"
+    },
+    {
+      "source": "Festival_Atsui",
+      "sprite_file_count": 75,
+      "collection_status": "COLLECTED"
+    },
+    {
+      "source": "Festival_BiggusWeeabus",
+      "sprite_file_count": 20,
+      "collection_status": "COLLECTED"
+    },
+    {
+      "source": "Festival_Dulcet",
+      "sprite_file_count": 35,
+      "collection_status": "COLLECTED"
+    },
+    {
+      "source": "Festival_Lumio",
+      "sprite_file_count": 61,
+      "collection_status": "COLLECTED"
+    },
+    {
+      "source": "Festival_Magiscarf",
+      "sprite_file_count": 357,
+      "collection_status": "COLLECTED"
+    },
+    {
+      "source": "Festival_Odisea",
+      "sprite_file_count": 23,
+      "collection_status": "COLLECTED"
+    },
+    {
+      "source": "Festival_PansyGum",
+      "sprite_file_count": 71,
+      "collection_status": "COLLECTED"
+    },
+    {
+      "source": "Festival_Piacarrot",
+      "sprite_file_count": 12,
+      "collection_status": "COLLECTED"
+    },
+    {
+      "source": "Festival_PrincessPhoenix",
+      "sprite_file_count": 140,
+      "collection_status": "COLLECTED"
+    },
+    {
+      "source": "Festival_Scotsman",
+      "sprite_file_count": 52,
+      "collection_status": "COLLECTED"
+    },
+    {
+      "source": "Festival_Misc",
+      "sprite_file_count": 61,
+      "collection_status": "COLLECTED"
+    },
+    {
+      "source": "Mikitari",
+      "sprite_file_count": 720,
+      "collection_status": "COLLECTED"
+    },
+    {
+      "source": "Earthretha",
+      "sprite_file_count": 120,
+      "collection_status": "COLLECTED"
+    },
+    {
+      "source": "DS_Styled_Gen5_8",
+      "sprite_file_count": 2170,
+      "collection_status": "COLLECTED"
+    },
+    {
+      "source": "Gen7_DS_Backsprites",
+      "sprite_file_count": 297,
+      "collection_status": "COLLECTED"
+    },
+    {
+      "source": "Shiny_Icons_Gen1_9",
+      "sprite_file_count": 1424,
+      "collection_status": "COLLECTED"
+    },
+    {
+      "source": "Mega_Flygon",
+      "sprite_file_count": 7,
+      "collection_status": "COLLECTED"
+    },
+    {
+      "source": "Mega_Flygon_Animated_Gen5",
+      "sprite_file_count": 4,
+      "collection_status": "COLLECTED"
+    },
+    {
+      "source": "GenVI_DS_64x64",
+      "sprite_file_count": 0,
+      "collection_status": "NO_SPRITE_FILES_COLLECTED"
+    }
+  ],
+  "sources_expected": 21,
+  "sources_with_sprite_files": 20,
   "pipeline_stage": "SOURCE_COLLECTION_ONLY",
   "visual_approval_performed": false,
   "implementation_performed": false

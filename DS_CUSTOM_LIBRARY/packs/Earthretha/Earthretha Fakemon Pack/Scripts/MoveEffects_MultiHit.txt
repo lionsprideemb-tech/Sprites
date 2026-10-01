@@ -1,0 +1,7 @@
+#===============================================================================
+# Hits twice. May paralyze the target on each hit. (Forest Kick)
+#===============================================================================
+class Battle::Move::HitTwoTimesParalyzeTarget < Battle::Move::ParalyzeTarget
+  def multiHitMove?;            return true; end
+  def pbNumHits(user, targets); return 2;    end
+end

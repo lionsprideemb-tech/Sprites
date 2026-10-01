@@ -1,0 +1,77 @@
+#-------------------------------
+[DESERTSPIRIT]
+Name = Desert Spirit
+Description = Immune to Sandstorm. Powers up sound moves.
+#-------------------------------
+[FLYGON,1]
+FormName = Mega Flygon
+Types = BUG,DRAGON
+MegaStone = FLYGONITE
+BaseStats = 80,110,75,145,135,75
+BaseExp = 313
+Abilities = DESERTSPIRIT
+Height = 2.3
+Weight = 101.0
+Pokedex = Mega Evolution has unlocked its latent insect DNA. It zips through sandstorms, easily taking down prey.
+Generation = 6
+#-------------------------------
+Go to Script Editor, press CTRL + SHIFT + F to find the Sandstorm damage section in Battle_Battler (542) and add :DESERTSPIRIT,
+
+    return false if hasActiveAbility?([:DESERTSPIRIT, :OVERCOAT, :SANDFORCE, :SANDRUSH, :SANDVEIL])
+#-------------------------------
+Add :DESERTSPIRIT, to the 2 section in AI_Utilities (145)
+#-------------------------------
+Add this in AI_Utilities, make sure it's the same section as Punk Rock
+
+Battle::AI::Handlers::AbilityRanking.add(:DESERTSPIRIT,
+  proc { |ability, score, battler, ai|
+    next score if battler.check_for_move { |m| m.damagingMove? && m.soundMove? }
+    next 1
+  }
+)
+#-------------------------------
+Add this in Battle_AbilityEffects, the same section as Punk Rock
+
+Battle::AbilityEffects::DamageCalcFromTarget.add(:DESERTSPIRIT,
+  proc { |ability, user, target, move, mults, power, type|
+    mults[:final_damage_multiplier] /= 2 if move.soundMove?
+  }
+)
+#-------------------------------
+[DESERTSONG]
+Name = Desert Song
+Type = GROUND
+Category = Special
+Power = 80
+Accuracy = 100
+TotalPP = 10
+Target = AllNearFoes
+FunctionCode = StartSandstormWeather
+Flags = Sound,CanProtect,CanMirrorMove
+EffectChance = 100
+Description = The user violently flaps it's wings, starting a Sandstorm.
+#-------------------------------
+[FLYGON]
+Name = Flygon
+Types = GROUND,DRAGON
+BaseStats = 80,100,80,100,80,80
+GenderRatio = Female50Percent
+GrowthRate = Parabolic
+BaseExp = 260
+EVs = ATTACK,1,SPEED,2
+CatchRate = 45
+Happiness = 50
+Abilities = LEVITATE,TINTEDLENS
+HiddenAbilities = SANDVEIL
+Moves = -1,BITE,-1,FISSURE,-1,DIG,-1,CRUNCH,-1,SUPERPOWER,-1,ASTONISH,-1,DRAGONDANCE,-1,FEINT,0,DRAGONCLAW,1,SANDATTACK,1,SUPERSONIC,1,DRAGONBREATH,1,BULLDOZE,12,MUDSLAP,16,SANDTOMB,20,DRAGONTAIL,24,SCREECH,28,BUGBUZZ,32,SANDSTORM,38,EARTHPOWER,44,EARTHQUAKE,50,DESERTSONG,60,DRAGONRUSH,68,BOOMBURST
+TutorMoves = AERIALACE,AGILITY,AIRCUTTER,AIRSLASH,ALLURINGVOICE,BODYSLAM,BOOMBURST,BREAKINGSWIPE,BUGBITE,BUGBUZZ,BULLDOZE,CRUNCH,DIG,DESERTSONG,DOUBLEEDGE,DRACOMETEOR,DRAGONCHEER,DRAGONCLAW,DRAGONDANCE,DRAGONPULSE,DRAGONTAIL,DUALWINGBEAT,EARTHPOWER,EARTHQUAKE,ECHOEDVOICE,ENDURE,FACADE,FELLSTINGER,FIREBLAST,FIREPUNCH,FIRESPIN,FLAMETHROWER,FLY,GIGADRAIN,GIGAIMPACT,HEATWAVE,HELPINGHAND,HYPERBEAM,HYPERVOICE,MUDSHOT,MUDSLAP,OUTRAGE,POUNCE,PROTECT,PSYCHICNOISE,REST,ROCKSLIDE,ROCKTOMB,ROUND,SANDSTORM,SANDTOMB,SCALESHOT,SCORCHINGSANDS,SLEEPTALK,SOLARBEAM,STEALTHROCK,STONEEDGE,STRUGGLEBUG,SUBSTITUTE,SUNNYDAY,SWIFT,TAILWIND,TAKEDOWN,THROATCHOP,THUNDERPUNCH,UPROAR,UTURN,VACUUMWAVE,TERABLAST
+EggGroups = Bug,Dragon
+HatchSteps = 5120
+Height = 2.0
+Weight = 82.0
+Color = Green
+Shape = Winged
+Habitat = RoughTerrain
+Category = Mystic
+Pokedex = The flapping of its wings sounds like singing. To prevent detection by enemies, it hides itself by flapping up a cloud of desert sand.
+Generation = 3

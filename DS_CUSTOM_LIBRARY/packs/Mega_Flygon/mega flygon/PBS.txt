@@ -1,0 +1,30 @@
+#* This is the PBS for mega flygon, put me in 'pokemon_forms'!
+
+#-------------------------------
+[FLYGON,1]
+FormName = Mega Flygon
+Types = BUG,DRAGON
+MegaStone = FLYGONITE
+BaseStats = 90,130,90,90,90,130
+BaseExp = 313
+Abilities = COMPOUNDEYES
+HiddenAbilities = COMPOUNDEYES
+Height = 2.1
+Weight = 78.0
+Pokedex = Mega Evolution has unlocked its latent insect DNA. With incredible speed and ferocity this pokemon uses a wicked stinger on any who come near.
+Generation = 6
+
+
+
+
+#* This is the PBS for Flygonite, put me in 'items'!
+
+#-------------------------------
+[FLYGONITE]
+Name = Flygonite
+NamePlural = Flygonites
+Pocket = 1
+Price = 0
+BPPrice = 50
+Flags = MegaStone,Fling_80
+Description = One of a variety of mysterious Mega Stones. Have Flygon hold it, and it will be able to Mega Evolve.
