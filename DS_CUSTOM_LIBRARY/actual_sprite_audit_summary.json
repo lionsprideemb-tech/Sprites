@@ -1,8 +1,9 @@
 {
-  "actual_sprite_image_files_total": 19530,
+  "actual_sprite_image_files_total": 19532,
   "generic_actual_image_files": 19486,
-  "hack_actual_image_files": 44,
+  "hack_actual_image_files": 46,
   "hack_pack_counts": {
+    "Altered_Platinum_Custom_Sprites": 2,
     "Banished_Platinum_Free_Megas": 44
   },
   "hack_source_status": [
@@ -13,8 +14,8 @@
     },
     {
       "project": "Pokemon Altered Platinum",
-      "actual_sprite_files": 0,
-      "status": "SOURCE_ONLY_OR_BLOCKED"
+      "actual_sprite_files": 2,
+      "status": "SPRITES_COLLECTED"
     },
     {
       "project": "Pokemon XYZ NDS",

@@ -1,10 +1,29 @@
 {
   "folder_id": "1IioxRnOxfZvYVKTJewdBYprutRqTk1gs",
-  "folder_url": "https://drive.google.com/drive/folders/1IioxRnOxfZvYVKTJewdBYprutRqTk1gs",
   "gdown_rc": 0,
-  "stdout_tail": "Processing file 1ohYe_6hUy-VziZfv_i1uO0DA7jLAht6- Miror B. Sprites.zip\n",
-  "stderr_tail": "warning: `--folder` is no longer required for folder URLs and will be removed in a future release\nRetrieving folder contents\nRetrieving folder contents completed\nBuilding directory structure\nBuilding directory structure completed\nDownloading...\nFrom: https://drive.google.com/uc?id=1ohYe_6hUy-VziZfv_i1uO0DA7jLAht6-\nTo: /tmp/altered-custom-sprites/Miror B. Sprites.zip\n\n  0%|          | 0.00/14.5k [00:00<?, ?B/s]\n100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 14.5k/14.5k [00:00<00:00, 57.9MB/s]\nDownload completed\n",
-  "actual_sprite_image_files": 0,
-  "status": "NO_ACTUAL_IMAGES_RECOVERED",
-  "files": []
+  "downloaded_archives": [
+    "Miror B. Sprites.zip"
+  ],
+  "extractions": [
+    {
+      "archive": "Miror B. Sprites.zip",
+      "rc": 0,
+      "stdout_tail": "\n7-Zip 23.01 (x64) : Copyright (c) 1999-2023 Igor Pavlov : 2023-06-20\n 64-bit locale=C.UTF-8 Threads:4 OPEN_MAX:65536\n\nScanning the drive for archives:\n1 file, 14454 bytes (15 KiB)\n\nExtracting archive: /tmp/altered-custom-sprites/Miror B. Sprites.zip\n--\nPath = /tmp/altered-custom-sprites/Miror B. Sprites.zip\nType = zip\nPhysical Size = 14454\n\nEverything is Ok\n\nFiles: 3\nSize:       21382\nCompressed: 14454\n",
+      "stderr_tail": ""
+    }
+  ],
+  "actual_sprite_image_files": 2,
+  "status": "SPRITES_COLLECTED",
+  "files": [
+    {
+      "path": "DS_CUSTOM_LIBRARY/hack-packs/Altered_Platinum_Custom_Sprites/extracted/Miror B. Sprites/mmodel_417.png",
+      "bytes": 6997,
+      "sha256": "06bcb05eb72a6dc86dc33d16050e3800915113467b976050eabd3b136f585901"
+    },
+    {
+      "path": "DS_CUSTOM_LIBRARY/hack-packs/Altered_Platinum_Custom_Sprites/extracted/Miror B. Sprites/trfgra_515.RGCN.png",
+      "bytes": 13964,
+      "sha256": "8914fa779266d3b5357b620027cbe52f13341b9f7688435b92d7f5415a97d329"
+    }
+  ]
 }
