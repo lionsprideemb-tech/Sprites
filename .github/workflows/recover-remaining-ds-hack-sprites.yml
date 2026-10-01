@@ -249,7 +249,8 @@ jobs:
           } for r in reports],indent=2))
           PY
 
-      - name: Rebuild strict audit
+      - name: Skip shared audit rebuild in source job
+        if: ${{ false }}
         run: |
           python - <<'PY'
           from pathlib import Path
