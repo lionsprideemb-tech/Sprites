@@ -19,7 +19,7 @@ main{max-width:1440px;margin:auto;padding:18px}.intro{background:var(--panel);bo
 .approve.active{background:#123d21;border-color:var(--green)}.reject.active{background:#4a1818;border-color:var(--red)}.maybe.active{background:#4a3714;border-color:var(--amber)}
 .badge{display:inline-block;font-size:11px;padding:3px 7px;border-radius:999px;background:#2b3c57;color:#d8e7fa;margin-left:6px}.badge.multi{background:#503d13;color:#ffd978}.badge.unidentified{background:#5a2020;color:#ffd9d6}
 .labels{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}.labelname{font-size:13px;font-weight:700;color:#e8f1ff}.type{display:inline-block;font-size:11px;font-weight:800;padding:4px 8px;border-radius:999px;border:1px solid #4a5f7c;background:#24364f;color:#fff;text-transform:uppercase;letter-spacing:.35px}.type.unknown{opacity:.65}
-.groupTitle{grid-column:1/-1;margin:12px 0 0;padding:10px 3px;font-size:18px;font-weight:800;border-bottom:1px solid var(--line)}
+.groupTitle{grid-column:1/-1;margin:18px 0 4px;padding:12px 10px;font-size:18px;font-weight:800;border:1px solid var(--line);border-radius:10px;background:#152238}.familyContext{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:7px;margin:-2px 0 6px}.ctx{font-size:12px;padding:5px 8px;border-radius:999px;background:#22334d;border:1px solid #3a4f6d;color:#d9e8fb}.stageLabel{font-size:11px;font-weight:800;color:#9fb0c7;margin-top:5px;text-transform:uppercase;letter-spacing:.4px}.evolves{font-size:12px;color:#c8d8ee;margin-top:5px}
 .empty{grid-column:1/-1;text-align:center;color:var(--muted);padding:50px}.footerNote{color:var(--muted);font-size:12px;margin-top:18px;text-align:center}.progress{height:7px;background:#24344d;border-radius:999px;overflow:hidden;margin-top:10px}.progress>div{height:100%;background:linear-gradient(90deg,#2f81f7,#3fb950);width:0}
 @media(max-width:720px){.controls{grid-template-columns:1fr 1fr}.controls input{grid-column:1/-1}.spritebox{height:200px}.spritebox img{width:178px;height:178px}.wrap,main{padding-left:10px;padding-right:10px}}
 </style>
@@ -107,11 +107,12 @@ function proposedIdentity(r){
   if(e&&e.name&&e.type1&&e.type1!=='TBD')return {name:e.name,type1:e.type1,type2:e.type2||'',family:e.family||''};
   return null;
 }
+function cleanName(s){return String(s||'').replace(/[, ]+\d+$/,'').trim()}
 function displayName(r){
   const p=proposedIdentity(r);
-  if(p)return p.name;
+  if(p)return cleanName(p.name);
   const t=typeRecord(r);
-  if(t&&t.name)return t.name;
+  if(t&&t.name)return cleanName(t.name);
   if(isOpaqueIdentity(r.identity))return 'UNIDENTIFIED SPRITE';
   return pretty(r.identity);
 }
@@ -254,6 +255,38 @@ async function buildFamilyMap(){
   }
   document.getElementById('families').textContent=[...new Set(rows.map(r=>r.family_key))].length+' families';
 }
+function familyMembersFromLabel(label){
+  return String(label||'').split('→').map(x=>x.trim()).filter(Boolean);
+}
+function normalizeDisplay(s){return String(s||'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim()}
+function familyStageIndex(r,fk){
+  const fam=familyDisplay(r)||familyLabels[fk]||'';
+  const members=familyMembersFromLabel(fam);
+  const dn=normalizeDisplay(displayName(r));
+  const idn=normalizeDisplay(r.identity);
+  for(let i=0;i<members.length;i++){
+    const m=normalizeDisplay(members[i]);
+    if(m && (dn.includes(m)||idn.includes(m)||m.includes(normalizeDisplay(baseSpecies(r.identity))))) return i;
+  }
+  // Megas and other powered forms should appear after their base stage.
+  if(/mega|primal|gigantamax|gmax/i.test(displayName(r)+' '+r.identity)) return Math.max(0,members.length);
+  return 999;
+}
+function stageText(r,fk){
+  const fam=familyDisplay(r)||familyLabels[fk]||'';
+  const members=familyMembersFromLabel(fam);
+  const idx=familyStageIndex(r,fk);
+  if(idx===999)return 'Family variant / alternate';
+  if(idx>=members.length)return 'Powered / alternate form';
+  return idx===0?'Base stage':('Evolution stage '+idx);
+}
+function familyContextHTML(fk, identities){
+  const sample=[...identities.values()].flat()[0];
+  const fam=familyDisplay(sample)||familyLabels[fk]||'';
+  const members=familyMembersFromLabel(fam);
+  if(!members.length)return '';
+  return '<div class="familyContext">'+members.map((m,i)=>'<span class="ctx">'+(i===0?'Base: ':('Stage '+i+': '))+m+'</span>').join('')+'</div>';
+}
 function renderStats(){
   const total=rows.length, reviewed=rows.filter(r=>decisions[key(r)]).length;
   document.getElementById('done').textContent=reviewed+' / '+total+' reviewed';
@@ -285,16 +318,16 @@ function render(){
   for(const [fk,identities] of [...families.entries()].sort((a,b)=>(familyLabels[a[0]]||a[0]).localeCompare(familyLabels[b[0]]||b[0]))){
     const familyCount=[...identities.values()].reduce((n,a)=>n+a.length,0);
     const fh=document.createElement('div');fh.className='groupTitle';
-    fh.textContent=fk.startsWith('__unidentified__')?('Needs identification — '+fk.replace('__unidentified__','')+' — '+familyCount+' sprite'+(familyCount===1?'':'s')):((familyLabels[fk]||pretty(fk))+' family — '+familyCount+' custom design'+(familyCount===1?'':'s'));
+    fh.textContent=fk.startsWith('__unidentified__')?('Needs identification — '+fk.replace('__unidentified__','')+' — '+familyCount+' sprite'+(familyCount===1?'':'s')):((familyDisplay([...identities.values()].flat()[0])||familyLabels[fk]||pretty(fk))+' — '+familyCount+' design'+(familyCount===1?'':'s'));
     grid.appendChild(fh);
+    if(!fk.startsWith('__unidentified__'))grid.insertAdjacentHTML('beforeend',familyContextHTML(fk,identities));
 
-    // Preserve evolution-chain order where PokeAPI gave us one, then identity name.
-    const chainOrder=(familyLabels[fk]||'').split(' → ').map(x=>x.toLowerCase());
+    // Sort by explicit evolution stage first, then keep competing designs adjacent.
     const ordered=[...identities.entries()].sort((a,b)=>{
-      const ba=pretty(baseSpecies(a[0])).toLowerCase(), bb=pretty(baseSpecies(b[0])).toLowerCase();
-      const ia=chainOrder.indexOf(ba), ib=chainOrder.indexOf(bb);
-      if(ia>=0||ib>=0)return (ia<0?999:ia)-(ib<0?999:ib) || a[0].localeCompare(b[0]);
-      return a[0].localeCompare(b[0]);
+      const ar=a[1][0], br=b[1][0];
+      const sa=familyStageIndex(ar,fk), sb=familyStageIndex(br,fk);
+      if(sa!==sb)return sa-sb;
+      return displayName(ar).localeCompare(displayName(br));
     });
     for(const [ident,items] of ordered){
       items.forEach((r,i)=>{
@@ -304,6 +337,8 @@ function render(){
           <div class="head"><div class="name">${displayName(r)} ${unidentified?'<span class="badge unidentified">NEEDS ID</span>':(multi?'<span class="badge multi">COMPARE</span>':'<span class="badge">CUSTOM</span>')}</div>
           <div class="labels"><span class="labelname">Name: ${unidentified?'Unknown (source ID '+r.identity+')':displayName(r)}</span>${typeHTML(r)}</div>
           <div class="familytag">Family: ${familyDisplay(r)||'TBD'}</div>
+          <div class="stageLabel">${stageText(r,fk)}</div>
+          <div class="evolves">${familyMembersFromLabel(familyDisplay(r)||familyLabels[fk]||'').join(' → ')||'No evolution chain information'}</div>
           ${proposedIdentity(r)?'<div class="meta">Provisional Mercury pitch • source ID '+r.identity+'</div>':''}
           <div class="meta">${r.source} • ${r.bucket}${multi?' • design '+(i+1)+' of '+items.length:''}</div>
           <div class="meta" title="${r.front_path}">Source file: ${r.front_path}</div></div>
