@@ -7,6 +7,7 @@ MANIFEST=MASTER/"ds_ready_front_design_manifest.csv"
 TYPEMAP=MASTER/"mercury_name_type_map.json"
 OUT=MASTER/"fakemon_enriched_metadata.json"
 REPORT=MASTER/"fakemon_enrichment_report.csv"
+EXCLUDED=MASTER/"fakemon_excluded_incomplete.csv"
 
 def norm(s):
     return re.sub(r"-+","-",re.sub(r"[^a-z0-9]+","-",str(s or "").lower())).strip("-")
@@ -256,6 +257,20 @@ with REPORT.open("w",newline="",encoding="utf-8") as f:
     w=csv.DictWriter(f,fieldnames=fields);w.writeheader()
     for x in report:w.writerow({k:x.get(k,"") for k in fields})
 
+with EXCLUDED.open("w",newline="",encoding="utf-8") as f:
+    fields=["identity","name","type1","type2","family","source","front_path","back_path","missing"]
+    w=csv.DictWriter(f,fieldnames=fields);w.writeheader()
+    for x in report:
+        if x["ready_for_approval"]: continue
+        missing=[]
+        if not x.get("name"): missing.append("name")
+        if not x.get("type1") or x.get("type1")=="TBD": missing.append("type")
+        if not x.get("family"): missing.append("family")
+        if not x.get("back_path"): missing.append("back sprite")
+        row={k:x.get(k,"") for k in fields}
+        row["missing"]="; ".join(missing)
+        w.writerow(row)
+
 summary={
  "custom_entries":len(report),
  "ready":sum(1 for x in report if x["ready_for_approval"]),
@@ -263,6 +278,8 @@ summary={
  "missing_back":sum(1 for x in report if not x.get("back_path")),
  "standalone_proposals":sum(1 for x in report if x.get("family")=="Standalone / no evolution data found"),
  "source_metadata_records":len(meta),
+ "excluded_from_approval":sum(1 for x in report if not x["ready_for_approval"]),
+ "approval_policy":"Only fully identified entries with name, type, family placement, front sprite and back sprite are admitted to approval.",
 }
 (MASTER/"fakemon_enrichment_summary.json").write_text(json.dumps(summary,indent=2)+"\n")
 print(json.dumps(summary,indent=2))
