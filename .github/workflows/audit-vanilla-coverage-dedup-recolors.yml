@@ -236,14 +236,50 @@ jobs:
 
           recolor_delete=[]
           recolor_groups=[]
+
+          # These source packs primarily contain canonical/official Pokémon assets.
+          # Palette differences here can represent shinies, gender differences,
+          # official type/form mechanics, flower/pattern variants, etc. They are
+          # comparison material, not "lazy custom recolors" to purge.
+          official_palette_sources={
+              'DrPrettyman_DS_64x64','HG_Engine_DS_Sprites','DS_Styled_Gen5_8',
+              'Gen7_DS_Backsprites','Shiny_Icons_Gen1_9'
+          }
+
+          # Known official families where palette-only differences are legitimate.
+          official_palette_families={
+              'silvally','vivillon','flabebe','floette','florges','minior',
+              'alcremie','deerling','sawsbuck','shellos','gastrodon','basculin',
+              'squawkabilly','tatsugiri','furfrou','unown','burmy','wormadam'
+          }
+
+          def recolor_is_protected(a):
+              p=a['path'].lower()
+              stem=norm(Path(a['path']).stem)
+              if a['source'] in official_palette_sources:
+                  return True
+              if 'shiny' in p:
+                  return True
+              if any(stem==fam or stem.startswith(fam+'-') or stem.startswith(fam+'_') for fam in official_palette_families):
+                  return True
+              return False
+
           for sh,items in struct.items():
               # Need different exact hashes; otherwise this is only an exact dup group.
               hashes={x['sha256'] for x in items}
               if len(items)<2 or len(hashes)<2: continue
-              keep=min(items,key=quality_key)
+              # If every member is protected canonical material, skip the group.
+              unprotected=[a for a in items if not recolor_is_protected(a)]
+              if not unprotected:
+                  continue
+
+              # Prefer a protected canonical copy as the keeper when one exists;
+              # otherwise keep the best-quality unprotected rendition.
+              protected_members=[a for a in items if recolor_is_protected(a)]
+              keep=min(protected_members,key=quality_key) if protected_members else min(items,key=quality_key)
               recolor_groups.append((sh,len(items),keep['path']))
               for a in items:
-                  if a['path']==keep['path'] or a['protected']: continue
+                  if a['path']==keep['path'] or a['protected'] or recolor_is_protected(a): continue
                   recolor_delete.append({
                       'reason':'PURE_PALETTE_RECOLOR','delete_path':a['path'],'keep_path':keep['path'],
                       'structural_signature':sh,'delete_sha256':a['sha256'],'keep_sha256':keep['sha256'],
@@ -286,6 +322,7 @@ jobs:
                   'DrPrettyman_DS_64x64 is protected and never quarantined by this pass.',
                   'Official shiny component slots are protected; shiny-vs-normal is not treated as junk recolor.',
                   'Recolor detection only flags exact same pixel partition/shape with different palette values.',
+                  'Official/canonical palette sources, shiny paths, and known official palette-form families are excluded from recolor deletion.',
                   'Vanilla base-species coverage accepts a concrete non-Mega form filename when the bare species filename does not exist.',
                   'This pass writes deletion candidates only; it does not delete image files.'
               ]
