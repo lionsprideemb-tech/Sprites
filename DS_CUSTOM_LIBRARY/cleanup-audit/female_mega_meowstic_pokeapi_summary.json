@@ -1,0 +1,19 @@
+{
+  "source": "PokeAPI/sprites",
+  "pokemon_id": 10326,
+  "name": "meowstic-female-mega",
+  "battle_slots_found": 4,
+  "dimensions": [
+    "96x96"
+  ],
+  "max_opaque_colors": 13,
+  "all_distinct_from_male_mega": false,
+  "distinct_by_slot": {
+    "front": false,
+    "back": false,
+    "front-shiny": false,
+    "back-shiny": false
+  },
+  "ds_palette_16_or_less": true,
+  "note": "PokeAPI also exposes these under generation-v/black-white for normal front/back, indicating DS-style pixel battle assets. Icon remains sourced separately."
+}
