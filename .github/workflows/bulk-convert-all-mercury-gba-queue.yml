@@ -1,0 +1,130 @@
+name: Bulk Convert All Mercury GBA Queue
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "DS_CUSTOM_LIBRARY/comparison/remaining_gba_triage.csv"
+      - "DS_CUSTOM_LIBRARY/packs/Elite_Redux_ER_nextdex/**"
+      - "tools/mercury_bulk_gba_to_ds.py"
+      - ".github/workflows/bulk-convert-all-mercury-gba-queue.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  convert:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Pillow
+        run: pip install pillow
+
+      - name: Build normalized GBA source staging pack
+        shell: python
+        run: |
+          from pathlib import Path
+          import csv, shutil, re, json
+
+          triage=Path("DS_CUSTOM_LIBRARY/comparison/remaining_gba_triage.csv")
+          er=Path("DS_CUSTOM_LIBRARY/packs/Elite_Redux_ER_nextdex")
+          stage=Path("DS_CUSTOM_LIBRARY/gba-source-staging/All_Mercury_GBA_Queue")
+          report=Path("DS_CUSTOM_LIBRARY/cleanup-audit")
+          stage.mkdir(parents=True,exist_ok=True)
+          report.mkdir(parents=True,exist_ok=True)
+
+          # Rebuild staging deterministically.
+          for p in stage.glob("*.png"):
+              p.unlink()
+
+          def norm(s):
+              s=s.upper().replace("-","_").replace(" ","_")
+              s=re.sub(r"[^A-Z0-9_]+","_",s)
+              s=re.sub(r"_+","_",s).strip("_")
+              return s
+
+          er_files={p.stem.upper():p for p in er.glob("*.png")} if er.exists() else {}
+
+          rows=[]
+          resolved=0
+          unresolved=0
+
+          with triage.open(newline="") as f:
+              for row in csv.DictReader(f):
+                  key=row["mercury_key"]
+                  base=norm(key)
+
+                  # ER-nextdex canonical four-way names.
+                  wanted={
+                      "front": base,
+                      "back": base+"_BACK",
+                      "front_shiny": base+"_SHINY",
+                      "back_shiny": base+"_BACK_SHINY",
+                  }
+
+                  found={}
+                  for slot,stem in wanted.items():
+                      p=er_files.get(stem)
+                      if p:
+                          found[slot]=p
+
+                  # Require at least a front to stage.
+                  if "front" in found:
+                      for slot,p in found.items():
+                          suffix={
+                              "front":"",
+                              "back":"_BACK",
+                              "front_shiny":"_SHINY",
+                              "back_shiny":"_BACK_SHINY",
+                          }[slot]
+                          shutil.copy2(p,stage/f"{base}{suffix}.png")
+                      resolved+=1
+                      status="RESOLVED_ER_NEXTDEX"
+                  else:
+                      unresolved+=1
+                      status="UNRESOLVED_SOURCE_NOT_IN_REPO"
+
+                  rows.append({
+                      "mercury_key":key,
+                      "normalized_key":base,
+                      "status":status,
+                      "front":str(found.get("front","")),
+                      "back":str(found.get("back","")),
+                      "front_shiny":str(found.get("front_shiny","")),
+                      "back_shiny":str(found.get("back_shiny","")),
+                      "triage_category":row.get("triage_category",""),
+                      "next_action":row.get("next_action",""),
+                  })
+
+          with (report/"all_mercury_gba_source_resolution.csv").open("w",newline="") as f:
+              w=csv.DictWriter(f,fieldnames=rows[0].keys())
+              w.writeheader(); w.writerows(rows)
+
+          summary={
+              "queue_total":len(rows),
+              "resolved_to_er_nextdex_source":resolved,
+              "unresolved_source_not_present":unresolved,
+              "staging_path":str(stage),
+              "note":"This pass only stages source art already present in the Sprites repo. It does not invent or silently substitute native DS art for unresolved GBA/custom entries."
+          }
+          (report/"all_mercury_gba_source_resolution_summary.json").write_text(json.dumps(summary,indent=2)+"\n")
+          print(json.dumps(summary,indent=2))
+
+      - name: Run technical conversion on every resolved GBA source
+        run: |
+          rm -rf DS_CUSTOM_LIBRARY/converted/All_Mercury_GBA_Queue
+          mkdir -p DS_CUSTOM_LIBRARY/converted/All_Mercury_GBA_Queue
+          python tools/mercury_bulk_gba_to_ds.py             --source DS_CUSTOM_LIBRARY/gba-source-staging/All_Mercury_GBA_Queue             --output DS_CUSTOM_LIBRARY/converted/All_Mercury_GBA_Queue             --report-dir DS_CUSTOM_LIBRARY/cleanup-audit/all-mercury-gba
+
+      - name: Commit results
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add             DS_CUSTOM_LIBRARY/gba-source-staging/All_Mercury_GBA_Queue             DS_CUSTOM_LIBRARY/converted/All_Mercury_GBA_Queue             DS_CUSTOM_LIBRARY/cleanup-audit/all_mercury_gba_source_resolution.csv             DS_CUSTOM_LIBRARY/cleanup-audit/all_mercury_gba_source_resolution_summary.json             DS_CUSTOM_LIBRARY/cleanup-audit/all-mercury-gba
+          if git diff --cached --quiet; then
+            echo "No changes"
+            exit 0
+          fi
+          git commit -m "Bulk stage and convert all Mercury GBA queue sprites"
+          git push
