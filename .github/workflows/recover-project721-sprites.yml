@@ -150,4 +150,13 @@ jobs:
           git add DS_CUSTOM_LIBRARY/hack-packs/Project_721_Thread_Sprites DS_CUSTOM_LIBRARY/project721_sprite_report.json .github/workflows/recover-project721-sprites.yml
           if git diff --cached --quiet; then exit 0; fi
           git commit -m "sprites: recover Project 721 actual sprite assets"
-          git push origin main
+          for attempt in 1 2 3 4 5; do
+            if git push origin main; then
+              exit 0
+            fi
+            echo "Push race on attempt $attempt; rebasing and retrying..."
+            git pull --rebase origin main
+            sleep 2
+          done
+          echo "Unable to push after retries"
+          exit 1
