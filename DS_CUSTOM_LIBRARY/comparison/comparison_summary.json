@@ -1,0 +1,19 @@
+{
+  "mercury_keys_total": 2504,
+  "ds_species_form_keys_total": 1572,
+  "exact_name_matches": 1550,
+  "alias_matches": 2,
+  "recommendation_counts": {
+    "USE_DS": 1547,
+    "CONVERT_GBA": 951,
+    "KEEP_BOTH_FOR_REVIEW": 5,
+    "NATIVE_NDS_REMAKE": 1
+  },
+  "ds_custom_form_candidates": 200,
+  "notes": [
+    "USE_DS means a native DS front+back match exists by conservative species/form naming.",
+    "CONVERT_GBA means no DS match was found in the currently fetched DrPrettyman library.",
+    "NATIVE_NDS_REMAKE respects the Mercury replacement ledger and overrides ordinary matching.",
+    "This is a name/coverage pass, not final visual approval; matched art still needs quality/provenance review."
+  ]
+}
