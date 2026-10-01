@@ -30,6 +30,7 @@
     "Shiny_Icons_Gen1_9": 1424,
     "SoothingSilver_Embedded_Images": 43
   },
+  "rule": "Only actual image asset bytes count. Links, patches, docs, screenshots/reference previews do not.",
   "hack_source_status": [
     {
       "project": "Pokemon Platinum Redux",
@@ -77,6 +78,5 @@
       "status": "SPRITES_COLLECTED"
     }
   ],
-  "excluded_from_counts": "DS_CUSTOM_LIBRARY/hack-reference-previews",
-  "rule": "Only actual image asset bytes count. Links, patches, docs, screenshots/reference previews do not."
+  "excluded_from_counts": "DS_CUSTOM_LIBRARY/hack-reference-previews"
 }
