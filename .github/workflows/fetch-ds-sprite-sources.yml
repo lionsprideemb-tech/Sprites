@@ -1,0 +1,139 @@
+name: Fetch DS Sprite Sources
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/fetch-ds-sprite-sources.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Prepare tools
+        run: |
+          sudo apt-get update -y
+          sudo apt-get install -y unzip p7zip-full file
+          mkdir -p DS_CUSTOM_LIBRARY/packs
+          mkdir -p /tmp/ds-sprite-fetch
+
+      - name: Fetch DrPrettyman DS-style repository
+        continue-on-error: true
+        run: |
+          rm -rf /tmp/ds-sprite-fetch/DrPrettyman
+          git clone --depth 1 https://github.com/DrPrettyman/PokemonSprites-64x64DSStyle.git /tmp/ds-sprite-fetch/DrPrettyman
+          mkdir -p DS_CUSTOM_LIBRARY/packs/DrPrettyman_DS_64x64
+          find /tmp/ds-sprite-fetch/DrPrettyman -type f \( -iname '*.png' -o -iname '*.gif' -o -iname '*.bmp' -o -iname '*.pal' -o -iname '*.txt' -o -iname '*.md' \) -print0 |             xargs -0 -I{} cp --parents "{}" DS_CUSTOM_LIBRARY/packs/DrPrettyman_DS_64x64/ || true
+          if [ -d DS_CUSTOM_LIBRARY/packs/DrPrettyman_DS_64x64/tmp/ds-sprite-fetch/DrPrettyman ]; then
+            cp -a DS_CUSTOM_LIBRARY/packs/DrPrettyman_DS_64x64/tmp/ds-sprite-fetch/DrPrettyman/. DS_CUSTOM_LIBRARY/packs/DrPrettyman_DS_64x64/
+            rm -rf DS_CUSTOM_LIBRARY/packs/DrPrettyman_DS_64x64/tmp
+          fi
+
+      - name: Fetch direct Eevee Expo packs
+        continue-on-error: true
+        run: |
+          python - <<'PY'
+          import os, subprocess, pathlib, json
+          packs = [
+            ("Fakemon_Festival", "https://eeveeexpo.com/resources/654/download"),
+            ("DS_Styled_Gen5_8", "https://www.eeveeexpo.com/resources/1469/download"),
+            ("Gen7_DS_Backsprites", "https://eeveeexpo.com/resources/601/download"),
+            ("Shiny_Icons_Gen1_9", "https://eeveeexpo.com/resources/1026/download"),
+            ("Mega_Flygon", "https://eeveeexpo.com/resources/1699/download"),
+            ("Mega_Flygon_Animated_Gen5", "https://eeveeexpo.com/resources/1933/download"),
+          ]
+          root = pathlib.Path("/tmp/ds-sprite-fetch")
+          outroot = pathlib.Path("DS_CUSTOM_LIBRARY/packs")
+          report = []
+          for name, url in packs:
+              target = root / (name + ".download")
+              dest = outroot / name
+              dest.mkdir(parents=True, exist_ok=True)
+              cmd = ["curl","-fL","--retry","2","-A","Mozilla/5.0",url,"-o",str(target)]
+              p = subprocess.run(cmd, text=True, capture_output=True)
+              entry = {"name":name,"url":url,"curl_rc":p.returncode}
+              if p.returncode != 0:
+                  entry["status"]="DOWNLOAD_FAILED"
+                  entry["stderr"]=p.stderr[-500:]
+                  report.append(entry)
+                  continue
+              kind = subprocess.run(["file","-b",str(target)], text=True, capture_output=True).stdout.strip()
+              entry["file_type"]=kind
+              extracted=False
+              for command in [
+                  ["7z","x","-y",f"-o{dest}",str(target)],
+                  ["unzip","-o",str(target),"-d",str(dest)],
+              ]:
+                  q=subprocess.run(command, text=True, capture_output=True)
+                  if q.returncode==0:
+                      extracted=True
+                      break
+              if extracted:
+                  entry["status"]="EXTRACTED"
+              else:
+                  raw = dest / "downloaded_source"
+                  raw.write_bytes(target.read_bytes())
+                  entry["status"]="DOWNLOADED_UNEXTRACTED"
+              report.append(entry)
+          pathlib.Path("DS_CUSTOM_LIBRARY/fetch_report_eeveeexpo.json").write_text(json.dumps(report,indent=2))
+          PY
+
+      - name: Normalize fetched pack trees and inventory images
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import json, hashlib, csv
+          root=Path("DS_CUSTOM_LIBRARY/packs")
+          rows=[]
+          for p in sorted(root.rglob("*")):
+              if not p.is_file():
+                  continue
+              ext=p.suffix.lower()
+              if ext not in {".png",".gif",".bmp",".jpg",".jpeg",".pal"}:
+                  continue
+              try:
+                  size=p.stat().st_size
+                  sha=hashlib.sha256(p.read_bytes()).hexdigest()
+              except Exception:
+                  continue
+              parts=p.parts
+              pack=parts[2] if len(parts)>2 else ""
+              rows.append({
+                  "pack":pack,
+                  "path":p.as_posix(),
+                  "ext":ext,
+                  "bytes":size,
+                  "sha256":sha
+              })
+          with open("DS_CUSTOM_LIBRARY/fetched_sprite_inventory.csv","w",newline="") as f:
+              w=csv.DictWriter(f,fieldnames=["pack","path","ext","bytes","sha256"])
+              w.writeheader(); w.writerows(rows)
+          summary={
+              "total_sprite_files":len(rows),
+              "packs":{}
+          }
+          for r in rows:
+              summary["packs"][r["pack"]]=summary["packs"].get(r["pack"],0)+1
+          Path("DS_CUSTOM_LIBRARY/fetched_sprite_summary.json").write_text(json.dumps(summary,indent=2))
+          print(json.dumps(summary,indent=2))
+          PY
+
+      - name: Commit sprite intake
+        run: |
+          git config user.name "Mercury Sprite Intake Bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add DS_CUSTOM_LIBRARY .github/workflows/fetch-ds-sprite-sources.yml
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+            exit 0
+          fi
+          git commit -m "Fetch DS sprite source packs"
+          git push origin main
