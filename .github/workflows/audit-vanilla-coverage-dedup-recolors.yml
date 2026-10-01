@@ -73,8 +73,17 @@ jobs:
           # Local Mega forms are also protected: official, project-custom, and any already staged native DS Mega form.
           local_megas=set()
           for p in CORE.rglob('*'):
-              if p.is_file() and p.suffix.lower() in EXTS and 'mega' in norm(p.stem):
-                  local_megas.add(norm(p.stem))
+              if not (p.is_file() and p.suffix.lower() in EXTS):
+                  continue
+              k=norm(p.stem)
+              # floating-pokemon can use names such as back__foo-mega; strip renderer prefix
+              if '__' in p.stem:
+                  k=norm(p.stem.split('__',1)[1])
+              for pref in ('front-','back-','icon-','shiny-','sprite-'):
+                  if k.startswith(pref) and 'mega' in k[len(pref):]:
+                      k=k[len(pref):]
+              if 'mega' in k:
+                  local_megas.add(k)
           replacement_summary=ROOT/'replacement-map'/'replacement_manifest_summary.json'
           mercury_custom=[]
           if replacement_summary.exists():
@@ -93,19 +102,34 @@ jobs:
               if d.exists():
                   idx[c]={norm(p.stem) for p in d.iterdir() if p.is_file() and p.suffix.lower() in EXTS}
 
+          def resolve_component_key(k, cat, kind):
+              if k in idx[cat]:
+                  return k
+              # Vanilla species with mandatory/form-specific filenames: accept a concrete
+              # species form when the bare species key does not exist.
+              if kind=='VANILLA_SPECIES':
+                  candidates=sorted(x for x in idx[cat] if x.startswith(k+'-'))
+                  # Avoid accidentally satisfying a base species only with a Mega/Gmax form.
+                  candidates=[x for x in candidates if '-mega' not in x and 'gigantamax' not in x and '-gmax' not in x]
+                  if candidates:
+                      return candidates[0]
+              return ''
+
           def coverage_rows(keys, kind):
               rows=[]
               for k in sorted(set(keys)):
                   row={'kind':kind,'key':k}
-                  for c in categories:
-                      row[c]=k in idx[c]
-                  row['complete']=all(row[c] for c in ['front','back','front-shiny','back-shiny','icon'])
+                  for cat in categories:
+                      resolved=resolve_component_key(k,cat,kind)
+                      row[cat]=bool(resolved)
+                      row[cat+'_key']=resolved
+                  row['complete']=all(row[cat] for cat in ['front','back','front-shiny','back-shiny','icon'])
                   rows.append(row)
               return rows
 
           vanilla_rows=coverage_rows(species,'VANILLA_SPECIES')
           mega_rows=coverage_rows(all_megas,'MEGA')
-          fields=['kind','key']+categories+['complete']
+          fields=['kind','key']+sum(([cat,cat+'_key'] for cat in categories),[])+['complete']
           with (OUT/'vanilla_and_mega_coverage.csv').open('w',newline='') as f:
               w=csv.DictWriter(f,fieldnames=fields); w.writeheader(); w.writerows(vanilla_rows+mega_rows)
 
@@ -262,6 +286,7 @@ jobs:
                   'DrPrettyman_DS_64x64 is protected and never quarantined by this pass.',
                   'Official shiny component slots are protected; shiny-vs-normal is not treated as junk recolor.',
                   'Recolor detection only flags exact same pixel partition/shape with different palette values.',
+                  'Vanilla base-species coverage accepts a concrete non-Mega form filename when the bare species filename does not exist.',
                   'This pass writes deletion candidates only; it does not delete image files.'
               ]
           }
