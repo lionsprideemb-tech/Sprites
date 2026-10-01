@@ -1,0 +1,46 @@
+name: Mirror Priority Sprite PNGs as Base64
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/mirror-priority-sprites-b64.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  mirror:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Build base64 mirrors
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import base64, shutil
+          names=['absol-mega-z','lucario-mega-z','baxcalibur-mega','golisopod-mega']
+          root=Path('DS_CUSTOM_LIBRARY/staged-specials')
+          out=Path('DS_CUSTOM_LIBRARY/staged-specials-b64')
+          if out.exists():
+              shutil.rmtree(out)
+          for name in names:
+              srcdir=root/name
+              dstdir=out/name
+              dstdir.mkdir(parents=True,exist_ok=True)
+              for p in srcdir.glob('*.png'):
+                  (dstdir/(p.name+'.b64')).write_text(base64.b64encode(p.read_bytes()).decode('ascii'))
+          PY
+
+      - name: Commit mirrors
+        run: |
+          git config user.name "Mercury Sprite Mirror Bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add DS_CUSTOM_LIBRARY/staged-specials-b64 .github/workflows/mirror-priority-sprites-b64.yml
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "Add base64 mirrors for priority DS Mega sprites"
+          git push origin main
