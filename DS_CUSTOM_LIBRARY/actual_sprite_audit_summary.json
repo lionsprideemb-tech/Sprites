@@ -1,16 +1,17 @@
 {
-  "actual_sprite_image_files_total": 19532,
+  "actual_sprite_image_files_total": 19965,
   "generic_actual_image_files": 19486,
-  "hack_actual_image_files": 46,
+  "hack_actual_image_files": 479,
   "hack_pack_counts": {
     "Altered_Platinum_Custom_Sprites": 2,
-    "Banished_Platinum_Free_Megas": 44
+    "Banished_Platinum_Free_Megas": 44,
+    "Platinum_Redux_Embedded_Sprites": 433
   },
   "hack_source_status": [
     {
       "project": "Pokemon Platinum Redux",
-      "actual_sprite_files": 0,
-      "status": "SOURCE_ONLY_OR_BLOCKED"
+      "actual_sprite_files": 433,
+      "status": "SPRITES_COLLECTED"
     },
     {
       "project": "Pokemon Altered Platinum",
@@ -54,5 +55,5 @@
     }
   ],
   "excluded_from_counts": "DS_CUSTOM_LIBRARY/hack-reference-previews",
-  "rule": "Only actual image assets count. Links, patches, docs, screenshots/reference previews do not."
+  "rule": "Only actual image asset bytes count. Links, patches, docs, screenshots/reference previews do not."
 }
