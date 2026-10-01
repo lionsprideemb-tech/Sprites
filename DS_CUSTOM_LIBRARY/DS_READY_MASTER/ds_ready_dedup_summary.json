@@ -1,0 +1,23 @@
+{
+  "scan_roots": [
+    "DS_CUSTOM_LIBRARY/packs",
+    "DS_CUSTOM_LIBRARY/hack-packs",
+    "DS_CUSTOM_LIBRARY/converted"
+  ],
+  "ds_ready_image_files_scanned": 42635,
+  "decoded_failures": 639,
+  "front_sprite_files_found": 7729,
+  "exact_duplicate_component_files": 7871,
+  "palette_only_recolor_component_files": 1185,
+  "unique_front_visual_designs_after_exact_and_recolor_dedup": 5133,
+  "semantic_identity_count_among_unique_front_designs": 3962,
+  "custom_identities_with_multiple_genuinely_different_designs": 1157,
+  "custom_design_options_preserved_for_approval": 2320,
+  "count_definition": "A Pokemon sprite design is one unique non-shiny FRONT visual after exact duplicates and palette-only recolors are collapsed. Genuinely different designs for the same custom identity are all retained and counted.",
+  "important_policy": [
+    "Normal and shiny roles are never compared against each other.",
+    "No files are deleted by this audit.",
+    "Exact duplicates and palette-only recolors are isolated as cleanup candidates.",
+    "Different custom-mon designs are preserved for the approval sheet."
+  ]
+}
