@@ -1,0 +1,118 @@
+name: Intake PokeDot Mega Sprite Sets
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - ".github/workflows/intake-pokedot-mega-sprites.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  intake:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Pillow
+        run: pip install pillow
+      - name: Download candidate battle sprites
+        shell: bash
+        run: |
+          set -euo pipefail
+          ROOT="DS_CUSTOM_LIBRARY/packs/PokeDot_Engine_Mega_Intake"
+          mkdir -p "$ROOT"
+          BASE="https://raw.githubusercontent.com/AxelLoquendo/PokeDot-Engine/master/graphics/pokemon"
+
+          declare -A MAP=(
+            [crabominable-mega]="MEGA_CRABOMINABLE"
+            [eelektross-mega]="MEGA_EELEKTROSS"
+            [emboar-mega]="MEGA_EMBOAR"
+            [garchomp-mega-z]="MEGA_GARCHOMP_Z"
+            [golurk-mega]="MEGA_GOLURK"
+            [magearna-mega]="MEGA_MAGEARNA"
+            [magearna-original-mega]="MAGEARNA_ORIGINAL_COLOR_MEGA"
+            [meowstic-male-mega]="MEGA_MEOWSTIC"
+            [raichu-mega-y]="MEGA_RAICHU_Y"
+            [tatsugiri-curly-mega]="MEGA_TATSUGIRI"
+            [tatsugiri-droopy-mega]="TATSUGIRI_DROOPY_MEGA"
+            [tatsugiri-stretchy-mega]="TATSUGIRI_STRETCHY_MEGA"
+          )
+
+          for key in "${!MAP[@]}"; do
+            src="${MAP[$key]}"
+            dir="$ROOT/$key"
+            mkdir -p "$dir"
+            curl -fsSL "$BASE/front/$src.png" -o "$dir/front.png"
+            curl -fsSL "$BASE/back/$src.png" -o "$dir/back.png"
+            curl -fsSL "$BASE/front_shiny/$src.png" -o "$dir/front-shiny.png"
+            curl -fsSL "$BASE/back_shiny/$src.png" -o "$dir/back-shiny.png"
+            curl -fsSL "$BASE/icons/$src.png" -o "$dir/icon.png"
+          done
+
+      - name: Audit dimensions and palette
+        shell: python
+        run: |
+          from pathlib import Path
+          from PIL import Image
+          import csv, json
+
+          root=Path("DS_CUSTOM_LIBRARY/packs/PokeDot_Engine_Mega_Intake")
+          rows=[]
+          for p in sorted(root.rglob("*.png")):
+              im=Image.open(p).convert("RGBA")
+              opaque=[px for px in im.getdata() if px[3]]
+              colors=len(set(opaque))
+              rows.append({
+                  "mega":p.parent.name,
+                  "slot":p.stem,
+                  "width":im.width,
+                  "height":im.height,
+                  "opaque_colors":colors,
+                  "ds_canvas_64x64":im.size==(64,64),
+                  "ds_palette_16_or_less":colors<=16,
+                  "path":str(p)
+              })
+
+          out=Path("DS_CUSTOM_LIBRARY/cleanup-audit")
+          out.mkdir(parents=True,exist_ok=True)
+          with (out/"pokedot_mega_sprite_technical_audit.csv").open("w",newline="") as f:
+              w=csv.DictWriter(f,fieldnames=rows[0].keys())
+              w.writeheader(); w.writerows(rows)
+
+          by={}
+          for r in rows:
+              by.setdefault(r["mega"],[]).append(r)
+          summary={
+              "source":"AxelLoquendo/PokeDot-Engine",
+              "sets_downloaded":len(by),
+              "files_downloaded":len(rows),
+              "all_64x64":all(r["ds_canvas_64x64"] for r in rows),
+              "all_16_colors_or_less":all(r["ds_palette_16_or_less"] for r in rows),
+              "sets":{
+                  k:{
+                      "slots":len(v),
+                      "all_64x64":all(x["ds_canvas_64x64"] for x in v),
+                      "all_16_colors_or_less":all(x["ds_palette_16_or_less"] for x in v),
+                      "dimensions":sorted({f'{x["width"]}x{x["height"]}' for x in v}),
+                      "max_opaque_colors":max(x["opaque_colors"] for x in v)
+                  } for k,v in sorted(by.items())
+              },
+              "excluded_pending":{
+                  "meowstic-female-mega":"PokeDot resource currently points Mega female form at regular MEOWSTIC_F battle sprites; not accepted as a distinct Mega sprite source."
+              }
+          }
+          (out/"pokedot_mega_sprite_technical_summary.json").write_text(json.dumps(summary,indent=2)+"\n")
+          print(json.dumps(summary,indent=2))
+
+      - name: Commit intake
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add DS_CUSTOM_LIBRARY/packs/PokeDot_Engine_Mega_Intake DS_CUSTOM_LIBRARY/cleanup-audit/pokedot_mega_sprite_technical_audit.csv DS_CUSTOM_LIBRARY/cleanup-audit/pokedot_mega_sprite_technical_summary.json
+          if git diff --cached --quiet; then
+            echo "No changes"
+            exit 0
+          fi
+          git commit -m "Intake and audit PokeDot Mega battle sprites"
+          git push
