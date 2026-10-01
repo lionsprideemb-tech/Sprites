@@ -1,0 +1,132 @@
+{
+  "source": "AxelLoquendo/PokeDot-Engine",
+  "sets_downloaded": 12,
+  "files_downloaded": 60,
+  "all_64x64": false,
+  "all_16_colors_or_less": true,
+  "sets": {
+    "crabominable-mega": {
+      "slots": 5,
+      "all_64x64": false,
+      "all_16_colors_or_less": true,
+      "dimensions": [
+        "128x64",
+        "64x64"
+      ],
+      "max_opaque_colors": 15
+    },
+    "eelektross-mega": {
+      "slots": 5,
+      "all_64x64": false,
+      "all_16_colors_or_less": true,
+      "dimensions": [
+        "128x64",
+        "64x64"
+      ],
+      "max_opaque_colors": 15
+    },
+    "emboar-mega": {
+      "slots": 5,
+      "all_64x64": false,
+      "all_16_colors_or_less": true,
+      "dimensions": [
+        "128x64",
+        "64x64"
+      ],
+      "max_opaque_colors": 15
+    },
+    "garchomp-mega-z": {
+      "slots": 5,
+      "all_64x64": false,
+      "all_16_colors_or_less": true,
+      "dimensions": [
+        "128x64",
+        "64x64"
+      ],
+      "max_opaque_colors": 14
+    },
+    "golurk-mega": {
+      "slots": 5,
+      "all_64x64": false,
+      "all_16_colors_or_less": true,
+      "dimensions": [
+        "128x64",
+        "64x64"
+      ],
+      "max_opaque_colors": 14
+    },
+    "magearna-mega": {
+      "slots": 5,
+      "all_64x64": false,
+      "all_16_colors_or_less": true,
+      "dimensions": [
+        "128x64",
+        "64x64"
+      ],
+      "max_opaque_colors": 15
+    },
+    "magearna-original-mega": {
+      "slots": 5,
+      "all_64x64": false,
+      "all_16_colors_or_less": true,
+      "dimensions": [
+        "128x64",
+        "64x64"
+      ],
+      "max_opaque_colors": 15
+    },
+    "meowstic-male-mega": {
+      "slots": 5,
+      "all_64x64": false,
+      "all_16_colors_or_less": true,
+      "dimensions": [
+        "128x64",
+        "64x64"
+      ],
+      "max_opaque_colors": 11
+    },
+    "raichu-mega-y": {
+      "slots": 5,
+      "all_64x64": false,
+      "all_16_colors_or_less": true,
+      "dimensions": [
+        "128x64",
+        "64x64"
+      ],
+      "max_opaque_colors": 15
+    },
+    "tatsugiri-curly-mega": {
+      "slots": 5,
+      "all_64x64": false,
+      "all_16_colors_or_less": true,
+      "dimensions": [
+        "128x64",
+        "64x64"
+      ],
+      "max_opaque_colors": 15
+    },
+    "tatsugiri-droopy-mega": {
+      "slots": 5,
+      "all_64x64": false,
+      "all_16_colors_or_less": true,
+      "dimensions": [
+        "128x64",
+        "64x64"
+      ],
+      "max_opaque_colors": 14
+    },
+    "tatsugiri-stretchy-mega": {
+      "slots": 5,
+      "all_64x64": false,
+      "all_16_colors_or_less": true,
+      "dimensions": [
+        "128x64",
+        "64x64"
+      ],
+      "max_opaque_colors": 14
+    }
+  },
+  "excluded_pending": {
+    "meowstic-female-mega": "PokeDot resource currently points Mega female form at regular MEOWSTIC_F battle sprites; not accepted as a distinct Mega sprite source."
+  }
+}
