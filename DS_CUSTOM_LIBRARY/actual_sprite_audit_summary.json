@@ -1,0 +1,54 @@
+{
+  "actual_sprite_image_files_total": 19486,
+  "generic_actual_image_files": 19486,
+  "hack_actual_image_files": 0,
+  "hack_source_status": [
+    {
+      "project": "Pokemon Platinum Redux",
+      "actual_sprite_files": 0,
+      "status": "SOURCE_ONLY_OR_BLOCKED"
+    },
+    {
+      "project": "Pokemon Altered Platinum",
+      "actual_sprite_files": 0,
+      "status": "SOURCE_ONLY_OR_BLOCKED"
+    },
+    {
+      "project": "Pokemon XYZ NDS",
+      "actual_sprite_files": 0,
+      "status": "SOURCE_ONLY_OR_BLOCKED"
+    },
+    {
+      "project": "Pokemon Platinum Unlocked regional-form project",
+      "actual_sprite_files": 0,
+      "status": "SOURCE_ONLY_OR_BLOCKED"
+    },
+    {
+      "project": "Pokemon SoothingSilver",
+      "actual_sprite_files": 0,
+      "status": "SOURCE_ONLY_OR_BLOCKED"
+    },
+    {
+      "project": "Pokemon GoldSoul",
+      "actual_sprite_files": 0,
+      "status": "SOURCE_ONLY_OR_BLOCKED"
+    },
+    {
+      "project": "Pokemon Moon Black 2",
+      "actual_sprite_files": 0,
+      "status": "SOURCE_ONLY_OR_BLOCKED"
+    },
+    {
+      "project": "Project 721",
+      "actual_sprite_files": 0,
+      "status": "SOURCE_ONLY_OR_BLOCKED"
+    },
+    {
+      "project": "Pokemon Banished Platinum",
+      "actual_sprite_files": 0,
+      "status": "SOURCE_ONLY_OR_BLOCKED"
+    }
+  ],
+  "excluded_from_counts": "DS_CUSTOM_LIBRARY/hack-reference-previews",
+  "rule": "A source is not considered collected unless actual sprite/image asset bytes are present in packs or hack-packs."
+}
