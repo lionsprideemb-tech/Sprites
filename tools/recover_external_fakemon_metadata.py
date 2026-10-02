@@ -47,7 +47,7 @@ def collection_links(base):
         raw=fetch(base+suffix)
         raws.append(raw)
     for raw in raws:
-        for href in re.findall(r"href=['\"](/mons/[^'\"?#]+)['\"]",raw):
+        for href in re.findall(r"href=['\"](/mons/[^'\"?]+)(?:\\?[^'\"]*)?['\"]",raw):
             parts=href.split("/")
             if len(parts)<4:continue
             mid,slug=parts[2],urllib.parse.unquote(parts[3])
@@ -155,24 +155,16 @@ def parse_pokengine(url,known_slugs):
       "evidence_url":url,
     }
 
-def parse_romhackguide(identity):
+def parse_romhackguide(identity,display_name=""):
     slug=identity
     url=f"https://romhackguides.com/hacks/elite-redux/pokemon/{slug}/"
     raw=fetch(url)
     if not raw:return None
     lines=text_lines(raw); joined=" ".join(lines)
     if "404" in joined[:300]:return None
-    name=""
-    for i,x in enumerate(lines):
-        if x.lower()=="elite redux" and i+1<len(lines):
-            name=lines[i+1]
-    # Better: find line exactly matching slug words title-cased.
-    if not name:
-        target=norm(identity)
-        for x in lines[:80]:
-            if norm(x)==target:
-                name=x;break
-    if not name:name=identity.replace("-"," ").title()
+    # The recovery report already has the correct display name; the guide page
+    # contains decorative breadcrumb glyphs that should never become species names.
+    name=(display_name or identity.replace("-"," ").title()).strip()
 
     t1=t2=""
     m=re.search(r"\b("+"|".join(CANON)+r")(?:\s*/\s*("+"|".join(CANON)+r"))?\s+type\b",joined)
@@ -256,7 +248,7 @@ for r in targets:
                 if norm(p.get("name")) in aliases:break
 
     if rec is None and src=="Elite_Redux_Bulk":
-        rec=parse_romhackguide(ident)
+        rec=parse_romhackguide(ident,name)
 
     if rec and rec.get("type1") in CANON and (not rec.get("type2") or rec.get("type2") in CANON):
         rec["source"]=src;rec["identity"]=ident
