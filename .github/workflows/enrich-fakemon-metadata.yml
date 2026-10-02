@@ -7,6 +7,7 @@ on:
     paths:
       - 'tools/enrich_fakemon_metadata.py'
       - 'DS_CUSTOM_LIBRARY/.run-fakemon-enrichment'
+      - 'DS_CUSTOM_LIBRARY/DS_READY_MASTER/ds_ready_front_design_manifest.csv'
 
 permissions:
   contents: write
