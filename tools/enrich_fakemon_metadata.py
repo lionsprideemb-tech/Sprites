@@ -494,6 +494,8 @@ VERIFIED_SOURCE_OVERRIDES={
     ("Mikitari","kocomb"):{"family":"Beelitant → Kocomb → Granebee"},
     ("Mikitari","kocomb-1"):{"family":"Beelitant → Kocomb → Granebee"},
     ("Mikitari","granebee"):{"family":"Beelitant → Kocomb → Granebee"},
+    ("Mikitari","flampy"):{"name":"Flampy","type1":"Poison","type2":"Normal","family":"Flampy → Murasalem"},
+    ("Mikitari","murasalem"):{"name":"Murasalem","type1":"Poison","type2":"Normal","family":"Flampy → Murasalem"},
     ("Mega_Flygon","flygon-1"):{"name":"Mega Flygon","type1":"Bug","type2":"Dragon","family":"Trapinch → Vibrava → Flygon → Mega Flygon"},
     ("Mega_Flygon_Animated_Gen5","flygon-1"):{"name":"Mega Flygon","type1":"Bug","type2":"Dragon","family":"Trapinch → Vibrava → Flygon → Mega Flygon"},
     ("PokeAPI_Mega_Meowstic_Female","pokeapi-mega-meowstic-female"):{"name":"Mega Meowstic Female","type1":"Psychic","type2":"","family":"Espurr → Meowstic → Mega Meowstic Female"},
