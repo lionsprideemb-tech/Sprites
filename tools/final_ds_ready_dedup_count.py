@@ -80,8 +80,16 @@ def role(p):
     stem=norm(p.stem); parts=[norm(x) for x in p.parts]; joined="/".join(parts)
     if "icon" in stem or "/icon/" in joined or "/icons/" in joined: return "icon"
     shiny=("shiny" in stem or any("shiny" in x for x in parts))
-    back=("back" in stem or any(x in {"back","backs","backsprite","backsprites","back-shiny"} for x in parts))
-    front=("front" in stem or any(x in {"front","fronts","frontsprite","frontsprites","front-shiny"} for x in parts))
+    back=("back" in stem or any(
+        x in {"back","backs","backsprite","backsprites","back-shiny"}
+        or "backsprite" in x or x.endswith("-backs")
+        for x in parts
+    ))
+    front=("front" in stem or any(
+        x in {"front","fronts","frontsprite","frontsprites","front-shiny"}
+        or "frontsprite" in x or x.endswith("-fronts")
+        for x in parts
+    ))
     if back: return "back_shiny" if shiny else "back"
     if front: return "front_shiny" if shiny else "front"
     return "unknown"
@@ -94,7 +102,12 @@ def identity(p, component):
         if parent in {"male","female","m","f"}:
             parent=norm(p.parent.parent.name)+"-"+parent
         return parent
-    if norm(p.parent.name) in {"front","back","front-shiny","back-shiny","icon","icons","fronts","backs","frontsprites","backsprites"}:
+    parent_norm=norm(p.parent.name)
+    if (
+        parent_norm in {"front","back","front-shiny","back-shiny","icon","icons","fronts","backs","frontsprites","backsprites"}
+        or "frontsprite" in parent_norm or "backsprite" in parent_norm
+        or parent_norm.endswith("-fronts") or parent_norm.endswith("-backs")
+    ):
         return stem
     x=stem
     for suffix in ["-front-shiny","-back-shiny","-front","-back","-icon","-shiny"]:
@@ -131,6 +144,21 @@ def quality(a):
     else: tier=3
     return (tier,len(a["path"]),a["path"])
 
+BASELINE_OFFICIAL_SOURCES={
+    "DrPrettyman_DS_64x64",
+    "HG_Engine_DS_Sprites",
+    "DS_Styled_Gen5_8",
+    "Gen7_DS_Backsprites",
+    "Shiny_Icons_Gen1_9",
+    "Elite_Redux_Bulk",
+}
+
+def asset_is_official(ident,src):
+    # A canon-named design from a known baseline source is ordinary vanilla art.
+    # The same canon name coming from a custom-form/fakemon source is preserved
+    # as a review candidate unless it collapses as an exact/recolor duplicate.
+    return src in BASELINE_OFFICIAL_SOURCES and is_official_identity(ident)
+
 assets=[]; decode_fail=[]
 for root,bucket in ROOTS:
     if not root.exists(): continue
@@ -144,9 +172,11 @@ for root,bucket in ROOTS:
         exact,struct,w,h,colors=sig
         comp=role(p)
         ident=identity(p,comp)
+        src=source(p,root)
         assets.append({
-            "path":p.as_posix(),"bucket":bucket,"source":source(p,root),
-            "role":comp,"identity":ident,"official_identity":is_official_identity(ident),
+            "path":p.as_posix(),"bucket":bucket,"source":src,
+            "role":comp,"identity":ident,"official_identity":asset_is_official(ident,src),
+            "semantic_official_name":is_official_identity(ident),
             "exact_hash":exact,"structural_hash":struct,
             "width":w,"height":h,"colors":colors
         })
@@ -236,12 +266,23 @@ def paired_back(a):
     items=back_index.get((a["source"],a["bucket"],a["identity"]),[])
     if items:
         return min(items,key=quality)["path"]
-    # Fallback to same identity across sources if the exact source omitted its back.
-    fallback=[x for x in assets if x["role"]=="back" and x["identity"]==a["identity"] and x["path"] not in exact_drop and x["path"] not in recolor_drop]
+    # Cross-source fallback is allowed only when another source carries the
+    # exact same FRONT design (same structural hash). This prevents pairing a
+    # custom front with an unrelated vanilla/custom back merely because names match.
+    same_design_fronts=[
+        x for x in assets
+        if x["role"]=="front" and x["identity"]==a["identity"]
+        and x["structural_hash"]==a["structural_hash"] and x["path"]!=a["path"]
+    ]
+    fallback=[]
+    for other in same_design_fronts:
+        fallback.extend(back_index.get((other["source"],other["bucket"],other["identity"]),[]))
+    fallback=[x for x in fallback if x["path"] not in exact_drop and x["path"] not in recolor_drop]
     return min(fallback,key=quality)["path"] if fallback else ""
 
 master=[{
     "identity":a["identity"],"is_official":a["official_identity"],
+    "semantic_official_name":a.get("semantic_official_name",False),
     "source":a["source"],"bucket":a["bucket"],
     "front_path":a["path"],"back_path":paired_back(a),
     "structural_hash":a["structural_hash"],
@@ -259,7 +300,7 @@ write_csv(OUT/"palette_only_recolors.csv",recolor_rows,
 write_csv(OUT/"custom_multi_design_approval_candidates.csv",multi,
           ["identity","design_option","source","bucket","front_path","structural_hash","exact_hash","action"])
 write_csv(OUT/"ds_ready_front_design_manifest.csv",master,
-          ["identity","is_official","source","bucket","front_path","back_path","structural_hash","exact_hash","multi_design_for_approval"])
+          ["identity","is_official","semantic_official_name","source","bucket","front_path","back_path","structural_hash","exact_hash","multi_design_for_approval"])
 (OUT/"decode_failures.txt").write_text(("\n".join(decode_fail)+"\n") if decode_fail else "")
 
 official_kept=sum(1 for x in master if x["is_official"])
