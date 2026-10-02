@@ -53,13 +53,42 @@ if(x.source==='Elite_Redux_Bulk'&&id.includes('redux'))return{role:'Delta/Redux 
 if(x.source==='Elite_Redux_Bulk')return{role:'Existing-family evolution/branch candidate',target:x.family||'Source-linked existing family',why:'Use this approved custom species as an evolution, pre-evolution, or branch of its source-linked existing family instead of making an unrelated family.',method:'TBD after placement approval',t1:x.type1||'',t2:x.type2||'',conf:'MEDIUM'};
 if(/-\d+$/.test(id)&&x.family&&!/Unresolved/i.test(x.family))return{role:'Regional/custom existing form',target:x.family,why:`Keep this custom form attached to ${x.family}.`,method:'Regional/form rules',t1:x.type1||'',t2:x.type2||'',conf:'MEDIUM'};
 return{role:'New Fakemon family',target:(x.family&&!/Unresolved|Standalone/i.test(x.family))?x.family:`${pretty(id)} line`,why:`Keep this approved design in its original Fakemon line from ${x.source}. Matching approved stages should stay together.`,method:'Level-up / TBD by family stage',t1:x.type1==='Normal'&&/Unresolved/i.test(x.family||'')?'':(x.type1||''),t2:x.type2||'',conf:'MEDIUM'}}
-function familyKey(x){
- let fam=(x.family||'').trim();
- if(fam&&!/Unresolved|Standalone/i.test(fam))return 'fam:'+fam.toLowerCase();
- let id=x.identity.toLowerCase(),b=base(id);
- if(x.source==='Elite_Redux_Bulk'&&(id.includes('redux')||id.includes('mega')))return 'redux:'+b;
- return 'single:'+key(x)
+const EVO_ROOT={
+ butterfree:'caterpie',pidgey:'pidgey',pidgeotto:'pidgey',pidgeot:'pidgey',vulpix:'vulpix',ninetales:'vulpix',
+ poliwag:'poliwag',poliwhirl:'poliwag',poliwrath:'poliwag',politoed:'poliwag',
+ geodude:'geodude',graveler:'geodude',golem:'geodude',koffing:'koffing',weezing:'koffing',
+ staryu:'staryu',starmie:'staryu',eevee:'eevee',vaporeon:'eevee',jolteon:'eevee',flareon:'eevee',espeon:'eevee',umbreon:'eevee',leafeon:'eevee',glaceon:'eevee',sylveon:'eevee',
+ dratini:'dratini',dragonair:'dratini',dragonite:'dratini',totodile:'totodile',croconaw:'totodile',feraligatr:'totodile',
+ hoothoot:'hoothoot',noctowl:'hoothoot',mareep:'mareep',flaaffy:'mareep',ampharos:'mareep',
+ sunkern:'sunkern',sunflora:'sunkern',misdreavus:'misdreavus',mismagius:'misdreavus',dunsparce:'dunsparce',dudunsparce:'dunsparce',
+ gligar:'gligar',gliscor:'gligar',snubbull:'snubbull',granbull:'snubbull',phanpy:'phanpy',donphan:'phanpy',
+ larvitar:'larvitar',pupitar:'larvitar',tyranitar:'larvitar',shroomish:'shroomish',breloom:'shroomish',
+ nosepass:'nosepass',probopass:'nosepass',skitty:'skitty',delcatty:'skitty',sableye:'sableye',electrike:'electrike',manectric:'electrike',
+ gulpin:'gulpin',swalot:'gulpin',wailmer:'wailmer',wailord:'wailmer',swablu:'swablu',altaria:'swablu',
+ duskull:'duskull',dusclops:'duskull',dusknoir:'duskull',bagon:'bagon',shelgon:'bagon',salamence:'bagon',
+ beldum:'beldum',metang:'beldum',metagross:'beldum',cranidos:'cranidos',rampardos:'cranidos',shieldon:'shieldon',bastiodon:'shieldon',
+ combee:'combee',vespiquen:'combee',carnivine:'carnivine',purrloin:'purrloin',liepard:'purrloin',munna:'munna',musharna:'munna',
+ petilil:'petilil',lilligant:'petilil',sandile:'sandile',krokorok:'sandile',krookodile:'sandile',dwebble:'dwebble',crustle:'dwebble',
+ karrablast:'karrablast',escavalier:'karrablast',shelmet:'shelmet',accelgor:'shelmet',klink:'klink',klang:'klink',klinklang:'klink',
+ tynamo:'tynamo',eelektrik:'tynamo',eelektross:'tynamo',cryogonal:'cryogonal',mienfoo:'mienfoo',mienshao:'mienfoo',
+ golett:'golett',golurk:'golett',durant:'durant',spritzee:'spritzee',aromatisse:'spritzee',tyrunt:'tyrunt',tyrantrum:'tyrunt',
+ amaura:'amaura',aurorus:'amaura',noibat:'noibat',noivern:'noibat',jangmo:'jangmo-o','jangmo-o':'jangmo-o','hakamo-o':'jangmo-o','kommo-o':'jangmo-o',
+ applin:'applin',flapple:'applin',appletun:'applin',dipplin:'applin',hydrapple:'applin',
+ pawniard:'pawniard',bisharp:'pawniard',kingambit:'pawniard',shinx:'shinx',luxio:'shinx',luxray:'shinx',
+ delibird:'delibird',rattata:'rattata',raticate:'rattata',sandygast:'sandygast',palossand:'sandygast',
+ spinarak:'spinarak',ariados:'spinarak',dedenne:'dedenne',minccino:'minccino',cinccino:'minccino',
+ yungoos:'yungoos',gumshoos:'yungoos',buizel:'buizel',floatzel:'buizel',magikarp:'magikarp',gyarados:'magikarp'
+};
+function cleanSpeciesToken(s){return String(s||'').toLowerCase().replace(/mega.*$/,'').replace(/delta|redux|regional|alternate|custom|forms?|family|proposed/g,' ').replace(/[^a-z0-9-]+/g,' ').trim().split(/\s+/)[0]||''}
+function canonicalFamily(x){
+ let fam=(x.family||'').trim(),id=x.identity.toLowerCase(),b=base(id),cands=[];
+ if(fam&&!/Unresolved|Standalone/i.test(fam))cands.push(...fam.split(/→|\/|\||,/).map(cleanSpeciesToken));
+ cands.push(cleanSpeciesToken(b),cleanSpeciesToken(id));
+ for(let c of cands){if(EVO_ROOT[c])return EVO_ROOT[c]}
+ if(fam&&!/Unresolved|Standalone/i.test(fam)){let c=cleanSpeciesToken(fam);if(c)return c}
+ return cleanSpeciesToken(b)||key(x)
 }
+function familyKey(x){return 'family:'+canonicalFamily(x)}
 function groupUnits(list){
  let map=new Map();
  for(let x of list){let fk=familyKey(x);if(!map.has(fk))map.set(fk,[]);map.get(fk).push(x)}
@@ -76,8 +105,15 @@ function groupStatus(g){
 }
 function groupSuggestion(g){
  let ss=g.members.map(suggest), first=ss[0], fam=g.members.map(x=>x.family).find(v=>v&&!/Unresolved|Standalone/i.test(v));
- let roles=[...new Set(ss.map(s=>s.role))];
- return {role:roles.length===1?roles[0]:'Family placement',target:fam||first.target,why:g.members.length>1?'Treat these approved sprites as one Pokédex family decision. Approving this card applies the placement to every member shown below; individual Mega/form roles remain attached to their member.':first.why,method:first.method,t1:first.t1,t2:first.t2,conf:ss.every(s=>s.conf==='HIGH')?'HIGH':'MEDIUM'}
+ let roles=[...new Set(ss.map(s=>s.role))],sources=[...new Set(g.members.map(x=>x.source))];
+ let baseForms=new Map(),cross=[];
+ for(let x of g.members){let b=base(x.identity.toLowerCase()),arr=baseForms.get(b)||[];arr.push(x);baseForms.set(b,arr)}
+ for(let [b,arr] of baseForms){if(arr.length>1)cross.push(pretty(b)+' ×'+arr.length)}
+ let conflicts=[];
+ if(roles.length>1)conflicts.push(roles.length+' placement roles');
+ if(sources.length>1)conflicts.push(sources.length+' art sources');
+ if(cross.length)conflicts.push('overlap: '+cross.join(', '));
+ return {role:roles.length===1?roles[0]:'Family placement',target:fam||first.target,why:g.members.length>1?'Everything tied to this evolutionary family is grouped here across sources, Megas, regional/Delta forms, and custom evolutions. Review the whole card before approving so overlapping designs or competing roles can be resolved together.':first.why,method:first.method,t1:first.t1,t2:first.t2,conf:ss.every(s=>s.conf==='HIGH')?'HIGH':'MEDIUM',conflicts}
 }
 function applyGroup(card,g,status){
  let fam=card.querySelector('.f').value,method=card.querySelector('.m').value,notes=card.querySelector('.n').value,many=g.members.length>1;
@@ -117,7 +153,7 @@ function render(){
   let label=many?(s.target||'Pokédex family'):(g.members[0].pitch_name||g.members[0].name||pretty(g.members[0].identity));
   return '<article class="card '+(many?'familyCard':'')+'" data-fk="'+esc(g.fk)+'"><div class="cardHead"><div class="nameRow"><span class="name">'+esc(label)+'</span><span class="badge '+(s.conf==='MEDIUM'?'med':'')+'">'+s.conf+'</span><span class="badge approve">'+esc(g.members[0].decision||'blank')+' art</span>'+(many?'<span class="familyCount">'+g.members.length+' FAMILY MEMBERS</span>':'')+'</div><div class="meta">'+esc(g.members.map(x=>x.identity).join(' • '))+'</div></div>'+
   (many?'<div class="familyMembers">'+members+'</div>':'<div class="sprites"><div class="spriteBox"><span class="vlabel">FRONT</span><img loading="lazy" src="'+img(g.members[0].front_path)+'"></div><div class="spriteBox"><span class="vlabel">BACK</span>'+backMarkup(g.members[0],'spriteBox')+'</div></div>')+
-  '<div class="pitch"><div class="role">'+esc(s.role)+'</div><div class="target">'+esc(s.target)+'</div><div class="why">'+esc(s.why)+'</div>'+(many?'<div class="typeNote">Each member keeps its own suggested role and typing. Family approval only locks where the line belongs in the Pokédex.</div>':'<div class="typeNote">Suggested Mercury type (editable): '+esc([s.t1,s.t2].filter(Boolean).join(' / ')||'choose below')+' • Method: '+esc(s.method)+'</div>')+'</div>'+
+  '<div class="pitch"><div class="role">'+esc(s.role)+'</div><div class="target">'+esc(s.target)+'</div><div class="why">'+esc(s.why)+'</div>'+(s.conflicts&&s.conflicts.length?'<div class="typeNote"><b>Family crossover check:</b> '+esc(s.conflicts.join(' • '))+'</div>':'')+(many?'<div class="typeNote">Each member keeps its own suggested role and typing. Family approval only locks where the line belongs in the Pokédex.</div>':'<div class="typeNote">Suggested Mercury type (editable): '+esc([s.t1,s.t2].filter(Boolean).join(' / ')||'choose below')+' • Method: '+esc(s.method)+'</div>')+'</div>'+
   '<div class="edit"><div class="row">'+(!many?'<div class="full"><div class="lbl">Mercury role</div><select class="r">'+opts(ROLES,firstCurrent.role)+'</select></div><div><div class="lbl">Mercury Type 1</div><select class="t1">'+opts(TYPES,firstCurrent.t1)+'</select></div><div><div class="lbl">Mercury Type 2</div><select class="t2">'+opts(TYPES,firstCurrent.t2)+'</select></div>':'')+'<div class="full"><div class="lbl">Target family / chain</div><input class="f" value="'+esc(famValue)+'"></div><div class="full"><div class="lbl">Family evolution / placement method</div><input class="m" value="'+esc(methodValue)+'"></div><div class="full"><div class="lbl">Notes</div><textarea class="n" placeholder="Optional family-level changes">'+esc(notes)+'</textarea></div></div></div>'+
   '<div class="actions"><button class="yes '+(st==='accepted'?'active':'')+'" data-a="accepted">✓ Use '+(many?'family':'suggestion')+'</button><button class="change '+(st==='modified'?'active':'')+'" data-a="modified">✎ Use my edits</button><button class="no '+(st==='rejected'?'active':'')+'" data-a="rejected">✕ Reject placement</button></div></article>'
  }).join('');
