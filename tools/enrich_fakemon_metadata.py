@@ -325,67 +325,52 @@ def numeric_dex(identity):
     n=int(m.group(1))
     return n if 1<=n<=1025 else None
 
-def sprite_stem_key(s):
+def sprite_stem_key(s,source=""):
     x=norm(Path(str(s)).stem)
-    # Normalize common source naming conventions such as *_gen_4, Front/Back,
-    # shiny markers, and compact f/b view suffixes (059_1f vs 059_1b).
+    # Remove view/shiny markers only. Do not collapse species/form tokens.
     x=re.sub(r"-(?:front|back|backsprite|frontsprite|shiny)$","",x)
     x=re.sub(r"-(?:gen-?4|gen-?5|gen4|gen5)$","",x)
     x=re.sub(r"-(?:front|back)$","",x)
-    x=re.sub(r"(?<=\d)[fb]$","",x)
+    # Festival Misc compact convention: 059_1f -> 059_1b.
+    if source=="Festival_Misc":
+        x=re.sub(r"(?<=\d)[fb]$","",x)
+    # PrincessPhoenix convention: FiromenisF -> FiromenisB4/FiromenisB5.
+    if source=="Festival_PrincessPhoenix":
+        x=re.sub(r"(?:fs|f|b4s|b4|b5s|b5)$","",x)
+    # Atsui sometimes appends _gen_4 to the matching back.
+    if source=="Festival_Atsui":
+        x=re.sub(r"-gen-?4$","",x)
     return x
 
-def locality_parts(path):
-    """Path components up to the view folder, preserving contributor/subpack identity."""
-    parts=list(Path(path).parts)
-    role_tokens={"front","fronts","frontsprite","frontsprites","back","backs","backsprite","backsprites",
-                 "front-shiny","back-shiny"}
-    out=[]
-    for part in parts:
-        n=norm(part)
-        if n in role_tokens or "frontsprite" in n or "backsprite" in n or n.endswith("-fronts") or n.endswith("-backs"):
-            break
-        out.append(n)
-    return out
-
-def common_prefix_len(a,b):
-    n=0
-    for x,y in zip(a,b):
-        if x!=y:break
-        n+=1
-    return n
-
 def likely_back(front_path,identity,source):
-    # First: manifest's paired back.
+    # First trust only a manifest pair already made within the same source.
     rr=next((x for x in rows if x.get("front_path")==front_path),None)
-    if rr and rr.get("back_path"):return rr["back_path"]
-    fid=norm(identity)
-    fkey=sprite_stem_key(front_path)
-    num=numeric_dex(identity)
-    cand=[]
+    if rr and rr.get("back_path") and source_of(rr["back_path"])==source:
+        return rr["back_path"]
+
+    fkey=sprite_stem_key(front_path,source)
+    candidates=[]
     for p,role in all_images:
         if role!="back":continue
         ps=p.as_posix()
-        if source and source_of(ps)!=source:continue
-        stem=norm(p.stem)
-        bkey=sprite_stem_key(p)
+        if source_of(ps)!=source:continue
+        bkey=sprite_stem_key(ps,source)
+        if not fkey or bkey!=fkey:
+            continue
+
         score=0
-        if stem==fid:score+=100
-        if fkey and bkey==fkey:score+=130
-        if fid and fid in norm(ps):score+=40
-        # Strongly prefer the same contributor/subpack within umbrella packs.
-        score+=common_prefix_len(locality_parts(front_path),locality_parts(ps))*12
-        if num is not None:
-            nums=re.findall(r"(?<!\d)(\d{1,4})(?!\d)",p.name)
-            if any(int(x)==num for x in nums):score+=70
-        # Match same basename with explicit view tokens removed.
-        fbase=norm(Path(front_path).stem.replace("front",""))
-        bbase=norm(p.stem.replace("back",""))
-        if fbase and fbase==bbase:score+=90
-        if score:cand.append((score,len(ps),ps))
-    if cand:
-        cand.sort(key=lambda x:(-x[0],x[1],x[2]))
-        if cand[0][0]>=70:return cand[0][2]
+        # Prefer same contributor/subpack and Gen 4 back art for Platinum.
+        score+=common_prefix_len(locality_parts(front_path),locality_parts(ps))*20
+        if source=="Festival_PrincessPhoenix":
+            n=norm(p.stem)
+            if "b4" in n: score+=50
+            if n.endswith("s"): score-=10
+        if "shiny" in norm(p.stem): score-=100
+        candidates.append((score,len(ps),ps))
+
+    if candidates:
+        candidates.sort(key=lambda x:(-x[0],x[1],x[2]))
+        return candidates[0][2]
     return ""
 
 # Connected-component family for custom source metadata.
@@ -584,10 +569,13 @@ for r in rows:
     out["type2"]=vanilla_type(out.get("type2"))
     out["confidence"]=";".join(confidence)
     unresolved_family=(out.get("family")=="Unresolved family / relationship")
+    provisional_type=("MERCURY_PROVISIONAL_CANON_TYPE" in confidence)
     out["ready_for_approval"]=bool(
         out.get("name") and out.get("type1") in CANON_TYPES
         and (not out.get("type2") or out.get("type2") in CANON_TYPES)
         and out.get("front_path") and out.get("back_path")
+        and not unresolved_family
+        and not provisional_type
     )
     enriched[ident+"|"+r.get("structural_hash","")]=out
     report.append(out)
@@ -607,6 +595,7 @@ with EXCLUDED.open("w",newline="",encoding="utf-8") as f:
         if not x.get("name"): missing.append("name")
         if not x.get("type1") or x.get("type1")=="TBD": missing.append("type")
         if not x.get("family") or x.get("family")=="Unresolved family / relationship": missing.append("family/relationship")
+        if "MERCURY_PROVISIONAL_CANON_TYPE" in str(x.get("confidence","")): missing.append("source type")
         if not x.get("back_path"): missing.append("back sprite")
         row={k:x.get(k,"") for k in fields}
         row["missing"]="; ".join(missing)
@@ -618,9 +607,10 @@ summary={
  "missing_type":sum(1 for x in report if str(x.get("type1","")).upper()=="TBD"),
  "missing_back":sum(1 for x in report if not x.get("back_path")),
  "unresolved_family":sum(1 for x in report if x.get("family")=="Unresolved family / relationship"),
+ "provisional_type":sum(1 for x in report if "MERCURY_PROVISIONAL_CANON_TYPE" in str(x.get("confidence",""))),
  "source_metadata_records":len(meta),
  "excluded_from_approval":sum(1 for x in report if not x["ready_for_approval"]),
- "approval_policy":"Plain official/native designs are excluded. Every custom/nonstandard design with a matched front+back pair and one or two canon types is reviewable; unresolved family links stay labeled for follow-up instead of hiding the art.",
+ "approval_policy":"Only custom/nonstandard designs with a verified front/back pair, source/authoritative canon-compatible typing, and resolved family/standalone relationship are shown for user decisions. Provisional-type or unresolved-family entries stay in recovery, not review.",
 }
 (MASTER/"fakemon_enrichment_summary.json").write_text(json.dumps(summary,indent=2)+"\n")
 print(json.dumps(summary,indent=2))
