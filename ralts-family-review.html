@@ -18,19 +18,21 @@ button{border:1px solid #adb6c2;background:#fff;border-radius:10px;padding:9px 1
 </style></head><body>
 <header><h1>Mercury Redux — Ralts / Gardevoir / Gallade Curation</h1>
 <div class="sub">Vanilla Ralts → Kirlia → Gardevoir / Gallade stays. Official Mega Gardevoir and Mega Gallade stay. Decide whether this full Redux branch deserves to coexist with them.</div>
-<div class="summary" id="summary">0 keep • 0 cut • 6 undecided</div>
+<div class="summary" id="summary">0 keep • 0 cut • 7 undecided</div>
 <div class="actions"><button class="primary" id="export">Export decisions CSV</button><button id="copy">Copy choices</button><button id="clear">Clear</button></div></header>
-<div class="context"><b>Why this family is under review:</b> this is a complete parallel Ralts line plus <b>two extra Redux Megas</b>. If you keep the whole thing, it adds a lot of identity but also makes this one of Mercury’s most heavily expanded families. You can keep only one branch, both branches, or the whole Redux family.</div>
+<div class="context"><b>Why this family is under review:</b> this is a complete parallel Ralts line plus <b>two extra Redux Megas</b>, and there is also an already-approved <b>Platinum Redux Gardevoir</b>. If you keep the whole thing, it adds a lot of identity but also makes this one of Mercury’s most heavily expanded families.</div>
 <div id="root"></div>
 <script>
 const B="DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/";
+const P="DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/";
 const groups=[
 {name:"Shared Redux stages",items:[
 {id:"ralts-redux",name:"Ralts Redux",role:"Alternate Ralts form",types:"Water",img:B+"ralts_redux/front.png"},
 {id:"kirlia-redux",name:"Kirlia Redux",role:"Alternate Kirlia form",types:"Water",img:B+"kirlia_redux/front.png"}]},
-{name:"Gardevoir Redux branch",items:[
+{name:"Gardevoir candidates",items:[
 {id:"gardevoir-redux",name:"Gardevoir Redux",role:"Alternate Gardevoir form",types:"Psychic / Ghost",img:B+"gardevoir_redux/front.png"},
-{id:"gardevoir-redux-mega",name:"Mega Gardevoir Redux",role:"Mega for Gardevoir Redux",types:"Water / Dark",img:B+"gardevoir_redux_mega/front.png"}]},
+{id:"gardevoir-redux-mega",name:"Mega Gardevoir Redux",role:"Mega for Gardevoir Redux",types:"Water / Dark",img:B+"gardevoir_redux_mega/front.png"},
+{id:"platinum-redux-gardevoir",name:"Platinum Redux Gardevoir",role:"Approved Platinum Redux alternate/replacement candidate",types:"Psychic / Ghost",img:P+"0304_image230.png"}]},
 {name:"Gallade Redux branch",items:[
 {id:"gallade-redux",name:"Gallade Redux",role:"Alternate Gallade form",types:"Water / Fairy",img:B+"gallade_redux/front.png"},
 {id:"gallade-redux-mega",name:"Mega Gallade Redux",role:"Mega for Gallade Redux",types:"Water / Fairy",img:B+"gallade_redux_mega/front.png"}]}
