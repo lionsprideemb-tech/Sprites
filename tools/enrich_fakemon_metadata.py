@@ -9,8 +9,47 @@ OUT=MASTER/"fakemon_enriched_metadata.json"
 REPORT=MASTER/"fakemon_enrichment_report.csv"
 EXCLUDED=MASTER/"fakemon_excluded_incomplete.csv"
 
+# Local official-name index so recovery does not depend on PokeAPI availability.
+# DrPrettyman is our broad native DS baseline and already contains the official
+# species/forms we want to suppress from the custom-review pool.
+LOCAL_OFFICIAL_NAMES=set()
+for _p in [
+    ROOT/"cleanup-audit"/"required_vanilla_species.txt",
+    ROOT/"cleanup-audit"/"required_mega_forms.txt",
+]:
+    if _p.exists():
+        for _x in _p.read_text(encoding="utf-8",errors="ignore").splitlines():
+            if _x.strip(): LOCAL_OFFICIAL_NAMES.add(_x.strip())
+
 def norm(s):
     return re.sub(r"-+","-",re.sub(r"[^a-z0-9]+","-",str(s or "").lower())).strip("-")
+
+LOCAL_OFFICIAL_NAMES={norm(x) for x in LOCAL_OFFICIAL_NAMES}
+_native_front=ROOT/"packs"/"DrPrettyman_DS_64x64"/"sprites-processed"/"front"
+if _native_front.exists():
+    LOCAL_OFFICIAL_NAMES |= {norm(p.stem) for p in _native_front.iterdir() if p.is_file()}
+
+def official_aliases(ident):
+    x=norm(ident)
+    out={x}
+    for suffix in ("-male","-female","-m","-f"):
+        if x.endswith(suffix):
+            out.add(x[:-len(suffix)])
+    more=set(out)
+    for y in list(out):
+        if y.startswith("mega-"):
+            bits=y.split("-")
+            if len(bits)>=2:
+                more.add("-".join(bits[1:])+"-mega")
+        if y.endswith("-mega"):
+            more.add("mega-"+y[:-5])
+        m=re.match(r"^mega-(.+)-([xyz])$",y)
+        if m:
+            more.add(f"{m.group(1)}-mega-{m.group(2)}")
+        m=re.match(r"^(.+)-mega-([xyz])$",y)
+        if m:
+            more.add(f"mega-{m.group(1)}-{m.group(2)}")
+    return more
 
 NONVANILLA_TYPE_REPLACEMENTS={"Sound":"Normal"}
 def vanilla_type(t):
@@ -70,22 +109,33 @@ def _official_name_candidate(ident):
     return False
 
 def plain_official_row(r,type_map):
-    """Use the canonical audit's asset-level classification.
-    Baseline official art is excluded; custom-source designs that reuse an
-    official species/form name remain eligible for review."""
+    """Exclude ordinary official/native art while preserving true custom-source
+    redesigns that happen to reuse a vanilla Pokémon name."""
     flag=str(r.get("is_official","")).strip().lower()
     if flag in {"true","1","yes"}:
         return True
-    if flag in {"false","0","no"}:
-        return False
-    # Backward-compatible fallback for an older manifest lacking the flag.
+
     ident=norm(r.get("identity",""))
     src=r.get("source","")
-    if src in {
+    baseline_sources={
         "DrPrettyman_DS_64x64","HG_Engine_DS_Sprites","DS_Styled_Gen5_8",
-        "Gen7_DS_Backsprites","Shiny_Icons_Gen1_9","Elite_Redux_Bulk"
-    } and _official_name_candidate(ident):
+        "Gen7_DS_Backsprites","Shiny_Icons_Gen1_9"
+    }
+    # Those packs are baseline/native collections, not custom-design sources.
+    if src in baseline_sources:
         return True
+
+    # Elite Redux contains both vanilla assets and genuine custom identities.
+    # Use the local native baseline to suppress only its ordinary official forms.
+    aliases=official_aliases(ident)
+    if src=="Elite_Redux_Bulk" and any(a in LOCAL_OFFICIAL_NAMES for a in aliases):
+        return True
+
+    # Any manifest row explicitly classified custom remains eligible from here.
+    if flag in {"false","0","no"}:
+        return False
+
+    # Backward-compatible metadata fallback.
     mr=type_map.get(ident) or {}
     cat=str(mr.get("category","")).upper()
     return cat in {"CANON","OFFICIAL/CANON","OFFICIAL REGIONAL","OFFICIAL FORM"}
