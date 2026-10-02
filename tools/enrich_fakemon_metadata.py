@@ -63,10 +63,28 @@ for base in [ROOT/"packs",ROOT/"hack-packs",ROOT/"converted"]:
         # Essentials sections: [SPECIES]
         secpat=list(re.finditer(r"(?m)^\s*\[([^\]\r\n]+)\]\s*$",txt))
         for i,m in enumerate(secpat):
-            name=m.group(1).strip(); key=norm(name)
-            if not key:continue
+            section_name=m.group(1).strip()
             chunk=txt[m.end():secpat[i+1].start() if i+1<len(secpat) else min(len(txt),m.end()+6000)]
-            rec=meta.setdefault((src,key),{"name":name,"source":src})
+
+            # Many Essentials fakemon packs use repeated [X] sections and put
+            # the real identity in InternalName/Name. Treat that identity as
+            # authoritative instead of collapsing every custom species to "x".
+            im=re.search(r"(?mi)^\s*InternalName\s*=\s*([^\r\n#;]+)",chunk)
+            nm=re.search(r"(?mi)^\s*Name\s*=\s*([^\r\n#;]+)",chunk)
+            fm=re.search(r"(?mi)^\s*FormName\s*=\s*([^\r\n#;]+)",chunk)
+            identity=(im.group(1).strip() if im else section_name)
+            key=norm(identity)
+            if not key:continue
+            display=(nm.group(1).strip() if nm else section_name)
+            if fm and "," in section_name and not nm:
+                display=(fm.group(1).strip()+" "+section_name.split(",")[0].strip()).strip()
+            rec=meta.setdefault((src,key),{"name":display,"source":src})
+
+            # Alias the literal section key too (e.g. NOCTOWL,1).
+            section_key=norm(section_name)
+            if section_key and section_key!="x":
+                meta.setdefault((src,section_key),rec)
+
             mt=re.search(r"(?mi)^\s*(?:Types?|Type1)\s*=\s*([^\r\n#;]+)",chunk)
             if mt:
                 vals=[x.strip().title() for x in re.split(r"[,/]",mt.group(1)) if x.strip()]
@@ -80,6 +98,8 @@ for base in [ROOT/"packs",ROOT/"hack-packs",ROOT/"converted"]:
                 for j in range(0,len(toks),3):
                     if j<len(toks) and toks[j]:
                         child=norm(toks[j]); edges[key].add(child);edges[child].add(key);children[key].add(child);parents[child].add(key)
+                        if section_key and section_key!=key:
+                            edges[section_key].add(child);edges[child].add(section_key);children[section_key].add(child);parents[child].add(section_key)
         # Generic "Name, Type1, Type2" CSV-like rows are intentionally not trusted unless headers exist.
         if p.suffix.lower()==".csv":
             try:
@@ -337,7 +357,7 @@ for r in rows:
     out["confidence"]=";".join(confidence)
     unresolved_family=(out.get("family")=="Standalone / no evolution data found")
     out["ready_for_approval"]=bool(
-        out.get("name") and out.get("type1")!="TBD" and out.get("family")
+        out.get("name") and str(out.get("type1","")).upper()!="TBD" and out.get("family")
         and out.get("back_path") and not unresolved_family
     )
     enriched[ident+"|"+r.get("structural_hash","")]=out
@@ -366,7 +386,7 @@ with EXCLUDED.open("w",newline="",encoding="utf-8") as f:
 summary={
  "custom_entries":len(report),
  "ready":sum(1 for x in report if x["ready_for_approval"]),
- "missing_type":sum(1 for x in report if x["type1"]=="TBD"),
+ "missing_type":sum(1 for x in report if str(x.get("type1","")).upper()=="TBD"),
  "missing_back":sum(1 for x in report if not x.get("back_path")),
  "standalone_proposals":sum(1 for x in report if x.get("family")=="Standalone / no evolution data found"),
  "source_metadata_records":len(meta),
