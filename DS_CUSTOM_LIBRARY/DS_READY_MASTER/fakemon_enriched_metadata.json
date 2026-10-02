@@ -23,7 +23,15 @@
       "type1": "Normal",
       "type2": "",
       "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE;BACK_MATCH_RECOVERED",
-      "ready_for_approval": false
+      "ready_for_approval": false,
+      "mercury_pitch_name": "Castform Sandstorm Form",
+      "mercury_pitch_type1": "Ground",
+      "mercury_pitch_type2": "",
+      "mercury_pitch_family": "Castform forms",
+      "mercury_pitch_role": "WEATHER_FORM_CANDIDATE",
+      "mercury_pitch_summary": "Treat this as a custom Sandstorm Castform rather than a new species. The brown/olive cloud-shell design reads naturally as dust and sand.",
+      "mercury_pitch_mechanic": "Forecast form for Sandstorm; Ground typing while active.",
+      "mercury_pitch_status": "PROPOSAL"
     },
     "429-1f|027016d12875fb6ecff251bb5880869ef020c8a960b797a4cbd88e18a3b3fe7e": {
       "identity": "429-1f",
@@ -35,7 +43,15 @@
       "type1": "Normal",
       "type2": "",
       "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE;BACK_MATCH_RECOVERED",
-      "ready_for_approval": false
+      "ready_for_approval": false,
+      "mercury_pitch_name": "Proposed Mega Mismagius",
+      "mercury_pitch_type1": "Ghost",
+      "mercury_pitch_type2": "Fairy",
+      "mercury_pitch_family": "Misdreavus → Mismagius → Mega Mismagius",
+      "mercury_pitch_role": "MEGA_CANDIDATE",
+      "mercury_pitch_summary": "The crescent/cosmic witch silhouette reads as a powered-up Mismagius, so it fits better as a Mega than as an unrelated Fakemon.",
+      "mercury_pitch_mechanic": "Lean into lunar magic, illusions, and special offense.",
+      "mercury_pitch_status": "PROPOSAL"
     },
     "479-6|cdce48549e47a4fb11935ab66ea5bafea11ddbc51c01d507f93b01016895691d": {
       "identity": "479-6",
@@ -47,7 +63,15 @@
       "type1": "Normal",
       "type2": "",
       "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE;BACK_MATCH_RECOVERED",
-      "ready_for_approval": false
+      "ready_for_approval": false,
+      "mercury_pitch_name": "Rotom Camera Form",
+      "mercury_pitch_type1": "Electric",
+      "mercury_pitch_type2": "Psychic",
+      "mercury_pitch_family": "Rotom forms",
+      "mercury_pitch_role": "ROTOM_FORM_CANDIDATE",
+      "mercury_pitch_summary": "The body is clearly a Rotom-possessed camera. Use it as an additional appliance form rather than a separate species.",
+      "mercury_pitch_mechanic": "Electric/Psychic camera form focused on vision, precision, and special attacks.",
+      "mercury_pitch_status": "PROPOSAL"
     },
     "479s-6|54cb128a53a60ed7cff75a683eaeed974bae34662d4963747ee09b9e304110d1": {
       "identity": "479s-6",
@@ -59,7 +83,12 @@
       "type1": "Normal",
       "type2": "",
       "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": false
+      "ready_for_approval": false,
+      "review_suppress": true,
+      "asset_role": "SHINY_VARIANT_OF_479-6",
+      "mercury_pitch_name": "Rotom Camera Form (Shiny)",
+      "mercury_pitch_family": "Rotom forms",
+      "mercury_pitch_status": "ASSET_ONLY"
     },
     "480-1f|44e9ec9aa36dbe9b52b0cb8b526cdfc262fc48f88a60519dd188ba334721d726": {
       "identity": "480-1f",
@@ -71,7 +100,15 @@
       "type1": "Normal",
       "type2": "",
       "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE;BACK_MATCH_RECOVERED",
-      "ready_for_approval": false
+      "ready_for_approval": false,
+      "mercury_pitch_name": "Proposed Mega Uxie",
+      "mercury_pitch_type1": "Psychic",
+      "mercury_pitch_type2": "Dragon",
+      "mercury_pitch_family": "Uxie → Mega Uxie",
+      "mercury_pitch_role": "MEGA_CANDIDATE",
+      "mercury_pitch_summary": "The small dark Uxie core surrounded by a huge golden serpentine psychic sigil reads like an awakened Uxie transformation.",
+      "mercury_pitch_mechanic": "Psychic/Dragon Mega centered on knowledge made manifest as a spectral dragon.",
+      "mercury_pitch_status": "PROPOSAL"
     },
     "560-1f|e7838446d6f959aa841a88c8d085470836dbed55bdc1a898b59bf9828171bb57": {
       "identity": "560-1f",
@@ -83,7 +120,15 @@
       "type1": "Normal",
       "type2": "",
       "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE;BACK_MATCH_RECOVERED",
-      "ready_for_approval": false
+      "ready_for_approval": false,
+      "mercury_pitch_name": "Proposed Mega Scrafty",
+      "mercury_pitch_type1": "Dark",
+      "mercury_pitch_type2": "Fighting",
+      "mercury_pitch_family": "Scraggy → Scrafty → Mega Scrafty",
+      "mercury_pitch_role": "MEGA_CANDIDATE",
+      "mercury_pitch_summary": "The exaggerated punk/gang-leader silhouette is a natural escalation of Scrafty and works cleanly as a Mega design.",
+      "mercury_pitch_mechanic": "Keep Dark/Fighting and push intimidation, bulk, and counterattacking.",
+      "mercury_pitch_status": "PROPOSAL"
     },
     "abomasnow-santa|c681b8e2c02b078885b884d13c3caac8097d24e976460c78f3fbb72d6e449b6e": {
       "identity": "abomasnow-santa",
