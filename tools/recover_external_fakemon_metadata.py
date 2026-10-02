@@ -65,6 +65,8 @@ def target_aliases(identity,name,source):
             if y.endswith(suf): vals.add(y[:-len(suf)])
         m=re.match(r"^(.+)-(\d+)$",y)
         if m: vals.add(m.group(1))
+        for pre in ("regional-","spaceworld-","luminian-","earthrethian-"):
+            if y.startswith(pre): vals.add(y[len(pre):])
     aliases={
       "cabatfe":"cabat-female","cabatma":"cabat-male",
       "porygona":"porygon-a","octolect":"octolet","sproutsy":"sprousy",
