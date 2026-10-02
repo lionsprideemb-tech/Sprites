@@ -6,7 +6,7 @@
       "source": "Festival_Misc",
       "front_path": "DS_CUSTOM_LIBRARY/packs/Festival_Misc/Misc/Fronts/059_1f.png",
       "back_path": "DS_CUSTOM_LIBRARY/packs/Festival_Misc/Misc/Backs/059_1b.png",
-      "family": "Growlithe \u2192 Hisuian Arcanine",
+      "family": "Growlithe → Hisuian Arcanine",
       "name": "Proposed Mega Hisuian Arcanine",
       "type1": "Fire",
       "type2": "Rock",
@@ -321,7 +321,7 @@
       "name": "Anu",
       "type1": "Dark",
       "type2": "Psychic",
-      "family": "Standalone \u2014 Anu",
+      "family": "Standalone — Anu",
       "confidence": "EXTERNAL_SOURCE_METADATA;BACK_MATCH_RECOVERED",
       "ready_for_approval": true
     },
@@ -357,7 +357,7 @@
       "name": "Apprensith",
       "type1": "Fairy",
       "type2": "Grass",
-      "family": "Apprensith \u2192 Sithwitch",
+      "family": "Apprensith → Sithwitch",
       "confidence": "SOURCE_METADATA;SOURCE_EVOLUTION_GRAPH",
       "ready_for_approval": true
     },
@@ -501,7 +501,7 @@
       "name": "Luminian",
       "type1": "Bug",
       "type2": "Dark",
-      "family": "Standalone \u2014 Luminian",
+      "family": "Standalone — Luminian",
       "confidence": "EXTERNAL_SOURCE_METADATA",
       "ready_for_approval": true
     },
@@ -609,7 +609,7 @@
       "name": "Delta Azelf",
       "type1": "Ground",
       "type2": "Dark",
-      "family": "Undiscovered \u2014 Azelf",
+      "family": "Undiscovered — Azelf",
       "confidence": "MANIFEST_BACK_REJECTED;MERCURY_MASTER",
       "ready_for_approval": false
     },
@@ -621,7 +621,7 @@
       "name": "Baobaraffe",
       "type1": "Grass",
       "type2": "",
-      "family": "Baoby \u2192 Baobaraffe",
+      "family": "Baoby → Baobaraffe",
       "confidence": "VERIFIED_SOURCE_METADATA;BACK_MATCH_RECOVERED",
       "ready_for_approval": true
     },
@@ -645,7 +645,7 @@
       "name": "Baoby",
       "type1": "Grass",
       "type2": "",
-      "family": "Baoby \u2192 Baobaraffe",
+      "family": "Baoby → Baobaraffe",
       "confidence": "VERIFIED_SOURCE_METADATA;BACK_MATCH_RECOVERED",
       "ready_for_approval": true
     },
@@ -705,7 +705,7 @@
       "name": "Basculin",
       "type1": "Water",
       "type2": "",
-      "family": "Troutle \u2192 Basculin \u2192 Basstile",
+      "family": "Troutle → Basculin → Basstile",
       "confidence": "EXTERNAL_SOURCE_METADATA",
       "ready_for_approval": true
     },
@@ -717,7 +717,7 @@
       "name": "Basstile",
       "type1": "Water",
       "type2": "",
-      "family": "Troutle \u2192 Basculin \u2192 Basstile",
+      "family": "Troutle → Basculin → Basstile",
       "confidence": "EXTERNAL_SOURCE_METADATA",
       "ready_for_approval": true
     },
@@ -729,7 +729,7 @@
       "name": "Basstile",
       "type1": "Water",
       "type2": "",
-      "family": "Troutle \u2192 Basculin \u2192 Basstile",
+      "family": "Troutle → Basculin → Basstile",
       "confidence": "EXTERNAL_SOURCE_METADATA",
       "ready_for_approval": true
     },
@@ -741,7 +741,7 @@
       "name": "Basstile",
       "type1": "Water",
       "type2": "",
-      "family": "Troutle \u2192 Basculin \u2192 Basstile",
+      "family": "Troutle → Basculin → Basstile",
       "confidence": "EXTERNAL_SOURCE_METADATA",
       "ready_for_approval": true
     },
@@ -834,7 +834,7 @@
       "source": "Mikitari",
       "front_path": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Front/BEELITANT.png",
       "back_path": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/BEELITANT.png",
-      "family": "Beelitant \u2192 Kocomb \u2192 Granebee",
+      "family": "Beelitant → Kocomb → Granebee",
       "name": "Beelitant",
       "type1": "Bug",
       "type2": "Flying",
@@ -873,8 +873,8 @@
       "name": "Belstatue",
       "type1": "Rock",
       "type2": "",
-      "family": "Standalone \u2014 Belstatue",
-      "confidence": "SOURCE_METADATA;SOURCE_STANDALONE",
+      "family": "Belstatue forms",
+      "confidence": "SOURCE_METADATA;SOURCE_STANDALONE;FAMILY_AUDIT_CORRECTED",
       "ready_for_approval": true
     },
     "belstatue-1-sun-shard|5728aff6b96316c7e3d06c4ab1dc7c61306d21ed4a00d39388919d13b4df2fdc": {
@@ -885,8 +885,8 @@
       "name": "Sun Shard Belstatue",
       "type1": "Rock",
       "type2": "Dragon",
-      "family": "Standalone \u2014 Sun Shard Belstatue",
-      "confidence": "SOURCE_METADATA;SOURCE_STANDALONE",
+      "family": "Belstatue forms",
+      "confidence": "SOURCE_METADATA;SOURCE_STANDALONE;FAMILY_AUDIT_CORRECTED",
       "ready_for_approval": true
     },
     "belstatue-2-moon-shard|ca0fced633b1897831a83aa95ab76cc7a83c86e0328afcd0af7a30f79fd915fe": {
@@ -897,8 +897,8 @@
       "name": "Moon Shard Belstatue",
       "type1": "Rock",
       "type2": "Psychic",
-      "family": "Standalone \u2014 Moon Shard Belstatue",
-      "confidence": "SOURCE_METADATA;SOURCE_STANDALONE;BACK_MATCH_RECOVERED",
+      "family": "Belstatue forms",
+      "confidence": "SOURCE_METADATA;SOURCE_STANDALONE;BACK_MATCH_RECOVERED;FAMILY_AUDIT_CORRECTED",
       "ready_for_approval": true
     },
     "beniccino|d6e3455c8939843df4b5ef1ff5f898a1c92c0436f5f74c111d912d6787fb90c0": {
@@ -1125,7 +1125,7 @@
       "name": "Bombustoad",
       "type1": "Fire",
       "type2": "",
-      "family": "Smoald \u2192 Bombustoad",
+      "family": "Smoald → Bombustoad",
       "confidence": "EXTERNAL_SOURCE_METADATA",
       "ready_for_approval": true
     },
@@ -1149,7 +1149,7 @@
       "name": "Bonfur",
       "type1": "Fire",
       "type2": "",
-      "family": "Bonfur \u2192 Tindursa \u2192 Sizzly",
+      "family": "Bonfur → Tindursa → Sizzly",
       "confidence": "EXTERNAL_SOURCE_METADATA",
       "ready_for_approval": true
     },
@@ -1161,7 +1161,7 @@
       "name": "Botanine",
       "type1": "Grass",
       "type2": "",
-      "family": "Standalone \u2014 Botanine",
+      "family": "Standalone — Botanine",
       "confidence": "EXTERNAL_SOURCE_METADATA",
       "ready_for_approval": true
     },
@@ -1185,7 +1185,7 @@
       "name": "Brambull",
       "type1": "Grass",
       "type2": "",
-      "family": "Pasturlo \u2192 Brambull \u2192 Maizotaur \u2192 X",
+      "family": "Pasturlo → Brambull → Maizotaur → X",
       "confidence": "SOURCE_METADATA;SOURCE_EVOLUTION_GRAPH",
       "ready_for_approval": false
     },
@@ -1257,7 +1257,7 @@
       "name": "Brewtrid",
       "type1": "Poison",
       "type2": "Ghost",
-      "family": "Lollybog \u2192 Brewtrid \u2192 Forbiddron",
+      "family": "Lollybog → Brewtrid → Forbiddron",
       "confidence": "EXTERNAL_SOURCE_METADATA",
       "ready_for_approval": true
     },
@@ -1317,7 +1317,7 @@
       "name": "Mikitarian",
       "type1": "Dark",
       "type2": "",
-      "family": "Standalone \u2014 Mikitarian",
+      "family": "Standalone — Mikitarian",
       "confidence": "EXTERNAL_SOURCE_METADATA",
       "ready_for_approval": true
     },
@@ -1329,7 +1329,7 @@
       "name": "Bunninja",
       "type1": "Normal",
       "type2": "Poison",
-      "family": "Buneary \u2192 Bunninja",
+      "family": "Buneary → Bunninja",
       "confidence": "SOURCE_METADATA;SOURCE_EVOLUTION_GRAPH",
       "ready_for_approval": true
     },
@@ -1341,7 +1341,7 @@
       "name": "Bunninja",
       "type1": "Normal",
       "type2": "Poison",
-      "family": "Standalone \u2014 Bunninja",
+      "family": "Standalone — Bunninja",
       "confidence": "SOURCE_METADATA;SOURCE_STANDALONE",
       "ready_for_approval": false
     },
@@ -1386,10 +1386,10 @@
       "source": "Mikitari",
       "front_path": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Front/CABATfE.png",
       "back_path": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/CABATfE.png",
-      "name": "Cabat\u2640",
+      "name": "Cabat♀",
       "type1": "Flying",
       "type2": "Ice",
-      "family": "Cabat\u2640 \u2192 Stalass \u2192 Packbats \u2192 Cabat\u2642 \u2192 Stalad",
+      "family": "Cabat♀ → Stalass → Packbats → Cabat♂ → Stalad",
       "confidence": "EXTERNAL_SOURCE_METADATA",
       "ready_for_approval": true
     },
@@ -1398,10 +1398,10 @@
       "source": "Mikitari",
       "front_path": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Front/CABATmA.png",
       "back_path": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/CABATmA.png",
-      "name": "Cabat\u2642",
+      "name": "Cabat♂",
       "type1": "Flying",
       "type2": "Rock",
-      "family": "Cabat\u2640 \u2192 Stalass \u2192 Packbats \u2192 Cabat\u2642 \u2192 Stalad",
+      "family": "Cabat♀ → Stalass → Packbats → Cabat♂ → Stalad",
       "confidence": "EXTERNAL_SOURCE_METADATA",
       "ready_for_approval": true
     },
@@ -1425,7 +1425,7 @@
       "name": "Calyrex Cloud Rider",
       "type1": "Psychic",
       "type2": "Flying",
-      "family": "Undiscovered \u2014 Calyrex",
+      "family": "Undiscovered — Calyrex",
       "confidence": "MANIFEST_BACK_REJECTED;MERCURY_MASTER",
       "ready_for_approval": false
     },
@@ -1437,7 +1437,7 @@
       "name": "Capricorn",
       "type1": "Grass",
       "type2": "",
-      "family": "Standalone \u2014 Capricorn",
+      "family": "Standalone — Capricorn",
       "confidence": "SOURCE_METADATA;SOURCE_STANDALONE",
       "ready_for_approval": false
     },
@@ -1497,7 +1497,7 @@
       "name": "Castform",
       "type1": "Rock",
       "type2": "",
-      "family": "Standalone \u2014 Castform",
+      "family": "Standalone — Castform",
       "confidence": "EXTERNAL_SOURCE_METADATA",
       "ready_for_approval": true
     },
@@ -1509,7 +1509,7 @@
       "name": "Castform",
       "type1": "Flying",
       "type2": "",
-      "family": "Standalone \u2014 Castform",
+      "family": "Standalone — Castform",
       "confidence": "EXTERNAL_SOURCE_METADATA",
       "ready_for_approval": true
     },
@@ -1521,7 +1521,7 @@
       "name": "Castform",
       "type1": "Ghost",
       "type2": "",
-      "family": "Standalone \u2014 Castform",
+      "family": "Standalone — Castform",
       "confidence": "EXTERNAL_SOURCE_METADATA",
       "ready_for_approval": true
     },
@@ -1677,7 +1677,7 @@
       "name": "Chargoo",
       "type1": "Electric",
       "type2": "",
-      "family": "Goobolt \u2192 Chargoo \u2192 Plasmatina",
+      "family": "Goobolt → Chargoo → Plasmatina",
       "confidence": "EXTERNAL_SOURCE_METADATA",
       "ready_for_approval": true
     },
@@ -1785,7 +1785,7 @@
       "name": "Mega Chien-Pao",
       "type1": "Dark",
       "type2": "Ice",
-      "family": "Undiscovered \u2014 Chien-Pao",
+      "family": "Undiscovered — Chien-Pao",
       "confidence": "MANIFEST_BACK_REJECTED;MERCURY_MASTER",
       "ready_for_approval": false
     },
@@ -1893,7 +1893,7 @@
       "name": "Chubboink",
       "type1": "Normal",
       "type2": "",
-      "family": "Chubboink \u2192 Muchog",
+      "family": "Chubboink → Muchog",
       "confidence": "EXTERNAL_SOURCE_METADATA",
       "ready_for_approval": true
     },
@@ -2061,7 +2061,7 @@
       "name": "Cobarett",
       "type1": "Fire",
       "type2": "",
-      "family": "Hissiorite \u2192 Cobarett \u2192 Pythonova",
+      "family": "Hissiorite → Cobarett → Pythonova",
       "confidence": "VERIFIED_SOURCE_METADATA;BACK_MATCH_RECOVERED",
       "ready_for_approval": true
     },
@@ -2121,7 +2121,7 @@
       "name": "Commant",
       "type1": "Bug",
       "type2": "Psychic",
-      "family": "Standalone \u2014 Commant",
+      "family": "Standalone — Commant",
       "confidence": "EXTERNAL_SOURCE_METADATA",
       "ready_for_approval": true
     },
@@ -2133,7 +2133,7 @@
       "name": "Conflevour",
       "type1": "Fire",
       "type2": "Dragon",
-      "family": "Flarepent \u2192 Searpent \u2192 Conflevour",
+      "family": "Flarepent → Searpent → Conflevour",
       "confidence": "EXTERNAL_SOURCE_METADATA",
       "ready_for_approval": true
     },
@@ -2145,7 +2145,7 @@
       "name": "Contamullet",
       "type1": "Water",
       "type2": "Poison",
-      "family": "Crishy \u2192 Contamullet",
+      "family": "Crishy → Contamullet",
       "confidence": "EXTERNAL_SOURCE_METADATA",
       "ready_for_approval": true
     },
@@ -2325,7 +2325,7 @@
       "name": "Criminalis",
       "type1": "Flying",
       "type2": "",
-      "family": "Pilfetch \u2192 Criminalis",
+      "family": "Pilfetch → Criminalis",
       "confidence": "EXTERNAL_SOURCE_METADATA;BACK_MATCH_RECOVERED",
       "ready_for_approval": true
     },
@@ -2337,7 +2337,7 @@
       "name": "Crishy",
       "type1": "Water",
       "type2": "Poison",
-      "family": "Crishy \u2192 Contamullet",
+      "family": "Crishy → Contamullet",
       "confidence": "EXTERNAL_SOURCE_METADATA",
       "ready_for_approval": true
     },
@@ -2373,7 +2373,7 @@
       "name": "Croober",
       "type1": "Dark",
       "type2": "Flying",
-      "family": "Petidaw \u2192 Croober \u2192 Ravendler",
+      "family": "Petidaw → Croober → Ravendler",
       "confidence": "EXTERNAL_SOURCE_METADATA",
       "ready_for_approval": true
     },
@@ -2385,7 +2385,7 @@
       "name": "Croober",
       "type1": "Dark",
       "type2": "Flying",
-      "family": "Petidaw \u2192 Croober \u2192 Ravendler",
+      "family": "Petidaw → Croober → Ravendler",
       "confidence": "EXTERNAL_SOURCE_METADATA",
       "ready_for_approval": true
     },
@@ -2409,7 +2409,7 @@
       "name": "Crunchill",
       "type1": "Ice",
       "type2": "",
-      "family": "Munchill \u2192 Crunchill",
+      "family": "Munchill → Crunchill",
       "confidence": "EXTERNAL_SOURCE_METADATA",
       "ready_for_approval": true
     },
@@ -2457,7 +2457,7 @@
       "name": "Cryscross",
       "type1": "Ice",
       "type2": "",
-      "family": "Cryscross \u2192 Cryogonal",
+      "family": "Cryscross → Cryogonal",
       "confidence": "EXTERNAL_SOURCE_METADATA",
       "ready_for_approval": true
     },
@@ -2481,7 +2481,7 @@
       "name": "Cubchestra",
       "type1": "Normal",
       "type2": "Electric",
-      "family": "Cubchestra \u2192 Thunphony",
+      "family": "Cubchestra → Thunphony",
       "confidence": "SOURCE_METADATA;SOURCE_EVOLUTION_GRAPH;SOUND_TO_NORMAL",
       "ready_for_approval": true
     },
@@ -2529,7 +2529,7 @@
       "name": "Dampurr",
       "type1": "Water",
       "type2": "",
-      "family": "Dampurr \u2192 Rainther \u2192 Delugar",
+      "family": "Dampurr → Rainther → Delugar",
       "confidence": "EXTERNAL_SOURCE_METADATA",
       "ready_for_approval": true
     },
@@ -2541,7 +2541,7 @@
       "name": "Dampurr",
       "type1": "Water",
       "type2": "",
-      "family": "Dampurr \u2192 Rainther \u2192 Delugar",
+      "family": "Dampurr → Rainther → Delugar",
       "confidence": "EXTERNAL_SOURCE_METADATA",
       "ready_for_approval": true
     },
@@ -2553,7 +2553,7 @@
       "name": "Dampybara",
       "type1": "Water",
       "type2": "",
-      "family": "Dampybara \u2192 Glovet \u2192 Mortarine",
+      "family": "Dampybara → Glovet → Mortarine",
       "confidence": "EXTERNAL_SOURCE_METADATA",
       "ready_for_approval": true
     },
@@ -2577,7 +2577,7 @@
       "name": "Darkrai Nightmare",
       "type1": "Dark",
       "type2": "",
-      "family": "Undiscovered \u2014 Darkrai",
+      "family": "Undiscovered — Darkrai",
       "confidence": "MANIFEST_BACK_REJECTED;MERCURY_MASTER",
       "ready_for_approval": false
     },
@@ -2733,7 +2733,7 @@
       "name": "Delugar",
       "type1": "Water",
       "type2": "",
-      "family": "Dampurr \u2192 Rainther \u2192 Delugar",
+      "family": "Dampurr → Rainther → Delugar",
       "confidence": "EXTERNAL_SOURCE_METADATA",
       "ready_for_approval": true
     },
@@ -2745,7 +2745,7 @@
       "name": "Delugar",
       "type1": "Water",
       "type2": "",
-      "family": "Dampurr \u2192 Rainther \u2192 Delugar",
+      "family": "Dampurr → Rainther → Delugar",
       "confidence": "EXTERNAL_SOURCE_METADATA",
       "ready_for_approval": true
     },
@@ -2865,7 +2865,7 @@
       "name": "Doperami",
       "type1": "Fairy",
       "type2": "Normal",
-      "family": "Dorewee \u2192 Doperami",
+      "family": "Dorewee → Doperami",
       "confidence": "EXTERNAL_SOURCE_METADATA",
       "ready_for_approval": true
     },
@@ -2877,7 +2877,7 @@
       "name": "Doperami",
       "type1": "Fairy",
       "type2": "Normal",
-      "family": "Dorewee \u2192 Doperami",
+      "family": "Dorewee → Doperami",
       "confidence": "EXTERNAL_SOURCE_METADATA;BACK_MATCH_RECOVERED",
       "ready_for_approval": true
     },
@@ -2889,7 +2889,7 @@
       "name": "Dorewee",
       "type1": "Fairy",
       "type2": "Normal",
-      "family": "Dorewee \u2192 Doperami",
+      "family": "Dorewee → Doperami",
       "confidence": "EXTERNAL_SOURCE_METADATA",
       "ready_for_approval": true
     },
@@ -2925,7 +2925,7 @@
       "name": "Mega Dracovish",
       "type1": "Water",
       "type2": "Dragon",
-      "family": "Undiscovered \u2014 Dracovish",
+      "family": "Undiscovered — Dracovish",
       "confidence": "MANIFEST_BACK_REJECTED;MERCURY_MASTER",
       "ready_for_approval": false
     },
@@ -2973,7 +2973,7 @@
       "name": "Drashimi",
       "type1": "Dragon",
       "type2": "",
-      "family": "Drashimi \u2192 Tsushimi \u2192 Tobishimi",
+      "family": "Drashimi → Tsushimi → Tobishimi",
       "confidence": "VERIFIED_SOURCE_METADATA;BACK_MATCH_RECOVERED",
       "ready_for_approval": true
     },
@@ -3033,7 +3033,7 @@
       "name": "Dripwirt",
       "type1": "Water",
       "type2": "",
-      "family": "Dripwirt \u2192 Pourka",
+      "family": "Dripwirt → Pourka",
       "confidence": "EXTERNAL_SOURCE_METADATA",
       "ready_for_approval": true
     },
@@ -3045,7 +3045,7 @@
       "name": "Droopig",
       "type1": "Dark",
       "type2": "",
-      "family": "Droopig \u2192 Hoolihog",
+      "family": "Droopig → Hoolihog",
       "confidence": "EXTERNAL_SOURCE_METADATA",
       "ready_for_approval": true
     },
@@ -3117,7 +3117,7 @@
       "name": "Duntesert",
       "type1": "Rock",
       "type2": "Ground",
-      "family": "Slidune \u2192 Duntesert",
+      "family": "Slidune → Duntesert",
       "confidence": "EXTERNAL_SOURCE_METADATA",
       "ready_for_approval": true
     },
@@ -3129,7 +3129,7 @@
       "name": "Duntesert",
       "type1": "Ice",
       "type2": "Ground",
-      "family": "Slidune \u2192 Duntesert",
+      "family": "Slidune → Duntesert",
       "confidence": "EXTERNAL_SOURCE_METADATA",
       "ready_for_approval": true
     },
@@ -3165,7 +3165,7 @@
       "name": "Dynabit",
       "type1": "Electric",
       "type2": "",
-      "family": "Standalone \u2014 Dynabit",
+      "family": "Standalone — Dynabit",
       "confidence": "EXTERNAL_SOURCE_METADATA",
       "ready_for_approval": true
     },
@@ -3201,7 +3201,7 @@
       "name": "Eggvour",
       "type1": "Normal",
       "type2": "Dark",
-      "family": "Mimiegg \u2192 Eggvour",
+      "family": "Mimiegg → Eggvour",
       "confidence": "SOURCE_METADATA;SOURCE_EVOLUTION_GRAPH",
       "ready_for_approval": true
     },
@@ -3321,7 +3321,7 @@
       "name": "Enchantowl",
       "type1": "Psychic",
       "type2": "Fairy",
-      "family": "Noctowl 1 \u2192 Enchantowl",
+      "family": "Noctowl 1 → Enchantowl",
       "confidence": "SOURCE_METADATA;SOURCE_EVOLUTION_GRAPH",
       "ready_for_approval": true
     },
@@ -3357,7 +3357,7 @@
       "name": "Eruptile",
       "type1": "Fire",
       "type2": "",
-      "family": "Skindling \u2192 Skingnite \u2192 Eruptile",
+      "family": "Skindling → Skingnite → Eruptile",
       "confidence": "EXTERNAL_SOURCE_METADATA",
       "ready_for_approval": true
     },
@@ -3501,7 +3501,7 @@
       "name": "Mikitarian",
       "type1": "Psychic",
       "type2": "Fighting",
-      "family": "Standalone \u2014 Mikitarian",
+      "family": "Standalone — Mikitarian",
       "confidence": "EXTERNAL_SOURCE_METADATA",
       "ready_for_approval": true
     },
@@ -3609,7 +3609,7 @@
       "name": "Firomenis",
       "type1": "Dragon",
       "type2": "Bug",
-      "family": "Merlicun \u2192 Firomenis",
+      "family": "Merlicun → Firomenis",
       "confidence": "VERIFIED_SOURCE_METADATA;BACK_MATCH_RECOVERED",
       "ready_for_approval": true
     },
@@ -3633,7 +3633,7 @@
       "name": "Flambafee",
       "type1": "Grass",
       "type2": "Dark",
-      "family": "Sneepy \u2192 Flambafee",
+      "family": "Sneepy → Flambafee",
       "confidence": "EXTERNAL_SOURCE_METADATA",
       "ready_for_approval": true
     },
@@ -3645,7 +3645,7 @@
       "name": "Flambafee",
       "type1": "Grass",
       "type2": "Dark",
-      "family": "Sneepy \u2192 Flambafee",
+      "family": "Sneepy → Flambafee",
       "confidence": "EXTERNAL_SOURCE_METADATA",
       "ready_for_approval": true
     },
@@ -3657,7 +3657,7 @@
       "name": "Flampy",
       "type1": "Poison",
       "type2": "Normal",
-      "family": "Flampy \u2192 Murasalem",
+      "family": "Flampy → Murasalem",
       "confidence": "VERIFIED_SOURCE_METADATA;EXTERNAL_SOURCE_METADATA",
       "ready_for_approval": true
     },
@@ -3669,7 +3669,7 @@
       "name": "Flarepent",
       "type1": "Fire",
       "type2": "",
-      "family": "Flarepent \u2192 Searpent \u2192 Conflevour",
+      "family": "Flarepent → Searpent → Conflevour",
       "confidence": "EXTERNAL_SOURCE_METADATA",
       "ready_for_approval": true
     },
@@ -3765,7 +3765,7 @@
       "name": "Floramona",
       "type1": "Grass",
       "type2": "Fairy",
-      "family": "Sprousy \u2192 Petalnia \u2192 Floramona",
+      "family": "Sprousy → Petalnia → Floramona",
       "confidence": "EXTERNAL_SOURCE_METADATA",
       "ready_for_approval": true
     },
@@ -3777,7 +3777,7 @@
       "name": "Floramona",
       "type1": "Grass",
       "type2": "Fairy",
-      "family": "Sprousy \u2192 Petalnia \u2192 Floramona",
+      "family": "Sprousy → Petalnia → Floramona",
       "confidence": "EXTERNAL_SOURCE_METADATA;BACK_MATCH_RECOVERED",
       "ready_for_approval": true
     },
@@ -3789,7 +3789,7 @@
       "name": "Floramona",
       "type1": "Grass",
       "type2": "Fairy",
-      "family": "Sprousy \u2192 Petalnia \u2192 Floramona",
+      "family": "Sprousy → Petalnia → Floramona",
       "confidence": "EXTERNAL_SOURCE_METADATA;BACK_MATCH_RECOVERED",
       "ready_for_approval": true
     },
@@ -3813,7 +3813,7 @@
       "name": "Mega Flygon",
       "type1": "Bug",
       "type2": "Dragon",
-      "family": "Trapinch \u2192 Vibrava \u2192 Flygon \u2192 Mega Flygon",
+      "family": "Trapinch → Vibrava → Flygon → Mega Flygon",
       "confidence": "VERIFIED_SOURCE_METADATA;SOURCE_METADATA",
       "ready_for_approval": true
     },
@@ -3825,7 +3825,7 @@
       "name": "Mega Flygon",
       "type1": "Bug",
       "type2": "Dragon",
-      "family": "Trapinch \u2192 Vibrava \u2192 Flygon \u2192 Mega Flygon",
+      "family": "Trapinch → Vibrava → Flygon → Mega Flygon",
       "confidence": "VERIFIED_SOURCE_METADATA;SOURCE_METADATA",
       "ready_for_approval": true
     },
@@ -3921,7 +3921,7 @@
       "name": "Forbiddron",
       "type1": "Poison",
       "type2": "Ghost",
-      "family": "Lollybog \u2192 Brewtrid \u2192 Forbiddron",
+      "family": "Lollybog → Brewtrid → Forbiddron",
       "confidence": "EXTERNAL_SOURCE_METADATA",
       "ready_for_approval": true
     },
@@ -4149,7 +4149,7 @@
       "name": "Furnadon",
       "type1": "Rock",
       "type2": "Steel",
-      "family": "Glyptoblock \u2192 Furnadon",
+      "family": "Glyptoblock → Furnadon",
       "confidence": "EXTERNAL_SOURCE_METADATA",
       "ready_for_approval": true
     },
@@ -4161,7 +4161,7 @@
       "name": "Furnadon",
       "type1": "Ice",
       "type2": "Steel",
-      "family": "Glyptoblock \u2192 Furnadon",
+      "family": "Glyptoblock → Furnadon",
       "confidence": "EXTERNAL_SOURCE_METADATA",
       "ready_for_approval": true
     },
@@ -4305,7 +4305,7 @@
       "name": "Gasarnet",
       "type1": "Bug",
       "type2": "Poison",
-      "family": "Sufferub \u2192 Inhalis \u2192 Gasarnet",
+      "family": "Sufferub → Inhalis → Gasarnet",
       "confidence": "EXTERNAL_SOURCE_METADATA",
       "ready_for_approval": true
     },
@@ -4317,7 +4317,7 @@
       "name": "Gelescent",
       "type1": "Bug",
       "type2": "Water",
-      "family": "Sligment \u2192 Viscolor \u2192 Gelescent",
+      "family": "Sligment → Viscolor → Gelescent",
       "confidence": "EXTERNAL_SOURCE_METADATA",
       "ready_for_approval": true
     },
@@ -4365,7 +4365,7 @@
       "name": "Geocko",
       "type1": "Rock",
       "type2": "",
-      "family": "Geocko \u2192 Grexclub \u2192 Geolidon",
+      "family": "Geocko → Grexclub → Geolidon",
       "confidence": "EXTERNAL_SOURCE_METADATA",
       "ready_for_approval": true
     },
@@ -4377,7 +4377,7 @@
       "name": "Geolidon",
       "type1": "Rock",
       "type2": "",
-      "family": "Geocko \u2192 Grexclub \u2192 Geolidon",
+      "family": "Geocko → Grexclub → Geolidon",
       "confidence": "EXTERNAL_SOURCE_METADATA",
       "ready_for_approval": true
     },
@@ -4389,7 +4389,7 @@
       "name": "Germeit",
       "type1": "Poison",
       "type2": "",
-      "family": "Lilleo \u2192 Germeit",
+      "family": "Lilleo → Germeit",
       "confidence": "EXTERNAL_SOURCE_METADATA",
       "ready_for_approval": true
     },
@@ -4461,7 +4461,7 @@
       "name": "Glanchog",
       "type1": "Normal",
       "type2": "Psychic",
-      "family": "Patrat \u2192 Watchog \u2192 Glanchog",
+      "family": "Patrat → Watchog → Glanchog",
       "confidence": "EXTERNAL_SOURCE_METADATA",
       "ready_for_approval": true
     },
@@ -4509,7 +4509,7 @@
       "name": "Earthrethian Gloom",
       "type1": "Fire",
       "type2": "Steel",
-      "family": "Gloom 1 \u2192 Bellossom \u2192 Vileplume",
+      "family": "Gloom 1 → Bellossom → Vileplume",
       "confidence": "SOURCE_METADATA;SOURCE_EVOLUTION_GRAPH",
       "ready_for_approval": true
     },
@@ -4521,7 +4521,7 @@
       "name": "Glovet",
       "type1": "Water",
       "type2": "Fighting",
-      "family": "Dampybara \u2192 Glovet \u2192 Mortarine",
+      "family": "Dampybara → Glovet → Mortarine",
       "confidence": "EXTERNAL_SOURCE_METADATA",
       "ready_for_approval": true
     },
@@ -4533,7 +4533,7 @@
       "name": "Glyptoblock",
       "type1": "Rock",
       "type2": "Steel",
-      "family": "Glyptoblock \u2192 Furnadon",
+      "family": "Glyptoblock → Furnadon",
       "confidence": "EXTERNAL_SOURCE_METADATA",
       "ready_for_approval": true
     },
@@ -4545,7 +4545,7 @@
       "name": "Glyptoblock",
       "type1": "Ice",
       "type2": "Steel",
-      "family": "Glyptoblock \u2192 Furnadon",
+      "family": "Glyptoblock → Furnadon",
       "confidence": "EXTERNAL_SOURCE_METADATA",
       "ready_for_approval": true
     },
@@ -4605,7 +4605,7 @@
       "name": "Goobolt",
       "type1": "Electric",
       "type2": "",
-      "family": "Goobolt \u2192 Chargoo \u2192 Plasmatina",
+      "family": "Goobolt → Chargoo → Plasmatina",
       "confidence": "EXTERNAL_SOURCE_METADATA",
       "ready_for_approval": true
     },
@@ -4665,7 +4665,7 @@
       "name": "Gorochu",
       "type1": "Electric",
       "type2": "Fire",
-      "family": "Pichu \u2192 Pikachu \u2192 Gorochu",
+      "family": "Pichu → Pikachu → Gorochu",
       "confidence": "EXTERNAL_SOURCE_METADATA",
       "ready_for_approval": true
     },
@@ -4710,7 +4710,7 @@
       "source": "Mikitari",
       "front_path": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Front/GRANEBEE.png",
       "back_path": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/GRANEBEE.png",
-      "family": "Beelitant \u2192 Kocomb \u2192 Granebee",
+      "family": "Beelitant → Kocomb → Granebee",
       "name": "Granebee",
       "type1": "Bug",
       "type2": "Flying",
@@ -4749,7 +4749,7 @@
       "name": "Grexclub",
       "type1": "Rock",
       "type2": "",
-      "family": "Geocko \u2192 Grexclub \u2192 Geolidon",
+      "family": "Geocko → Grexclub → Geolidon",
       "confidence": "EXTERNAL_SOURCE_METADATA",
       "ready_for_approval": true
     },
@@ -5049,7 +5049,7 @@
       "name": "Hauntray",
       "type1": "Water",
       "type2": "Ghost",
-      "family": "Hauntray \u2192 Phantabys",
+      "family": "Hauntray → Phantabys",
       "confidence": "EXTERNAL_SOURCE_METADATA",
       "ready_for_approval": true
     },
@@ -5073,8 +5073,8 @@
       "name": "Hayog",
       "type1": "Ground",
       "type2": "Grass",
-      "family": "Standalone \u2014 Hayog",
-      "confidence": "EXTERNAL_SOURCE_METADATA",
+      "family": "Hayog → Hogouse → Hogriks",
+      "confidence": "EXTERNAL_SOURCE_METADATA;FAMILY_AUDIT_CORRECTED",
       "ready_for_approval": true
     },
     "heliosunny|f0514c5d00517d3d03e62097a2527b0ea881d489698687742c93cb33e2b5c5db": {
@@ -5145,7 +5145,7 @@
       "name": "Hissiorite",
       "type1": "Fire",
       "type2": "",
-      "family": "Hissiorite \u2192 Cobarett \u2192 Pythonova",
+      "family": "Hissiorite → Cobarett → Pythonova",
       "confidence": "VERIFIED_SOURCE_METADATA;BACK_MATCH_RECOVERED",
       "ready_for_approval": true
     },
@@ -5229,8 +5229,8 @@
       "name": "Hogouse",
       "type1": "Ground",
       "type2": "Grass",
-      "family": "Standalone \u2014 Hogouse",
-      "confidence": "EXTERNAL_SOURCE_METADATA",
+      "family": "Hayog → Hogouse → Hogriks",
+      "confidence": "EXTERNAL_SOURCE_METADATA;FAMILY_AUDIT_CORRECTED",
       "ready_for_approval": true
     },
     "hogriks|09d5ea97ceebd38a842145be9cbcb86fcc47fe1be023b4d63ea4ab77448c9723": {
@@ -5241,8 +5241,8 @@
       "name": "Hogriks",
       "type1": "Ground",
       "type2": "Rock",
-      "family": "Standalone \u2014 Hogriks",
-      "confidence": "EXTERNAL_SOURCE_METADATA",
+      "family": "Hayog → Hogouse → Hogriks",
+      "confidence": "EXTERNAL_SOURCE_METADATA;FAMILY_AUDIT_CORRECTED",
       "ready_for_approval": true
     },
     "homurant|ea9119efb146c176590f752c6dd17e32d02de5dbe2118c6bb19dcaa4fa253b65": {
@@ -5253,7 +5253,7 @@
       "name": "Homurant",
       "type1": "Bug",
       "type2": "Fire",
-      "family": "Standalone \u2014 Homurant",
+      "family": "Standalone — Homurant",
       "confidence": "EXTERNAL_SOURCE_METADATA",
       "ready_for_approval": true
     },
@@ -5277,7 +5277,7 @@
       "name": "Hoolihog",
       "type1": "Dark",
       "type2": "",
-      "family": "Droopig \u2192 Hoolihog",
+      "family": "Droopig → Hoolihog",
       "confidence": "EXTERNAL_SOURCE_METADATA",
       "ready_for_approval": true
     },
@@ -5289,7 +5289,7 @@
       "name": "Luminian Hoothoot",
       "type1": "Psychic",
       "type2": "",
-      "family": "Hoothoot 1 \u2192 Noctowl",
+      "family": "Hoothoot 1 → Noctowl",
       "confidence": "SOURCE_METADATA;SOURCE_EVOLUTION_GRAPH",
       "ready_for_approval": true
     },
@@ -5301,7 +5301,7 @@
       "name": "Hopidey",
       "type1": "Bug",
       "type2": "",
-      "family": "Hopidey \u2192 Raknaleap",
+      "family": "Hopidey → Raknaleap",
       "confidence": "EXTERNAL_SOURCE_METADATA",
       "ready_for_approval": true
     },
@@ -5397,7 +5397,7 @@
       "name": "Howliage",
       "type1": "Grass",
       "type2": "",
-      "family": "Standalone \u2014 Howliage",
+      "family": "Standalone — Howliage",
       "confidence": "EXTERNAL_SOURCE_METADATA",
       "ready_for_approval": true
     },
@@ -5505,7 +5505,7 @@
       "name": "Impurp",
       "type1": "Fairy",
       "type2": "Flying",
-      "family": "Impurp \u2192 Nymfusha",
+      "family": "Impurp → Nymfusha",
       "confidence": "EXTERNAL_SOURCE_METADATA",
       "ready_for_approval": true
     },
@@ -5601,7 +5601,7 @@
       "name": "Inhalis",
       "type1": "Bug",
       "type2": "Poison",
-      "family": "Sufferub \u2192 Inhalis \u2192 Gasarnet",
+      "family": "Sufferub → Inhalis → Gasarnet",
       "confidence": "EXTERNAL_SOURCE_METADATA",
       "ready_for_approval": true
     },
@@ -5814,12 +5814,12 @@
       "source": "Festival_Magiscarf",
       "front_path": "DS_CUSTOM_LIBRARY/packs/Festival_Magiscarf/Magiscarf/Battlers Normal/Front/Kankersaur.png",
       "back_path": "DS_CUSTOM_LIBRARY/packs/Festival_Magiscarf/Magiscarf/Battlers Normal/Back/Kankersaur.png",
-      "family": "Unresolved family / relationship",
+      "family": "Kankwart → Kankryst → Kankersaur",
       "name": "Kankersaur",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": false
+      "type1": "Rock",
+      "type2": "Poison",
+      "confidence": "WEB_VERIFIED_SOURCE_METADATA;FRONT_BACK_VERIFIED",
+      "ready_for_approval": true
     },
     "kankryst|372c4017c1b16e9e8ad25143212a48c726b9a464c6a99cbb38a4eb25045affe7": {
       "identity": "kankryst",
@@ -5829,7 +5829,7 @@
       "name": "Kankryst",
       "type1": "Rock",
       "type2": "Poison",
-      "family": "Kankwart \u2192 Kankryst \u2192 Kankersaur",
+      "family": "Kankwart → Kankryst → Kankersaur",
       "confidence": "EXTERNAL_SOURCE_METADATA",
       "ready_for_approval": true
     },
@@ -5841,7 +5841,7 @@
       "name": "Kankwart",
       "type1": "Rock",
       "type2": "Poison",
-      "family": "Kankwart \u2192 Kankryst \u2192 Kankersaur",
+      "family": "Kankwart → Kankryst → Kankersaur",
       "confidence": "EXTERNAL_SOURCE_METADATA",
       "ready_for_approval": true
     },
@@ -5865,7 +5865,7 @@
       "name": "Kartana Fallen",
       "type1": "Grass",
       "type2": "Steel",
-      "family": "Undiscovered \u2014 Kartana",
+      "family": "Undiscovered — Kartana",
       "confidence": "MANIFEST_BACK_REJECTED;MERCURY_MASTER",
       "ready_for_approval": false
     },
@@ -5901,7 +5901,7 @@
       "name": "Keerin",
       "type1": "Fairy",
       "type2": "Dragon",
-      "family": "Lambi \u2192 Mourin \u2192 Keerin",
+      "family": "Lambi → Mourin → Keerin",
       "confidence": "EXTERNAL_SOURCE_METADATA",
       "ready_for_approval": true
     },
@@ -6114,7 +6114,7 @@
       "source": "Mikitari",
       "front_path": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Front/KOCOMB.png",
       "back_path": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/KOCOMB.png",
-      "family": "Beelitant \u2192 Kocomb \u2192 Granebee",
+      "family": "Beelitant → Kocomb → Granebee",
       "name": "Kocomb",
       "type1": "Bug",
       "type2": "",
@@ -6126,7 +6126,7 @@
       "source": "Mikitari",
       "front_path": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Front/KOCOMB_1.png",
       "back_path": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/KOCOMB_1.png",
-      "family": "Beelitant \u2192 Kocomb \u2192 Granebee",
+      "family": "Beelitant → Kocomb → Granebee",
       "name": "Kocomb",
       "type1": "Bug",
       "type2": "",
@@ -6237,7 +6237,7 @@
       "name": "Lambi",
       "type1": "Fairy",
       "type2": "",
-      "family": "Lambi \u2192 Mourin \u2192 Keerin",
+      "family": "Lambi → Mourin → Keerin",
       "confidence": "EXTERNAL_SOURCE_METADATA",
       "ready_for_approval": true
     },
@@ -6405,7 +6405,7 @@
       "name": "Lediastra",
       "type1": "Bug",
       "type2": "Fighting",
-      "family": "Ledyba \u2192 Ledian \u2192 Lediastra",
+      "family": "Ledyba → Ledian → Lediastra",
       "confidence": "EXTERNAL_SOURCE_METADATA",
       "ready_for_approval": true
     },
@@ -6429,7 +6429,7 @@
       "name": "Lilleo",
       "type1": "Poison",
       "type2": "",
-      "family": "Lilleo \u2192 Germeit",
+      "family": "Lilleo → Germeit",
       "confidence": "EXTERNAL_SOURCE_METADATA",
       "ready_for_approval": true
     },
@@ -6477,7 +6477,7 @@
       "name": "Lollybog",
       "type1": "Poison",
       "type2": "Ghost",
-      "family": "Lollybog \u2192 Brewtrid \u2192 Forbiddron",
+      "family": "Lollybog → Brewtrid → Forbiddron",
       "confidence": "EXTERNAL_SOURCE_METADATA",
       "ready_for_approval": true
     },
@@ -6501,7 +6501,7 @@
       "name": "Mikitarian",
       "type1": "Dark",
       "type2": "",
-      "family": "Standalone \u2014 Mikitarian",
+      "family": "Standalone — Mikitarian",
       "confidence": "EXTERNAL_SOURCE_METADATA",
       "ready_for_approval": true
     },
@@ -6585,7 +6585,7 @@
       "name": "Lumini",
       "type1": "Electric",
       "type2": "Fairy",
-      "family": "Lumini \u2192 Lumedi \u2192 Lumaxi",
+      "family": "Lumini → Lumedi → Lumaxi",
       "confidence": "EXTERNAL_SOURCE_METADATA",
       "ready_for_approval": true
     },
@@ -6801,7 +6801,7 @@
       "name": "Mega Magearna",
       "type1": "Steel",
       "type2": "Fairy",
-      "family": "Undiscovered \u2014 Magearna",
+      "family": "Undiscovered — Magearna",
       "confidence": "MANIFEST_BACK_REJECTED;MERCURY_MASTER",
       "ready_for_approval": false
     },
@@ -6813,7 +6813,7 @@
       "name": "Mega Magearna (Original Color)",
       "type1": "Steel",
       "type2": "Fairy",
-      "family": "Magearna \u2192 Mega Magearna (Original Color)",
+      "family": "Magearna → Mega Magearna (Original Color)",
       "confidence": "MANIFEST_BACK_REJECTED;VERIFIED_SOURCE_METADATA",
       "ready_for_approval": false
     },
@@ -6861,7 +6861,7 @@
       "name": "Maizotaur",
       "type1": "Grass",
       "type2": "Fighting",
-      "family": "Pasturlo \u2192 Brambull \u2192 Maizotaur \u2192 X",
+      "family": "Pasturlo → Brambull → Maizotaur → X",
       "confidence": "SOURCE_METADATA;SOURCE_EVOLUTION_GRAPH",
       "ready_for_approval": false
     },
@@ -6945,7 +6945,7 @@
       "name": "Mantoon",
       "type1": "Water",
       "type2": "Electric",
-      "family": "Mantoon \u2192 Stormanta",
+      "family": "Mantoon → Stormanta",
       "confidence": "EXTERNAL_SOURCE_METADATA",
       "ready_for_approval": true
     },
@@ -6969,8 +6969,8 @@
       "name": "Marelstorm",
       "type1": "Water",
       "type2": "Steel",
-      "family": "Standalone \u2014 Marelstorm",
-      "confidence": "EXTERNAL_SOURCE_METADATA",
+      "family": "Minamai → Marelstorm",
+      "confidence": "EXTERNAL_SOURCE_METADATA;FAMILY_AUDIT_CORRECTED",
       "ready_for_approval": true
     },
     "marshmodo|f1dff1ea68fac31f607c37986f629a9e36c455b11061efb8649d22bdb6c6ce4e": {
@@ -7089,7 +7089,7 @@
       "name": "Mega Melmetal",
       "type1": "Steel",
       "type2": "",
-      "family": "Undiscovered \u2014 Meltan",
+      "family": "Undiscovered — Meltan",
       "confidence": "MERCURY_MASTER",
       "ready_for_approval": false
     },
@@ -7137,7 +7137,7 @@
       "name": "Merlicun",
       "type1": "Dragon",
       "type2": "Bug",
-      "family": "Merlicun \u2192 Firomenis",
+      "family": "Merlicun → Firomenis",
       "confidence": "VERIFIED_SOURCE_METADATA;BACK_MATCH_RECOVERED",
       "ready_for_approval": true
     },
@@ -7161,7 +7161,7 @@
       "name": "Delta Mesprit",
       "type1": "Ground",
       "type2": "Dark",
-      "family": "Undiscovered \u2014 Mesprit",
+      "family": "Undiscovered — Mesprit",
       "confidence": "MANIFEST_BACK_REJECTED;MERCURY_MASTER",
       "ready_for_approval": false
     },
@@ -7209,7 +7209,7 @@
       "name": "Mimiegg",
       "type1": "Normal",
       "type2": "Dark",
-      "family": "Mimiegg \u2192 Eggvour",
+      "family": "Mimiegg → Eggvour",
       "confidence": "SOURCE_METADATA;SOURCE_EVOLUTION_GRAPH",
       "ready_for_approval": true
     },
@@ -7245,8 +7245,8 @@
       "name": "Minamai",
       "type1": "Water",
       "type2": "",
-      "family": "Standalone \u2014 Minamai",
-      "confidence": "EXTERNAL_SOURCE_METADATA",
+      "family": "Minamai → Marelstorm",
+      "confidence": "EXTERNAL_SOURCE_METADATA;FAMILY_AUDIT_CORRECTED",
       "ready_for_approval": true
     },
     "minccino-redux|489bb49af4f7b3b73154ed67bf8ee9b5a2357a2485c7af65e2be37e5d0661065": {
@@ -7305,7 +7305,7 @@
       "name": "Mivota",
       "type1": "Psychic",
       "type2": "Fire",
-      "family": "Standalone \u2014 Mivota",
+      "family": "Standalone — Mivota",
       "confidence": "EXTERNAL_SOURCE_METADATA",
       "ready_for_approval": true
     },
@@ -7425,7 +7425,7 @@
       "name": "Mortarine",
       "type1": "Water",
       "type2": "Fighting",
-      "family": "Dampybara \u2192 Glovet \u2192 Mortarine",
+      "family": "Dampybara → Glovet → Mortarine",
       "confidence": "EXTERNAL_SOURCE_METADATA",
       "ready_for_approval": true
     },
@@ -7437,7 +7437,7 @@
       "name": "Mourin",
       "type1": "Fairy",
       "type2": "Dragon",
-      "family": "Lambi \u2192 Mourin \u2192 Keerin",
+      "family": "Lambi → Mourin → Keerin",
       "confidence": "EXTERNAL_SOURCE_METADATA",
       "ready_for_approval": true
     },
@@ -7449,7 +7449,7 @@
       "name": "Muchog",
       "type1": "Normal",
       "type2": "Ground",
-      "family": "Chubboink \u2192 Muchog",
+      "family": "Chubboink → Muchog",
       "confidence": "EXTERNAL_SOURCE_METADATA",
       "ready_for_approval": true
     },
@@ -7461,7 +7461,7 @@
       "name": "Munchill",
       "type1": "Ice",
       "type2": "",
-      "family": "Munchill \u2192 Crunchill",
+      "family": "Munchill → Crunchill",
       "confidence": "EXTERNAL_SOURCE_METADATA",
       "ready_for_approval": true
     },
@@ -7485,7 +7485,7 @@
       "name": "Murasalem",
       "type1": "Poison",
       "type2": "Normal",
-      "family": "Flampy \u2192 Murasalem",
+      "family": "Flampy → Murasalem",
       "confidence": "VERIFIED_SOURCE_METADATA",
       "ready_for_approval": true
     },
@@ -7530,12 +7530,12 @@
       "source": "Festival_Magiscarf",
       "front_path": "DS_CUSTOM_LIBRARY/packs/Festival_Magiscarf/Magiscarf/Battlers Normal/Front/Negagen.png",
       "back_path": "DS_CUSTOM_LIBRARY/packs/Festival_Magiscarf/Magiscarf/Battlers Normal/Back/Negagen.png",
-      "family": "Unresolved family / relationship",
+      "family": "Skelleks → Negagen",
       "name": "Negagen",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": false
+      "type1": "Ghost",
+      "type2": "Electric",
+      "confidence": "WEB_VERIFIED_SOURCE_METADATA;FRONT_BACK_VERIFIED",
+      "ready_for_approval": true
     },
     "nemesusa|b768c774064520578e95fb3a63e6883f936da604bcc075e1c574dac15ca731b4": {
       "identity": "nemesusa",
@@ -7614,7 +7614,7 @@
       "source": "Festival_Atsui",
       "front_path": "DS_CUSTOM_LIBRARY/packs/Festival_Atsui/Atsui/Pokemon/Front/NOCTOWL_1.png",
       "back_path": "DS_CUSTOM_LIBRARY/packs/Festival_Atsui/Atsui/Pokemon/Back/NOCTOWL_1.png",
-      "family": "Noctowl 1 \u2192 Enchantowl",
+      "family": "Noctowl 1 → Enchantowl",
       "name": "Noctowl 1",
       "type1": "Bug",
       "type2": "",
@@ -7629,7 +7629,7 @@
       "name": "Luminian Noctowl",
       "type1": "Psychic",
       "type2": "",
-      "family": "Noctowl 1 \u2192 Enchantowl",
+      "family": "Noctowl 1 → Enchantowl",
       "confidence": "SOURCE_METADATA;SOURCE_EVOLUTION_GRAPH",
       "ready_for_approval": true
     },
@@ -7737,7 +7737,7 @@
       "name": "Earthrethian Oddish",
       "type1": "Fire",
       "type2": "",
-      "family": "Standalone \u2014 Earthrethian Oddish",
+      "family": "Standalone — Earthrethian Oddish",
       "confidence": "SOURCE_METADATA;SOURCE_STANDALONE",
       "ready_for_approval": true
     },
@@ -7977,7 +7977,7 @@
       "name": "Pansimi",
       "type1": "Normal",
       "type2": "",
-      "family": "Pansimi \u2192 Panpour \u2192 Pansage \u2192 Pansear",
+      "family": "Pansimi → Panpour → Pansage → Pansear",
       "confidence": "SOURCE_METADATA;SOURCE_EVOLUTION_GRAPH;BACK_MATCH_RECOVERED",
       "ready_for_approval": true
     },
@@ -7989,7 +7989,7 @@
       "name": "Pasturlo",
       "type1": "Grass",
       "type2": "",
-      "family": "Pasturlo \u2192 Brambull \u2192 Maizotaur",
+      "family": "Pasturlo → Brambull → Maizotaur",
       "confidence": "SOURCE_METADATA;SOURCE_EVOLUTION_GRAPH",
       "ready_for_approval": false
     },
@@ -8022,12 +8022,12 @@
       "source": "Mikitari",
       "front_path": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Front/PECLAY.png",
       "back_path": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/PECLAY.png",
-      "family": "Unresolved family / relationship",
+      "family": "Peclay → Tektalon",
       "name": "Peclay",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": false
+      "type1": "Fighting",
+      "type2": "Ground",
+      "confidence": "WEB_VERIFIED_SOURCE_METADATA;FRONT_BACK_VERIFIED",
+      "ready_for_approval": true
     },
     "penming|08adca9690c942add6ade3d411876066d1f789766f001609c61e44098b7f94ef": {
       "identity": "penming",
@@ -8082,12 +8082,12 @@
       "source": "Mikitari",
       "front_path": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Front/PETALNIA.png",
       "back_path": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/PETALNIA.png",
-      "family": "Unresolved family / relationship",
+      "family": "Sprousy → Petalnia → Floramona",
       "name": "Petalnia",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": false
+      "type1": "Grass",
+      "type2": "Fairy",
+      "confidence": "WEB_VERIFIED_SOURCE_METADATA;FRONT_BACK_VERIFIED",
+      "ready_for_approval": true
     },
     "petalnia-1|ddcd6f79c0ed580bdfe951f8b51e017036921cdbb590aa844e04c7d979893177": {
       "identity": "petalnia-1",
@@ -8106,12 +8106,12 @@
       "source": "Mikitari",
       "front_path": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Front/PETIDAW.png",
       "back_path": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/PETIDAW.png",
-      "family": "Unresolved family / relationship",
+      "family": "Petidaw → Croober → Ravendler",
       "name": "Petidaw",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": false
+      "type1": "Dark",
+      "type2": "Flying",
+      "confidence": "WEB_VERIFIED_SOURCE_METADATA;FRONT_BACK_VERIFIED",
+      "ready_for_approval": true
     },
     "petidaw-female|68f21a2aa302377be6712b9b32742ceefdf09dac4749d5db7239a0fa1b244376": {
       "identity": "petidaw-female",
@@ -8142,12 +8142,12 @@
       "source": "Mikitari",
       "front_path": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Front/PHANTABYS.png",
       "back_path": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/PHANTABYS.png",
-      "family": "Unresolved family / relationship",
+      "family": "Hauntray → Phantabys",
       "name": "Phantabys",
-      "type1": "Bug",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": false
+      "type1": "Water",
+      "type2": "Ghost",
+      "confidence": "WEB_VERIFIED_SOURCE_METADATA;FRONT_BACK_VERIFIED",
+      "ready_for_approval": true
     },
     "phantowl|c872aa4111e2c2a10398bc000f0567f280c4f5feca308df0ece8306b1caa9264": {
       "identity": "phantowl",
@@ -8274,24 +8274,24 @@
       "source": "Mikitari",
       "front_path": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Front/PLASMATINA.png",
       "back_path": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/PLASMATINA.png",
-      "family": "Unresolved family / relationship",
+      "family": "Goobolt → Chargoo → Plasmatina",
       "name": "Plasmatina",
-      "type1": "Normal",
+      "type1": "Electric",
       "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": false
+      "confidence": "WEB_VERIFIED_SOURCE_METADATA;FRONT_BACK_VERIFIED",
+      "ready_for_approval": true
     },
     "platerigus|277910002af1632f2aed75c8df2c72732a4ccdff0c572a514821ac2606802448": {
       "identity": "platerigus",
       "source": "Mikitari",
       "front_path": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Front/PLATERIGUS.png",
       "back_path": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/PLATERIGUS.png",
-      "family": "Unresolved family / relationship",
+      "family": "Platerigus → Mikitarian → Traumatisse",
       "name": "Platerigus",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": false
+      "type1": "Rock",
+      "type2": "Ghost",
+      "confidence": "WEB_VERIFIED_SOURCE_METADATA;FRONT_BACK_VERIFIED",
+      "ready_for_approval": true
     },
     "plundertow|5720f7784f31ccb9686b27112baf062425d42edcc355a74e65c6bbb83c7142ee": {
       "identity": "plundertow",
@@ -8325,7 +8325,7 @@
       "name": "Mega Meowstic Female",
       "type1": "Psychic",
       "type2": "",
-      "family": "Espurr \u2192 Meowstic \u2192 Mega Meowstic Female",
+      "family": "Espurr → Meowstic → Mega Meowstic Female",
       "confidence": "MANIFEST_BACK_REJECTED;VERIFIED_SOURCE_METADATA",
       "ready_for_approval": false
     },
@@ -8454,12 +8454,12 @@
       "source": "Mikitari",
       "front_path": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Front/PRANKMARE.png",
       "back_path": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/PRANKMARE.png",
-      "family": "Unresolved family / relationship",
+      "family": "Timpot → Prankmare",
       "name": "Prankmare",
-      "type1": "Normal",
+      "type1": "Ghost",
       "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": false
+      "confidence": "WEB_VERIFIED_SOURCE_METADATA;FRONT_BACK_VERIFIED",
+      "ready_for_approval": true
     },
     "primarina-mega|3db7722c5775faa5da95b08961ce7ed2552b87694fa03286c07d673228a48444": {
       "identity": "primarina-mega",
@@ -8589,7 +8589,7 @@
       "name": "Pythonova",
       "type1": "Fire",
       "type2": "",
-      "family": "Hissiorite \u2192 Cobarett \u2192 Pythonova",
+      "family": "Hissiorite → Cobarett → Pythonova",
       "confidence": "MANIFEST_BACK_REJECTED;VERIFIED_SOURCE_METADATA;BACK_MATCH_RECOVERED",
       "ready_for_approval": true
     },
@@ -8754,12 +8754,12 @@
       "source": "Mikitari",
       "front_path": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Front/RAKNALEAP.png",
       "back_path": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/RAKNALEAP.png",
-      "family": "Unresolved family / relationship",
+      "family": "Hopidey → Raknaleap",
       "name": "Raknaleap",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": false
+      "type1": "Bug",
+      "type2": "Dark",
+      "confidence": "WEB_VERIFIED_SOURCE_METADATA;FRONT_BACK_VERIFIED",
+      "ready_for_approval": true
     },
     "ralts-redux|821bd170a2f42a55764071adcd1738d9182bf86ed4f371c6bade5c1ee06f332f": {
       "identity": "ralts-redux",
@@ -8886,12 +8886,12 @@
       "source": "Mikitari",
       "front_path": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Front/RAVENDLER.png",
       "back_path": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/RAVENDLER.png",
-      "family": "Unresolved family / relationship",
+      "family": "Petidaw → Croober → Ravendler",
       "name": "Ravendler",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": false
+      "type1": "Dark",
+      "type2": "Flying",
+      "confidence": "WEB_VERIFIED_SOURCE_METADATA;FRONT_BACK_VERIFIED",
+      "ready_for_approval": true
     },
     "ravendler-female|c3ed6a33126b449d576ea39f1c7a587cbf223a83cf4a530df9b499e47d434061": {
       "identity": "ravendler-female",
@@ -9102,24 +9102,24 @@
       "source": "Mikitari",
       "front_path": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Front/RHINPLINK.png",
       "back_path": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/RHINPLINK.png",
-      "family": "Unresolved family / relationship",
+      "family": "Rhinplink → Trunkorn → Rhintain",
       "name": "Rhinplink",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": false
+      "type1": "Grass",
+      "type2": "Rock",
+      "confidence": "WEB_VERIFIED_SOURCE_METADATA;FRONT_BACK_VERIFIED",
+      "ready_for_approval": true
     },
     "rhintain|70156cdf466d659e5bd00268aa2c875a493a98cd252caae58a0b9111cc63990b": {
       "identity": "rhintain",
       "source": "Mikitari",
       "front_path": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Front/RHINTAIN.png",
       "back_path": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/RHINTAIN.png",
-      "family": "Unresolved family / relationship",
+      "family": "Rhinplink → Trunkorn → Rhintain",
       "name": "Rhintain",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": false
+      "type1": "Grass",
+      "type2": "Rock",
+      "confidence": "WEB_VERIFIED_SOURCE_METADATA;FRONT_BACK_VERIFIED",
+      "ready_for_approval": true
     },
     "ribombee-mega|8cdd7044cd4e291399cdf53e13d19304f2148f939d4c0de298471ded8adf9e9a": {
       "identity": "ribombee-mega",
@@ -9654,23 +9654,23 @@
       "source": "Mikitari",
       "front_path": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Front/SEARPENT.png",
       "back_path": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/SEARPENT.png",
-      "family": "Unresolved family / relationship",
+      "family": "Flarepent → Searpent → Conflevour",
       "name": "Searpent",
-      "type1": "Water",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": false
+      "type1": "Fire",
+      "type2": "Dragon",
+      "confidence": "WEB_VERIFIED_SOURCE_METADATA;FRONT_BACK_VERIFIED",
+      "ready_for_approval": true
     },
     "searpent|4b3348e1e0de659e91880c146379dd1d00568e9e460c5d90c4228fb902b2e005": {
       "identity": "searpent",
       "source": "Festival_Magiscarf",
       "front_path": "DS_CUSTOM_LIBRARY/packs/Festival_Magiscarf/Magiscarf/Battlers Normal/Front/Searpent.png",
       "back_path": "",
-      "family": "Unresolved family / relationship",
+      "family": "Flarepent → Searpent → Conflevour",
       "name": "Searpent",
-      "type1": "Water",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
+      "type1": "Fire",
+      "type2": "Dragon",
+      "confidence": "WEB_VERIFIED_SOURCE_METADATA;FRONT_BACK_VERIFIED",
       "ready_for_approval": false
     },
     "seegel|c1df2f21c0433cdf83030ec315cb5ff3a6ecbb9d04f49abaf851040e4cd6fb56": {
@@ -9969,7 +9969,7 @@
       "name": "Sithwitch",
       "type1": "Fairy",
       "type2": "Grass",
-      "family": "Apprensith \u2192 Sithwitch",
+      "family": "Apprensith → Sithwitch",
       "confidence": "SOURCE_METADATA;SOURCE_EVOLUTION_GRAPH",
       "ready_for_approval": true
     },
@@ -9981,7 +9981,7 @@
       "name": "Sizzly",
       "type1": "Fire",
       "type2": "",
-      "family": "Bonfur \u2192 Tindursa \u2192 Sizzly",
+      "family": "Bonfur → Tindursa → Sizzly",
       "confidence": "EXTERNAL_SOURCE_METADATA",
       "ready_for_approval": true
     },
@@ -10053,7 +10053,7 @@
       "name": "Skelleks",
       "type1": "Ghost",
       "type2": "Electric",
-      "family": "Skelleks \u2192 Negagen",
+      "family": "Skelleks → Negagen",
       "confidence": "EXTERNAL_SOURCE_METADATA",
       "ready_for_approval": true
     },
@@ -10065,7 +10065,7 @@
       "name": "Skindling",
       "type1": "Fire",
       "type2": "",
-      "family": "Skindling \u2192 Skingnite \u2192 Eruptile",
+      "family": "Skindling → Skingnite → Eruptile",
       "confidence": "EXTERNAL_SOURCE_METADATA",
       "ready_for_approval": true
     },
@@ -10077,7 +10077,7 @@
       "name": "Skingnite",
       "type1": "Fire",
       "type2": "",
-      "family": "Skindling \u2192 Skingnite \u2192 Eruptile",
+      "family": "Skindling → Skingnite → Eruptile",
       "confidence": "EXTERNAL_SOURCE_METADATA",
       "ready_for_approval": true
     },
@@ -10149,7 +10149,7 @@
       "name": "Slidune",
       "type1": "Rock",
       "type2": "Ground",
-      "family": "Slidune \u2192 Duntesert",
+      "family": "Slidune → Duntesert",
       "confidence": "EXTERNAL_SOURCE_METADATA",
       "ready_for_approval": true
     },
@@ -10161,7 +10161,7 @@
       "name": "Slidune",
       "type1": "Ice",
       "type2": "Ground",
-      "family": "Slidune \u2192 Duntesert",
+      "family": "Slidune → Duntesert",
       "confidence": "EXTERNAL_SOURCE_METADATA",
       "ready_for_approval": true
     },
@@ -10173,7 +10173,7 @@
       "name": "Sligment",
       "type1": "Bug",
       "type2": "",
-      "family": "Sligment \u2192 Viscolor \u2192 Gelescent",
+      "family": "Sligment → Viscolor → Gelescent",
       "confidence": "EXTERNAL_SOURCE_METADATA",
       "ready_for_approval": true
     },
@@ -10269,7 +10269,7 @@
       "name": "Smoald",
       "type1": "Fire",
       "type2": "",
-      "family": "Smoald \u2192 Bombustoad",
+      "family": "Smoald → Bombustoad",
       "confidence": "EXTERNAL_SOURCE_METADATA",
       "ready_for_approval": true
     },
@@ -10305,7 +10305,7 @@
       "name": "Sneepy",
       "type1": "Grass",
       "type2": "",
-      "family": "Sneepy \u2192 Flambafee",
+      "family": "Sneepy → Flambafee",
       "confidence": "EXTERNAL_SOURCE_METADATA",
       "ready_for_approval": true
     },
@@ -10581,7 +10581,7 @@
       "name": "Spectrier Cloud",
       "type1": "Flying",
       "type2": "",
-      "family": "Undiscovered \u2014 Spectrier",
+      "family": "Undiscovered — Spectrier",
       "confidence": "MANIFEST_BACK_REJECTED;MERCURY_MASTER",
       "ready_for_approval": false
     },
@@ -10593,7 +10593,7 @@
       "name": "Sphertle",
       "type1": "Steel",
       "type2": "",
-      "family": "Sphertle \u2192 Wroomtoise",
+      "family": "Sphertle → Wroomtoise",
       "confidence": "EXTERNAL_SOURCE_METADATA",
       "ready_for_approval": true
     },
@@ -10629,7 +10629,7 @@
       "name": "Luminian Spinarak",
       "type1": "Bug",
       "type2": "Dark",
-      "family": "Spinarak 1 \u2192 Ariados",
+      "family": "Spinarak 1 → Ariados",
       "confidence": "SOURCE_METADATA;SOURCE_EVOLUTION_GRAPH",
       "ready_for_approval": true
     },
@@ -10677,7 +10677,7 @@
       "name": "Mikitarian",
       "type1": "Fairy",
       "type2": "Dark",
-      "family": "Platerigus \u2192 Mikitarian \u2192 Traumatisse",
+      "family": "Platerigus → Mikitarian → Traumatisse",
       "confidence": "EXTERNAL_SOURCE_METADATA",
       "ready_for_approval": true
     },
@@ -10701,7 +10701,7 @@
       "name": "Sprousy",
       "type1": "Grass",
       "type2": "",
-      "family": "Sprousy \u2192 Petalnia \u2192 Floramona",
+      "family": "Sprousy → Petalnia → Floramona",
       "confidence": "EXTERNAL_SOURCE_METADATA",
       "ready_for_approval": true
     },
@@ -10725,7 +10725,7 @@
       "name": "Stalad",
       "type1": "Flying",
       "type2": "Rock",
-      "family": "Cabat\u2640 \u2192 Stalass \u2192 Packbats \u2192 Cabat\u2642 \u2192 Stalad",
+      "family": "Cabat♀ → Stalass → Packbats → Cabat♂ → Stalad",
       "confidence": "EXTERNAL_SOURCE_METADATA",
       "ready_for_approval": true
     },
@@ -10737,7 +10737,7 @@
       "name": "Stalass",
       "type1": "Flying",
       "type2": "Ice",
-      "family": "Cabat\u2640 \u2192 Stalass \u2192 Packbats \u2192 Cabat\u2642 \u2192 Stalad",
+      "family": "Cabat♀ → Stalass → Packbats → Cabat♂ → Stalad",
       "confidence": "EXTERNAL_SOURCE_METADATA",
       "ready_for_approval": true
     },
@@ -10785,7 +10785,7 @@
       "name": "Stormanta",
       "type1": "Water",
       "type2": "Electric",
-      "family": "Mantoon \u2192 Stormanta",
+      "family": "Mantoon → Stormanta",
       "confidence": "EXTERNAL_SOURCE_METADATA",
       "ready_for_approval": true
     },
@@ -10893,7 +10893,7 @@
       "name": "Sufferub",
       "type1": "Bug",
       "type2": "",
-      "family": "Sufferub \u2192 Inhalis \u2192 Gasarnet",
+      "family": "Sufferub → Inhalis → Gasarnet",
       "confidence": "EXTERNAL_SOURCE_METADATA",
       "ready_for_approval": true
     },
@@ -11085,7 +11085,7 @@
       "name": "Tektalon",
       "type1": "Fighting",
       "type2": "Ground",
-      "family": "Peclay \u2192 Tektalon",
+      "family": "Peclay → Tektalon",
       "confidence": "EXTERNAL_SOURCE_METADATA",
       "ready_for_approval": true
     },
@@ -11097,7 +11097,7 @@
       "name": "Tektalon",
       "type1": "Fighting",
       "type2": "Ground",
-      "family": "Peclay \u2192 Tektalon",
+      "family": "Peclay → Tektalon",
       "confidence": "EXTERNAL_SOURCE_METADATA",
       "ready_for_approval": true
     },
@@ -11133,7 +11133,7 @@
       "name": "Terapagos Stellar Form",
       "type1": "Normal",
       "type2": "",
-      "family": "Undiscovered \u2014 Terapagos",
+      "family": "Undiscovered — Terapagos",
       "confidence": "MANIFEST_BACK_REJECTED;MERCURY_MASTER",
       "ready_for_approval": false
     },
@@ -11181,7 +11181,7 @@
       "name": "Thunphony",
       "type1": "Normal",
       "type2": "Electric",
-      "family": "Cubchestra \u2192 Thunphony",
+      "family": "Cubchestra → Thunphony",
       "confidence": "SOURCE_METADATA;SOURCE_EVOLUTION_GRAPH;SOUND_TO_NORMAL",
       "ready_for_approval": true
     },
@@ -11205,7 +11205,7 @@
       "name": "Timberry",
       "type1": "Grass",
       "type2": "",
-      "family": "Standalone \u2014 Timberry",
+      "family": "Standalone — Timberry",
       "confidence": "EXTERNAL_SOURCE_METADATA",
       "ready_for_approval": true
     },
@@ -11229,7 +11229,7 @@
       "name": "Timpot",
       "type1": "Ghost",
       "type2": "",
-      "family": "Timpot \u2192 Prankmare",
+      "family": "Timpot → Prankmare",
       "confidence": "EXTERNAL_SOURCE_METADATA",
       "ready_for_approval": true
     },
@@ -11241,7 +11241,7 @@
       "name": "Tindursa",
       "type1": "Fire",
       "type2": "",
-      "family": "Bonfur \u2192 Tindursa \u2192 Sizzly",
+      "family": "Bonfur → Tindursa → Sizzly",
       "confidence": "EXTERNAL_SOURCE_METADATA",
       "ready_for_approval": true
     },
@@ -11313,7 +11313,7 @@
       "name": "Tobishimi",
       "type1": "Dragon",
       "type2": "",
-      "family": "Drashimi \u2192 Tsushimi \u2192 Tobishimi",
+      "family": "Drashimi → Tsushimi → Tobishimi",
       "confidence": "VERIFIED_SOURCE_METADATA;BACK_MATCH_RECOVERED",
       "ready_for_approval": true
     },
@@ -11337,7 +11337,7 @@
       "name": "Tormine",
       "type1": "Fire",
       "type2": "Rock",
-      "family": "Torkoal \u2192 Tormine",
+      "family": "Torkoal → Tormine",
       "confidence": "EXTERNAL_SOURCE_METADATA",
       "ready_for_approval": true
     },
@@ -11517,8 +11517,8 @@
       "name": "Traumatisse",
       "type1": "Fairy",
       "type2": "Dark",
-      "family": "Standalone \u2014 Traumatisse",
-      "confidence": "EXTERNAL_SOURCE_METADATA",
+      "family": "Platerigus → Mikitarian → Traumatisse",
+      "confidence": "EXTERNAL_SOURCE_METADATA;FAMILY_AUDIT_CORRECTED",
       "ready_for_approval": true
     },
     "treesmas|740e7ccc6f24470c2a3e4bbeaea360d450ab9264f29698f450a9a51829052451": {
@@ -11601,7 +11601,7 @@
       "name": "Troutle",
       "type1": "Water",
       "type2": "",
-      "family": "Troutle \u2192 Basculin \u2192 Basstile",
+      "family": "Troutle → Basculin → Basstile",
       "confidence": "EXTERNAL_SOURCE_METADATA",
       "ready_for_approval": true
     },
@@ -11613,7 +11613,7 @@
       "name": "Trunkorn",
       "type1": "Grass",
       "type2": "Rock",
-      "family": "Rhinplink \u2192 Trunkorn \u2192 Rhintain",
+      "family": "Rhinplink → Trunkorn → Rhintain",
       "confidence": "EXTERNAL_SOURCE_METADATA",
       "ready_for_approval": true
     },
@@ -11661,7 +11661,7 @@
       "name": "Tsushimi",
       "type1": "Dragon",
       "type2": "",
-      "family": "Drashimi \u2192 Tsushimi \u2192 Tobishimi",
+      "family": "Drashimi → Tsushimi → Tobishimi",
       "confidence": "VERIFIED_SOURCE_METADATA;BACK_MATCH_RECOVERED",
       "ready_for_approval": true
     },
@@ -11781,7 +11781,7 @@
       "name": "Umamoth",
       "type1": "Bug",
       "type2": "Dark",
-      "family": "Venonat 1 \u2192 Umamoth",
+      "family": "Venonat 1 → Umamoth",
       "confidence": "SOURCE_METADATA;SOURCE_EVOLUTION_GRAPH",
       "ready_for_approval": true
     },
@@ -11793,7 +11793,7 @@
       "name": "Umbreeze",
       "type1": "Flying",
       "type2": "",
-      "family": "Standalone \u2014 Umbreeze",
+      "family": "Standalone — Umbreeze",
       "confidence": "EXTERNAL_SOURCE_METADATA",
       "ready_for_approval": true
     },
@@ -11913,7 +11913,7 @@
       "name": "Urshifu Rapid Strike Style",
       "type1": "Fighting",
       "type2": "Water",
-      "family": "Undiscovered \u2014 Kubfu",
+      "family": "Undiscovered — Kubfu",
       "confidence": "MANIFEST_BACK_REJECTED;MERCURY_MASTER",
       "ready_for_approval": false
     },
@@ -11925,7 +11925,7 @@
       "name": "Delta Uxie",
       "type1": "Dark",
       "type2": "Fairy",
-      "family": "Undiscovered \u2014 Uxie",
+      "family": "Undiscovered — Uxie",
       "confidence": "MANIFEST_BACK_REJECTED;MERCURY_MASTER",
       "ready_for_approval": false
     },
@@ -12057,7 +12057,7 @@
       "name": "Earthrethian Venonat",
       "type1": "Bug",
       "type2": "Dark",
-      "family": "Venonat 1 \u2192 Umamoth",
+      "family": "Venonat 1 → Umamoth",
       "confidence": "SOURCE_METADATA;SOURCE_EVOLUTION_GRAPH",
       "ready_for_approval": true
     },
@@ -12105,7 +12105,7 @@
       "name": "Victini Primal",
       "type1": "Psychic",
       "type2": "Fire",
-      "family": "Undiscovered \u2014 Victini",
+      "family": "Undiscovered — Victini",
       "confidence": "MANIFEST_BACK_REJECTED;MERCURY_MASTER",
       "ready_for_approval": false
     },
@@ -12129,7 +12129,7 @@
       "name": "Earthrethian Vileplume",
       "type1": "Fire",
       "type2": "Steel",
-      "family": "Standalone \u2014 Earthrethian Vileplume",
+      "family": "Standalone — Earthrethian Vileplume",
       "confidence": "SOURCE_METADATA;SOURCE_STANDALONE",
       "ready_for_approval": true
     },
@@ -12141,7 +12141,7 @@
       "name": "Viscolor",
       "type1": "Bug",
       "type2": "",
-      "family": "Sligment \u2192 Viscolor \u2192 Gelescent",
+      "family": "Sligment → Viscolor → Gelescent",
       "confidence": "EXTERNAL_SOURCE_METADATA",
       "ready_for_approval": true
     },
@@ -12261,7 +12261,7 @@
       "name": "Webruiser",
       "type1": "Bug",
       "type2": "Fighting",
-      "family": "Standalone \u2014 Webruiser",
+      "family": "Standalone — Webruiser",
       "confidence": "EXTERNAL_SOURCE_METADATA",
       "ready_for_approval": true
     },
@@ -12489,7 +12489,7 @@
       "name": "Wroomtoise",
       "type1": "Steel",
       "type2": "",
-      "family": "Sphertle \u2192 Wroomtoise",
+      "family": "Sphertle → Wroomtoise",
       "confidence": "EXTERNAL_SOURCE_METADATA",
       "ready_for_approval": true
     },
@@ -12513,7 +12513,7 @@
       "name": "Xapling",
       "type1": "Electric",
       "type2": "",
-      "family": "Xapling \u2192 Xurkitree",
+      "family": "Xapling → Xurkitree",
       "confidence": "SOURCE_METADATA;SOURCE_EVOLUTION_GRAPH",
       "ready_for_approval": false
     },
@@ -12525,7 +12525,7 @@
       "name": "Mikitarian",
       "type1": "Rock",
       "type2": "Ghost",
-      "family": "Platerigus \u2192 Mikitarian \u2192 Traumatisse",
+      "family": "Platerigus → Mikitarian → Traumatisse",
       "confidence": "EXTERNAL_SOURCE_METADATA",
       "ready_for_approval": true
     },
@@ -12537,7 +12537,7 @@
       "name": "Mega Yveltal",
       "type1": "Dark",
       "type2": "Flying",
-      "family": "Undiscovered \u2014 Yveltal",
+      "family": "Undiscovered — Yveltal",
       "confidence": "MANIFEST_BACK_REJECTED;MERCURY_MASTER",
       "ready_for_approval": false
     },
