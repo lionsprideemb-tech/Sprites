@@ -254,7 +254,11 @@ for base in [ROOT/"packs",ROOT/"hack-packs",ROOT/"converted"]:
             if not key:continue
             display=(nm.group(1).strip() if nm else section_name)
             if fm and "," in section_name and not nm:
-                display=(fm.group(1).strip()+" "+section_name.split(",")[0].strip()).strip()
+                form_label=fm.group(1).strip()
+                base_label=section_name.split(",")[0].strip().replace("_"," ").title()
+                # Essentials FormName is sometimes already a full display name
+                # ("Mega Mismagius") and sometimes only a qualifier ("Luminian").
+                display=form_label if norm(base_label) in norm(form_label) else (form_label+" "+base_label).strip()
             rec=meta.setdefault((src,key),{"name":display,"source":src})
 
             # Alias the literal section key too (e.g. NOCTOWL,1).
