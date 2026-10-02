@@ -25,7 +25,7 @@ jobs:
         run: |
           set -euo pipefail
           rm -rf /tmp/plates /tmp/plates.zip
-          gdown --fuzzy "https://drive.google.com/file/d/1EuPksJQ-nLTxhQ241Ixm5pehjcIs3fTn/view" -O /tmp/plates.zip
+          gdown "1EuPksJQ-nLTxhQ241Ixm5pehjcIs3fTn" -O /tmp/plates.zip
           unzip -q /tmp/plates.zip -d /tmp/plates
           test -n "$(find /tmp/plates -type d -path '*/Graphics/Battlers' -print -quit)"
 
