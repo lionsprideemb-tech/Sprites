@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Mercury Eeveelution Final Pick</title>
+<style>
+:root{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:#f4efe3;color:#17202b}
+*{box-sizing:border-box}
+body{margin:0;max-width:1100px;margin:auto;padding:0 12px 40px}
+header{position:sticky;top:0;z-index:20;background:#f4efe3f2;backdrop-filter:blur(10px);padding:12px 0 9px;border-bottom:1px solid #d8cebd}
+h1{font-size:23px;margin:0 0 4px}.sub{font-size:13px;color:#5d6672;line-height:1.4}
+.progress{margin-top:8px;font-weight:800;font-size:13px}
+.family{margin-top:16px;background:#fffdf8;border:1px solid #d8cebd;border-radius:16px;overflow:hidden;box-shadow:0 2px 8px #0000000b}
+.family h2{margin:0;padding:12px 14px 3px;font-size:19px}.hint{padding:0 14px 10px;font-size:12px;color:#69717c}
+.options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;padding:0 10px 12px}
+.option{border:2px solid #e0d8cb;border-radius:14px;background:#faf7f0;overflow:hidden;cursor:pointer;position:relative}
+.option.selected{border-color:#315a8f;background:#eef4fb}
+.option input{position:absolute;top:10px;right:10px;width:22px;height:22px}
+.head{padding:10px 38px 5px 10px}.title{font-weight:800;font-size:14px}.source{font-size:11px;color:#68717d;margin-top:2px}
+.sprite{height:190px;display:flex;align-items:center;justify-content:center;padding:8px;background:linear-gradient(#f8f4eb,#eee7da)}
+.sprite img{max-width:170px;max-height:170px;image-rendering:pixelated;object-fit:contain}
+.meta{padding:8px 10px;font-size:11px;color:#596270;min-height:43px}
+.none .sprite{font-size:42px;color:#9b9387}.none .meta{text-align:center}
+.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+button{border:1px solid #aeb6c2;background:#fff;border-radius:10px;padding:10px 12px;font:inherit;font-weight:700;cursor:pointer}
+button.primary{background:#315a8f;color:#fff;border-color:#315a8f}
+.note{margin-top:14px;padding:11px 12px;border-radius:12px;background:#fff8df;border:1px solid #e3d5a4;font-size:12px;line-height:1.4}
+@media(max-width:650px){
+ body{padding:0 8px 28px}
+ h1{font-size:20px}
+ .options{gap:7px;padding:0 7px 10px}
+ .sprite{height:150px}
+ .sprite img{max-width:132px;max-height:132px}
+ .title{font-size:13px}.source{font-size:10px}
+}
+</style>
+</head>
+<body>
+<header>
+<h1>Pokémon Mercury Redux — Eeveelution Final Pick</h1>
+<div class="sub">Pick the single custom design you want to represent each Eeveelution in Mercury. Vanilla forms stay regardless. Your choices save automatically on this device.</div>
+<div class="progress" id="progress">0 / 8 decided</div>
+<div class="actions"><button class="primary" id="export">Export decisions CSV</button><button id="copy">Copy choices</button><button id="clear">Clear choices</button></div>
+</header>
+<div id="root"></div>
+<div class="note"><b>Separate decisions:</b> Eevee Mega and Museon are not part of this one-per-Eeveelution comparison. We’ll handle those with the broader Eevee-family roster audit after these eight are settled.</div>
+<script>
+const ROOT="DS_CUSTOM_LIBRARY/";
+const P=ROOT+"hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/";
+const R=ROOT+"recovered/Reborn_Plates_Legacy/";
+const rows=[
+{name:"Vaporeon",options:[
+ {id:"platinum-redux-vaporeon",label:"Option A — Platinum Redux",source:"Platinum Redux",img:P+"0015_image113.png"},
+ {id:"vaporeon-alternate-form-3",label:"Option B — Alternate Form 3",source:"Reborn / Plates",img:R+"vaporeon-alternate-form-3/front.png"}]},
+{name:"Jolteon",options:[
+ {id:"platinum-redux-jolteon",label:"Option A — Platinum Redux",source:"Platinum Redux",img:P+"0318_image117.png"},
+ {id:"jolteon-alternate-form-3",label:"Option B — Alternate Form 3",source:"Reborn / Plates",img:R+"jolteon-alternate-form-3/front.png"}]},
+{name:"Flareon",options:[
+ {id:"platinum-redux-flareon",label:"Option A — Platinum Redux",source:"Platinum Redux",img:P+"0315_image134.png"},
+ {id:"flareon-alternate-form-3",label:"Option B — Alternate Form 3",source:"Reborn / Plates",img:R+"flareon-alternate-form-3/front.png"}]},
+{name:"Espeon",options:[
+ {id:"platinum-redux-espeon",label:"Option A — Platinum Redux",source:"Platinum Redux",img:P+"0026_image167.png"},
+ {id:"espeon-alternate-form-3",label:"Option B — Alternate Form 3",source:"Reborn / Plates",img:R+"espeon-alternate-form-3/front.png"}]},
+{name:"Umbreon",options:[
+ {id:"platinum-redux-umbreon",label:"Option A — Platinum Redux",source:"Platinum Redux",img:P+"0406_image175.png"},
+ {id:"umbreon-alternate-form-3",label:"Option B — Alternate Form 3",source:"Reborn / Plates",img:R+"umbreon-alternate-form-3/front.png"}]},
+{name:"Leafeon",options:[
+ {id:"platinum-redux-leafeon",label:"Option A — Platinum Redux",source:"Platinum Redux",img:P+"0248_image396.png"},
+ {id:"leafeon-alternate-form-3",label:"Option B — Alternate Form 3",source:"Reborn / Plates",img:R+"leafeon-alternate-form-3/front.png"}]},
+{name:"Glaceon",options:[
+ {id:"platinum-redux-glaceon",label:"Option A — Platinum Redux",source:"Platinum Redux",img:P+"0138_image417.png"},
+ {id:"glaceon-alternate-form-3",label:"Option B — Alternate Form 3",source:"Reborn / Plates",img:R+"glaceon-alternate-form-3/front.png"}]},
+{name:"Sylveon",options:[
+ {id:"sylveon-alternate-form-3",label:"Custom candidate — Alternate Form 3",source:"Reborn / Plates",img:R+"sylveon-alternate-form-3/front.png"},
+ {id:"none",label:"No custom Sylveon",source:"Keep vanilla only",img:null}]}
+];
+const KEY="mercury-eeveelution-final-picks-v1";
+let state=JSON.parse(localStorage.getItem(KEY)||"{}");
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+function choose(species,id){state[species]=id;localStorage.setItem(KEY,JSON.stringify(state));render()}
+function render(){
+ const root=document.getElementById("root");
+ root.innerHTML=rows.map(row=>{
+  const cards=row.options.map(o=>{
+   const sel=state[row.name]===o.id;
+   return '<label class="option '+(sel?'selected':'')+' '+(o.id==="none"?'none':'')+'">'+
+    '<input type="radio" name="'+row.name+'" '+(sel?'checked':'')+' onchange="choose(\''+row.name+'\',\''+o.id+'\')">'+
+    '<div class="head"><div class="title">'+esc(o.label)+'</div><div class="source">'+esc(o.source)+'</div></div>'+
+    '<div class="sprite">'+(o.img?'<img src="'+o.img+'" alt="'+esc(row.name)+' '+esc(o.label)+'">':'∅')+'</div>'+
+    '<div class="meta">'+(o.id==="none"?'No extra Pokédex form for this species.':'Tap this card to make it the Mercury custom form.')+'</div></label>';
+  }).join("");
+  return '<section class="family"><h2>'+esc(row.name)+'</h2><div class="hint">Choose one option.</div><div class="options">'+cards+'</div></section>';
+ }).join("");
+ const n=rows.filter(r=>state[r.name]).length;
+ document.getElementById("progress").textContent=n+" / "+rows.length+" decided";
+}
+document.getElementById("export").onclick=()=>{
+ const out=["species,selected_identity,selected_label,source"];
+ for(const r of rows){
+   const o=r.options.find(x=>x.id===state[r.name]);
+   out.push([r.name,o?.id||"",o?.label||"",o?.source||""].map(v=>'"'+String(v).replaceAll('"','""')+'"').join(","));
+ }
+ const a=document.createElement("a");a.href=URL.createObjectURL(new Blob([out.join("\n")],{type:"text/csv"}));a.download="mercury_eeveelution_final_picks.csv";a.click();
+};
+document.getElementById("copy").onclick=async()=>{
+ const t=rows.map(r=>{const o=r.options.find(x=>x.id===state[r.name]);return r.name+": "+(o?o.label+" ["+o.source+"]":"UNDECIDED")}).join("\n");
+ try{await navigator.clipboard.writeText(t);alert("Choices copied.");}catch(e){prompt("Copy your choices:",t)}
+};
+document.getElementById("clear").onclick=()=>{if(confirm("Clear all Eeveelution choices?")){state={};localStorage.removeItem(KEY);render()}};
+render();
+</script>
+</body></html>
