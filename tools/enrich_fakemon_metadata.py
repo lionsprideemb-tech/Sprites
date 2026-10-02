@@ -488,6 +488,12 @@ for (src,suffix,root),items in groups.items():
 enriched={}
 report=[]
 VERIFIED_SOURCE_OVERRIDES={
+    # Mercury preference: keep this line as a clean three-stage family.
+    # Furrva exists in donor metadata but is intentionally omitted from Mercury.
+    ("Mikitari","beelitant"):{"family":"Beelitant → Kocomb → Granebee"},
+    ("Mikitari","kocomb"):{"family":"Beelitant → Kocomb → Granebee"},
+    ("Mikitari","kocomb-1"):{"family":"Beelitant → Kocomb → Granebee"},
+    ("Mikitari","granebee"):{"family":"Beelitant → Kocomb → Granebee"},
     ("Mega_Flygon","flygon-1"):{"name":"Mega Flygon","type1":"Bug","type2":"Dragon","family":"Trapinch → Vibrava → Flygon → Mega Flygon"},
     ("Mega_Flygon_Animated_Gen5","flygon-1"):{"name":"Mega Flygon","type1":"Bug","type2":"Dragon","family":"Trapinch → Vibrava → Flygon → Mega Flygon"},
     ("PokeAPI_Mega_Meowstic_Female","pokeapi-mega-meowstic-female"):{"name":"Mega Meowstic Female","type1":"Psychic","type2":"","family":"Espurr → Meowstic → Mega Meowstic Female"},
