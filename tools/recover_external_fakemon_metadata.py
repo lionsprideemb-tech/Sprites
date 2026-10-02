@@ -46,9 +46,6 @@ def collection_links(base):
     for suffix in ("","?forms","?megas"):
         raw=fetch(base+suffix)
         raws.append(raw)
-        for mid,slug in re.findall(r"href=['\"](/mons/[^'\"?#]+)['\"]",raw):
-            pass
-    # Regex above unpack shape is awkward across Python versions; use one group.
     for raw in raws:
         for href in re.findall(r"href=['\"](/mons/[^'\"?#]+)['\"]",raw):
             parts=href.split("/")
