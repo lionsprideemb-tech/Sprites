@@ -105,7 +105,7 @@ def expected_designers(source,front_path=""):
       # Lumio pack credits multiple designers/spriters across its families.
       "Festival_Lumio":{"lumio","watertrainer","zombiepikachu","axolollipop","jorgeburgos","cuber","kajiatsui","haunteditto","nocturn"},
       # Earthretha pack is authored/sprited primarily by NanaelJustice.
-      "Earthretha":{"earthretha","nanaeljustice"},
+      "Earthretha":{"earthretha","nanaeljustice","foxeaf","leparagon","lunamaddalena"},
     }
     if source in fixed:return {norm(x) for x in fixed[source]}
     if source=="Fakemon_Festival_Full":
