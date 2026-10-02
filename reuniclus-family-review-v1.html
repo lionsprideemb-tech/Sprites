@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Mercury Reuniclus Family Review</title>
+<style>
+:root{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:#f4efe3;color:#17202b}
+*{box-sizing:border-box}body{margin:0;padding:12px;max-width:1100px;margin:auto}
+header{position:sticky;top:0;z-index:10;background:#f4efe3f4;backdrop-filter:blur(8px);padding:8px 0 10px;border-bottom:1px solid #d8cfbf}
+h1{font-size:23px;margin:0 0 5px}.sub{font-size:12px;color:#68717b;line-height:1.4}.summary{font-size:12px;font-weight:800;margin-top:7px}
+.actions{display:flex;gap:7px;flex-wrap:wrap;margin-top:8px}
+button{border:1px solid #b9b1a5;background:white;border-radius:10px;padding:9px 11px;font:inherit;font-weight:800}.primary{background:#315a8f;color:#fff;border-color:#315a8f}
+.note{margin:12px 0;background:#fff8df;border:1px solid #dfd09b;border-radius:12px;padding:10px 12px;font-size:12px;line-height:1.45}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
+.card{background:#fffdf8;border:2px solid #d9d0c3;border-radius:15px;overflow:hidden}
+.card.keep{border-color:#4e8b66;background:#f1f8f3}.card.cut{border-color:#be6c64;background:#fff2f0}
+.head{padding:10px}.name{font-size:15px;font-weight:850}.type{font-size:11px;font-weight:700;margin-top:4px}.role{font-size:10px;color:#6c7580;margin-top:3px}
+.sprite{height:170px;display:flex;align-items:center;justify-content:center;background:linear-gradient(#faf6ee,#ede5d8);padding:8px}
+.sprite img{max-width:145px;max-height:145px;object-fit:contain;image-rendering:pixelated}
+.choice{display:grid;grid-template-columns:1fr 1fr;gap:7px;padding:9px}.choice button{font-size:13px}
+.choice button.active.keepb{background:#dff1e4;border-color:#75a886;color:#245a37}.choice button.active.cutb{background:#f7dfdc;border-color:#cf8e87;color:#8b3b34}
+textarea{width:calc(100% - 18px);margin:0 9px 9px;min-height:40px;border:1px solid #cec5b8;border-radius:8px;padding:6px;font:inherit;font-size:11px}
+@media(min-width:850px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:480px){body{padding:8px}.sprite{height:150px}.sprite img{max-width:128px;max-height:128px}.choice{grid-template-columns:1fr}.name{font-size:14px}}
+</style>
+</head>
+<body>
+<header>
+<h1>Reuniclus Family — Visual Review</h1>
+<div class="sub">Vanilla Solosis → Duosion → Reuniclus stays. Compare the approved custom additions below.</div>
+<div class="summary" id="summary">0 keep • 0 cut • 5 undecided</div>
+<div class="actions"><button class="primary" id="export">Export decisions CSV</button><button id="copy">Copy choices</button><button id="clear">Clear</button></div>
+</header>
+<div class="note"><b>Why review this family:</b> there is a full Fire/Water Redux line, a Mega for that Redux Reuniclus, and a separate Mega Reuniclus candidate. Keeping everything adds five custom entries/forms to one family.</div>
+<div class="grid" id="root"></div>
+<script>
+const B="DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/";
+const items=[
+{id:"solosis-redux",name:"Solosis Redux",type:"Fire / Water",role:"Redux / Delta first stage",img:B+"solosis_redux/front.png"},
+{id:"duosion-redux",name:"Duosion Redux",type:"Fire / Water",role:"Redux / Delta middle stage",img:B+"duosion_redux/front.png"},
+{id:"reuniclus-redux",name:"Reuniclus Redux",type:"Fire / Water",role:"Redux / Delta final stage",img:B+"reuniclus_redux/front.png"},
+{id:"reuniclus-redux-mega",name:"Mega Reuniclus Redux",type:"Fire / Water",role:"Mega for Reuniclus Redux",img:B+"reuniclus_redux_mega/front.png"},
+{id:"reuniclus-mega",name:"Mega Reuniclus",type:"Fire / Water",role:"Separate Mega Reuniclus candidate",img:B+"reuniclus_mega/front.png"}
+];
+const KEY="mercury-reuniclus-review-v1";
+let S=JSON.parse(localStorage.getItem(KEY)||"{}");
+function save(){localStorage.setItem(KEY,JSON.stringify(S))}
+function setd(id,d){S[id]={...(S[id]||{}),decision:d};save();render()}
+function setn(id,n){S[id]={...(S[id]||{}),note:n};save()}
+function esc(s){return String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]))}
+function render(){
+ document.getElementById("root").innerHTML=items.map(x=>{
+ const d=S[x.id]?.decision||"",n=S[x.id]?.note||"";
+ return '<article class="card '+d+'"><div class="head"><div class="name">'+esc(x.name)+'</div><div class="type">'+esc(x.type)+'</div><div class="role">'+esc(x.role)+'</div></div><div class="sprite"><img src="'+x.img+'" alt="'+esc(x.name)+'"></div><div class="choice"><button class="keepb '+(d==="keep"?"active":"")+'" onclick="setd(\''+x.id+'\',\'keep\')">Keep</button><button class="cutb '+(d==="cut"?"active":"")+'" onclick="setd(\''+x.id+'\',\'cut\')">Cut</button></div><textarea placeholder="Optional note" onchange="setn(\''+x.id+'\',this.value)">'+esc(n)+'</textarea></article>'
+ }).join("");
+ const k=items.filter(x=>S[x.id]?.decision==="keep").length,c=items.filter(x=>S[x.id]?.decision==="cut").length;
+ document.getElementById("summary").textContent=k+" keep • "+c+" cut • "+(items.length-k-c)+" undecided";
+}
+document.getElementById("export").onclick=()=>{
+ const rows=["identity,name,type,role,decision,note"];
+ for(const x of items){const d=S[x.id]||{};rows.push([x.id,x.name,x.type,x.role,d.decision||"",d.note||""].map(v=>'"'+String(v).replaceAll('"','""')+'"').join(","))}
+ const a=document.createElement("a");a.href=URL.createObjectURL(new Blob([rows.join("\n")],{type:"text/csv"}));a.download="mercury_reuniclus_family_curation.csv";a.click();
+};
+document.getElementById("copy").onclick=async()=>{
+ const t=items.map(x=>x.name+": "+((S[x.id]?.decision||"UNDECIDED").toUpperCase())).join("\n");
+ try{await navigator.clipboard.writeText(t);alert("Choices copied.")}catch(e){prompt("Copy:",t)}
+};
+document.getElementById("clear").onclick=()=>{if(confirm("Clear this review?")){S={};localStorage.removeItem(KEY);render()}};
+render();
+</script>
+</body></html>
