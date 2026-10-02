@@ -1,0 +1,1497 @@
+{
+  "generated": "2026-10-02",
+  "phase": "GBA auto-yes recovery phase 1 — bulk recovery plan",
+  "purpose": "Run the remaining legacy-approved source recovery in bulk using the established conversion/recovery pipeline rather than per-sprite verification.",
+  "source_manifest": "legacy_gba_auto_yes_recovery_phase1_source_routes.json",
+  "batches": [
+    {
+      "batch_id": "ER_4VIEW_BULK",
+      "count": 69,
+      "action": "Recover exact normal front/back + shiny front/back by species constant from ForwardFeed/ER-nextdex; reuse any current DS front already present; validate all four views in bulk.",
+      "entries": [
+        {
+          "identity": "rattata-redux",
+          "species_constant": "SPECIES_RATTATA_REDUX",
+          "current_status": "DS_FRONT_PRESENT_BACK_MISSING",
+          "current_front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/rattata_redux/front.png"
+        },
+        {
+          "identity": "spearow-redux",
+          "species_constant": "SPECIES_SPEAROW_REDUX",
+          "current_status": "DS_FRONT_PRESENT_BACK_MISSING",
+          "current_front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/spearow_redux/front.png"
+        },
+        {
+          "identity": "fearow-redux",
+          "species_constant": "SPECIES_FEAROW_REDUX",
+          "current_status": "DS_FRONT_PRESENT_BACK_MISSING",
+          "current_front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/fearow_redux/front.png"
+        },
+        {
+          "identity": "pikachu-mega",
+          "species_constant": "SPECIES_PIKACHU_PARTNER_MEGA",
+          "current_status": "ABSENT_FROM_CURRENT_DS_LIBRARY",
+          "current_front_path": ""
+        },
+        {
+          "identity": "sandslash-alolan-mega",
+          "species_constant": "SPECIES_SANDSLASH_ALOLAN_MEGA",
+          "current_status": "DS_FRONT_PRESENT_BACK_MISSING",
+          "current_front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/sandslash_alolan_mega/front.png"
+        },
+        {
+          "identity": "clefable-mega-y",
+          "species_constant": "SPECIES_CLEFABLE_MEGA_Y",
+          "current_status": "DS_FRONT_PRESENT_BACK_MISSING",
+          "current_front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/clefable_mega_y/front.png"
+        },
+        {
+          "identity": "wigglytuff-apex",
+          "species_constant": "SPECIES_WIGGLYTUFF_APEX",
+          "current_status": "ABSENT_FROM_CURRENT_DS_LIBRARY",
+          "current_front_path": ""
+        },
+        {
+          "identity": "wigglytuff-primal",
+          "species_constant": "SPECIES_WIGGLYTUFF_PRIMAL",
+          "current_status": "DS_FRONT_PRESENT_BACK_MISSING",
+          "current_front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/wigglytuff_primal/front.png"
+        },
+        {
+          "identity": "crobat-mega",
+          "species_constant": "SPECIES_CROBAT_MEGA",
+          "current_status": "DS_FRONT_PRESENT_BACK_MISSING",
+          "current_front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/crobat_mega/front.png"
+        },
+        {
+          "identity": "arcanine-hisuian-mega",
+          "species_constant": "SPECIES_ARCANINE_HISUIAN_MEGA",
+          "current_status": "DS_FRONT_PRESENT_BACK_MISSING",
+          "current_front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/arcanine_hisuian_mega/front.png"
+        },
+        {
+          "identity": "bellsprout-redux",
+          "species_constant": "SPECIES_BELLSPROUT_REDUX",
+          "current_status": "DS_FRONT_PRESENT_BACK_MISSING",
+          "current_front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/bellsprout_redux/front.png"
+        },
+        {
+          "identity": "weepinbell-redux",
+          "species_constant": "SPECIES_WEEPINBELL_REDUX",
+          "current_status": "DS_FRONT_PRESENT_BACK_MISSING",
+          "current_front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/weepinbell_redux/front.png"
+        },
+        {
+          "identity": "victreebel-redux",
+          "species_constant": "SPECIES_VICTREEBEL_REDUX",
+          "current_status": "DS_FRONT_PRESENT_BACK_MISSING",
+          "current_front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/victreebel_redux/front.png"
+        },
+        {
+          "identity": "krabby-redux",
+          "species_constant": "SPECIES_KRABBY_REDUX",
+          "current_status": "DS_FRONT_PRESENT_BACK_MISSING",
+          "current_front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/krabby_redux/front.png"
+        },
+        {
+          "identity": "kingler-redux",
+          "species_constant": "SPECIES_KINGLER_REDUX",
+          "current_status": "DS_FRONT_PRESENT_BACK_MISSING",
+          "current_front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/kingler_redux/front.png"
+        },
+        {
+          "identity": "kingler-redux-mega",
+          "species_constant": "SPECIES_KINGLER_REDUX_MEGA",
+          "current_status": "DS_FRONT_PRESENT_BACK_MISSING",
+          "current_front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/kingler_redux_mega/front.png"
+        },
+        {
+          "identity": "exeggcute-redux",
+          "species_constant": "SPECIES_EXEGGCUTE_REDUX",
+          "current_status": "DS_FRONT_PRESENT_BACK_MISSING",
+          "current_front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/exeggcute_redux/front.png"
+        },
+        {
+          "identity": "exeggutor-redux",
+          "species_constant": "SPECIES_EXEGGUTOR_REDUX",
+          "current_status": "DS_FRONT_PRESENT_BACK_MISSING",
+          "current_front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/exeggutor_redux/front.png"
+        },
+        {
+          "identity": "happiny-redux",
+          "species_constant": "SPECIES_HAPPINY_REDUX",
+          "current_status": "DS_FRONT_PRESENT_BACK_MISSING",
+          "current_front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/happiny_redux/front.png"
+        },
+        {
+          "identity": "chansey-redux",
+          "species_constant": "SPECIES_CHANSEY_REDUX",
+          "current_status": "DS_FRONT_PRESENT_BACK_MISSING",
+          "current_front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/chansey_redux/front.png"
+        },
+        {
+          "identity": "blissey-redux",
+          "species_constant": "SPECIES_BLISSEY_REDUX",
+          "current_status": "DS_FRONT_PRESENT_BACK_MISSING",
+          "current_front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/blissey_redux/front.png"
+        },
+        {
+          "identity": "eevee-mega",
+          "species_constant": "SPECIES_EEVEE_PARTNER_MEGA",
+          "current_status": "ABSENT_FROM_CURRENT_DS_LIBRARY",
+          "current_front_path": ""
+        },
+        {
+          "identity": "snorlax-mega",
+          "species_constant": "SPECIES_SNORLAX_MEGA",
+          "current_status": "ABSENT_FROM_CURRENT_DS_LIBRARY",
+          "current_front_path": ""
+        },
+        {
+          "identity": "articuno-mega",
+          "species_constant": "SPECIES_ARTICUNO_EX_MEGA",
+          "current_status": "ABSENT_FROM_CURRENT_DS_LIBRARY",
+          "current_front_path": ""
+        },
+        {
+          "identity": "zapdos-mega",
+          "species_constant": "SPECIES_ZAPDOS_EX_MEGA",
+          "current_status": "ABSENT_FROM_CURRENT_DS_LIBRARY",
+          "current_front_path": ""
+        },
+        {
+          "identity": "moltres-mega",
+          "species_constant": "SPECIES_MOLTRES_EX_MEGA",
+          "current_status": "ABSENT_FROM_CURRENT_DS_LIBRARY",
+          "current_front_path": ""
+        },
+        {
+          "identity": "mamoswine-mega",
+          "species_constant": "SPECIES_MAMOSWINE_REDUX_MEGA",
+          "current_status": "ABSENT_FROM_CURRENT_DS_LIBRARY",
+          "current_front_path": ""
+        },
+        {
+          "identity": "blunder-darmanitan",
+          "species_constant": "SPECIES_DARMANITAN_REDUX_BLUNDER",
+          "current_status": "ABSENT_FROM_CURRENT_DS_LIBRARY",
+          "current_front_path": ""
+        },
+        {
+          "identity": "golisopod-mega-y",
+          "species_constant": "SPECIES_GOLISOPOD_MEGA_Y",
+          "current_status": "DS_FRONT_PRESENT_BACK_MISSING",
+          "current_front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/golisopod_mega_y/front.png"
+        },
+        {
+          "identity": "cetoddle-redux",
+          "species_constant": "SPECIES_CETODDLE_REDUX",
+          "current_status": "DS_FRONT_PRESENT_BACK_MISSING",
+          "current_front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/cetoddle_redux/front.png"
+        },
+        {
+          "identity": "cetitan-redux",
+          "species_constant": "SPECIES_CETITAN_REDUX",
+          "current_status": "DS_FRONT_PRESENT_BACK_MISSING",
+          "current_front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/cetitan_redux/front.png"
+        },
+        {
+          "identity": "blocli",
+          "species_constant": "SPECIES_BLOCLI",
+          "current_status": "DS_FRONT_PRESENT_BACK_MISSING",
+          "current_front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/blocli/front.png"
+        },
+        {
+          "identity": "bloxtack",
+          "species_constant": "SPECIES_BLOXTACK",
+          "current_status": "DS_FRONT_PRESENT_BACK_MISSING",
+          "current_front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/bloxtack/front.png"
+        },
+        {
+          "identity": "breezing",
+          "species_constant": "SPECIES_BREEZING",
+          "current_status": "DS_FRONT_PRESENT_BACK_MISSING",
+          "current_front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/breezing/front.png"
+        },
+        {
+          "identity": "carbonix-mega",
+          "species_constant": "SPECIES_CARBONIX_MEGA",
+          "current_status": "DS_FRONT_PRESENT_BACK_MISSING",
+          "current_front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/carbonix_mega/front.png"
+        },
+        {
+          "identity": "corn-tyrant",
+          "species_constant": "SPECIES_HARVESTING_TYRANT",
+          "current_status": "ABSENT_FROM_CURRENT_DS_LIBRARY",
+          "current_front_path": ""
+        },
+        {
+          "identity": "crag-hopper",
+          "species_constant": "SPECIES_JAGGED_CHUNGULIS",
+          "current_status": "ABSENT_FROM_CURRENT_DS_LIBRARY",
+          "current_front_path": ""
+        },
+        {
+          "identity": "eraticate",
+          "species_constant": "SPECIES_ERATICATE",
+          "current_status": "DS_FRONT_PRESENT_BACK_MISSING",
+          "current_front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/eraticate/front.png"
+        },
+        {
+          "identity": "fogging",
+          "species_constant": "SPECIES_FOGGING",
+          "current_status": "DS_FRONT_PRESENT_BACK_MISSING",
+          "current_front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/fogging/front.png"
+        },
+        {
+          "identity": "frostuccino",
+          "species_constant": "SPECIES_FROSTUCCINO",
+          "current_status": "DS_FRONT_PRESENT_BACK_MISSING",
+          "current_front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/frostuccino/front.png"
+        },
+        {
+          "identity": "frostula",
+          "species_constant": "SPECIES_FROSTULA",
+          "current_status": "DS_FRONT_PRESENT_BACK_MISSING",
+          "current_front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/frostula/front.png"
+        },
+        {
+          "identity": "gargablox",
+          "species_constant": "SPECIES_GARGABLOX",
+          "current_status": "DS_FRONT_PRESENT_BACK_MISSING",
+          "current_front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/gargablox/front.png"
+        },
+        {
+          "identity": "grotom",
+          "species_constant": "SPECIES_GROTOM",
+          "current_status": "DS_FRONT_PRESENT_BACK_MISSING",
+          "current_front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/grotom/front.png"
+        },
+        {
+          "identity": "grotom-drum",
+          "species_constant": "SPECIES_GROTOM_DRUM",
+          "current_status": "DS_FRONT_PRESENT_BACK_MISSING",
+          "current_front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/grotom_drum/front.png"
+        },
+        {
+          "identity": "grotom-fill",
+          "species_constant": "SPECIES_GROTOM_FILL",
+          "current_status": "DS_FRONT_PRESENT_BACK_MISSING",
+          "current_front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/grotom_fill/front.png"
+        },
+        {
+          "identity": "grotom-glass",
+          "species_constant": "SPECIES_GROTOM_GLASS",
+          "current_status": "DS_FRONT_PRESENT_BACK_MISSING",
+          "current_front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/grotom_glass/front.png"
+        },
+        {
+          "identity": "grotom-kick",
+          "species_constant": "SPECIES_GROTOM_KICK",
+          "current_status": "DS_FRONT_PRESENT_BACK_MISSING",
+          "current_front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/grotom_kick/front.png"
+        },
+        {
+          "identity": "grotom-roll",
+          "species_constant": "SPECIES_GROTOM_ROLL",
+          "current_status": "DS_FRONT_PRESENT_BACK_MISSING",
+          "current_front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/grotom_roll/front.png"
+        },
+        {
+          "identity": "heracreus",
+          "species_constant": "SPECIES_HERACREUS",
+          "current_status": "DS_FRONT_PRESENT_BACK_MISSING",
+          "current_front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/heracreus/front.png"
+        },
+        {
+          "identity": "heracreus-mega",
+          "species_constant": "SPECIES_HERACREUS_MEGA",
+          "current_status": "DS_FRONT_PRESENT_BACK_MISSING",
+          "current_front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/heracreus_mega/front.png"
+        },
+        {
+          "identity": "hippopotato",
+          "species_constant": "SPECIES_HIPPOPOTATO",
+          "current_status": "DS_FRONT_PRESENT_BACK_MISSING",
+          "current_front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/hippopotato/front.png"
+        },
+        {
+          "identity": "hippotaton",
+          "species_constant": "SPECIES_HIPPOTATON",
+          "current_status": "DS_FRONT_PRESENT_BACK_MISSING",
+          "current_front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/hippotaton/front.png"
+        },
+        {
+          "identity": "hypnocroak",
+          "species_constant": "SPECIES_HYPNOCROAK",
+          "current_status": "DS_FRONT_PRESENT_BACK_MISSING",
+          "current_front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/hypnocroak/front.png"
+        },
+        {
+          "identity": "kilozuna",
+          "species_constant": "SPECIES_KILOZUNA",
+          "current_status": "DS_FRONT_PRESENT_BACK_MISSING",
+          "current_front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/kilozuna/front.png"
+        },
+        {
+          "identity": "kilozuna-mega",
+          "species_constant": "SPECIES_KILOZUNA_MEGA",
+          "current_status": "DS_FRONT_PRESENT_BACK_MISSING",
+          "current_front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/kilozuna_mega/front.png"
+        },
+        {
+          "identity": "kipmodo",
+          "species_constant": "SPECIES_KIPMODO",
+          "current_status": "DS_FRONT_PRESENT_BACK_MISSING",
+          "current_front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/kipmodo/front.png"
+        },
+        {
+          "identity": "luxzero-mega",
+          "species_constant": "SPECIES_LUXZERO_MEGA",
+          "current_status": "DS_FRONT_PRESENT_BACK_MISSING",
+          "current_front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/luxzero_mega/front.png"
+        },
+        {
+          "identity": "marshmodo",
+          "species_constant": "SPECIES_MARSHMODO",
+          "current_status": "DS_FRONT_PRESENT_BACK_MISSING",
+          "current_front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/marshmodo/front.png"
+        },
+        {
+          "identity": "morpekyll-hangry",
+          "species_constant": "SPECIES_MORPEKYLL_HANGRY",
+          "current_status": "DS_FRONT_PRESENT_BACK_MISSING",
+          "current_front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/morpekyll_hangry/front.png"
+        },
+        {
+          "identity": "plundertow",
+          "species_constant": "SPECIES_PLUNDERTOW",
+          "current_status": "DS_FRONT_PRESENT_BACK_MISSING",
+          "current_front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/plundertow/front.png"
+        },
+        {
+          "identity": "rexcadrill",
+          "species_constant": "SPECIES_REXCADRILL",
+          "current_status": "DS_FRONT_PRESENT_BACK_MISSING",
+          "current_front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/rexcadrill/front.png"
+        },
+        {
+          "identity": "selenumbra",
+          "species_constant": "SPECIES_SELENUMBRA",
+          "current_status": "DS_FRONT_PRESENT_BACK_MISSING",
+          "current_front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/selenumbra/front.png"
+        },
+        {
+          "identity": "spindaze",
+          "species_constant": "SPECIES_SPINDAZE",
+          "current_status": "DS_FRONT_PRESENT_BACK_MISSING",
+          "current_front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/spindaze/front.png"
+        },
+        {
+          "identity": "storming",
+          "species_constant": "SPECIES_STORMING",
+          "current_status": "DS_FRONT_PRESENT_BACK_MISSING",
+          "current_front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/storming/front.png"
+        },
+        {
+          "identity": "swampage",
+          "species_constant": "SPECIES_SWAMPAGE",
+          "current_status": "DS_FRONT_PRESENT_BACK_MISSING",
+          "current_front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/swampage/front.png"
+        },
+        {
+          "identity": "terrow",
+          "species_constant": "SPECIES_FEAROW_REDUX_EVO",
+          "current_status": "ABSENT_FROM_CURRENT_DS_LIBRARY",
+          "current_front_path": ""
+        },
+        {
+          "identity": "torrentula",
+          "species_constant": "SPECIES_TORRENTULA",
+          "current_status": "DS_FRONT_PRESENT_BACK_MISSING",
+          "current_front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/torrentula/front.png"
+        },
+        {
+          "identity": "wispywaspy",
+          "species_constant": "SPECIES_WISPYWASPY",
+          "current_status": "DS_FRONT_PRESENT_BACK_MISSING",
+          "current_front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/wispywaspy/front.png"
+        },
+        {
+          "identity": "wispywaspy-hivemind",
+          "species_constant": "SPECIES_WISPYWASPY_HIVEMIND",
+          "current_status": "DS_FRONT_PRESENT_BACK_MISSING",
+          "current_front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/wispywaspy_hivemind/front.png"
+        }
+      ]
+    },
+    {
+      "batch_id": "ORIGINAL_MEGAS_BULK",
+      "count": 15,
+      "action": "Recover exact front/back pairs from the preserved Original Megas source; run DS validation/conversion as one set.",
+      "entries": [
+        {
+          "identity": "mega-rhyperior",
+          "base": "Rhyperior",
+          "current_status": "ABSENT_FROM_CURRENT_DS_LIBRARY"
+        },
+        {
+          "identity": "mega-tangrowth",
+          "base": "Tangrowth",
+          "current_status": "ABSENT_FROM_CURRENT_DS_LIBRARY"
+        },
+        {
+          "identity": "mega-electivire",
+          "base": "Electivire",
+          "current_status": "ABSENT_FROM_CURRENT_DS_LIBRARY"
+        },
+        {
+          "identity": "mega-magmortar",
+          "base": "Magmortar",
+          "current_status": "ABSENT_FROM_CURRENT_DS_LIBRARY"
+        },
+        {
+          "identity": "mega-porygon",
+          "base": "Porygon",
+          "current_status": "ABSENT_FROM_CURRENT_DS_LIBRARY"
+        },
+        {
+          "identity": "mega-yanmega",
+          "base": "Yanmega",
+          "current_status": "ABSENT_FROM_CURRENT_DS_LIBRARY"
+        },
+        {
+          "identity": "mega-honchkrow",
+          "base": "Honchkrow",
+          "current_status": "ABSENT_FROM_CURRENT_DS_LIBRARY"
+        },
+        {
+          "identity": "mega-weavile",
+          "base": "Weavile",
+          "current_status": "ABSENT_FROM_CURRENT_DS_LIBRARY"
+        },
+        {
+          "identity": "mega-mamoswine",
+          "base": "Mamoswine",
+          "current_status": "ABSENT_FROM_CURRENT_DS_LIBRARY"
+        },
+        {
+          "identity": "mega-probopass",
+          "base": "Probopass",
+          "current_status": "ABSENT_FROM_CURRENT_DS_LIBRARY"
+        },
+        {
+          "identity": "mega-roserade",
+          "base": "Roserade",
+          "current_status": "ABSENT_FROM_CURRENT_DS_LIBRARY"
+        },
+        {
+          "identity": "mega-milotic",
+          "base": "Milotic",
+          "current_status": "ABSENT_FROM_CURRENT_DS_LIBRARY"
+        },
+        {
+          "identity": "mega-rampardos",
+          "base": "Rampardos",
+          "current_status": "ABSENT_FROM_CURRENT_DS_LIBRARY"
+        },
+        {
+          "identity": "mega-bastiodon",
+          "base": "Bastiodon",
+          "current_status": "ABSENT_FROM_CURRENT_DS_LIBRARY"
+        },
+        {
+          "identity": "mega-spiritomb",
+          "base": "Spiritomb",
+          "current_status": "ABSENT_FROM_CURRENT_DS_LIBRARY"
+        }
+      ]
+    },
+    {
+      "batch_id": "REBORN_PLATES_BULK",
+      "count": 94,
+      "action": "Recover the exact reviewed variants from the prior Reborn/Plates sprite master; preserve source identity and family grouping; convert/validate in bulk.",
+      "entries": [
+        {
+          "identity": "butterfree-alternate-form-1",
+          "reviewed_variant": "Butterfree — Alternate (Form 1)",
+          "base": "Butterfree"
+        },
+        {
+          "identity": "pidgey-alternate-form-2",
+          "reviewed_variant": "Pidgey — Alternate (Form 2)",
+          "base": "Pidgey"
+        },
+        {
+          "identity": "pidgeotto-alternate-form-2",
+          "reviewed_variant": "Pidgeotto — Alternate (Form 2)",
+          "base": "Pidgeotto"
+        },
+        {
+          "identity": "pidgeot-alternate-form-2",
+          "reviewed_variant": "Pidgeot — Alternate (Form 2)",
+          "base": "Pidgeot"
+        },
+        {
+          "identity": "pidgeot-mega-alternate-form-3",
+          "reviewed_variant": "Pidgeot — Mega Alternate (Form 3)",
+          "base": "Pidgeot"
+        },
+        {
+          "identity": "vulpix-alternate-form-2",
+          "reviewed_variant": "Vulpix — Alternate (Form 2)",
+          "base": "Vulpix"
+        },
+        {
+          "identity": "poliwag-alternate-form-1",
+          "reviewed_variant": "Poliwag — Alternate (Form 1)",
+          "base": "Poliwag"
+        },
+        {
+          "identity": "poliwhirl-alternate-form-1",
+          "reviewed_variant": "Poliwhirl — Alternate (Form 1)",
+          "base": "Poliwhirl"
+        },
+        {
+          "identity": "poliwrath-alternate-form-1",
+          "reviewed_variant": "Poliwrath — Alternate (Form 1)",
+          "base": "Poliwrath"
+        },
+        {
+          "identity": "politoed-alternate-form-1",
+          "reviewed_variant": "Politoed — Alternate (Form 1)",
+          "base": "Politoed"
+        },
+        {
+          "identity": "geodude-bluetowel-alternate-forms-form-2",
+          "reviewed_variant": "Geodude — BlueTowel Alternate forms (Form 2)",
+          "base": "Geodude"
+        },
+        {
+          "identity": "graveler-bluetowel-alternate-forms-form-2",
+          "reviewed_variant": "Graveler — BlueTowel Alternate forms (Form 2)",
+          "base": "Graveler"
+        },
+        {
+          "identity": "golem-bluetowel-alternate-forms-form-2",
+          "reviewed_variant": "Golem — BlueTowel Alternate forms (Form 2)",
+          "base": "Golem"
+        },
+        {
+          "identity": "hypno-alternate-form-2",
+          "reviewed_variant": "Hypno — Alternate (Form 2)",
+          "base": "Hypno"
+        },
+        {
+          "identity": "koffing-bluetowel-alternate-forms-form-2",
+          "reviewed_variant": "Koffing — BlueTowel Alternate forms (Form 2)",
+          "base": "Koffing"
+        },
+        {
+          "identity": "weezing-bluetowel-alternate-forms-form-2",
+          "reviewed_variant": "Weezing — BlueTowel Alternate forms (Form 2)",
+          "base": "Weezing"
+        },
+        {
+          "identity": "staryu-alternate-form-1",
+          "reviewed_variant": "Staryu — Alternate (Form 1)",
+          "base": "Staryu"
+        },
+        {
+          "identity": "starmie-alternate-form-1",
+          "reviewed_variant": "Starmie — Alternate (Form 1)",
+          "base": "Starmie"
+        },
+        {
+          "identity": "flareon-alternate-form-3",
+          "reviewed_variant": "Flareon — Alternate (Form 3)",
+          "base": "Flareon"
+        },
+        {
+          "identity": "leafeon-alternate-form-3",
+          "reviewed_variant": "Leafeon — Alternate (Form 3)",
+          "base": "Leafeon"
+        },
+        {
+          "identity": "glaceon-alternate-form-3",
+          "reviewed_variant": "Glaceon — Alternate (Form 3)",
+          "base": "Glaceon"
+        },
+        {
+          "identity": "sylveon-alternate-form-3",
+          "reviewed_variant": "Sylveon — Alternate (Form 3)",
+          "base": "Sylveon"
+        },
+        {
+          "identity": "dragonite-alternate-form-1",
+          "reviewed_variant": "Dragonite — Alternate (Form 1)",
+          "base": "Dragonite"
+        },
+        {
+          "identity": "feraligatr-alternate-form-1",
+          "reviewed_variant": "Feraligatr — Alternate (Form 1)",
+          "base": "Feraligatr"
+        },
+        {
+          "identity": "hoothoot-alternate-form-1",
+          "reviewed_variant": "Hoothoot — Alternate (Form 1)",
+          "base": "Hoothoot"
+        },
+        {
+          "identity": "ampharos-alternate-form-2",
+          "reviewed_variant": "Ampharos — Alternate (Form 2)",
+          "base": "Ampharos"
+        },
+        {
+          "identity": "ampharos-alternate-mega-form-3",
+          "reviewed_variant": "Ampharos — Alternate Mega (Form 3)",
+          "base": "Ampharos"
+        },
+        {
+          "identity": "sunflora-alternate-form-1",
+          "reviewed_variant": "Sunflora — Alternate (Form 1)",
+          "base": "Sunflora"
+        },
+        {
+          "identity": "misdreavus-alternate-form-2",
+          "reviewed_variant": "Misdreavus — Alternate (Form 2)",
+          "base": "Misdreavus"
+        },
+        {
+          "identity": "mismagius-alternate-form-2",
+          "reviewed_variant": "Mismagius — Alternate (Form 2)",
+          "base": "Mismagius"
+        },
+        {
+          "identity": "dunsparce-bt-alt-forms-earth-form-2",
+          "reviewed_variant": "Dunsparce — BT Alt Forms - Earth (Form 2)",
+          "base": "Dunsparce"
+        },
+        {
+          "identity": "gliscor-alternate-form-1",
+          "reviewed_variant": "Gliscor — Alternate (Form 1)",
+          "base": "Gliscor"
+        },
+        {
+          "identity": "snubbull-alternate-form-1",
+          "reviewed_variant": "Snubbull — Alternate (Form 1)",
+          "base": "Snubbull"
+        },
+        {
+          "identity": "granbull-alternate-form-1",
+          "reviewed_variant": "Granbull — Alternate (Form 1)",
+          "base": "Granbull"
+        },
+        {
+          "identity": "donphan-alternate-form-1",
+          "reviewed_variant": "Donphan — Alternate (Form 1)",
+          "base": "Donphan"
+        },
+        {
+          "identity": "larvitar-space-form-4",
+          "reviewed_variant": "Larvitar — Space (Form 4)",
+          "base": "Larvitar"
+        },
+        {
+          "identity": "pupitar-space-form-4",
+          "reviewed_variant": "Pupitar — Space (Form 4)",
+          "base": "Pupitar"
+        },
+        {
+          "identity": "tyranitar-space-form-4",
+          "reviewed_variant": "Tyranitar — Space (Form 4)",
+          "base": "Tyranitar"
+        },
+        {
+          "identity": "breloom-alternate-form-3",
+          "reviewed_variant": "Breloom — Alternate (Form 3)",
+          "base": "Breloom"
+        },
+        {
+          "identity": "probopass-alternate-form-1",
+          "reviewed_variant": "Probopass — Alternate (Form 1)",
+          "base": "Probopass"
+        },
+        {
+          "identity": "skitty-alternate-form-1",
+          "reviewed_variant": "Skitty — Alternate (Form 1)",
+          "base": "Skitty"
+        },
+        {
+          "identity": "delcatty-alternate-form-1",
+          "reviewed_variant": "Delcatty — Alternate (Form 1)",
+          "base": "Delcatty"
+        },
+        {
+          "identity": "sableye-alternate-gemstone-mega-form-3",
+          "reviewed_variant": "Sableye — Alternate / Gemstone Mega (Form 3)",
+          "base": "Sableye"
+        },
+        {
+          "identity": "electrike-alternate-form-2",
+          "reviewed_variant": "Electrike — Alternate (Form 2)",
+          "base": "Electrike"
+        },
+        {
+          "identity": "manectric-mega-alternate-form-3",
+          "reviewed_variant": "Manectric — Mega Alternate (Form 3)",
+          "base": "Manectric"
+        },
+        {
+          "identity": "swalot-alternate-form-1",
+          "reviewed_variant": "Swalot — Alternate (Form 1)",
+          "base": "Swalot"
+        },
+        {
+          "identity": "wailmer-alternate-form-1",
+          "reviewed_variant": "Wailmer — Alternate (Form 1)",
+          "base": "Wailmer"
+        },
+        {
+          "identity": "wailord-alternate-form-1",
+          "reviewed_variant": "Wailord — Alternate (Form 1)",
+          "base": "Wailord"
+        },
+        {
+          "identity": "altaria-alternate-form-2",
+          "reviewed_variant": "Altaria — Alternate (Form 2)",
+          "base": "Altaria"
+        },
+        {
+          "identity": "altaria-alternate-mega-form-3",
+          "reviewed_variant": "Altaria — Alternate Mega (Form 3)",
+          "base": "Altaria"
+        },
+        {
+          "identity": "dusknoir-alternate-form-1",
+          "reviewed_variant": "Dusknoir — Alternate (Form 1)",
+          "base": "Dusknoir"
+        },
+        {
+          "identity": "salamence-alternate-form-2",
+          "reviewed_variant": "Salamence — Alternate (Form 2)",
+          "base": "Salamence"
+        },
+        {
+          "identity": "salamence-alternate-mega-form-3",
+          "reviewed_variant": "Salamence — Alternate Mega (Form 3)",
+          "base": "Salamence"
+        },
+        {
+          "identity": "beldum-alternate-form-2",
+          "reviewed_variant": "Beldum — Alternate (Form 2)",
+          "base": "Beldum"
+        },
+        {
+          "identity": "metang-alternate-form-2",
+          "reviewed_variant": "Metang — Alternate (Form 2)",
+          "base": "Metang"
+        },
+        {
+          "identity": "metagross-alternate-form-2",
+          "reviewed_variant": "Metagross — Alternate (Form 2)",
+          "base": "Metagross"
+        },
+        {
+          "identity": "metagross-alternate-mega-form-3",
+          "reviewed_variant": "Metagross — Alternate Mega (Form 3)",
+          "base": "Metagross"
+        },
+        {
+          "identity": "cranidos-alternate-form-1",
+          "reviewed_variant": "Cranidos — Alternate (Form 1)",
+          "base": "Cranidos"
+        },
+        {
+          "identity": "shieldon-alternate-form-1",
+          "reviewed_variant": "Shieldon — Alternate (Form 1)",
+          "base": "Shieldon"
+        },
+        {
+          "identity": "combee-alternate-form-1",
+          "reviewed_variant": "Combee — Alternate (Form 1)",
+          "base": "Combee"
+        },
+        {
+          "identity": "vespiquen-alternate-form-1",
+          "reviewed_variant": "Vespiquen — Alternate (Form 1)",
+          "base": "Vespiquen"
+        },
+        {
+          "identity": "carnivine-alternate-form-2",
+          "reviewed_variant": "Carnivine — Alternate (Form 2)",
+          "base": "Carnivine"
+        },
+        {
+          "identity": "purrloin-alternate-form-1",
+          "reviewed_variant": "Purrloin — Alternate (Form 1)",
+          "base": "Purrloin"
+        },
+        {
+          "identity": "liepard-alternate-form-1",
+          "reviewed_variant": "Liepard — Alternate (Form 1)",
+          "base": "Liepard"
+        },
+        {
+          "identity": "munna-alternate-form-1",
+          "reviewed_variant": "Munna — Alternate (Form 1)",
+          "base": "Munna"
+        },
+        {
+          "identity": "musharna-alternate-form-1",
+          "reviewed_variant": "Musharna — Alternate (Form 1)",
+          "base": "Musharna"
+        },
+        {
+          "identity": "petilil-alternate-form-1",
+          "reviewed_variant": "Petilil — Alternate (Form 1)",
+          "base": "Petilil"
+        },
+        {
+          "identity": "lilligant-alternate-form-1",
+          "reviewed_variant": "Lilligant — Alternate (Form 1)",
+          "base": "Lilligant"
+        },
+        {
+          "identity": "sandile-alternate-form-1",
+          "reviewed_variant": "Sandile — Alternate (Form 1)",
+          "base": "Sandile"
+        },
+        {
+          "identity": "krokorok-alternate-form-1",
+          "reviewed_variant": "Krokorok — Alternate (Form 1)",
+          "base": "Krokorok"
+        },
+        {
+          "identity": "krookodile-alternate-form-1",
+          "reviewed_variant": "Krookodile — Alternate (Form 1)",
+          "base": "Krookodile"
+        },
+        {
+          "identity": "dwebble-alternate-form-1",
+          "reviewed_variant": "Dwebble — Alternate (Form 1)",
+          "base": "Dwebble"
+        },
+        {
+          "identity": "crustle-alternate-form-1",
+          "reviewed_variant": "Crustle — Alternate (Form 1)",
+          "base": "Crustle"
+        },
+        {
+          "identity": "escavalier-alternate-form-1",
+          "reviewed_variant": "Escavalier — Alternate (Form 1)",
+          "base": "Escavalier"
+        },
+        {
+          "identity": "accelgor-alternate-form-1",
+          "reviewed_variant": "Accelgor — Alternate (Form 1)",
+          "base": "Accelgor"
+        },
+        {
+          "identity": "klang-alternate-form-1",
+          "reviewed_variant": "Klang — Alternate (Form 1)",
+          "base": "Klang"
+        },
+        {
+          "identity": "klinklang-alternate-form-1",
+          "reviewed_variant": "Klinklang — Alternate (Form 1)",
+          "base": "Klinklang"
+        },
+        {
+          "identity": "eelektrik-alternate-form-1",
+          "reviewed_variant": "Eelektrik — Alternate (Form 1)",
+          "base": "Eelektrik"
+        },
+        {
+          "identity": "eelektross-alternate-form-1",
+          "reviewed_variant": "Eelektross — Alternate (Form 1)",
+          "base": "Eelektross"
+        },
+        {
+          "identity": "cryogonal-alternate-form-1",
+          "reviewed_variant": "Cryogonal — Alternate (Form 1)",
+          "base": "Cryogonal"
+        },
+        {
+          "identity": "mienfoo-bluetowel-alternate-form-form-1",
+          "reviewed_variant": "Mienfoo — BlueTowel Alternate form (Form 1)",
+          "base": "Mienfoo"
+        },
+        {
+          "identity": "mienshao-bluetowel-alternate-form-form-1",
+          "reviewed_variant": "Mienshao — BlueTowel Alternate form (Form 1)",
+          "base": "Mienshao"
+        },
+        {
+          "identity": "golett-alternate-form-1",
+          "reviewed_variant": "Golett — Alternate (Form 1)",
+          "base": "Golett"
+        },
+        {
+          "identity": "golurk-alternate-form-1",
+          "reviewed_variant": "Golurk — Alternate (Form 1)",
+          "base": "Golurk"
+        },
+        {
+          "identity": "durant-bluetowel-alternate-form-form-1",
+          "reviewed_variant": "Durant — BlueTowel Alternate form (Form 1)",
+          "base": "Durant"
+        },
+        {
+          "identity": "aromatisse-alternate-form-1",
+          "reviewed_variant": "Aromatisse — Alternate (Form 1)",
+          "base": "Aromatisse"
+        },
+        {
+          "identity": "tyrunt-alternate-form-1",
+          "reviewed_variant": "Tyrunt — Alternate (Form 1)",
+          "base": "Tyrunt"
+        },
+        {
+          "identity": "tyrantrum-alternate-form-1",
+          "reviewed_variant": "Tyrantrum — Alternate (Form 1)",
+          "base": "Tyrantrum"
+        },
+        {
+          "identity": "amaura-alternate-form-1",
+          "reviewed_variant": "Amaura — Alternate (Form 1)",
+          "base": "Amaura"
+        },
+        {
+          "identity": "aurorus-alternate-form-1",
+          "reviewed_variant": "Aurorus — Alternate (Form 1)",
+          "base": "Aurorus"
+        },
+        {
+          "identity": "noibat-alternate-form-1",
+          "reviewed_variant": "Noibat — Alternate (Form 1)",
+          "base": "Noibat"
+        },
+        {
+          "identity": "noivern-alternate-form-1",
+          "reviewed_variant": "Noivern — Alternate (Form 1)",
+          "base": "Noivern"
+        },
+        {
+          "identity": "hakamo-o-alternate-form-1",
+          "reviewed_variant": "Hakamo-o — Alternate (Form 1)",
+          "base": "Hakamo-o"
+        },
+        {
+          "identity": "kommo-o-alternate-form-1",
+          "reviewed_variant": "Kommo-o — Alternate (Form 1)",
+          "base": "Kommo-o"
+        }
+      ]
+    },
+    {
+      "batch_id": "ER_SOURCE_SEARCH_BULK",
+      "count": 76,
+      "action": "Resolve exact ER source assets by species constant/identity first, then feed all found front/back/shiny views into the conversion pipeline together.",
+      "entries": [
+        {
+          "identity": "charizard-mega-z",
+          "species_constant": "SPECIES_CHARIZARD_MEGA_Z",
+          "current_status": "ABSENT_FROM_CURRENT_DS_LIBRARY",
+          "current_front_path": ""
+        },
+        {
+          "identity": "blastoise-mega-x",
+          "species_constant": "SPECIES_BLASTOISE_MEGA_X",
+          "current_status": "DS_FRONT_PRESENT_BACK_MISSING",
+          "current_front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/blastoise_mega_x/front.png"
+        },
+        {
+          "identity": "butterfree-mega",
+          "species_constant": "SPECIES_BUTTERFREE_MEGA",
+          "current_status": "DS_FRONT_PRESENT_BACK_MISSING",
+          "current_front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/butterfree_mega/front.png"
+        },
+        {
+          "identity": "weedle-redux",
+          "species_constant": "SPECIES_WEEDLE_REDUX",
+          "current_status": "DS_FRONT_PRESENT_BACK_MISSING",
+          "current_front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/weedle_redux/front.png"
+        },
+        {
+          "identity": "kakuna-redux",
+          "species_constant": "SPECIES_KAKUNA_REDUX",
+          "current_status": "DS_FRONT_PRESENT_BACK_MISSING",
+          "current_front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/kakuna_redux/front.png"
+        },
+        {
+          "identity": "beedrill-redux",
+          "species_constant": "SPECIES_BEEDRILL_REDUX",
+          "current_status": "DS_FRONT_PRESENT_BACK_MISSING",
+          "current_front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/beedrill_redux/front.png"
+        },
+        {
+          "identity": "beedrill-mega-redux",
+          "species_constant": "SPECIES_BEEDRILL_MEGA_REDUX",
+          "current_status": "DS_FRONT_PRESENT_BACK_MISSING",
+          "current_front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/beedrill_mega_redux/front.png"
+        },
+        {
+          "identity": "arbok-mega",
+          "species_constant": "SPECIES_ARBOK_MEGA",
+          "current_status": "DS_FRONT_PRESENT_BACK_MISSING",
+          "current_front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/arbok_mega/front.png"
+        },
+        {
+          "identity": "sandslash-mega",
+          "species_constant": "SPECIES_SANDSLASH_MEGA",
+          "current_status": "DS_FRONT_PRESENT_BACK_MISSING",
+          "current_front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/sandslash_mega/front.png"
+        },
+        {
+          "identity": "nidoqueen-mega",
+          "species_constant": "SPECIES_NIDOQUEEN_MEGA",
+          "current_status": "DS_FRONT_PRESENT_BACK_MISSING",
+          "current_front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/nidoqueen_mega/front.png"
+        },
+        {
+          "identity": "nidoking-mega",
+          "species_constant": "SPECIES_NIDOKING_MEGA",
+          "current_status": "DS_FRONT_PRESENT_BACK_MISSING",
+          "current_front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/nidoking_mega/front.png"
+        },
+        {
+          "identity": "wigglytuff-mega-x",
+          "species_constant": "SPECIES_WIGGLYTUFF_MEGA_X",
+          "current_status": "DS_FRONT_PRESENT_BACK_MISSING",
+          "current_front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/wigglytuff_mega_x/front.png"
+        },
+        {
+          "identity": "wigglytuff-mega-y",
+          "species_constant": "SPECIES_WIGGLYTUFF_MEGA",
+          "current_status": "ABSENT_FROM_CURRENT_DS_LIBRARY",
+          "current_front_path": ""
+        },
+        {
+          "identity": "growlithe-redux",
+          "species_constant": "SPECIES_GROWLITHE_REDUX",
+          "current_status": "DS_FRONT_PRESENT_BACK_MISSING",
+          "current_front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/growlithe_redux/front.png"
+        },
+        {
+          "identity": "arcanine-redux",
+          "species_constant": "SPECIES_ARCANINE_REDUX",
+          "current_status": "DS_FRONT_PRESENT_BACK_MISSING",
+          "current_front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/arcanine_redux/front.png"
+        },
+        {
+          "identity": "arcanine-mega",
+          "species_constant": "SPECIES_ARCANINE_MEGA_REDUX; SPECIES_ARCANINE_MEGA",
+          "current_status": "DS_FRONT_PRESENT_BACK_MISSING",
+          "current_front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/arcanine_mega/front.png"
+        },
+        {
+          "identity": "abra-redux",
+          "species_constant": "SPECIES_ABRA_REDUX",
+          "current_status": "DS_FRONT_PRESENT_BACK_MISSING",
+          "current_front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/abra_redux/front.png"
+        },
+        {
+          "identity": "kadabra-redux",
+          "species_constant": "SPECIES_KADABRA_REDUX",
+          "current_status": "DS_FRONT_PRESENT_BACK_MISSING",
+          "current_front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/kadabra_redux/front.png"
+        },
+        {
+          "identity": "alakazam-redux",
+          "species_constant": "SPECIES_ALAKAZAM_REDUX",
+          "current_status": "DS_FRONT_PRESENT_BACK_MISSING",
+          "current_front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/alakazam_redux/front.png"
+        },
+        {
+          "identity": "alakazam-mega-redux",
+          "species_constant": "SPECIES_ALAKAZAM_MEGA_REDUX",
+          "current_status": "DS_FRONT_PRESENT_BACK_MISSING",
+          "current_front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/alakazam_mega_redux/front.png"
+        },
+        {
+          "identity": "machop-redux",
+          "species_constant": "SPECIES_MACHOP_REDUX",
+          "current_status": "DS_FRONT_PRESENT_BACK_MISSING",
+          "current_front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/machop_redux/front.png"
+        },
+        {
+          "identity": "machoke-redux",
+          "species_constant": "SPECIES_MACHOKE_REDUX",
+          "current_status": "DS_FRONT_PRESENT_BACK_MISSING",
+          "current_front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/machoke_redux/front.png"
+        },
+        {
+          "identity": "machamp-redux",
+          "species_constant": "SPECIES_MACHAMP_REDUX",
+          "current_status": "DS_FRONT_PRESENT_BACK_MISSING",
+          "current_front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/machamp_redux/front.png"
+        },
+        {
+          "identity": "machamp-mega",
+          "species_constant": "SPECIES_MACHAMP_MEGA",
+          "current_status": "ABSENT_FROM_CURRENT_DS_LIBRARY",
+          "current_front_path": ""
+        },
+        {
+          "identity": "machamp-mega-redux",
+          "species_constant": "SPECIES_MACHAMP_MEGA_REDUX",
+          "current_status": "DS_FRONT_PRESENT_BACK_MISSING",
+          "current_front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/machamp_mega_redux/front.png"
+        },
+        {
+          "identity": "kingdra-mega-x",
+          "species_constant": "SPECIES_KINGDRA_MEGA",
+          "current_status": "ABSENT_FROM_CURRENT_DS_LIBRARY",
+          "current_front_path": ""
+        },
+        {
+          "identity": "lapras-mega-y",
+          "species_constant": "SPECIES_LAPRAS_MEGA",
+          "current_status": "ABSENT_FROM_CURRENT_DS_LIBRARY",
+          "current_front_path": ""
+        },
+        {
+          "identity": "weavile-redux",
+          "species_constant": "SPECIES_WEAVILE_REDUX",
+          "current_status": "DS_FRONT_PRESENT_BACK_MISSING",
+          "current_front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/weavile_redux/front.png"
+        },
+        {
+          "identity": "weavile-redux-mega",
+          "species_constant": "SPECIES_WEAVILE_REDUX_MEGA",
+          "current_status": "DS_FRONT_PRESENT_BACK_MISSING",
+          "current_front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/weavile_redux_mega/front.png"
+        },
+        {
+          "identity": "skarmory-mega-x",
+          "species_constant": "SPECIES_SKARMORY_MEGA",
+          "current_status": "ABSENT_FROM_CURRENT_DS_LIBRARY",
+          "current_front_path": ""
+        },
+        {
+          "identity": "trapinch-redux",
+          "species_constant": "SPECIES_TRAPINCH_REDUX",
+          "current_status": "DS_FRONT_PRESENT_BACK_MISSING",
+          "current_front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/trapinch_redux/front.png"
+        },
+        {
+          "identity": "vibrava-redux",
+          "species_constant": "SPECIES_VIBRAVA_REDUX",
+          "current_status": "DS_FRONT_PRESENT_BACK_MISSING",
+          "current_front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/vibrava_redux/front.png"
+        },
+        {
+          "identity": "flygon-redux",
+          "species_constant": "SPECIES_FLYGON_REDUX",
+          "current_status": "DS_FRONT_PRESENT_BACK_MISSING",
+          "current_front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/flygon_redux/front.png"
+        },
+        {
+          "identity": "flygon-redux-mega",
+          "species_constant": "SPECIES_FLYGON_REDUX_MEGA",
+          "current_status": "DS_FRONT_PRESENT_BACK_MISSING",
+          "current_front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/flygon_redux_mega/front.png"
+        },
+        {
+          "identity": "froslass-mega-x",
+          "species_constant": "SPECIES_FROSLASS_MEGA",
+          "current_status": "ABSENT_FROM_CURRENT_DS_LIBRARY",
+          "current_front_path": ""
+        },
+        {
+          "identity": "chandelure-mega-x",
+          "species_constant": "SPECIES_CHANDELURE_MEGA",
+          "current_status": "ABSENT_FROM_CURRENT_DS_LIBRARY",
+          "current_front_path": ""
+        },
+        {
+          "identity": "honedge-redux",
+          "species_constant": "SPECIES_HONEDGE_REDUX",
+          "current_status": "DS_FRONT_PRESENT_BACK_MISSING",
+          "current_front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/honedge_redux/front.png"
+        },
+        {
+          "identity": "doublade-redux",
+          "species_constant": "SPECIES_DOUBLADE_REDUX",
+          "current_status": "DS_FRONT_PRESENT_BACK_MISSING",
+          "current_front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/doublade_redux/front.png"
+        },
+        {
+          "identity": "aegislash-blade-redux",
+          "species_constant": "SPECIES_AEGISLASH_BLADE_REDUX",
+          "current_status": "DS_FRONT_PRESENT_BACK_MISSING",
+          "current_front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/aegislash_blade_redux/front.png"
+        },
+        {
+          "identity": "aegislash-redux",
+          "species_constant": "SPECIES_AEGISLASH_REDUX",
+          "current_status": "DS_FRONT_PRESENT_BACK_MISSING",
+          "current_front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/aegislash_redux/front.png"
+        },
+        {
+          "identity": "aegislash-mega",
+          "species_constant": "SPECIES_AEGISLASH_REDUX_MEGA",
+          "current_status": "ABSENT_FROM_CURRENT_DS_LIBRARY",
+          "current_front_path": ""
+        },
+        {
+          "identity": "crabrawler-redux",
+          "species_constant": "SPECIES_CRABRAWLER_REDUX",
+          "current_status": "DS_FRONT_PRESENT_BACK_MISSING",
+          "current_front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/crabrawler_redux/front.png"
+        },
+        {
+          "identity": "crabominable-redux",
+          "species_constant": "SPECIES_CRABOMINABLE_REDUX",
+          "current_status": "DS_FRONT_PRESENT_BACK_MISSING",
+          "current_front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/crabominable_redux/front.png"
+        },
+        {
+          "identity": "tsareena-mega",
+          "species_constant": "SPECIES_TSAREENA_MEGA",
+          "current_status": "DS_FRONT_PRESENT_BACK_MISSING",
+          "current_front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/tsareena_mega/front.png"
+        },
+        {
+          "identity": "cinderace-mega",
+          "species_constant": "SPECIES_CINDERACE_MEGA",
+          "current_status": "ABSENT_FROM_CURRENT_DS_LIBRARY",
+          "current_front_path": ""
+        },
+        {
+          "identity": "inteleon-mega",
+          "species_constant": "SPECIES_INTELEON_MEGA",
+          "current_status": "ABSENT_FROM_CURRENT_DS_LIBRARY",
+          "current_front_path": ""
+        },
+        {
+          "identity": "drednaw-mega",
+          "species_constant": "SPECIES_DREDNAW_MEGA",
+          "current_status": "ABSENT_FROM_CURRENT_DS_LIBRARY",
+          "current_front_path": ""
+        },
+        {
+          "identity": "coalossal-mega",
+          "species_constant": "SPECIES_COALOSSAL_MEGA",
+          "current_status": "ABSENT_FROM_CURRENT_DS_LIBRARY",
+          "current_front_path": ""
+        },
+        {
+          "identity": "toxtricity-mega",
+          "species_constant": "SPECIES_TOXTRICITY_MEGA; SPECIES_TOXTRICITY_REDUX_MEGA",
+          "current_status": "ABSENT_FROM_CURRENT_DS_LIBRARY",
+          "current_front_path": ""
+        },
+        {
+          "identity": "hatterene-mega",
+          "species_constant": "SPECIES_HATTERENE_MEGA",
+          "current_status": "ABSENT_FROM_CURRENT_DS_LIBRARY",
+          "current_front_path": ""
+        },
+        {
+          "identity": "amphybuzz",
+          "species_constant": "SPECIES_AMPHYBUZZ",
+          "current_status": "DS_FRONT_PRESENT_BACK_MISSING",
+          "current_front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/amphybuzz/front.png"
+        },
+        {
+          "identity": "amphybuzz-mega",
+          "species_constant": "SPECIES_AMPHYBUZZ_MEGA",
+          "current_status": "DS_FRONT_PRESENT_BACK_MISSING",
+          "current_front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/amphybuzz_mega/front.png"
+        },
+        {
+          "identity": "bariong",
+          "species_constant": "SPECIES_BARIONG",
+          "current_status": "DS_FRONT_PRESENT_BACK_MISSING",
+          "current_front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/bariong/front.png"
+        },
+        {
+          "identity": "bewarden-redux",
+          "species_constant": "SPECIES_BEWARDEN_REDUX",
+          "current_status": "DS_FRONT_PRESENT_BACK_MISSING",
+          "current_front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/bewarden_redux/front.png"
+        },
+        {
+          "identity": "bewarden",
+          "species_constant": "SPECIES_BEWARDEN",
+          "current_status": "DS_FRONT_PRESENT_BACK_MISSING",
+          "current_front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/bewarden/front.png"
+        },
+        {
+          "identity": "bubbleo",
+          "species_constant": "SPECIES_BUBBLEO",
+          "current_status": "DS_FRONT_PRESENT_BACK_MISSING",
+          "current_front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/bubbleo/front.png"
+        },
+        {
+          "identity": "clawtificer",
+          "species_constant": "SPECIES_CLAWITZER_REDUX",
+          "current_status": "ABSENT_FROM_CURRENT_DS_LIBRARY",
+          "current_front_path": ""
+        },
+        {
+          "identity": "corm",
+          "species_constant": "SPECIES_CORM",
+          "current_status": "DS_FRONT_PRESENT_BACK_MISSING",
+          "current_front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/corm/front.png"
+        },
+        {
+          "identity": "cormoth",
+          "species_constant": "SPECIES_CORMOTH",
+          "current_status": "DS_FRONT_PRESENT_BACK_MISSING",
+          "current_front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/cormoth/front.png"
+        },
+        {
+          "identity": "cormoth-mega",
+          "species_constant": "SPECIES_CORMOTH_MEGA",
+          "current_status": "DS_FRONT_PRESENT_BACK_MISSING",
+          "current_front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/cormoth_mega/front.png"
+        },
+        {
+          "identity": "crabruiser",
+          "species_constant": "SPECIES_CRABRUISER_REDUX",
+          "current_status": "DS_FRONT_PRESENT_BACK_MISSING",
+          "current_front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/crabruiser/front.png"
+        },
+        {
+          "identity": "crawdauntless",
+          "species_constant": "SPECIES_CRAWDAUNTLES",
+          "current_status": "ABSENT_FROM_CURRENT_DS_LIBRARY",
+          "current_front_path": ""
+        },
+        {
+          "identity": "fluffbee",
+          "species_constant": "SPECIES_FLUFFBEE",
+          "current_status": "DS_FRONT_PRESENT_BACK_MISSING",
+          "current_front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/fluffbee/front.png"
+        },
+        {
+          "identity": "gyaradeath-mega-x",
+          "species_constant": "SPECIES_GYARADEATH_MEGA_X",
+          "current_status": "DS_FRONT_PRESENT_BACK_MISSING",
+          "current_front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/gyaradeath_mega_x/front.png"
+        },
+        {
+          "identity": "gyaradeath-mega-y",
+          "species_constant": "SPECIES_GYARADEATH_MEGA_Y",
+          "current_status": "DS_FRONT_PRESENT_BACK_MISSING",
+          "current_front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/gyaradeath_mega_y/front.png"
+        },
+        {
+          "identity": "gyarevelry",
+          "species_constant": "SPECIES_GYAREVELRY",
+          "current_status": "ABSENT_FROM_CURRENT_DS_LIBRARY",
+          "current_front_path": ""
+        },
+        {
+          "identity": "heliomodo",
+          "species_constant": "SPECIES_HELIOSUNNY",
+          "current_status": "ABSENT_FROM_CURRENT_DS_LIBRARY",
+          "current_front_path": ""
+        },
+        {
+          "identity": "hydroar",
+          "species_constant": "SPECIES_HYDROAR",
+          "current_status": "DS_FRONT_PRESENT_BACK_MISSING",
+          "current_front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/hydroar/front.png"
+        },
+        {
+          "identity": "hydroar-f",
+          "species_constant": "SPECIES_HYDROAR_F",
+          "current_status": "DS_FRONT_PRESENT_BACK_MISSING",
+          "current_front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/hydroar_f/front.png"
+        },
+        {
+          "identity": "lucineon",
+          "species_constant": "SPECIES_LUMINOSITEON",
+          "current_status": "ABSENT_FROM_CURRENT_DS_LIBRARY",
+          "current_front_path": ""
+        },
+        {
+          "identity": "magnemous",
+          "species_constant": "SPECIES_MAGMENOUS",
+          "current_status": "ABSENT_FROM_CURRENT_DS_LIBRARY",
+          "current_front_path": ""
+        },
+        {
+          "identity": "marbeep",
+          "species_constant": "SPECIES_MARBEEP",
+          "current_status": "DS_FRONT_PRESENT_BACK_MISSING",
+          "current_front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/marbeep/front.png"
+        },
+        {
+          "identity": "merrykarp",
+          "species_constant": "SPECIES_MERRYKARP",
+          "current_status": "DS_FRONT_PRESENT_BACK_MISSING",
+          "current_front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/merrykarp/front.png"
+        },
+        {
+          "identity": "polartic-bluemoon",
+          "species_constant": "SPECIES_POLARTIC_BLUEMOON",
+          "current_status": "DS_FRONT_PRESENT_BACK_MISSING",
+          "current_front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/polartic_bluemoon/front.png"
+        },
+        {
+          "identity": "popcorm",
+          "species_constant": "SPECIES_POPCORM",
+          "current_status": "DS_FRONT_PRESENT_BACK_MISSING",
+          "current_front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/popcorm/front.png"
+        },
+        {
+          "identity": "popcorm-mega",
+          "species_constant": "SPECIES_POPCORM_MEGA",
+          "current_status": "DS_FRONT_PRESENT_BACK_MISSING",
+          "current_front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/popcorm_mega/front.png"
+        }
+      ]
+    },
+    {
+      "batch_id": "PLATINUM_BULK",
+      "count": 3,
+      "action": "Recover from carried Platinum Redux package and validate/convert battle sprites in bulk.",
+      "entries": [
+        {
+          "identity": "platinum-redux-raticate",
+          "base": "Raticate",
+          "current_status": "DS_ASSETS_PRESENT_FRONT_BACK"
+        },
+        {
+          "identity": "platinum-redux-dugtrio",
+          "base": "Dugtrio",
+          "current_status": "DS_ASSETS_PRESENT_FRONT_BACK"
+        },
+        {
+          "identity": "delta-eelektross",
+          "base": "Shedinja",
+          "current_status": "ABSENT_FROM_CURRENT_DS_LIBRARY"
+        }
+      ]
+    },
+    {
+      "batch_id": "DEEP_SOURCE_HUNT",
+      "count": 2,
+      "action": "Resolve remaining source-package identities before conversion.",
+      "entries": [
+        {
+          "identity": "revenclaw",
+          "base": "Revenclaw",
+          "source": "Mercury Redux Custom"
+        },
+        {
+          "identity": "venagon",
+          "base": "Venagon",
+          "source": "Mercury Redux Custom"
+        }
+      ]
+    }
+  ],
+  "rules": [
+    "Legacy approval remains final.",
+    "Recover originals before generating/reconstructing missing views.",
+    "Prefer existing DS-ready assets over reconversion.",
+    "Preserve source identity labels and family relationships.",
+    "Only unresolved items after a bulk pass become manual blockers."
+  ]
+}
