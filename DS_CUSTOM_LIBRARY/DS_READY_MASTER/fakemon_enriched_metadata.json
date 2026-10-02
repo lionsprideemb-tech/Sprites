@@ -17,12 +17,12 @@
       "identity": "351-4",
       "source": "Festival_Misc",
       "front_path": "DS_CUSTOM_LIBRARY/packs/Festival_Misc/Misc/Fronts/351_4.png",
-      "back_path": "",
+      "back_path": "DS_CUSTOM_LIBRARY/packs/Festival_Misc/Misc/Backs/351b_4.png",
       "family": "Unresolved family / relationship",
       "name": "351 4",
       "type1": "Normal",
       "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
+      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE;BACK_MATCH_RECOVERED",
       "ready_for_approval": false
     },
     "429-1f|027016d12875fb6ecff251bb5880869ef020c8a960b797a4cbd88e18a3b3fe7e": {
@@ -41,12 +41,12 @@
       "identity": "479-6",
       "source": "Festival_Misc",
       "front_path": "DS_CUSTOM_LIBRARY/packs/Festival_Misc/Misc/Fronts/479_6.png",
-      "back_path": "",
+      "back_path": "DS_CUSTOM_LIBRARY/packs/Festival_Misc/Misc/Backs/479b_6.png",
       "family": "Unresolved family / relationship",
       "name": "479 6",
       "type1": "Normal",
       "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
+      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE;BACK_MATCH_RECOVERED",
       "ready_for_approval": false
     },
     "479s-6|54cb128a53a60ed7cff75a683eaeed974bae34662d4963747ee09b9e304110d1": {
@@ -6810,12 +6810,12 @@
       "source": "PokeDot_Engine_Mega_Intake",
       "front_path": "DS_CUSTOM_LIBRARY/packs/PokeDot_Engine_Mega_Intake/magearna-original-mega/front.png",
       "back_path": "DS_CUSTOM_LIBRARY/packs/PokeDot_Engine_Mega_Intake/magearna-original-mega/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Magearna Original Mega",
+      "name": "Mega Magearna (Original Color)",
       "type1": "Steel",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": false
+      "type2": "Fairy",
+      "family": "Magearna \u2192 Mega Magearna (Original Color)",
+      "confidence": "VERIFIED_SOURCE_METADATA",
+      "ready_for_approval": true
     },
     "magmenous|284fce232df8750eaf16ba559b0e3f5c346c1cabc8dbcb8369a934c97d265d71": {
       "identity": "magmenous",
