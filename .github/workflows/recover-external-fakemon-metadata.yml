@@ -22,9 +22,11 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
+      - name: Refresh strict enrichment from latest sprite manifest
+        run: python tools/enrich_fakemon_metadata.py
       - name: Recover source metadata
         run: python tools/recover_external_fakemon_metadata.py
-      - name: Rebuild strict enrichment
+      - name: Rebuild strict enrichment with recovered source metadata
         run: python tools/enrich_fakemon_metadata.py
       - name: Build one final leftover review pool
         run: python tools/build_leftover_review_pool.py
