@@ -108,6 +108,33 @@ def _official_name_candidate(ident):
             return True
     return False
 
+def looks_like_official_variant(ident):
+    x=norm(ident)
+    # Official regional / alternate-form naming used by donor packs.
+    official_tokens=[
+        "-alolan","-galarian","-hisuian","-paldean",
+        "-east-sea","-west-sea",
+        "-ice-rider","-shadow-rider",
+        "-dusk-mane","-dawn-wings",
+        "-original-color","-eternal-flower",
+        "-whitestriped",
+    ]
+    if any(t in x for t in official_tokens):
+        # Custom Mega/evolved derivatives of an official form remain candidates.
+        if x.endswith("-mega") or "-mega-" in x:
+            return False
+        return True
+    if x in {
+        "wormadam-sandy-cloak","wormadam-trash-cloak",
+        "burmy-sandy-cloak","burmy-trash-cloak",
+        "maushold-four","maushold-three",
+        "unown-emark","unown-qmark",
+    }:
+        return True
+    if x.startswith("alcremie-") and "mega" not in x:
+        return True
+    return False
+
 def plain_official_row(r,type_map):
     """Exclude ordinary official/native art while preserving true custom-source
     redesigns that happen to reuse a vanilla Pokémon name."""
@@ -121,21 +148,27 @@ def plain_official_row(r,type_map):
         "DrPrettyman_DS_64x64","HG_Engine_DS_Sprites","DS_Styled_Gen5_8",
         "Gen7_DS_Backsprites","Shiny_Icons_Gen1_9"
     }
-    # Those packs are baseline/native collections, not custom-design sources.
-    if src in baseline_sources:
+    if src in baseline_sources or src.startswith("HGSS_Project_Unique_"):
         return True
 
-    # Elite Redux contains both vanilla assets and genuine custom identities.
-    # Use the local native baseline to suppress only its ordinary official forms.
+    # Elite Redux includes a large vanilla/form sprite layer alongside its
+    # actual custom content. Remove ordinary official forms but keep Redux,
+    # custom Mega, EX, trainer, paradox, and fakemon identities.
     aliases=official_aliases(ident)
-    if src=="Elite_Redux_Bulk" and any(a in LOCAL_OFFICIAL_NAMES for a in aliases):
+    if src=="Elite_Redux_Bulk":
+        if looks_like_official_variant(ident):
+            return True
+        if any(a in LOCAL_OFFICIAL_NAMES for a in aliases):
+            return True
+
+    # A few miscellaneous packs carry plain vanilla reference sprites alongside
+    # the custom art; these are not review candidates.
+    if src=="Festival_Misc" and ident in {"mawile","sableye"}:
         return True
 
-    # Any manifest row explicitly classified custom remains eligible from here.
     if flag in {"false","0","no"}:
         return False
 
-    # Backward-compatible metadata fallback.
     mr=type_map.get(ident) or {}
     cat=str(mr.get("category","")).upper()
     return cat in {"CANON","OFFICIAL/CANON","OFFICIAL REGIONAL","OFFICIAL FORM"}
