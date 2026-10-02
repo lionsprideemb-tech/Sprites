@@ -882,24 +882,24 @@
       "source": "Earthretha",
       "front_path": "DS_CUSTOM_LIBRARY/packs/Earthretha/Earthretha Fakemon Pack/Graphics/Pokemon/Front/BELSTATUE_1 (Sun Shard).png",
       "back_path": "DS_CUSTOM_LIBRARY/packs/Earthretha/Earthretha Fakemon Pack/Graphics/Pokemon/Back/BELSTATUE_1 (Sun Shard).png",
-      "family": "Unresolved family / relationship",
-      "name": "Belstatue 1 Sun Shard",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": false
+      "name": "Sun Shard BELSTATUE",
+      "type1": "Rock",
+      "type2": "Dragon",
+      "family": "Standalone \u2014 Sun Shard BELSTATUE",
+      "confidence": "SOURCE_METADATA;SOURCE_STANDALONE",
+      "ready_for_approval": true
     },
     "belstatue-2-moon-shard|ca0fced633b1897831a83aa95ab76cc7a83c86e0328afcd0af7a30f79fd915fe": {
       "identity": "belstatue-2-moon-shard",
       "source": "Earthretha",
       "front_path": "DS_CUSTOM_LIBRARY/packs/Earthretha/Earthretha Fakemon Pack/Graphics/Pokemon/Front/BELSTATUE_2 (Moon Shard).png",
       "back_path": "DS_CUSTOM_LIBRARY/packs/Earthretha/Earthretha Fakemon Pack/Graphics/Pokemon/Back/BELSTATUE_2 (Moon Shard).png",
-      "family": "Unresolved family / relationship",
-      "name": "Belstatue 2 Moon Shard",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE;BACK_MATCH_RECOVERED",
-      "ready_for_approval": false
+      "name": "Moon Shard BELSTATUE",
+      "type1": "Rock",
+      "type2": "Psychic",
+      "family": "Standalone \u2014 Moon Shard BELSTATUE",
+      "confidence": "SOURCE_METADATA;SOURCE_STANDALONE;BACK_MATCH_RECOVERED",
+      "ready_for_approval": true
     },
     "beniccino|d6e3455c8939843df4b5ef1ff5f898a1c92c0436f5f74c111d912d6787fb90c0": {
       "identity": "beniccino",
@@ -1338,11 +1338,11 @@
       "source": "Earthretha",
       "front_path": "DS_CUSTOM_LIBRARY/packs/Earthretha/Earthretha Fakemon Pack/Graphics/Pokemon/Front/Old/BUNNINJA (Beta).png",
       "back_path": "",
-      "family": "Unresolved family / relationship",
-      "name": "Bunninja Beta",
+      "name": "Bunninja",
       "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
+      "type2": "Poison",
+      "family": "Standalone \u2014 Bunninja",
+      "confidence": "SOURCE_METADATA;SOURCE_STANDALONE",
       "ready_for_approval": false
     },
     "burmy-eterna|802ef70182fa57a63d229ce5e585004e75cf4dc3e667a454e3dd9cf8cc0f7f46": {
@@ -2321,12 +2321,12 @@
       "identity": "criminalisfront",
       "source": "Festival_Misc",
       "front_path": "DS_CUSTOM_LIBRARY/packs/Festival_Misc/Misc/Fronts/CriminalisFront.png",
-      "back_path": "",
+      "back_path": "DS_CUSTOM_LIBRARY/packs/Festival_Misc/Misc/Backs/CriminalisBack.png",
       "family": "Unresolved family / relationship",
       "name": "Criminalisfront",
       "type1": "Normal",
       "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
+      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE;BACK_MATCH_RECOVERED",
       "ready_for_approval": false
     },
     "crishy|44a629a6e18f84cc75647475e111fc745a5bfa37c56eff1ee66ce3b6c11c1fb3": {
@@ -5801,12 +5801,12 @@
       "identity": "kangaf",
       "source": "Festival_Misc",
       "front_path": "DS_CUSTOM_LIBRARY/packs/Festival_Misc/Misc/Fronts/KangaF.png",
-      "back_path": "",
+      "back_path": "DS_CUSTOM_LIBRARY/packs/Festival_Misc/Misc/Backs/KangaB.png",
       "family": "Unresolved family / relationship",
       "name": "Kangaf",
       "type1": "Normal",
       "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
+      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE;BACK_MATCH_RECOVERED",
       "ready_for_approval": false
     },
     "kankersaur|739080c01802e4580392543312b91b1f87e4f21464e0137174431e51951a73de": {
@@ -8225,12 +8225,12 @@
       "identity": "pilfetchfront",
       "source": "Festival_Misc",
       "front_path": "DS_CUSTOM_LIBRARY/packs/Festival_Misc/Misc/Fronts/PilfetchFront.png",
-      "back_path": "",
+      "back_path": "DS_CUSTOM_LIBRARY/packs/Festival_Misc/Misc/Backs/PilfetchBack.png",
       "family": "Unresolved family / relationship",
       "name": "Pilfetchfront",
       "type1": "Normal",
       "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
+      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE;BACK_MATCH_RECOVERED",
       "ready_for_approval": false
     },
     "piloswine-redux|0779ac4f483e7fa1cc39476318f07f46d990c6488f8effad1c7d4383ba012b25": {
