@@ -277,11 +277,14 @@ if OUT.exists():
 def extkey(r):
     return str(r.get("source",""))+"|"+norm(r.get("identity",""))
 
+# The review requires a verified back sprite. Do not spend hundreds of remote
+# lookups enriching front-only entries that cannot be shown to the user anyway.
 targets=[
     r for r in rows
     if ((r.get("ready_for_approval","").lower()!="true") or extkey(r) in prior_records)
-    and (r.get("back_path") or r.get("source")=="Elite_Redux_Bulk")
+    and r.get("back_path")
 ]
+target_keys={extkey(r) for r in targets}
 by_source={}
 for r in targets:by_source.setdefault(r["source"],[]).append(r)
 
@@ -304,7 +307,7 @@ known_mong=set(mong)
 
 out={}
 for k,v in prior_records.items():
-    if not isinstance(v,dict): continue
+    if k not in target_keys or not isinstance(v,dict): continue
     vv=dict(v)
     if str(vv.get("name","")).strip() in {"","›","»","→"}:
         ident=vv.get("identity") or k.split("|",1)[-1]
