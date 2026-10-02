@@ -23,13 +23,13 @@ main{max-width:1100px;margin:auto;padding:15px}.intro{background:#eef4fb;border:
 <div class="controls"><input id="search" placeholder="Search Pokémon, source, type…"><select id="filter"><option value="all">All leftovers</option><option value="undecided" selected>Undecided leftovers</option><option value="maybe">Maybe</option></select><button id="export">Export decisions</button></div>
 </div></header>
 <main>
-<div class="intro"><b>This is the supplemental pool only.</b> Anything already marked <b>Approve</b> or <b>Reject</b> in your completed 372-entry review is excluded. It is built from the repaired DS-ready master and requires a matched <b>front + back</b> sprite and <b>1–2 canon Pokémon types</b>. Exact duplicates and palette-only recolors were already collapsed.</div>
+<div class="intro"><b>This is the corrected supplemental pool.</b> Old scratch decisions from the bad-pairing version were intentionally cleared. Anything already settled in prior Mercury reviews is excluded. Entries appear here only after a verified <b>front + back</b> pair, a resolved family/standalone relationship, and source/authoritative <b>canon-compatible typing</b> are available. Unresolved Fakemon stay in recovery instead of being shown with guessed Normal typing.</div>
 <div id="content"><div class="empty">Loading repaired sprite data…</div></div>
 </main>
 <script>
 const REPO='lionsprideemb-tech/Sprites',BRANCH='main',RAW='https://raw.githubusercontent.com/'+REPO+'/'+BRANCH+'/';
 const POOL=RAW+'DS_CUSTOM_LIBRARY/DS_READY_MASTER/leftover_review_pool.csv';
-const STORE='mercury-leftover-sprite-review-v1';
+const STORE='mercury-leftover-sprite-review-v2';
 let entries=[],local={};
 
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
