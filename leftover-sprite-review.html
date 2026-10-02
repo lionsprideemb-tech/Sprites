@@ -33,7 +33,7 @@ const STORE='mercury-leftover-sprite-review-v2';
 let entries=[],local={};
 
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const img=p=>RAW+String(p||'').split('/').map(encodeURIComponent).join('/');
+const img=p=>/^https?:\/\//i.test(String(p||''))?String(p):RAW+String(p||'').split('/').map(encodeURIComponent).join('/');
 function parseCSV(text){
   const out=[];let row=[],field='',q=false;
   for(let i=0;i<text.length;i++){const ch=text[i],n=text[i+1];
