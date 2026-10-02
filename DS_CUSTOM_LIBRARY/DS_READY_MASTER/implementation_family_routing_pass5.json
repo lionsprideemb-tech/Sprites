@@ -1,0 +1,113 @@
+{
+  "generated": "2026-10-02",
+  "purpose": "Fifth-pass implementation prep: approved family clusters, extension candidates, Mega collisions, and completeness blockers. Suggestions only; no species IDs or approval decisions changed.",
+  "audit_counts": {
+    "approved_user_decisions_in_enriched_metadata": 273,
+    "approved_family_labels": 150
+  },
+  "high_value_existing_family_extensions": [
+    {
+      "family": "Shinx",
+      "candidate": "Luxzero",
+      "suggested_attachment": "Luxray branch/evolution candidate",
+      "confidence": "HIGH",
+      "reason": "Repository metadata explicitly places Luxzero in the Shinx family; keep distinct from approved Delta Shinx/Luxio/Luxray chain and Mega Luxray."
+    },
+    {
+      "family": "Pawniard",
+      "candidate": "Queengambit",
+      "suggested_attachment": "Bisharp branch evolution candidate",
+      "confidence": "HIGH",
+      "reason": "Repository metadata explicitly places Queengambit in Pawniard family; natural parallel to Kingambit without overwriting Delta Pawniard/Bisharp/Kingambit."
+    },
+    {
+      "family": "Rattata",
+      "candidate": "Ratfioso / Ratiking",
+      "suggested_attachment": "Raticate-family extension candidates",
+      "confidence": "MEDIUM",
+      "reason": "Both are explicitly grouped under Rattata, but ordering/evolution conditions are not evidenced here; hold exact chain for review."
+    },
+    {
+      "family": "Delibird",
+      "candidate": "Dedelibird / Krampird",
+      "suggested_attachment": "Delibird-family evolution/branch candidates",
+      "confidence": "MEDIUM",
+      "reason": "Both are explicitly grouped under Delibird; exact relationship is not evidenced, so do not invent ordering."
+    },
+    {
+      "family": "Applin",
+      "candidate": "Fujiflap / Granitun",
+      "suggested_attachment": "Applin branch-evolution candidates",
+      "confidence": "MEDIUM",
+      "reason": "Both are explicitly grouped under Applin; exact triggers/order remain unverified."
+    },
+    {
+      "family": "Dunsparce / Dudunsparce",
+      "candidate": "Dududunsparce",
+      "suggested_attachment": "post-Dudunsparce evolution candidate",
+      "confidence": "HIGH",
+      "reason": "Name and repository family label both support an extension; approved Mega Dududunsparce can remain its Mega."
+    }
+  ],
+  "coherent_delta_families_ready_for_species_mapping": [
+    "Aron → Lairon → Aggron (+ Mega Delta Aggron)",
+    "Gible → Gabite → Garchomp (+ Mega Delta Garchomp)",
+    "Larvitar → Pupitar → Tyranitar (+ Mega Delta Tyranitar)",
+    "Drilbur → Excadrill",
+    "Gligar → Gliscor",
+    "Larvesta → Volcarona",
+    "Noibat → Noivern",
+    "Sinistea → Polteageist",
+    "Dewpider → Araquanid",
+    "Stufful → Bewear"
+  ],
+  "mega_collision_groups": [
+    {
+      "family": "Litwick",
+      "issue": "Two approved entries currently share display name Mega Chandelure (chandelure-mega-y and chandelure-redux-mega).",
+      "action": "Keep identities separate; rename/role-resolve before implementation."
+    },
+    {
+      "family": "Solosis",
+      "issue": "reuniclus-mega and reuniclus-redux-mega are both approved and share Fire/Water typing.",
+      "action": "Visual dedupe/role comparison required before assigning Mega slot."
+    },
+    {
+      "family": "Toxel",
+      "issue": "Two approved Delta Toxtricity variants and two approved Mega Delta Toxtricity variants.",
+      "action": "Treat as variant collision; choose canonical base+Mega pair or deliberately define alternate form."
+    },
+    {
+      "family": "Skarmory",
+      "issue": "skarmory-mega-redux and skarmory-mega-y are both approved with Steel/Flying typing and same display name.",
+      "action": "Visual comparison/dedupe before Mega assignment."
+    },
+    {
+      "family": "Rowlet",
+      "issue": "Both regular Decidueye Mega and Hisuian Decidueye Mega approved.",
+      "action": "Safe to coexist only as form-specific Megas; label explicitly in game data."
+    },
+    {
+      "family": "Goomy",
+      "issue": "Regular Goodra Mega and Hisuian Goodra Mega approved.",
+      "action": "Safe to coexist only as form-specific Megas; label explicitly."
+    },
+    {
+      "family": "Oshawott",
+      "issue": "Regular Samurott Mega and Hisuian Samurott Mega approved.",
+      "action": "Safe to coexist only as form-specific Megas; label explicitly."
+    },
+    {
+      "family": "Tyrogue / Hitmons",
+      "issue": "Mega Hitmonlee, Hitmonchan, and Hitmontop all approved.",
+      "action": "Good family-wide Mega set; keep species-specific rather than collapsing to one Hitmon Mega."
+    }
+  ],
+  "completeness_blocker": "All 273 user-approved enriched entries were audited; many Elite Redux-derived entries have no recorded back_path. Missing backs remain an implementation asset blocker only and do not reverse approval.",
+  "guardrails": [
+    "Do not convert repository family grouping into a new evolution order unless source evidence supports the order.",
+    "Do not collapse Delta/Redux identities into vanilla base replacements.",
+    "Do not overwrite user reject/maybe decisions.",
+    "Do not let same display names hide distinct identities; resolve canonical labels before species-ID integration."
+  ]
+}
