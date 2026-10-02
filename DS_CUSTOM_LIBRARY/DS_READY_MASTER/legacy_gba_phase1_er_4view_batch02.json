@@ -1,0 +1,134 @@
+{
+  "generated": "2026-10-02",
+  "phase": "GBA auto-yes recovery phase 1 — ER 4-view verification batch 2",
+  "source_repository": "ForwardFeed/ER-nextdex",
+  "counts": {
+    "targets": 4,
+    "complete_4view_sets": 4,
+    "incomplete_sets": 0,
+    "missing_views": 0
+  },
+  "entries": [
+    {
+      "identity": "clefable-mega-y",
+      "species_constant": "SPECIES_CLEFABLE_MEGA_Y",
+      "donor_id": "1879.0",
+      "current_front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/clefable_mega_y/front.png",
+      "source_repository": "ForwardFeed/ER-nextdex",
+      "source_assets_complete": true,
+      "source_asset_checks": {
+        "front": {
+          "found": true,
+          "path": "static/sprites/CLEFABLE_MEGA_Y.png",
+          "sha": "26bf8685e486e051712ed6f6749594a26732612d"
+        },
+        "back": {
+          "found": true,
+          "path": "static/sprites/CLEFABLE_MEGA_Y_BACK.png",
+          "sha": "864eed6ea696d16280efdd830bda0c92061f2a01"
+        },
+        "shiny_front": {
+          "found": true,
+          "path": "static/sprites/CLEFABLE_MEGA_Y_SHINY.png",
+          "sha": "cb8b4a7aec1e66d7212f851c14a4b61c3b1bca02"
+        },
+        "shiny_back": {
+          "found": true,
+          "path": "static/sprites/CLEFABLE_MEGA_Y_BACK_SHINY.png",
+          "sha": "9a1bab5a7a1e6827050cc6b70051fa863f94a949"
+        }
+      }
+    },
+    {
+      "identity": "wigglytuff-primal",
+      "species_constant": "SPECIES_WIGGLYTUFF_PRIMAL",
+      "donor_id": "2575.0",
+      "current_front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/wigglytuff_primal/front.png",
+      "source_repository": "ForwardFeed/ER-nextdex",
+      "source_assets_complete": true,
+      "source_asset_checks": {
+        "front": {
+          "found": true,
+          "path": "static/sprites/WIGGLYTUFF_PRIMAL.png",
+          "sha": "90a0de94c9de3197065ac4efd4b92bf0346a1f2f"
+        },
+        "back": {
+          "found": true,
+          "path": "static/sprites/WIGGLYTUFF_PRIMAL_BACK.png",
+          "sha": "0741acc2999b48234ac9fa6e01c7d9c2bea498fa"
+        },
+        "shiny_front": {
+          "found": true,
+          "path": "static/sprites/WIGGLYTUFF_PRIMAL_SHINY.png",
+          "sha": "ebbdf478475e44b26ec6c7c01d487e5c9e041294"
+        },
+        "shiny_back": {
+          "found": true,
+          "path": "static/sprites/WIGGLYTUFF_PRIMAL_BACK_SHINY.png",
+          "sha": "ac2a3f63e468a10e2385509524840ef00381a843"
+        }
+      }
+    },
+    {
+      "identity": "crobat-mega",
+      "species_constant": "SPECIES_CROBAT_MEGA",
+      "donor_id": "2112.0",
+      "current_front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/crobat_mega/front.png",
+      "source_repository": "ForwardFeed/ER-nextdex",
+      "source_assets_complete": true,
+      "source_asset_checks": {
+        "front": {
+          "found": true,
+          "path": "static/sprites/CROBAT_MEGA.png",
+          "sha": "7235649fafb8c1712b55d5172ef6ceb0217ced69"
+        },
+        "back": {
+          "found": true,
+          "path": "static/sprites/CROBAT_MEGA_BACK.png",
+          "sha": "5020bd1183ee77f467886abca8d3321a034c4fdb"
+        },
+        "shiny_front": {
+          "found": true,
+          "path": "static/sprites/CROBAT_MEGA_SHINY.png",
+          "sha": "f6ee7ceb0e04ded988c3e72f9e7d65a6bf20174b"
+        },
+        "shiny_back": {
+          "found": true,
+          "path": "static/sprites/CROBAT_MEGA_BACK_SHINY.png",
+          "sha": "2b68720d7b16d8cf290e224da25e13556323523d"
+        }
+      }
+    },
+    {
+      "identity": "arcanine-hisuian-mega",
+      "species_constant": "SPECIES_ARCANINE_HISUIAN_MEGA",
+      "donor_id": "2234.0",
+      "current_front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/arcanine_hisuian_mega/front.png",
+      "source_repository": "ForwardFeed/ER-nextdex",
+      "source_assets_complete": true,
+      "source_asset_checks": {
+        "front": {
+          "found": true,
+          "path": "static/sprites/ARCANINE_HISUIAN_MEGA.png",
+          "sha": "4b3f39173bffb1c12d720fba1c2a535c8132e4ef"
+        },
+        "back": {
+          "found": true,
+          "path": "static/sprites/ARCANINE_HISUIAN_MEGA_BACK.png",
+          "sha": "45a0b5497ed1e77b87cc0ef89c06888af0881407"
+        },
+        "shiny_front": {
+          "found": true,
+          "path": "static/sprites/ARCANINE_HISUIAN_MEGA_SHINY.png",
+          "sha": "9cdd87f0596a5e2609d65499657cb0434ea6f51b"
+        },
+        "shiny_back": {
+          "found": true,
+          "path": "static/sprites/ARCANINE_HISUIAN_MEGA_BACK_SHINY.png",
+          "sha": "7e77546d9c99120abd9400560c2d36153e4e80bd"
+        }
+      }
+    }
+  ],
+  "missing_views": []
+}
