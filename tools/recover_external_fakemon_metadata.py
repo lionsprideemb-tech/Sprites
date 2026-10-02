@@ -1,4 +1,5 @@
 from pathlib import Path
+# rerun after clean PBS display-name fix 2026-10-02
 # rerun after strict back-pair rejection 2026-10-02
 # FINAL_CONSOLIDATED_RECOVERY_2026_10_02
 import csv,json,re,urllib.request,urllib.parse,time,html as htmlmod
