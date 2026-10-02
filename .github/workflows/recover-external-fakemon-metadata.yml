@@ -32,25 +32,10 @@ jobs:
         run: python tools/build_leftover_review_pool.py
       - name: Verify final review pool
         run: python tools/verify_leftover_recovery.py
-      - name: Commit complete recovered review state from latest main
+      - name: Commit complete recovered review state
         run: |
           git config user.name "Mercury Metadata Recovery Bot"
           git config user.email "actions@users.noreply.github.com"
-          # Preserve the already-verified generated state outside the checkout,
-          # reset to current main, then restore it. This avoids both merge
-          # conflicts and a second 10+ minute external metadata crawl.
-          mkdir -p /tmp/mercury-recovery
-          cp DS_CUSTOM_LIBRARY/DS_READY_MASTER/external_fakemon_metadata.json /tmp/mercury-recovery/
-          cp DS_CUSTOM_LIBRARY/DS_READY_MASTER/fakemon_enriched_metadata.json /tmp/mercury-recovery/
-          cp DS_CUSTOM_LIBRARY/DS_READY_MASTER/fakemon_enrichment_report.csv /tmp/mercury-recovery/
-          cp DS_CUSTOM_LIBRARY/DS_READY_MASTER/fakemon_enrichment_summary.json /tmp/mercury-recovery/
-          cp DS_CUSTOM_LIBRARY/DS_READY_MASTER/fakemon_excluded_incomplete.csv /tmp/mercury-recovery/
-          cp DS_CUSTOM_LIBRARY/DS_READY_MASTER/leftover_review_pool.csv /tmp/mercury-recovery/
-          cp DS_CUSTOM_LIBRARY/DS_READY_MASTER/leftover_review_summary.json /tmp/mercury-recovery/
-          cp DS_CUSTOM_LIBRARY/DS_READY_MASTER/leftover_recovery_verification.json /tmp/mercury-recovery/
-          git fetch origin main
-          git reset --hard origin/main
-          cp /tmp/mercury-recovery/* DS_CUSTOM_LIBRARY/DS_READY_MASTER/
           git add \
             DS_CUSTOM_LIBRARY/DS_READY_MASTER/external_fakemon_metadata.json \
             DS_CUSTOM_LIBRARY/DS_READY_MASTER/fakemon_enriched_metadata.json \
@@ -62,4 +47,7 @@ jobs:
             DS_CUSTOM_LIBRARY/DS_READY_MASTER/leftover_recovery_verification.json
           if git diff --cached --quiet; then exit 0; fi
           git commit -m "Finish consolidated Fakemon recovery and review pool"
+          # Auxiliary recovery workflows are manual-only now, so this rebase
+          # should only see unrelated commits and generated files remain clean.
+          git pull --rebase origin main
           git push origin main
