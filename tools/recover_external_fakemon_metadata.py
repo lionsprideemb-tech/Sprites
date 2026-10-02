@@ -74,6 +74,11 @@ def target_aliases(identity,name,source):
         y=x
         for suf in ("-female","-male","-f","-m","-front","-back"):
             if y.endswith(suf): vals.add(y[:-len(suf)])
+        if y.endswith("front") and len(y)>5: vals.add(y[:-5].rstrip("-"))
+        if y.endswith("back") and len(y)>4: vals.add(y[:-4].rstrip("-"))
+        if source=="Festival_PrincessPhoenix":
+            if y.endswith("fs") and len(y)>2: vals.add(y[:-2])
+            elif y.endswith("f") and len(y)>1: vals.add(y[:-1])
         m=re.match(r"^(.+)-(\d+)$",y)
         if m: vals.add(m.group(1))
         for pre in ("regional-","spaceworld-","luminian-","earthrethian-"):
@@ -293,7 +298,7 @@ for r in targets:
     # is not represented by our two bulk collections. Only accept an exact
     # species/display-name hit so similarly named mons (e.g. Anuf/Anufelis)
     # can never be silently substituted.
-    if rec is None and (src=="Mikitari" or src in festival_sources):
+    if rec is None and (src in (festival_sources | {"Mikitari","Earthretha"})):
         primary={norm(ident),norm(name)}
         primary={x for x in primary if x}
         queries=[]
