@@ -1,0 +1,23 @@
+name: Probe Pokengine Metadata
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'tools/probe_pokengine_metadata.py'
+permissions:
+  contents: write
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - run: python tools/probe_pokengine_metadata.py
+      - run: |
+          git config user.name "Mercury Metadata Recovery Bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add DS_CUSTOM_LIBRARY/DS_READY_MASTER/pokengine_probe.txt
+          git commit -m "Probe Pokengine metadata structure" || exit 0
+          git pull --rebase origin main
+          git push origin main
