@@ -57,6 +57,16 @@ def collection_links(base):
             if url not in links[key]:links[key].append(url)
     return links
 
+def search_links(query):
+    if not query:return []
+    raw=fetch("https://pokengine.org/search?query="+urllib.parse.quote(str(query)))
+    if not raw:return []
+    out=[]
+    for href in re.findall(r"href=['\"](/mons/[^'\"?#]+)",raw):
+        url="https://pokengine.org"+href
+        if url not in out:out.append(url)
+    return out
+
 def target_aliases(identity,name,source):
     vals={norm(identity),norm(name)}
     for x in list(vals):
@@ -113,6 +123,15 @@ def parse_pokengine(url,known_slugs):
     block=lines[start:stop]
     family=[]
     known=set(known_slugs)
+    # Evolution links on the page are stronger than collection membership and
+    # let us recover families even when a contributor is not in Mongratis.
+    block_norms={norm(x) for x in block if x}
+    for href in re.findall(r"href=['\"](/mons/[^'\"?#]+)",raw):
+        parts=href.split("/")
+        if len(parts)<4:continue
+        slug=norm(urllib.parse.unquote(parts[3]))
+        if slug and any(b==slug or b.startswith(slug+"-") or slug.startswith(b+"-") for b in block_norms):
+            known.add(slug)
     # Also keep the current page name.
     current=norm(title)
     known.add(current)
@@ -205,7 +224,7 @@ def parse_romhackguide(identity,display_name=""):
 rows=[]
 with REPORT.open(newline="",encoding="utf-8-sig") as f:
     rows=list(csv.DictReader(f))
-targets=[r for r in rows if (r.get("ready_for_approval","").lower()!="true")]
+targets=[r for r in rows if (r.get("ready_for_approval","").lower()!="true") and (r.get("back_path") or r.get("source")=="Elite_Redux_Bulk")]
 by_source={}
 for r in targets:by_source.setdefault(r["source"],[]).append(r)
 
@@ -257,6 +276,26 @@ for r in targets:
                 # even when the visible base species name is identical.
                 if mform or norm(p.get("name")) in aliases:break
 
+    # Fallback to Pokengine's own search when the sprite pack's contributor
+    # is not represented by our two bulk collections. Only accept an exact
+    # species/display-name hit so similarly named mons (e.g. Anuf/Anufelis)
+    # can never be silently substituted.
+    if rec is None and (src=="Mikitari" or src in festival_sources):
+        primary={norm(ident),norm(name)}
+        primary={x for x in primary if x}
+        queries=[]
+        for q in (name,ident.replace("-"," ")):
+            if q and q not in queries:queries.append(q)
+        for q in queries[:2]:
+            for u in search_links(q)[:6]:
+                p=parse_pokengine(u,set())
+                if not p or not p.get("type1"):continue
+                href_slug=norm(urllib.parse.unquote(u.rstrip("/").split("/")[-1]))
+                if norm(p.get("name")) in primary or href_slug in primary:
+                    rec=p
+                    break
+            if rec:break
+
     if rec is None and src=="Elite_Redux_Bulk":
         rec=parse_romhackguide(ident,name)
 
@@ -266,18 +305,51 @@ for r in targets:
         stats["resolved"]+=1
         stats["by_source"][src]=stats["by_source"].get(src,0)+1
 
-# Propagate recovered evolution families to their other stages.
-family_by_member={}
+# Merge all partial family statements into complete connected evolution lines.
+# This turns pairwise donor records such as A→B and B→C into one A→B→C family.
+parents_graph={}
+children_graph={}
+labels={}
 for rec in out.values():
     fam=rec.get("family","")
     if not fam or fam.startswith("Standalone"):continue
-    for p in [x.strip() for x in fam.split("→") if x.strip()]:
-        family_by_member[norm(p)]=fam
+    parts=[x.strip() for x in fam.split("→") if x.strip()]
+    for x in parts: labels[norm(x)]=x
+    for a,b in zip(parts,parts[1:]):
+        na,nb=norm(a),norm(b)
+        children_graph.setdefault(na,set()).add(nb)
+        parents_graph.setdefault(nb,set()).add(na)
+
+def component(start):
+    seen=set();stack=[start]
+    while stack:
+        x=stack.pop()
+        if x in seen:continue
+        seen.add(x)
+        stack.extend(children_graph.get(x,set()))
+        stack.extend(parents_graph.get(x,set()))
+    return seen
+
+def ordered_component(nodes):
+    roots=sorted(x for x in nodes if not (parents_graph.get(x,set()) & nodes))
+    ordered=[];seen=set()
+    def walk(x):
+        if x in seen or x not in nodes:return
+        seen.add(x);ordered.append(x)
+        for y in sorted(children_graph.get(x,set()) & nodes):walk(y)
+    for r in roots:walk(r)
+    for x in sorted(nodes):
+        if x not in seen:walk(x)
+    return ordered
+
 for rec in out.values():
-    if rec.get("family"):continue
+    if rec.get("standalone"):continue
     k=norm(rec.get("name",""))
-    if k in family_by_member:
-        rec["family"]=family_by_member[k]
+    if not k:k=norm(rec.get("identity",""))
+    nodes=component(k)
+    if len(nodes)>1:
+        order=ordered_component(nodes)
+        rec["family"]=" → ".join(labels.get(x,x.replace("-"," ").title()) for x in order)
         rec["standalone"]=False
 
 stats["with_family"]=sum(1 for r in out.values() if r.get("family"))
