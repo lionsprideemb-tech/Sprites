@@ -124,7 +124,21 @@ def sha256(path: Path) -> str:
     return h.hexdigest()
 
 def process_slot(src: Path, dst: Path):
-    im=Image.open(src)
+    try:
+        im=Image.open(src)
+        im.load()
+    except Exception as exc:
+        return None, {
+            "source_width":0,
+            "source_height":0,
+            "source_colors":0,
+            "binary_alpha":False,
+            "bbox_w":0,
+            "bbox_h":0,
+            "fits_64":False,
+            "palette_reduced":False,
+            "source_error":f"{type(exc).__name__}: {exc}",
+        }
     src_colors=opaque_color_count(im)
     src_size=im.size
     alpha_binary=is_binary_alpha(im)
@@ -138,6 +152,7 @@ def process_slot(src: Path, dst: Path):
             "binary_alpha":alpha_binary,
             **meta,
             "palette_reduced":False,
+            "source_error":"",
         }
 
     before=opaque_color_count(staged)
@@ -157,6 +172,7 @@ def process_slot(src: Path, dst: Path):
         **meta,
         "palette_reduced":reduced,
         "staged_colors":after,
+        "source_error":"",
     }
 
 def main():
