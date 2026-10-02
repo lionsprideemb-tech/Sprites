@@ -11,7 +11,7 @@ header{position:sticky;top:0;z-index:10;background:rgba(245,248,252,.97);border-
 .wrap{max-width:1100px;margin:auto;padding:12px 16px}.top{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.title{font-size:20px;font-weight:850;margin-right:auto}.pill{padding:6px 9px;border-radius:999px;background:#e7edf5;color:#33445a;font-size:12px;font-weight:700}
 .controls{display:grid;grid-template-columns:1fr auto auto;gap:8px;margin-top:10px}input,select,button{font:inherit;border:1px solid #b9c8d9;border-radius:10px;padding:10px;background:#fff;color:var(--ink)}button{font-weight:750}
 main{max-width:1100px;margin:auto;padding:15px}.intro{background:#eef4fb;border:1px solid var(--line);border-radius:12px;padding:12px 14px;line-height:1.45;color:#41516a;margin-bottom:14px}
-.family{margin:22px 0 8px;font-size:20px;font-weight:850;color:#24364f}.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:14px}.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:12px}.head{display:flex;align-items:flex-start;gap:8px}.name{font-size:18px;font-weight:850;flex:1}.source{font-size:12px;color:var(--muted);margin-top:3px}.types{display:flex;gap:5px;flex-wrap:wrap;margin:8px 0}.type{font-size:11px;font-weight:850;background:#e9eef5;border-radius:999px;padding:4px 8px}.pair{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--line);border-radius:11px;overflow:hidden;background:#f1f4f8}.box{min-height:190px;display:flex;flex-direction:column;align-items:center;justify-content:center;border-right:1px solid var(--line)}.box:last-child{border-right:0}.box b{align-self:flex-start;margin:7px 9px;font-size:12px}.box img{width:100%;height:165px;object-fit:contain;image-rendering:pixelated}.familyline{font-size:12px;color:#4e5f75;margin:8px 0}.conf{font-size:11px;color:#78879a;margin-bottom:9px}
+.family{margin:22px 0 8px;font-size:20px;font-weight:850;color:#24364f}.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:14px}.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:12px}.head{display:flex;align-items:flex-start;gap:8px}.name{font-size:18px;font-weight:850;flex:1}.source{font-size:12px;color:var(--muted);margin-top:3px}.types{display:flex;gap:5px;flex-wrap:wrap;margin:8px 0}.type{font-size:11px;font-weight:850;background:#e9eef5;border-radius:999px;padding:4px 8px}.pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border:1px solid var(--line);border-radius:11px;overflow:hidden;background:#f1f4f8}.box{min-height:190px;display:flex;flex-direction:column;align-items:center;justify-content:center;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}.box:nth-child(2n){border-right:0}.box:nth-last-child(-n+2){border-bottom:0}.box b{align-self:flex-start;margin:7px 9px;font-size:12px}.box img{width:100%;height:165px;object-fit:contain;image-rendering:pixelated}.familyline{font-size:12px;color:#4e5f75;margin:8px 0}.conf{font-size:11px;color:#78879a;margin-bottom:9px}
 .choices{display:grid;grid-template-columns:1fr 1fr 1fr;gap:7px}.choices button[data-v="approve"].active{background:var(--green)}.choices button[data-v="reject"].active{background:var(--red)}.choices button[data-v="maybe"].active{background:var(--amber)}
 .priority{border:2px solid #6a93c5}.badge{font-size:10px;font-weight:850;background:#dce8f7;color:#214b79;padding:4px 7px;border-radius:999px}.empty{text-align:center;color:var(--muted);padding:60px 10px}
 @media(max-width:650px){.controls{grid-template-columns:1fr 1fr}.controls input{grid-column:1/-1}.box{min-height:165px}.box img{height:140px}}
@@ -28,12 +28,41 @@ main{max-width:1100px;margin:auto;padding:15px}.intro{background:#eef4fb;border:
 </main>
 <script>
 const REPO='lionsprideemb-tech/Sprites',BRANCH='main',RAW='https://raw.githubusercontent.com/'+REPO+'/'+BRANCH+'/';
-const POOL=RAW+'DS_CUSTOM_LIBRARY/DS_READY_MASTER/leftover_review_pool.csv?v=20261001-2350-rainther-undecided';
+const POOL=RAW+'DS_CUSTOM_LIBRARY/DS_READY_MASTER/leftover_review_pool.csv?v=20261002-shiny-review';
 const STORE='mercury-leftover-sprite-review-v2';
 let entries=[],local={};
 
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const img=p=>/^https?:\/\//i.test(String(p||''))?String(p):RAW+String(p||'').split('/').map(encodeURIComponent).join('/');
+function shinyCandidates(p,side){
+ const s=String(p||''); if(!s||/^https?:\/\//i.test(s))return [];
+ const out=[];
+ const add=x=>{if(x&&x!==s&&!out.includes(x))out.push(x)};
+ add(s.replace('/Front/','/Front shiny/'));
+ add(s.replace('/Back/','/Back shiny/'));
+ add(s.replace('/Battlers Normal/','/Battlers Shiny/'));
+ add(s.replace('/Battlers Normal/','/Battlers Shiny Alternate/'));
+ add(s.replace('/Fronts/','/Shiny Fronts/'));
+ add(s.replace('/Backs/','/Shiny Backs/'));
+ add(s.replace('/Gen 4-5 Frontsprites/','/Gen 4-5 Frontsprites Shiny/'));
+ add(s.replace('/Gen 4 Backsprites/','/Gen 4 Backsprites Shiny/'));
+ add(s.replace('/Gen 5 Backsprites/','/Gen 5 Backsprites Shiny/'));
+ return out;
+}
+function shinyBox(e,side){
+ const candidates=shinyCandidates(side==='front'?e.front_path:e.back_path,side);
+ if(!candidates.length)return '';
+ const first=img(candidates[0]);
+ const rest=candidates.slice(1).map(img);
+ const payload=esc(JSON.stringify(rest));
+ const label=side==='front'?'Shiny Front':'Shiny Back';
+ return '<div class="box shinybox"><b>'+label+'</b><img loading="lazy" src="'+first+'" data-fallbacks="'+payload+'" onerror="shinyFallback(this)"></div>';
+}
+function shinyFallback(el){
+ let arr=[];try{arr=JSON.parse(el.dataset.fallbacks||'[]')}catch{}
+ if(arr.length){el.src=arr.shift();el.dataset.fallbacks=JSON.stringify(arr);return}
+ const box=el.closest('.shinybox');if(box)box.innerHTML='<b>'+box.querySelector('b').textContent+'</b><div class="conf">No shiny sprite found</div>';
+}
 function parseCSV(text){
   const out=[];let row=[],field='',q=false;
   for(let i=0;i<text.length;i++){const ch=text[i],n=text[i+1];
@@ -85,7 +114,7 @@ function render(){
      const d=local[e.key]||'',pr=priority(e);
      out+='<article class="card '+(pr?'priority':'')+'"><div class="head"><div><div class="name">'+esc(e.name||e.identity)+'</div><div class="source">'+esc(e.source)+' • '+esc(e.identity)+'</div></div>'+(pr?'<span class="badge">PRIORITY RECOVERY</span>':'')+'</div>'+
        '<div class="types"><span class="type">'+esc(e.type1)+'</span>'+(e.type2?'<span class="type">'+esc(e.type2)+'</span>':'')+'</div>'+
-       '<div class="pair"><div class="box"><b>Normal Front</b><img loading="lazy" src="'+img(e.front_path)+'"></div><div class="box"><b>Normal Back</b><img loading="lazy" src="'+img(e.back_path)+'"></div></div>'+
+       '<div class="pair"><div class="box"><b>Normal Front</b><img loading="lazy" src="'+img(e.front_path)+'"></div><div class="box"><b>Normal Back</b><img loading="lazy" src="'+img(e.back_path)+'"></div>'+shinyBox(e,'front')+shinyBox(e,'back')+'</div>'+
        '<div class="familyline"><b>Family:</b> '+esc(e.family||'Standalone')+'</div><div class="conf">'+esc(metaLabel(e))+' • Front/back verified</div>'+
        '<div class="choices">'+['approve','maybe','reject'].map(v=>'<button data-k="'+esc(e.key)+'" data-v="'+v+'" class="'+(d===v?'active':'')+'">'+({approve:'KEEP',maybe:'MAYBE',reject:'REJECT'}[v])+'</button>').join('')+'</div></article>';
    }
