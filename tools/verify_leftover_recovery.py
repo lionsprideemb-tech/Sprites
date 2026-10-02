@@ -1,4 +1,5 @@
 from pathlib import Path
+# verify strict corrected review pool 2026-10-02
 # final verification trigger 2026-10-02
 import csv,json,re,sys,collections
 
