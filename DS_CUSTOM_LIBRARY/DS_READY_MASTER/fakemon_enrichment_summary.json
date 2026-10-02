@@ -1,10 +1,11 @@
 {
   "custom_entries": 1051,
-  "ready": 762,
+  "ready": 372,
   "missing_type": 0,
-  "missing_back": 289,
-  "unresolved_family": 674,
+  "missing_back": 312,
+  "unresolved_family": 661,
+  "provisional_type": 657,
   "source_metadata_records": 97,
-  "excluded_from_approval": 289,
-  "approval_policy": "Plain official/native designs are excluded. Every custom/nonstandard design with a matched front+back pair and one or two canon types is reviewable; unresolved family links stay labeled for follow-up instead of hiding the art."
+  "excluded_from_approval": 679,
+  "approval_policy": "Only custom/nonstandard designs with a verified front/back pair, source/authoritative canon-compatible typing, and resolved family/standalone relationship are shown for user decisions. Provisional-type or unresolved-family entries stay in recovery, not review."
 }
