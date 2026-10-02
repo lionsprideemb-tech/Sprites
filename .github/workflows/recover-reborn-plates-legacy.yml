@@ -1,0 +1,131 @@
+name: Recover Reborn Plates Legacy Approved Sprites
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - ".github/workflows/recover-reborn-plates-legacy.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  recover:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install recovery tools
+        run: pip install gdown pillow
+
+      - name: Download public Plates of Arceus Episode 0 patch
+        run: |
+          set -euo pipefail
+          gdown --id 1EuPksJQ-nLTxhQ241Ixm5pehjcIs3fTn -O /tmp/plates.zip
+          unzip -q /tmp/plates.zip -d /tmp/plates
+
+      - name: Inventory battler sprites and recover exact reviewed forms
+        shell: python
+        run: |
+          from pathlib import Path
+          import csv, json, re, shutil
+          from PIL import Image
+
+          root=Path("/tmp/plates")
+          out=Path("DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy")
+          audit=Path("DS_CUSTOM_LIBRARY/cleanup-audit")
+          out.mkdir(parents=True,exist_ok=True); audit.mkdir(parents=True,exist_ok=True)
+
+          # Build a full PNG inventory first so nothing is guessed invisibly.
+          pngs=list(root.rglob("*.png"))
+          inv=[]
+          for p in pngs:
+              rel=p.relative_to(root).as_posix()
+              low=rel.lower()
+              if "battler" not in low and "pokemon" not in low and "sprite" not in low:
+                  continue
+              try:
+                  im=Image.open(p)
+                  inv.append({"path":rel,"name":p.name,"width":im.width,"height":im.height})
+              except Exception:
+                  pass
+
+          with (audit/"reborn_plates_png_inventory.csv").open("w",newline="") as f:
+              w=csv.DictWriter(f,fieldnames=["path","name","width","height"])
+              w.writeheader(); w.writerows(inv)
+
+          # Pull the 94 exact legacy-approved Reborn/Plates identities.
+          import json
+          manifest=json.loads(Path("DS_CUSTOM_LIBRARY/DS_READY_MASTER/legacy_gba_auto_yes_recovery_phase1_source_routes.json").read_text())
+          targets=[e for e in manifest["entries"] if e.get("source_recovery_route")=="REBORN_PLATES_STAGED_SOURCE"]
+
+          # Essentials/Reborn battle sprite conventions commonly use dex/form numeric stems.
+          # We do not silently bind ambiguous files. First match explicit base-name/form text when present.
+          def norm(s):
+              return re.sub(r"[^a-z0-9]+","-",s.lower()).strip("-")
+
+          files=[]
+          for p in pngs:
+              rel=p.relative_to(root).as_posix()
+              low=rel.lower()
+              if "battler" in low or "pokemon" in low:
+                  files.append((p,rel,norm(p.stem),norm(rel)))
+
+          rows=[]; recovered=0
+          for e in targets:
+              ident=e["identity"]; base=e.get("base",""); rv=e.get("reviewed_variant","")
+              form_match=re.search(r"form-(\d+)",ident)
+              form_num=form_match.group(1) if form_match else ""
+              b=norm(base)
+              # Conservative name-based candidates only in this first bulk pass.
+              cand=[]
+              for p,rel,stem,nrel in files:
+                  score=0
+                  if b and b in stem: score+=5
+                  if b and b in nrel: score+=2
+                  if form_num and (f"-{form_num}" in stem or f"_{form_num}" in p.stem.lower() or p.stem.endswith(form_num)): score+=3
+                  if "back" in p.stem.lower() or "back" in rel.lower(): score+=1
+                  if score>=5: cand.append((score,p,rel))
+              cand.sort(key=lambda x:(-x[0],len(x[2]),x[2]))
+              dest=out/ident
+              if dest.exists(): shutil.rmtree(dest)
+              dest.mkdir(parents=True,exist_ok=True)
+              copied=[]
+              for i,(score,p,rel) in enumerate(cand[:12],1):
+                  q=dest/f"candidate-{i:02d}-{p.name}"
+                  shutil.copy2(p,q); copied.append(rel)
+              if copied: recovered+=1
+              rows.append({
+                  "identity":ident,"base":base,"reviewed_variant":rv,
+                  "candidate_count":len(cand),"copied_count":len(copied),
+                  "candidate_paths":"|".join(copied),
+                  "status":"CANDIDATES_RECOVERED" if copied else "NO_NAME_MATCH"
+              })
+
+          with (audit/"reborn_plates_legacy_recovery.csv").open("w",newline="") as f:
+              w=csv.DictWriter(f,fieldnames=rows[0].keys()); w.writeheader(); w.writerows(rows)
+
+          summary={
+              "targets":len(targets),
+              "targets_with_candidates":recovered,
+              "targets_without_name_match":len(targets)-recovered,
+              "inventory_png_count":len(inv),
+              "note":"Candidate recovery only; ambiguous numeric/form bindings are intentionally not auto-promoted until the inventory mapping is checked."
+          }
+          (audit/"reborn_plates_legacy_recovery_summary.json").write_text(json.dumps(summary,indent=2)+"\n")
+          print(json.dumps(summary,indent=2))
+
+      - name: Commit recovered candidates and audit
+        run: |
+          git config user.name "Mercury Sprite Recovery Bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy \
+                  DS_CUSTOM_LIBRARY/cleanup-audit/reborn_plates_png_inventory.csv \
+                  DS_CUSTOM_LIBRARY/cleanup-audit/reborn_plates_legacy_recovery.csv \
+                  DS_CUSTOM_LIBRARY/cleanup-audit/reborn_plates_legacy_recovery_summary.json
+          if git diff --cached --quiet; then
+            echo "No changes"
+            exit 0
+          fi
+          git commit -m "Recover Reborn Plates candidates for legacy approved sprites"
+          git push origin main
