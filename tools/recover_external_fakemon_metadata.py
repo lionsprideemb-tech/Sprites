@@ -237,15 +237,24 @@ for r in targets:
         candidates=[]
         for a in aliases:
             candidates.extend(linkmap.get(a,[]))
-        # Prefer exact identity/name matches; otherwise base alias inherited metadata.
+        # Prefer exact identity/name matches. For source sprite IDs ending in
+        # -1/-2/etc., donor packs conventionally number alternate forms after
+        # the base form; collection links are gathered base first, then forms.
         seen=[]
         for u in candidates:
             if u not in seen:seen.append(u)
-        for u in seen[:4]:
+        mform=re.match(r"^.+-(\d+)$",norm(ident))
+        if mform and seen:
+            n=int(mform.group(1))
+            if 0 <= n < len(seen):
+                seen=[seen[n]]+[u for i,u in enumerate(seen) if i!=n]
+        for u in seen[:8]:
             p=parse_pokengine(u,known)
             if p and p.get("type1"):
                 rec=p
-                if norm(p.get("name")) in aliases:break
+                # Numeric/form targets intentionally allow form-specific pages
+                # even when the visible base species name is identical.
+                if mform or norm(p.get("name")) in aliases:break
 
     if rec is None and src=="Elite_Redux_Bulk":
         rec=parse_romhackguide(ident,name)
