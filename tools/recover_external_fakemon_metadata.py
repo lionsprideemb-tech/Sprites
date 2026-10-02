@@ -267,11 +267,24 @@ for r in targets:
         # Pokengine's exact-name search is a fallback for donor mons that are
         # indexed on the site but not currently exposed by the collection page.
         if not candidates:
-            for a in sorted(aliases,key=len,reverse=True):
+            # Site-wide search must stay exact. Broad aliases such as
+            # "regional-diglett" -> "diglett" are safe inside a known donor
+            # collection, but site-wide they could silently select Game Freak's
+            # ordinary Diglett instead of the contributor's regional design.
+            search_aliases={norm(ident),norm(name)}
+            if src=="Festival_PrincessPhoenix":
+                for a in list(search_aliases):
+                    if a.endswith("fs"): search_aliases.add(a[:-2])
+                    elif a.endswith("f"): search_aliases.add(a[:-1])
+            for a in list(search_aliases):
+                if a.endswith("front"): search_aliases.add(a[:-5].rstrip("-"))
+                if a.endswith("back"): search_aliases.add(a[:-4].rstrip("-"))
+            search_aliases={a for a in search_aliases if a}
+            for a in sorted(search_aliases,key=len,reverse=True):
                 raw=fetch("https://pokengine.org/search?query="+urllib.parse.quote(a.replace("-"," ")))
                 for href in re.findall(r"href=['\"](/mons/[^'\"?]+)",raw):
                     slug=urllib.parse.unquote(href.split("/")[-1])
-                    if norm(slug) in aliases:
+                    if norm(slug) in search_aliases:
                         candidates.append("https://pokengine.org"+href)
                 if candidates:break
 
