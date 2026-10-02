@@ -138,7 +138,7 @@ jobs:
           def reborn_assets_for(key):
               # Old comparison keys use cpf-####- prefixes; recovered source folders use the
               # historic identity without that bookkeeping prefix.
-              plain=re.sub(r"^cpf-\\d+-","",key)
+              plain=re.sub(r"^cpf-\d+-","",key)
               d=reborn_root/plain
               if not d.is_dir():
                   return {}
