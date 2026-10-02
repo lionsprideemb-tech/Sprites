@@ -3,8 +3,8 @@
   "ready": 370,
   "missing_type": 858,
   "missing_back": 335,
-  "standalone_proposals": 863,
+  "unresolved_family": 863,
   "source_metadata_records": 97,
   "excluded_from_approval": 887,
-  "approval_policy": "Only fully identified entries with name, vanilla type, resolved family/standalone identity, front sprite and back sprite are admitted to approval. 'No evolution data found' is unresolved and excluded."
+  "approval_policy": "Only entries with a usable name, vanilla-compatible type, resolved family/standalone identity, front sprite and back sprite are admitted. Unresolved family relationships are excluded."
 }
