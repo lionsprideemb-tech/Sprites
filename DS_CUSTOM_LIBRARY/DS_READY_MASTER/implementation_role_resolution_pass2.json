@@ -1,0 +1,128 @@
+{
+  "generated": "2026-10-02",
+  "purpose": "Second-pass sprite implementation routing. No game species IDs are changed.",
+  "high_confidence": [
+    [
+      "Luxray",
+      "BASE_REPLACEMENT",
+      "User explicitly chose Redux Luxray as a base-replacement example; keep its separate approved Mega."
+    ],
+    [
+      "Hippowdon",
+      "MEGA_CANDIDATE",
+      "User explicitly identified the Redux Hippowdon direction for Mega use; verify family-stage intent before ID assignment."
+    ],
+    [
+      "Rapidash",
+      "BASE_REPLACEMENT",
+      "Redux is a complete base pair; dedicated Mega art can remain the transformation."
+    ],
+    [
+      "Hitmonlee",
+      "BASE_REPLACEMENT",
+      "Redux maps to the base species; dedicated Mega art remains separate."
+    ],
+    [
+      "Hitmonchan",
+      "BASE_REPLACEMENT",
+      "Redux maps to the base species; dedicated Mega art remains separate."
+    ],
+    [
+      "Gyarados",
+      "BASE_REPLACEMENT",
+      "Redux can modernize the base while Mega Y remains separate."
+    ],
+    [
+      "Typhlosion",
+      "BASE_REPLACEMENT",
+      "Redux is a complete base pair; dedicated Mega candidates remain separate."
+    ],
+    [
+      "Flygon",
+      "BASE_REPLACEMENT",
+      "Redux is a complete base pair and dedicated Mega designs already exist."
+    ],
+    [
+      "Milotic",
+      "BASE_REPLACEMENT",
+      "Keep Mercury custom Mega Milotic distinct for Cynthia."
+    ],
+    [
+      "Electivire",
+      "BASE_REPLACEMENT",
+      "Redux maps to base Electivire; approved Mega remains separate."
+    ],
+    [
+      "Magmortar",
+      "BASE_REPLACEMENT",
+      "Keep Flint's custom Mega Magmortar visually distinct."
+    ]
+  ],
+  "visual_review": [
+    [
+      "Venusaur",
+      "Compare Redux against incomplete Mega X before locking roles."
+    ],
+    [
+      "Charizard",
+      "Preserve Mega Charizard Z; visually confirm Redux as base."
+    ],
+    [
+      "Blastoise",
+      "Mega X is incomplete; compare visual escalation."
+    ],
+    [
+      "Arbok",
+      "Dedicated Mega exists but is incomplete."
+    ],
+    [
+      "Clefable",
+      "Two Mega candidates exist; choose transformation first."
+    ],
+    [
+      "Machamp",
+      "Multiple Mega candidates exist; choose one before routing Redux."
+    ],
+    [
+      "Kingler",
+      "Regular and Delta Mega candidates overlap."
+    ],
+    [
+      "Lapras",
+      "Multiple Mega candidates are referenced."
+    ],
+    [
+      "Snorlax",
+      "Redux and Redux-Mega concepts overlap."
+    ],
+    [
+      "Meganium",
+      "Competing entry is not clearly a separate Mega; metadata needs cleanup."
+    ],
+    [
+      "Gardevoir",
+      "Base Redux and Mega Delta have different identities; review coexistence."
+    ],
+    [
+      "Slaking",
+      "Two Mega records appear redundant; deduplicate first."
+    ],
+    [
+      "Mawile",
+      "Two Mega Delta candidates have different typings; verify intentional distinction."
+    ],
+    [
+      "Manectric",
+      "Referenced Mega asset needs source verification."
+    ],
+    [
+      "Rampardos",
+      "Referenced Mega asset needs source verification."
+    ],
+    [
+      "Bastiodon",
+      "Referenced Mega asset needs source verification."
+    ]
+  ],
+  "note": "Approved decisions are preserved. Missing back sprites are implementation blockers, not approval reversals."
+}
