@@ -105,6 +105,23 @@ const BASEDECISIONS=RAW+'DS_CUSTOM_LIBRARY/DS_READY_MASTER/user_sprite_decisions
 const PLATINUM=RAW+'DS_CUSTOM_LIBRARY/DS_READY_MASTER/platinum_redux_review_entries.json';
 const LEFTOVER=RAW+'DS_CUSTOM_LIBRARY/DS_READY_MASTER/leftover_review_pool.csv?v=20261002-family-audit-2';
 const STORAGE='mercury-ds-sprite-approval-v1';
+const FAMILY_FIXES={
+  'rainther':'Dampurr → Rainther → Delugar',
+  'pourka':'Dripwirt → Pourka',
+  'packbats':'Cabat♀ → Stalass → Packbats → Cabat♂ → Stalad',
+  'rhintain':'Rhinplink → Trunkorn → Rhintain',
+  'lumedi':'Lumini → Lumedi → Lumaxi',
+  'lumaxi':'Lumini → Lumedi → Lumaxi',
+  'traumatisse':'Platerigus → Mikitarian → Traumatisse',
+  'buneary-1':'Platerigus → Mikitarian → Traumatisse',
+  'falinks-1':'Platerigus → Mikitarian → Traumatisse',
+  'lopunny-1':'Platerigus → Mikitarian → Traumatisse',
+  'spritzee-1':'Platerigus → Mikitarian → Traumatisse',
+  'yamask-2':'Platerigus → Mikitarian → Traumatisse',
+  'belstatue':'Belstatue forms',
+  'belstatue-1-sun-shard':'Belstatue forms',
+  'belstatue-2-moon-shard':'Belstatue forms'
+};
 let rows=[], decisions={}, familyMap={}, familyLabels={}, typeMap={}, enrichedMap={};
 
 function parseCSV(text){
@@ -234,6 +251,7 @@ function attachShinyFallback(img,path){
 }
 function key(r){return r.identity+'|'+r.structural_hash}
 function familyDisplay(r){
+  if(FAMILY_FIXES[r.identity])return FAMILY_FIXES[r.identity];
   const fk=r.family_key||'';
   if(fk.startsWith('__unidentified__'))return '';
   const p=proposedIdentity(r);
@@ -578,6 +596,28 @@ document.getElementById('backup').onclick=()=>download('mercury_ds_sprite_approv
           if(!existing.has(k)){rows.push(r);existing.add(k)}
         }
       }catch{}
+    }
+    // Safety net: include every enriched custom entry that has an actual front+back pair,
+    // even if an older manifest/pool generation accidentally omitted it.
+    {
+      const existing=new Set(rows.map(x=>key(x)));
+      for(const [ek,e] of Object.entries(enrichedMap)){
+        if(!e||!e.front_path||!e.back_path)continue;
+        const parts=ek.split('|'), identity=e.identity||parts[0], structural=parts.slice(1).join('|')||identity;
+        const r={
+          identity,is_official:'False',source:e.source||'Recovered metadata',
+          bucket:'Recovered complete pair',front_path:e.front_path,back_path:e.back_path,
+          structural_hash:structural,exact_hash:structural,multi_design_for_approval:'False',_recovered:true
+        };
+        const k=key(r);
+        if(existing.has(k))continue;
+        if(FAMILY_FIXES[identity]){
+          e.family=FAMILY_FIXES[identity];
+          if((e.confidence||'').includes('UNRESOLVED_FAMILY')) e.confidence=(e.confidence||'').replace('UNRESOLVED_FAMILY','FAMILY_RECOVERED');
+          e.ready_for_approval=true;
+        }
+        rows.push(r); existing.add(k);
+      }
     }
     document.getElementById('shown').textContent=rows.length+' approval-ready designs';
     render();
