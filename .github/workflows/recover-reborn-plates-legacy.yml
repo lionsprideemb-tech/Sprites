@@ -208,4 +208,5 @@ jobs:
             exit 0
           fi
           git commit -m "Convert recovered Reborn Plates sprites and publish combined GBA approval"
+          git pull --rebase origin main
           git push origin main
