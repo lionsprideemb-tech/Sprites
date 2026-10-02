@@ -105,17 +105,14 @@ for ws in wb.worksheets:
 # col 2 = species/form name, 3/4 = typing, 12 = Front, 13 = Back, 14 = Shiny.
 forms=wb["Forms"]
 forms_images=defaultdict(dict)
-for img in getattr(forms,"_images",[]):
-    try:
-        row=img.anchor._from.row+1
-        col=img.anchor._from.col+1
-        data=img._data()
-        h=hashlib.sha256(data).hexdigest()
-        p=repo_hash.get(h,"")
-        if col in (12,13,14) and p:
-            forms_images[row][col]={"path":p,"sha256":h}
-    except Exception:
-        pass
+# Reuse the first-pass anchor records; calling openpyxl image._data() a second
+# time can fail because the underlying image stream has already been consumed.
+for a in anchors:
+    if a.get("sheet")!="Forms": continue
+    row=a.get("anchor_row"); col=a.get("anchor_col")
+    p=a.get("repo_path",""); h=a.get("sha256","")
+    if col in (12,13,14) and p:
+        forms_images[row][col]={"path":p,"sha256":h}
 
 VANILLA_TYPE={"Sound":"Normal"}
 def clean_type(v):
