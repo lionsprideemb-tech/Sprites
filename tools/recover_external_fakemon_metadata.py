@@ -92,34 +92,37 @@ def target_aliases(identity,name,source):
         if x in aliases: vals.add(aliases[x])
     return {x for x in vals if x}
 
-def expected_designer(source,front_path=""):
+def expected_designers(source,front_path=""):
     fixed={
-      "Mikitari":"mikitari",
-      "Festival_Magiscarf":"magiscarf",
-      "Festival_PrincessPhoenix":"princess-phoenix",
-      "Festival_Scotsman":"scotsman",
-      "Festival_Atsui":"atsui",
-      "Festival_Lumio":"lumio",
-      "Earthretha":"earthretha",
+      "Mikitari":{"mikitari"},
+      "Festival_Magiscarf":{"magiscarf","kajiatsui"},
+      "Festival_PrincessPhoenix":{"princess-phoenix","princessphoenix"},
+      # Scotsman pack credits Diglett/Dugtrio designs to anonscribbler.
+      "Festival_Scotsman":{"scotsman","scotsman333","the-scotsman","anonscribbler"},
+      # Atsui pack credits a large subset of designs to JWNutz and one Rotom
+      # sprite to BiggusWeeabus; KajiAtsui sprites the pack.
+      "Festival_Atsui":{"atsui","kajiatsui","jwnutz","biggusweeabus"},
+      "Festival_Lumio":{"lumio"},
+      "Earthretha":{"earthretha"},
     }
-    if source in fixed:return fixed[source]
+    if source in fixed:return {norm(x) for x in fixed[source]}
     if source=="Fakemon_Festival_Full":
         parts=[norm(x) for x in Path(front_path or "").parts]
-        for x in ("altaira","princessphoenix","biggusweeabus","dulcet","lumio","magiscarf","odisea","pansygum","piacarrot","scotsman","atsui","earthretha"):
-            if norm(x) in parts:return norm(x)
-    return ""
+        for contributor in ("altaira","princessphoenix","biggusweeabus","dulcet","lumio","magiscarf","odisea","pansygum","piacarrot","scotsman","atsui","earthretha"):
+            if norm(contributor) in parts:
+                if contributor=="atsui":return {"atsui","kajiatsui","jwnutz","biggusweeabus"}
+                if contributor=="scotsman":return {"scotsman","scotsman333","the-scotsman","anonscribbler"}
+                if contributor=="magiscarf":return {"magiscarf","kajiatsui"}
+                if contributor=="princessphoenix":return {"princessphoenix","princess-phoenix"}
+                return {norm(contributor)}
+    return set()
 
 def designer_matches(source,front_path,designer):
-    exp=norm(expected_designer(source,front_path))
-    if not exp:return True
+    expected=expected_designers(source,front_path)
+    if not expected:return True
     got=norm(designer)
     if not got:return False
-    aliases={
-      "princess-phoenix":{"princess-phoenix","princessphoenix"},
-      "scotsman":{"scotsman","the-scotsman"},
-    }
-    allowed=aliases.get(exp,{exp})
-    return got in allowed or any(a in got or got in a for a in allowed)
+    return got in expected or any(e in got or got in e for e in expected)
 
 def parse_pokengine(url,known_slugs):
     raw=fetch(url)
