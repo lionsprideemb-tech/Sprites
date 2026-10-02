@@ -1,27 +1,7 @@
 {
-  "generated": "2026-10-02",
-  "phase": "Legacy GBA source recovery — Reborn/Plates exact patch extraction",
-  "source": {
-    "title": "PkMn Reborn Plates of Arceus Ep0 (Patch).zip",
-    "drive_id": "1EuPksJQ-nLTxhQ241Ixm5pehjcIs3fTn",
-    "official_post": "https://www.rebornevo.com/forums/topic/61940-plates-of-arceus-episode-0-e1841/"
-  },
-  "counts": {
-    "approved_targets": 94,
-    "exact_front_found": 94,
-    "exact_back_found": 94,
-    "complete_normal_shiny_four_view_sets": 88,
-    "normal_front_back_only": 6,
-    "zero_source_matches": 0
-  },
-  "partial_shiny_sets": [
-    "breloom-alternate-form-3",
-    "swalot-alternate-form-1",
-    "combee-alternate-form-1",
-    "vespiquen-alternate-form-1",
-    "dwebble-alternate-form-1",
-    "crustle-alternate-form-1"
-  ],
-  "extraction_rule": "Exact National Dex + reviewed form suffix binding against Graphics/Battlers (NNN_form, NNNb_form, NNNs_form, NNNsb_form). No fuzzy substitution.",
-  "result": "All 94 previously approved Reborn/Plates identities now have their exact normal front/back source located. 88 also have the exact shiny pair in the patch; six require shiny recovery/build only."
+  "targets": 346,
+  "historic_pool": "ALL Reborn / Plates candidates from legacy_sprite_decisions_rev4.json",
+  "front_back_complete": 346,
+  "complete_4view": 335,
+  "normal_only": 10
 }

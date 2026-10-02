@@ -1,0 +1,20 @@
+{
+  "source": "/tmp/reborn-plates-flat",
+  "design_keys": 346,
+  "slot_files": 1363,
+  "categories": {
+    "INCOMPLETE_SOURCE_SET": 11,
+    "MECHANICAL_CONVERSION": 4,
+    "NEEDS_ART_REDRAW": 331
+  },
+  "redux_named_designs": 0,
+  "redux_named_categories": {},
+  "policy": {
+    "artistic_redraw": "NOT AUTOMATED",
+    "source_overwrite": false,
+    "battle_canvas": "64x64",
+    "opaque_palette_limit": 15,
+    "icon_output": "32x64 generated two-frame review placeholder",
+    "oversize_policy": "do not resize; classify NEEDS_ART_REDRAW"
+  }
+}
