@@ -436,7 +436,7 @@ document.getElementById('backup').onclick=()=>download('mercury_ds_sprite_approv
             exact_hash:p.structural_hash,multi_design_for_approval:'False',_platinum:true
           };
           enrichedMap[r.identity+'|'+r.structural_hash]={
-            identity:p.identity,name:p.name,type1:p.type1,type2:p.type2||'',family:p.family||'',
+            identity:p.identity,name:p.name,type1:p.type1,type2:p.type2||'',family:(p.family&&p.family.toLowerCase()!==(p.base_species+' family').toLowerCase()?p.family:''),
             source:p.source,front_path:p.front_path,back_path:p.back_path,
             confidence:'PLATINUM_REDUX_WORKBOOK',ready_for_approval:true
           };
