@@ -65,3 +65,4 @@ document.getElementById('search').oninput=e=>{let q=e.target.value.trim().toLowe
 document.getElementById('exportBtn').onclick=()=>{let out=[['kind','review_id','identity_or_family','source','historical_decision','decision','note']];mons().forEach(c=>{let rid=c.dataset.rid||'',meta=RID_META[rid]||{},d=D[decisionKey(c)]||{};out.push(['gba_candidate',rid,c.dataset.id||meta.identity||'',meta.source||'',meta.decision||'',d.role||'',d.note||''])});issueCards.forEach(c=>out.push(['family_issue','',c.dataset.issue,'','',''+(F[c.dataset.issue]||''),'']));let csv=out.map(r=>r.map(v=>'"'+String(v??'').replaceAll('"','""')+'"').join(',')).join('\n'),a=document.createElement('a');a.href=URL.createObjectURL(new Blob([csv],{type:'text/csv'}));a.download='mercury_gba_retrieved_clarifications.csv';a.click()};
 recoverArchiveCandidates();
 </script></body></html>
+<!-- pages-redeploy-trigger-20261002 -->
