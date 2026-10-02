@@ -1,4 +1,5 @@
 from pathlib import Path
+# final official-form-pruned rebuild 2026-10-02
 # post-enrichment final rebuild 2026-10-02
 # final rebuild after canonical recovery 2026-10-02
 # rebuild trigger after enriched metadata success
