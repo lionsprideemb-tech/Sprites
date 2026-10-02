@@ -520,9 +520,16 @@ for r in rows:
     # Source metadata next.
     sm=meta.get((src,key))
     if not sm:
-        # strip familiar form suffixes
-        base=re.sub(r"-(mega(?:-[xyz])?|redux|delta|male|female)$","",key)
+        # Strip familiar presentation suffixes while preserving the donor form
+        # number used by PBS sections such as [BELSTATUE,1].
+        base=re.sub(r"-(mega(?:-[xyz])?|redux|delta|male|female|beta)$","",key)
         sm=meta.get((src,base))
+    if not sm:
+        # Sprite filenames often expand a numbered PBS form with a readable
+        # label: BELSTATUE_1 (Sun Shard) -> belstatue-1-sun-shard.
+        mform=re.match(r"^(.+?)-(\d+)(?:-.+)?$",key)
+        if mform:
+            sm=meta.get((src,mform.group(1)+"-"+mform.group(2)))
     if sm:
         out.setdefault("name",sm.get("name") or ident)
         if not out.get("type1"):out["type1"]=sm.get("type1","")
