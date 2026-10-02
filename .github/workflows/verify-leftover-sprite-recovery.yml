@@ -2,11 +2,6 @@ name: Verify Leftover Sprite Recovery
 
 on:
   workflow_dispatch:
-  push:
-    branches: [main]
-    paths:
-      - 'DS_CUSTOM_LIBRARY/DS_READY_MASTER/leftover_review_pool.csv'
-      - 'tools/verify_leftover_recovery.py'
 
 permissions:
   contents: write
