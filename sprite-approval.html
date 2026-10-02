@@ -40,6 +40,34 @@ main{max-width:1440px;margin:auto;padding:18px}.intro{background:#eef4fb;border:
   .card .choices{position:sticky;bottom:0;z-index:12;border-top:1px solid var(--line);padding:8px}
   .choices button{font-size:12px;padding:10px 4px}
 }.controls input{grid-column:1/-1}.spritebox{height:200px}.spritebox img{width:178px;height:178px}.wrap,main{padding-left:10px;padding-right:10px}}
+
+/* Fast mobile review overrides */
+.shinyrow{display:none}
+@media(max-width:720px){
+  header{position:static!important}
+  header .wrap{padding:6px 8px!important}
+  .title,#families,.progress,#search,#backup{display:none!important}
+  .top{display:flex!important;gap:6px!important;margin:0!important}
+  .pill{font-size:11px!important;padding:4px 7px!important}
+  .controls{display:grid!important;grid-template-columns:1fr auto!important;gap:6px!important;margin-top:6px!important}
+  .controls select{grid-column:1!important;min-width:0!important;padding:7px 8px!important;font-size:13px!important}
+  #export{grid-column:2!important;padding:7px 8px!important;font-size:11px!important;line-height:1.1!important}
+  main{padding:6px 8px 20px!important}
+  .intro,.familyContext{display:none!important}
+  .groupTitle{margin:8px 0 4px!important;font-size:17px!important;line-height:1.2!important}
+  .card{border-radius:12px!important}
+  .head{padding:8px 9px 5px!important}
+  .name{font-size:16px!important}
+  .labels{margin-top:4px!important}
+  .familytag,.stageLabel,.evolves,.meta{font-size:10px!important;margin-top:3px!important}
+  .spritepair{gap:6px!important;margin:0 8px!important}
+  .spritebox{height:148px!important}
+  .spritebox img{width:100%!important;height:132px!important}
+  .viewlabel{font-size:9px!important;padding:2px 5px!important;top:5px!important;left:5px!important}
+  .choices{position:sticky!important;bottom:0!important;z-index:20!important;padding:6px 8px!important;gap:6px!important;background:#fff!important}
+  .choices button{padding:9px 3px!important;font-size:12px!important}
+}
+
 </style>
 </head>
 <body>
@@ -195,16 +223,14 @@ function attachShinyFallback(img,path){
     img.style.display='none';
     const m=img.parentElement.querySelector('.missingview');
     if(m)m.style.display='block';
-    if(row){
-      const imgs=[...row.querySelectorAll('img')];
-      if(imgs.length && imgs.every(x=>x.dataset.missing==='1')) row.style.display='none';
-    }
   };
   const tryNext=()=>{
     if(i>=candidates.length){markMissing();return;}
     img.src=imgURL(candidates[i++]);
   };
-  img.onerror=tryNext; tryNext();
+  img.onload=()=>{if(row)row.style.display='grid'};
+  img.onerror=tryNext;
+  tryNext();
 }
 function key(r){return r.identity+'|'+r.structural_hash}
 function familyDisplay(r){
