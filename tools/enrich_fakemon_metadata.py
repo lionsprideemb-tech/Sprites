@@ -487,6 +487,7 @@ VERIFIED_SOURCE_OVERRIDES={
     ("Mega_Flygon","flygon-1"):{"name":"Mega Flygon","type1":"Bug","type2":"Dragon","family":"Trapinch → Vibrava → Flygon → Mega Flygon"},
     ("Mega_Flygon_Animated_Gen5","flygon-1"):{"name":"Mega Flygon","type1":"Bug","type2":"Dragon","family":"Trapinch → Vibrava → Flygon → Mega Flygon"},
     ("PokeAPI_Mega_Meowstic_Female","pokeapi-mega-meowstic-female"):{"name":"Mega Meowstic Female","type1":"Psychic","type2":"","family":"Espurr → Meowstic → Mega Meowstic Female"},
+    ("PokeDot_Engine_Mega_Intake","magearna-original-mega"):{"name":"Mega Magearna (Original Color)","type1":"Steel","type2":"Fairy","family":"Magearna → Mega Magearna (Original Color)"},
     ("Festival_PrincessPhoenix","merlicunf"):{"name":"Merlicun","type1":"Dragon","type2":"Bug","family":"Merlicun → Firomenis"},
     ("Festival_PrincessPhoenix","firomenisf"):{"name":"Firomenis","type1":"Dragon","type2":"Bug","family":"Merlicun → Firomenis"},
     ("Festival_PrincessPhoenix","drashimif"):{"name":"Drashimi","type1":"Dragon","type2":"","family":"Drashimi → Tsushimi → Tobishimi"},
@@ -536,12 +537,38 @@ for r in rows:
         mform=re.match(r"^(.+?)-(\d+)(?:-.+)?$",key)
         if mform:
             sm=meta.get((src,mform.group(1)+"-"+mform.group(2)))
+
+    # Legacy Festival sprite names can use National Dex + form/view markers
+    # (429_1f = Mismagius form 1, 480_1f = Uxie form 1, etc.).
+    # Resolve those directly to the source PBS section instead of treating
+    # the numeric filename as an unknown Normal-type Fakemon.
+    numeric_form_meta=False
+    if not sm and src=="Festival_Misc":
+        dm=re.match(r"^0*(\d{1,4})-(\d+)[fb]?$",key)
+        if dm:
+            dn=int(dm.group(1))
+            sp=poke_species(dn) if 1<=dn<=1025 else None
+            if sp:
+                sk=norm(sp.get("name",""))+"-"+dm.group(2)
+                sm=meta.get((src,sk))
+                numeric_form_meta=bool(sm)
     if sm:
         out.setdefault("name",sm.get("name") or ident)
         if not out.get("type1"):out["type1"]=sm.get("type1","")
         if not out.get("type2"):out["type2"]=sm.get("type2","")
         if not out.get("family"):out["family"]=sm.get("family","")
         confidence.append("SOURCE_METADATA")
+        if numeric_form_meta and "mega" in str(sm.get("name","")).lower() and not out.get("family"):
+            dn=numeric_dex(ident)
+            sp=poke_species(dn) if dn else None
+            if sp:
+                chain=chain_members(sp["evolution_chain"]["url"])
+                labels=[x.replace("-"," ").title() for x in chain] if chain else [sp["name"].replace("-"," ").title()]
+                mega_name=sm.get("name") or out.get("name") or ident
+                if not labels or norm(labels[-1])!=norm(mega_name):
+                    labels.append(mega_name)
+                out["family"]=" → ".join(labels)
+                confidence.append("SOURCE_MEGA_FAMILY")
 
     # External source databases (Pokengine/Mongratis and Elite Redux guide)
     # recover donor-intended types and evolution relationships that were not
