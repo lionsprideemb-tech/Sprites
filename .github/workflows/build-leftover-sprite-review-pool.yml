@@ -7,6 +7,7 @@ on:
     paths:
       - 'DS_CUSTOM_LIBRARY/DS_READY_MASTER/fakemon_enriched_metadata.json'
       - 'DS_CUSTOM_LIBRARY/DS_READY_MASTER/user_sprite_decisions_2026-10-01.json'
+      - 'DS_CUSTOM_LIBRARY/DS_READY_MASTER/legacy_sprite_decisions_rev4.json'
       - 'tools/build_leftover_review_pool.py'
 
 permissions:
