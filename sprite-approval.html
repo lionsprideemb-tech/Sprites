@@ -100,11 +100,18 @@ const BRANCH='main';
 const RAW='https://raw.githubusercontent.com/'+REPO+'/'+BRANCH+'/';
 const MANIFEST=RAW+'DS_CUSTOM_LIBRARY/DS_READY_MASTER/ds_ready_front_design_manifest.csv';
 const TYPEMAP=RAW+'DS_CUSTOM_LIBRARY/DS_READY_MASTER/mercury_name_type_map.json';
-const ENRICHED=RAW+'DS_CUSTOM_LIBRARY/DS_READY_MASTER/fakemon_enriched_metadata.json';
+const ENRICHED=RAW+'DS_CUSTOM_LIBRARY/DS_READY_MASTER/fakemon_enriched_metadata.json?v=20261002-0749';
 const BASEDECISIONS=RAW+'DS_CUSTOM_LIBRARY/DS_READY_MASTER/user_sprite_decisions_2026-10-01.json';
 const PLATINUM=RAW+'DS_CUSTOM_LIBRARY/DS_READY_MASTER/platinum_redux_review_entries.json';
 const LEFTOVER=RAW+'DS_CUSTOM_LIBRARY/DS_READY_MASTER/leftover_review_pool.csv?v=20261002-family-audit-2';
 const STORAGE='mercury-ds-sprite-approval-v1';
+const MYSTERY_PITCHES={
+  '351-4':{name:'Castform Sandstorm Form',type1:'Ground',type2:'',family:'Castform forms',summary:'Custom Sandstorm Castform form.',role:'WEATHER_FORM_CANDIDATE',mechanic:'Ground typing while Sandstorm is active.'},
+  '429-1f':{name:'Proposed Mega Mismagius',type1:'Ghost',type2:'Fairy',family:'Misdreavus → Mismagius → Mega Mismagius',summary:'Cosmic witch design suited to a Mega.',role:'MEGA_CANDIDATE',mechanic:'Lunar illusion / special-offense direction.'},
+  '479-6':{name:'Rotom Camera Form',type1:'Electric',type2:'Psychic',family:'Rotom forms',summary:'Rotom possessing a camera.',role:'ROTOM_FORM_CANDIDATE',mechanic:'Electric/Psychic camera appliance form.'},
+  '480-1f':{name:'Proposed Mega Uxie',type1:'Psychic',type2:'Dragon',family:'Uxie → Mega Uxie',summary:'Uxie manifests a huge golden psychic dragon.',role:'MEGA_CANDIDATE',mechanic:'Knowledge made manifest as a spectral dragon.'},
+  '560-1f':{name:'Proposed Mega Scrafty',type1:'Dark',type2:'Fighting',family:'Scraggy → Scrafty → Mega Scrafty',summary:'Powered-up gang-leader Scrafty design.',role:'MEGA_CANDIDATE',mechanic:'Bulk, intimidation, and counterattacking.'}
+};
 const FAMILY_FIXES={
   'rainther':'Dampurr → Rainther → Delugar',
   'pourka':'Dripwirt → Pourka',
@@ -171,6 +178,7 @@ function isOpaqueIdentity(id){
 }
 function proposedIdentity(r){
   if(r.identity==='059-1f')return {name:'Proposed Mega Hisuian Arcanine',type1:'Fire',type2:'Rock',family:'Growlithe → Hisuian Arcanine'};
+  if(MYSTERY_PITCHES[r.identity])return MYSTERY_PITCHES[r.identity];
   const e=enrichedRecord(r);
   if(e&&e.mercury_pitch_name)return {name:e.mercury_pitch_name,type1:e.mercury_pitch_type1||e.type1||'',type2:e.mercury_pitch_type2||'',family:e.mercury_pitch_family||e.family||'',summary:e.mercury_pitch_summary||'',mechanic:e.mercury_pitch_mechanic||'',role:e.mercury_pitch_role||'',status:e.mercury_pitch_status||'PROPOSAL'};
   if(e&&e.name&&e.type1&&e.type1!=='TBD')return {name:e.name,type1:e.type1,type2:e.type2||'',family:e.family||''};
@@ -494,7 +502,7 @@ function render(){
             <div class="spritebox"><span class="viewlabel">NORMAL FRONT</span><img loading="lazy" alt="${pretty(r.identity)} front" src="${imgURL(r.front_path)}"></div>
             <div class="spritebox"><span class="viewlabel">NORMAL BACK</span><img class="backimg" loading="lazy" alt="${pretty(r.identity)} back"><div class="missingview" style="display:none">No matching back sprite found</div></div>
           </div>
-          <div class="spritepair shinyrow" style="margin-top:8px">
+          <div class="spritepair shinyrow" style="margin-top:8px;display:none">
             <div class="spritebox"><span class="viewlabel">SHINY FRONT</span><img class="shinyfront" loading="lazy" alt="${pretty(r.identity)} shiny front"><div class="missingview" style="display:none">No shiny front found</div></div>
             <div class="spritebox"><span class="viewlabel">SHINY BACK</span><img class="shinyback" loading="lazy" alt="${pretty(r.identity)} shiny back"><div class="missingview" style="display:none">No shiny back found</div></div>
           </div>
