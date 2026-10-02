@@ -12,6 +12,11 @@ EXCLUDED=MASTER/"fakemon_excluded_incomplete.csv"
 def norm(s):
     return re.sub(r"-+","-",re.sub(r"[^a-z0-9]+","-",str(s or "").lower())).strip("-")
 
+NONVANILLA_TYPE_REPLACEMENTS={"Sound":"Normal"}
+def vanilla_type(t):
+    t=str(t or "").strip().title()
+    return NONVANILLA_TYPE_REPLACEMENTS.get(t,t)
+
 def read_csv(p):
     with p.open(newline="",encoding="utf-8-sig",errors="replace") as f:
         return list(csv.DictReader(f))
@@ -319,6 +324,8 @@ for r in rows:
         t2=""
     out["type1"],out["type2"]=t1,t2
 
+    out["type1"]=vanilla_type(out.get("type1"))
+    out["type2"]=vanilla_type(out.get("type2"))
     out["confidence"]=";".join(confidence)
     out["ready_for_approval"]=bool(out.get("name") and out.get("type1")!="TBD" and out.get("family") and out.get("back_path"))
     enriched[ident+"|"+r.get("structural_hash","")]=out
