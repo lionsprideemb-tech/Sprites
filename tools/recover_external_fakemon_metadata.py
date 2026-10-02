@@ -132,7 +132,8 @@ def parse_pokengine(url,known_slugs):
 
     standalone=False
     joined=" ".join(block)
-    if len(family)<=1 and re.search(r"Evo Line:\s*Complete",joined,re.I):
+    relation_cue=re.search(r"(?:Evolv|Lv\\.|Level up|Use an? |Happiness|Trade|holding|Stone)",joined,re.I)
+    if len(family)<=1 and (re.search(r"Evo Line:\\s*Complete",joined,re.I) or not relation_cue):
         standalone=True
 
     designer=""
@@ -265,5 +266,21 @@ for r in targets:
         stats["resolved"]+=1
         stats["by_source"][src]=stats["by_source"].get(src,0)+1
 
-OUT.write_text(json.dumps({"generated":"2026-10-02","records":out,"stats":stats},indent=2)+"\n",encoding="utf-8")
-# trigger after workflow install\nprint(json.dumps(stats,indent=2))
+# Propagate recovered evolution families to their other stages.
+family_by_member={}
+for rec in out.values():
+    fam=rec.get("family","")
+    if not fam or fam.startswith("Standalone"):continue
+    for p in [x.strip() for x in fam.split("→") if x.strip()]:
+        family_by_member[norm(p)]=fam
+for rec in out.values():
+    if rec.get("family"):continue
+    k=norm(rec.get("name",""))
+    if k in family_by_member:
+        rec["family"]=family_by_member[k]
+        rec["standalone"]=False
+
+stats["with_family"]=sum(1 for r in out.values() if r.get("family"))
+stats["standalone"]=sum(1 for r in out.values() if r.get("standalone"))
+OUT.write_text(json.dumps({"generated":"2026-10-02","records":out,"stats":stats},indent=2)+"\\n",encoding="utf-8")
+print(json.dumps(stats,indent=2))
