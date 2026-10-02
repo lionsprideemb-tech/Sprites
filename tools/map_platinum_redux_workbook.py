@@ -119,4 +119,22 @@ summary={
     "summary":summary,"matches_by_review_id":agg,"anchors":anchors
 },indent=2,default=list)+"\n")
 (OUT/"platinum_redux_workbook_map_summary.json").write_text(json.dumps(summary,indent=2)+"\n")
+
+diag={"sheet_image_counts":{},"sheet_anchor_columns":{},"samples":[]}
+for a in anchors:
+    diag["sheet_image_counts"][a["sheet"]]=diag["sheet_image_counts"].get(a["sheet"],0)+1
+    key=a["sheet"]
+    diag["sheet_anchor_columns"].setdefault(key,{})
+    col=str(a["anchor_col"])
+    diag["sheet_anchor_columns"][key][col]=diag["sheet_anchor_columns"][key].get(col,0)+1
+for sheet in wb.sheetnames:
+    subset=[a for a in anchors if a["sheet"]==sheet]
+    for a in subset[:12]:
+        diag["samples"].append({
+          "sheet":a["sheet"],"anchor_row":a["anchor_row"],"anchor_col":a["anchor_col"],
+          "repo_path":a["repo_path"],"size":a["size"],
+          "rowwide":[x["value"] for x in a.get("rowwide",[])][:40],
+          "column_context":a.get("column_context",[])
+        })
+(OUT/"platinum_redux_anchor_diagnostics.json").write_text(json.dumps(diag,indent=2)+"\n")
 print(json.dumps(summary,indent=2))
