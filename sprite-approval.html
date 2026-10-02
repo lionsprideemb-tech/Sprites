@@ -34,7 +34,7 @@ main{max-width:1440px;margin:auto;padding:18px}.intro{background:var(--panel);bo
   <div class="progress"><div id="bar"></div></div>
   <div class="controls">
     <input id="search" placeholder="Search Pokémon/form or source…">
-    <select id="filter"><option value="all" selected>All approval-ready designs</option><option value="unreviewed">Unreviewed</option><option value="approved">Approved</option><option value="rejected">Rejected</option><option value="maybe">Maybe</option><option value="multi">Multiple designs only</option><option value="unidentified">Needs identification</option></select>
+    <select id="filter"><option value="all">All approval-ready designs</option><option value="unreviewed" selected>Unreviewed / newly recovered</option><option value="approved">Approved</option><option value="rejected">Rejected</option><option value="maybe">Maybe</option><option value="multi">Multiple designs only</option><option value="unidentified">Needs identification</option></select>
     <button id="export">Export decisions CSV</button>
     <button id="backup" class="primary">Backup JSON</button>
   </div>
@@ -55,6 +55,7 @@ const RAW='https://raw.githubusercontent.com/'+REPO+'/'+BRANCH+'/';
 const MANIFEST=RAW+'DS_CUSTOM_LIBRARY/DS_READY_MASTER/ds_ready_front_design_manifest.csv';
 const TYPEMAP=RAW+'DS_CUSTOM_LIBRARY/DS_READY_MASTER/mercury_name_type_map.json';
 const ENRICHED=RAW+'DS_CUSTOM_LIBRARY/DS_READY_MASTER/fakemon_enriched_metadata.json';
+const BASEDECISIONS=RAW+'DS_CUSTOM_LIBRARY/DS_READY_MASTER/user_sprite_decisions_2026-10-01.json';
 const STORAGE='mercury-ds-sprite-approval-v1';
 let rows=[], decisions={}, familyMap={}, familyLabels={}, typeMap={}, enrichedMap={};
 
@@ -171,7 +172,11 @@ function setupProblems(r){
 }
 function isReady(r){return setupProblems(r).length===0}
 function save(){localStorage.setItem(STORAGE,JSON.stringify(decisions));renderStats()}
-function load(){try{decisions=JSON.parse(localStorage.getItem(STORAGE)||'{}')}catch{decisions={}}}
+function load(base={}){
+  let local={};
+  try{local=JSON.parse(localStorage.getItem(STORAGE)||'{}')}catch{local={}}
+  decisions={...base,...local};
+}
 function setDecision(k,v){decisions[k]=v;save();render()}
 
 const FORM_SUFFIXES=[
@@ -381,13 +386,16 @@ document.getElementById('export').onclick=()=>{
 document.getElementById('backup').onclick=()=>download('mercury_ds_sprite_approval_backup.json',JSON.stringify({version:1,exported:new Date().toISOString(),decisions},null,2),'application/json');
 
 (async()=>{
-  load();
   try{
-    const [manifestRes,typeRes,enrichedRes]=await Promise.all([
+    const [manifestRes,typeRes,enrichedRes,baseDecisionRes]=await Promise.all([
       fetch(MANIFEST,{cache:'no-store'}),
       fetch(TYPEMAP,{cache:'no-store'}),
-      fetch(ENRICHED,{cache:'no-store'})
+      fetch(ENRICHED,{cache:'no-store'}),
+      fetch(BASEDECISIONS,{cache:'no-store'})
     ]);
+    let baseDecisions={};
+    if(baseDecisionRes.ok){try{baseDecisions=(await baseDecisionRes.json()).decisions||{}}catch{}}
+    load(baseDecisions);
     if(!manifestRes.ok)throw new Error('Manifest HTTP '+manifestRes.status);
     const all=parseCSV(await manifestRes.text());
     if(typeRes.ok){
