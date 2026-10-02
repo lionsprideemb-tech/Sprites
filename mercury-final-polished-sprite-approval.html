@@ -25,4 +25,19 @@ function structure(img){let c=document.createElement('canvas'),ctx=c.getContext(
 async function audit(c){if(c.dataset.audited)return;c.dataset.audited='1';let sp=slug(c.dataset.species),keys=[sp];if(fallback[sp])keys.push(fallback[sp]);let v=null,url='';for(const k of keys){url=VBASE+encodeURIComponent(k)+'.png';try{v=await loadImg(url);break}catch(e){}}let box=c.querySelector('[data-recolor]'),ref=c.querySelector('.vanilla');if(!v){box.className='recolor';box.textContent='Vanilla reference unavailable automatically — judge manually.';return}ref.src=url;try{let cand=c.querySelector('.front');if(!cand.complete)await loadImg(cand.src);if(structure(cand)===structure(v)){box.className='recolor pure';box.textContent='PURE RECOLOR OF VANILLA — same pixel design, different palette. Safe to pass/delete if you do not want recolors.'}else if(!box.classList.contains('batch')){box.className='recolor design';box.textContent='ACTUAL DESIGN CHANGE — pixel structure differs from the vanilla DS sprite.'}}catch(e){box.className='recolor';box.textContent='Compare manually against vanilla reference.'}}
 const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){audit(e.target);obs.unobserve(e.target)}}),{rootMargin:'500px'});cards.forEach(c=>obs.observe(c));
 stats();
-</script></body></html>
+</script>
+<script>
+const PROTECTED_MEGA_KEYS=["abomasnow-mega","absol-mega","absol-mega-z","aerodactyl-mega","aggron-mega","alakazam-mega","altaria-mega","ampharos-mega","audino-mega","banette-mega","barbaracle-mega","baxcalibur-mega","beedrill-mega","blastoise-mega","blaziken-mega","camerupt-mega","chandelure-mega","charizard-mega-x","charizard-mega-y","chesnaught-mega","chimecho-mega","clefable-mega","crabominable-mega","darkrai-mega","delphox-mega","diancie-mega","dragalge-mega","dragonite-mega","drampa-mega","eelektross-mega","emboar-mega","excadrill-mega","falinks-mega","feraligatr-mega","floette-mega","froslass-mega","gallade-mega","garchomp-mega","garchomp-mega-z","gardevoir-mega","gengar-mega","glalie-mega","glimmora-mega","golisopod-mega","golurk-mega","greninja-mega","gyarados-mega","hawlucha-mega","heatran-mega","heracross-mega","houndoom-mega","kangaskhan-mega","latias-mega","latios-mega","lopunny-mega","lucario-mega","lucario-mega-z","magearna-mega","magearna-original-mega","malamar-mega","manectric-mega","mawile-mega","medicham-mega","meganium","meganium-mega","meowstic-female-mega","meowstic-male-mega","meowstic-mega","metagross-mega","mewtwo-mega-x","mewtwo-mega-y","pidgeot-mega","pinsir-mega","pyroar-mega","raichu-mega-x","raichu-mega-y","rayquaza-mega","sableye-mega","salamence-mega","sceptile-mega","scizor-mega","scolipede-mega","scovillain-mega","scrafty-mega","sharpedo-mega","skarmory-mega","slowbro-mega","staraptor-mega","starmie-mega","steelix-mega","swampert-mega","tatsugiri-curly-mega","tatsugiri-droopy-mega","tatsugiri-stretchy-mega","tyranitar-mega","venusaur-mega","victreebel-mega","yanmega","zeraora-mega","zygarde-mega"];
+const protectedMegaSet=new Set(PROTECTED_MEGA_KEYS);
+function megaKeyFromIdentity(id){return String(id||'').toLowerCase().replaceAll('_','-');}
+document.querySelectorAll('.card').forEach(c=>{
+  const k=megaKeyFromIdentity(c.dataset.id);
+  if(!protectedMegaSet.has(k)) return;
+  const note=document.createElement('div');
+  note.className='protectedMegaNotice';
+  note.textContent='PROTECTED CANON/REQUIRED MEGA — Mercury already has the complete required Mega sprite set elsewhere. Rejecting this candidate will NOT remove the required Mega.';
+  c.querySelector('.head')?.after(note);
+});
+</script>
+<style>.protectedMegaNotice{margin:0 8px 6px;padding:7px 8px;border-radius:7px;background:#e4f5e8;color:#235b30;font-size:10px;font-weight:800;border:1px solid #9ec7a8}</style>
+</body></html>
