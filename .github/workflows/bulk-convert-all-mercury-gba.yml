@@ -133,6 +133,27 @@ jobs:
                   copied.append(slot)
               return copied
 
+          reborn_root=Path("DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy")
+
+          def reborn_assets_for(key):
+              # Old comparison keys use cpf-####- prefixes; recovered source folders use the
+              # historic identity without that bookkeeping prefix.
+              plain=re.sub(r"^cpf-\\d+-","",key)
+              d=reborn_root/plain
+              if not d.is_dir():
+                  return {}
+              out={}
+              mapping={
+                  "front.png":"front",
+                  "back.png":"back",
+                  "shiny_front.png":"front_shiny",
+                  "shiny_back.png":"back_shiny",
+              }
+              for name,slot in mapping.items():
+                  q=d/name
+                  if q.exists(): out[slot]=q
+              return out
+
           # We stage a canonical per-key directory first. Later flatten to converter syntax.
           for key,row in sorted(wanted.items()):
               assets=er_index.get(key,{})
@@ -141,6 +162,14 @@ jobs:
               if assets:
                   copied=copy_fourway(key,assets,"ER-nextdex")
                   source="ER-nextdex"
+
+              # Reborn / Plates fallback. This resolves the historic cpf-#### aliases back
+              # to the exact recovered sprite identities.
+              if not copied:
+                  rassets=reborn_assets_for(key)
+                  if rassets:
+                      copied=copy_fourway(key,rassets,"Reborn/Plates recovered")
+                      source="Reborn/Plates recovered"
 
               # Direct Mercury source fallback if ER has no source.
               if not copied:
@@ -181,6 +210,7 @@ jobs:
               "source_found":sum(r["source_found"] for r in manifest),
               "source_missing":sum(not r["source_found"] for r in manifest),
               "er_nextdex_matches":sum(r["source"]=="ER-nextdex" for r in manifest),
+              "reborn_plates_matches":sum(r["source"]=="Reborn/Plates recovered" for r in manifest),
               "mercury_repo_matches":sum(r["source"]=="Mercury-repo" for r in manifest),
           }
           (report/"all_mercury_gba_source_resolution_summary.json").write_text(json.dumps(summary,indent=2)+"\n")
