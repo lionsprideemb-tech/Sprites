@@ -60,8 +60,16 @@ jobs:
               if 'icon' in s or '/icon/' in joined or '/icons/' in joined:
                   return 'icon'
               shiny=('shiny' in s or any(x in {'front-shiny','back-shiny','shiny'} for x in parts))
-              back=('back' in s or any(x in {'back','backs','backsprite','backsprites','back-shiny'} for x in parts))
-              front=('front' in s or any(x in {'front','fronts','frontsprite','frontsprites','front-shiny'} for x in parts))
+              back=('back' in s or any(
+                  x in {'back','backs','backsprite','backsprites','back-shiny'}
+                  or 'backsprite' in x or x.endswith('-backs')
+                  for x in parts
+              ))
+              front=('front' in s or any(
+                  x in {'front','fronts','frontsprite','frontsprites','front-shiny'}
+                  or 'frontsprite' in x or x.endswith('-fronts')
+                  for x in parts
+              ))
               if back:
                   return 'back_shiny' if shiny else 'back'
               if front:
@@ -79,8 +87,13 @@ jobs:
                       parent=norm(p.parent.parent.name)+'-'+parent
                   return parent
               # Split component folders (e.g. sprites-processed/front/abomasnow.png)
-              if norm(p.parent.name) in {'front','back','front-shiny','back-shiny','icon','icons',
-                                         'fronts','backs','frontsprites','backsprites'}:
+              parent_norm=norm(p.parent.name)
+              if (
+                  parent_norm in {'front','back','front-shiny','back-shiny','icon','icons',
+                                  'fronts','backs','frontsprites','backsprites'}
+                  or 'frontsprite' in parent_norm or 'backsprite' in parent_norm
+                  or parent_norm.endswith('-fronts') or parent_norm.endswith('-backs')
+              ):
                   return stem
               x=stem
               for suffix in ['-front-shiny','-back-shiny','-front','-back','-icon','-shiny']:
