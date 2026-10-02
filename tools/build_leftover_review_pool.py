@@ -1,4 +1,5 @@
 from pathlib import Path
+# rebuild trigger after enriched metadata success
 import csv, json
 
 MASTER=Path("DS_CUSTOM_LIBRARY/DS_READY_MASTER")
