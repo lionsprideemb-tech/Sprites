@@ -135,6 +135,7 @@ jobs:
 
           reborn_root=Path("DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy")
           earth_root=Path("DS_CUSTOM_LIBRARY/packs/Earthretha/Earthretha Fakemon Pack/Graphics/Pokemon")
+          original_mega_root=Path("DS_CUSTOM_LIBRARY/hack-packs/Banished_Platinum_Free_Megas/Free to Use Original Megas/Mega Sprites")
 
           def norm_loose(s):
               s=str(s).lower().replace("_","-").replace("’","").replace("'","")
@@ -166,6 +167,23 @@ jobs:
               # Handle labeled forms such as BELSTATUE_1 (Sun Shard).
               matches=[v for k,v in earth_index.items() if k==want or k.startswith(want+"-")]
               return matches[0] if len(matches)==1 else {}
+
+          original_mega_index=defaultdict(dict)
+          if original_mega_root.exists():
+              for p in original_mega_root.glob("*.png"):
+                  stem=p.stem
+                  low=norm_loose(stem)
+                  is_back=low.endswith("-back")
+                  if is_back:
+                      low=low[:-5]
+                  # Accept both Mega-Foo and Mega_Foo naming.
+                  if not low.startswith("mega-"):
+                      continue
+                  key=low
+                  original_mega_index[key]["back" if is_back else "front"]=p
+
+          def original_mega_assets_for(key):
+              return original_mega_index.get(key,{})
 
           def reborn_assets_for(key):
               # Old comparison keys use cpf-####- prefixes; recovered source folders use the
@@ -212,6 +230,13 @@ jobs:
                   if eassets:
                       copied=copy_fourway(key,eassets,"Earthretha pack")
                       source="Earthretha pack"
+
+              # Banished Platinum / Free to Use Original Megas source pack.
+              if not copied:
+                  massets=original_mega_assets_for(key)
+                  if massets:
+                      copied=copy_fourway(key,massets,"Banished Platinum Original Megas")
+                      source="Banished Platinum Original Megas"
 
               # One legacy Elite Redux identity was renamed in the current source pack.
               if not copied and key=="heliomodo":
@@ -261,6 +286,7 @@ jobs:
               "er_nextdex_matches":sum(r["source"]=="ER-nextdex" for r in manifest),
               "reborn_plates_matches":sum(r["source"]=="Reborn/Plates recovered" for r in manifest),
               "earthretha_matches":sum(r["source"]=="Earthretha pack" for r in manifest),
+              "original_mega_matches":sum(r["source"]=="Banished Platinum Original Megas" for r in manifest),
               "er_alias_matches":sum(r["source"]=="ER-nextdex alias HELIOSUNNY" for r in manifest),
               "mercury_repo_matches":sum(r["source"]=="Mercury-repo" for r in manifest),
           }
