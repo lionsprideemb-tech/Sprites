@@ -103,7 +103,7 @@ def expected_designers(source,front_path=""):
       # sprite to BiggusWeeabus; KajiAtsui sprites the pack.
       "Festival_Atsui":{"atsui","kajiatsui","jwnutz","biggusweeabus"},
       # Lumio pack credits multiple designers/spriters across its families.
-      "Festival_Lumio":{"lumio","watertrainer","zombiepikachu","axolollipop","jorgeburgos","cuber","kajiatsui","haunteditto","nocturn"},
+      "Festival_Lumio":{"lumio","watertrainer","zombiepikachu","axolollipop","jorgeburgos","cuber","kajiatsui","haunteditto","nocturn","rattila"},
       # Earthretha pack is authored/sprited primarily by NanaelJustice.
       "Earthretha":{"earthretha","nanaeljustice","foxeaf","leparagon","lunamaddalena"},
     }
