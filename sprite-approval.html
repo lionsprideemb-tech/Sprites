@@ -153,13 +153,18 @@ function attachBackFallback(img,r){
 function imgURL(path){return RAW+path.split('/').map(encodeURIComponent).join('/')}
 function key(r){return r.identity+'|'+r.structural_hash}
 function familyDisplay(r){
-  const p=proposedIdentity(r);
-  if(p&&p.family)return p.family;
-  const t=typeRecord(r);
-  if(t&&t.family)return t.family.replace(/\s+family$/i,'');
   const fk=r.family_key||'';
   if(fk.startsWith('__unidentified__'))return '';
-  return familyLabels[fk]||'';
+  const p=proposedIdentity(r);
+  const t=typeRecord(r);
+  const candidates=[
+    p&&p.family?p.family:'',
+    t&&t.family?t.family.replace(/\s+family$/i,''):'',
+    familyLabels[fk]||''
+  ].filter(Boolean);
+  if(!candidates.length)return '';
+  const score=s=>String(s).split(/→|\//).filter(x=>x.trim()).length;
+  return candidates.sort((a,b)=>score(b)-score(a) || b.length-a.length)[0];
 }
 function setupProblems(r){
   const probs=[];
@@ -263,7 +268,7 @@ async function buildFamilyMap(){
   document.getElementById('families').textContent=[...new Set(rows.map(r=>r.family_key))].length+' families';
 }
 function familyMembersFromLabel(label){
-  return String(label||'').split('→').map(x=>x.trim()).filter(Boolean);
+  return String(label||'').split(/→|\//).map(x=>x.trim().replace(/\s+family$/i,'')).filter(Boolean);
 }
 function normalizeDisplay(s){return String(s||'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim()}
 function familyStageIndex(r,fk){
