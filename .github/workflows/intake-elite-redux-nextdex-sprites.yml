@@ -5,6 +5,7 @@ on:
   push:
     paths:
       - ".github/workflows/intake-elite-redux-nextdex-sprites.yml"
+      - "DS_CUSTOM_LIBRARY/DS_READY_MASTER/elite_redux_recovery_trigger.txt"
 
 permissions:
   contents: write
