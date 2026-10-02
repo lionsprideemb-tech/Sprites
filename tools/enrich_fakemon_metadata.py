@@ -508,6 +508,15 @@ for r in rows:
     ident=r["identity"];src=r["source"];key=norm(ident)
     out={"identity":ident,"source":src,"front_path":r.get("front_path",""),"back_path":r.get("back_path","")}
     confidence=[]
+    # Never trust a manifest back that belongs to another source or a different
+    # source-specific species/form key. Clear it so strict recovery can select
+    # the correct donor back instead.
+    if out.get("back_path"):
+        same_source=(source_of(out["back_path"])==src)
+        same_key=(sprite_stem_key(out["front_path"],src)==sprite_stem_key(out["back_path"],src))
+        if not (same_source and same_key):
+            out["back_path"]=""
+            confidence.append("MANIFEST_BACK_REJECTED")
     vo=VERIFIED_SOURCE_OVERRIDES.get((src,key))
     if vo:
         out.update(vo)
