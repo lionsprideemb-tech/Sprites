@@ -208,15 +208,34 @@ def custom_family(key):
     return seen
 
 def custom_family_order(key):
-    fam=custom_family(key)
+    # Build only the lineage that actually leads into/out of this identity.
+    # Do NOT use a whole undirected connected component: donor packs often have
+    # several unrelated custom species that evolve into the same canon Pokémon,
+    # which would incorrectly merge them into one giant "family".
+    ancestors=set()
+    stack=list(parents.get(key,set()))
+    while stack:
+        x=stack.pop()
+        if x in ancestors:continue
+        ancestors.add(x)
+        stack.extend(parents.get(x,set()))
+    descendants=set()
+    stack=list(children.get(key,set()))
+    while stack:
+        x=stack.pop()
+        if x in descendants:continue
+        descendants.add(x)
+        stack.extend(children.get(x,set()))
+    fam=ancestors|{key}|descendants
     roots=sorted(x for x in fam if not (parents.get(x,set()) & fam))
     ordered=[];seen=set()
     def walk(x):
-        if x in seen:return
+        if x in seen or x not in fam:return
         seen.add(x);ordered.append(x)
         for y in sorted(children.get(x,set()) & fam):
             walk(y)
     for r in roots:walk(r)
+    if key not in seen:walk(key)
     for x in sorted(fam):
         if x not in seen:walk(x)
     return ordered
