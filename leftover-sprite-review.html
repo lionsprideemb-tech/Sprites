@@ -28,13 +28,22 @@ main{max-width:1100px;margin:auto;padding:15px}.intro{background:#eef4fb;border:
 </main>
 <script>
 const REPO='lionsprideemb-tech/Sprites',BRANCH='main',RAW='https://raw.githubusercontent.com/'+REPO+'/'+BRANCH+'/';
-const ENRICHED=RAW+'DS_CUSTOM_LIBRARY/DS_READY_MASTER/fakemon_enriched_metadata.json';
-const BASE=RAW+'DS_CUSTOM_LIBRARY/DS_READY_MASTER/user_sprite_decisions_2026-10-01.json';
+const POOL=RAW+'DS_CUSTOM_LIBRARY/DS_READY_MASTER/leftover_review_pool.csv';
 const STORE='mercury-leftover-sprite-review-v1';
 let entries=[],local={};
 
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const img=p=>RAW+String(p||'').split('/').map(encodeURIComponent).join('/');
+function parseCSV(text){
+  const out=[];let row=[],field='',q=false;
+  for(let i=0;i<text.length;i++){const ch=text[i],n=text[i+1];
+    if(q){if(ch==='"'&&n==='"'){field+='"';i++}else if(ch==='"')q=false;else field+=ch}
+    else{if(ch==='"')q=true;else if(ch===','){row.push(field);field=''}else if(ch==='\n'){row.push(field.replace(/\r$/,''));out.push(row);row=[];field=''}else field+=ch}
+  }
+  if(field||row.length){row.push(field);out.push(row)}
+  const h=out.shift()||[];
+  return out.filter(r=>r.length>1).map(r=>Object.fromEntries(h.map((x,i)=>[x,r[i]??''])));
+}
 function loadLocal(){try{local=JSON.parse(localStorage.getItem(STORE)||'{}')}catch{local={}}}
 function save(){localStorage.setItem(STORE,JSON.stringify(local));render()}
 function priority(e){const s=(e.name+' '+e.identity+' '+e.family).toLowerCase();return /merrykarp|gyarevelry|gible|gabite|garchomp/.test(s)}
@@ -77,15 +86,9 @@ document.getElementById('export').onclick=()=>{
 };
 (async()=>{
  loadLocal();
- const [er,br]=await Promise.all([fetch(ENRICHED,{cache:'no-store'}),fetch(BASE,{cache:'no-store'})]);
- if(!er.ok)throw new Error('enriched '+er.status);
- const ed=(await er.json()).entries||{},bd=br.ok?((await br.json()).decisions||{}):{};
- entries=Object.entries(ed).map(([key,e])=>({...e,key})).filter(e=>{
-   if(!e.ready_for_approval||!e.front_path||!e.back_path)return false;
-   if(!e.type1||e.type1==='TBD')return false;
-   const old=bd[e.key]||'';
-   return old!=='approve'&&old!=='reject';
- });
+ const r=await fetch(POOL,{cache:'no-store'});
+ if(!r.ok)throw new Error('leftover pool '+r.status);
+ entries=parseCSV(await r.text());
  render();
 })().catch(err=>{document.getElementById('content').innerHTML='<div class="empty">Could not load review data: '+esc(err.message)+'</div>'});
 </script>
