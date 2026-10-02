@@ -50,20 +50,43 @@ def proposed_types(identity,name="",family=""):
         return ("Normal","")
     return (hits[0], hits[1] if len(hits)>1 and hits[1]!=hits[0] else "")
 
+OFFICIAL_POKEMON_NAMES=set()
+try:
+    with urllib.request.urlopen("https://pokeapi.co/api/v2/pokemon?limit=100000",timeout=30) as _r:
+        _d=json.load(_r)
+    OFFICIAL_POKEMON_NAMES={norm(x.get("name","")) for x in _d.get("results",[]) if x.get("name")}
+except Exception:
+    OFFICIAL_POKEMON_NAMES=set()
+
+def _official_name_candidate(ident):
+    ident=norm(ident)
+    if ident in OFFICIAL_POKEMON_NAMES:
+        return True
+    # Gendered sprite folders and harmless display-role suffixes are still the
+    # same official design, not Mercury review candidates.
+    for suffix in ("-male","-female","-normal","-default","-front","-back"):
+        if ident.endswith(suffix) and ident[:-len(suffix)] in OFFICIAL_POKEMON_NAMES:
+            return True
+    return False
+
 def plain_official_row(r,type_map):
-    """Exclude plain official/native designs, but keep custom-source redesigns
-    even when they reuse an official Pokémon name."""
-    src=r.get("source","")
+    """Exclude ordinary official/native art from the custom review pool.
+    A custom variant only survives when its identity is not an official Pokémon
+    variety or source metadata explicitly establishes a custom redesign."""
     ident=norm(r.get("identity",""))
-    protected={
-        "DrPrettyman_DS_64x64","HG_Engine_DS_Sprites","DS_Styled_Gen5_8",
-        "Gen7_DS_Backsprites","Shiny_Icons_Gen1_9"
-    }
-    if src not in protected:
+    src=r.get("source","")
+    # Explicit source metadata for the exact identity means this may be a true
+    # donor redesign, so do not erase it merely because the display name is canon.
+    has_custom_meta=(src,ident) in meta if "meta" in globals() else False
+    if has_custom_meta:
         return False
+    if _official_name_candidate(ident):
+        return True
     mr=type_map.get(ident) or {}
     cat=str(mr.get("category","")).upper()
-    return cat in {"CANON","OFFICIAL/CANON","OFFICIAL REGIONAL","OFFICIAL FORM"}
+    if cat in {"CANON","OFFICIAL/CANON","OFFICIAL REGIONAL","OFFICIAL FORM"}:
+        return True
+    return False
 
 def read_csv(p):
     with p.open(newline="",encoding="utf-8-sig",errors="replace") as f:
@@ -217,11 +240,22 @@ def numeric_dex(identity):
     n=int(m.group(1))
     return n if 1<=n<=1025 else None
 
+def sprite_stem_key(s):
+    x=norm(Path(str(s)).stem)
+    # Normalize common source naming conventions such as *_gen_4, Front/Back,
+    # shiny markers, and compact f/b view suffixes (059_1f vs 059_1b).
+    x=re.sub(r"-(?:front|back|backsprite|frontsprite|shiny)$","",x)
+    x=re.sub(r"-(?:gen-?4|gen-?5|gen4|gen5)$","",x)
+    x=re.sub(r"-(?:front|back)$","",x)
+    x=re.sub(r"(?<=\d)[fb]$","",x)
+    return x
+
 def likely_back(front_path,identity,source):
     # First: manifest's paired back.
     rr=next((x for x in rows if x.get("front_path")==front_path),None)
     if rr and rr.get("back_path"):return rr["back_path"]
     fid=norm(identity)
+    fkey=sprite_stem_key(front_path)
     num=numeric_dex(identity)
     cand=[]
     for p,role in all_images:
@@ -229,14 +263,15 @@ def likely_back(front_path,identity,source):
         ps=p.as_posix()
         if source and source_of(ps)!=source:continue
         stem=norm(p.stem)
-        parent=norm(p.parent.name)
+        bkey=sprite_stem_key(p)
         score=0
         if stem==fid:score+=100
+        if fkey and bkey==fkey:score+=130
         if fid and fid in norm(ps):score+=40
         if num is not None:
             nums=re.findall(r"(?<!\d)(\d{1,4})(?!\d)",p.name)
             if any(int(x)==num for x in nums):score+=70
-        # Match same basename with front/back token removed.
+        # Match same basename with explicit view tokens removed.
         fbase=norm(Path(front_path).stem.replace("front",""))
         bbase=norm(p.stem.replace("back",""))
         if fbase and fbase==bbase:score+=90
