@@ -1,0 +1,114 @@
+{
+  "generated": "2026-10-02",
+  "purpose": "Sixth-pass implementation handoff: consolidate already-supported sprite-role decisions into safe implementation queues without changing species IDs, approvals, typings, or evolution mechanics.",
+  "ready_base_replacement_queue": [
+    "Luxray","Rapidash","Hitmonlee","Hitmonchan","Gyarados","Typhlosion","Flygon","Milotic","Electivire","Magmortar",
+    "Charizard","Venusaur","Blastoise","Arbok","Kingler","Gardevoir","Mawile","Slaking","Snorlax","Clefable","Machamp",
+    "Medicham","Banette","Absol","Staraptor","Bronzong","Porygon-Z","Palkia",
+    "Raticate","Fearow","Ninetales","Venomoth","Dugtrio","Persian","Victreebel","Muk","Electrode","Marowak","Tauros",
+    "Vaporeon","Jolteon","Omastar","Kabutops","Furret","Noctowl","Ledian","Ariados","Bellossom","Sudowoodo","Espeon",
+    "Umbreon","Ursaring","Octillery","Stantler","Raikou","Entei"
+  ],
+  "mega_role_queue": [
+    {
+      "species": "Hippowdon",
+      "role": "MEGA_CANDIDATE",
+      "confidence": "HIGH",
+      "reason": "User direction explicitly preferred the Platinum Redux Hippowdon design for Mega use; keep exact species-stage mapping reviewable until game-data assignment."
+    }
+  ],
+  "existing_family_extension_queue": [
+    {
+      "family": "Shinx",
+      "candidate": "Luxzero",
+      "role": "EVOLUTION_OR_BRANCH_CANDIDATE",
+      "confidence": "HIGH",
+      "implementation_status": "HOLD_FOR_EVOLUTION_RULE",
+      "reason": "Repository metadata explicitly groups Luxzero with Shinx; do not invent level/item/method."
+    },
+    {
+      "family": "Pawniard",
+      "candidate": "Queengambit",
+      "role": "BISHARP_BRANCH_CANDIDATE",
+      "confidence": "HIGH",
+      "implementation_status": "HOLD_FOR_EVOLUTION_RULE",
+      "reason": "Repository metadata explicitly groups Queengambit with Pawniard; preserve Kingambit and Delta family identities."
+    },
+    {
+      "family": "Dunsparce / Dudunsparce",
+      "candidate": "Dududunsparce",
+      "role": "POST_DUDUNSPARCE_EVOLUTION_CANDIDATE",
+      "confidence": "HIGH",
+      "implementation_status": "HOLD_FOR_EVOLUTION_RULE",
+      "reason": "Name and family metadata support the relationship; approved Mega Dududunsparce remains separate."
+    },
+    {
+      "family": "Rattata",
+      "candidate": "Ratfioso / Ratiking",
+      "role": "FAMILY_EXTENSION_CANDIDATES",
+      "confidence": "MEDIUM",
+      "implementation_status": "HOLD_FOR_ORDER_AND_EVOLUTION_RULE",
+      "reason": "Family grouping is supported; exact ordering is not."
+    },
+    {
+      "family": "Delibird",
+      "candidate": "Dedelibird / Krampird",
+      "role": "FAMILY_EXTENSION_CANDIDATES",
+      "confidence": "MEDIUM",
+      "implementation_status": "HOLD_FOR_ORDER_AND_EVOLUTION_RULE",
+      "reason": "Family grouping is supported; exact ordering is not."
+    },
+    {
+      "family": "Applin",
+      "candidate": "Fujiflap / Granitun",
+      "role": "BRANCH_CANDIDATES",
+      "confidence": "MEDIUM",
+      "implementation_status": "HOLD_FOR_BRANCH_RULE",
+      "reason": "Family grouping is supported; exact branch triggers are not."
+    }
+  ],
+  "protected_mega_assignments": [
+    "Mega Rhyperior — Saturn",
+    "Mega Bronzong — Lucian",
+    "Mega Yanmega — Aaron Stage20 R4",
+    "Mega Milotic — Cynthia",
+    "Mega Magmortar — Flint",
+    "Mega Absol Z — keep distinct from Platinum Redux base Absol"
+  ],
+  "coherent_delta_family_mapping_queue": [
+    "Aron -> Lairon -> Aggron (+ Mega Delta Aggron)",
+    "Gible -> Gabite -> Garchomp (+ Mega Delta Garchomp)",
+    "Larvitar -> Pupitar -> Tyranitar (+ Mega Delta Tyranitar)",
+    "Drilbur -> Excadrill",
+    "Gligar -> Gliscor",
+    "Larvesta -> Volcarona",
+    "Noibat -> Noivern",
+    "Sinistea -> Polteageist",
+    "Dewpider -> Araquanid",
+    "Stufful -> Bewear"
+  ],
+  "collision_hold_queue": [
+    "Chandelure: two approved Mega identities share/approach same display role",
+    "Reuniclus: two approved Mega identities share Fire/Water role",
+    "Toxtricity: two Delta bases plus two Delta Megas require canonical pairing",
+    "Skarmory: two approved Mega identities require visual dedupe",
+    "Slaking: duplicate same-name Mega records require dedupe",
+    "Lapras: referenced Mega assets require verification",
+    "Meganium: metadata ambiguity does not establish a second design",
+    "Manectric: referenced Mega asset requires verification",
+    "Rampardos: referenced Mega asset requires verification",
+    "Bastiodon: referenced Mega asset requires verification"
+  ],
+  "asset_blockers": [
+    "Many approved Elite Redux-derived designs still lack recorded back_path.",
+    "A missing back sprite blocks battle-ready integration only; it does not reverse approval.",
+    "Same-name Mega identities must receive canonical labels before species/form IDs are assigned."
+  ],
+  "implementation_guardrails": [
+    "Never promote a rejected or maybe design through this queue.",
+    "Base replacement means sprite/art routing only; do not silently adopt source-hack typing, stats, abilities, or moves.",
+    "Do not create evolution methods from family-name inference.",
+    "Do not collapse Delta/Redux forms into vanilla species unless an explicit replacement decision exists.",
+    "Preserve boss-specific Mercury Mega assignments over generic role inference."
+  ]
+}
