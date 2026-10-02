@@ -1,0 +1,96 @@
+{
+  "generated": "2026-10-02",
+  "purpose": "Third-pass implementation routing. No species IDs are changed.",
+  "protected_assignments": [
+    [
+      "Rhyperior",
+      "Saturn",
+      "Keep dedicated Mega Rhyperior"
+    ],
+    [
+      "Bronzong",
+      "Lucian",
+      "Keep dedicated Mega Bronzong; Redux Bronzong can remain base replacement"
+    ],
+    [
+      "Yanmega",
+      "Aaron",
+      "Keep Stage20 R4 Mega Yanmega graphics"
+    ],
+    [
+      "Milotic",
+      "Cynthia",
+      "Keep custom Mega Milotic; Redux Milotic remains base replacement"
+    ],
+    [
+      "Magmortar",
+      "Flint",
+      "Keep custom Mega Magmortar; Redux Magmortar remains base replacement"
+    ]
+  ],
+  "resolved": [
+    [
+      "Charizard",
+      "BASE_REPLACEMENT",
+      "Preserve Mercury Mega Charizard Z separately"
+    ],
+    [
+      "Venusaur",
+      "BASE_REPLACEMENT",
+      "Complete Redux pair; Mega X is separately labeled and front-only"
+    ],
+    [
+      "Blastoise",
+      "BASE_REPLACEMENT",
+      "Complete Redux pair; Mega X is separately labeled and front-only"
+    ],
+    [
+      "Arbok",
+      "BASE_REPLACEMENT",
+      "Complete Redux pair; Mega candidate is separately labeled and front-only"
+    ],
+    [
+      "Kingler",
+      "BASE_REPLACEMENT",
+      "Keep Elite Redux Delta Kingler as a separate Delta identity"
+    ],
+    [
+      "Gardevoir",
+      "BASE_REPLACEMENT",
+      "Keep Elite Redux Ralts/Kirlia/Gardevoir Redux as a separate Delta family"
+    ],
+    [
+      "Mawile",
+      "BASE_REPLACEMENT",
+      "Keep the two typed Elite Redux Mawile branches as separate Delta identities"
+    ],
+    [
+      "Slaking",
+      "BASE_REPLACEMENT",
+      "Deduplicate two same-name Mega candidate records before Mega assignment"
+    ],
+    [
+      "Snorlax",
+      "BASE_REPLACEMENT",
+      "Keep Redux/Primal/Redux-Mega concepts separate"
+    ],
+    [
+      "Clefable",
+      "BASE_REPLACEMENT",
+      "Keep separately labeled Redux/Mega assets separate"
+    ],
+    [
+      "Machamp",
+      "BASE_REPLACEMENT",
+      "Multiple front-only Mega candidates remain a later visual choice"
+    ]
+  ],
+  "verify": [
+    "Lapras",
+    "Meganium",
+    "Manectric",
+    "Rampardos",
+    "Bastiodon"
+  ],
+  "note": "Missing back sprites are implementation blockers, not approval reversals. Platinum Redux and Elite Redux identities must not be silently merged."
+}
