@@ -261,11 +261,11 @@ def main():
         })
 
     with (report_dir/"elite_redux_gba_to_ds_design_classification.csv").open("w",newline="") as f:
-        w=csv.DictWriter(f,fieldnames=design_rows[0].keys())
+        w=csv.DictWriter(f,fieldnames=sorted({k for r in design_rows for k in r.keys()}))
         w.writeheader(); w.writerows(design_rows)
 
     with (report_dir/"elite_redux_gba_to_ds_slot_audit.csv").open("w",newline="") as f:
-        w=csv.DictWriter(f,fieldnames=slot_rows[0].keys())
+        w=csv.DictWriter(f,fieldnames=sorted({k for r in slot_rows for k in r.keys()}))
         w.writeheader(); w.writerows(slot_rows)
 
     counts=defaultdict(int)
