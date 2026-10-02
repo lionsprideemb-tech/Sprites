@@ -1,10 +1,10 @@
 {
   "custom_entries": 1257,
-  "ready": 922,
+  "ready": 370,
   "missing_type": 0,
   "missing_back": 335,
-  "standalone_proposals": 867,
+  "standalone_proposals": 866,
   "source_metadata_records": 83,
-  "excluded_from_approval": 335,
-  "approval_policy": "Only fully identified entries with name, type, family placement, front sprite and back sprite are admitted to approval."
+  "excluded_from_approval": 887,
+  "approval_policy": "Only fully identified entries with name, vanilla type, resolved family/standalone identity, front sprite and back sprite are admitted to approval. 'No evolution data found' is unresolved and excluded."
 }
