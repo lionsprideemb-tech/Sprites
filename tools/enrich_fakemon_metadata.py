@@ -357,7 +357,8 @@ def sprite_stem_key(s,source=""):
     x=re.sub(r"-(?:front|back)$","",x)
     # Festival Misc compact convention: 059_1f -> 059_1b.
     if source=="Festival_Misc":
-        x=re.sub(r"(?<=\d)[fb]$","",x)
+        x=re.sub(r"(?:front|back)$","",x)
+        x=re.sub(r"(?<=[a-z0-9])[fb]$","",x)
     # PrincessPhoenix convention: FiromenisF -> FiromenisB4/FiromenisB5.
     if source=="Festival_PrincessPhoenix":
         x=re.sub(r"(?:fs|f|b4s|b4|b5s|b5)$","",x)
