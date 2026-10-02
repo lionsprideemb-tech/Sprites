@@ -1317,7 +1317,7 @@
       "name": "Mikitarian",
       "type1": "Dark",
       "type2": "",
-      "family": "Standalone — Mikitarian",
+      "family": "Platerigus → Mikitarian → Traumatisse",
       "confidence": "EXTERNAL_SOURCE_METADATA",
       "ready_for_approval": true
     },
@@ -3501,7 +3501,7 @@
       "name": "Mikitarian",
       "type1": "Psychic",
       "type2": "Fighting",
-      "family": "Standalone — Mikitarian",
+      "family": "Platerigus → Mikitarian → Traumatisse",
       "confidence": "EXTERNAL_SOURCE_METADATA",
       "ready_for_approval": true
     },
@@ -6501,7 +6501,7 @@
       "name": "Mikitarian",
       "type1": "Dark",
       "type2": "",
-      "family": "Standalone — Mikitarian",
+      "family": "Platerigus → Mikitarian → Traumatisse",
       "confidence": "EXTERNAL_SOURCE_METADATA",
       "ready_for_approval": true
     },
@@ -6534,7 +6534,7 @@
       "source": "Festival_Magiscarf",
       "front_path": "DS_CUSTOM_LIBRARY/packs/Festival_Magiscarf/Magiscarf/Battlers Normal/Front/Lumaxi.png",
       "back_path": "",
-      "family": "Unresolved family / relationship",
+      "family": "Lumini → Lumedi → Lumaxi",
       "name": "Lumaxi",
       "type1": "Normal",
       "type2": "",
@@ -6570,7 +6570,7 @@
       "source": "Festival_Magiscarf",
       "front_path": "DS_CUSTOM_LIBRARY/packs/Festival_Magiscarf/Magiscarf/Battlers Normal/Front/Lumedi.png",
       "back_path": "",
-      "family": "Unresolved family / relationship",
+      "family": "Lumini → Lumedi → Lumaxi",
       "name": "Lumedi",
       "type1": "Normal",
       "type2": "",
@@ -7890,12 +7890,12 @@
       "source": "Mikitari",
       "front_path": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Front/PACKBATS.png",
       "back_path": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/PACKBATS.png",
-      "family": "Unresolved family / relationship",
+      "family": "Cabat♀ → Stalass → Packbats → Cabat♂ → Stalad",
       "name": "Packbats",
       "type1": "Normal",
       "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE;BACK_MATCH_RECOVERED",
-      "ready_for_approval": false
+      "confidence": "FAMILY_RECOVERED;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE;BACK_MATCH_RECOVERED",
+      "ready_for_approval": true
     },
     "packbats-1|8a9c17c1218788627fd8791e2fd15d765a48202ad9a725a7b20dfac8bae420a5": {
       "identity": "packbats-1",
@@ -8442,12 +8442,12 @@
       "source": "Festival_Magiscarf",
       "front_path": "DS_CUSTOM_LIBRARY/packs/Festival_Magiscarf/Magiscarf/Battlers Normal/Front/Pourka.png",
       "back_path": "DS_CUSTOM_LIBRARY/packs/Festival_Magiscarf/Magiscarf/Battlers Normal/Back/Pourka.png",
-      "family": "Unresolved family / relationship",
+      "family": "Dripwirt → Pourka",
       "name": "Pourka",
       "type1": "Normal",
       "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": false
+      "confidence": "FAMILY_RECOVERED;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
+      "ready_for_approval": true
     },
     "prankmare|79f0048a5f20be412258999a46ae959443c9db0b76d224c0fea9598698501ae2": {
       "identity": "prankmare",
@@ -8730,24 +8730,24 @@
       "source": "Festival_Magiscarf",
       "front_path": "DS_CUSTOM_LIBRARY/packs/Festival_Magiscarf/Magiscarf/Battlers Normal/Front/Rainther.png",
       "back_path": "DS_CUSTOM_LIBRARY/packs/Festival_Magiscarf/Magiscarf/Battlers Normal/Back/Rainther.png",
-      "family": "Unresolved family / relationship",
+      "family": "Dampurr → Rainther → Delugar",
       "name": "Rainther",
       "type1": "Water",
       "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": false
+      "confidence": "FAMILY_RECOVERED;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
+      "ready_for_approval": true
     },
     "rainther|7f3adf7765a5483676fad9e753944c4afce9f37024eede619364a6caf873fe7e": {
       "identity": "rainther",
       "source": "Festival_Magiscarf",
       "front_path": "DS_CUSTOM_LIBRARY/packs/Festival_Magiscarf/Magiscarf/Gen 4 Battlers/Fronts/RAINTHER.png",
       "back_path": "DS_CUSTOM_LIBRARY/packs/Festival_Magiscarf/Magiscarf/Battlers Normal/Back/Rainther.png",
-      "family": "Unresolved family / relationship",
+      "family": "Dampurr → Rainther → Delugar",
       "name": "Rainther",
       "type1": "Water",
       "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": false
+      "confidence": "FAMILY_RECOVERED;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
+      "ready_for_approval": true
     },
     "raknaleap|171a9b0d4869c83c8be4fce9ee839a592fd261bdd3552e6126b118024774cb3c": {
       "identity": "raknaleap",
