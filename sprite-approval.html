@@ -172,6 +172,7 @@ function isOpaqueIdentity(id){
 function proposedIdentity(r){
   if(r.identity==='059-1f')return {name:'Proposed Mega Hisuian Arcanine',type1:'Fire',type2:'Rock',family:'Growlithe → Hisuian Arcanine'};
   const e=enrichedRecord(r);
+  if(e&&e.mercury_pitch_name)return {name:e.mercury_pitch_name,type1:e.mercury_pitch_type1||e.type1||'',type2:e.mercury_pitch_type2||'',family:e.mercury_pitch_family||e.family||'',summary:e.mercury_pitch_summary||'',mechanic:e.mercury_pitch_mechanic||'',role:e.mercury_pitch_role||'',status:e.mercury_pitch_status||'PROPOSAL'};
   if(e&&e.name&&e.type1&&e.type1!=='TBD')return {name:e.name,type1:e.type1,type2:e.type2||'',family:e.family||''};
   return null;
 }
@@ -427,7 +428,8 @@ function familyContextHTML(fk, identities){
   }).join('')+'</div>';
 }
 function renderStats(){
-  const total=rows.length, reviewed=rows.filter(r=>decisions[key(r)]).length;
+  const activeRows=rows.filter(r=>{const e=enrichedRecord(r);return !(e&&e.review_suppress)});
+  const total=activeRows.length, reviewed=activeRows.filter(r=>decisions[key(r)]).length;
   document.getElementById('done').textContent=reviewed+' / '+total+' reviewed';
   document.getElementById('bar').style.width=(total?reviewed/total*100:0)+'%';
 }
@@ -435,6 +437,8 @@ function render(){
   const q=document.getElementById('search').value.trim().toLowerCase();
   const f=document.getElementById('filter').value;
   let list=rows.filter(r=>{
+    const e=enrichedRecord(r);
+    if(e&&e.review_suppress)return false;
     const d=decisions[key(r)]||'';
     if(q && !(r.identity+' '+r.source).toLowerCase().includes(q))return false;
     if(f==='unreviewed'&&d)return false;
@@ -482,6 +486,8 @@ function render(){
           <div class="stageLabel">${stageText(r,fk)}</div>
           <div class="evolves">${familyMembersFromLabel(familyDisplay(r)||familyLabels[fk]||'').join(' → ')||'No evolution chain information'}</div>
           ${proposedIdentity(r)?'<div class="meta">Provisional Mercury pitch • source ID '+r.identity+'</div>':''}
+          ${(proposedIdentity(r)&&proposedIdentity(r).summary)?'<div class="meta"><b>Pitch:</b> '+proposedIdentity(r).summary+'</div>':''}
+          ${(proposedIdentity(r)&&proposedIdentity(r).mechanic)?'<div class="meta"><b>Role:</b> '+(proposedIdentity(r).role||'Mercury candidate')+' • '+proposedIdentity(r).mechanic+'</div>':''}
           <div class="meta">${r.source} • ${r.bucket}${multi?' • design '+(i+1)+' of '+items.length:''}</div>
           <div class="meta" title="${r.front_path}">Source file: ${r.front_path}</div></div>
           <div class="spritepair">
