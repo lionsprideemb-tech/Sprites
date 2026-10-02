@@ -1,28 +1,49 @@
 name: Recover External Fakemon Metadata
+
 on:
   workflow_dispatch:
   push:
     branches: [main]
     paths:
       - 'tools/recover_external_fakemon_metadata.py'
+      - '.github/workflows/recover-external-fakemon-metadata.yml'
+
 permissions:
   contents: write
+
 concurrency:
   group: mercury-external-fakemon-metadata
   cancel-in-progress: true
+
 jobs:
   recover:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-        with: {fetch-depth: 0}
+        with:
+          fetch-depth: 0
       - name: Recover source metadata
         run: python tools/recover_external_fakemon_metadata.py
-      - name: Commit metadata
+      - name: Rebuild strict enrichment
+        run: python tools/enrich_fakemon_metadata.py
+      - name: Build one final leftover review pool
+        run: python tools/build_leftover_review_pool.py
+      - name: Verify final review pool
+        run: python tools/verify_leftover_recovery.py
+      - name: Commit complete recovered review state
         run: |
           git config user.name "Mercury Metadata Recovery Bot"
           git config user.email "actions@users.noreply.github.com"
-          git add DS_CUSTOM_LIBRARY/DS_READY_MASTER/external_fakemon_metadata.json
-          git commit -m "Recover external Fakemon metadata" || exit 0
+          git add \
+            DS_CUSTOM_LIBRARY/DS_READY_MASTER/external_fakemon_metadata.json \
+            DS_CUSTOM_LIBRARY/DS_READY_MASTER/fakemon_enriched_metadata.json \
+            DS_CUSTOM_LIBRARY/DS_READY_MASTER/fakemon_enrichment_report.csv \
+            DS_CUSTOM_LIBRARY/DS_READY_MASTER/fakemon_enrichment_summary.json \
+            DS_CUSTOM_LIBRARY/DS_READY_MASTER/fakemon_excluded_incomplete.csv \
+            DS_CUSTOM_LIBRARY/DS_READY_MASTER/leftover_review_pool.csv \
+            DS_CUSTOM_LIBRARY/DS_READY_MASTER/leftover_review_summary.json \
+            DS_CUSTOM_LIBRARY/DS_READY_MASTER/leftover_recovery_verification.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "Finish consolidated Fakemon recovery and review pool"
           git pull --rebase origin main
           git push origin main
