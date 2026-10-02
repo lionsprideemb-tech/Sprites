@@ -11,6 +11,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: mercury-fakemon-enrichment
+  cancel-in-progress: true
+
 jobs:
   enrich:
     runs-on: ubuntu-latest
