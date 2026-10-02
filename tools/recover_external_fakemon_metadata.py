@@ -92,6 +92,35 @@ def target_aliases(identity,name,source):
         if x in aliases: vals.add(aliases[x])
     return {x for x in vals if x}
 
+def expected_designer(source,front_path=""):
+    fixed={
+      "Mikitari":"mikitari",
+      "Festival_Magiscarf":"magiscarf",
+      "Festival_PrincessPhoenix":"princess-phoenix",
+      "Festival_Scotsman":"scotsman",
+      "Festival_Atsui":"atsui",
+      "Festival_Lumio":"lumio",
+      "Earthretha":"earthretha",
+    }
+    if source in fixed:return fixed[source]
+    if source=="Fakemon_Festival_Full":
+        parts=[norm(x) for x in Path(front_path or "").parts]
+        for x in ("altaira","princessphoenix","biggusweeabus","dulcet","lumio","magiscarf","odisea","pansygum","piacarrot","scotsman","atsui","earthretha"):
+            if norm(x) in parts:return norm(x)
+    return ""
+
+def designer_matches(source,front_path,designer):
+    exp=norm(expected_designer(source,front_path))
+    if not exp:return True
+    got=norm(designer)
+    if not got:return False
+    aliases={
+      "princess-phoenix":{"princess-phoenix","princessphoenix"},
+      "scotsman":{"scotsman","the-scotsman"},
+    }
+    allowed=aliases.get(exp,{exp})
+    return got in allowed or any(a in got or got in a for a in allowed)
+
 def parse_pokengine(url,known_slugs):
     raw=fetch(url)
     if not raw:return None
@@ -301,7 +330,7 @@ for r in targets:
                 seen=[seen[n]]+[u for i,u in enumerate(seen) if i!=n]
         for u in seen[:8]:
             p=parse_pokengine(u,known)
-            if p and p.get("type1"):
+            if p and p.get("type1") and designer_matches(src,r.get("front_path",""),p.get("designer","")):
                 rec=p
                 # Numeric/form targets intentionally allow form-specific pages
                 # even when the visible base species name is identical.
@@ -321,6 +350,7 @@ for r in targets:
             for u in search_links(q)[:6]:
                 p=parse_pokengine(u,set())
                 if not p or not p.get("type1"):continue
+                if not designer_matches(src,r.get("front_path",""),p.get("designer","")):continue
                 href_slug=norm(urllib.parse.unquote(u.rstrip("/").split("/")[-1]))
                 if norm(p.get("name")) in primary or href_slug in primary:
                     rec=p
