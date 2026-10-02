@@ -367,10 +367,13 @@ def sprite_stem_key(s,source=""):
     return x
 
 def likely_back(front_path,identity,source):
-    # First trust only a manifest pair already made within the same source.
+    # A manifest pair is accepted only when the source-specific normalized
+    # species/form key agrees. Same-source alone is NOT enough: the old audit
+    # accidentally reused unrelated backs inside umbrella Fakemon packs.
     rr=next((x for x in rows if x.get("front_path")==front_path),None)
     if rr and rr.get("back_path") and source_of(rr["back_path"])==source:
-        return rr["back_path"]
+        if sprite_stem_key(front_path,source)==sprite_stem_key(rr["back_path"],source):
+            return rr["back_path"]
 
     fkey=sprite_stem_key(front_path,source)
     candidates=[]
