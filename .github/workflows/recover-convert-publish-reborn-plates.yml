@@ -1,0 +1,141 @@
+name: Recover Convert Publish Reborn Plates Legacy
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "DS_CUSTOM_LIBRARY/DS_READY_MASTER/reborn_plates_legacy_exact_map.csv"
+      - ".github/workflows/recover-convert-publish-reborn-plates.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  recover-convert-publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install tools
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq imagemagick unzip
+          pip install pillow gdown
+
+      - name: Download exact Reborn Plates source
+        run: |
+          set -euo pipefail
+          rm -rf /tmp/plates /tmp/plates.zip /tmp/reborn-flat
+          gdown --id 1EuPksJQ-nLTxhQ241Ixm5pehjcIs3fTn -O /tmp/plates.zip
+          unzip -q /tmp/plates.zip -d /tmp/plates
+          test -d /tmp/plates/Graphics/Battlers
+
+      - name: Recover exact approved source views
+        shell: python
+        run: |
+          from pathlib import Path
+          import csv, json, shutil, subprocess
+
+          mapping=Path("DS_CUSTOM_LIBRARY/DS_READY_MASTER/reborn_plates_legacy_exact_map.csv")
+          source=Path("/tmp/plates/Graphics/Battlers")
+          recovered=Path("DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy")
+          flat=Path("/tmp/reborn-flat")
+          audit=Path("DS_CUSTOM_LIBRARY/cleanup-audit")
+          recovered.mkdir(parents=True,exist_ok=True)
+          flat.mkdir(parents=True,exist_ok=True)
+          audit.mkdir(parents=True,exist_ok=True)
+
+          rows=list(csv.DictReader(mapping.open()))
+          result=[]
+
+          def normalize(src,dst):
+              dst.parent.mkdir(parents=True,exist_ok=True)
+              p=subprocess.run(["magick",str(src),"-strip",str(dst)],capture_output=True,text=True)
+              if p.returncode:
+                  raise RuntimeError("ImageMagick failed for %s: %s" % (src,p.stderr))
+
+          for row in rows:
+              ident=row["identity"]
+              dex=int(row["dex"])
+              form=int(row["form"])
+              stem="%03d" % dex
+              srcs={
+                  "front": source/(stem+"_"+str(form)+".png"),
+                  "back": source/(stem+"b_"+str(form)+".png"),
+                  "shiny_front": source/(stem+"s_"+str(form)+".png"),
+                  "shiny_back": source/(stem+"sb_"+str(form)+".png"),
+              }
+              dest=recovered/ident
+              dest.mkdir(parents=True,exist_ok=True)
+              for old in dest.glob("*.png"):
+                  old.unlink()
+
+              found={}
+              names={"front":"front.png","back":"back.png","shiny_front":"shiny_front.png","shiny_back":"shiny_back.png"}
+              for slot,src in srcs.items():
+                  if not src.exists():
+                      continue
+                  out=dest/names[slot]
+                  normalize(src,out)
+                  found[slot]=out
+
+              key=ident.upper().replace("-","_")
+              flat_names={
+                  "front":key+".png",
+                  "back":key+"_BACK.png",
+                  "shiny_front":key+"_SHINY.png",
+                  "shiny_back":key+"_BACK_SHINY.png",
+              }
+              for slot,outpath in found.items():
+                  shutil.copy2(outpath,flat/flat_names[slot])
+
+              result.append({
+                  **row,
+                  "recovered_views":len(found),
+                  "front":"front" in found,
+                  "back":"back" in found,
+                  "shiny_front":"shiny_front" in found,
+                  "shiny_back":"shiny_back" in found,
+              })
+
+          with (audit/"reborn_plates_legacy_recovered.csv").open("w",newline="") as f:
+              fields=list(result[0].keys())
+              w=csv.DictWriter(f,fieldnames=fields)
+              w.writeheader()
+              w.writerows(result)
+
+          summary={
+              "targets":len(result),
+              "normal_front_back_complete":sum(r["front"] and r["back"] for r in result),
+              "four_view_complete":sum(r["recovered_views"]==4 for r in result),
+              "partial":sum(r["recovered_views"]<4 for r in result),
+          }
+          (audit/"reborn_plates_legacy_recovered_summary.json").write_text(json.dumps(summary,indent=2)+"\n")
+          print(json.dumps(summary,indent=2))
+
+      - name: Run existing Mercury GBA to DS technical converter
+        run: |
+          mkdir -p DS_CUSTOM_LIBRARY/cleanup-audit/reborn-plates-conversion
+          python tools/mercury_bulk_gba_to_ds.py \
+            --source /tmp/reborn-flat \
+            --output DS_CUSTOM_LIBRARY/converted/Legacy_GBA_Phase1 \
+            --report-dir DS_CUSTOM_LIBRARY/cleanup-audit/reborn-plates-conversion
+
+      - name: Commit recovered assets and conversion results
+        run: |
+          git config user.name "Mercury Sprite Recovery Bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add \
+            DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy \
+            DS_CUSTOM_LIBRARY/converted/Legacy_GBA_Phase1 \
+            DS_CUSTOM_LIBRARY/cleanup-audit/reborn_plates_legacy_recovered.csv \
+            DS_CUSTOM_LIBRARY/cleanup-audit/reborn_plates_legacy_recovered_summary.json \
+            DS_CUSTOM_LIBRARY/cleanup-audit/reborn-plates-conversion
+          if git diff --cached --quiet; then
+            echo "No changes"
+            exit 0
+          fi
+          git commit -m "Recover and convert 94 Reborn Plates legacy approvals"
+          git push origin main
