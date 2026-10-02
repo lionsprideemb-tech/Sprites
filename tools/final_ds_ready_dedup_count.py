@@ -80,6 +80,12 @@ def role(p):
     stem=norm(p.stem); parts=[norm(x) for x in p.parts]; joined="/".join(parts)
     if "icon" in stem or "/icon/" in joined or "/icons/" in joined: return "icon"
     shiny=("shiny" in stem or any("shiny" in x for x in parts))
+    # PrincessPhoenix uses a trailing S for shiny companions (e.g. FiromenisFS
+    # beside FiromenisF, PythonovaS beside Pythonova, *B4S beside *B4).
+    # Recognize it only when the non-S companion physically exists.
+    if "festival-princessphoenix" in parts and p.stem.lower().endswith("s"):
+        mate=p.with_name(p.stem[:-1]+p.suffix)
+        if mate.exists(): shiny=True
     back=("back" in stem or any(
         x in {"back","backs","backsprite","backsprites","back-shiny"}
         or "backsprite" in x or x.endswith("-backs")
@@ -166,6 +172,13 @@ for root,bucket in ROOTS:
         if not p.is_file() or p.suffix.lower() not in EXTS: continue
         ps="/"+p.as_posix().replace("\\","/")+"/"
         if any(x in ps for x in EXCLUDE): continue
+        # This contributor ships both Gen-3 and native DS-style Gen-4/5 views.
+        # For the DS approval master, never pair a Gen-3 front with a Gen-4 back.
+        lowps=ps.lower()
+        if "/festival_princessphoenix/" in lowps and (
+            "/gen 3 frontsprites/" in lowps or "/gen 3 backsprites/" in lowps
+        ):
+            continue
         sig=image_signatures(p)
         if not sig:
             decode_fail.append(p.as_posix()); continue
