@@ -1,133 +1,200 @@
-name: Recover Reborn Plates Legacy Approved Sprites
+name: Recover Convert And Review Legacy GBA Sprites
 
 on:
   workflow_dispatch:
   push:
     paths:
+      - "DS_CUSTOM_LIBRARY/DS_READY_MASTER/reborn_plates_recovery_trigger.txt"
       - ".github/workflows/recover-reborn-plates-legacy.yml"
 
 permissions:
   contents: write
 
 jobs:
-  recover:
+  recover-convert-review:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
-      - name: Install recovery tools
-        run: pip install gdown pillow
+      - name: Install tools
+        run: pip install pillow gdown
 
-      - name: Download public Plates of Arceus Episode 0 patch
+      - name: Download Plates of Arceus Episode 0 source
         run: |
           set -euo pipefail
-          gdown --id 1EuPksJQ-nLTxhQ241Ixm5pehjcIs3fTn -O /tmp/plates.zip
+          rm -rf /tmp/plates /tmp/plates.zip
+          gdown --fuzzy "https://drive.google.com/file/d/1EuPksJQ-nLTxhQ241Ixm5pehjcIs3fTn/view" -O /tmp/plates.zip
           unzip -q /tmp/plates.zip -d /tmp/plates
+          test -n "$(find /tmp/plates -type d -path '*/Graphics/Battlers' -print -quit)"
 
-      - name: Inventory battler sprites and recover exact reviewed forms
+      - name: Recover exact 94 approved Reborn Plates source sets
         shell: python
         run: |
           from pathlib import Path
-          import csv, json, re, shutil
-          from PIL import Image
+          import csv, json, re, shutil, urllib.request
 
-          root=Path("/tmp/plates")
-          out=Path("DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy")
-          audit=Path("DS_CUSTOM_LIBRARY/cleanup-audit")
-          out.mkdir(parents=True,exist_ok=True); audit.mkdir(parents=True,exist_ok=True)
+          repo=Path(".")
+          patch=Path("/tmp/plates")
+          battlers=next(p for p in patch.rglob("Battlers") if p.parent.name=="Graphics")
+          recovered=repo/"DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy"
+          flat=Path("/tmp/reborn-plates-flat")
+          audit=repo/"DS_CUSTOM_LIBRARY/cleanup-audit"
+          shutil.rmtree(recovered,ignore_errors=True); recovered.mkdir(parents=True)
+          shutil.rmtree(flat,ignore_errors=True); flat.mkdir(parents=True)
+          audit.mkdir(parents=True,exist_ok=True)
 
-          # Build a full PNG inventory first so nothing is guessed invisibly.
-          pngs=list(root.rglob("*.png"))
-          inv=[]
-          for p in pngs:
-              rel=p.relative_to(root).as_posix()
-              low=rel.lower()
-              if "battler" not in low and "pokemon" not in low and "sprite" not in low:
-                  continue
-              try:
-                  im=Image.open(p)
-                  inv.append({"path":rel,"name":p.name,"width":im.width,"height":im.height})
-              except Exception:
-                  pass
-
-          with (audit/"reborn_plates_png_inventory.csv").open("w",newline="") as f:
-              w=csv.DictWriter(f,fieldnames=["path","name","width","height"])
-              w.writeheader(); w.writerows(inv)
-
-          # Pull the 94 exact legacy-approved Reborn/Plates identities.
-          import json
-          manifest=json.loads(Path("DS_CUSTOM_LIBRARY/DS_READY_MASTER/legacy_gba_auto_yes_recovery_phase1_source_routes.json").read_text())
+          manifest=json.loads((repo/"DS_CUSTOM_LIBRARY/DS_READY_MASTER/legacy_gba_auto_yes_recovery_phase1_source_routes.json").read_text())
           targets=[e for e in manifest["entries"] if e.get("source_recovery_route")=="REBORN_PLATES_STAGED_SOURCE"]
+          assert len(targets)==94, len(targets)
 
-          # Essentials/Reborn battle sprite conventions commonly use dex/form numeric stems.
-          # We do not silently bind ambiguous files. First match explicit base-name/form text when present.
+          names_url="https://raw.githubusercontent.com/PokeAPI/pokeapi/master/data/v2/csv/pokemon_species_names.csv"
+          names_csv=Path("/tmp/pokemon_species_names.csv")
+          urllib.request.urlretrieve(names_url,names_csv)
+          dex={}
+          with names_csv.open(newline="",encoding="utf-8") as f:
+              for r in csv.DictReader(f):
+                  if r["local_language_id"]=="9":
+                      key=re.sub(r"[^a-z0-9]+","-",r["name"].lower().replace("’","").replace("'","")).strip("-")
+                      dex[key]=int(r["pokemon_species_id"])
+
           def norm(s):
-              return re.sub(r"[^a-z0-9]+","-",s.lower()).strip("-")
+              return re.sub(r"[^a-z0-9]+","-",str(s).lower().replace("’","").replace("'","")).strip("-")
 
-          files=[]
-          for p in pngs:
-              rel=p.relative_to(root).as_posix()
-              low=rel.lower()
-              if "battler" in low or "pokemon" in low:
-                  files.append((p,rel,norm(p.stem),norm(rel)))
-
-          rows=[]; recovered=0
+          rows=[]
           for e in targets:
-              ident=e["identity"]; base=e.get("base",""); rv=e.get("reviewed_variant","")
-              form_match=re.search(r"form-(\d+)",ident)
-              form_num=form_match.group(1) if form_match else ""
-              b=norm(base)
-              # Conservative name-based candidates only in this first bulk pass.
-              cand=[]
-              for p,rel,stem,nrel in files:
-                  score=0
-                  if b and b in stem: score+=5
-                  if b and b in nrel: score+=2
-                  if form_num and (f"-{form_num}" in stem or f"_{form_num}" in p.stem.lower() or p.stem.endswith(form_num)): score+=3
-                  if "back" in p.stem.lower() or "back" in rel.lower(): score+=1
-                  if score>=5: cand.append((score,p,rel))
-              cand.sort(key=lambda x:(-x[0],len(x[2]),x[2]))
-              dest=out/ident
-              if dest.exists(): shutil.rmtree(dest)
-              dest.mkdir(parents=True,exist_ok=True)
-              copied=[]
-              for i,(score,p,rel) in enumerate(cand[:12],1):
-                  q=dest/f"candidate-{i:02d}-{p.name}"
-                  shutil.copy2(p,q); copied.append(rel)
-              if copied: recovered+=1
+              ident=e["identity"]; base=e.get("base","")
+              d=dex[norm(base)]
+              m=re.search(r"form-(\d+)",ident)
+              assert m, ident
+              form=int(m.group(1))
+              stems={
+                  "front":f"{d:03d}_{form}.png",
+                  "back":f"{d:03d}b_{form}.png",
+                  "shiny_front":f"{d:03d}s_{form}.png",
+                  "shiny_back":f"{d:03d}sb_{form}.png",
+              }
+              dest=recovered/ident; dest.mkdir(parents=True,exist_ok=True)
+              found={}
+              for slot,name in stems.items():
+                  src=battlers/name
+                  if src.exists():
+                      out=dest/({"front":"front.png","back":"back.png","shiny_front":"shiny_front.png","shiny_back":"shiny_back.png"}[slot])
+                      shutil.copy2(src,out); found[slot]=src.relative_to(patch).as_posix()
+              assert "front" in found and "back" in found, (ident,found)
+
+              key=ident.upper().replace("-","_")
+              shutil.copy2(dest/"front.png",flat/f"{key}.png")
+              shutil.copy2(dest/"back.png",flat/f"{key}_BACK.png")
+              if (dest/"shiny_front.png").exists(): shutil.copy2(dest/"shiny_front.png",flat/f"{key}_SHINY.png")
+              if (dest/"shiny_back.png").exists(): shutil.copy2(dest/"shiny_back.png",flat/f"{key}_BACK_SHINY.png")
+
               rows.append({
-                  "identity":ident,"base":base,"reviewed_variant":rv,
-                  "candidate_count":len(cand),"copied_count":len(copied),
-                  "candidate_paths":"|".join(copied),
-                  "status":"CANDIDATES_RECOVERED" if copied else "NO_NAME_MATCH"
+                  "identity":ident,"base":base,"dex":d,"form":form,
+                  "front":found.get("front",""),"back":found.get("back",""),
+                  "shiny_front":found.get("shiny_front",""),"shiny_back":found.get("shiny_back",""),
+                  "view_count":len(found),
               })
 
-          with (audit/"reborn_plates_legacy_recovery.csv").open("w",newline="") as f:
+          with (audit/"reborn_plates_legacy_exact_recovery.csv").open("w",newline="",encoding="utf-8") as f:
               w=csv.DictWriter(f,fieldnames=rows[0].keys()); w.writeheader(); w.writerows(rows)
-
           summary={
-              "targets":len(targets),
-              "targets_with_candidates":recovered,
-              "targets_without_name_match":len(targets)-recovered,
-              "inventory_png_count":len(inv),
-              "note":"Candidate recovery only; ambiguous numeric/form bindings are intentionally not auto-promoted until the inventory mapping is checked."
+              "targets":len(rows),
+              "front_back_complete":sum(r["front"] and r["back"] for r in rows),
+              "complete_4view":sum(r["view_count"]==4 for r in rows),
+              "normal_only":sum(r["view_count"]==2 for r in rows),
           }
-          (audit/"reborn_plates_legacy_recovery_summary.json").write_text(json.dumps(summary,indent=2)+"\n")
+          (audit/"reborn_plates_legacy_exact_recovery_summary.json").write_text(json.dumps(summary,indent=2)+"\n")
           print(json.dumps(summary,indent=2))
 
-      - name: Commit recovered candidates and audit
+      - name: Run the existing GBA to DS technical converter in bulk
+        run: |
+          set -euo pipefail
+          rm -rf /tmp/reborn-converted /tmp/reborn-report
+          mkdir -p /tmp/reborn-converted /tmp/reborn-report
+          python tools/mercury_bulk_gba_to_ds.py \
+            --source /tmp/reborn-plates-flat \
+            --output /tmp/reborn-converted \
+            --report-dir /tmp/reborn-report
+
+          # Merge this recovered batch into the SAME converted pool as the earlier 122.
+          mkdir -p DS_CUSTOM_LIBRARY/converted/Legacy_GBA_Phase1
+          cp -a /tmp/reborn-converted/. DS_CUSTOM_LIBRARY/converted/Legacy_GBA_Phase1/
+
+          for f in /tmp/reborn-report/*; do
+            n="$(basename "$f")"
+            case "$n" in
+              elite_redux_gba_to_ds_design_classification.csv) out="reborn_plates_gba_to_ds_design_classification.csv" ;;
+              elite_redux_gba_to_ds_slot_audit.csv) out="reborn_plates_gba_to_ds_slot_audit.csv" ;;
+              elite_redux_gba_to_ds_summary.json) out="reborn_plates_gba_to_ds_summary.json" ;;
+              *) out="reborn_plates_$n" ;;
+            esac
+            cp "$f" "DS_CUSTOM_LIBRARY/cleanup-audit/$out"
+          done
+
+      - name: Build combined mobile approval page
+        shell: python
+        run: |
+          from pathlib import Path
+          import csv, html, json, re
+
+          repo=Path(".")
+          converted=repo/"DS_CUSTOM_LIBRARY/converted/Legacy_GBA_Phase1"
+          recovered=repo/"DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy"
+          exact=list(csv.DictReader((repo/"DS_CUSTOM_LIBRARY/cleanup-audit/reborn_plates_legacy_exact_recovery.csv").open()))
+          exact_by={r["identity"]:r for r in exact}
+
+          def nice(s):
+              return " ".join(w.upper() if w in {"bt"} else w.capitalize() for w in s.replace("_","-").replace("-"," ").split())
+
+          entries=[]
+          seen=set()
+          for d in sorted(p for p in converted.iterdir() if p.is_dir()):
+              ident=d.name.replace("_","-")
+              e={"identity":ident,"name":nice(ident),"source_group":"Earlier GBA recovery","folder":d.relative_to(repo).as_posix()}
+              if ident in exact_by:
+                  e["source_group"]="Recovered Reborn / Plates"
+                  e["dex"]=exact_by[ident]["dex"]; e["form"]=exact_by[ident]["form"]
+              entries.append(e); seen.add(ident)
+
+          # Guarantee all 94 appear even if the converter classified a partial source set without an output dir.
+          for ident,r in exact_by.items():
+              if ident in seen: continue
+              d=recovered/ident
+              entries.append({"identity":ident,"name":nice(ident),"source_group":"Recovered Reborn / Plates — source only","folder":d.relative_to(repo).as_posix(),"dex":r["dex"],"form":r["form"]})
+
+          data=json.dumps(entries,separators=(",",":"))
+          css="""*{box-sizing:border-box}body{margin:0;background:#f3efe5;color:#202733;font-family:system-ui,-apple-system,Segoe UI,sans-serif}.top{position:sticky;top:0;z-index:5;padding:7px 9px;background:#fffdf8f2;border-bottom:1px solid #d7cebf;backdrop-filter:blur(6px)}h1{font-size:16px;margin:0 0 3px}.sub{font-size:10px;color:#616977;margin-bottom:5px}.ctrl{display:flex;gap:5px;flex-wrap:wrap}input,select,button,textarea{font:inherit}input,select,button{min-height:36px;border:1px solid #bbc1cb;border-radius:9px;background:#fff;padding:6px 8px}input{flex:1 1 150px}button.active{font-weight:800;background:#e7eef8}#grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(285px,1fr));gap:8px;padding:8px}.card{background:#fffdf8;border:1px solid #d7cebf;border-radius:12px;overflow:hidden}.head{padding:8px 9px 6px;border-bottom:1px solid #ece5da}.name{font-weight:800;font-size:14px}.id{font-size:9px;color:#616977;margin-top:2px}.badge{display:inline-block;font-size:9px;font-weight:800;padding:2px 6px;border-radius:999px;background:#edf1f6;margin:4px 4px 0 0}.sprites{display:grid;grid-template-columns:repeat(2,1fr);gap:5px;padding:7px}.slot{height:104px;border:1px solid #ebe2d4;background:#f7f3eb;border-radius:8px;display:flex;flex-direction:column;align-items:center;justify-content:center;overflow:hidden}.lab{font-size:8px;color:#616977;font-weight:800;text-transform:uppercase}.slot img{max-width:88px;max-height:82px;object-fit:contain;image-rendering:pixelated}.miss{font-size:10px;color:#914039;padding:8px;text-align:center}.actions{display:flex;gap:4px;padding:0 7px 7px}.actions button{flex:1}.approve.active{background:#e6f5ea;border-color:#83b998;color:#2d7045}.maybe.active{background:#faf0d8;border-color:#d1b778;color:#82611d}.reject.active{background:#f8e8e6;border-color:#d39c96;color:#9b433d}.notes{padding:0 7px 7px}textarea{width:100%;min-height:46px;border:1px solid #d4cbbb;border-radius:8px;padding:6px;background:#fff;resize:vertical}.count{font-size:10px;color:#616977;margin-left:auto;align-self:center}@media(max-width:620px){#grid{grid-template-columns:1fr;padding:6px}.top{padding:6px 7px}}"""
+
+          page=f'''<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Mercury Legacy GBA Combined Approval</title><style>{css}</style></head><body>
+          <div class="top"><h1>Mercury — Legacy GBA Combined Approval</h1><div class="sub">Earlier converted GBA recoveries + the newly recovered Reborn/Plates approvals in one mobile review page.</div><div class="ctrl">
+          <input id="q" placeholder="Search Pokémon / form"><select id="src"><option value="all">All sources</option><option value="Earlier GBA recovery">Earlier converted batch</option><option value="Recovered Reborn / Plates">New Reborn / Plates</option></select>
+          <button class="f active" data-f="unreviewed">Unreviewed</button><button class="f" data-f="all">All</button><button class="f" data-f="approve">Approved</button><button class="f" data-f="maybe">Maybe</button><button class="f" data-f="reject">Rejected</button><button id="export">Export CSV</button><span id="count" class="count"></span></div></div><div id="grid"></div>
+          <script>
+          const E={data},STORE='mercury-legacy-gba-combined-approval-v1';let D=JSON.parse(localStorage.getItem(STORE)||'{{}}'),F='unreviewed';const $=q=>document.querySelector(q),G=$('#grid');
+          function S(i){{return D[i]||{{status:'',note:''}}}}function save(){{localStorage.setItem(STORE,JSON.stringify(D))}}function esc(s){{return String(s??'').replace(/[&<>"]/g,c=>({{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}}[c]))}}
+          function slot(e,file,label){{let src=e.folder+'/'+file;return '<div class="slot"><div class="lab">'+label+'</div><img loading="lazy" src="'+src+'" onerror="this.remove();this.parentElement.insertAdjacentHTML(\'beforeend\',\'<div class=miss>Not available</div>\')"></div>'}}
+          function pass(e){{let s=S(e.identity).status,q=$('#q').value.toLowerCase().trim(),src=$('#src').value;if(F==='unreviewed'&&s)return false;if(!['all','unreviewed'].includes(F)&&s!==F)return false;if(q&&!e.identity.toLowerCase().includes(q)&&!e.name.toLowerCase().includes(q))return false;if(src!=='all'&&!e.source_group.startsWith(src))return false;return true}}
+          function card(e){{let d=S(e.identity);return '<div class="card"><div class="head"><div class="name">'+esc(e.name)+'</div><div class="id">'+esc(e.identity)+' • '+esc(e.source_group)+'</div><span class="badge">Legacy GBA recovery</span></div><div class="sprites">'+slot(e,'front.png','Front')+slot(e,'back.png','Back')+slot(e,'front-shiny.png','Shiny Front')+slot(e,'back-shiny.png','Shiny Back')+'</div><div class="actions"><button class="approve '+(d.status==='approve'?'active':'')+'" data-id="'+e.identity+'" data-s="approve">Approve</button><button class="maybe '+(d.status==='maybe'?'active':'')+'" data-id="'+e.identity+'" data-s="maybe">Maybe</button><button class="reject '+(d.status==='reject'?'active':'')+'" data-id="'+e.identity+'" data-s="reject">Reject</button></div><div class="notes"><textarea data-note="'+e.identity+'" placeholder="Optional note / type / family idea">'+esc(d.note)+'</textarea></div></div>'}}
+          function render(){{let r=E.filter(pass),rev=E.filter(e=>S(e.identity).status).length;$('#count').textContent=r.length+' shown • '+rev+'/'+E.length+' reviewed';G.innerHTML=r.map(card).join('');G.querySelectorAll('button[data-s]').forEach(b=>b.onclick=()=>{{let d=S(b.dataset.id),s=b.dataset.s;D[b.dataset.id]={{...d,status:d.status===s?'':s}};save();render()}});G.querySelectorAll('textarea[data-note]').forEach(t=>t.onchange=()=>{{D[t.dataset.note]={{...S(t.dataset.note),note:t.value}};save()}})}}
+          document.querySelectorAll('.f').forEach(b=>b.onclick=()=>{{document.querySelectorAll('.f').forEach(x=>x.classList.remove('active'));b.classList.add('active');F=b.dataset.f;render()}});$('#q').oninput=render;$('#src').onchange=render;
+          $('#export').onclick=()=>{{let c=['identity','name','source_group','decision','note'],o=[c.join(',')];for(let e of E){{let d=S(e.identity),r={{identity:e.identity,name:e.name,source_group:e.source_group,decision:d.status,note:d.note}};o.push(c.map(k=>'"'+String(r[k]??'').replaceAll('"','""')+'"').join(','))}}let b=new Blob([o.join('\n')],{{type:'text/csv'}}),a=document.createElement('a');a.href=URL.createObjectURL(b);a.download='mercury_legacy_gba_combined_decisions.csv';a.click()}};render();
+          </script></body></html>'''
+          (repo/"legacy-gba-combined-approval.html").write_text(page,encoding="utf-8")
+          print("Combined approval entries:",len(entries))
+
+      - name: Commit converted sprites and approval page
         run: |
           git config user.name "Mercury Sprite Recovery Bot"
           git config user.email "actions@users.noreply.github.com"
           git add DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy \
-                  DS_CUSTOM_LIBRARY/cleanup-audit/reborn_plates_png_inventory.csv \
-                  DS_CUSTOM_LIBRARY/cleanup-audit/reborn_plates_legacy_recovery.csv \
-                  DS_CUSTOM_LIBRARY/cleanup-audit/reborn_plates_legacy_recovery_summary.json
+                  DS_CUSTOM_LIBRARY/converted/Legacy_GBA_Phase1 \
+                  DS_CUSTOM_LIBRARY/cleanup-audit/reborn_plates_* \
+                  legacy-gba-combined-approval.html
           if git diff --cached --quiet; then
             echo "No changes"
             exit 0
           fi
-          git commit -m "Recover Reborn Plates candidates for legacy approved sprites"
+          git commit -m "Convert recovered Reborn Plates sprites and publish combined GBA approval"
           git push origin main
-
-# force-run-2026-10-02
