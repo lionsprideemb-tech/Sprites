@@ -427,8 +427,9 @@ document.getElementById('backup').onclick=()=>download('mercury_ds_sprite_approv
       if(r.is_official!=='False')return false;
       const e=enrichedMap[r.identity+'|'+r.structural_hash];
       if(!e||!e.ready_for_approval)return false;
-      // "No evolution data found" is unresolved, not proof of a standalone species.
-      if(e.family==='Standalone / no evolution data found' && r.identity!=='059-1f')return false;
+      // Unresolved family metadata is never enough for approval. Only explicit
+      // source/Mercury relationships or the user-approved 059_1f override pass.
+      if(((e.confidence||'').includes('UNRESOLVED_FAMILY') || /^Standalone \/ no (known evolution|evolution data found)$/i.test(e.family||'')) && r.identity!=='059-1f')return false;
       return true;
     });
     if(platinumRes.ok){
