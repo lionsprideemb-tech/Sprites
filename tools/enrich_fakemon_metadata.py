@@ -45,6 +45,8 @@ def source_of(path):
 # Parse text metadata embedded in packs (Essentials/PBS-style plus loose CSV/JSON hints).
 meta={}
 edges=collections.defaultdict(set)
+children=collections.defaultdict(set)
+parents=collections.defaultdict(set)
 text_ext={".txt",".pbs",".ini",".cfg",".csv",".json",".md"}
 for base in [ROOT/"packs",ROOT/"hack-packs",ROOT/"converted"]:
     if not base.exists():continue
@@ -72,7 +74,7 @@ for base in [ROOT/"packs",ROOT/"hack-packs",ROOT/"converted"]:
                 toks=[x.strip() for x in ev.group(1).split(",")]
                 for j in range(0,len(toks),3):
                     if j<len(toks) and toks[j]:
-                        child=norm(toks[j]); edges[key].add(child);edges[child].add(key)
+                        child=norm(toks[j]); edges[key].add(child);edges[child].add(key);children[key].add(child);parents[child].add(key)
         # Generic "Name, Type1, Type2" CSV-like rows are intentionally not trusted unless headers exist.
         if p.suffix.lower()==".csv":
             try:
@@ -165,6 +167,56 @@ def custom_family(key):
         seen.add(x);stack.extend(edges.get(x,()))
     return seen
 
+def custom_family_order(key):
+    fam=custom_family(key)
+    roots=sorted(x for x in fam if not (parents.get(x,set()) & fam))
+    ordered=[];seen=set()
+    def walk(x):
+        if x in seen:return
+        seen.add(x);ordered.append(x)
+        for y in sorted(children.get(x,set()) & fam):
+            walk(y)
+    for r in roots:walk(r)
+    for x in sorted(fam):
+        if x not in seen:walk(x)
+    return ordered
+
+# Recover numbered alternate-form families (e.g. ODDISH_1 → GLOOM_1 → VILEPLUME_1)
+# from the canonical evolution chain instead of alphabetically grouping source IDs.
+numbered_form_family={}
+numbered_type_fallback={}
+numbered=[]
+for rr in rows:
+    if rr.get("is_official")!="False":continue
+    ident=rr.get("identity","")
+    m=re.match(r"^(.+)-(\d+)$",ident)
+    if m:
+        numbered.append((rr.get("source",""),m.group(2),m.group(1),ident))
+groups=collections.defaultdict(list)
+for src,suffix,base,ident in numbered:
+    sp=poke_species(base)
+    if not sp:continue
+    members=chain_members(sp["evolution_chain"]["url"])
+    if not members:continue
+    root=members[0]
+    groups[(src,suffix,root)].append((base,ident,members))
+for (src,suffix,root),items in groups.items():
+    member_order=items[0][2]
+    present={base:ident for base,ident,_ in items}
+    ordered=[present[x] for x in member_order if x in present]
+    if len(ordered)<2:continue
+    label=" → ".join(x.replace("-"," ").title() for x in ordered)
+    known_types=[]
+    for ident in ordered:
+        sm=meta.get((src,norm(ident)))
+        if sm and sm.get("type1"):
+            known_types.append((sm.get("type1",""),sm.get("type2","")))
+    unique_types=list(dict.fromkeys(known_types))
+    for ident in ordered:
+        numbered_form_family[(src,ident)]=label
+        if len(unique_types)==1:
+            numbered_type_fallback[(src,ident)]=unique_types[0]
+
 enriched={}
 report=[]
 for r in rows:
@@ -215,6 +267,9 @@ for r in rows:
                 out["type2"]=types[1]["type"]["name"].title() if len(types)>1 else ""
                 confidence.append("BASE_TYPE_PROPOSAL")
     # Named official-base/custom-form fallback.
+    if not out.get("type1") and (src,ident) in numbered_type_fallback:
+        out["type1"],out["type2"]=numbered_type_fallback[(src,ident)]
+        confidence.append("NUMBERED_FAMILY_TYPE_PROPAGATION")
     if not out.get("type1"):
         base=re.sub(r"-(mega(?:-[xyz])?|redux|delta|male|female|hisuian|galarian|alolan|paldean)$","",key)
         pk=poke_pokemon(base)
@@ -228,8 +283,11 @@ for r in rows:
             members=chain_members(sp["evolution_chain"]["url"])
             if members:out["family"]=" → ".join(x.replace("-"," ").title() for x in members)
     # Custom source evolution graph.
-    if not out.get("family") and key in edges:
-        fam=sorted(custom_family(key))
+    if (src,ident) in numbered_form_family:
+        out["family"]=numbered_form_family[(src,ident)]
+        confidence.append("CANONICAL_FORM_FAMILY_ORDER")
+    elif not out.get("family") and key in edges:
+        fam=custom_family_order(key)
         out["family"]=" → ".join(x.replace("-"," ").title() for x in fam)
         confidence.append("SOURCE_EVOLUTION_GRAPH")
     # No known family = standalone; explicit is better than blank.
