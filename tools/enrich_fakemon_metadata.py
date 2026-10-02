@@ -70,23 +70,25 @@ def _official_name_candidate(ident):
     return False
 
 def plain_official_row(r,type_map):
-    """Exclude ordinary official/native art from the custom review pool.
-    A custom variant only survives when its identity is not an official Pokémon
-    variety or source metadata explicitly establishes a custom redesign."""
+    """Use the canonical audit's asset-level classification.
+    Baseline official art is excluded; custom-source designs that reuse an
+    official species/form name remain eligible for review."""
+    flag=str(r.get("is_official","")).strip().lower()
+    if flag in {"true","1","yes"}:
+        return True
+    if flag in {"false","0","no"}:
+        return False
+    # Backward-compatible fallback for an older manifest lacking the flag.
     ident=norm(r.get("identity",""))
     src=r.get("source","")
-    # Explicit source metadata for the exact identity means this may be a true
-    # donor redesign, so do not erase it merely because the display name is canon.
-    has_custom_meta=(src,ident) in meta if "meta" in globals() else False
-    if has_custom_meta:
-        return False
-    if _official_name_candidate(ident):
+    if src in {
+        "DrPrettyman_DS_64x64","HG_Engine_DS_Sprites","DS_Styled_Gen5_8",
+        "Gen7_DS_Backsprites","Shiny_Icons_Gen1_9","Elite_Redux_Bulk"
+    } and _official_name_candidate(ident):
         return True
     mr=type_map.get(ident) or {}
     cat=str(mr.get("category","")).upper()
-    if cat in {"CANON","OFFICIAL/CANON","OFFICIAL REGIONAL","OFFICIAL FORM"}:
-        return True
-    return False
+    return cat in {"CANON","OFFICIAL/CANON","OFFICIAL REGIONAL","OFFICIAL FORM"}
 
 def read_csv(p):
     with p.open(newline="",encoding="utf-8-sig",errors="replace") as f:
