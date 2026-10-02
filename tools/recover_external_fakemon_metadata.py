@@ -464,5 +464,5 @@ for rec in out.values():
 stats["records_total"]=len(out)
 stats["with_family"]=sum(1 for r in out.values() if r.get("family"))
 stats["standalone"]=sum(1 for r in out.values() if r.get("standalone"))
-OUT.write_text(json.dumps({"generated":"2026-10-02","records":out,"stats":stats},indent=2)+"\\n",encoding="utf-8")
+OUT.write_text(json.dumps({"generated":"2026-10-02","records":out,"stats":stats},indent=2)+"\n",encoding="utf-8")
 print(json.dumps(stats,indent=2))
