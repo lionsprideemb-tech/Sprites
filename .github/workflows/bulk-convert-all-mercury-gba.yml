@@ -8,6 +8,7 @@ on:
       - "DS_CUSTOM_LIBRARY/packs/Elite_Redux_ER_nextdex/**"
       - "tools/mercury_bulk_gba_to_ds.py"
       - ".github/workflows/bulk-convert-all-mercury-gba.yml"
+      - "DS_CUSTOM_LIBRARY/DS_READY_MASTER/all_gba_recovery_trigger.txt"
 
 permissions:
   contents: write
@@ -241,4 +242,5 @@ jobs:
             exit 0
           fi
           git commit -m "Stage full Mercury GBA backlog through DS technical converter"
+          git pull --rebase origin main
           git push origin main
