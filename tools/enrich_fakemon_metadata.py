@@ -36,7 +36,22 @@ for base in [ROOT/"packs",ROOT/"hack-packs",ROOT/"converted"]:
         if p.is_file() and p.suffix.lower() in image_ext:
             ps=p.as_posix()
             low=ps.lower()
-            role="back" if any(x in low for x in ["/back/","/backs/","back.","_back","/backsprite","/backsprites/"]) else ("front" if any(x in low for x in ["/front/","/fronts/","front.","_front","/frontsprite","/frontsprites/"]) else "unknown")
+            pparts=[norm(x) for x in p.parts]
+            back_folder=any(
+                x in {"back","backs","backsprite","backsprites"}
+                or "backsprite" in x or x.endswith("-backs")
+                for x in pparts
+            )
+            front_folder=any(
+                x in {"front","fronts","frontsprite","frontsprites"}
+                or "frontsprite" in x or x.endswith("-fronts")
+                for x in pparts
+            )
+            role="back" if (
+                back_folder or any(x in low for x in ["/back/","/backs/","back.","_back"])
+            ) else ("front" if (
+                front_folder or any(x in low for x in ["/front/","/fronts/","front.","_front"])
+            ) else "unknown")
             all_images.append((p,role))
 
 def source_of(path):
