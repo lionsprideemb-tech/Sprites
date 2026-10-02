@@ -20,4 +20,4 @@ for url in urls:
             if line:
                 out.append(line[:3000]+"\n")
 Path("DS_CUSTOM_LIBRARY/DS_READY_MASTER/pokengine_probe.txt").write_text("".join(out),encoding="utf-8")
-print("wrote probe")
+# trigger probe after workflow install\nprint("wrote probe")
