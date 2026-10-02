@@ -834,11 +834,11 @@
       "source": "Mikitari",
       "front_path": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Front/BEELITANT.png",
       "back_path": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/BEELITANT.png",
+      "family": "Beelitant \u2192 Kocomb \u2192 Granebee",
       "name": "Beelitant",
       "type1": "Bug",
       "type2": "Flying",
-      "family": "Beelitant \u2192 Kocomb \u2192 Furrva \u2192 Granebee",
-      "confidence": "EXTERNAL_SOURCE_METADATA",
+      "confidence": "VERIFIED_SOURCE_METADATA;EXTERNAL_SOURCE_METADATA",
       "ready_for_approval": true
     },
     "bellscrop|198147d884f7d59b8aa7d08b64aa1f396fc025ad563d716fbce20c729f4db08e": {
@@ -3658,7 +3658,7 @@
       "type1": "Poison",
       "type2": "Normal",
       "family": "Flampy \u2192 Murasalem",
-      "confidence": "EXTERNAL_SOURCE_METADATA",
+      "confidence": "VERIFIED_SOURCE_METADATA;EXTERNAL_SOURCE_METADATA",
       "ready_for_approval": true
     },
     "flarepent|99b6d0d1e5e213473a92dac2d34c3d2d805318e8d4ea46c95dbb1184e44b369b": {
@@ -4710,11 +4710,11 @@
       "source": "Mikitari",
       "front_path": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Front/GRANEBEE.png",
       "back_path": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/GRANEBEE.png",
+      "family": "Beelitant \u2192 Kocomb \u2192 Granebee",
       "name": "Granebee",
       "type1": "Bug",
       "type2": "Flying",
-      "family": "Beelitant \u2192 Kocomb \u2192 Furrva \u2192 Granebee",
-      "confidence": "EXTERNAL_SOURCE_METADATA",
+      "confidence": "VERIFIED_SOURCE_METADATA;EXTERNAL_SOURCE_METADATA",
       "ready_for_approval": true
     },
     "granitun|4501bd8a52024dcfb4779988a2a70f580139c745a78ef5947f21aba7012d0506": {
@@ -6114,11 +6114,11 @@
       "source": "Mikitari",
       "front_path": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Front/KOCOMB.png",
       "back_path": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/KOCOMB.png",
+      "family": "Beelitant \u2192 Kocomb \u2192 Granebee",
       "name": "Kocomb",
       "type1": "Bug",
       "type2": "",
-      "family": "Beelitant \u2192 Kocomb \u2192 Furrva \u2192 Granebee",
-      "confidence": "EXTERNAL_SOURCE_METADATA",
+      "confidence": "VERIFIED_SOURCE_METADATA;EXTERNAL_SOURCE_METADATA",
       "ready_for_approval": true
     },
     "kocomb-1|9e0c820d55c7111eba5ddb108ff97edaed6957403e3f3cc41a633a7a3836d94f": {
@@ -6126,11 +6126,11 @@
       "source": "Mikitari",
       "front_path": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Front/KOCOMB_1.png",
       "back_path": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/KOCOMB_1.png",
+      "family": "Beelitant \u2192 Kocomb \u2192 Granebee",
       "name": "Kocomb",
       "type1": "Bug",
       "type2": "",
-      "family": "Beelitant \u2192 Kocomb \u2192 Furrva \u2192 Granebee",
-      "confidence": "EXTERNAL_SOURCE_METADATA",
+      "confidence": "VERIFIED_SOURCE_METADATA;EXTERNAL_SOURCE_METADATA",
       "ready_for_approval": true
     },
     "krabby-redux|b20edd3d011d826bbc5e006ae85e855e65fc9d52238adcfd41778372153940a1": {
@@ -7482,12 +7482,12 @@
       "source": "Mikitari",
       "front_path": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Front/MURASALEM.png",
       "back_path": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/MURASALEM.png",
-      "family": "Unresolved family / relationship",
       "name": "Murasalem",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": false
+      "type1": "Poison",
+      "type2": "Normal",
+      "family": "Flampy \u2192 Murasalem",
+      "confidence": "VERIFIED_SOURCE_METADATA",
+      "ready_for_approval": true
     },
     "museon|ac23f3f951d005813a3e837e2b6e9c5ad034f02df16359cf0fc792eb8a8afb66": {
       "identity": "museon",
@@ -8094,36 +8094,36 @@
       "source": "Mikitari",
       "front_path": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Front/PETALNIA_1.png",
       "back_path": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/PETALNIA_1.png",
-      "name": "Petalnia",
-      "type1": "Grass",
-      "type2": "Fairy",
-      "family": "Sprousy \u2192 Petalnia \u2192 Floramona",
-      "confidence": "EXTERNAL_SOURCE_METADATA;BACK_MATCH_RECOVERED",
-      "ready_for_approval": true
+      "family": "Unresolved family / relationship",
+      "name": "Petalnia 1",
+      "type1": "Normal",
+      "type2": "",
+      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE;BACK_MATCH_RECOVERED",
+      "ready_for_approval": false
     },
     "petidaw|b6ad684c91cc86eb39fb4382b42a4d2e8a779f0c0197b10f67f66243e03ae304": {
       "identity": "petidaw",
       "source": "Mikitari",
       "front_path": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Front/PETIDAW.png",
       "back_path": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/PETIDAW.png",
+      "family": "Unresolved family / relationship",
       "name": "Petidaw",
-      "type1": "Dark",
-      "type2": "Flying",
-      "family": "Petidaw \u2192 Croober \u2192 Ravendler",
-      "confidence": "EXTERNAL_SOURCE_METADATA",
-      "ready_for_approval": true
+      "type1": "Normal",
+      "type2": "",
+      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
+      "ready_for_approval": false
     },
     "petidaw-female|68f21a2aa302377be6712b9b32742ceefdf09dac4749d5db7239a0fa1b244376": {
       "identity": "petidaw-female",
       "source": "Mikitari",
       "front_path": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Front/PETIDAW_female.png",
       "back_path": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/PETIDAW_female.png",
-      "name": "Petidaw",
-      "type1": "Dark",
-      "type2": "Flying",
-      "family": "Petidaw \u2192 Croober \u2192 Ravendler",
-      "confidence": "EXTERNAL_SOURCE_METADATA",
-      "ready_for_approval": true
+      "family": "Unresolved family / relationship",
+      "name": "Petidaw Female",
+      "type1": "Normal",
+      "type2": "",
+      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
+      "ready_for_approval": false
     },
     "phanfernal|5f1f5c3bdda25c133eb74c77379dc9e4f07f791f0f2b73f8988ae8e236d19fd1": {
       "identity": "phanfernal",
@@ -8142,12 +8142,12 @@
       "source": "Mikitari",
       "front_path": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Front/PHANTABYS.png",
       "back_path": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/PHANTABYS.png",
+      "family": "Unresolved family / relationship",
       "name": "Phantabys",
-      "type1": "Water",
-      "type2": "Ghost",
-      "family": "Hauntray \u2192 Phantabys",
-      "confidence": "EXTERNAL_SOURCE_METADATA",
-      "ready_for_approval": true
+      "type1": "Bug",
+      "type2": "",
+      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
+      "ready_for_approval": false
     },
     "phantowl|c872aa4111e2c2a10398bc000f0567f280c4f5feca308df0ece8306b1caa9264": {
       "identity": "phantowl",
@@ -8226,12 +8226,12 @@
       "source": "Festival_Misc",
       "front_path": "DS_CUSTOM_LIBRARY/packs/Festival_Misc/Misc/Fronts/PilfetchFront.png",
       "back_path": "DS_CUSTOM_LIBRARY/packs/Festival_Misc/Misc/Backs/PilfetchBack.png",
-      "name": "Pilfetch",
-      "type1": "Flying",
+      "family": "Unresolved family / relationship",
+      "name": "Pilfetchfront",
+      "type1": "Normal",
       "type2": "",
-      "family": "Pilfetch \u2192 Criminalis",
-      "confidence": "EXTERNAL_SOURCE_METADATA;BACK_MATCH_RECOVERED",
-      "ready_for_approval": true
+      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE;BACK_MATCH_RECOVERED",
+      "ready_for_approval": false
     },
     "piloswine-redux|0779ac4f483e7fa1cc39476318f07f46d990c6488f8effad1c7d4383ba012b25": {
       "identity": "piloswine-redux",
@@ -8274,24 +8274,24 @@
       "source": "Mikitari",
       "front_path": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Front/PLASMATINA.png",
       "back_path": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/PLASMATINA.png",
+      "family": "Unresolved family / relationship",
       "name": "Plasmatina",
-      "type1": "Electric",
+      "type1": "Normal",
       "type2": "",
-      "family": "Goobolt \u2192 Chargoo \u2192 Plasmatina",
-      "confidence": "EXTERNAL_SOURCE_METADATA",
-      "ready_for_approval": true
+      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
+      "ready_for_approval": false
     },
     "platerigus|277910002af1632f2aed75c8df2c72732a4ccdff0c572a514821ac2606802448": {
       "identity": "platerigus",
       "source": "Mikitari",
       "front_path": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Front/PLATERIGUS.png",
       "back_path": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/PLATERIGUS.png",
+      "family": "Unresolved family / relationship",
       "name": "Platerigus",
-      "type1": "Rock",
-      "type2": "Ghost",
-      "family": "Standalone \u2014 Platerigus",
-      "confidence": "EXTERNAL_SOURCE_METADATA",
-      "ready_for_approval": true
+      "type1": "Normal",
+      "type2": "",
+      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
+      "ready_for_approval": false
     },
     "plundertow|5720f7784f31ccb9686b27112baf062425d42edcc355a74e65c6bbb83c7142ee": {
       "identity": "plundertow",
@@ -8310,12 +8310,12 @@
       "source": "Festival_Magiscarf",
       "front_path": "DS_CUSTOM_LIBRARY/packs/Festival_Magiscarf/Magiscarf/Battlers Normal/Front/Plushion.png",
       "back_path": "DS_CUSTOM_LIBRARY/packs/Festival_Magiscarf/Magiscarf/Battlers Normal/Back/Plushion.png",
+      "family": "Unresolved family / relationship",
       "name": "Plushion",
       "type1": "Normal",
-      "type2": "Fairy",
-      "family": "Plushion \u2192 Rocotton \u2192 Tuffettry",
-      "confidence": "EXTERNAL_SOURCE_METADATA",
-      "ready_for_approval": true
+      "type2": "",
+      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
+      "ready_for_approval": false
     },
     "pokeapi-mega-meowstic-female|f8179bbff6484d5dc1bc6ed5ec0fa466293171877c5c4de1cda220e974ef2256": {
       "identity": "pokeapi-mega-meowstic-female",
@@ -8370,24 +8370,24 @@
       "source": "Festival_Magiscarf",
       "front_path": "DS_CUSTOM_LIBRARY/packs/Festival_Magiscarf/Magiscarf/Battlers Normal/Front/Pompet.png",
       "back_path": "DS_CUSTOM_LIBRARY/packs/Festival_Magiscarf/Magiscarf/Battlers Normal/Back/Pompet.png",
+      "family": "Unresolved family / relationship",
       "name": "Pompet",
-      "type1": "Grass",
-      "type2": "Fairy",
-      "family": "Pompet \u2192 Pomprim",
-      "confidence": "EXTERNAL_SOURCE_METADATA",
-      "ready_for_approval": true
+      "type1": "Normal",
+      "type2": "",
+      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
+      "ready_for_approval": false
     },
     "pomprim|46974276b93242b46b30edcf1221219bfbd6ac2dc57c03d2cc9d659618097bbe": {
       "identity": "pomprim",
       "source": "Festival_Magiscarf",
       "front_path": "DS_CUSTOM_LIBRARY/packs/Festival_Magiscarf/Magiscarf/Battlers Normal/Front/Pomprim.png",
       "back_path": "DS_CUSTOM_LIBRARY/packs/Festival_Magiscarf/Magiscarf/Battlers Normal/Back/Pomprim.png",
+      "family": "Unresolved family / relationship",
       "name": "Pomprim",
-      "type1": "Grass",
-      "type2": "Fairy",
-      "family": "Pompet \u2192 Pomprim",
-      "confidence": "EXTERNAL_SOURCE_METADATA",
-      "ready_for_approval": true
+      "type1": "Normal",
+      "type2": "",
+      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
+      "ready_for_approval": false
     },
     "popcorm|6c81eb95d269da70a127bb367bfe0f8b942f95aef5690cdbe220a6920b898375": {
       "identity": "popcorm",
@@ -8418,12 +8418,12 @@
       "source": "Mikitari",
       "front_path": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Front/PORYGONA.png",
       "back_path": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/PORYGONA.png",
-      "name": "Porygon-A",
+      "family": "Unresolved family / relationship",
+      "name": "Porygona",
       "type1": "Normal",
       "type2": "",
-      "family": "Porygon \u2192 Porygon-A",
-      "confidence": "EXTERNAL_SOURCE_METADATA",
-      "ready_for_approval": true
+      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
+      "ready_for_approval": false
     },
     "potish|6b4bc4dd0df7958a2890a6b713596570d00718fef3e5c0565534af15c8ab398e": {
       "identity": "potish",
@@ -8442,24 +8442,24 @@
       "source": "Festival_Magiscarf",
       "front_path": "DS_CUSTOM_LIBRARY/packs/Festival_Magiscarf/Magiscarf/Battlers Normal/Front/Pourka.png",
       "back_path": "DS_CUSTOM_LIBRARY/packs/Festival_Magiscarf/Magiscarf/Battlers Normal/Back/Pourka.png",
+      "family": "Unresolved family / relationship",
       "name": "Pourka",
-      "type1": "Water",
+      "type1": "Normal",
       "type2": "",
-      "family": "Dripwirt \u2192 Pourka",
-      "confidence": "EXTERNAL_SOURCE_METADATA",
-      "ready_for_approval": true
+      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
+      "ready_for_approval": false
     },
     "prankmare|79f0048a5f20be412258999a46ae959443c9db0b76d224c0fea9598698501ae2": {
       "identity": "prankmare",
       "source": "Mikitari",
       "front_path": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Front/PRANKMARE.png",
       "back_path": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/PRANKMARE.png",
+      "family": "Unresolved family / relationship",
       "name": "Prankmare",
-      "type1": "Ghost",
+      "type1": "Normal",
       "type2": "",
-      "family": "Timpot \u2192 Prankmare",
-      "confidence": "EXTERNAL_SOURCE_METADATA",
-      "ready_for_approval": true
+      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
+      "ready_for_approval": false
     },
     "primarina-mega|3db7722c5775faa5da95b08961ce7ed2552b87694fa03286c07d673228a48444": {
       "identity": "primarina-mega",
@@ -8598,12 +8598,12 @@
       "source": "Fakemon_Festival_Full",
       "front_path": "DS_CUSTOM_LIBRARY/packs/Fakemon_Festival_Full/Fakemon Festival Pack/PrincessPhoenix/Pokemon/Battlers/Gen 3 Frontsprites/Pythonova.png",
       "back_path": "DS_CUSTOM_LIBRARY/packs/Fakemon_Festival_Full/Fakemon Festival Pack/PrincessPhoenix/Pokemon/Battlers/Gen 3 Backsprites/Backsprites Full/Pythonova.png",
+      "family": "Unresolved family / relationship",
       "name": "Pythonova",
-      "type1": "Fire",
+      "type1": "Normal",
       "type2": "",
-      "family": "Hissiorite \u2192 Cobarett \u2192 Pythonova",
-      "confidence": "EXTERNAL_SOURCE_METADATA",
-      "ready_for_approval": true
+      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
+      "ready_for_approval": false
     },
     "pythonovas|0712cb80faa95b4f5a46167af1409c6441e013fc666336d6d9c4c5819c9d9d72": {
       "identity": "pythonovas",
@@ -8730,36 +8730,36 @@
       "source": "Festival_Magiscarf",
       "front_path": "DS_CUSTOM_LIBRARY/packs/Festival_Magiscarf/Magiscarf/Battlers Normal/Front/Rainther.png",
       "back_path": "DS_CUSTOM_LIBRARY/packs/Festival_Magiscarf/Magiscarf/Battlers Normal/Back/Rainther.png",
+      "family": "Unresolved family / relationship",
       "name": "Rainther",
       "type1": "Water",
       "type2": "",
-      "family": "Dampurr \u2192 Rainther \u2192 Delugar",
-      "confidence": "EXTERNAL_SOURCE_METADATA",
-      "ready_for_approval": true
+      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
+      "ready_for_approval": false
     },
     "rainther|7f3adf7765a5483676fad9e753944c4afce9f37024eede619364a6caf873fe7e": {
       "identity": "rainther",
       "source": "Festival_Magiscarf",
       "front_path": "DS_CUSTOM_LIBRARY/packs/Festival_Magiscarf/Magiscarf/Gen 4 Battlers/Fronts/RAINTHER.png",
       "back_path": "DS_CUSTOM_LIBRARY/packs/Festival_Magiscarf/Magiscarf/Battlers Normal/Back/Rainther.png",
+      "family": "Unresolved family / relationship",
       "name": "Rainther",
       "type1": "Water",
       "type2": "",
-      "family": "Dampurr \u2192 Rainther \u2192 Delugar",
-      "confidence": "EXTERNAL_SOURCE_METADATA",
-      "ready_for_approval": true
+      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
+      "ready_for_approval": false
     },
     "raknaleap|171a9b0d4869c83c8be4fce9ee839a592fd261bdd3552e6126b118024774cb3c": {
       "identity": "raknaleap",
       "source": "Mikitari",
       "front_path": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Front/RAKNALEAP.png",
       "back_path": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/RAKNALEAP.png",
+      "family": "Unresolved family / relationship",
       "name": "Raknaleap",
-      "type1": "Bug",
-      "type2": "Dark",
-      "family": "Hopidey \u2192 Raknaleap",
-      "confidence": "EXTERNAL_SOURCE_METADATA",
-      "ready_for_approval": true
+      "type1": "Normal",
+      "type2": "",
+      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
+      "ready_for_approval": false
     },
     "ralts-redux|821bd170a2f42a55764071adcd1738d9182bf86ed4f371c6bade5c1ee06f332f": {
       "identity": "ralts-redux",
@@ -8826,12 +8826,12 @@
       "source": "Festival_Magiscarf",
       "front_path": "DS_CUSTOM_LIBRARY/packs/Festival_Magiscarf/Magiscarf/Battlers Normal/Front/Raskit.png",
       "back_path": "DS_CUSTOM_LIBRARY/packs/Festival_Magiscarf/Magiscarf/Battlers Normal/Back/Raskit.png",
+      "family": "Unresolved family / relationship",
       "name": "Raskit",
-      "type1": "Dark",
+      "type1": "Normal",
       "type2": "",
-      "family": "Raskit \u2192 Scruffian",
-      "confidence": "EXTERNAL_SOURCE_METADATA",
-      "ready_for_approval": true
+      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
+      "ready_for_approval": false
     },
     "ratfioso|93668e6fb7209709a9970d9aea46dc76cde4d23715ece8dde36d3ded6a2d1d1a": {
       "identity": "ratfioso",
@@ -8886,24 +8886,24 @@
       "source": "Mikitari",
       "front_path": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Front/RAVENDLER.png",
       "back_path": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/RAVENDLER.png",
+      "family": "Unresolved family / relationship",
       "name": "Ravendler",
-      "type1": "Dark",
-      "type2": "Flying",
-      "family": "Petidaw \u2192 Croober \u2192 Ravendler",
-      "confidence": "EXTERNAL_SOURCE_METADATA",
-      "ready_for_approval": true
+      "type1": "Normal",
+      "type2": "",
+      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
+      "ready_for_approval": false
     },
     "ravendler-female|c3ed6a33126b449d576ea39f1c7a587cbf223a83cf4a530df9b499e47d434061": {
       "identity": "ravendler-female",
       "source": "Mikitari",
       "front_path": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Front/RAVENDLER_female.png",
       "back_path": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/RAVENDLER_female.png",
-      "name": "Ravendler",
-      "type1": "Dark",
-      "type2": "Flying",
-      "family": "Petidaw \u2192 Croober \u2192 Ravendler",
-      "confidence": "EXTERNAL_SOURCE_METADATA",
-      "ready_for_approval": true
+      "family": "Unresolved family / relationship",
+      "name": "Ravendler Female",
+      "type1": "Normal",
+      "type2": "",
+      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
+      "ready_for_approval": false
     },
     "reaphid|3e092363e72ce085d4cd15594023772b02fbc91b98df0a95fc9f9d5397560d2a": {
       "identity": "reaphid",
@@ -9102,24 +9102,24 @@
       "source": "Mikitari",
       "front_path": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Front/RHINPLINK.png",
       "back_path": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/RHINPLINK.png",
+      "family": "Unresolved family / relationship",
       "name": "Rhinplink",
-      "type1": "Grass",
+      "type1": "Normal",
       "type2": "",
-      "family": "Rhinplink \u2192 Trunkorn \u2192 Rhintain",
-      "confidence": "EXTERNAL_SOURCE_METADATA",
-      "ready_for_approval": true
+      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
+      "ready_for_approval": false
     },
     "rhintain|70156cdf466d659e5bd00268aa2c875a493a98cd252caae58a0b9111cc63990b": {
       "identity": "rhintain",
       "source": "Mikitari",
       "front_path": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Front/RHINTAIN.png",
       "back_path": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/RHINTAIN.png",
+      "family": "Unresolved family / relationship",
       "name": "Rhintain",
-      "type1": "Grass",
-      "type2": "Rock",
-      "family": "Rhinplink \u2192 Trunkorn \u2192 Rhintain",
-      "confidence": "EXTERNAL_SOURCE_METADATA",
-      "ready_for_approval": true
+      "type1": "Normal",
+      "type2": "",
+      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
+      "ready_for_approval": false
     },
     "ribombee-mega|8cdd7044cd4e291399cdf53e13d19304f2148f939d4c0de298471ded8adf9e9a": {
       "identity": "ribombee-mega",
@@ -9258,12 +9258,12 @@
       "source": "Festival_Magiscarf",
       "front_path": "DS_CUSTOM_LIBRARY/packs/Festival_Magiscarf/Magiscarf/Battlers Normal/Front/Rocotton.png",
       "back_path": "DS_CUSTOM_LIBRARY/packs/Festival_Magiscarf/Magiscarf/Battlers Normal/Back/Rocotton.png",
+      "family": "Unresolved family / relationship",
       "name": "Rocotton",
       "type1": "Normal",
-      "type2": "Fairy",
-      "family": "Plushion \u2192 Rocotton \u2192 Tuffettry",
-      "confidence": "EXTERNAL_SOURCE_METADATA",
-      "ready_for_approval": true
+      "type2": "",
+      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
+      "ready_for_approval": false
     },
     "rongett|7c7c0ae20a8e38d846f958af226fc6efed02e0e6780bf55f0cc6b0952d6d42d0": {
       "identity": "rongett",
@@ -9654,12 +9654,12 @@
       "source": "Mikitari",
       "front_path": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Front/SEARPENT.png",
       "back_path": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/SEARPENT.png",
+      "family": "Unresolved family / relationship",
       "name": "Searpent",
-      "type1": "Fire",
-      "type2": "Dragon",
-      "family": "Flarepent \u2192 Searpent \u2192 Conflevour",
-      "confidence": "EXTERNAL_SOURCE_METADATA",
-      "ready_for_approval": true
+      "type1": "Water",
+      "type2": "",
+      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
+      "ready_for_approval": false
     },
     "searpent|4b3348e1e0de659e91880c146379dd1d00568e9e460c5d90c4228fb902b2e005": {
       "identity": "searpent",
@@ -9858,12 +9858,12 @@
       "source": "Festival_Atsui",
       "front_path": "DS_CUSTOM_LIBRARY/packs/Festival_Atsui/Atsui/Pokemon/Front/SHORELORN.png",
       "back_path": "DS_CUSTOM_LIBRARY/packs/Festival_Atsui/Atsui/Pokemon/Back/SHORELORN.png",
+      "family": "Unresolved family / relationship",
       "name": "Shorelorn",
-      "type1": "Water",
-      "type2": "Ghost",
-      "family": "Standalone \u2014 Shorelorn",
-      "confidence": "EXTERNAL_SOURCE_METADATA",
-      "ready_for_approval": true
+      "type1": "Rock",
+      "type2": "",
+      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
+      "ready_for_approval": false
     },
     "shuckle-mega|ce72bd9c00d33c80df0107451e5b33249e4c83a117f1ffc32fb1c47b128cf78e": {
       "identity": "shuckle-mega",
