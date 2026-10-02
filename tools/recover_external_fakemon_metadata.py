@@ -257,6 +257,18 @@ for r in targets:
         candidates=[]
         for a in aliases:
             candidates.extend(linkmap.get(a,[]))
+
+        # Pokengine's exact-name search is a fallback for donor mons that are
+        # indexed on the site but not currently exposed by the collection page.
+        if not candidates:
+            for a in sorted(aliases,key=len,reverse=True):
+                raw=fetch("https://pokengine.org/search?query="+urllib.parse.quote(a.replace("-"," ")))
+                for href in re.findall(r"href=['\"](/mons/[^'\"?]+)",raw):
+                    slug=urllib.parse.unquote(href.split("/")[-1])
+                    if norm(slug) in aliases:
+                        candidates.append("https://pokengine.org"+href)
+                if candidates:break
+
         # Prefer exact identity/name matches. For source sprite IDs ending in
         # -1/-2/etc., donor packs conventionally number alternate forms after
         # the base form; collection links are gathered base first, then forms.
