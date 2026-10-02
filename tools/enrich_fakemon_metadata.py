@@ -17,6 +17,54 @@ def vanilla_type(t):
     t=str(t or "").strip().title()
     return NONVANILLA_TYPE_REPLACEMENTS.get(t,t)
 
+CANON_TYPES={"Normal","Fire","Water","Electric","Grass","Ice","Fighting","Poison","Ground","Flying","Psychic","Bug","Rock","Ghost","Dragon","Dark","Steel","Fairy"}
+
+def proposed_types(identity,name="",family=""):
+    """Deterministic Mercury fallback using only canon types.
+    Source/Mercury metadata always wins; this only fills otherwise-blank custom entries."""
+    s=" ".join([str(identity or ""),str(name or ""),str(family or "")]).lower()
+    rules=[
+        ("Fire",["fire","flame","ember","lava","volcan","burn","blaze","sizzle","furn","char"]),
+        ("Water",["water","aqua","sea","ocean","rain","river","fish","trout","carp","drip","damp","surf"]),
+        ("Electric",["electric","volt","spark","thunder","shock","charge","battery","storm"]),
+        ("Grass",["grass","leaf","plant","flora","flower","wood","tree","moss","sprout","vine"]),
+        ("Ice",["ice","frost","snow","chill","cryo","glacier"]),
+        ("Fighting",["fight","punch","kick","brawl","martial","warrior","club"]),
+        ("Poison",["poison","toxic","venom","acid","sludge","contam"]),
+        ("Ground",["ground","sand","dune","earth","mud","burrow"]),
+        ("Flying",["flying","bird","wing","avian","raptor","hawk"]),
+        ("Psychic",["psychic","mind","dream","psy","mystic"]),
+        ("Bug",["bug","bee","moth","spider","web","ant","larva"]),
+        ("Rock",["rock","stone","crag","ore","geo","fossil"]),
+        ("Ghost",["ghost","spirit","haunt","phantom","spect","wraith"]),
+        ("Dragon",["dragon","drake","wyrm","serpent"]),
+        ("Dark",["dark","night","shadow","evil","imp","demon"]),
+        ("Steel",["steel","metal","iron","gear","mech","blade"]),
+        ("Fairy",["fairy","fae","fey","pixie","magic","charm","sprite"]),
+    ]
+    hits=[]
+    for typ,words in rules:
+        if any(w in s for w in words):
+            hits.append(typ)
+    if not hits:
+        return ("Normal","")
+    return (hits[0], hits[1] if len(hits)>1 and hits[1]!=hits[0] else "")
+
+def plain_official_row(r,type_map):
+    """Exclude plain official/native designs, but keep custom-source redesigns
+    even when they reuse an official Pokémon name."""
+    src=r.get("source","")
+    ident=norm(r.get("identity",""))
+    protected={
+        "DrPrettyman_DS_64x64","HG_Engine_DS_Sprites","DS_Styled_Gen5_8",
+        "Gen7_DS_Backsprites","Shiny_Icons_Gen1_9"
+    }
+    if src not in protected:
+        return False
+    mr=type_map.get(ident) or {}
+    cat=str(mr.get("category","")).upper()
+    return cat in {"CANON","OFFICIAL/CANON","OFFICIAL REGIONAL","OFFICIAL FORM"}
+
 def read_csv(p):
     with p.open(newline="",encoding="utf-8-sig",errors="replace") as f:
         return list(csv.DictReader(f))
@@ -279,7 +327,10 @@ for (src,suffix,root),items in groups.items():
 enriched={}
 report=[]
 for r in rows:
-    if r.get("is_official")!="False":continue
+    # The rebuilt DS-ready manifest no longer carries an is_official column.
+    # Classify plain official/native rows from source + Mercury metadata instead.
+    if plain_official_row(r,type_map):
+        continue
     ident=r["identity"];src=r["source"];key=norm(ident)
     out={"identity":ident,"source":src,"front_path":r.get("front_path",""),"back_path":r.get("back_path","")}
     confidence=[]
@@ -359,9 +410,9 @@ for r in rows:
         out["name"]=ident.replace("-"," ").title()
         confidence.append("SOURCE_NAME")
     if not out.get("type1"):
-        out["type1"]="TBD"
-        out["type2"]=""
-        confidence.append("TYPE_NEEDS_VISUAL_PITCH")
+        p1,p2=proposed_types(key,out.get("name",""),out.get("family",""))
+        out["type1"],out["type2"]=p1,p2
+        confidence.append("MERCURY_PROVISIONAL_CANON_TYPE")
     if not out.get("back_path"):
         out["back_path"]=likely_back(out["front_path"],ident,src)
         if out["back_path"]:confidence.append("BACK_MATCH_RECOVERED")
@@ -392,9 +443,9 @@ for r in rows:
     out["confidence"]=";".join(confidence)
     unresolved_family=(out.get("family")=="Unresolved family / relationship")
     out["ready_for_approval"]=bool(
-        out.get("name") and str(out.get("type1","")).upper()!="TBD"
-        and out.get("family") and out.get("front_path") and out.get("back_path")
-        and not unresolved_family
+        out.get("name") and out.get("type1") in CANON_TYPES
+        and (not out.get("type2") or out.get("type2") in CANON_TYPES)
+        and out.get("front_path") and out.get("back_path")
     )
     enriched[ident+"|"+r.get("structural_hash","")]=out
     report.append(out)
@@ -427,7 +478,7 @@ summary={
  "unresolved_family":sum(1 for x in report if x.get("family")=="Unresolved family / relationship"),
  "source_metadata_records":len(meta),
  "excluded_from_approval":sum(1 for x in report if not x["ready_for_approval"]),
- "approval_policy":"Only entries with a usable name, vanilla-compatible type, resolved family/standalone identity, front sprite and back sprite are admitted. Unresolved family relationships are excluded.",
+ "approval_policy":"Plain official/native designs are excluded. Every custom/nonstandard design with a matched front+back pair and one or two canon types is reviewable; unresolved family links stay labeled for follow-up instead of hiding the art.",
 }
 (MASTER/"fakemon_enrichment_summary.json").write_text(json.dumps(summary,indent=2)+"\n")
 print(json.dumps(summary,indent=2))
