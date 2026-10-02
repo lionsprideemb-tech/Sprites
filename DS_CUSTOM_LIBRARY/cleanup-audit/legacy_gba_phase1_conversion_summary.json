@@ -1,0 +1,20 @@
+{
+  "source": "/tmp/mercury-gba-flat",
+  "design_keys": 122,
+  "slot_files": 488,
+  "categories": {
+    "DS_TECH_READY_SOURCE": 122
+  },
+  "redux_named_designs": 43,
+  "redux_named_categories": {
+    "DS_TECH_READY_SOURCE": 43
+  },
+  "policy": {
+    "artistic_redraw": "NOT AUTOMATED",
+    "source_overwrite": false,
+    "battle_canvas": "64x64",
+    "opaque_palette_limit": 15,
+    "icon_output": "32x64 generated two-frame review placeholder",
+    "oversize_policy": "do not resize; classify NEEDS_ART_REDRAW"
+  }
+}
