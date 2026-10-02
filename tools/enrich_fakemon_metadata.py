@@ -246,6 +246,21 @@ for r in rows:
     if not out.get("back_path"):
         out["back_path"]=likely_back(out["front_path"],ident,src)
         if out["back_path"]:confidence.append("BACK_MATCH_RECOVERED")
+
+    # Mercury supports only the canonical 18 Pokémon types. Donor-only SOUND is
+    # normalized to Normal while retaining any second vanilla type.
+    t1=(out.get("type1") or "").strip().title()
+    t2=(out.get("type2") or "").strip().title()
+    if t1=="Sound":
+        t1="Normal"
+        confidence.append("SOUND_TO_NORMAL")
+    if t2=="Sound":
+        t2="Normal"
+        confidence.append("SOUND_TO_NORMAL")
+    if t1==t2:
+        t2=""
+    out["type1"],out["type2"]=t1,t2
+
     out["confidence"]=";".join(confidence)
     out["ready_for_approval"]=bool(out.get("name") and out.get("type1")!="TBD" and out.get("family") and out.get("back_path"))
     enriched[ident+"|"+r.get("structural_hash","")]=out
