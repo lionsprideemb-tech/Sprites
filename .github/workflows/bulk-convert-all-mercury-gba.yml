@@ -134,11 +134,46 @@ jobs:
               return copied
 
           reborn_root=Path("DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy")
+          earth_root=Path("DS_CUSTOM_LIBRARY/packs/Earthretha/Earthretha Fakemon Pack/Graphics/Pokemon")
+
+          def norm_loose(s):
+              s=str(s).lower().replace("_","-").replace("’","").replace("'","")
+              s=re.sub(r"[^a-z0-9-]+","-",s)
+              return re.sub(r"-+","-",s).strip("-")
+
+          # Index the Earthretha pack's explicit battle views. A number of old Mercury
+          # backlog keys carry an "earthretha-" provenance prefix that is not part of
+          # the source filename itself.
+          earth_index=defaultdict(dict)
+          earth_dirs={
+              "Front":"front",
+              "Back":"back",
+              "Front shiny":"front_shiny",
+              "Back shiny":"back_shiny",
+          }
+          for dirname,slot in earth_dirs.items():
+              d=earth_root/dirname
+              if not d.exists(): continue
+              for p in d.glob("*.png"):
+                  earth_index[norm_loose(p.stem)][slot]=p
+
+          def earth_assets_for(key):
+              if not key.startswith("earthretha-"):
+                  return {}
+              want=norm_loose(key[len("earthretha-"):])
+              if want in earth_index:
+                  return earth_index[want]
+              # Handle labeled forms such as BELSTATUE_1 (Sun Shard).
+              matches=[v for k,v in earth_index.items() if k==want or k.startswith(want+"-")]
+              return matches[0] if len(matches)==1 else {}
 
           def reborn_assets_for(key):
               # Old comparison keys use cpf-####- prefixes; recovered source folders use the
               # historic identity without that bookkeeping prefix.
               plain=re.sub(r"^cpf-\d+-","",key)
+              plain=plain.replace("farfetch-d-","farfetchd-").replace("sirfetch-d-","sirfetchd-")
+              if plain=="ribombee-bluetowel-alternate-form-form-2":
+                  plain="ribombee-bluetowel-alternate-form-form-1"
               d=reborn_root/plain
               if not d.is_dir():
                   return {}
@@ -170,6 +205,20 @@ jobs:
                   if rassets:
                       copied=copy_fourway(key,rassets,"Reborn/Plates recovered")
                       source="Reborn/Plates recovered"
+
+              # Earthretha source-pack fallback.
+              if not copied:
+                  eassets=earth_assets_for(key)
+                  if eassets:
+                      copied=copy_fourway(key,eassets,"Earthretha pack")
+                      source="Earthretha pack"
+
+              # One legacy Elite Redux identity was renamed in the current source pack.
+              if not copied and key=="heliomodo":
+                  hassets=er_index.get("heliosunny",{})
+                  if hassets:
+                      copied=copy_fourway(key,hassets,"ER-nextdex alias HELIOSUNNY")
+                      source="ER-nextdex alias HELIOSUNNY"
 
               # Direct Mercury source fallback if ER has no source.
               if not copied:
@@ -211,6 +260,8 @@ jobs:
               "source_missing":sum(not r["source_found"] for r in manifest),
               "er_nextdex_matches":sum(r["source"]=="ER-nextdex" for r in manifest),
               "reborn_plates_matches":sum(r["source"]=="Reborn/Plates recovered" for r in manifest),
+              "earthretha_matches":sum(r["source"]=="Earthretha pack" for r in manifest),
+              "er_alias_matches":sum(r["source"]=="ER-nextdex alias HELIOSUNNY" for r in manifest),
               "mercury_repo_matches":sum(r["source"]=="Mercury-repo" for r in manifest),
           }
           (report/"all_mercury_gba_source_resolution_summary.json").write_text(json.dumps(summary,indent=2)+"\n")
