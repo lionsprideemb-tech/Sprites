@@ -57,6 +57,7 @@ const TYPEMAP=RAW+'DS_CUSTOM_LIBRARY/DS_READY_MASTER/mercury_name_type_map.json'
 const ENRICHED=RAW+'DS_CUSTOM_LIBRARY/DS_READY_MASTER/fakemon_enriched_metadata.json';
 const BASEDECISIONS=RAW+'DS_CUSTOM_LIBRARY/DS_READY_MASTER/user_sprite_decisions_2026-10-01.json';
 const PLATINUM=RAW+'DS_CUSTOM_LIBRARY/DS_READY_MASTER/platinum_redux_review_entries.json';
+const LEFTOVER=RAW+'DS_CUSTOM_LIBRARY/DS_READY_MASTER/leftover_review_pool.csv?v=20261002-unified';
 const STORAGE='mercury-ds-sprite-approval-v1';
 let rows=[], decisions={}, familyMap={}, familyLabels={}, typeMap={}, enrichedMap={};
 
@@ -150,7 +151,37 @@ function attachBackFallback(img,r){
   img.onerror=tryNext;
   tryNext();
 }
-function imgURL(path){return RAW+path.split('/').map(encodeURIComponent).join('/')}
+function imgURL(path){
+  if(/^https?:\/\//i.test(String(path||'')))return String(path);
+  return RAW+String(path||'').split('/').map(encodeURIComponent).join('/');
+}
+function shinyCandidates(path){
+  const s=String(path||''); if(!s||/^https?:\/\//i.test(s))return [];
+  const out=[]; const add=x=>{if(x&&x!==s&&!out.includes(x))out.push(x)};
+  add(s.replace('/Front/','/Front shiny/'));
+  add(s.replace('/Back/','/Back shiny/'));
+  add(s.replace('/Battlers Normal/','/Battlers Shiny/'));
+  add(s.replace('/Battlers Normal/','/Battlers Shiny Alternate/'));
+  add(s.replace('/Fronts/','/Shiny Fronts/'));
+  add(s.replace('/Backs/','/Shiny Backs/'));
+  add(s.replace('/Gen 4-5 Frontsprites/','/Gen 4-5 Frontsprites Shiny/'));
+  add(s.replace('/Gen 4 Backsprites/','/Gen 4 Backsprites Shiny/'));
+  add(s.replace('/Gen 5 Backsprites/','/Gen 5 Backsprites Shiny/'));
+  return out;
+}
+function attachShinyFallback(img,path){
+  const candidates=shinyCandidates(path); let i=0;
+  const tryNext=()=>{
+    if(i>=candidates.length){
+      img.style.display='none';
+      const m=img.parentElement.querySelector('.missingview');
+      if(m)m.style.display='block';
+      return;
+    }
+    img.src=imgURL(candidates[i++]);
+  };
+  img.onerror=tryNext; tryNext();
+}
 function key(r){return r.identity+'|'+r.structural_hash}
 function familyDisplay(r){
   const fk=r.family_key||'';
@@ -181,7 +212,9 @@ function save(){localStorage.setItem(STORAGE,JSON.stringify(decisions));renderSt
 function load(base={}){
   let local={};
   try{local=JSON.parse(localStorage.getItem(STORAGE)||'{}')}catch{local={}}
-  decisions={...base,...local};
+  let legacy={};
+  try{legacy=JSON.parse(localStorage.getItem('mercury-leftover-sprite-review-v2')||'{}')}catch{legacy={}}
+  decisions={...base,...legacy,...local};
 }
 function setDecision(k,v){decisions[k]=v;save();render()}
 
@@ -366,8 +399,12 @@ function render(){
           <div class="meta">${r.source} • ${r.bucket}${multi?' • design '+(i+1)+' of '+items.length:''}</div>
           <div class="meta" title="${r.front_path}">Source file: ${r.front_path}</div></div>
           <div class="spritepair">
-            <div class="spritebox"><span class="viewlabel">FRONT</span><img loading="lazy" alt="${pretty(r.identity)} front" src="${imgURL(r.front_path)}"></div>
-            <div class="spritebox"><span class="viewlabel">BACK</span><img class="backimg" loading="lazy" alt="${pretty(r.identity)} back"><div class="missingview" style="display:none">No matching back sprite found</div></div>
+            <div class="spritebox"><span class="viewlabel">NORMAL FRONT</span><img loading="lazy" alt="${pretty(r.identity)} front" src="${imgURL(r.front_path)}"></div>
+            <div class="spritebox"><span class="viewlabel">NORMAL BACK</span><img class="backimg" loading="lazy" alt="${pretty(r.identity)} back"><div class="missingview" style="display:none">No matching back sprite found</div></div>
+          </div>
+          <div class="spritepair" style="margin-top:8px">
+            <div class="spritebox"><span class="viewlabel">SHINY FRONT</span><img class="shinyfront" loading="lazy" alt="${pretty(r.identity)} shiny front"><div class="missingview" style="display:none">No shiny front found</div></div>
+            <div class="spritebox"><span class="viewlabel">SHINY BACK</span><img class="shinyback" loading="lazy" alt="${pretty(r.identity)} shiny back"><div class="missingview" style="display:none">No shiny back found</div></div>
           </div>
           ${needsSetup?'<div class="setupnote">Not ready for approval — missing: '+problems.join(', ')+'</div>':''}
           <div class="choices">
@@ -376,6 +413,8 @@ function render(){
             <button class="reject ${d==='reject'?'active':''}">✕ Reject</button>
           </div>`;
         attachBackFallback(c.querySelector('.backimg'),r);
+        attachShinyFallback(c.querySelector('.shinyfront'),r.front_path);
+        attachShinyFallback(c.querySelector('.shinyback'),r.back_path);
         if(needsSetup){
           c.querySelector('.approve').disabled=true;
           c.querySelector('.approve').title='Complete identity/type/family/back sprite first';
@@ -405,12 +444,13 @@ document.getElementById('backup').onclick=()=>download('mercury_ds_sprite_approv
 
 (async()=>{
   try{
-    const [manifestRes,typeRes,enrichedRes,baseDecisionRes,platinumRes]=await Promise.all([
+    const [manifestRes,typeRes,enrichedRes,baseDecisionRes,platinumRes,leftoverRes]=await Promise.all([
       fetch(MANIFEST,{cache:'no-store'}),
       fetch(TYPEMAP,{cache:'no-store'}),
       fetch(ENRICHED,{cache:'no-store'}),
       fetch(BASEDECISIONS,{cache:'no-store'}),
-      fetch(PLATINUM,{cache:'no-store'})
+      fetch(PLATINUM,{cache:'no-store'}),
+      fetch(LEFTOVER,{cache:'no-store'})
     ]);
     let baseDecisions={};
     if(baseDecisionRes.ok){try{baseDecisions=(await baseDecisionRes.json()).decisions||{}}catch{}}
@@ -447,6 +487,28 @@ document.getElementById('backup').onclick=()=>download('mercury_ds_sprite_approv
             confidence:'PLATINUM_REDUX_WORKBOOK',ready_for_approval:true
           };
           rows.push(r);
+        }
+      }catch{}
+    }
+    if(leftoverRes.ok){
+      try{
+        const leftovers=parseCSV(await leftoverRes.text());
+        const existing=new Set(rows.map(x=>key(x)));
+        for(const p of leftovers){
+          const structural=(p.key||'').split('|').slice(1).join('|') || p.key || p.identity;
+          const r={
+            identity:p.identity,is_official:'False',source:p.source||'Recovered leftover',
+            bucket:'Recovered leftover',front_path:p.front_path,back_path:p.back_path,
+            structural_hash:structural,exact_hash:structural,multi_design_for_approval:'False',_leftover:true
+          };
+          const k=key(r);
+          enrichedMap[k]={
+            identity:p.identity,name:p.name||p.identity,type1:p.type1||'',type2:p.type2||'',
+            family:p.family||'',source:p.source||'Recovered leftover',
+            front_path:p.front_path,back_path:p.back_path,
+            confidence:p.confidence||'LEFTOVER_REVIEW_POOL',ready_for_approval:true
+          };
+          if(!existing.has(k)){rows.push(r);existing.add(k)}
         }
       }catch{}
     }
