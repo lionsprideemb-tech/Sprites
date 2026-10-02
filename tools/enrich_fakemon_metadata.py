@@ -252,6 +252,26 @@ def sprite_stem_key(s):
     x=re.sub(r"(?<=\d)[fb]$","",x)
     return x
 
+def locality_parts(path):
+    """Path components up to the view folder, preserving contributor/subpack identity."""
+    parts=list(Path(path).parts)
+    role_tokens={"front","fronts","frontsprite","frontsprites","back","backs","backsprite","backsprites",
+                 "front-shiny","back-shiny"}
+    out=[]
+    for part in parts:
+        n=norm(part)
+        if n in role_tokens or "frontsprite" in n or "backsprite" in n or n.endswith("-fronts") or n.endswith("-backs"):
+            break
+        out.append(n)
+    return out
+
+def common_prefix_len(a,b):
+    n=0
+    for x,y in zip(a,b):
+        if x!=y:break
+        n+=1
+    return n
+
 def likely_back(front_path,identity,source):
     # First: manifest's paired back.
     rr=next((x for x in rows if x.get("front_path")==front_path),None)
@@ -270,6 +290,8 @@ def likely_back(front_path,identity,source):
         if stem==fid:score+=100
         if fkey and bkey==fkey:score+=130
         if fid and fid in norm(ps):score+=40
+        # Strongly prefer the same contributor/subpack within umbrella packs.
+        score+=common_prefix_len(locality_parts(front_path),locality_parts(ps))*12
         if num is not None:
             nums=re.findall(r"(?<!\d)(\d{1,4})(?!\d)",p.name)
             if any(int(x)==num for x in nums):score+=70
