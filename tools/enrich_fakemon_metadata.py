@@ -325,6 +325,24 @@ def numeric_dex(identity):
     n=int(m.group(1))
     return n if 1<=n<=1025 else None
 
+def locality_parts(path):
+    parts=list(Path(path).parts)
+    role_tokens={"front","fronts","frontsprite","frontsprites","back","backs","backsprite","backsprites","front-shiny","back-shiny"}
+    out=[]
+    for part in parts:
+        n=norm(part)
+        if n in role_tokens or "frontsprite" in n or "backsprite" in n or n.endswith("-fronts") or n.endswith("-backs"):
+            break
+        out.append(n)
+    return out
+
+def common_prefix_len(a,b):
+    n=0
+    for x,y in zip(a,b):
+        if x!=y: break
+        n+=1
+    return n
+
 def sprite_stem_key(s,source=""):
     x=norm(Path(str(s)).stem)
     # Remove view/shiny markers only. Do not collapse species/form tokens.
@@ -453,6 +471,19 @@ for (src,suffix,root),items in groups.items():
 
 enriched={}
 report=[]
+VERIFIED_SOURCE_OVERRIDES={
+    ("Festival_PrincessPhoenix","merlicunf"):{"name":"Merlicun","type1":"Dragon","type2":"Bug","family":"Merlicun → Firomenis"},
+    ("Festival_PrincessPhoenix","firomenisf"):{"name":"Firomenis","type1":"Dragon","type2":"Bug","family":"Merlicun → Firomenis"},
+    ("Festival_PrincessPhoenix","drashimif"):{"name":"Drashimi","type1":"Dragon","type2":"","family":"Drashimi → Tsushimi → Tobishimi"},
+    ("Festival_PrincessPhoenix","tsushimif"):{"name":"Tsushimi","type1":"Dragon","type2":"","family":"Drashimi → Tsushimi → Tobishimi"},
+    ("Festival_PrincessPhoenix","tobishimif"):{"name":"Tobishimi","type1":"Dragon","type2":"","family":"Drashimi → Tsushimi → Tobishimi"},
+    ("Festival_PrincessPhoenix","hissiorite"):{"name":"Hissiorite","type1":"Fire","type2":"","family":"Hissiorite → Cobarett → Pythonova"},
+    ("Festival_PrincessPhoenix","cobarett"):{"name":"Cobarett","type1":"Fire","type2":"","family":"Hissiorite → Cobarett → Pythonova"},
+    ("Festival_PrincessPhoenix","pythonova"):{"name":"Pythonova","type1":"Fire","type2":"","family":"Hissiorite → Cobarett → Pythonova"},
+    ("Festival_PrincessPhoenix","baoby"):{"name":"Baoby","type1":"Grass","type2":"","family":"Baoby → Baobaraffe"},
+    ("Festival_PrincessPhoenix","baobaraffe"):{"name":"Baobaraffe","type1":"Grass","type2":"","family":"Baoby → Baobaraffe"},
+}
+
 for r in rows:
     # The rebuilt DS-ready manifest no longer carries an is_official column.
     # Classify plain official/native rows from source + Mercury metadata instead.
@@ -461,6 +492,10 @@ for r in rows:
     ident=r["identity"];src=r["source"];key=norm(ident)
     out={"identity":ident,"source":src,"front_path":r.get("front_path",""),"back_path":r.get("back_path","")}
     confidence=[]
+    vo=VERIFIED_SOURCE_OVERRIDES.get((src,key))
+    if vo:
+        out.update(vo)
+        confidence.append("VERIFIED_SOURCE_METADATA")
     # Mercury master first.
     mr=type_map.get(key)
     if not mr:
