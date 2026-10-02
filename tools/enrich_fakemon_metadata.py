@@ -359,6 +359,8 @@ def sprite_stem_key(s,source=""):
     if source=="Festival_Misc":
         x=re.sub(r"(?:front|back)$","",x)
         x=re.sub(r"(?<=[a-z0-9])[fb]$","",x)
+        # Numbered Festival files also use 351b_4 / 479b_6 for backs.
+        x=re.sub(r"^(\d+)[fb]-(\d+)$",r"\1-\2",x)
     # PrincessPhoenix convention: FiromenisF -> FiromenisB4/FiromenisB5.
     if source=="Festival_PrincessPhoenix":
         x=re.sub(r"(?:fs|f|b4s|b4|b5s|b5)$","",x)
