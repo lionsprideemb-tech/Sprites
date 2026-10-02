@@ -1,43 +1,206 @@
-<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Mercury Final Polished Sprite Approval</title>
-<style>
-*{box-sizing:border-box}body{margin:0;background:#eef2f7;color:#172033;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif}header{position:sticky;top:0;z-index:20;background:#fffffff5;border-bottom:1px solid #ccd6e3;padding:9px}.wrap,main{max-width:1100px;margin:auto}h1{font-size:19px;margin:0}.sub{font-size:12px;color:#657187;line-height:1.35;margin:4px 0 7px}.controls{display:grid;grid-template-columns:1fr auto auto;gap:6px}input,button,textarea{font:inherit;border:1px solid #c7d2e0;border-radius:9px;background:#fff;color:#172033}input{height:38px;padding:0 9px}button{padding:8px 10px;font-weight:750}#export{background:#244a78;color:#fff}.progress{height:5px;background:#dce5ef;border-radius:99px;overflow:hidden;margin-top:7px}#bar{height:100%;background:#4d78ad;width:0}#summary{font-size:11px;color:#5e6a7c;margin-top:5px}main{padding:10px 9px 60px}.family{background:#fff;border:1px solid #d5dfea;border-radius:14px;margin-bottom:11px;overflow:hidden}.familyhead{display:flex;justify-content:space-between;align-items:center;padding:9px 10px;background:#f9fbfd;border-bottom:1px solid #e5eaf1}.familyhead h2{font-size:16px;margin:0}.familyhead span{font-size:10px;color:#6b7789}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(295px,1fr));gap:8px;padding:8px}.card{border:1px solid #dfe6ee;border-radius:11px;overflow:hidden}.head{display:flex;justify-content:space-between;padding:8px 9px;gap:8px}.head b{font-size:15px}.head small{display:block;color:#69768a;font-size:10px}.head em{font-style:normal;font-size:9px;background:#edf3f9;padding:4px 6px;border-radius:999px;height:max-content}.quality,.recolor{margin:0 8px 6px;padding:6px 7px;border-radius:7px;font-size:9px}.quality{background:#edf6ff}.quality strong{display:block;color:#2b5d89}.quality span{color:#627286}.recolor{font-size:10px;font-weight:700;background:#f3f3f3;color:#68717d}.recolor.pure{background:#ffe0e0;color:#8c2d2d}.recolor.design{background:#e5f3e5;color:#2e6b37}.recolor.batch{background:#fff0bd;color:#775e10}.sprites{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;background:#f6f8fb;padding:7px}.spritebox{height:116px;background:#fff;border:1px solid #e2e8ef;border-radius:9px;display:flex;align-items:center;justify-content:center;position:relative}.spritebox label{position:absolute;top:4px;left:5px;font-size:8px;color:#7d8999;font-weight:800}.spritebox img{max-width:102px;max-height:102px;image-rendering:pixelated}.meta{display:flex;justify-content:space-between;gap:8px;padding:6px 9px;font-size:10px}.meta small{color:#7a8798;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.views,.role{display:flex;gap:5px;padding:0 8px 7px;align-items:center;flex-wrap:wrap}.views button,.role button{font-size:10px;padding:5px 8px}.views .active{background:#dfeaf7}.decision{display:grid;grid-template-columns:repeat(3,1fr);gap:5px;padding:0 8px 7px}.decision button{font-size:11px}.decision [data-decision="Keep"].active{background:#dff1df;border-color:#82b58a}.decision [data-decision="Maybe"].active{background:#fff0bd;border-color:#d1b35f}.decision [data-decision="Delete"].active{background:#f7dddd;border-color:#d89797;color:#8a2929}.role button.active{background:#e5dff7;border-color:#9c8bc8}textarea{width:calc(100% - 16px);margin:0 8px 8px;min-height:42px;padding:6px;font-size:11px}.hidden{display:none!important}@media(max-width:600px){.grid{grid-template-columns:1fr}.controls{grid-template-columns:1fr auto}#undecided{display:none}.spritebox{height:106px}.spritebox img{max-width:92px;max-height:92px}}
-</style></head><body><script src="final262-data-1.js?v=1"></script><script src="final262-data-2.js?v=1"></script><script src="final262-data-3.js?v=1"></script><script src="final262-data-4.js?v=1"></script><script src="final262-data-5.js?v=1"></script><script src="final262-data-6.js?v=1"></script><script src="final262-data-7.js?v=1"></script><script src="final262-data-8a.js?v=1"></script><script src="final262-data-8b.js?v=1"></script><script src="final262-data-8c.js?v=1"></script><header><div class="wrap"><h1>Mercury — Final Polished Sprite Approval</h1><div class="sub">Same 262 new candidates, rebuilt from the original GBA source. Each card shows the polished candidate beside Mercury’s vanilla DS sprite. <b>PURE RECOLOR</b> means the pixel structure is the same and only the palette changed, so you can safely pass it if you do not want recolors.</div><div class="controls"><input id="search" placeholder="Search Pokémon / family / type"><button id="undecided">Undecided only</button><button id="export">Export CSV</button></div><div class="progress"><div id="bar"></div></div><div id="summary"></div></div></header><main id="app"></main>
-<script>
-const DATA=window.MERCURY_FINAL_DATA||[], STORE='mercury-final-polished-262-v1';let D={},only=false;try{D=JSON.parse(localStorage.getItem(STORE)||'{}')}catch{}
-const esc=s=>String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
-const groups=new Map();for(const x of DATA){if(!groups.has(x.family))groups.set(x.family,[]);groups.get(x.family).push(x)}
-const app=document.getElementById('app');
-for(const [fam,items] of [...groups].sort((a,b)=>(a[1][0].familyDex-b[1][0].familyDex)||a[0].localeCompare(b[0]))){let cards='';for(const x of items){let type=[x.type1,x.type2].filter(Boolean).join(' / ')||'Type unknown',quality=(x.quality||'native-size source preserved'),qclass=x.batchRecolor?'recolor batch':'recolor';cards+=`<article class="card" data-id="${esc(x.identity)}" data-species="${esc(x.species)}" data-search="${esc((x.species+' '+x.identity+' '+x.variant+' '+type).toLowerCase())}"><div class="head"><div><b>${esc(x.species)}</b><small>${esc(x.variant)}</small></div><em>${esc(x.source)}</em></div><div class="quality"><strong>${quality.includes('nearest-neighbor')||quality.includes('palette reduced')?'TECH CLEANUP APPLIED':'SOURCE GBA ART'}</strong><span>${esc(quality)}</span></div><div class="${qclass}" data-recolor>${x.batchRecolor?esc(x.batchRecolor):'Vanilla comparison loads when this card appears…'}</div><div class="sprites" data-front="${x.front}" data-back="${x.back}" data-front-shiny="${x.frontShiny}" data-back-shiny="${x.backShiny}"><div class="spritebox"><label>FRONT</label><img class="front" src="${x.front}"></div><div class="spritebox"><label>BACK</label><img class="back" src="${x.back}"></div><div class="spritebox"><label>VANILLA REF</label><img class="vanilla"></div></div><div class="meta"><b>${esc(type)}</b><small>${esc(x.identity)}</small></div><div class="views"><button data-view="normal" class="active">Normal</button><button data-view="shiny">Shiny</button></div><div class="decision"><button data-decision="Keep">Keep</button><button data-decision="Maybe">Maybe</button><button data-decision="Delete">Delete</button></div><div class="role"><span>Role</span><button data-role="Evolution">Evolution</button><button data-role="Mega">Mega</button><button data-role="Delta">Delta</button></div><textarea placeholder="Optional note"></textarea></article>`}app.insertAdjacentHTML('beforeend',`<section class="family" data-search="${esc(fam.toLowerCase())}"><div class="familyhead"><h2>${esc(fam)} family</h2><span>${items.length} candidate${items.length===1?'':'s'}</span></div><div class="grid">${cards}</div></section>`)}
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Mercury Final Polished Sprite Approval</title><style>
+*{box-sizing:border-box}body{margin:0;background:#eef2f7;color:#172033;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif}header{position:sticky;top:0;z-index:20;background:#fffffff5;border-bottom:1px solid #ccd6e3;padding:9px}.wrap,main{max-width:1100px;margin:auto}h1{font-size:19px;margin:0}.sub{font-size:12px;color:#657187;line-height:1.35;margin:4px 0 7px}.controls{display:grid;grid-template-columns:1fr auto auto;gap:6px}input,button,textarea{font:inherit;border:1px solid #c7d2e0;border-radius:9px;background:#fff;color:#172033}input{height:38px;padding:0 9px}button{padding:8px 10px;font-weight:750}#export{background:#244a78;color:white}.progress{height:5px;background:#dce5ef;border-radius:99px;overflow:hidden;margin-top:7px}#bar{height:100%;background:#4d78ad;width:0}#summary{font-size:11px;color:#5e6a7c;margin-top:5px}main{padding:10px 9px 60px}.family{background:#fff;border:1px solid #d5dfea;border-radius:14px;margin-bottom:11px;overflow:hidden}.familyhead{display:flex;justify-content:space-between;align-items:center;padding:9px 10px;background:#f9fbfd;border-bottom:1px solid #e5eaf1}.familyhead h2{font-size:16px;margin:0}.familyhead span{font-size:10px;color:#6b7789}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(295px,1fr));gap:8px;padding:8px}.card{border:1px solid #dfe6ee;border-radius:11px;overflow:hidden}.head{display:flex;justify-content:space-between;padding:8px 9px;gap:8px}.head b{font-size:15px}.head small{display:block;color:#69768a;font-size:10px}.head em{font-style:normal;font-size:9px;background:#edf3f9;padding:4px 6px;border-radius:999px;height:max-content}.quality{margin:0 8px 6px;padding:6px 7px;background:#edf6ff;border-radius:7px;font-size:9px}.quality strong{display:block;color:#2b5d89}.quality span{color:#627286}.recolor{margin:0 8px 6px;padding:6px 7px;border-radius:7px;font-size:10px;font-weight:700}.recolor.vanilla{background:#f3f3f3;color:#68717d}.recolor.pure{background:#ffe0e0;color:#8c2d2d}.recolor.design{background:#e5f3e5;color:#2e6b37}.recolor.batch{background:#fff0bd;color:#775e10}.sprites{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;background:#f6f8fb;padding:7px}.sprites>div{height:132px;background:#fff;border:1px solid #e2e8ef;border-radius:9px;display:flex;align-items:center;justify-content:center;position:relative}.sprites label{position:absolute;top:4px;left:5px;font-size:8px;color:#7d8999;font-weight:800}.sprites img{max-width:118px;max-height:118px;image-rendering:pixelated}.meta{display:flex;justify-content:space-between;gap:8px;padding:6px 9px;font-size:10px}.meta small{color:#7a8798;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.views,.role{display:flex;gap:5px;padding:0 8px 7px;align-items:center;flex-wrap:wrap}.views button,.role button{font-size:10px;padding:5px 8px}.views .active{background:#dfeaf7}.decision{display:grid;grid-template-columns:repeat(3,1fr);gap:5px;padding:0 8px 7px}.decision button{font-size:11px}.decision [data-decision="Keep"].active{background:#dff1df;border-color:#82b58a}.decision [data-decision="Maybe"].active{background:#fff0bd;border-color:#d1b35f}.decision [data-decision="Delete"].active{background:#f7dddd;border-color:#d89797;color:#8a2929}.role button.active{background:#e5dff7;border-color:#9c8bc8}textarea{width:calc(100% - 16px);margin:0 8px 8px;min-height:42px;padding:6px;font-size:11px}.hidden{display:none!important}@media(max-width:600px){.grid{grid-template-columns:1fr}.spritebox{height:110px}.sprites img{max-width:96px;max-height:96px}.controls{grid-template-columns:1fr auto}#undecided{display:none}}
+</style></head><body><header><div class="wrap"><h1>Mercury — Final Polished Sprite Approval</h1><div class="sub">These are the remaining 249 optional candidates, rebuilt from the original GBA source rather than the rough first conversion. “SOURCE GBA ART” means the look comes from the original design; “TECH CLEANUP APPLIED” means DS fitting/palette work changed the presentation. Each card now compares directly against Mercury’s vanilla DS front sprite. A verified structural match is labeled PURE RECOLOR; otherwise the source design is genuinely different from vanilla.</div><div class="controls"><input id="search" placeholder="Search Pokémon / family / type"><button id="undecided">Undecided only</button><button id="export">Export CSV</button></div><div class="progress"><div id="bar"></div></div><div id="summary"></div></div></header><main><section class="family" data-search="sunflora"><div class="familyhead"><h2>Sunflora family</h2><span>1 candidate</span></div><div class="grid"><article class="card" data-id="sunflora_alternate_form_2" data-species="Sunflora" data-search="sunflora sunflora_alternate_form_2 sunflora — alternate (form 2) grass / water">
+<div class="head"><div><b>Sunflora</b><small>Sunflora — Alternate (Form 2)</small></div><em>Reborn Plates</em></div>
+<div class="quality"><strong>TECH CLEANUP APPLIED</strong><span>2x source de-scaled cleanly | palette reduced 21→≤15 opaque colors | palette reduced 22→≤15 opaque colors | palette reduced 28→≤15 opaque colors | palette reduced 29→≤15 opaque colors</span></div><div class="recolor vanilla" data-recolor="pending">Checking vanilla recolor…</div>
+<div class="sprites" data-front="" data-back="" data-front-shiny="" data-back-shiny=""><div><label>FRONT</label><img class="front" src=""></div><div><label>BACK</label><img class="back" src=""></div><div class="vanillabox"><label>VANILLA REF</label><img class="vanilla" alt="Vanilla reference"></div></div>
+<div class="meta"><b>Grass / Water</b><small>sunflora_alternate_form_2</small></div>
+<div class="views"><button data-view="normal" class="active">Normal</button><button data-view="shiny">Shiny</button></div>
+<div class="decision"><button data-decision="Keep">Keep</button><button data-decision="Maybe">Maybe</button><button data-decision="Delete">Delete</button></div>
+<div class="role"><span>Role</span><button data-role="Evolution">Evolution</button><button data-role="Mega">Mega</button><button data-role="Delta">Delta</button></div>
+<textarea placeholder="Optional note"></textarea></article></div></section><section class="family" data-search="swalot"><div class="familyhead"><h2>Swalot family</h2><span>1 candidate</span></div><div class="grid"><article class="card" data-id="swalot_alternate_form_2" data-species="Swalot" data-search="swalot swalot_alternate_form_2 swalot — alternate (form 2) poison / steel">
+<div class="head"><div><b>Swalot</b><small>Swalot — Alternate (Form 2)</small></div><em>Reborn Plates</em></div>
+<div class="quality"><strong>TECH CLEANUP APPLIED</strong><span>2x source de-scaled cleanly | palette reduced 25→≤15 opaque colors | palette reduced 26→≤15 opaque colors</span></div><div class="recolor vanilla" data-recolor="pending">Checking vanilla recolor…</div>
+<div class="sprites" data-front="" data-back="" data-front-shiny="" data-back-shiny=""><div><label>FRONT</label><img class="front" src=""></div><div><label>BACK</label><img class="back" src=""></div><div class="vanillabox"><label>VANILLA REF</label><img class="vanilla" alt="Vanilla reference"></div></div>
+<div class="meta"><b>Poison / Steel</b><small>swalot_alternate_form_2</small></div>
+<div class="views"><button data-view="normal" class="active">Normal</button><button data-view="shiny">Shiny</button></div>
+<div class="decision"><button data-decision="Keep">Keep</button><button data-decision="Maybe">Maybe</button><button data-decision="Delete">Delete</button></div>
+<div class="role"><span>Role</span><button data-role="Evolution">Evolution</button><button data-role="Mega">Mega</button><button data-role="Delta">Delta</button></div>
+<textarea placeholder="Optional note"></textarea></article></div></section><section class="family" data-search="thwackey"><div class="familyhead"><h2>Thwackey family</h2><span>1 candidate</span></div><div class="grid"><article class="card" data-id="thwackey_alternate_form_2" data-species="Thwackey" data-search="thwackey thwackey_alternate_form_2 thwackey — alternate (form 2) grass">
+<div class="head"><div><b>Thwackey</b><small>Thwackey — Alternate (Form 2)</small></div><em>Reborn Plates</em></div>
+<div class="quality"><strong>TECH CLEANUP APPLIED</strong><span>2x source de-scaled cleanly | nearest-neighbor fit to DS canvas | palette reduced 22→≤15 opaque colors | palette reduced 25→≤15 opaque colors | palette reduced 33→≤15 opaque colors | palette reduced 37→≤15 opaque colors</span></div><div class="recolor vanilla" data-recolor="pending">Checking vanilla recolor…</div>
+<div class="sprites" data-front="" data-back="" data-front-shiny="" data-back-shiny=""><div><label>FRONT</label><img class="front" src=""></div><div><label>BACK</label><img class="back" src=""></div><div class="vanillabox"><label>VANILLA REF</label><img class="vanilla" alt="Vanilla reference"></div></div>
+<div class="meta"><b>Grass</b><small>thwackey_alternate_form_2</small></div>
+<div class="views"><button data-view="normal" class="active">Normal</button><button data-view="shiny">Shiny</button></div>
+<div class="decision"><button data-decision="Keep">Keep</button><button data-decision="Maybe">Maybe</button><button data-decision="Delete">Delete</button></div>
+<div class="role"><span>Role</span><button data-role="Evolution">Evolution</button><button data-role="Mega">Mega</button><button data-role="Delta">Delta</button></div>
+<textarea placeholder="Optional note"></textarea></article></div></section><section class="family" data-search="tranquill"><div class="familyhead"><h2>Tranquill family</h2><span>1 candidate</span></div><div class="grid"><article class="card" data-id="tranquill_alternate_form_1" data-species="Tranquill" data-search="tranquill tranquill_alternate_form_1 tranquill — alternate (form 1) rock / flying">
+<div class="head"><div><b>Tranquill</b><small>Tranquill — Alternate (Form 1)</small></div><em>Reborn Plates</em></div>
+<div class="quality"><strong>TECH CLEANUP APPLIED</strong><span>2x source de-scaled cleanly | palette reduced 26→≤15 opaque colors</span></div><div class="recolor vanilla" data-recolor="pending">Checking vanilla recolor…</div>
+<div class="sprites" data-front="" data-back="" data-front-shiny="" data-back-shiny=""><div><label>FRONT</label><img class="front" src=""></div><div><label>BACK</label><img class="back" src=""></div><div class="vanillabox"><label>VANILLA REF</label><img class="vanilla" alt="Vanilla reference"></div></div>
+<div class="meta"><b>Rock / Flying</b><small>tranquill_alternate_form_1</small></div>
+<div class="views"><button data-view="normal" class="active">Normal</button><button data-view="shiny">Shiny</button></div>
+<div class="decision"><button data-decision="Keep">Keep</button><button data-decision="Maybe">Maybe</button><button data-decision="Delete">Delete</button></div>
+<div class="role"><span>Role</span><button data-role="Evolution">Evolution</button><button data-role="Mega">Mega</button><button data-role="Delta">Delta</button></div>
+<textarea placeholder="Optional note"></textarea></article></div></section><section class="family" data-search="typhlosion"><div class="familyhead"><h2>Typhlosion family</h2><span>2 candidates</span></div><div class="grid"><article class="card" data-id="typhlosion_alternate_form_1" data-species="Typhlosion" data-search="typhlosion typhlosion_alternate_form_1 typhlosion — alternate (form 1) fire / ground">
+<div class="head"><div><b>Typhlosion</b><small>Typhlosion — Alternate (Form 1)</small></div><em>Reborn Plates</em></div>
+<div class="quality"><strong>TECH CLEANUP APPLIED</strong><span>2x source de-scaled cleanly | nearest-neighbor fit to DS canvas | palette reduced 16→≤15 opaque colors | palette reduced 17→≤15 opaque colors | palette reduced 21→≤15 opaque colors</span></div><div class="recolor vanilla" data-recolor="pending">Checking vanilla recolor…</div>
+<div class="sprites" data-front="" data-back="" data-front-shiny="" data-back-shiny=""><div><label>FRONT</label><img class="front" src=""></div><div><label>BACK</label><img class="back" src=""></div><div class="vanillabox"><label>VANILLA REF</label><img class="vanilla" alt="Vanilla reference"></div></div>
+<div class="meta"><b>Fire / Ground</b><small>typhlosion_alternate_form_1</small></div>
+<div class="views"><button data-view="normal" class="active">Normal</button><button data-view="shiny">Shiny</button></div>
+<div class="decision"><button data-decision="Keep">Keep</button><button data-decision="Maybe">Maybe</button><button data-decision="Delete">Delete</button></div>
+<div class="role"><span>Role</span><button data-role="Evolution">Evolution</button><button data-role="Mega">Mega</button><button data-role="Delta">Delta</button></div>
+<textarea placeholder="Optional note"></textarea></article><article class="card" data-id="typhlosion_alternate_form_2" data-species="Typhlosion" data-search="typhlosion typhlosion_alternate_form_2 typhlosion — alternate (form 2) fire / ghost">
+<div class="head"><div><b>Typhlosion</b><small>Typhlosion — Alternate (Form 2)</small></div><em>Reborn Plates</em></div>
+<div class="quality"><strong>TECH CLEANUP APPLIED</strong><span>2x source de-scaled cleanly | nearest-neighbor fit to DS canvas | palette reduced 16→≤15 opaque colors | palette reduced 17→≤15 opaque colors</span></div><div class="recolor vanilla" data-recolor="pending">Checking vanilla recolor…</div>
+<div class="sprites" data-front="" data-back="" data-front-shiny="" data-back-shiny=""><div><label>FRONT</label><img class="front" src=""></div><div><label>BACK</label><img class="back" src=""></div><div class="vanillabox"><label>VANILLA REF</label><img class="vanilla" alt="Vanilla reference"></div></div>
+<div class="meta"><b>Fire / Ghost</b><small>typhlosion_alternate_form_2</small></div>
+<div class="views"><button data-view="normal" class="active">Normal</button><button data-view="shiny">Shiny</button></div>
+<div class="decision"><button data-decision="Keep">Keep</button><button data-decision="Maybe">Maybe</button><button data-decision="Delete">Delete</button></div>
+<div class="role"><span>Role</span><button data-role="Evolution">Evolution</button><button data-role="Mega">Mega</button><button data-role="Delta">Delta</button></div>
+<textarea placeholder="Optional note"></textarea></article></div></section><section class="family" data-search="vanillish"><div class="familyhead"><h2>Vanillish family</h2><span>1 candidate</span></div><div class="grid"><article class="card" data-id="vanillish_alternate_form_1" data-species="Vanillish" data-search="vanillish vanillish_alternate_form_1 vanillish — alternate (form 1) ice / fairy">
+<div class="head"><div><b>Vanillish</b><small>Vanillish — Alternate (Form 1)</small></div><em>Reborn Plates</em></div>
+<div class="quality"><strong>TECH CLEANUP APPLIED</strong><span>2x source de-scaled cleanly | palette reduced 16→≤15 opaque colors</span></div><div class="recolor vanilla" data-recolor="pending">Checking vanilla recolor…</div>
+<div class="sprites" data-front="" data-back="" data-front-shiny="" data-back-shiny=""><div><label>FRONT</label><img class="front" src=""></div><div><label>BACK</label><img class="back" src=""></div><div class="vanillabox"><label>VANILLA REF</label><img class="vanilla" alt="Vanilla reference"></div></div>
+<div class="meta"><b>Ice / Fairy</b><small>vanillish_alternate_form_1</small></div>
+<div class="views"><button data-view="normal" class="active">Normal</button><button data-view="shiny">Shiny</button></div>
+<div class="decision"><button data-decision="Keep">Keep</button><button data-decision="Maybe">Maybe</button><button data-decision="Delete">Delete</button></div>
+<div class="role"><span>Role</span><button data-role="Evolution">Evolution</button><button data-role="Mega">Mega</button><button data-role="Delta">Delta</button></div>
+<textarea placeholder="Optional note"></textarea></article></div></section><section class="family" data-search="venomoth"><div class="familyhead"><h2>Venomoth family</h2><span>1 candidate</span></div><div class="grid"><article class="card" data-id="venomoth_alternate_form_1" data-species="Venomoth" data-search="venomoth venomoth_alternate_form_1 venomoth — alternate (form 1) bug / psychic">
+<div class="head"><div><b>Venomoth</b><small>Venomoth — Alternate (Form 1)</small></div><em>Reborn Plates</em></div>
+<div class="quality"><strong>TECH CLEANUP APPLIED</strong><span>2x source de-scaled cleanly | nearest-neighbor fit to DS canvas | palette reduced 17→≤15 opaque colors | palette reduced 19→≤15 opaque colors</span></div><div class="recolor vanilla" data-recolor="pending">Checking vanilla recolor…</div>
+<div class="sprites" data-front="" data-back="" data-front-shiny="" data-back-shiny=""><div><label>FRONT</label><img class="front" src=""></div><div><label>BACK</label><img class="back" src=""></div><div class="vanillabox"><label>VANILLA REF</label><img class="vanilla" alt="Vanilla reference"></div></div>
+<div class="meta"><b>Bug / Psychic</b><small>venomoth_alternate_form_1</small></div>
+<div class="views"><button data-view="normal" class="active">Normal</button><button data-view="shiny">Shiny</button></div>
+<div class="decision"><button data-decision="Keep">Keep</button><button data-decision="Maybe">Maybe</button><button data-decision="Delete">Delete</button></div>
+<div class="role"><span>Role</span><button data-role="Evolution">Evolution</button><button data-role="Mega">Mega</button><button data-role="Delta">Delta</button></div>
+<textarea placeholder="Optional note"></textarea></article></div></section><section class="family" data-search="weavile"><div class="familyhead"><h2>Weavile family</h2><span>1 candidate</span></div><div class="grid"><article class="card" data-id="weavile_alternate_form_1" data-species="Weavile" data-search="weavile weavile_alternate_form_1 weavile — alternate (form 1) poison / ice">
+<div class="head"><div><b>Weavile</b><small>Weavile — Alternate (Form 1)</small></div><em>Reborn Plates</em></div>
+<div class="quality"><strong>TECH CLEANUP APPLIED</strong><span>2x source de-scaled cleanly | palette reduced 16→≤15 opaque colors | palette reduced 21→≤15 opaque colors</span></div><div class="recolor vanilla" data-recolor="pending">Checking vanilla recolor…</div>
+<div class="sprites" data-front="" data-back="" data-front-shiny="" data-back-shiny=""><div><label>FRONT</label><img class="front" src=""></div><div><label>BACK</label><img class="back" src=""></div><div class="vanillabox"><label>VANILLA REF</label><img class="vanilla" alt="Vanilla reference"></div></div>
+<div class="meta"><b>Poison / Ice</b><small>weavile_alternate_form_1</small></div>
+<div class="views"><button data-view="normal" class="active">Normal</button><button data-view="shiny">Shiny</button></div>
+<div class="decision"><button data-decision="Keep">Keep</button><button data-decision="Maybe">Maybe</button><button data-decision="Delete">Delete</button></div>
+<div class="role"><span>Role</span><button data-role="Evolution">Evolution</button><button data-role="Mega">Mega</button><button data-role="Delta">Delta</button></div>
+<textarea placeholder="Optional note"></textarea></article></div></section><section class="family" data-search="weedle"><div class="familyhead"><h2>Weedle family</h2><span>1 candidate</span></div><div class="grid"><article class="card" data-id="weedle_alternate_form_2" data-species="Weedle" data-search="weedle weedle_alternate_form_2 weedle — alternate (form 2) bug / ice">
+<div class="head"><div><b>Weedle</b><small>Weedle — Alternate (Form 2)</small></div><em>Reborn Plates</em></div>
+<div class="quality"><strong>TECH CLEANUP APPLIED</strong><span>2x source de-scaled cleanly | palette reduced 49→≤15 opaque colors | palette reduced 53→≤15 opaque colors | palette reduced 66→≤15 opaque colors | palette reduced 85→≤15 opaque colors</span></div><div class="recolor vanilla" data-recolor="pending">Checking vanilla recolor…</div>
+<div class="sprites" data-front="" data-back="" data-front-shiny="" data-back-shiny=""><div><label>FRONT</label><img class="front" src=""></div><div><label>BACK</label><img class="back" src=""></div><div class="vanillabox"><label>VANILLA REF</label><img class="vanilla" alt="Vanilla reference"></div></div>
+<div class="meta"><b>Bug / Ice</b><small>weedle_alternate_form_2</small></div>
+<div class="views"><button data-view="normal" class="active">Normal</button><button data-view="shiny">Shiny</button></div>
+<div class="decision"><button data-decision="Keep">Keep</button><button data-decision="Maybe">Maybe</button><button data-decision="Delete">Delete</button></div>
+<div class="role"><span>Role</span><button data-role="Evolution">Evolution</button><button data-role="Mega">Mega</button><button data-role="Delta">Delta</button></div>
+<textarea placeholder="Optional note"></textarea></article></div></section><section class="family" data-search="wigglytuff"><div class="familyhead"><h2>Wigglytuff family</h2><span>1 candidate</span></div><div class="grid"><article class="card" data-id="wigglytuff_alternate_form_1" data-species="Wigglytuff" data-search="wigglytuff wigglytuff_alternate_form_1 wigglytuff — alternate (form 1) flying / fairy">
+<div class="head"><div><b>Wigglytuff</b><small>Wigglytuff — Alternate (Form 1)</small></div><em>Reborn Plates</em></div>
+<div class="quality"><strong>TECH CLEANUP APPLIED</strong><span>2x source de-scaled cleanly | palette reduced 17→≤15 opaque colors</span></div><div class="recolor vanilla" data-recolor="pending">Checking vanilla recolor…</div>
+<div class="sprites" data-front="" data-back="" data-front-shiny="" data-back-shiny=""><div><label>FRONT</label><img class="front" src=""></div><div><label>BACK</label><img class="back" src=""></div><div class="vanillabox"><label>VANILLA REF</label><img class="vanilla" alt="Vanilla reference"></div></div>
+<div class="meta"><b>Flying / Fairy</b><small>wigglytuff_alternate_form_1</small></div>
+<div class="views"><button data-view="normal" class="active">Normal</button><button data-view="shiny">Shiny</button></div>
+<div class="decision"><button data-decision="Keep">Keep</button><button data-decision="Maybe">Maybe</button><button data-decision="Delete">Delete</button></div>
+<div class="role"><span>Role</span><button data-role="Evolution">Evolution</button><button data-role="Mega">Mega</button><button data-role="Delta">Delta</button></div>
+<textarea placeholder="Optional note"></textarea></article></div></section><section class="family" data-search="xatu"><div class="familyhead"><h2>Xatu family</h2><span>1 candidate</span></div><div class="grid"><article class="card" data-id="xatu_alternate_form_1" data-species="Xatu" data-search="xatu xatu_alternate_form_1 xatu — alternate (form 1) ghost / flying">
+<div class="head"><div><b>Xatu</b><small>Xatu — Alternate (Form 1)</small></div><em>Reborn Plates</em></div>
+<div class="quality"><strong>SOURCE GBA ART</strong><span>2x source de-scaled cleanly</span></div><div class="recolor vanilla" data-recolor="pending">Checking vanilla recolor…</div>
+<div class="sprites" data-front="" data-back="" data-front-shiny="" data-back-shiny=""><div><label>FRONT</label><img class="front" src=""></div><div><label>BACK</label><img class="back" src=""></div><div class="vanillabox"><label>VANILLA REF</label><img class="vanilla" alt="Vanilla reference"></div></div>
+<div class="meta"><b>Ghost / Flying</b><small>xatu_alternate_form_1</small></div>
+<div class="views"><button data-view="normal" class="active">Normal</button><button data-view="shiny">Shiny</button></div>
+<div class="decision"><button data-decision="Keep">Keep</button><button data-decision="Maybe">Maybe</button><button data-decision="Delete">Delete</button></div>
+<div class="role"><span>Role</span><button data-role="Evolution">Evolution</button><button data-role="Mega">Mega</button><button data-role="Delta">Delta</button></div>
+<textarea placeholder="Optional note"></textarea></article></div></section><section class="family" data-search="yanmega"><div class="familyhead"><h2>Yanmega family</h2><span>1 candidate</span></div><div class="grid"><article class="card" data-id="yanmega_alternate_form_1" data-species="Yanmega" data-search="yanmega yanmega_alternate_form_1 yanmega — alternate (form 1) bug / ground">
+<div class="head"><div><b>Yanmega</b><small>Yanmega — Alternate (Form 1)</small></div><em>Reborn Plates</em></div>
+<div class="quality"><strong>TECH CLEANUP APPLIED</strong><span>2x source de-scaled cleanly | nearest-neighbor fit to DS canvas | palette reduced 25→≤15 opaque colors | palette reduced 30→≤15 opaque colors | palette reduced 31→≤15 opaque colors | palette reduced 33→≤15 opaque colors</span></div><div class="recolor vanilla" data-recolor="pending">Checking vanilla recolor…</div>
+<div class="sprites" data-front="" data-back="" data-front-shiny="" data-back-shiny=""><div><label>FRONT</label><img class="front" src=""></div><div><label>BACK</label><img class="back" src=""></div><div class="vanillabox"><label>VANILLA REF</label><img class="vanilla" alt="Vanilla reference"></div></div>
+<div class="meta"><b>Bug / Ground</b><small>yanmega_alternate_form_1</small></div>
+<div class="views"><button data-view="normal" class="active">Normal</button><button data-view="shiny">Shiny</button></div>
+<div class="decision"><button data-decision="Keep">Keep</button><button data-decision="Maybe">Maybe</button><button data-decision="Delete">Delete</button></div>
+<div class="role"><span>Role</span><button data-role="Evolution">Evolution</button><button data-role="Mega">Mega</button><button data-role="Delta">Delta</button></div>
+<textarea placeholder="Optional note"></textarea></article></div></section><section class="family" data-search="zweilous"><div class="familyhead"><h2>Zweilous family</h2><span>2 candidates</span></div><div class="grid"><article class="card" data-id="zweilous_cybertank_form_1" data-species="Zweilous" data-search="zweilous zweilous_cybertank_form_1 zweilous — cybertank (form 1) steel / dragon">
+<div class="head"><div><b>Zweilous</b><small>Zweilous — Cybertank (Form 1)</small></div><em>Reborn Plates</em></div>
+<div class="quality"><strong>TECH CLEANUP APPLIED</strong><span>2x source de-scaled cleanly | palette reduced 17→≤15 opaque colors</span></div><div class="recolor vanilla" data-recolor="pending">Checking vanilla recolor…</div>
+<div class="sprites" data-front="" data-back="" data-front-shiny="" data-back-shiny=""><div><label>FRONT</label><img class="front" src=""></div><div><label>BACK</label><img class="back" src=""></div><div class="vanillabox"><label>VANILLA REF</label><img class="vanilla" alt="Vanilla reference"></div></div>
+<div class="meta"><b>Steel / Dragon</b><small>zweilous_cybertank_form_1</small></div>
+<div class="views"><button data-view="normal" class="active">Normal</button><button data-view="shiny">Shiny</button></div>
+<div class="decision"><button data-decision="Keep">Keep</button><button data-decision="Maybe">Maybe</button><button data-decision="Delete">Delete</button></div>
+<div class="role"><span>Role</span><button data-role="Evolution">Evolution</button><button data-role="Mega">Mega</button><button data-role="Delta">Delta</button></div>
+<textarea placeholder="Optional note"></textarea></article><article class="card" data-id="zweilous_telepathic_form_2" data-species="Zweilous" data-search="zweilous zweilous_telepathic_form_2 zweilous — telepathic (form 2) psychic / dragon">
+<div class="head"><div><b>Zweilous</b><small>Zweilous — Telepathic (Form 2)</small></div><em>Reborn Plates</em></div>
+<div class="quality"><strong>TECH CLEANUP APPLIED</strong><span>2x source de-scaled cleanly | nearest-neighbor fit to DS canvas</span></div><div class="recolor vanilla" data-recolor="pending">Checking vanilla recolor…</div>
+<div class="sprites" data-front="" data-back="" data-front-shiny="" data-back-shiny=""><div><label>FRONT</label><img class="front" src=""></div><div><label>BACK</label><img class="back" src=""></div><div class="vanillabox"><label>VANILLA REF</label><img class="vanilla" alt="Vanilla reference"></div></div>
+<div class="meta"><b>Psychic / Dragon</b><small>zweilous_telepathic_form_2</small></div>
+<div class="views"><button data-view="normal" class="active">Normal</button><button data-view="shiny">Shiny</button></div>
+<div class="decision"><button data-decision="Keep">Keep</button><button data-decision="Maybe">Maybe</button><button data-decision="Delete">Delete</button></div>
+<div class="role"><span>Role</span><button data-role="Evolution">Evolution</button><button data-role="Mega">Mega</button><button data-role="Delta">Delta</button></div>
+<textarea placeholder="Optional note"></textarea></article></div></section></main><script src="mercury-final-polished-assets-1.js?v=1"></script><script src="mercury-final-polished-assets-2.js?v=1"></script><script src="mercury-final-polished-assets-3.js?v=1"></script><script src="mercury-final-polished-assets-4.js?v=1"></script><script src="mercury-final-polished-assets-5.js?v=1"></script><script>
+const ASSETS=window.MERCURY_POLISHED_ASSETS||{};
+document.querySelectorAll('.card').forEach(c=>{
+  const a=ASSETS[c.dataset.id]; if(!a)return;
+  const s=c.querySelector('.sprites');
+  s.dataset.front=a.front||''; s.dataset.back=a.back||'';
+  s.dataset.frontShiny=a.frontShiny||''; s.dataset.backShiny=a.backShiny||'';
+  const fi=c.querySelector('.front'), bi=c.querySelector('.back');
+  if(fi)fi.src=a.front||''; if(bi)bi.src=a.back||'';
+});
+
+const STORE='mercury-final-polished-262-v1';let D={},only=false;try{D=JSON.parse(localStorage.getItem(STORE)||'{}')}catch{}
 const cards=[...document.querySelectorAll('.card')],families=[...document.querySelectorAll('.family')],search=document.getElementById('search'),summary=document.getElementById('summary'),bar=document.getElementById('bar');
 function view(c,v){let s=c.querySelector('.sprites');c.querySelector('.front').src=v==='shiny'?s.dataset.frontShiny:s.dataset.front;c.querySelector('.back').src=v==='shiny'?s.dataset.backShiny:s.dataset.back;c.querySelectorAll('[data-view]').forEach(b=>b.classList.toggle('active',b.dataset.view===v))}
 function apply(c){let d=D[c.dataset.id]||{};c.querySelectorAll('[data-decision]').forEach(b=>b.classList.toggle('active',b.dataset.decision===d.decision));c.querySelectorAll('[data-role]').forEach(b=>b.classList.toggle('active',b.dataset.role===d.role));c.querySelector('textarea').value=d.note||'';view(c,d.view||'normal')}
 function save(){localStorage.setItem(STORE,JSON.stringify(D));stats()}
 function filter(){let q=search.value.trim().toLowerCase();families.forEach(f=>{let n=0;f.querySelectorAll('.card').forEach(c=>{let d=D[c.dataset.id]||{},show=(!q||c.dataset.search.includes(q)||f.dataset.search.includes(q))&&(!only||!d.decision);c.classList.toggle('hidden',!show);if(show)n++});f.classList.toggle('hidden',n===0)})}
-function stats(){let done=cards.filter(c=>(D[c.dataset.id]||{}).decision).length,k=cards.filter(c=>(D[c.dataset.id]||{}).decision==='Keep').length,m=cards.filter(c=>(D[c.dataset.id]||{}).decision==='Maybe').length,x=cards.filter(c=>(D[c.dataset.id]||{}).decision==='Delete').length;summary.textContent=`${done} / ${cards.length} decided • ${k} keep • ${m} maybe • ${x} delete`;bar.style.width=(done/cards.length*100)+'%';filter()}
+function stats(){let done=cards.filter(c=>(D[c.dataset.id]||{}).decision).length;summary.textContent=`${done} / ${cards.length} decided`;bar.style.width=(done/cards.length*100)+'%';filter()}
 cards.forEach(c=>{c.querySelectorAll('[data-decision]').forEach(b=>b.onclick=()=>{D[c.dataset.id]={...(D[c.dataset.id]||{}),decision:b.dataset.decision};save();apply(c)});c.querySelectorAll('[data-role]').forEach(b=>b.onclick=()=>{D[c.dataset.id]={...(D[c.dataset.id]||{}),role:b.dataset.role};save();apply(c)});c.querySelectorAll('[data-view]').forEach(b=>b.onclick=()=>{D[c.dataset.id]={...(D[c.dataset.id]||{}),view:b.dataset.view};save();apply(c)});c.querySelector('textarea').onchange=e=>{D[c.dataset.id]={...(D[c.dataset.id]||{}),note:e.target.value};save()};apply(c)});search.oninput=filter;document.getElementById('undecided').onclick=()=>{only=!only;document.getElementById('undecided').textContent=only?'Show all':'Undecided only';filter()};
 document.getElementById('export').onclick=()=>{let out=[['identity','decision','role','note']];cards.forEach(c=>{let d=D[c.dataset.id]||{};out.push([c.dataset.id,d.decision||'',d.role||'',d.note||''])});let csv=out.map(r=>r.map(v=>'"'+String(v??'').replaceAll('"','""')+'"').join(',')).join('\n'),a=document.createElement('a');a.href=URL.createObjectURL(new Blob([csv],{type:'text/csv'}));a.download='mercury_final_polished_sprite_decisions.csv';a.click()};
 
-const VBASE='https://raw.githubusercontent.com/lionsprideemb-tech/Sprites/main/DS_CUSTOM_LIBRARY/packs/DrPrettyman_DS_64x64/sprites-processed/front/';
-const fallback={meowstic:'meowstic-male',pyroar:'pyroar-male'};
-function slug(s){return s.toLowerCase().replaceAll('’','').replaceAll("'","").replace(/\s+/g,'-')}
-function loadImg(src){return new Promise((res,rej)=>{let im=new Image();im.crossOrigin='anonymous';im.onload=()=>res(im);im.onerror=rej;im.src=src})}
-function structure(img){let c=document.createElement('canvas'),ctx=c.getContext('2d',{willReadFrequently:true});c.width=img.naturalWidth||img.width;c.height=img.naturalHeight||img.height;ctx.drawImage(img,0,0);let d=ctx.getImageData(0,0,c.width,c.height).data,minx=c.width,miny=c.height,maxx=-1,maxy=-1;for(let y=0;y<c.height;y++)for(let x=0;x<c.width;x++)if(d[(y*c.width+x)*4+3]){minx=Math.min(minx,x);maxx=Math.max(maxx,x);miny=Math.min(miny,y);maxy=Math.max(maxy,y)}if(maxx<0)return'empty';let map=new Map(),next=1,out=(maxx-minx+1)+'x'+(maxy-miny+1)+':';for(let y=miny;y<=maxy;y++)for(let x=minx;x<=maxx;x++){let i=(y*c.width+x)*4,a=d[i+3];if(!a){out+='0,';continue}let k=d[i]+'.'+d[i+1]+'.'+d[i+2]+'.'+a;if(!map.has(k))map.set(k,next++);out+=map.get(k)+','}return out}
-async function audit(c){if(c.dataset.audited)return;c.dataset.audited='1';let sp=slug(c.dataset.species),keys=[sp];if(fallback[sp])keys.push(fallback[sp]);let v=null,url='';for(const k of keys){url=VBASE+encodeURIComponent(k)+'.png';try{v=await loadImg(url);break}catch(e){}}let box=c.querySelector('[data-recolor]'),ref=c.querySelector('.vanilla');if(!v){box.className='recolor';box.textContent='Vanilla reference unavailable automatically — judge manually.';return}ref.src=url;try{let cand=c.querySelector('.front');if(!cand.complete)await loadImg(cand.src);if(structure(cand)===structure(v)){box.className='recolor pure';box.textContent='PURE RECOLOR OF VANILLA — same pixel design, different palette. Safe to pass/delete if you do not want recolors.'}else if(!box.classList.contains('batch')){box.className='recolor design';box.textContent='ACTUAL DESIGN CHANGE — pixel structure differs from the vanilla DS sprite.'}}catch(e){box.className='recolor';box.textContent='Compare manually against vanilla reference.'}}
-const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){audit(e.target);obs.unobserve(e.target)}}),{rootMargin:'500px'});cards.forEach(c=>obs.observe(c));
-stats();
-</script>
-<script>
-const PROTECTED_MEGA_KEYS=["abomasnow-mega","absol-mega","absol-mega-z","aerodactyl-mega","aggron-mega","alakazam-mega","altaria-mega","ampharos-mega","audino-mega","banette-mega","barbaracle-mega","baxcalibur-mega","beedrill-mega","blastoise-mega","blaziken-mega","camerupt-mega","chandelure-mega","charizard-mega-x","charizard-mega-y","chesnaught-mega","chimecho-mega","clefable-mega","crabominable-mega","darkrai-mega","delphox-mega","diancie-mega","dragalge-mega","dragonite-mega","drampa-mega","eelektross-mega","emboar-mega","excadrill-mega","falinks-mega","feraligatr-mega","floette-mega","froslass-mega","gallade-mega","garchomp-mega","garchomp-mega-z","gardevoir-mega","gengar-mega","glalie-mega","glimmora-mega","golisopod-mega","golurk-mega","greninja-mega","gyarados-mega","hawlucha-mega","heatran-mega","heracross-mega","houndoom-mega","kangaskhan-mega","latias-mega","latios-mega","lopunny-mega","lucario-mega","lucario-mega-z","magearna-mega","magearna-original-mega","malamar-mega","manectric-mega","mawile-mega","medicham-mega","meganium","meganium-mega","meowstic-female-mega","meowstic-male-mega","meowstic-mega","metagross-mega","mewtwo-mega-x","mewtwo-mega-y","pidgeot-mega","pinsir-mega","pyroar-mega","raichu-mega-x","raichu-mega-y","rayquaza-mega","sableye-mega","salamence-mega","sceptile-mega","scizor-mega","scolipede-mega","scovillain-mega","scrafty-mega","sharpedo-mega","skarmory-mega","slowbro-mega","staraptor-mega","starmie-mega","steelix-mega","swampert-mega","tatsugiri-curly-mega","tatsugiri-droopy-mega","tatsugiri-stretchy-mega","tyranitar-mega","venusaur-mega","victreebel-mega","yanmega","zeraora-mega","zygarde-mega"];
-const protectedMegaSet=new Set(PROTECTED_MEGA_KEYS);
-function megaKeyFromIdentity(id){return String(id||'').toLowerCase().replaceAll('_','-');}
-document.querySelectorAll('.card').forEach(c=>{
-  const k=megaKeyFromIdentity(c.dataset.id);
-  if(!protectedMegaSet.has(k)) return;
-  const note=document.createElement('div');
-  note.className='protectedMegaNotice';
-  note.textContent='PROTECTED CANON/REQUIRED MEGA — Mercury already has the complete required Mega sprite set elsewhere. Rejecting this candidate will NOT remove the required Mega.';
-  c.querySelector('.head')?.after(note);
-});
-</script>
-<style>.protectedMegaNotice{margin:0 8px 6px;padding:7px 8px;border-radius:7px;background:#e4f5e8;color:#235b30;font-size:10px;font-weight:800;border:1px solid #9ec7a8}</style>
-</body></html>
+const VANILLA_BASE='https://raw.githubusercontent.com/lionsprideemb-tech/Sprites/main/DS_CUSTOM_LIBRARY/packs/DrPrettyman_DS_64x64/sprites-processed/front/';
+function slugSpecies(s){
+  return s.toLowerCase().replaceAll("’","").replaceAll("'","").replace(/\s+/g,'-');
+}
+const VANILLA_FALLBACK={
+  'meowstic':'meowstic-male',
+  'pyroar':'pyroar-male'
+};
+function loadImg(src){
+  return new Promise((resolve,reject)=>{
+    const im=new Image(); im.crossOrigin='anonymous';
+    im.onload=()=>resolve(im); im.onerror=reject; im.src=src;
+  });
+}
+function normalizedStructure(img){
+  const c=document.createElement('canvas'),ctx=c.getContext('2d',{willReadFrequently:true});
+  c.width=img.naturalWidth||img.width; c.height=img.naturalHeight||img.height;
+  ctx.drawImage(img,0,0);
+  const d=ctx.getImageData(0,0,c.width,c.height),px=d.data;
+  let minx=c.width,miny=c.height,maxx=-1,maxy=-1;
+  for(let y=0;y<c.height;y++)for(let x=0;x<c.width;x++){
+    if(px[(y*c.width+x)*4+3]){ if(x<minx)minx=x;if(x>maxx)maxx=x;if(y<miny)miny=y;if(y>maxy)maxy=y; }
+  }
+  if(maxx<0)return 'empty';
+  const map=new Map(); let next=1, out=(maxx-minx+1)+'x'+(maxy-miny+1)+':';
+  for(let y=miny;y<=maxy;y++)for(let x=minx;x<=maxx;x++){
+    let i=(y*c.width+x)*4,a=px[i+3];
+    if(!a){out+='0,';continue}
+    let k=px[i]+'.'+px[i+1]+'.'+px[i+2]+'.'+a;
+    if(!map.has(k))map.set(k,next++);
+    out+=map.get(k)+',';
+  }
+  return out;
+}
+async function vanillaAuditCard(card){
+  const species=slugSpecies(card.dataset.species), box=card.querySelector('[data-recolor]'), ref=card.querySelector('.vanilla');
+  let keys=[species]; if(VANILLA_FALLBACK[species])keys.push(VANILLA_FALLBACK[species]);
+  let vim=null;
+  for(const k of keys){
+    try{ vim=await loadImg(VANILLA_BASE+encodeURIComponent(k)+'.png'); ref.src=VANILLA_BASE+encodeURIComponent(k)+'.png'; break; }catch(e){}
+  }
+  if(!vim){
+    box.className='recolor vanilla'; box.textContent='Vanilla reference unavailable automatically — judge this one manually.';
+    return;
+  }
+  try{
+    const cand=card.querySelector('.front');
+    if(!cand.complete) await loadImg(cand.src);
+    const same=normalizedStructure(cand)===normalizedStructure(vim);
+    if(same){
+      box.className='recolor pure';
+      box.textContent='PURE RECOLOR OF VANILLA — same pixel design, different palette. Safe to pass/delete if you do not want recolors.';
+    }else{
+      box.className='recolor design';
+      box.textContent='ACTUAL DESIGN CHANGE — pixel structure differs from the vanilla DS sprite.';
+    }
+  }catch(e){
+    box.className='recolor vanilla'; box.textContent='Could not finish automatic recolor check — compare against the vanilla reference shown.';
+  }
+}
+cards.forEach(c=>vanillaAuditCard(c));
+
+stats();</script></body></html>
