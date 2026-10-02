@@ -103,7 +103,7 @@ const TYPEMAP=RAW+'DS_CUSTOM_LIBRARY/DS_READY_MASTER/mercury_name_type_map.json'
 const ENRICHED=RAW+'DS_CUSTOM_LIBRARY/DS_READY_MASTER/fakemon_enriched_metadata.json';
 const BASEDECISIONS=RAW+'DS_CUSTOM_LIBRARY/DS_READY_MASTER/user_sprite_decisions_2026-10-01.json';
 const PLATINUM=RAW+'DS_CUSTOM_LIBRARY/DS_READY_MASTER/platinum_redux_review_entries.json';
-const LEFTOVER=RAW+'DS_CUSTOM_LIBRARY/DS_READY_MASTER/leftover_review_pool.csv?v=20261002-unified';
+const LEFTOVER=RAW+'DS_CUSTOM_LIBRARY/DS_READY_MASTER/leftover_review_pool.csv?v=20261002-family-audit-2';
 const STORAGE='mercury-ds-sprite-approval-v1';
 let rows=[], decisions={}, familyMap={}, familyLabels={}, typeMap={}, enrichedMap={};
 
@@ -367,6 +367,21 @@ function familyStageIndex(r,fk){
   if(/mega|primal|gigantamax|gmax/i.test(displayName(r)+' '+r.identity)) return Math.max(0,members.length);
   return 999;
 }
+function missingCustomFamilyMembers(fk,identities){
+  const sample=[...identities.values()].flat()[0];
+  const fam=familyDisplay(sample)||familyLabels[fk]||'';
+  const members=familyMembersFromLabel(fam);
+  if(members.length<2)return [];
+  const rowNames=new Set(rows.map(x=>normalizeDisplay(displayName(x))));
+  const vals=Object.values(enrichedMap||{});
+  const missing=[];
+  for(const m of members){
+    const n=normalizeDisplay(m);
+    const hasCustom=vals.some(v=>normalizeDisplay(v&&v.name)===n);
+    if(hasCustom&&!rowNames.has(n))missing.push(m);
+  }
+  return missing;
+}
 function stageText(r,fk){
   const fam=familyDisplay(r)||familyLabels[fk]||'';
   const members=familyMembersFromLabel(fam);
@@ -422,6 +437,8 @@ function render(){
   }
   const grid=document.getElementById('grid'); grid.innerHTML='';
   for(const [fk,identities] of [...families.entries()].sort((a,b)=>(familyLabels[a[0]]||a[0]).localeCompare(familyLabels[b[0]]||b[0]))){
+    const missingMembers=missingCustomFamilyMembers(fk,identities);
+    if(missingMembers.length)continue;
     const familyCount=[...identities.values()].reduce((n,a)=>n+a.length,0);
     const fh=document.createElement('div');fh.className='groupTitle';
     fh.textContent=fk.startsWith('__unidentified__')?('Needs identification — '+fk.replace('__unidentified__','')+' — '+familyCount+' sprite'+(familyCount===1?'':'s')):((familyDisplay([...identities.values()].flat()[0])||familyLabels[fk]||pretty(fk))+' — '+familyCount+' design'+(familyCount===1?'':'s'));
