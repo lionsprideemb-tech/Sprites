@@ -45,20 +45,23 @@ jobs:
           shutil.rmtree(flat,ignore_errors=True); flat.mkdir(parents=True)
           audit.mkdir(parents=True,exist_ok=True)
 
-          manifest=json.loads((repo/"DS_CUSTOM_LIBRARY/DS_READY_MASTER/legacy_gba_auto_yes_recovery_phase1_source_routes.json").read_text())
-          targets=[e for e in manifest["entries"] if e.get("source_recovery_route")=="REBORN_PLATES_STAGED_SOURCE"]
-          # The user wants both Eeveelution alternates available side-by-side for the final choice,
-          # including four older Reborn/Plates candidates that were previously rejected before this
-          # clarification pass and therefore were not part of the 94 auto-yes recovery set.
-          extra_eeveelutions=[
-              {"identity":"vaporeon-alternate-form-3","base":"Vaporeon"},
-              {"identity":"jolteon-alternate-form-3","base":"Jolteon"},
-              {"identity":"espeon-alternate-form-3","base":"Espeon"},
-              {"identity":"umbreon-alternate-form-3","base":"Umbreon"},
-          ]
-          existing={e["identity"] for e in targets}
-          targets += [e for e in extra_eeveelutions if e["identity"] not in existing]
-          assert len(targets)==98, len(targets)
+          legacy=json.loads((repo/"DS_CUSTOM_LIBRARY/DS_READY_MASTER/legacy_sprite_decisions_rev4.json").read_text())
+          decisions=legacy.get("decisions",legacy.get("entries",legacy if isinstance(legacy,list) else []))
+          targets=[]
+          for e in decisions:
+              if e.get("source")!="Reborn / Plates of Arceus":
+                  continue
+              ident=e.get("norm_effective") or e.get("norm_reviewed")
+              targets.append({
+                  "identity":ident,
+                  "base":e.get("base",""),
+                  "historical_decision":e.get("decision",""),
+                  "review_id":e.get("review_id",""),
+              })
+          # Recover the complete historic Reborn/Plates comparison pool, not only the old approved subset.
+          # This intentionally restores previously rejected alternates so overlapping designs can be
+          # compared side-by-side during the final Mercury family review.
+          assert len(targets)==346, len(targets)
 
           names_url="https://raw.githubusercontent.com/PokeAPI/pokeapi/master/data/v2/csv/pokemon_species_names.csv"
           names_csv=Path("/tmp/pokemon_species_names.csv")
@@ -102,7 +105,7 @@ jobs:
               if (dest/"shiny_back.png").exists(): shutil.copy2(dest/"shiny_back.png",flat/f"{key}_BACK_SHINY.png")
 
               rows.append({
-                  "identity":ident,"base":base,"dex":d,"form":form,
+                  "identity":ident,"base":base,"dex":d,"form":form,"historical_decision":e.get("historical_decision",""),"review_id":e.get("review_id",""),
                   "front":found.get("front",""),"back":found.get("back",""),
                   "shiny_front":found.get("shiny_front",""),"shiny_back":found.get("shiny_back",""),
                   "view_count":len(found),
@@ -112,7 +115,8 @@ jobs:
               w=csv.DictWriter(f,fieldnames=rows[0].keys()); w.writeheader(); w.writerows(rows)
           summary={
               "targets":len(rows),
-              "front_back_complete":sum(r["front"] and r["back"] for r in rows),
+              "historic_pool":"ALL Reborn / Plates candidates from legacy_sprite_decisions_rev4.json",
+              "front_back_complete":sum(bool(r["front"] and r["back"]) for r in rows),
               "complete_4view":sum(r["view_count"]==4 for r in rows),
               "normal_only":sum(r["view_count"]==2 for r in rows),
           }
