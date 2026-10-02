@@ -1,4 +1,5 @@
 from pathlib import Path
+# final rebuild after canonical recovery 2026-10-02
 # rebuild trigger after enriched metadata success
 import csv, json
 
