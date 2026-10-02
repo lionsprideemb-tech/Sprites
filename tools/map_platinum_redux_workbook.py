@@ -101,6 +101,88 @@ for ws in wb.worksheets:
         else:
             unmapped.append(rec)
 
+# Build a direct review catalog from the Forms sheet. In this workbook:
+# col 2 = species/form name, 3/4 = typing, 12 = Front, 13 = Back, 14 = Shiny.
+forms=wb["Forms"]
+forms_images=defaultdict(dict)
+for img in getattr(forms,"_images",[]):
+    try:
+        row=img.anchor._from.row+1
+        col=img.anchor._from.col+1
+        data=img._data()
+        h=hashlib.sha256(data).hexdigest()
+        p=repo_hash.get(h,"")
+        if col in (12,13,14) and p:
+            forms_images[row][col]={"path":p,"sha256":h}
+    except Exception:
+        pass
+
+VANILLA_TYPE={"Sound":"Normal"}
+def clean_type(v):
+    t=sval(v).title()
+    return VANILLA_TYPE.get(t,t)
+
+def species_slug(name):
+    s=str(name or "").strip().lower().replace("♀","-f").replace("♂","-m")
+    s=s.replace("’","").replace("'","").replace(".","")
+    s=re.sub(r"[^a-z0-9]+","-",s).strip("-")
+    return s
+
+family_cache={}
+def poke_family(name):
+    slug=species_slug(name)
+    if slug in family_cache:return family_cache[slug]
+    # PokeAPI special names.
+    special={"mr-mime":"mr-mime","mime-jr":"mime-jr","farfetchd":"farfetchd","porygon-z":"porygon-z"}
+    slug=special.get(slug,slug)
+    try:
+        import urllib.request
+        with urllib.request.urlopen("https://pokeapi.co/api/v2/pokemon-species/"+slug,timeout=15) as r:
+            sp=json.load(r)
+        with urllib.request.urlopen(sp["evolution_chain"]["url"],timeout=15) as r:
+            ch=json.load(r)
+        members=[]
+        def walk(n):
+            members.append(n["species"]["name"].replace("-"," ").title())
+            for e in n.get("evolves_to",[]):walk(e)
+        walk(ch["chain"])
+        fam=" → ".join(members)
+    except Exception:
+        fam=str(name).strip()+" family"
+    family_cache[slug]=fam
+    return fam
+
+platinum_review=[]
+for row,imgs in sorted(forms_images.items()):
+    name=sval(forms.cell(row,2).value)
+    if not name or 12 not in imgs or 13 not in imgs:continue
+    t1=clean_type(forms.cell(row,3).value)
+    t2=clean_type(forms.cell(row,4).value)
+    dex=sval(forms.cell(row,1).value)
+    base=name.title() if name.isupper() else name
+    auth_candidates=by_base.get(base.lower(),[])
+    hist=auth_candidates[0]["decision"] if auth_candidates else ""
+    review_id=auth_candidates[0]["review_id"] if auth_candidates else ""
+    identity="platinum-redux-"+species_slug(base)
+    platinum_review.append({
+      "identity":identity,
+      "name":"Platinum Redux "+base,
+      "base_species":base,
+      "type1":t1,"type2":t2,
+      "family":poke_family(base),
+      "source":"Platinum Redux v4.0 workbook",
+      "bucket":"NATIVE_HACK",
+      "front_path":imgs[12]["path"],
+      "back_path":imgs[13]["path"],
+      "structural_hash":imgs[12]["sha256"],
+      "historical_review_id":review_id,
+      "historical_decision":hist,
+      "ready_for_approval":True
+    })
+(OUT/"platinum_redux_review_entries.json").write_text(json.dumps({
+  "generated":"2026-10-01","count":len(platinum_review),"entries":platinum_review
+},indent=2)+"\n")
+
 # Aggregate image candidates by review id.
 agg=defaultdict(list)
 for m in matches:agg[m["review_id"]].append(m)
@@ -113,7 +195,8 @@ summary={
   "keep_entries_with_image_match":sum(1 for e in auth_entries if e["decision"]=="KEEP" and e["review_id"] in agg),
   "keep_entries_total":sum(1 for e in auth_entries if e["decision"]=="KEEP"),
   "reject_entries_with_image_match":sum(1 for e in auth_entries if e["decision"]=="REJECT" and e["review_id"] in agg),
-  "unmapped_images":len(unmapped)
+  "unmapped_images":len(unmapped),
+  "platinum_review_entries":len(platinum_review)
 }
 (OUT/"platinum_redux_workbook_anchor_map.json").write_text(json.dumps({
     "summary":summary,"matches_by_review_id":agg,"anchors":anchors
