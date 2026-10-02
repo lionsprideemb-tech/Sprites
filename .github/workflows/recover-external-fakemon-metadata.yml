@@ -5,8 +5,7 @@ on:
   push:
     branches: [main]
     paths:
-      - 'tools/recover_external_fakemon_metadata.py'
-      - '.github/workflows/recover-external-fakemon-metadata.yml'
+      - 'DS_CUSTOM_LIBRARY/.run-consolidated-fakemon-recovery'
 
 permissions:
   contents: write
