@@ -315,10 +315,11 @@ for r in rows:
         fam=custom_family_order(key)
         out["family"]=" → ".join(x.replace("-"," ").title() for x in fam)
         confidence.append("SOURCE_EVOLUTION_GRAPH")
-    # No known family is unresolved, not approval-ready. Do not pretend a
-    # missing relationship means the species is truly standalone.
+    # A missing source evolution record is not a reason to hide a design from
+    # visual approval.  Keep it as a standalone proposal unless a family can be
+    # recovered.  Family grouping can be refined later if another stage is found.
     if not out.get("family"):
-        out["family"]="Standalone / no evolution data found"
+        out["family"]="Standalone / no known evolution"
         confidence.append("STANDALONE_PROPOSAL")
     if not out.get("name"):
         out["name"]=ident.replace("-"," ").title()
@@ -355,10 +356,12 @@ for r in rows:
     out["type1"]=vanilla_type(out.get("type1"))
     out["type2"]=vanilla_type(out.get("type2"))
     out["confidence"]=";".join(confidence)
-    unresolved_family=(out.get("family")=="Standalone / no evolution data found")
+    # Approval gate: a real front + back pair and a usable vanilla type are
+    # sufficient.  Standalone Fakemon are valid review candidates; lack of
+    # evolution metadata must never silently remove them from the sheet.
     out["ready_for_approval"]=bool(
-        out.get("name") and str(out.get("type1","")).upper()!="TBD" and out.get("family")
-        and out.get("back_path") and not unresolved_family
+        out.get("name") and str(out.get("type1","")).upper()!="TBD"
+        and out.get("front_path") and out.get("back_path")
     )
     enriched[ident+"|"+r.get("structural_hash","")]=out
     report.append(out)
@@ -377,7 +380,7 @@ with EXCLUDED.open("w",newline="",encoding="utf-8") as f:
         missing=[]
         if not x.get("name"): missing.append("name")
         if not x.get("type1") or x.get("type1")=="TBD": missing.append("type")
-        if not x.get("family") or x.get("family")=="Standalone / no evolution data found": missing.append("family/relationship")
+        if not x.get("family"): missing.append("family/relationship")
         if not x.get("back_path"): missing.append("back sprite")
         row={k:x.get(k,"") for k in fields}
         row["missing"]="; ".join(missing)
@@ -388,10 +391,10 @@ summary={
  "ready":sum(1 for x in report if x["ready_for_approval"]),
  "missing_type":sum(1 for x in report if str(x.get("type1","")).upper()=="TBD"),
  "missing_back":sum(1 for x in report if not x.get("back_path")),
- "standalone_proposals":sum(1 for x in report if x.get("family")=="Standalone / no evolution data found"),
+ "standalone_proposals":sum(1 for x in report if x.get("family")=="Standalone / no known evolution"),
  "source_metadata_records":len(meta),
  "excluded_from_approval":sum(1 for x in report if not x["ready_for_approval"]),
- "approval_policy":"Only fully identified entries with name, vanilla type, resolved family/standalone identity, front sprite and back sprite are admitted to approval. 'No evolution data found' is unresolved and excluded.",
+ "approval_policy":"Every non-vanilla/custom design with a real front+back pair and a vanilla-compatible type is admitted to review. Missing evolution metadata is labeled as standalone and does not hide the sprite.",
 }
 (MASTER/"fakemon_enrichment_summary.json").write_text(json.dumps(summary,indent=2)+"\n")
 print(json.dumps(summary,indent=2))
