@@ -73,18 +73,6 @@
       "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE;BACK_MATCH_RECOVERED",
       "ready_for_approval": true
     },
-    "496-male|3e0ee8ad6d5bb9964960eef8add9670b51e8d72c22dcd1f14bed66b5c8e4be51": {
-      "identity": "496-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/496/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/496/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "496 Male",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
     "560-1f|e7838446d6f959aa841a88c8d085470836dbed55bdc1a898b59bf9828171bb57": {
       "identity": "560-1f",
       "source": "Festival_Misc",
@@ -119,30 +107,6 @@
       "type1": "Normal",
       "type2": "",
       "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
-    "absol-mega-z|73672c4352a427593225729d491b27380b9c137761ca97294a9638396fb32ea7": {
-      "identity": "absol-mega-z",
-      "source": "DrPrettyman_DS_64x64",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/DrPrettyman_DS_64x64/sprites-processed/front/absol-mega-z.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/DrPrettyman_DS_64x64/sprites-processed/back/absol-mega-z.png",
-      "name": "Mega Absol Z",
-      "type1": "Dark",
-      "type2": "Ghost",
-      "family": "Absol",
-      "confidence": "MERCURY_MASTER",
-      "ready_for_approval": true
-    },
-    "absol-mega-z|6dfb525182557350b3b8db412ffef6f1ef7f15e97d295aedef32c1213ab2ab50": {
-      "identity": "absol-mega-z",
-      "source": "Elite_Redux_Bulk",
-      "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/absol_mega_z/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/absol_mega_z/back.png",
-      "name": "Mega Absol Z",
-      "type1": "Dark",
-      "type2": "Ghost",
-      "family": "Absol",
-      "confidence": "MERCURY_MASTER",
       "ready_for_approval": true
     },
     "abyssand|de729b7f399f67a165405837f2773ca7c19a913826f55946e6c7eda53e0ca962": {
@@ -277,54 +241,6 @@
       "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
       "ready_for_approval": true
     },
-    "alcremie-berry-sweet-male|13fd8c900219660ae0d3c1505315302c0a5a8148135f461aa7c465f2bc40a415": {
-      "identity": "alcremie-berry-sweet-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/alcremie_berry_sweet/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/alcremie_berry_sweet/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Alcremie Berry Sweet Male",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
-    "alcremie-clover-sweet-male|a36cd99ce2cad61717e18faa2cb9969b236b6ae75fee1b2270d60e3f433650b1": {
-      "identity": "alcremie-clover-sweet-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/alcremie_clover_sweet/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/alcremie_clover_sweet/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Alcremie Clover Sweet Male",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
-    "alcremie-flower-sweet-male|048270d206561d7475738d425c50edccacf8fca9fe7b99ed28fa1e6c05ce9b2e": {
-      "identity": "alcremie-flower-sweet-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/alcremie_flower_sweet/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/alcremie_flower_sweet/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Alcremie Flower Sweet Male",
-      "type1": "Grass",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
-    "alcremie-love-sweet-male|3839ab94166ccde8556c8a2fc3af64346d975234c848a07be389a7c80e182e73": {
-      "identity": "alcremie-love-sweet-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/alcremie_love_sweet/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/alcremie_love_sweet/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Alcremie Love Sweet Male",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
     "alcremie-matcha-cream|1f094b5472c3447ae80d1795a7536441b8ff0373a7955472b2947e00ca5b9448": {
       "identity": "alcremie-matcha-cream",
       "source": "Elite_Redux_Bulk",
@@ -373,18 +289,6 @@
       "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE;BACK_MATCH_RECOVERED",
       "ready_for_approval": true
     },
-    "alcremie-ribbon-sweet-male|cef363c6896a356bbe14635e5d547eba960a9eb356a95ae55b6ee2628493c1bf": {
-      "identity": "alcremie-ribbon-sweet-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/alcremie_ribbon_sweet/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/alcremie_ribbon_sweet/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Alcremie Ribbon Sweet Male",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
     "alcremie-ruby-cream|950143f8ffbc7b5257fb1552942bea095ec404ddd94d9d60bc12dfb0b6bbb5e1": {
       "identity": "alcremie-ruby-cream",
       "source": "Elite_Redux_Bulk",
@@ -419,18 +323,6 @@
       "type1": "Normal",
       "type2": "",
       "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE;BACK_MATCH_RECOVERED",
-      "ready_for_approval": true
-    },
-    "alcremie-star-sweet-male|aae2cbb51e0c1803f888cdbde5b5b85a88a08520514b6dd3c23c9bb832b29b8c": {
-      "identity": "alcremie-star-sweet-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/alcremie_star_sweet/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/alcremie_star_sweet/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Alcremie Star Sweet Male",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
       "ready_for_approval": true
     },
     "altaria-redux|fc3402b522f54fd19af326a30057ce3315ac06d024204a87925dc0d635bce3d3": {
@@ -493,6 +385,18 @@
       "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
       "ready_for_approval": true
     },
+    "anuf|fd3a05d9dedb4e38d26b93f8474b6059d3af194afb67b70622b66cd619e3c758": {
+      "identity": "anuf",
+      "source": "Festival_PrincessPhoenix",
+      "front_path": "DS_CUSTOM_LIBRARY/packs/Festival_PrincessPhoenix/PrincessPhoenix/Pokemon/Battlers/Gen 4-5 Frontsprites/AnuF.png",
+      "back_path": "DS_CUSTOM_LIBRARY/packs/Festival_PrincessPhoenix/PrincessPhoenix/Pokemon/Battlers/Gen 4 Backsprites/AnuB4.png",
+      "family": "Unresolved family / relationship",
+      "name": "Anuf",
+      "type1": "Normal",
+      "type2": "",
+      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE;BACK_MATCH_RECOVERED",
+      "ready_for_approval": true
+    },
     "anxiust|8ccf3109d2601ae04f55130cc4ff122b64eb944e992ab0b91bdd12caa7396477": {
       "identity": "anxiust",
       "source": "Festival_Magiscarf",
@@ -516,6 +420,18 @@
       "type2": "",
       "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
       "ready_for_approval": false
+    },
+    "appletun-female|824cdd7cf3e1fb74f3bb89eabb326c9ed09b771a34c774730d9a65fb212f9eb5": {
+      "identity": "appletun-female",
+      "source": "HGSS_Project_Unique_Dream_Crystal",
+      "front_path": "DS_CUSTOM_LIBRARY/packs/HGSS_Project_Unique_Dream_Crystal/appletun/female/front.png",
+      "back_path": "DS_CUSTOM_LIBRARY/packs/HGSS_Project_Unique_Dream_Crystal/appletun/female/back.png",
+      "family": "Unresolved family / relationship",
+      "name": "Appletun Female",
+      "type1": "Normal",
+      "type2": "",
+      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
+      "ready_for_approval": true
     },
     "apprensith|cd9f353c1776100442c4bd0384f4e23291004eafbd6e9b09a67ff24b400f696d": {
       "identity": "apprensith",
@@ -601,18 +517,6 @@
       "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
       "ready_for_approval": true
     },
-    "arcanine-hisuian-male|95fdbb294b61256b06ee4eb41e62054fa6f9d5888b0219400bc351130a254219": {
-      "identity": "arcanine-hisuian-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/arcanine_hisuian/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/arcanine_hisuian/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Arcanine Hisuian Male",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
     "arcanine-hisuian-mega|6fde400883e81905e92bef75732827348d15f3affceed4ceaebd6bc4b9965764": {
       "identity": "arcanine-hisuian-mega",
       "source": "Elite_Redux_Bulk",
@@ -620,18 +524,6 @@
       "back_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/arcanine_hisuian_mega/back.png",
       "family": "Unresolved family / relationship",
       "name": "Arcanine Hisuian Mega",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
-    "arcanine-lord-male|963b0e48e4b317408b9894e571286bfb99b9710ae55f1c588e8591432e165aac": {
-      "identity": "arcanine-lord-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/arcanine_lord/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/arcanine_lord/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Arcanine Lord Male",
       "type1": "Normal",
       "type2": "",
       "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
@@ -769,18 +661,6 @@
       "confidence": "MERCURY_MASTER",
       "ready_for_approval": true
     },
-    "articuno-galarian-male|9cce87c5733253ac8c2016e39f9cf448c1e382cba25c3a24bcb5f91a73a0225d": {
-      "identity": "articuno-galarian-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/articuno_galarian/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/articuno_galarian/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Articuno Galarian Male",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
     "asterish|6f2911426a6987d26ff623d0fa3f34ea9883b8c8e46a2b070ffadf98a0504f7e": {
       "identity": "asterish",
       "source": "Festival_Magiscarf",
@@ -800,6 +680,18 @@
       "back_path": "DS_CUSTOM_LIBRARY/packs/Festival_Atsui/Atsui/Pokemon/Back/ATLASBELL_gen_4.png",
       "family": "Unresolved family / relationship",
       "name": "Atlasbell",
+      "type1": "Normal",
+      "type2": "",
+      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE;BACK_MATCH_RECOVERED",
+      "ready_for_approval": true
+    },
+    "audino-female|480be136fd5b686bf73588ee8677e7a2d29b85f647f582904bb70d4e693188aa": {
+      "identity": "audino-female",
+      "source": "HGSS_Project_Unique_Clumsycat_HG_Hack",
+      "front_path": "DS_CUSTOM_LIBRARY/packs/HGSS_Project_Unique_Clumsycat_HG_Hack/audino/female/front.png",
+      "back_path": "DS_CUSTOM_LIBRARY/packs/HGSS_Project_Unique_Clumsycat_HG_Hack/audino/female/back.png",
+      "family": "Unresolved family / relationship",
+      "name": "Audino Female",
       "type1": "Normal",
       "type2": "",
       "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE;BACK_MATCH_RECOVERED",
@@ -851,6 +743,54 @@
       "type2": "Dark",
       "family": "Undiscovered \u2014 Azelf",
       "confidence": "MERCURY_MASTER",
+      "ready_for_approval": true
+    },
+    "baobaraffe|f756c00f0c145de57abae0e239df4a0e96c90672cfafc9f5c14830c27f9b0ea5": {
+      "identity": "baobaraffe",
+      "source": "Festival_PrincessPhoenix",
+      "front_path": "DS_CUSTOM_LIBRARY/packs/Festival_PrincessPhoenix/PrincessPhoenix/Pokemon/Battlers/Gen 4-5 Frontsprites/Baobaraffe.png",
+      "back_path": "DS_CUSTOM_LIBRARY/packs/Festival_PrincessPhoenix/PrincessPhoenix/Pokemon/Battlers/Gen 4 Backsprites/BaobaraffeB4.png",
+      "family": "Unresolved family / relationship",
+      "name": "Baobaraffe",
+      "type1": "Normal",
+      "type2": "",
+      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE;BACK_MATCH_RECOVERED",
+      "ready_for_approval": true
+    },
+    "baobaraffe3|3fbe33a9ec286f12792e315f2ff41d0180ad6a839d4a43d4eeb44b33600ff1cc": {
+      "identity": "baobaraffe3",
+      "source": "Festival_PrincessPhoenix",
+      "front_path": "DS_CUSTOM_LIBRARY/packs/Festival_PrincessPhoenix/PrincessPhoenix/Pokemon/Battlers/Gen 3 Frontsprites/Baobaraffe3.png",
+      "back_path": "DS_CUSTOM_LIBRARY/packs/Festival_PrincessPhoenix/PrincessPhoenix/Pokemon/Battlers/Gen 4 Backsprites/AnuB4.png",
+      "family": "Unresolved family / relationship",
+      "name": "Baobaraffe3",
+      "type1": "Normal",
+      "type2": "",
+      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE;BACK_MATCH_RECOVERED",
+      "ready_for_approval": true
+    },
+    "baoby|efb013fde74e3aa6efb4e903a0f2cb5c4c94701cb0c4b86e55f66a8c013c2bfd": {
+      "identity": "baoby",
+      "source": "Festival_PrincessPhoenix",
+      "front_path": "DS_CUSTOM_LIBRARY/packs/Festival_PrincessPhoenix/PrincessPhoenix/Pokemon/Battlers/Gen 4-5 Frontsprites/Baoby.png",
+      "back_path": "DS_CUSTOM_LIBRARY/packs/Festival_PrincessPhoenix/PrincessPhoenix/Pokemon/Battlers/Gen 4 Backsprites/BaobyB4.png",
+      "family": "Unresolved family / relationship",
+      "name": "Baoby",
+      "type1": "Normal",
+      "type2": "",
+      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE;BACK_MATCH_RECOVERED",
+      "ready_for_approval": true
+    },
+    "baoby3|a95cbdd6f06a8392e063d5c4ac0fa68f880420e1a53f437260ceafc901ec927f": {
+      "identity": "baoby3",
+      "source": "Festival_PrincessPhoenix",
+      "front_path": "DS_CUSTOM_LIBRARY/packs/Festival_PrincessPhoenix/PrincessPhoenix/Pokemon/Battlers/Gen 3 Frontsprites/Baoby3.png",
+      "back_path": "DS_CUSTOM_LIBRARY/packs/Festival_PrincessPhoenix/PrincessPhoenix/Pokemon/Battlers/Gen 4 Backsprites/AnuB4.png",
+      "family": "Unresolved family / relationship",
+      "name": "Baoby3",
+      "type1": "Normal",
+      "type2": "",
+      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE;BACK_MATCH_RECOVERED",
       "ready_for_approval": true
     },
     "bargaby|7a4e286a9ef1043e9b324abbb8931c57af18b2dc1e554fd94f5cea3e83160716": {
@@ -960,30 +900,6 @@
       "type2": "",
       "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
       "ready_for_approval": false
-    },
-    "baxcalibur-mega|d4b0d5de080f49b0b80d16eac78e7d659ab3de288937f432133252ed56e78fc2": {
-      "identity": "baxcalibur-mega",
-      "source": "DrPrettyman_DS_64x64",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/DrPrettyman_DS_64x64/sprites-processed/front/baxcalibur-mega.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/DrPrettyman_DS_64x64/sprites-processed/back/baxcalibur-mega.png",
-      "name": "Mega Baxcalibur",
-      "type1": "Dragon",
-      "type2": "Ice",
-      "family": "Frigibax",
-      "confidence": "MERCURY_MASTER",
-      "ready_for_approval": true
-    },
-    "baxcalibur-mega|3592399560d0398289217b996b436bb7643e8824dcf59700715650164452581d": {
-      "identity": "baxcalibur-mega",
-      "source": "Elite_Redux_Bulk",
-      "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/baxcalibur_mega/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/baxcalibur_mega/back.png",
-      "name": "Mega Baxcalibur",
-      "type1": "Dragon",
-      "type2": "Ice",
-      "family": "Frigibax",
-      "confidence": "MERCURY_MASTER",
-      "ready_for_approval": true
     },
     "beedrill-mega-redux|46800d4ca272b408811524fd7431a50a9fb94d44e4559013819f6c19f331ef3e": {
       "identity": "beedrill-mega-redux",
@@ -1177,6 +1093,18 @@
       "confidence": "MERCURY_MASTER",
       "ready_for_approval": true
     },
+    "bewear-female|48e5634147453d43e72df275dafebbfabbdc09b633e8b2dca00a401b5b13267a": {
+      "identity": "bewear-female",
+      "source": "HGSS_Project_Unique_Dream_Crystal",
+      "front_path": "DS_CUSTOM_LIBRARY/packs/HGSS_Project_Unique_Dream_Crystal/bewear/female/front.png",
+      "back_path": "DS_CUSTOM_LIBRARY/packs/HGSS_Project_Unique_Dream_Crystal/bewear/female/back.png",
+      "family": "Unresolved family / relationship",
+      "name": "Bewear Female",
+      "type1": "Normal",
+      "type2": "",
+      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
+      "ready_for_approval": true
+    },
     "bewear-redux|733ae1a85c1c9909baf9ee701e511e9a4a9648686e682f4a28b33856fef14d1e": {
       "identity": "bewear-redux",
       "source": "Elite_Redux_Bulk",
@@ -1223,6 +1151,18 @@
       "type1": "Normal",
       "type2": "",
       "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE;BACK_MATCH_RECOVERED",
+      "ready_for_approval": true
+    },
+    "blaziken-female|b95c4b2a192642a2809baeb1178fd51704c210c6f1663391ac3ed514ef4e4e86": {
+      "identity": "blaziken-female",
+      "source": "HGSS_Project_Unique_Futura_Engine",
+      "front_path": "DS_CUSTOM_LIBRARY/packs/HGSS_Project_Unique_Futura_Engine/blaziken/female/front.png",
+      "back_path": "DS_CUSTOM_LIBRARY/packs/HGSS_Project_Unique_Futura_Engine/blaziken/female/back.png",
+      "family": "Unresolved family / relationship",
+      "name": "Blaziken Female",
+      "type1": "Normal",
+      "type2": "",
+      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
       "ready_for_approval": true
     },
     "blissey-redux|291cab39c8587561e7299fde46ee5d35e7e418236fd4eac1d3687a7cbb87f251": {
@@ -1424,18 +1364,6 @@
       "back_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/braviary_hisuian/back.png",
       "family": "Unresolved family / relationship",
       "name": "Braviary Hisuian",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
-    "braviary-hisuian-male|ec26d19ac303f2b59b08eb5837408e9986dc751644c856f6f26df37993ebd988": {
-      "identity": "braviary-hisuian-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/braviary_hisuian/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/braviary_hisuian/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Braviary Hisuian Male",
       "type1": "Normal",
       "type2": "",
       "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
@@ -2053,6 +1981,18 @@
       "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
       "ready_for_approval": true
     },
+    "chi-yu-male|e0c239715fcff6db645bba995216855b6d62021b5a97e538dbbbfbb542ffe24d": {
+      "identity": "chi-yu-male",
+      "source": "HGSS_Project_Unique_Dream_Crystal",
+      "front_path": "DS_CUSTOM_LIBRARY/packs/HGSS_Project_Unique_Dream_Crystal/chi_yu/male/front.png",
+      "back_path": "",
+      "family": "Unresolved family / relationship",
+      "name": "Chi Yu Male",
+      "type1": "Normal",
+      "type2": "",
+      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
+      "ready_for_approval": false
+    },
     "chickite|c7dd13d4a5133b6d4953fdda88eb7dd159fdea684e83815eeac495d7c2db2b81": {
       "identity": "chickite",
       "source": "Festival_Magiscarf",
@@ -2281,6 +2221,18 @@
       "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
       "ready_for_approval": false
     },
+    "clodsire-female|068f947937a50955233ffba3a9f77b42852f6872c081d595e9fb928caa007c0b": {
+      "identity": "clodsire-female",
+      "source": "HGSS_Project_Unique_Clumsycat_HG_Hack",
+      "front_path": "DS_CUSTOM_LIBRARY/packs/HGSS_Project_Unique_Clumsycat_HG_Hack/clodsire/female/front.png",
+      "back_path": "DS_CUSTOM_LIBRARY/packs/HGSS_Project_Unique_Clumsycat_HG_Hack/clodsire/female/back.png",
+      "family": "Unresolved family / relationship",
+      "name": "Clodsire Female",
+      "type1": "Normal",
+      "type2": "",
+      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
+      "ready_for_approval": true
+    },
     "clodsire-mega|f1f1620f3401b59b52680c025d7491bf519f8c6fa7a16fc6aebd071126055067": {
       "identity": "clodsire-mega",
       "source": "Elite_Redux_Bulk",
@@ -2341,6 +2293,54 @@
       "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
       "ready_for_approval": false
     },
+    "cobalion-male|3e399723e4559c94320835e2f9de6a744f4ed5a3ba03ee3ea477dd4cf38f749f": {
+      "identity": "cobalion-male",
+      "source": "HGSS_Project_Unique_Dream_Crystal",
+      "front_path": "DS_CUSTOM_LIBRARY/packs/HGSS_Project_Unique_Dream_Crystal/cobalion/male/front.png",
+      "back_path": "DS_CUSTOM_LIBRARY/packs/HGSS_Project_Unique_Dream_Crystal/cobalion/male/back.png",
+      "family": "Unresolved family / relationship",
+      "name": "Cobalion Male",
+      "type1": "Normal",
+      "type2": "",
+      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
+      "ready_for_approval": true
+    },
+    "cobarett|50e8252692bc285baa1f66003d03010d0c2a800fdc9781709a267eac774d0342": {
+      "identity": "cobarett",
+      "source": "Festival_PrincessPhoenix",
+      "front_path": "DS_CUSTOM_LIBRARY/packs/Festival_PrincessPhoenix/PrincessPhoenix/Pokemon/Battlers/Gen 3 Frontsprites/Cobarett.png",
+      "back_path": "DS_CUSTOM_LIBRARY/packs/Festival_PrincessPhoenix/PrincessPhoenix/Pokemon/Battlers/Gen 4 Backsprites/CobarettB4.png",
+      "family": "Unresolved family / relationship",
+      "name": "Cobarett",
+      "type1": "Normal",
+      "type2": "",
+      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE;BACK_MATCH_RECOVERED",
+      "ready_for_approval": true
+    },
+    "cobarett|4a35dccdb4950d1537534d73af33244817812a107180c432861448f8901f6c44": {
+      "identity": "cobarett",
+      "source": "Festival_PrincessPhoenix",
+      "front_path": "DS_CUSTOM_LIBRARY/packs/Festival_PrincessPhoenix/PrincessPhoenix/Pokemon/Battlers/Gen 4-5 Frontsprites/Cobarett.png",
+      "back_path": "DS_CUSTOM_LIBRARY/packs/Festival_PrincessPhoenix/PrincessPhoenix/Pokemon/Battlers/Gen 4 Backsprites/CobarettB4.png",
+      "family": "Unresolved family / relationship",
+      "name": "Cobarett",
+      "type1": "Normal",
+      "type2": "",
+      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE;BACK_MATCH_RECOVERED",
+      "ready_for_approval": true
+    },
+    "cobaretts|d3d184a1ff33b6d253c5b0347b2548026e547a99f7ad990ec7ff61b45137c769": {
+      "identity": "cobaretts",
+      "source": "Festival_PrincessPhoenix",
+      "front_path": "DS_CUSTOM_LIBRARY/packs/Festival_PrincessPhoenix/PrincessPhoenix/Pokemon/Battlers/Gen 4-5 Frontsprites/CobarettS.png",
+      "back_path": "DS_CUSTOM_LIBRARY/packs/Festival_PrincessPhoenix/PrincessPhoenix/Pokemon/Battlers/Gen 4 Backsprites/AnuB4.png",
+      "family": "Unresolved family / relationship",
+      "name": "Cobaretts",
+      "type1": "Normal",
+      "type2": "",
+      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE;BACK_MATCH_RECOVERED",
+      "ready_for_approval": true
+    },
     "colobble|ed6eadb8928a381addc8ebec7569926074e887fbcd6fc0f6e2e96f969f2e79e7": {
       "identity": "colobble",
       "source": "Festival_Magiscarf",
@@ -2364,6 +2364,18 @@
       "type2": "",
       "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
       "ready_for_approval": false
+    },
+    "combusken-female|9285e7a564ad2de43d7cd7112d322942d6a104c41770a1382adc06f8c8da25c6": {
+      "identity": "combusken-female",
+      "source": "HGSS_Project_Unique_Futura_Engine",
+      "front_path": "DS_CUSTOM_LIBRARY/packs/HGSS_Project_Unique_Futura_Engine/combusken/female/front.png",
+      "back_path": "DS_CUSTOM_LIBRARY/packs/HGSS_Project_Unique_Futura_Engine/combusken/female/back.png",
+      "family": "Unresolved family / relationship",
+      "name": "Combusken Female",
+      "type1": "Normal",
+      "type2": "",
+      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
+      "ready_for_approval": true
     },
     "commant|f4600f93a1d1218a5bacda65b7d80067fd17fd38922e48ac3ddb66617eecf69d": {
       "identity": "commant",
@@ -2397,6 +2409,18 @@
       "family": "Unresolved family / relationship",
       "name": "Contamullet",
       "type1": "Poison",
+      "type2": "",
+      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
+      "ready_for_approval": true
+    },
+    "copperajah-female|31c1d5f0f53476871b4b036e2d36b8059a873694e8940191c5cee2fe023752eb": {
+      "identity": "copperajah-female",
+      "source": "HGSS_Project_Unique_Dream_Crystal",
+      "front_path": "DS_CUSTOM_LIBRARY/packs/HGSS_Project_Unique_Dream_Crystal/copperajah/female/front.png",
+      "back_path": "DS_CUSTOM_LIBRARY/packs/HGSS_Project_Unique_Dream_Crystal/copperajah/female/back.png",
+      "family": "Unresolved family / relationship",
+      "name": "Copperajah Female",
+      "type1": "Normal",
       "type2": "",
       "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
       "ready_for_approval": true
@@ -2461,18 +2485,6 @@
       "confidence": "MERCURY_MASTER",
       "ready_for_approval": true
     },
-    "corsola-galarian-male|78dd14cc3c37ce38e1e793a4520bb832996c0b577fc45c948b1d65b1196ab99c": {
-      "identity": "corsola-galarian-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/corsola_galarian/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/corsola_galarian/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Corsola Galarian Male",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
     "corviknight-mega|bfa674eaa1ceffb7986d2dabf516b59add1de7a789da8ea2c1a5946435afb81d": {
       "identity": "corviknight-mega",
       "source": "Elite_Redux_Bulk",
@@ -2483,6 +2495,18 @@
       "type2": "Steel",
       "family": "Rookidee",
       "confidence": "MERCURY_MASTER;BACK_MATCH_RECOVERED",
+      "ready_for_approval": true
+    },
+    "crabominable-mega|06b3ce1086b4101ee1f99e0dca9061fe05d4264fdfce858ba51a64c28275dfb5": {
+      "identity": "crabominable-mega",
+      "source": "PokeDot_Engine_Mega_Intake",
+      "front_path": "DS_CUSTOM_LIBRARY/packs/PokeDot_Engine_Mega_Intake/crabominable-mega/front.png",
+      "back_path": "DS_CUSTOM_LIBRARY/packs/PokeDot_Engine_Mega_Intake/crabominable-mega/back.png",
+      "name": "Mega Crabominable",
+      "type1": "Fighting",
+      "type2": "Ice",
+      "family": "Crabrawler",
+      "confidence": "MERCURY_MASTER",
       "ready_for_approval": true
     },
     "crabominable-redux|198db5c1bf0526cc7133b1f72a59cae9bf91c8821bf16dbc4652e242c3eabcad": {
@@ -2624,6 +2648,18 @@
       "back_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/crobat_mega/back.png",
       "family": "Unresolved family / relationship",
       "name": "Crobat Mega",
+      "type1": "Normal",
+      "type2": "",
+      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
+      "ready_for_approval": true
+    },
+    "crocalor-female|7c30c4b737488579182dedef06805f2f09c0a42198e2a8e4a5f8d86f6c0c1d1e": {
+      "identity": "crocalor-female",
+      "source": "HGSS_Project_Unique_Clumsycat_HG_Hack",
+      "front_path": "DS_CUSTOM_LIBRARY/packs/HGSS_Project_Unique_Clumsycat_HG_Hack/crocalor/female/front.png",
+      "back_path": "DS_CUSTOM_LIBRARY/packs/HGSS_Project_Unique_Clumsycat_HG_Hack/crocalor/female/back.png",
+      "family": "Unresolved family / relationship",
+      "name": "Crocalor Female",
       "type1": "Normal",
       "type2": "",
       "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
@@ -2857,18 +2893,6 @@
       "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
       "ready_for_approval": true
     },
-    "darmanitan-galarian-male|037e26230be29b7f1c8d1b72dba1b2644f0922927c0a3ce48ab097df85f70614": {
-      "identity": "darmanitan-galarian-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/darmanitan_galarian/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/darmanitan_galarian/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Darmanitan Galarian Male",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
     "darmanitan-redux|cf82528e3a2cbc03016428c1a82236ce5ccdae364014b1825c0ab7b8e20e5c5e": {
       "identity": "darmanitan-redux",
       "source": "Elite_Redux_Bulk",
@@ -2929,30 +2953,6 @@
       "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE;BACK_MATCH_RECOVERED",
       "ready_for_approval": true
     },
-    "darmanitan-zen-mode-galarian-male|2fee58bbe6a7eaa31ce29dffb4afe69be05130fa693cd3a53998a6b6ecd2f106": {
-      "identity": "darmanitan-zen-mode-galarian-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/darmanitan_zen_mode_galarian/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/darmanitan_zen_mode_galarian/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Darmanitan Zen Mode Galarian Male",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
-    "darmanitan-zen-mode-male|22197c2e315a12149585210c6657aff9d8a2d39ada2c47344974116d8761f6b0": {
-      "identity": "darmanitan-zen-mode-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/darmanitan_zen_mode/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/darmanitan_zen_mode/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Darmanitan Zen Mode Male",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
     "darumaka-galarian|156ceb1264964b81e6d9392b286ff3872012c0cc63c4cc8fa769f8e8416e2baa": {
       "identity": "darumaka-galarian",
       "source": "Elite_Redux_Bulk",
@@ -2963,18 +2963,6 @@
       "type1": "Normal",
       "type2": "",
       "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE;BACK_MATCH_RECOVERED",
-      "ready_for_approval": true
-    },
-    "darumaka-galarian-male|e3f9ab31cde1d079e6c61d54fe6a828820e215aa80b121aed67fd903aecd9e76": {
-      "identity": "darumaka-galarian-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/darumaka_galarian/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/darumaka_galarian/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Darumaka Galarian Male",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
       "ready_for_approval": true
     },
     "darumaka-redux|5a29f2bf631a98f5ad077f06abd14745db26835ff581adf8e26a4970be398891": {
@@ -2996,18 +2984,6 @@
       "back_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/decidueye_hisuian/back.png",
       "family": "Unresolved family / relationship",
       "name": "Decidueye Hisuian",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
-    "decidueye-hisuian-male|d36aeef61e6aeb4210cf40dae6f43acb444698596db0c3e4b52b220ecc9a545c": {
-      "identity": "decidueye-hisuian-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/decidueye_hisuian/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/decidueye_hisuian/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Decidueye Hisuian Male",
       "type1": "Normal",
       "type2": "",
       "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
@@ -3193,18 +3169,6 @@
       "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE;BACK_MATCH_RECOVERED",
       "ready_for_approval": true
     },
-    "diglett-alolan-male|f0b127c06d8434efad98f593e6b0f7d4c10a583687077c454aa87c2544d2df5d": {
-      "identity": "diglett-alolan-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/diglett_alolan/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/diglett_alolan/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Diglett Alolan Male",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
     "dileag|4861a7348890fc30ec1794a45251b8e3b7305ae727c53ac96fa2bb2bf4f4dcee": {
       "identity": "dileag",
       "source": "Fakemon_Festival_Full",
@@ -3361,6 +3325,30 @@
       "confidence": "MERCURY_MASTER",
       "ready_for_approval": true
     },
+    "drakloak-female|8031f075b47b7467c4267e9a4328f4a1f40ac7ac839f43bd9c75cb676fc56f6a": {
+      "identity": "drakloak-female",
+      "source": "HGSS_Project_Unique_Dream_Crystal",
+      "front_path": "DS_CUSTOM_LIBRARY/packs/HGSS_Project_Unique_Dream_Crystal/drakloak/female/front.png",
+      "back_path": "DS_CUSTOM_LIBRARY/packs/HGSS_Project_Unique_Dream_Crystal/drakloak/female/back.png",
+      "family": "Unresolved family / relationship",
+      "name": "Drakloak Female",
+      "type1": "Normal",
+      "type2": "",
+      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE;BACK_MATCH_RECOVERED",
+      "ready_for_approval": true
+    },
+    "drashimif|a17da06485707f9989c63ea72904c549ed068e37c7e7d63302c2fb59b1322b41": {
+      "identity": "drashimif",
+      "source": "Festival_PrincessPhoenix",
+      "front_path": "DS_CUSTOM_LIBRARY/packs/Festival_PrincessPhoenix/PrincessPhoenix/Pokemon/Battlers/Gen 4-5 Frontsprites/DrashimiF.png",
+      "back_path": "DS_CUSTOM_LIBRARY/packs/Festival_PrincessPhoenix/PrincessPhoenix/Pokemon/Battlers/Gen 4 Backsprites/AnuB4.png",
+      "family": "Unresolved family / relationship",
+      "name": "Drashimif",
+      "type1": "Normal",
+      "type2": "",
+      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE;BACK_MATCH_RECOVERED",
+      "ready_for_approval": true
+    },
     "dreadnaut|13bed92a3226183484dd7e1ce362a39f2989e98bb93e532790fa70fba4b91065": {
       "identity": "dreadnaut",
       "source": "Elite_Redux_Bulk",
@@ -3493,18 +3481,6 @@
       "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
       "ready_for_approval": true
     },
-    "dugtrio-alolan-male|840fd568f95a63eeae100c27a40294a6306d8b7085d76c11b783e6b4c2f67728": {
-      "identity": "dugtrio-alolan-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/dugtrio_alolan/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/dugtrio_alolan/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Dugtrio Alolan Male",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
     "dunspear|781250fea3102b85b555f57971230d9944da1fe9f3d44979b53a57158b1bb938": {
       "identity": "dunspear",
       "source": "Festival_Atsui",
@@ -3577,6 +3553,18 @@
       "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
       "ready_for_approval": true
     },
+    "eelektross-mega|14fe744e4f22209cd150487c6b3ee35d1ceccb2e41580b73790c3829c00d54af": {
+      "identity": "eelektross-mega",
+      "source": "PokeDot_Engine_Mega_Intake",
+      "front_path": "DS_CUSTOM_LIBRARY/packs/PokeDot_Engine_Mega_Intake/eelektross-mega/front.png",
+      "back_path": "DS_CUSTOM_LIBRARY/packs/PokeDot_Engine_Mega_Intake/eelektross-mega/back.png",
+      "name": "Mega Eelektross",
+      "type1": "Electric",
+      "type2": "",
+      "family": "Tynamo",
+      "confidence": "MERCURY_MASTER",
+      "ready_for_approval": true
+    },
     "eevee-partner-mega|4b2ef60e13988e8d4e8d0627781b46e44e364878a293499c3431b8c0bb526f17": {
       "identity": "eevee-partner-mega",
       "source": "Elite_Redux_Bulk",
@@ -3613,18 +3601,6 @@
       "confidence": "MERCURY_MASTER",
       "ready_for_approval": true
     },
-    "eiscue-noice-face-male|a97d7f6c58444e552657a9402061188bea57006409a51d513a65bdd6880ece97": {
-      "identity": "eiscue-noice-face-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/eiscue_noice_face/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/eiscue_noice_face/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Eiscue Noice Face Male",
-      "type1": "Ice",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
     "elazel|f30b962331d67f0e58803f0a58cd3a79a643a3531ee948c130b94205e231afcf": {
       "identity": "elazel",
       "source": "Fakemon_Festival_Full",
@@ -3644,18 +3620,6 @@
       "back_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/electrode_hisuian/back.png",
       "family": "Unresolved family / relationship",
       "name": "Electrode Hisuian",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
-    "electrode-lord-male|d374448d23c7af76e67d26eb60930add2bd76378795824287e8f5cfe13a97ca3": {
-      "identity": "electrode-lord-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/electrode_lord/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/electrode_lord/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Electrode Lord Male",
       "type1": "Normal",
       "type2": "",
       "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
@@ -3696,6 +3660,18 @@
       "type2": "",
       "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
       "ready_for_approval": false
+    },
+    "emboar-mega|17868697dab267099daab4185470448ed25d0331784bb8e50fd78d13b120a06a": {
+      "identity": "emboar-mega",
+      "source": "PokeDot_Engine_Mega_Intake",
+      "front_path": "DS_CUSTOM_LIBRARY/packs/PokeDot_Engine_Mega_Intake/emboar-mega/front.png",
+      "back_path": "DS_CUSTOM_LIBRARY/packs/PokeDot_Engine_Mega_Intake/emboar-mega/back.png",
+      "name": "Mega Emboar",
+      "type1": "Fire",
+      "type2": "Fighting",
+      "family": "Tepig",
+      "confidence": "MERCURY_MASTER",
+      "ready_for_approval": true
     },
     "empoleon-mega|c18145b5a409b75b022ab594968d08165612008f127af578f8da45404189a5f3": {
       "identity": "empoleon-mega",
@@ -3877,18 +3853,6 @@
       "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
       "ready_for_approval": false
     },
-    "exeggutor-alolan-male|fdcb5953a645940bdf91888bf9328809586d9d968206933af8be9c35ddbb8a7c": {
-      "identity": "exeggutor-alolan-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/exeggutor_alolan/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/exeggutor_alolan/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Exeggutor Alolan Male",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
     "exeggutor-redux|2858c98383d61e4470b3ef1d17f50f788a01bc6a4985ba77c7382c2f14c0b55e": {
       "identity": "exeggutor-redux",
       "source": "Elite_Redux_Bulk",
@@ -3937,6 +3901,18 @@
       "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
       "ready_for_approval": true
     },
+    "falinks-male|fa50e9563f3b948757ac599c9a7067ec0a74bf81b856618dab3ee78265cd1ca4": {
+      "identity": "falinks-male",
+      "source": "HGSS_Project_Unique_Clumsycat_HG_Hack",
+      "front_path": "DS_CUSTOM_LIBRARY/packs/HGSS_Project_Unique_Clumsycat_HG_Hack/falinks/male/front.png",
+      "back_path": "DS_CUSTOM_LIBRARY/packs/HGSS_Project_Unique_Clumsycat_HG_Hack/falinks/male/back.png",
+      "family": "Unresolved family / relationship",
+      "name": "Falinks Male",
+      "type1": "Normal",
+      "type2": "",
+      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
+      "ready_for_approval": true
+    },
     "fangtomask|cf79979d2b866c1dbc1edca06467154ba4a7a089afb866f386cea1124b991569": {
       "identity": "fangtomask",
       "source": "Festival_Magiscarf",
@@ -3959,18 +3935,6 @@
       "type1": "Normal",
       "type2": "",
       "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE;BACK_MATCH_RECOVERED",
-      "ready_for_approval": true
-    },
-    "farfetchd-galarian-male|58f5d5028f770b10a6cb75bafb8f328fc7f00bed35fa67fec9eb0a83e22156f8": {
-      "identity": "farfetchd-galarian-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/farfetchd_galarian/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/farfetchd_galarian/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Farfetchd Galarian Male",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
       "ready_for_approval": true
     },
     "fearow-redux|1592c156a8d01be6f5e91eff1a7f79312156e9545c7f4f9a08e87bc74ccc1358": {
@@ -4057,50 +4021,14 @@
       "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
       "ready_for_approval": true
     },
-    "flabebe-blue-flower-male|0620ce94b267b7802f0f89e4a20eb3fecd4aed4a7a0fe397ffe0e29758ebab06": {
-      "identity": "flabebe-blue-flower-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/flabebe_blue_flower/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/flabebe_blue_flower/male/back.png",
+    "firomenisf|5f9fd6b87b0751a3cf54beafb936be9a1f9201bdde95330c8206570e0e0af59b": {
+      "identity": "firomenisf",
+      "source": "Festival_PrincessPhoenix",
+      "front_path": "DS_CUSTOM_LIBRARY/packs/Festival_PrincessPhoenix/PrincessPhoenix/Pokemon/Battlers/Gen 4-5 Frontsprites/FiromenisF.png",
+      "back_path": "DS_CUSTOM_LIBRARY/packs/Festival_PrincessPhoenix/PrincessPhoenix/Pokemon/Battlers/Gen 4 Backsprites/AnuB4.png",
       "family": "Unresolved family / relationship",
-      "name": "Flabebe Blue Flower Male",
-      "type1": "Grass",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
-    "flabebe-orange-flower-male|13625cbb246c4c00e16a519ef282a47cb3fe9ea1bf196e3ac4f3a5f59edc78ed": {
-      "identity": "flabebe-orange-flower-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/flabebe_orange_flower/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/flabebe_orange_flower/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Flabebe Orange Flower Male",
-      "type1": "Grass",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE;BACK_MATCH_RECOVERED",
-      "ready_for_approval": true
-    },
-    "flabebe-white-flower-male|0ed6c58f9db2fcc19b6dcc1bb4280a6cd8bcc973d89c9270bcfb46c6e16ad617": {
-      "identity": "flabebe-white-flower-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/flabebe_white_flower/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/flabebe_white_flower/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Flabebe White Flower Male",
-      "type1": "Grass",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
-    "flabebe-yellow-flower-male|bd4c1a270664f2b9c4b30b7f86c593f95097ce6856fc58e4886f8ccfeac73380": {
-      "identity": "flabebe-yellow-flower-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/flabebe_yellow_flower/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/flabebe_yellow_flower/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Flabebe Yellow Flower Male",
-      "type1": "Grass",
+      "name": "Firomenisf",
+      "type1": "Normal",
       "type2": "",
       "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE;BACK_MATCH_RECOVERED",
       "ready_for_approval": true
@@ -4153,6 +4081,18 @@
       "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
       "ready_for_approval": true
     },
+    "flapple-female|f23c73d1e60d661443534f42996f16a7778345b123ef9db0fecefc3f1d32a100": {
+      "identity": "flapple-female",
+      "source": "HGSS_Project_Unique_Dream_Crystal",
+      "front_path": "DS_CUSTOM_LIBRARY/packs/HGSS_Project_Unique_Dream_Crystal/flapple/female/front.png",
+      "back_path": "",
+      "family": "Unresolved family / relationship",
+      "name": "Flapple Female",
+      "type1": "Normal",
+      "type2": "",
+      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
+      "ready_for_approval": false
+    },
     "flarepent|99b6d0d1e5e213473a92dac2d34c3d2d805318e8d4ea46c95dbb1184e44b369b": {
       "identity": "flarepent",
       "source": "Mikitari",
@@ -4176,6 +4116,18 @@
       "type2": "",
       "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
       "ready_for_approval": false
+    },
+    "fletchling-female|cfa181b6a865485f6761c3df9cb676cd27f2bf274f72b7303f52a226d64cec4b": {
+      "identity": "fletchling-female",
+      "source": "HGSS_Project_Unique_Dream_Crystal",
+      "front_path": "DS_CUSTOM_LIBRARY/packs/HGSS_Project_Unique_Dream_Crystal/fletchling/female/front.png",
+      "back_path": "DS_CUSTOM_LIBRARY/packs/HGSS_Project_Unique_Dream_Crystal/fletchling/female/back.png",
+      "family": "Unresolved family / relationship",
+      "name": "Fletchling Female",
+      "type1": "Normal",
+      "type2": "",
+      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
+      "ready_for_approval": true
     },
     "flixtrix|27746ce1edbda5c8a84910f75fddaee77d4613c2b56f209131ff26324475ae8c": {
       "identity": "flixtrix",
@@ -4225,18 +4177,6 @@
       "confidence": "MERCURY_MASTER;BACK_MATCH_RECOVERED",
       "ready_for_approval": true
     },
-    "floette-eternal-flower-male|18de385d80ba953388973f7daab97e7299bddfc2eee7378fb3512eb86b07ae07": {
-      "identity": "floette-eternal-flower-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/floette_eternal_flower/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/floette_eternal_flower/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Floette Eternal Flower Male",
-      "type1": "Grass",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
     "floette-eternal-flower-mega|4e1673f96ad9a8e42a26b9d3ca5d6376c01fa17fbdcce3bf97f4127d45279faa": {
       "identity": "floette-eternal-flower-mega",
       "source": "Elite_Redux_Bulk",
@@ -4244,18 +4184,6 @@
       "back_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/floette_eternal_flower_mega/back.png",
       "family": "Unresolved family / relationship",
       "name": "Floette Eternal Flower Mega",
-      "type1": "Grass",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
-    "floette-white-flower-male|de5bec4fd9e68cc7ccccb93968172ced3affa1f35d0c4d84b564a90e69697afb": {
-      "identity": "floette-white-flower-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/floette_white_flower/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/floette_white_flower/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Floette White Flower Male",
       "type1": "Grass",
       "type2": "",
       "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
@@ -4319,54 +4247,6 @@
       "type1": "Grass",
       "type2": "",
       "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE;BACK_MATCH_RECOVERED",
-      "ready_for_approval": true
-    },
-    "florges-blue-flower-male|cbb1b50bfda22f73688f1e7baedbbdc627945ff6ab959dd239929a2277639c1c": {
-      "identity": "florges-blue-flower-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/florges_blue_flower/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/florges_blue_flower/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Florges Blue Flower Male",
-      "type1": "Grass",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
-    "florges-orange-flower-male|e9f7b423a91a50f333b29fb9935568f5af0324b3cc2d24ce420265845281aa17": {
-      "identity": "florges-orange-flower-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/florges_orange_flower/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/florges_orange_flower/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Florges Orange Flower Male",
-      "type1": "Grass",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
-    "florges-white-flower-male|a587b4ccd98672dcf4a6f865c27edde0624cb375b174621d826b4c704f4d370a": {
-      "identity": "florges-white-flower-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/florges_white_flower/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/florges_white_flower/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Florges White Flower Male",
-      "type1": "Grass",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
-    "florges-yellow-flower-male|96ce5056ea40934258610a191627f973fc03f0b4ed512eeee0374f0186b2a2a3": {
-      "identity": "florges-yellow-flower-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/florges_yellow_flower/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/florges_yellow_flower/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Florges Yellow Flower Male",
-      "type1": "Grass",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
       "ready_for_approval": true
     },
     "fluffbee|b140687c25fb4bd430525bc5ae9902c557173cec1738671e1761591630226afc": {
@@ -4501,6 +4381,30 @@
       "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
       "ready_for_approval": true
     },
+    "froakie-female|6eb4f1e12864f75a2d5a563f84267913cb631477f4d5b304e4afb343c18760b0": {
+      "identity": "froakie-female",
+      "source": "HGSS_Project_Unique_Futura_Engine",
+      "front_path": "DS_CUSTOM_LIBRARY/packs/HGSS_Project_Unique_Futura_Engine/froakie/female/front.png",
+      "back_path": "DS_CUSTOM_LIBRARY/packs/HGSS_Project_Unique_Futura_Engine/froakie/female/back.png",
+      "family": "Unresolved family / relationship",
+      "name": "Froakie Female",
+      "type1": "Normal",
+      "type2": "",
+      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
+      "ready_for_approval": true
+    },
+    "frogadier-female|b17c655465f278d8fd3ffec4f6f0661e9c5ac4b129b20bb26dff951ca4048f19": {
+      "identity": "frogadier-female",
+      "source": "HGSS_Project_Unique_Futura_Engine",
+      "front_path": "DS_CUSTOM_LIBRARY/packs/HGSS_Project_Unique_Futura_Engine/frogadier/female/front.png",
+      "back_path": "DS_CUSTOM_LIBRARY/packs/HGSS_Project_Unique_Futura_Engine/frogadier/female/back.png",
+      "family": "Unresolved family / relationship",
+      "name": "Frogadier Female",
+      "type1": "Normal",
+      "type2": "",
+      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE;BACK_MATCH_RECOVERED",
+      "ready_for_approval": true
+    },
     "froll|fd11e25f32be87270f3a7172989fc8e67e1829e150ed4d41938bc4283efa770f": {
       "identity": "froll",
       "source": "Festival_Magiscarf",
@@ -4584,6 +4488,18 @@
       "type2": "",
       "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
       "ready_for_approval": false
+    },
+    "fuecoco-female|647afc1830222b9154a8bb17bb23438f8a4c3d407dbf677737fd5e20c863aa09": {
+      "identity": "fuecoco-female",
+      "source": "HGSS_Project_Unique_Clumsycat_HG_Hack",
+      "front_path": "DS_CUSTOM_LIBRARY/packs/HGSS_Project_Unique_Clumsycat_HG_Hack/fuecoco/female/front.png",
+      "back_path": "DS_CUSTOM_LIBRARY/packs/HGSS_Project_Unique_Clumsycat_HG_Hack/fuecoco/female/back.png",
+      "family": "Unresolved family / relationship",
+      "name": "Fuecoco Female",
+      "type1": "Normal",
+      "type2": "",
+      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
+      "ready_for_approval": true
     },
     "fujiflap|23ded53f28ea5103c96ef74575ff49b29906105ec96c3e6b3a88263b14f2b28b": {
       "identity": "fujiflap",
@@ -4813,18 +4729,6 @@
       "confidence": "MERCURY_MASTER",
       "ready_for_approval": true
     },
-    "garchomp-mega-z|c3e7ab61bf1eb6b7156d03d759932cf9fa6d7f28c41d4b8f9fad2d3359bef268": {
-      "identity": "garchomp-mega-z",
-      "source": "Elite_Redux_Bulk",
-      "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/garchomp_mega_z/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/garchomp_mega_z/back.png",
-      "name": "Mega Garchomp Z",
-      "type1": "Dragon",
-      "type2": "",
-      "family": "Gible",
-      "confidence": "MERCURY_MASTER",
-      "ready_for_approval": true
-    },
     "garchomp-redux|faa3a55d3e024e537b25c73bc7f6714e800ee21ca5273df587fc84bd2174dd38": {
       "identity": "garchomp-redux",
       "source": "Elite_Redux_Bulk",
@@ -4909,18 +4813,6 @@
       "confidence": "MERCURY_MASTER;BACK_MATCH_RECOVERED",
       "ready_for_approval": true
     },
-    "gastrodon-east-sea-male|d33a31d5482b7ea4b5b7ead8a84daa02bd96b5de03b6ce2386245792133c2060": {
-      "identity": "gastrodon-east-sea-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/gastrodon_east_sea/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/gastrodon_east_sea/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Gastrodon East Sea Male",
-      "type1": "Water",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
     "gelescent|8953de041b16adf73b62d3bd42c8d7164e1c773b41aca6beb01fbf6362a6b2fc": {
       "identity": "gelescent",
       "source": "Festival_Magiscarf",
@@ -4993,18 +4885,6 @@
       "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
       "ready_for_approval": true
     },
-    "geodude-alolan-male|c99bd27d6b44edd08bce4dd3954cf9d595fd541515ef058b1ee5d8ff27ceb49d": {
-      "identity": "geodude-alolan-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/geodude_alolan/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/geodude_alolan/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Geodude Alolan Male",
-      "type1": "Rock",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
     "geolidon|94a24f7d0db2ee51290bc6a44247b69edc4c66a757d648afe594c1ac5a917202": {
       "identity": "geolidon",
       "source": "Mikitari",
@@ -5027,6 +4907,18 @@
       "type1": "Normal",
       "type2": "",
       "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
+      "ready_for_approval": true
+    },
+    "gholdengo-male|7bbf0133ede4ba0c7c24f08a4d5c0295c3fb9b583675008b4ddf0bc84cf860b4": {
+      "identity": "gholdengo-male",
+      "source": "HGSS_Project_Unique_Clumsycat_HG_Hack",
+      "front_path": "DS_CUSTOM_LIBRARY/packs/HGSS_Project_Unique_Clumsycat_HG_Hack/gholdengo/male/front.png",
+      "back_path": "DS_CUSTOM_LIBRARY/packs/HGSS_Project_Unique_Clumsycat_HG_Hack/gholdengo/male/back.png",
+      "family": "Unresolved family / relationship",
+      "name": "Gholdengo Male",
+      "type1": "Normal",
+      "type2": "",
+      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE;BACK_MATCH_RECOVERED",
       "ready_for_approval": true
     },
     "gible-redux|af3912c3390ad5ae223e5e41592194a474ade461e083ce69ea9804d6bb9ec9ae": {
@@ -5052,6 +4944,18 @@
       "type2": "",
       "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
       "ready_for_approval": false
+    },
+    "gimmighoul-female|392e96056f5735919e69a20107f211d9a1d7bd197cc601e56d7323e312d172e1": {
+      "identity": "gimmighoul-female",
+      "source": "HGSS_Project_Unique_Clumsycat_HG_Hack",
+      "front_path": "DS_CUSTOM_LIBRARY/packs/HGSS_Project_Unique_Clumsycat_HG_Hack/gimmighoul/female/front.png",
+      "back_path": "DS_CUSTOM_LIBRARY/packs/HGSS_Project_Unique_Clumsycat_HG_Hack/gimmighoul/female/back.png",
+      "family": "Unresolved family / relationship",
+      "name": "Gimmighoul Female",
+      "type1": "Normal",
+      "type2": "",
+      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
+      "ready_for_approval": true
     },
     "gipof|1f37e64617f7812a01c3e147dee1d02a6ec658f20a9e1545d9735e6006e26cac": {
       "identity": "gipof",
@@ -5123,6 +5027,18 @@
       "type2": "Fire",
       "family": "Gligar / Gliscor",
       "confidence": "MERCURY_MASTER",
+      "ready_for_approval": true
+    },
+    "glimmora-female|2e92835085b97e6e7ee3c8ab76b15e825c7b2e65ff1f4152d75af9c9cfaf765e": {
+      "identity": "glimmora-female",
+      "source": "HGSS_Project_Unique_Dream_Crystal",
+      "front_path": "DS_CUSTOM_LIBRARY/packs/HGSS_Project_Unique_Dream_Crystal/glimmora/female/front.png",
+      "back_path": "DS_CUSTOM_LIBRARY/packs/HGSS_Project_Unique_Dream_Crystal/glimmora/female/back.png",
+      "family": "Unresolved family / relationship",
+      "name": "Glimmora Female",
+      "type1": "Normal",
+      "type2": "",
+      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
       "ready_for_approval": true
     },
     "gliscor-redux|38d956465532d0a331932363a4d0518efdfb56173d5b2ef09f1581e05a38970e": {
@@ -5221,42 +5137,6 @@
       "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
       "ready_for_approval": true
     },
-    "golem-alolan-male|fdabbf175f6e84479930bc18808d04b9fb070cb7b0d448fd8ca731dd1d95627a": {
-      "identity": "golem-alolan-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/golem_alolan/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/golem_alolan/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Golem Alolan Male",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
-    "golisopod-mega|90d38b36f39bc7569b0f8398e11da2f8a26d44f201e4c9f0dd207c963d9f62fd": {
-      "identity": "golisopod-mega",
-      "source": "DrPrettyman_DS_64x64",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/DrPrettyman_DS_64x64/sprites-processed/front/golisopod-mega.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/DrPrettyman_DS_64x64/sprites-processed/back/golisopod-mega.png",
-      "name": "Mega Golisopod",
-      "type1": "Bug",
-      "type2": "Steel",
-      "family": "Wimpod",
-      "confidence": "MERCURY_MASTER",
-      "ready_for_approval": true
-    },
-    "golisopod-mega|cecf8ba4f1c9f3715cff306f32c0bd203c40fcee3e36eb401099b32ad18a87df": {
-      "identity": "golisopod-mega",
-      "source": "Elite_Redux_Bulk",
-      "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/golisopod_mega/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/golisopod_mega/back.png",
-      "name": "Mega Golisopod",
-      "type1": "Bug",
-      "type2": "Steel",
-      "family": "Wimpod",
-      "confidence": "MERCURY_MASTER",
-      "ready_for_approval": true
-    },
     "golisopod-mega-y|298a725f2d2bfad378895233e18aa1990b897ca065ddf07e351d976917c7d0dc": {
       "identity": "golisopod-mega-y",
       "source": "Elite_Redux_Bulk",
@@ -5267,6 +5147,18 @@
       "type1": "Normal",
       "type2": "",
       "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
+      "ready_for_approval": true
+    },
+    "golurk-mega|2dc224129434d987420ade4e15a3ebd1adc10f0dd8eb455efb610c0199e1a0b5": {
+      "identity": "golurk-mega",
+      "source": "PokeDot_Engine_Mega_Intake",
+      "front_path": "DS_CUSTOM_LIBRARY/packs/PokeDot_Engine_Mega_Intake/golurk-mega/front.png",
+      "back_path": "DS_CUSTOM_LIBRARY/packs/PokeDot_Engine_Mega_Intake/golurk-mega/back.png",
+      "name": "Mega Golurk",
+      "type1": "Ground",
+      "type2": "Ghost",
+      "family": "Golett",
+      "confidence": "MERCURY_MASTER",
       "ready_for_approval": true
     },
     "goobolt|21ba232a2ab4cd1b2f9e660c8ece8c595122afa3fef97737ea102335734d7770": {
@@ -5293,6 +5185,18 @@
       "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
       "ready_for_approval": false
     },
+    "goodra-female|53c12fa3621a03f30d8fd9ec13e2867cb6dcb5e83c04ac5b90b2e6356313821a": {
+      "identity": "goodra-female",
+      "source": "HGSS_Project_Unique_Dream_Crystal",
+      "front_path": "DS_CUSTOM_LIBRARY/packs/HGSS_Project_Unique_Dream_Crystal/goodra/female/front.png",
+      "back_path": "DS_CUSTOM_LIBRARY/packs/HGSS_Project_Unique_Dream_Crystal/goodra/female/back.png",
+      "family": "Unresolved family / relationship",
+      "name": "Goodra Female",
+      "type1": "Normal",
+      "type2": "",
+      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
+      "ready_for_approval": true
+    },
     "goodra-hisuian|c90e6a8f9c834db2978195c43dce042fe745e003c8e9b53ed2b6aeb84b5d7728": {
       "identity": "goodra-hisuian",
       "source": "Elite_Redux_Bulk",
@@ -5300,18 +5204,6 @@
       "back_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/goodra_hisuian/back.png",
       "family": "Unresolved family / relationship",
       "name": "Goodra Hisuian",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
-    "goodra-hisuian-male|5b3bdb76c3af16479cb5385efd8c98f3d67425f6d2324c7ed3d36827b189e683": {
-      "identity": "goodra-hisuian-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/goodra_hisuian/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/goodra_hisuian/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Goodra Hisuian Male",
       "type1": "Normal",
       "type2": "",
       "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
@@ -5437,18 +5329,6 @@
       "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE;BACK_MATCH_RECOVERED",
       "ready_for_approval": true
     },
-    "graveler-alolan-male|1a7ad9855bf48b4c2cd8e47351176f1a99dae30921fe2d84eee6d2798ee9d853": {
-      "identity": "graveler-alolan-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/graveler_alolan/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/graveler_alolan/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Graveler Alolan Male",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
     "gravishoc|ebad3b3f402664cf42a6f093e9c238e9f511d42d8915873c31f031c858c57560": {
       "identity": "gravishoc",
       "source": "Fakemon_Festival_Full",
@@ -5460,6 +5340,18 @@
       "type2": "",
       "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
       "ready_for_approval": false
+    },
+    "greninja-female|0bf9a2f36c95c3d1dcda75b6999f38c555c153fd8eee8ebd847f8b69e82c68c6": {
+      "identity": "greninja-female",
+      "source": "HGSS_Project_Unique_Futura_Engine",
+      "front_path": "DS_CUSTOM_LIBRARY/packs/HGSS_Project_Unique_Futura_Engine/greninja/female/front.png",
+      "back_path": "DS_CUSTOM_LIBRARY/packs/HGSS_Project_Unique_Futura_Engine/greninja/female/back.png",
+      "family": "Unresolved family / relationship",
+      "name": "Greninja Female",
+      "type1": "Normal",
+      "type2": "",
+      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE;BACK_MATCH_RECOVERED",
+      "ready_for_approval": true
     },
     "grexclub|64b963b830685fbd54a6cefcfa4f5226a5f28100372361d663799abc9a680efb": {
       "identity": "grexclub",
@@ -5497,18 +5389,6 @@
       "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE;BACK_MATCH_RECOVERED",
       "ready_for_approval": true
     },
-    "grimer-alolan-male|6dbc8c9cf473a1889026c78794703751934d44f2c419d6fdac9973ee9f67e707": {
-      "identity": "grimer-alolan-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/grimer_alolan/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/grimer_alolan/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Grimer Alolan Male",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
     "grimmsnarl-mega|ffb39b2dc73301f9ed18419a2dfe2c4302c4ea0a3e9b23830d6685f8920ed5dd": {
       "identity": "grimmsnarl-mega",
       "source": "Elite_Redux_Bulk",
@@ -5519,6 +5399,18 @@
       "type2": "Fairy",
       "family": "Impidimp",
       "confidence": "MERCURY_MASTER;BACK_MATCH_RECOVERED",
+      "ready_for_approval": true
+    },
+    "grotle-female|2b66ef3a957c6d4bba2f0a30d4f84210cbb782c1cf4c11e00cacbb1c135dc77b": {
+      "identity": "grotle-female",
+      "source": "HGSS_Project_Unique_Futura_Engine",
+      "front_path": "DS_CUSTOM_LIBRARY/packs/HGSS_Project_Unique_Futura_Engine/grotle/female/front.png",
+      "back_path": "DS_CUSTOM_LIBRARY/packs/HGSS_Project_Unique_Futura_Engine/grotle/female/back.png",
+      "family": "Unresolved family / relationship",
+      "name": "Grotle Female",
+      "type1": "Normal",
+      "type2": "",
+      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE;BACK_MATCH_RECOVERED",
       "ready_for_approval": true
     },
     "grotle-redux|3b60d5a21a11e1d31e8030d818d1cb382ab3bc235ec647832be4edff4b787ead": {
@@ -5612,18 +5504,6 @@
       "back_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/growlithe_hisuian/back.png",
       "family": "Unresolved family / relationship",
       "name": "Growlithe Hisuian",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
-    "growlithe-hisuian-male|69ce8d95fb23ef04b2759c6191f726ce0935642117c4107e79bd300caf29809e": {
-      "identity": "growlithe-hisuian-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/growlithe_hisuian/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/growlithe_hisuian/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Growlithe Hisuian Male",
       "type1": "Normal",
       "type2": "",
       "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
@@ -5809,6 +5689,42 @@
       "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
       "ready_for_approval": true
     },
+    "hatenna-female|4386db3df72405c615b235a68cbb39b01b8e5bdf5853080099c0e203496adef6": {
+      "identity": "hatenna-female",
+      "source": "HGSS_Project_Unique_Clumsycat_HG_Hack",
+      "front_path": "DS_CUSTOM_LIBRARY/packs/HGSS_Project_Unique_Clumsycat_HG_Hack/hatenna/female/front.png",
+      "back_path": "DS_CUSTOM_LIBRARY/packs/HGSS_Project_Unique_Clumsycat_HG_Hack/hatenna/female/back.png",
+      "family": "Unresolved family / relationship",
+      "name": "Hatenna Female",
+      "type1": "Normal",
+      "type2": "",
+      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
+      "ready_for_approval": true
+    },
+    "hatterene-female|d4ea1bb1ac515db5473fb2c8af55ad2efe3134b68cfecfd9aa5bdc71cb86607e": {
+      "identity": "hatterene-female",
+      "source": "HGSS_Project_Unique_Clumsycat_HG_Hack",
+      "front_path": "DS_CUSTOM_LIBRARY/packs/HGSS_Project_Unique_Clumsycat_HG_Hack/hatterene/female/front.png",
+      "back_path": "DS_CUSTOM_LIBRARY/packs/HGSS_Project_Unique_Clumsycat_HG_Hack/hatterene/female/back.png",
+      "family": "Unresolved family / relationship",
+      "name": "Hatterene Female",
+      "type1": "Normal",
+      "type2": "",
+      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
+      "ready_for_approval": true
+    },
+    "hattrem-female|28b721bf25ea4ab2f94e676e6b760857085ff7338505a2df74d32b0cd206864f": {
+      "identity": "hattrem-female",
+      "source": "HGSS_Project_Unique_Clumsycat_HG_Hack",
+      "front_path": "DS_CUSTOM_LIBRARY/packs/HGSS_Project_Unique_Clumsycat_HG_Hack/hattrem/female/front.png",
+      "back_path": "DS_CUSTOM_LIBRARY/packs/HGSS_Project_Unique_Clumsycat_HG_Hack/hattrem/female/back.png",
+      "family": "Unresolved family / relationship",
+      "name": "Hattrem Female",
+      "type1": "Normal",
+      "type2": "",
+      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
+      "ready_for_approval": true
+    },
     "hauntray|3bd9b9dce0e1ba12f3c10523468e24b58d546b7fae24911713ce92675d218882": {
       "identity": "hauntray",
       "source": "Mikitari",
@@ -5840,6 +5756,18 @@
       "back_path": "DS_CUSTOM_LIBRARY/packs/Festival_Scotsman/Scotsman/Hayog_Back.png",
       "family": "Unresolved family / relationship",
       "name": "Hayog",
+      "type1": "Normal",
+      "type2": "",
+      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
+      "ready_for_approval": true
+    },
+    "helioptile-female|3600c0bd2d1f263c4cc158c0e0cf983eaaf3b49491199001c71593717f844725": {
+      "identity": "helioptile-female",
+      "source": "HGSS_Project_Unique_Dream_Crystal",
+      "front_path": "DS_CUSTOM_LIBRARY/packs/HGSS_Project_Unique_Dream_Crystal/helioptile/female/front.png",
+      "back_path": "DS_CUSTOM_LIBRARY/packs/HGSS_Project_Unique_Dream_Crystal/helioptile/female/back.png",
+      "family": "Unresolved family / relationship",
+      "name": "Helioptile Female",
       "type1": "Normal",
       "type2": "",
       "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
@@ -5903,6 +5831,42 @@
       "type1": "Normal",
       "type2": "",
       "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
+      "ready_for_approval": true
+    },
+    "hissiorite|7886f1ade29aeb8423ef8961b1339a8a41f9a9754d68ba7b5d0536074b85871e": {
+      "identity": "hissiorite",
+      "source": "Festival_PrincessPhoenix",
+      "front_path": "DS_CUSTOM_LIBRARY/packs/Festival_PrincessPhoenix/PrincessPhoenix/Pokemon/Battlers/Gen 3 Frontsprites/Hissiorite.png",
+      "back_path": "DS_CUSTOM_LIBRARY/packs/Festival_PrincessPhoenix/PrincessPhoenix/Pokemon/Battlers/Gen 4 Backsprites/HissioriteB4.png",
+      "family": "Unresolved family / relationship",
+      "name": "Hissiorite",
+      "type1": "Normal",
+      "type2": "",
+      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE;BACK_MATCH_RECOVERED",
+      "ready_for_approval": true
+    },
+    "hissiorite|4c89c27889f7fd44776ab87dd535ba8b1ca172de86a1f6e3c6fb16666c1dc9c1": {
+      "identity": "hissiorite",
+      "source": "Festival_PrincessPhoenix",
+      "front_path": "DS_CUSTOM_LIBRARY/packs/Festival_PrincessPhoenix/PrincessPhoenix/Pokemon/Battlers/Gen 4-5 Frontsprites/Hissiorite.png",
+      "back_path": "DS_CUSTOM_LIBRARY/packs/Festival_PrincessPhoenix/PrincessPhoenix/Pokemon/Battlers/Gen 4 Backsprites/HissioriteB4.png",
+      "family": "Unresolved family / relationship",
+      "name": "Hissiorite",
+      "type1": "Normal",
+      "type2": "",
+      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE;BACK_MATCH_RECOVERED",
+      "ready_for_approval": true
+    },
+    "hissiorites|d805f4b030a07ba90b167c408f8b6e45d4b3e1251f1d2ef0ede8fe05b61d4eeb": {
+      "identity": "hissiorites",
+      "source": "Festival_PrincessPhoenix",
+      "front_path": "DS_CUSTOM_LIBRARY/packs/Festival_PrincessPhoenix/PrincessPhoenix/Pokemon/Battlers/Gen 3 Frontsprites/HissioriteS.png",
+      "back_path": "DS_CUSTOM_LIBRARY/packs/Festival_PrincessPhoenix/PrincessPhoenix/Pokemon/Battlers/Gen 4 Backsprites/AnuB4.png",
+      "family": "Unresolved family / relationship",
+      "name": "Hissiorites",
+      "type1": "Normal",
+      "type2": "",
+      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE;BACK_MATCH_RECOVERED",
       "ready_for_approval": true
     },
     "hitmonchan-mega|c75f55ce327f5ce21bf2ea8ec399589030b746880c47aa7ac07ff21a9478c845": {
@@ -6008,6 +5972,30 @@
       "back_path": "DS_CUSTOM_LIBRARY/packs/Festival_Magiscarf/Magiscarf/Battlers Normal/Back/Hoolihog.png",
       "family": "Unresolved family / relationship",
       "name": "Hoolihog",
+      "type1": "Normal",
+      "type2": "",
+      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
+      "ready_for_approval": true
+    },
+    "hoopa-male|0e3e079d7bbc4c5907aeb99d06b8ea0649cb5ed46e707871a95c616f5b27a9d0": {
+      "identity": "hoopa-male",
+      "source": "HGSS_Project_Unique_Dream_Crystal",
+      "front_path": "DS_CUSTOM_LIBRARY/packs/HGSS_Project_Unique_Dream_Crystal/hoopa/male/front.png",
+      "back_path": "DS_CUSTOM_LIBRARY/packs/HGSS_Project_Unique_Dream_Crystal/hoopa/male/back.png",
+      "family": "Unresolved family / relationship",
+      "name": "Hoopa Male",
+      "type1": "Normal",
+      "type2": "",
+      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
+      "ready_for_approval": true
+    },
+    "hoopa-unbound-female|16a105e1ce02560197fedfb19ed934fb4ae0e50de95a6236f30db4541b9ec7e5": {
+      "identity": "hoopa-unbound-female",
+      "source": "HGSS_Project_Unique_Dream_Crystal",
+      "front_path": "DS_CUSTOM_LIBRARY/packs/HGSS_Project_Unique_Dream_Crystal/hoopa_unbound/female/front.png",
+      "back_path": "DS_CUSTOM_LIBRARY/packs/HGSS_Project_Unique_Dream_Crystal/hoopa_unbound/female/back.png",
+      "family": "Unresolved family / relationship",
+      "name": "Hoopa Unbound Female",
       "type1": "Normal",
       "type2": "",
       "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
@@ -6409,6 +6397,18 @@
       "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
       "ready_for_approval": true
     },
+    "iron-thorns-male|1ea3e64f6dce76d60a4ac2aaf25e86fc0d1f2942f1436d0c259872c3886adf98": {
+      "identity": "iron-thorns-male",
+      "source": "HGSS_Project_Unique_Dream_Crystal",
+      "front_path": "DS_CUSTOM_LIBRARY/packs/HGSS_Project_Unique_Dream_Crystal/iron_thorns/male/front.png",
+      "back_path": "DS_CUSTOM_LIBRARY/packs/HGSS_Project_Unique_Dream_Crystal/iron_thorns/male/back.png",
+      "family": "Unresolved family / relationship",
+      "name": "Iron Thorns Male",
+      "type1": "Steel",
+      "type2": "",
+      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
+      "ready_for_approval": true
+    },
     "iron-voca|eddb05d0e6f4079df53c7c4f9330df3df23f742a011707d07dcf4e7fa5f56996": {
       "identity": "iron-voca",
       "source": "Elite_Redux_Bulk",
@@ -6637,6 +6637,30 @@
       "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
       "ready_for_approval": true
     },
+    "keldeo-male|29acdce54cca968795816774592ff06a65db714139037401d3095097fac40a1c": {
+      "identity": "keldeo-male",
+      "source": "HGSS_Project_Unique_Dream_Crystal",
+      "front_path": "DS_CUSTOM_LIBRARY/packs/HGSS_Project_Unique_Dream_Crystal/keldeo/male/front.png",
+      "back_path": "DS_CUSTOM_LIBRARY/packs/HGSS_Project_Unique_Dream_Crystal/keldeo/male/back.png",
+      "family": "Unresolved family / relationship",
+      "name": "Keldeo Male",
+      "type1": "Normal",
+      "type2": "",
+      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
+      "ready_for_approval": true
+    },
+    "keldeo-resolute-female|5a6249338e4cfacc0e29c3818569c2d9715c01d127b8c987f325965a99853abb": {
+      "identity": "keldeo-resolute-female",
+      "source": "HGSS_Project_Unique_Dream_Crystal",
+      "front_path": "DS_CUSTOM_LIBRARY/packs/HGSS_Project_Unique_Dream_Crystal/keldeo_resolute/female/front.png",
+      "back_path": "DS_CUSTOM_LIBRARY/packs/HGSS_Project_Unique_Dream_Crystal/keldeo_resolute/female/back.png",
+      "family": "Unresolved family / relationship",
+      "name": "Keldeo Resolute Female",
+      "type1": "Normal",
+      "type2": "",
+      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
+      "ready_for_approval": true
+    },
     "kilozuna|00b887f54c2ea8a896a4fbcdbc6e74211ea7e9f359259c00419d7652c0ccda91": {
       "identity": "kilozuna",
       "source": "Elite_Redux_Bulk",
@@ -6656,6 +6680,18 @@
       "back_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/kilozuna_mega/back.png",
       "family": "Unresolved family / relationship",
       "name": "Kilozuna Mega",
+      "type1": "Normal",
+      "type2": "",
+      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
+      "ready_for_approval": true
+    },
+    "kingambit-female|9473631fd4d4f4d0a260f322f9be115a242127b12b978e654ed1065f14ede441": {
+      "identity": "kingambit-female",
+      "source": "HGSS_Project_Unique_Clumsycat_HG_Hack",
+      "front_path": "DS_CUSTOM_LIBRARY/packs/HGSS_Project_Unique_Clumsycat_HG_Hack/kingambit/female/front.png",
+      "back_path": "DS_CUSTOM_LIBRARY/packs/HGSS_Project_Unique_Clumsycat_HG_Hack/kingambit/female/back.png",
+      "family": "Unresolved family / relationship",
+      "name": "Kingambit Female",
       "type1": "Normal",
       "type2": "",
       "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
@@ -6769,18 +6805,6 @@
       "confidence": "MERCURY_MASTER",
       "ready_for_approval": true
     },
-    "kleavor-lord-male|52a9eb89851e7d64f1377f21eb0bdb6789e6b0db473cbbbcb704292560b2f2e5": {
-      "identity": "kleavor-lord-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/kleavor_lord/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/kleavor_lord/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Kleavor Lord Male",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE;BACK_MATCH_RECOVERED",
-      "ready_for_approval": true
-    },
     "kleavor-mega|fa55e170093487c622481178867bfd581d874dc5cd4fabd535f7780b6c71b58b": {
       "identity": "kleavor-mega",
       "source": "Elite_Redux_Bulk",
@@ -6872,18 +6896,6 @@
       "back_path": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/KOCOMB_1.png",
       "family": "Unresolved family / relationship",
       "name": "Kocomb 1",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
-    "koraidon-apex-build|1d78a3b16ee0b877fc96e78e179fc3535f35e7ce2fd42ac98391d34ce03883d1": {
-      "identity": "koraidon-apex-build",
-      "source": "DrPrettyman_DS_64x64",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/DrPrettyman_DS_64x64/sprites-processed/front/koraidon-apex-build.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/DrPrettyman_DS_64x64/sprites-processed/back/koraidon-apex-build.png",
-      "family": "Unresolved family / relationship",
-      "name": "Koraidon Apex Build",
       "type1": "Normal",
       "type2": "",
       "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
@@ -7201,18 +7213,6 @@
       "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
       "ready_for_approval": true
     },
-    "lilligant-lady-male|2addd81106762f24b7cd94e7bb287b75d45d886ee84cdf130e5232096c9203a5": {
-      "identity": "lilligant-lady-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/lilligant_lady/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/lilligant_lady/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Lilligant Lady Male",
-      "type1": "Bug",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
     "linoone-galarian|c426375a1dd3c2926584fe1c5c84eceadca94103129be58f81bffe4f54fa2732": {
       "identity": "linoone-galarian",
       "source": "Elite_Redux_Bulk",
@@ -7220,18 +7220,6 @@
       "back_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/linoone_galarian/back.png",
       "family": "Unresolved family / relationship",
       "name": "Linoone Galarian",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
-    "linoone-galarian-male|83c28d2bddbbe33a6d4c950d5137906c56d03c1eb152fa6f9cf08b149a660cb9": {
-      "identity": "linoone-galarian-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/linoone_galarian/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/linoone_galarian/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Linoone Galarian Male",
       "type1": "Normal",
       "type2": "",
       "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
@@ -7331,30 +7319,6 @@
       "type1": "Normal",
       "type2": "",
       "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
-    "lucario-mega-z|b9330bf14ac91f9c6eaf8d55ff448df0b7542afc60a2b97af74eafcc94cf0b4c": {
-      "identity": "lucario-mega-z",
-      "source": "DrPrettyman_DS_64x64",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/DrPrettyman_DS_64x64/sprites-processed/front/lucario-mega-z.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/DrPrettyman_DS_64x64/sprites-processed/back/lucario-mega-z.png",
-      "name": "Mega Lucario Z",
-      "type1": "Fighting",
-      "type2": "Steel",
-      "family": "Riolu",
-      "confidence": "MERCURY_MASTER",
-      "ready_for_approval": true
-    },
-    "lucario-mega-z|3e4e41224b500b56bec3042a22246f5b92fc34e6d72e1ada28f0d069c938a64c": {
-      "identity": "lucario-mega-z",
-      "source": "Elite_Redux_Bulk",
-      "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/lucario_mega_z/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/lucario_mega_z/back.png",
-      "name": "Mega Lucario Z",
-      "type1": "Fighting",
-      "type2": "Steel",
-      "family": "Riolu",
-      "confidence": "MERCURY_MASTER",
       "ready_for_approval": true
     },
     "lumaxi|1b111657545ee4882d4d95d9c647ef54c4b2fa13ff7870c4da5e784c7c538afa": {
@@ -7561,6 +7525,18 @@
       "confidence": "MERCURY_MASTER",
       "ready_for_approval": true
     },
+    "mabosstiff-female|30f4d89feb24c6e0ded1743c45d24aad8e4a7740c4654a0673f0681ee89e0d75": {
+      "identity": "mabosstiff-female",
+      "source": "HGSS_Project_Unique_Dream_Crystal",
+      "front_path": "DS_CUSTOM_LIBRARY/packs/HGSS_Project_Unique_Dream_Crystal/mabosstiff/female/front.png",
+      "back_path": "DS_CUSTOM_LIBRARY/packs/HGSS_Project_Unique_Dream_Crystal/mabosstiff/female/back.png",
+      "family": "Unresolved family / relationship",
+      "name": "Mabosstiff Female",
+      "type1": "Normal",
+      "type2": "",
+      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
+      "ready_for_approval": true
+    },
     "machamp-mega-redux|413cb013d88a815891526f8a31b52f724123fe37ee53ff6b2e6c698169530df8": {
       "identity": "machamp-mega-redux",
       "source": "Elite_Redux_Bulk",
@@ -7621,6 +7597,30 @@
       "confidence": "MERCURY_MASTER",
       "ready_for_approval": true
     },
+    "magearna-male|5cb52eb3eb4ff8f9a7ff063ea5d0e942cd059ea7ded178d46e23b2ca49d7b169": {
+      "identity": "magearna-male",
+      "source": "HGSS_Project_Unique_Dream_Crystal",
+      "front_path": "DS_CUSTOM_LIBRARY/packs/HGSS_Project_Unique_Dream_Crystal/magearna/male/front.png",
+      "back_path": "DS_CUSTOM_LIBRARY/packs/HGSS_Project_Unique_Dream_Crystal/magearna/male/back.png",
+      "family": "Unresolved family / relationship",
+      "name": "Magearna Male",
+      "type1": "Steel",
+      "type2": "",
+      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
+      "ready_for_approval": true
+    },
+    "magearna-mega|662c01bb8cfa8c9dae117c6d4a5f844aa1c0a4cd97118ba7cbbef8c7a3a91e41": {
+      "identity": "magearna-mega",
+      "source": "PokeDot_Engine_Mega_Intake",
+      "front_path": "DS_CUSTOM_LIBRARY/packs/PokeDot_Engine_Mega_Intake/magearna-mega/front.png",
+      "back_path": "DS_CUSTOM_LIBRARY/packs/PokeDot_Engine_Mega_Intake/magearna-mega/back.png",
+      "name": "Mega Magearna",
+      "type1": "Steel",
+      "type2": "Fairy",
+      "family": "Undiscovered \u2014 Magearna",
+      "confidence": "MERCURY_MASTER",
+      "ready_for_approval": true
+    },
     "magearna-original-color|30c5883f898d6272312b6e057ccd152685d32d9a9ce5ba2dcfd8d5a8c29f3bfc": {
       "identity": "magearna-original-color",
       "source": "Elite_Redux_Bulk",
@@ -7631,6 +7631,18 @@
       "type2": "Fairy",
       "family": "Undiscovered \u2014 Magearna",
       "confidence": "MERCURY_MASTER;BACK_MATCH_RECOVERED",
+      "ready_for_approval": true
+    },
+    "magearna-original-mega|85032b18bef379480d7cfcdaca2812296738a6c92a95cfcf448f804b0e7ea953": {
+      "identity": "magearna-original-mega",
+      "source": "PokeDot_Engine_Mega_Intake",
+      "front_path": "DS_CUSTOM_LIBRARY/packs/PokeDot_Engine_Mega_Intake/magearna-original-mega/front.png",
+      "back_path": "DS_CUSTOM_LIBRARY/packs/PokeDot_Engine_Mega_Intake/magearna-original-mega/back.png",
+      "family": "Unresolved family / relationship",
+      "name": "Magearna Original Mega",
+      "type1": "Steel",
+      "type2": "",
+      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
       "ready_for_approval": true
     },
     "magmenous|284fce232df8750eaf16ba559b0e3f5c346c1cabc8dbcb8369a934c97d265d71": {
@@ -7801,18 +7813,6 @@
       "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
       "ready_for_approval": true
     },
-    "marowak-alolan-male|6bc4fa22a65ef0bc132529f370ed63d82244e212951fbb9237767131dce8f077": {
-      "identity": "marowak-alolan-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/marowak_alolan/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/marowak_alolan/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Marowak Alolan Male",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
     "marshmodo|f1dff1ea68fac31f607c37986f629a9e36c455b11061efb8649d22bdb6c6ce4e": {
       "identity": "marshmodo",
       "source": "Elite_Redux_Bulk",
@@ -7847,6 +7847,18 @@
       "type1": "Normal",
       "type2": "",
       "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
+      "ready_for_approval": true
+    },
+    "mawile|d647398027535dece997b43c0638a7deff41baa3156c1377a797a955b504e072": {
+      "identity": "mawile",
+      "source": "Festival_Misc",
+      "front_path": "DS_CUSTOM_LIBRARY/packs/Festival_Misc/Misc/Fronts/Mawile.png",
+      "back_path": "DS_CUSTOM_LIBRARY/packs/Festival_Misc/Misc/Backs/MawileB.png",
+      "name": "Mawile",
+      "type1": "Steel",
+      "type2": "Fairy",
+      "family": "Mawile",
+      "confidence": "MERCURY_MASTER;BACK_MATCH_RECOVERED",
       "ready_for_approval": true
     },
     "mawile-mega-redux|d8e3bb4da0b688108118a8a347fc67848599968ddea5b7d086432b33c8b12105": {
@@ -7897,126 +7909,6 @@
       "confidence": "MERCURY_MASTER",
       "ready_for_approval": true
     },
-    "mega-abomasnow-male|4fd233ec169f47d0ce5f109eb89349bd3094d8fe507addd4153b44b626f40b08": {
-      "identity": "mega-abomasnow-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_abomasnow/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_abomasnow/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Mega Abomasnow Male",
-      "type1": "Ice",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
-    "mega-absol-male|7a24eb3438ed5ccaf778dc2061fb6aebb99cb253e58cb24e49e5227b9734360f": {
-      "identity": "mega-absol-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_absol/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_absol/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Mega Absol Male",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
-    "mega-absol-z-male|c2c44abfef33b1d3ac71997daaa65c7eb852d00e19d2923cb3a834db8e414e51": {
-      "identity": "mega-absol-z-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_absol_z/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_absol_z/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Mega Absol Z Male",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
-    "mega-aerodactyl-male|b26a1363c1b9668af673837b2d04e4c1b4fafd4f9989dc91eb0fe9da747476f2": {
-      "identity": "mega-aerodactyl-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_aerodactyl/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_aerodactyl/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Mega Aerodactyl Male",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
-    "mega-aggron-male|30011e0a24ee2e6a883c1a06d48093dfa585e98e389575c09f7d371fa310b655": {
-      "identity": "mega-aggron-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_aggron/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_aggron/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Mega Aggron Male",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
-    "mega-alakazam-male|c2bf25817f8b31fb302224ab9dd2d5a6eae688f4a8a828b328afecc14154c645": {
-      "identity": "mega-alakazam-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_alakazam/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_alakazam/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Mega Alakazam Male",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
-    "mega-altaria-male|6b781480bdca09577705c47aec8070541165adb423ebf9c1a37541a0655e7387": {
-      "identity": "mega-altaria-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_altaria/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_altaria/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Mega Altaria Male",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
-    "mega-ampharos-male|f39cfe0297d124fa3a5e50804d569c3b13da761db4b71c32e56c8c2cbea7c2d4": {
-      "identity": "mega-ampharos-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_ampharos/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_ampharos/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Mega Ampharos Male",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
-    "mega-audino-male|50084899e678ae8c6d899b231c4990df6fdae3bf3db19aba7b055bc28aa76617": {
-      "identity": "mega-audino-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_audino/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_audino/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Mega Audino Male",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
-    "mega-banette-male|4457efdfa17319365c87fd2c5c0469834f23104f879ce83c971bcc2b1e913db4": {
-      "identity": "mega-banette-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_banette/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_banette/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Mega Banette Male",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
     "mega-barbaracle|95022e077bf94c8ee25635e3db1760fb5208b18ee3ba0f59cfea23e531e0b146": {
       "identity": "mega-barbaracle",
       "source": "Festival_Misc",
@@ -8029,102 +7921,6 @@
       "confidence": "MERCURY_MASTER;BACK_MATCH_RECOVERED",
       "ready_for_approval": true
     },
-    "mega-beedrill-male|f9e96cea29486e0daf90800f46990fc9bce116f83c164b7583a6a025a6c3b1ce": {
-      "identity": "mega-beedrill-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_beedrill/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_beedrill/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Mega Beedrill Male",
-      "type1": "Bug",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
-    "mega-blastoise-male|c3f4c30789c6c1eff718112a75b8a7a4208b383323dec2d4d68deee0e2af5540": {
-      "identity": "mega-blastoise-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_blastoise/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_blastoise/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Mega Blastoise Male",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
-    "mega-blaziken-male|fe9aadfc2587e711699f439d1dbdc9303a7af9cd80703709fdbc0fb130612601": {
-      "identity": "mega-blaziken-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_blaziken/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_blaziken/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Mega Blaziken Male",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
-    "mega-camerupt-male|c9fc8f7531d239a5b4661327cc6587f95f354f32735f9cf950b05e939f7a0417": {
-      "identity": "mega-camerupt-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_camerupt/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_camerupt/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Mega Camerupt Male",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
-    "mega-charizard-x-male|10edda2aa81b69f429b0026153393de0abd7efdf9f058447b394d22175784273": {
-      "identity": "mega-charizard-x-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_charizard_x/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_charizard_x/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Mega Charizard X Male",
-      "type1": "Fire",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
-    "mega-charizard-y-male|f96add098f5858dc30a1dddbd41603bba0777cec714f55e04c127cfb2ab46f1c": {
-      "identity": "mega-charizard-y-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_charizard_y/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_charizard_y/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Mega Charizard Y Male",
-      "type1": "Fire",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
-    "mega-clefable-male|4aa3ce157084e381d72b3f404cd04528e845d2497487ca7cd12589c9fd55a58e": {
-      "identity": "mega-clefable-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_clefable/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_clefable/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Mega Clefable Male",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
-    "mega-delphox-male|61254d3665336047e543cc9f9e5800e70ea71cd1cdbb104c199aefe821982088": {
-      "identity": "mega-delphox-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_delphox/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_delphox/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Mega Delphox Male",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
     "mega-diancie-female|7e4be8a9b59a8f319fc18f8a69526e019757880a008d86373fef5b7a1709699b": {
       "identity": "mega-diancie-female",
       "source": "HGSS_Project_Unique_Clumsycat_HG_Hack",
@@ -8132,270 +7928,6 @@
       "back_path": "DS_CUSTOM_LIBRARY/packs/HGSS_Project_Unique_Clumsycat_HG_Hack/mega_diancie/female/back.png",
       "family": "Unresolved family / relationship",
       "name": "Mega Diancie Female",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
-    "mega-diancie-male|2600def9561de2e74f212b8ef38cdca7952638d87b7233884a5385f03539baa4": {
-      "identity": "mega-diancie-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_diancie/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_diancie/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Mega Diancie Male",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
-    "mega-dragonite-male|a9a6440ca5ada6afc4a1b85f83ada93a37bbbaa06cce42e2f32c8a5568c487cb": {
-      "identity": "mega-dragonite-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_dragonite/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_dragonite/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Mega Dragonite Male",
-      "type1": "Dragon",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
-    "mega-drampa-male|63f7b455af5d96a9ace29489e70fd5b292bcb4d2bc420c55811998640b671b78": {
-      "identity": "mega-drampa-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_drampa/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_drampa/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Mega Drampa Male",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
-    "mega-eelektross-male|40e26d2780c2461fbc332e6e821bace52161b7a9e045c584ebe7794d296c0a4a": {
-      "identity": "mega-eelektross-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_eelektross/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_eelektross/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Mega Eelektross Male",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
-    "mega-excadrill-male|5c4215de1c531663f32d41dd4090df3aad27df5d3a4bca38d189750d3c45e657": {
-      "identity": "mega-excadrill-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_excadrill/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_excadrill/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Mega Excadrill Male",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
-    "mega-feraligatr-male|fc6121a8b0c0252bc3fbd1cefadab112ec2b8619eaf3f97621f6fb7d6ad1db32": {
-      "identity": "mega-feraligatr-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_feraligatr/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_feraligatr/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Mega Feraligatr Male",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
-    "mega-froslass-male|31929151018c41b04302f9d887a6ab51655f46b995c29bd552b1f19d2752ecab": {
-      "identity": "mega-froslass-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_froslass/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_froslass/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Mega Froslass Male",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
-    "mega-gallade-male|92c060dff827169faf3b1029c5d27ef8d12ef91d86292a70bdadb7b68d2e05bd": {
-      "identity": "mega-gallade-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_gallade/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_gallade/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Mega Gallade Male",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
-    "mega-garchomp-male|3ccc3c3e0ab9580e65944c13ae9d4c2285674a9751220432b679c40b606e61a6": {
-      "identity": "mega-garchomp-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_garchomp/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_garchomp/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Mega Garchomp Male",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
-    "mega-gardevoir-male|09ed5b78cc98811e0a1039568226e97270bac41c725e94212bb2e2506636ee8b": {
-      "identity": "mega-gardevoir-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_gardevoir/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_gardevoir/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Mega Gardevoir Male",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
-    "mega-gengar-male|673b42de88bfe88432c9ae75b8ee5da95e9584c45395ac75b8cfb48193641d51": {
-      "identity": "mega-gengar-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_gengar/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_gengar/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Mega Gengar Male",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
-    "mega-glalie-male|75123af10b6ac5c98b29c2dc8954213690041f5e526549d91ebc6254956c2999": {
-      "identity": "mega-glalie-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_glalie/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_glalie/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Mega Glalie Male",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
-    "mega-golurk-male|14f6acf08060164301443400a937e3bb5e25464123226b31236fc102ebd28c82": {
-      "identity": "mega-golurk-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_golurk/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_golurk/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Mega Golurk Male",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
-    "mega-gyarados-male|e9cabdd1fc259708f39707568647cd9398553b106f9c31a52fd62d22e055573e": {
-      "identity": "mega-gyarados-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_gyarados/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_gyarados/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Mega Gyarados Male",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
-    "mega-heracross-male|6325bc58f73683b18944f882d07115a0b476b6eedd2f3613accc5ad3d230bb10": {
-      "identity": "mega-heracross-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_heracross/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_heracross/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Mega Heracross Male",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
-    "mega-houndoom-male|878122f47940eab68ea35998236ca98de734e9da58ba69bfcf1990ee445897e2": {
-      "identity": "mega-houndoom-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_houndoom/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_houndoom/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Mega Houndoom Male",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
-    "mega-kangaskhan-female|3f06fbd7af126412ec4817c39f65b6f6e2b4f571cdbdd3c53f1dbecc14a97040": {
-      "identity": "mega-kangaskhan-female",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_kangaskhan/female/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_kangaskhan/female/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Mega Kangaskhan Female",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
-    "mega-latias-male|c95cc5268e2cdfb676cae86b8fa8db50e551b3f5d6a02a97968274ef551d4fc9": {
-      "identity": "mega-latias-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_latias/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_latias/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Mega Latias Male",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
-    "mega-latios-male|37b09b4aa14b5323ae3e26951b9719b93cae036ad2b0501316c96e602817feba": {
-      "identity": "mega-latios-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_latios/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_latios/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Mega Latios Male",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
-    "mega-lopunny-male|b641eb3b7346e409cd99551c62b90024f3dfbea01b2953d99b98220f8c8046a3": {
-      "identity": "mega-lopunny-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_lopunny/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_lopunny/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Mega Lopunny Male",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
-    "mega-lucario-male|9bc202465866d0e63d8f0d73556691b35f116239543d1181b81f33d238476906": {
-      "identity": "mega-lucario-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_lucario/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_lucario/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Mega Lucario Male",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
-    "mega-lucario-z-male|9866809620365dd45992de2c483317b8cc7f9234910c4be4adc76447d2ce0343": {
-      "identity": "mega-lucario-z-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_lucario_z/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_lucario_z/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Mega Lucario Z Male",
       "type1": "Normal",
       "type2": "",
       "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
@@ -8412,330 +7944,6 @@
       "type2": "",
       "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
       "ready_for_approval": false
-    },
-    "mega-magearna-male|f77e7fade7d60627e807da1dab4a642a8219be3aa7a28b3b078a9d52664de31c": {
-      "identity": "mega-magearna-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_magearna/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_magearna/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Mega Magearna Male",
-      "type1": "Steel",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
-    "mega-manectric-male|8383b981ecfafeeb18085fe557285ab03ba160b5094b5bc0d897d3b6bc901833": {
-      "identity": "mega-manectric-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_manectric/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_manectric/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Mega Manectric Male",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
-    "mega-mawile-male|6cb8af02bb675be8858b64f71695a141deb682c46262e51efd8fa7b4df8233b5": {
-      "identity": "mega-mawile-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_mawile/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_mawile/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Mega Mawile Male",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
-    "mega-medicham-male|fe7fc69028a067114dbe3fb1bc48f8986f2f563b98e1c2414c29df1a7aa3c969": {
-      "identity": "mega-medicham-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_medicham/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_medicham/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Mega Medicham Male",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
-    "mega-meganium-male|6568a07b9d8b33f8ade005946b7f93c2a038021b1baed95a04cf6eea427d1390": {
-      "identity": "mega-meganium-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_meganium/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_meganium/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Mega Meganium Male",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
-    "mega-metagross-male|8201a5f1b8217ecf332bf942596658ed028db2aa596a36c00fc50833f7c73ad0": {
-      "identity": "mega-metagross-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_metagross/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_metagross/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Mega Metagross Male",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
-    "mega-mewtwo-x-male|fbd57ba9b66b18164a4bd82a9f8d32257a81a54130eef8bd121c2cf9c02443ab": {
-      "identity": "mega-mewtwo-x-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_mewtwo_x/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_mewtwo_x/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Mega Mewtwo X Male",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
-    "mega-mewtwo-y-male|d455ffa871c61f01b8b22b025858b478e42e0a6c879a076c3105d3681f2e67e9": {
-      "identity": "mega-mewtwo-y-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_mewtwo_y/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_mewtwo_y/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Mega Mewtwo Y Male",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
-    "mega-pidgeot-male|0ca91430b645c1a090fdb7b5c4a9444b01c7c7e26e239c9d2f1a842fcadcad0d": {
-      "identity": "mega-pidgeot-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_pidgeot/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_pidgeot/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Mega Pidgeot Male",
-      "type1": "Rock",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
-    "mega-pinsir-male|13680230202bdb7b2364d8a7f241b4b345ff11e841fe4619d148e5d3a8cf083c": {
-      "identity": "mega-pinsir-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_pinsir/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_pinsir/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Mega Pinsir Male",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
-    "mega-raichu-x-male|69a01d8e32ccf2b20828de94e63083a554f922bf3abeb2bbe7882a9e6d1b51b7": {
-      "identity": "mega-raichu-x-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_raichu_x/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_raichu_x/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Mega Raichu X Male",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
-    "mega-raichu-y-male|e061160d2fd4ab9962f6b47f83da20cb98a35aeb53868b18b8ca6a0d22c49cc4": {
-      "identity": "mega-raichu-y-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_raichu_y/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_raichu_y/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Mega Raichu Y Male",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
-    "mega-rayquaza-male|b4e55add1bbcef905d8be40ae0af0b6faa1800cc6c65d29ba12926f11bf038ea": {
-      "identity": "mega-rayquaza-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_rayquaza/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_rayquaza/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Mega Rayquaza Male",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
-    "mega-sableye-male|61b228fd2b567d1de4cf81f7dcc1a167741f3f2f31ed51cd073cde8fa963c534": {
-      "identity": "mega-sableye-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_sableye/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_sableye/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Mega Sableye Male",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
-    "mega-salamence-male|100f404be61584cb21fe91928fe6dab751e2cc3c24413bc4a8e62fcd1084aba7": {
-      "identity": "mega-salamence-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_salamence/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_salamence/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Mega Salamence Male",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
-    "mega-sceptile-male|0cb83bd872461f7d7158ef55b88db5813da169e679bdeb055e05502f6e788a03": {
-      "identity": "mega-sceptile-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_sceptile/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_sceptile/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Mega Sceptile Male",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
-    "mega-scizor-male|170f6cac42b6f3182ed174b229f0a26045485c6119bc7b1bd211fc40ad335226": {
-      "identity": "mega-scizor-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_scizor/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_scizor/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Mega Scizor Male",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
-    "mega-scolipede-male|7de6c6c055854763159aa47f284b39e964b0cccade54fa148ff1a6a2319cba9b": {
-      "identity": "mega-scolipede-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_scolipede/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_scolipede/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Mega Scolipede Male",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
-    "mega-scrafty-male|cb3d996ea70a2d015822a016d316b272f0df1c4159397caae785eccfbfc56bbc": {
-      "identity": "mega-scrafty-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_scrafty/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_scrafty/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Mega Scrafty Male",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
-    "mega-sharpedo-male|76b142afef6f31c3a88967c356519ec204c805e51f9d8f5a89eee6b7fc00d140": {
-      "identity": "mega-sharpedo-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_sharpedo/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_sharpedo/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Mega Sharpedo Male",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
-    "mega-skarmory-male|dc896b7b9bd9f27be8f8601be876e8b1e6d104460c925b77f7d039daf1dfab48": {
-      "identity": "mega-skarmory-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_skarmory/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_skarmory/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Mega Skarmory Male",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
-    "mega-slowbro-male|bc402bdbf6136ca3ed2eca618b7e8e63af3acdfebb1444d769c3ab8eb3aedd0a": {
-      "identity": "mega-slowbro-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_slowbro/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_slowbro/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Mega Slowbro Male",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
-    "mega-steelix-male|5f30a11d6993cb3f76819c7e4f7d758bd1c5a7efa3a5d37c0bf0669db600847d": {
-      "identity": "mega-steelix-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_steelix/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_steelix/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Mega Steelix Male",
-      "type1": "Steel",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
-    "mega-swampert-male|020f15da6cece3d52e474f328bb2465c74955ac7ba252d9d7a258bfa8e7a9c3e": {
-      "identity": "mega-swampert-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_swampert/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_swampert/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Mega Swampert Male",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
-    "mega-tyranitar-male|28789133aecabb758d5e6016b5f973dc7aabd1cc17c7a75fdc7b24a66823e44b": {
-      "identity": "mega-tyranitar-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_tyranitar/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_tyranitar/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Mega Tyranitar Male",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
-    "mega-venusaur-male|e8b7f76165b92f31de0ce435a6dd6226d00829bb52bee342e3692c32209a56f0": {
-      "identity": "mega-venusaur-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_venusaur/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_venusaur/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Mega Venusaur Male",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
-    "mega-victreebel-male|b45e90d0f9f4299880556d5497266f159693a465ad2e0552dd06f2744366f9c6": {
-      "identity": "mega-victreebel-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_victreebel/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mega_victreebel/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Mega Victreebel Male",
-      "type1": "Grass",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
     },
     "mellung|c27ec27f907df9e2466d350ecc51d980e94afdb22ed5b3332022722044d43a04": {
       "identity": "mellung",
@@ -8797,18 +8005,6 @@
       "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
       "ready_for_approval": true
     },
-    "meowth-alolan-male|7019a5123d40a95d13aee7243306fcfbbcdcfa2a43fcf006e4914e4a881a6e4b": {
-      "identity": "meowth-alolan-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/meowth_alolan/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/meowth_alolan/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Meowth Alolan Male",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
     "meowth-galarian|bcbad3f106fe4d8d8a326e543710e7a2fbfb71993d6111a4f8d5e1e568483d95": {
       "identity": "meowth-galarian",
       "source": "Elite_Redux_Bulk",
@@ -8821,18 +8017,6 @@
       "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE;BACK_MATCH_RECOVERED",
       "ready_for_approval": true
     },
-    "meowth-galarian-male|7e1e481a69bab1a0473927315de0babbaa4b7e00383454a51db5b17f49dda173": {
-      "identity": "meowth-galarian-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/meowth_galarian/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/meowth_galarian/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Meowth Galarian Male",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
     "meowth-partner-mega|2f4dece314c52848d9891e30c441dcd6be4ac544decf8a45f5efdb23d5c8515a": {
       "identity": "meowth-partner-mega",
       "source": "Elite_Redux_Bulk",
@@ -8840,6 +8024,18 @@
       "back_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/meowth_partner_mega/back.png",
       "family": "Unresolved family / relationship",
       "name": "Meowth Partner Mega",
+      "type1": "Normal",
+      "type2": "",
+      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE;BACK_MATCH_RECOVERED",
+      "ready_for_approval": true
+    },
+    "merlicunf|9e4f5293e250333b7eb4c78fcec26ba1c47f0d8f24b0230622ceedda2add9438": {
+      "identity": "merlicunf",
+      "source": "Festival_PrincessPhoenix",
+      "front_path": "DS_CUSTOM_LIBRARY/packs/Festival_PrincessPhoenix/PrincessPhoenix/Pokemon/Battlers/Gen 4-5 Frontsprites/MerlicunF.png",
+      "back_path": "DS_CUSTOM_LIBRARY/packs/Festival_PrincessPhoenix/PrincessPhoenix/Pokemon/Battlers/Gen 4 Backsprites/AnuB4.png",
+      "family": "Unresolved family / relationship",
+      "name": "Merlicunf",
       "type1": "Normal",
       "type2": "",
       "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE;BACK_MATCH_RECOVERED",
@@ -9073,13 +8269,13 @@
       "confidence": "MERCURY_MASTER;BACK_MATCH_RECOVERED",
       "ready_for_approval": true
     },
-    "moltres-galarian-male|ba64150afa1eeb6ef4c040055cf8188d97d61a9acd38a2a850b5617c204b404a": {
-      "identity": "moltres-galarian-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/moltres_galarian/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/moltres_galarian/male/back.png",
+    "moltres-male|ac73fc313344507ec2490a5296b8a87d8c822450ce4c7f6e70a9b7c92a854c11": {
+      "identity": "moltres-male",
+      "source": "HGSS_Project_Unique_Futura_Engine",
+      "front_path": "DS_CUSTOM_LIBRARY/packs/HGSS_Project_Unique_Futura_Engine/moltres/male/front.png",
+      "back_path": "DS_CUSTOM_LIBRARY/packs/HGSS_Project_Unique_Futura_Engine/moltres/male/back.png",
       "family": "Unresolved family / relationship",
-      "name": "Moltres Galarian Male",
+      "name": "Moltres Male",
       "type1": "Normal",
       "type2": "",
       "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
@@ -9181,18 +8377,6 @@
       "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE;BACK_MATCH_RECOVERED",
       "ready_for_approval": true
     },
-    "mr-mime-galarian-male|5b55ada66868c9bc4072b4c5105460b9996947c33e69e6761fcad676435dd1fd": {
-      "identity": "mr-mime-galarian-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mr_mime_galarian/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/mr_mime_galarian/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Mr Mime Galarian Male",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
     "muchog|b24bffcbde2836f76ee052a32f58d8be194e3fdd652c2a605307b5332e32f476": {
       "identity": "muchog",
       "source": "Mikitari",
@@ -9212,18 +8396,6 @@
       "back_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/muk_alolan/back.png",
       "family": "Unresolved family / relationship",
       "name": "Muk Alolan",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
-    "muk-alolan-male|8587393c2a107c1de098ea9c0352b175d16c86d987ebd73bd2fda92c1a71e1fc": {
-      "identity": "muk-alolan-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/muk_alolan/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/muk_alolan/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Muk Alolan Male",
       "type1": "Normal",
       "type2": "",
       "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
@@ -9301,18 +8473,6 @@
       "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
       "ready_for_approval": false
     },
-    "necrozma-dawn-wings-male|d16980cb7d80691446f18aa57b74330f24bcee42e5a12a952d184be04d61ecc5": {
-      "identity": "necrozma-dawn-wings-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/necrozma_dawn_wings/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/necrozma_dawn_wings/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Necrozma Dawn Wings Male",
-      "type1": "Flying",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
     "necrozma-dusk-mane|68ca9eeff35a9a46d7b8185a4ffd2515a134ce8f6fbd22325df103530aa99c00": {
       "identity": "necrozma-dusk-mane",
       "source": "Elite_Redux_Bulk",
@@ -9373,6 +8533,18 @@
       "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
       "ready_for_approval": false
     },
+    "nickit-female|5b5daec0d1bd82831faf430a2977cbdea434412d77af93f7b628fac8e42ab8b0": {
+      "identity": "nickit-female",
+      "source": "HGSS_Project_Unique_Clumsycat_HG_Hack",
+      "front_path": "DS_CUSTOM_LIBRARY/packs/HGSS_Project_Unique_Clumsycat_HG_Hack/nickit/female/front.png",
+      "back_path": "DS_CUSTOM_LIBRARY/packs/HGSS_Project_Unique_Clumsycat_HG_Hack/nickit/female/back.png",
+      "family": "Unresolved family / relationship",
+      "name": "Nickit Female",
+      "type1": "Normal",
+      "type2": "",
+      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
+      "ready_for_approval": true
+    },
     "nidoking-mega|57c2e4fb9628ea0d62a0487beb1d806c73d8db1252e1042250b10214771b7619": {
       "identity": "nidoking-mega",
       "source": "Elite_Redux_Bulk",
@@ -9404,18 +8576,6 @@
       "back_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/ninetales_alolan/back.png",
       "family": "Unresolved family / relationship",
       "name": "Ninetales Alolan",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
-    "ninetales-alolan-male|0db1680e5071a6ca004bf1b618fbaa6028f84ba9ffa70600c193ccc49534cef1": {
-      "identity": "ninetales-alolan-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/ninetales_alolan/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/ninetales_alolan/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Ninetales Alolan Male",
       "type1": "Normal",
       "type2": "",
       "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
@@ -9493,16 +8653,16 @@
       "confidence": "MERCURY_MASTER",
       "ready_for_approval": true
     },
-    "none-male|4c607a6ce16f3adef4b98a1072992848a1846ea080f2a7c753854aa69e50b84f": {
-      "identity": "none-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/none/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/none/male/back.png",
+    "nuenfluf|c53ed446695447c5156a24d61009c8a1d5785661fb525b611f1ced169680f773": {
+      "identity": "nuenfluf",
+      "source": "Festival_PrincessPhoenix",
+      "front_path": "DS_CUSTOM_LIBRARY/packs/Festival_PrincessPhoenix/PrincessPhoenix/Pokemon/Battlers/Gen 4-5 Frontsprites/NuenfluF.png",
+      "back_path": "DS_CUSTOM_LIBRARY/packs/Festival_PrincessPhoenix/PrincessPhoenix/Pokemon/Battlers/Gen 4 Backsprites/AnuB4.png",
       "family": "Unresolved family / relationship",
-      "name": "None Male",
+      "name": "Nuenfluf",
       "type1": "Normal",
       "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
+      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE;BACK_MATCH_RECOVERED",
       "ready_for_approval": true
     },
     "nymbi|0fa56e533dc123c49e8ad45e19e3fd28426f4cdcbad4ce78cb0cdec78b887d8e": {
@@ -9913,18 +9073,6 @@
       "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE;BACK_MATCH_RECOVERED",
       "ready_for_approval": true
     },
-    "persian-alolan-male|f43b213161735ccafb067b1f412f608f6c5f78497a612d792ab7e355a93746af": {
-      "identity": "persian-alolan-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/persian_alolan/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/persian_alolan/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Persian Alolan Male",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
     "petalcher|0a8598c8f8dc6ecc925c44b5fbd0c4a7fc453ebed81ae9b70637ce9405486d85": {
       "identity": "petalcher",
       "source": "Festival_Magiscarf",
@@ -10033,6 +9181,18 @@
       "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
       "ready_for_approval": false
     },
+    "pheromosa-male|35f579ba62fa1c57f1bc05daa021e1bb86b86b6d1fb7860153a8594d085d0b25": {
+      "identity": "pheromosa-male",
+      "source": "HGSS_Project_Unique_Dream_Crystal",
+      "front_path": "DS_CUSTOM_LIBRARY/packs/HGSS_Project_Unique_Dream_Crystal/pheromosa/male/front.png",
+      "back_path": "DS_CUSTOM_LIBRARY/packs/HGSS_Project_Unique_Dream_Crystal/pheromosa/male/back.png",
+      "family": "Unresolved family / relationship",
+      "name": "Pheromosa Male",
+      "type1": "Normal",
+      "type2": "",
+      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
+      "ready_for_approval": true
+    },
     "phyllon|79eae55a8e22ea064e26c2699d4aef1fb55e6a0aac3dd577ad5fbae8e1478203": {
       "identity": "phyllon",
       "source": "Fakemon_Festival_Full",
@@ -10057,18 +9217,6 @@
       "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
       "ready_for_approval": false
     },
-    "pichu-spiky-ear-male|a9f885b14f4ef6574959649107c48d8a6305b96a7a5f1c71cd5c6ef64029201c": {
-      "identity": "pichu-spiky-ear-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/pichu_spiky_ear/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/pichu_spiky_ear/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Pichu Spiky Ear Male",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
     "pikachu-partner-mega|96dfc0d0fd39a555c25d2d64fbdeb925d1f4317e8e75c3953453516ba2b73296": {
       "identity": "pikachu-partner-mega",
       "source": "Elite_Redux_Bulk",
@@ -10088,18 +9236,6 @@
       "back_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/pikachu_ph_d/back.png",
       "family": "Unresolved family / relationship",
       "name": "Pikachu Ph D",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
-    "pikachu-ph-d-male|7258101be829352bd368da36c68fb9a5b65b22cccfa725fdb09bb879f0bdfceb": {
-      "identity": "pikachu-ph-d-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/pikachu_ph_d/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/pikachu_ph_d/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Pikachu Ph D Male",
       "type1": "Normal",
       "type2": "",
       "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
@@ -10283,18 +9419,6 @@
       "type1": "Normal",
       "type2": "",
       "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE;BACK_MATCH_RECOVERED",
-      "ready_for_approval": true
-    },
-    "ponyta-galarian-male|b6cdad80af6d9cf6f268289b4265cec57bc49abd23c5057ff2da1978b16ee636": {
-      "identity": "ponyta-galarian-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/ponyta_galarian/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/ponyta_galarian/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Ponyta Galarian Male",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
       "ready_for_approval": true
     },
     "popcorm|6c81eb95d269da70a127bb367bfe0f8b942f95aef5690cdbe220a6920b898375": {
@@ -10489,6 +9613,54 @@
       "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
       "ready_for_approval": false
     },
+    "pythonova|93d898a29d1660ee8246735b4b1d3255eada583dbcb9755a6b2a63be6b481942": {
+      "identity": "pythonova",
+      "source": "Festival_PrincessPhoenix",
+      "front_path": "DS_CUSTOM_LIBRARY/packs/Festival_PrincessPhoenix/PrincessPhoenix/Pokemon/Battlers/Gen 3 Frontsprites/Pythonova.png",
+      "back_path": "DS_CUSTOM_LIBRARY/packs/Festival_PrincessPhoenix/PrincessPhoenix/Pokemon/Battlers/Gen 3 Backsprites/Backsprites Full/Pythonova.png",
+      "family": "Unresolved family / relationship",
+      "name": "Pythonova",
+      "type1": "Normal",
+      "type2": "",
+      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
+      "ready_for_approval": true
+    },
+    "pythonova|300b610d4192b91fd38f947e70c1e2ea1d43e2ebdfb147220f1aeed9cb271375": {
+      "identity": "pythonova",
+      "source": "Festival_PrincessPhoenix",
+      "front_path": "DS_CUSTOM_LIBRARY/packs/Festival_PrincessPhoenix/PrincessPhoenix/Pokemon/Battlers/Gen 4-5 Frontsprites/Pythonova.png",
+      "back_path": "DS_CUSTOM_LIBRARY/packs/Festival_PrincessPhoenix/PrincessPhoenix/Pokemon/Battlers/Gen 3 Backsprites/Backsprites Full/Pythonova.png",
+      "family": "Unresolved family / relationship",
+      "name": "Pythonova",
+      "type1": "Normal",
+      "type2": "",
+      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
+      "ready_for_approval": true
+    },
+    "pythonovas|0712cb80faa95b4f5a46167af1409c6441e013fc666336d6d9c4c5819c9d9d72": {
+      "identity": "pythonovas",
+      "source": "Festival_PrincessPhoenix",
+      "front_path": "DS_CUSTOM_LIBRARY/packs/Festival_PrincessPhoenix/PrincessPhoenix/Pokemon/Battlers/Gen 3 Frontsprites/PythonovaS.png",
+      "back_path": "DS_CUSTOM_LIBRARY/packs/Festival_PrincessPhoenix/PrincessPhoenix/Pokemon/Battlers/Gen 3 Backsprites/Backsprites Full/PythonovaS.png",
+      "family": "Unresolved family / relationship",
+      "name": "Pythonovas",
+      "type1": "Normal",
+      "type2": "",
+      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
+      "ready_for_approval": true
+    },
+    "pythonovas|19caefc47afc07d633ca65924cb9d51ae80ebee27769a56b2f8dfc7c636ff1db": {
+      "identity": "pythonovas",
+      "source": "Festival_PrincessPhoenix",
+      "front_path": "DS_CUSTOM_LIBRARY/packs/Festival_PrincessPhoenix/PrincessPhoenix/Pokemon/Battlers/Gen 4-5 Frontsprites/PythonovaS.png",
+      "back_path": "DS_CUSTOM_LIBRARY/packs/Festival_PrincessPhoenix/PrincessPhoenix/Pokemon/Battlers/Gen 3 Backsprites/Backsprites Full/PythonovaS.png",
+      "family": "Unresolved family / relationship",
+      "name": "Pythonovas",
+      "type1": "Normal",
+      "type2": "",
+      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
+      "ready_for_approval": true
+    },
     "quagsire-1|74e5def3c618971818f3325816e6363a116722afd555bfff95198eb3cd70ed92": {
       "identity": "quagsire-1",
       "source": "Festival_Atsui",
@@ -10523,6 +9695,18 @@
       "type2": "Fighting",
       "family": "Quaxly",
       "confidence": "MERCURY_MASTER",
+      "ready_for_approval": true
+    },
+    "quaxwell-female|1894a84c27ae110462c43e2ff0aeea8abcc680658c53236b2562b12de7ca4cb9": {
+      "identity": "quaxwell-female",
+      "source": "HGSS_Project_Unique_Clumsycat_HG_Hack",
+      "front_path": "DS_CUSTOM_LIBRARY/packs/HGSS_Project_Unique_Clumsycat_HG_Hack/quaxwell/female/front.png",
+      "back_path": "DS_CUSTOM_LIBRARY/packs/HGSS_Project_Unique_Clumsycat_HG_Hack/quaxwell/female/back.png",
+      "family": "Unresolved family / relationship",
+      "name": "Quaxwell Female",
+      "type1": "Normal",
+      "type2": "",
+      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
       "ready_for_approval": true
     },
     "queengambit|55fa7d3f5c8f2941aaf19739a635205471391207a7ce83cecdeb660ef23ee40d": {
@@ -10573,18 +9757,6 @@
       "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
       "ready_for_approval": true
     },
-    "qwilfish-hisuian-male|1a83466166a6e325bf90bddf6b374e6f841d91b26256f88a30ec026fbf46dc9d": {
-      "identity": "qwilfish-hisuian-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/qwilfish_hisuian/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/qwilfish_hisuian/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Qwilfish Hisuian Male",
-      "type1": "Water",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
     "qwirm|0200eb0f9949ad6aa7d9d174202adf854858e68f6aba5169ce21a92b6df8bf14": {
       "identity": "qwirm",
       "source": "Festival_Magiscarf",
@@ -10597,16 +9769,28 @@
       "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
       "ready_for_approval": false
     },
-    "raichu-alolan-male|fb3fb616ed2ac9ae6860f1d88948a7722cfa1e0efc843bc02c5f87ec0f4659aa": {
-      "identity": "raichu-alolan-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/raichu_alolan/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/raichu_alolan/male/back.png",
+    "rabsca-female|edddcc81ae5355d6d6884b9c3e8e0e8d2c0825b907ef7fb88ef63136ea0bdb81": {
+      "identity": "rabsca-female",
+      "source": "HGSS_Project_Unique_Clumsycat_HG_Hack",
+      "front_path": "DS_CUSTOM_LIBRARY/packs/HGSS_Project_Unique_Clumsycat_HG_Hack/rabsca/female/front.png",
+      "back_path": "DS_CUSTOM_LIBRARY/packs/HGSS_Project_Unique_Clumsycat_HG_Hack/rabsca/female/back.png",
       "family": "Unresolved family / relationship",
-      "name": "Raichu Alolan Male",
+      "name": "Rabsca Female",
       "type1": "Normal",
       "type2": "",
       "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
+      "ready_for_approval": true
+    },
+    "raichu-mega-y|c9ac600a1b0221e1683cf1b16b89fa3f812a71199871a46879bd3258740f4542": {
+      "identity": "raichu-mega-y",
+      "source": "PokeDot_Engine_Mega_Intake",
+      "front_path": "DS_CUSTOM_LIBRARY/packs/PokeDot_Engine_Mega_Intake/raichu-mega-y/front.png",
+      "back_path": "DS_CUSTOM_LIBRARY/packs/PokeDot_Engine_Mega_Intake/raichu-mega-y/back.png",
+      "name": "Mega Raichu Y",
+      "type1": "Electric",
+      "type2": "",
+      "family": "Pikachu",
+      "confidence": "MERCURY_MASTER",
       "ready_for_approval": true
     },
     "rainther|9bd1392ed4216f97385675a1e0200beb046ff0bde9f9d5dd58f7d122050a6eae": {
@@ -10681,18 +9865,6 @@
       "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
       "ready_for_approval": false
     },
-    "rapidash-galarian-male|aed82c850415cfad110fcd7d805df7b16ad8e433408f50f19ea8388782cf96a2": {
-      "identity": "rapidash-galarian-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/rapidash_galarian/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/rapidash_galarian/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Rapidash Galarian Male",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
     "rapidash-mega|a8a050c4f3b4c540e384c9db82baccbd3e11a18ef44960470c6b410c2187c4bf": {
       "identity": "rapidash-mega",
       "source": "Elite_Redux_Bulk",
@@ -10753,18 +9925,6 @@
       "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
       "ready_for_approval": true
     },
-    "raticate-alolan-male|e3260cfacca5c7f529ccf0efab5ab7605f1250763cd0cb3bce70c57f2f976bbc": {
-      "identity": "raticate-alolan-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/raticate_alolan/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/raticate_alolan/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Raticate Alolan Male",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
     "raticate-redux|f58c7645716ed7b4c5f7622a127c1f64a52480216fda966425c8809fdf741a0e": {
       "identity": "raticate-redux",
       "source": "Elite_Redux_Bulk",
@@ -10796,18 +9956,6 @@
       "back_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/rattata_alolan/back.png",
       "family": "Unresolved family / relationship",
       "name": "Rattata Alolan",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
-    "rattata-alolan-male|6142a9d94741bb69fe2dedbb98d497ac887da701b96df448d56c5acf838c584a": {
-      "identity": "rattata-alolan-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/rattata_alolan/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/rattata_alolan/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Rattata Alolan Male",
       "type1": "Normal",
       "type2": "",
       "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
@@ -10991,6 +10139,18 @@
       "type2": "Rock",
       "family": "Relicanth",
       "confidence": "MERCURY_MASTER",
+      "ready_for_approval": true
+    },
+    "rellor-female|c11631cb4bdb788671dd6bb5ee18a8b8df5830ff76cc94a8ebd4db7ca4793387": {
+      "identity": "rellor-female",
+      "source": "HGSS_Project_Unique_Clumsycat_HG_Hack",
+      "front_path": "DS_CUSTOM_LIBRARY/packs/HGSS_Project_Unique_Clumsycat_HG_Hack/rellor/female/front.png",
+      "back_path": "DS_CUSTOM_LIBRARY/packs/HGSS_Project_Unique_Clumsycat_HG_Hack/rellor/female/back.png",
+      "family": "Unresolved family / relationship",
+      "name": "Rellor Female",
+      "type1": "Normal",
+      "type2": "",
+      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
       "ready_for_approval": true
     },
     "reuniclus-mega|741c3f5e2f2fd7b733511f05b2c1a29868daa30fa5a9c5a09b8f4ada9704a4f6": {
@@ -11293,6 +10453,18 @@
       "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
       "ready_for_approval": false
     },
+    "sableye|5aa310f8b138eee3dbbe050802df5b043ef4ad5a54435e54a57b08b69896992f": {
+      "identity": "sableye",
+      "source": "Festival_Misc",
+      "front_path": "DS_CUSTOM_LIBRARY/packs/Festival_Misc/Misc/Fronts/Sableye.png",
+      "back_path": "DS_CUSTOM_LIBRARY/packs/Festival_Misc/Misc/Backs/SableyeB.png",
+      "name": "Sableye",
+      "type1": "Dark",
+      "type2": "Ghost",
+      "family": "Sableye",
+      "confidence": "MERCURY_MASTER;BACK_MATCH_RECOVERED",
+      "ready_for_approval": true
+    },
     "sableye-mega-redux|cd21d49fc74de2068a3558ed61d17cb202a8cfee4b8459192b5e953e9f207dcd": {
       "identity": "sableye-mega-redux",
       "source": "Elite_Redux_Bulk",
@@ -11365,18 +10537,6 @@
       "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
       "ready_for_approval": true
     },
-    "samurott-hisuian-male|597243de3e2153de2803fd4e3469007994e96ebf41c99b6dcd02aa63bdacedf9": {
-      "identity": "samurott-hisuian-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/samurott_hisuian/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/samurott_hisuian/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Samurott Hisuian Male",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
     "samurott-hisuian-mega|e900c6ebeb9c39bc0531a0642d26f7a8da201dc848ebab9fefb05fdf52734bcd": {
       "identity": "samurott-hisuian-mega",
       "source": "Elite_Redux_Bulk",
@@ -11434,7 +10594,7 @@
       "name": "Sandli",
       "type1": "Ground",
       "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
+      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE;BACK_MATCH_RECOVERED",
       "ready_for_approval": true
     },
     "sandshrew-alolan|fc5357ff03b423407be93a6207e09b9c0bade45f94955cfea206b7e5bc0a2429": {
@@ -11449,18 +10609,6 @@
       "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
       "ready_for_approval": true
     },
-    "sandshrew-alolan-male|2f412add7778a791f7eb29ef256bd46922787a7adcf683655cc8628bb8396473": {
-      "identity": "sandshrew-alolan-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/sandshrew_alolan/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/sandshrew_alolan/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Sandshrew Alolan Male",
-      "type1": "Ground",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
     "sandslash-alolan|118365c84b00b25817a4c19c5d49e4db6a122f9970fc4c2c675e9b90297434c0": {
       "identity": "sandslash-alolan",
       "source": "Elite_Redux_Bulk",
@@ -11468,18 +10616,6 @@
       "back_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/sandslash_alolan/back.png",
       "family": "Unresolved family / relationship",
       "name": "Sandslash Alolan",
-      "type1": "Ground",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
-    "sandslash-alolan-male|cc052394f3fa54c86705c1c9fd99520a486a3ee6cdfa9aa5637ce5513d09a1c1": {
-      "identity": "sandslash-alolan-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/sandslash_alolan/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/sandslash_alolan/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Sandslash Alolan Male",
       "type1": "Ground",
       "type2": "",
       "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
@@ -11681,13 +10817,13 @@
       "identity": "searpent",
       "source": "Festival_Magiscarf",
       "front_path": "DS_CUSTOM_LIBRARY/packs/Festival_Magiscarf/Magiscarf/Battlers Normal/Front/Searpent.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/SEARPENT.png",
+      "back_path": "",
       "family": "Unresolved family / relationship",
       "name": "Searpent",
       "type1": "Water",
       "type2": "",
       "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
+      "ready_for_approval": false
     },
     "seegel|c1df2f21c0433cdf83030ec315cb5ff3a6ecbb9d04f49abaf851040e4cd6fb56": {
       "identity": "seegel",
@@ -11819,18 +10955,6 @@
       "type2": "",
       "family": "Shellos",
       "confidence": "MERCURY_MASTER",
-      "ready_for_approval": true
-    },
-    "shellos-east-sea-male|68704a12a6eef66df2351af46197229cedbeff68d609cf0944e57f2b9f995f80": {
-      "identity": "shellos-east-sea-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/shellos_east_sea/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/shellos_east_sea/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Shellos East Sea Male",
-      "type1": "Water",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
       "ready_for_approval": true
     },
     "shepmill|7b447a72c692786f4cc75e125adcc58c9000010ec7575aaf589fccc6790ad579": {
@@ -11975,6 +11099,18 @@
       "type2": "",
       "family": "Pansear",
       "confidence": "MERCURY_MASTER",
+      "ready_for_approval": true
+    },
+    "sinistea-antique-female|584756852a18b2663d10257a41b8573fe467d511879e4320bc040463e487d0b1": {
+      "identity": "sinistea-antique-female",
+      "source": "HGSS_Project_Unique_Clumsycat_HG_Hack",
+      "front_path": "DS_CUSTOM_LIBRARY/packs/HGSS_Project_Unique_Clumsycat_HG_Hack/sinistea_antique/female/front.png",
+      "back_path": "DS_CUSTOM_LIBRARY/packs/HGSS_Project_Unique_Clumsycat_HG_Hack/sinistea_antique/female/back.png",
+      "family": "Unresolved family / relationship",
+      "name": "Sinistea Antique Female",
+      "type1": "Bug",
+      "type2": "",
+      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
       "ready_for_approval": true
     },
     "sinistea-redux|46ce1a698f8c7c0370dc563fef462db003659fa0133b0b4e9e016bd53848efc2": {
@@ -12217,18 +11353,6 @@
       "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
       "ready_for_approval": true
     },
-    "sliggoo-hisuian-male|d459a0538dc219501eaa1f4407b83a96f0841f9cffe859df06e4e82244415eaf": {
-      "identity": "sliggoo-hisuian-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/sliggoo_hisuian/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/sliggoo_hisuian/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Sliggoo Hisuian Male",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
     "sligment|0e27556d0266f135801998b27c61cfb5510aea2943d276c559074a52c0063dd9": {
       "identity": "sligment",
       "source": "Festival_Magiscarf",
@@ -12265,18 +11389,6 @@
       "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
       "ready_for_approval": true
     },
-    "slowbro-galarian-male|22ea33f1cd6769d4923ac704b4a9130a114c2d55030293311c5b6daf22a9bd4f": {
-      "identity": "slowbro-galarian-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/slowbro_galarian/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/slowbro_galarian/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Slowbro Galarian Male",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
     "slowbro-mega-galarian|891be8e5a5c31180fb59285c55ad5510ebdf376780c57712f4ca5eb9366d2f0f": {
       "identity": "slowbro-mega-galarian",
       "source": "Elite_Redux_Bulk",
@@ -12296,18 +11408,6 @@
       "back_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/slowking_galarian/back.png",
       "family": "Unresolved family / relationship",
       "name": "Slowking Galarian",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
-    "slowking-galarian-male|500a552a4739a6b343a2e9c270e62fab5215b8c387d4b58361a2f5f8ba5ad1b3": {
-      "identity": "slowking-galarian-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/slowking_galarian/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/slowking_galarian/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Slowking Galarian Male",
       "type1": "Normal",
       "type2": "",
       "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
@@ -12347,18 +11447,6 @@
       "type1": "Normal",
       "type2": "",
       "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE;BACK_MATCH_RECOVERED",
-      "ready_for_approval": true
-    },
-    "slowpoke-galarian-male|82aa240a425661c2b7d10445ec19664e7302502f127d9866a94a51058c2382ed": {
-      "identity": "slowpoke-galarian-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/slowpoke_galarian/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/slowpoke_galarian/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Slowpoke Galarian Male",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
       "ready_for_approval": true
     },
     "slugma-redux|ae963b94362482a818da53083f239d7e9219879a7e5eacd770c9db688eef530f": {
@@ -12428,30 +11516,6 @@
       "back_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/sneasel_hisuian/back.png",
       "family": "Unresolved family / relationship",
       "name": "Sneasel Hisuian",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
-    "sneasel-hisuian-female|9a98941a18e10cc2ba370d25c11fb8a2805e32b142f92b52aa30ee5df6d50972": {
-      "identity": "sneasel-hisuian-female",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/sneasel_hisuian/female/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/sneasel_hisuian/female/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Sneasel Hisuian Female",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
-    "sneasel-hisuian-male|d96405a829e3bfc71e38ccbc278921cb5638003c135ec42b5e9c5d2014084054": {
-      "identity": "sneasel-hisuian-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/sneasel_hisuian/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/sneasel_hisuian/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Sneasel Hisuian Male",
       "type1": "Normal",
       "type2": "",
       "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
@@ -13057,18 +12121,6 @@
       "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE;BACK_MATCH_RECOVERED",
       "ready_for_approval": true
     },
-    "stunfisk-galarian-male|ccb9bfd65b6679d51e0874cee39a91f144e6ea62a3056ddbbdb65e0eb8c9b755": {
-      "identity": "stunfisk-galarian-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/stunfisk_galarian/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/stunfisk_galarian/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Stunfisk Galarian Male",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
     "subyss|a29a20ad9e723cd2b4ef4a2c999e64faa1e03d07a8e8ed60dd7c2eccd28f86d3": {
       "identity": "subyss",
       "source": "Festival_Magiscarf",
@@ -13213,6 +12265,30 @@
       "confidence": "MERCURY_MASTER",
       "ready_for_approval": true
     },
+    "tatsugiri-curly-mega|1bd82c4b50e621c3f56bd6ce0121277f20321f412182f7baa6bbc2048aa245d7": {
+      "identity": "tatsugiri-curly-mega",
+      "source": "PokeDot_Engine_Mega_Intake",
+      "front_path": "DS_CUSTOM_LIBRARY/packs/PokeDot_Engine_Mega_Intake/tatsugiri-curly-mega/front.png",
+      "back_path": "DS_CUSTOM_LIBRARY/packs/PokeDot_Engine_Mega_Intake/tatsugiri-curly-mega/back.png",
+      "name": "Mega Tatsugiri Curly Form",
+      "type1": "Dragon",
+      "type2": "Water",
+      "family": "Tatsugiri",
+      "confidence": "MERCURY_MASTER",
+      "ready_for_approval": true
+    },
+    "tatsugiri-droopy-mega|a7686b21248517b7abc4ed1052660c4a90490a97f879e66603b6b8e2d80b66b9": {
+      "identity": "tatsugiri-droopy-mega",
+      "source": "PokeDot_Engine_Mega_Intake",
+      "front_path": "DS_CUSTOM_LIBRARY/packs/PokeDot_Engine_Mega_Intake/tatsugiri-droopy-mega/front.png",
+      "back_path": "DS_CUSTOM_LIBRARY/packs/PokeDot_Engine_Mega_Intake/tatsugiri-droopy-mega/back.png",
+      "name": "Mega Tatsugiri Droopy Form",
+      "type1": "Dragon",
+      "type2": "Water",
+      "family": "Tatsugiri",
+      "confidence": "MERCURY_MASTER",
+      "ready_for_approval": true
+    },
     "tatsugiri-mega|0318fbc52d1e1c8e811c431d23b58a7b0e7f6d91715e63e965f3be80062becc2": {
       "identity": "tatsugiri-mega",
       "source": "Elite_Redux_Bulk",
@@ -13225,16 +12301,16 @@
       "confidence": "MERCURY_MASTER",
       "ready_for_approval": true
     },
-    "tauros-combat-male|4b6f707a4b5d9d84472cfdb4a7e6eb3af150c262a53488a65175f92a0b0db4fa": {
-      "identity": "tauros-combat-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/tauros_combat/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/tauros_combat/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Tauros Combat Male",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
+    "tatsugiri-stretchy-mega|0b58451796d3e3d230bd27c4820c2060be68a8ab0f69cf940cdcb6894b493880": {
+      "identity": "tatsugiri-stretchy-mega",
+      "source": "PokeDot_Engine_Mega_Intake",
+      "front_path": "DS_CUSTOM_LIBRARY/packs/PokeDot_Engine_Mega_Intake/tatsugiri-stretchy-mega/front.png",
+      "back_path": "DS_CUSTOM_LIBRARY/packs/PokeDot_Engine_Mega_Intake/tatsugiri-stretchy-mega/back.png",
+      "name": "Mega Tatsugiri Stretchy Form",
+      "type1": "Dragon",
+      "type2": "Water",
+      "family": "Tatsugiri",
+      "confidence": "MERCURY_MASTER",
       "ready_for_approval": true
     },
     "tauros-paldean-aqua-breed|38f847c2e604a23ca7157debf7f20b619242da16a10fcf98b67a4027b19f0d1f": {
@@ -13345,18 +12421,6 @@
       "confidence": "MERCURY_MASTER",
       "ready_for_approval": true
     },
-    "terapagos-stellar-male|5ba8dc96b5866e5ef9ca93f2aba0fc49af173ec16e353eee69a90ceb2ce14f32": {
-      "identity": "terapagos-stellar-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/terapagos_stellar/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/terapagos_stellar/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Terapagos Stellar Male",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
     "thiefire|ee31d5b956d079f8a003f965b623554f846aa25f12791ec5ed6702d99c3762cc": {
       "identity": "thiefire",
       "source": "Earthretha",
@@ -13465,6 +12529,18 @@
       "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
       "ready_for_approval": true
     },
+    "ting-lu-male|6a33ed9c889810ac54e23fd789140e891546ce55caaf2593d9bec3c376301a62": {
+      "identity": "ting-lu-male",
+      "source": "HGSS_Project_Unique_Dream_Crystal",
+      "front_path": "DS_CUSTOM_LIBRARY/packs/HGSS_Project_Unique_Dream_Crystal/ting_lu/male/front.png",
+      "back_path": "",
+      "family": "Unresolved family / relationship",
+      "name": "Ting Lu Male",
+      "type1": "Normal",
+      "type2": "",
+      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
+      "ready_for_approval": false
+    },
     "tinkatink-redux|c0d7e5ae83f6984159487fd7cdc41fade7b78fedfffbcd8d2b7e945297028aff": {
       "identity": "tinkatink-redux",
       "source": "Elite_Redux_Bulk",
@@ -13525,6 +12601,30 @@
       "confidence": "MERCURY_MASTER",
       "ready_for_approval": true
     },
+    "tobishimif|95b3ba19b57901a16bb76a9e30d8f40fd669401cc2bb5896af467bfb08703dd7": {
+      "identity": "tobishimif",
+      "source": "Festival_PrincessPhoenix",
+      "front_path": "DS_CUSTOM_LIBRARY/packs/Festival_PrincessPhoenix/PrincessPhoenix/Pokemon/Battlers/Gen 4-5 Frontsprites/TobishimiF.png",
+      "back_path": "DS_CUSTOM_LIBRARY/packs/Festival_PrincessPhoenix/PrincessPhoenix/Pokemon/Battlers/Gen 4 Backsprites/AnuB4.png",
+      "family": "Unresolved family / relationship",
+      "name": "Tobishimif",
+      "type1": "Normal",
+      "type2": "",
+      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE;BACK_MATCH_RECOVERED",
+      "ready_for_approval": true
+    },
+    "tobishimifs|da336947c510f7015836d82c949145846795c99c30ab01e820007831a8738689": {
+      "identity": "tobishimifs",
+      "source": "Festival_PrincessPhoenix",
+      "front_path": "DS_CUSTOM_LIBRARY/packs/Festival_PrincessPhoenix/PrincessPhoenix/Pokemon/Battlers/Gen 4-5 Frontsprites/TobishimiFS.png",
+      "back_path": "DS_CUSTOM_LIBRARY/packs/Festival_PrincessPhoenix/PrincessPhoenix/Pokemon/Battlers/Gen 4 Backsprites/AnuB4.png",
+      "family": "Unresolved family / relationship",
+      "name": "Tobishimifs",
+      "type1": "Normal",
+      "type2": "",
+      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE;BACK_MATCH_RECOVERED",
+      "ready_for_approval": true
+    },
     "tormine|c3d06e8f1f58e0d35f64bcaac752e19b102a63ee9eec4a32ac6db86a212565af": {
       "identity": "tormine",
       "source": "Festival_Lumio",
@@ -13559,6 +12659,18 @@
       "type2": "",
       "family": "Torkoal",
       "confidence": "MERCURY_MASTER",
+      "ready_for_approval": true
+    },
+    "torterra-female|371fc64df21a84ee3e5c3c6373c19a6442bd406ad42f6ba7a6a9f05543139738": {
+      "identity": "torterra-female",
+      "source": "HGSS_Project_Unique_Futura_Engine",
+      "front_path": "DS_CUSTOM_LIBRARY/packs/HGSS_Project_Unique_Futura_Engine/torterra/female/front.png",
+      "back_path": "DS_CUSTOM_LIBRARY/packs/HGSS_Project_Unique_Futura_Engine/torterra/female/back.png",
+      "family": "Unresolved family / relationship",
+      "name": "Torterra Female",
+      "type1": "Normal",
+      "type2": "",
+      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
       "ready_for_approval": true
     },
     "torterra-mega|4d2eabd4652f2e38328273371ff65a84ce9cadcf01eda55da7e4cb5733bb03dd": {
@@ -13849,6 +12961,18 @@
       "confidence": "MERCURY_MASTER",
       "ready_for_approval": true
     },
+    "tsushimif|b8eaf3dd8bd6315a9fce57b15b2c863c0c49638bcdf9c3dc77761b64de4cb04a": {
+      "identity": "tsushimif",
+      "source": "Festival_PrincessPhoenix",
+      "front_path": "DS_CUSTOM_LIBRARY/packs/Festival_PrincessPhoenix/PrincessPhoenix/Pokemon/Battlers/Gen 4-5 Frontsprites/TsushimiF.png",
+      "back_path": "DS_CUSTOM_LIBRARY/packs/Festival_PrincessPhoenix/PrincessPhoenix/Pokemon/Battlers/Gen 4 Backsprites/AnuB4.png",
+      "family": "Unresolved family / relationship",
+      "name": "Tsushimif",
+      "type1": "Normal",
+      "type2": "",
+      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE;BACK_MATCH_RECOVERED",
+      "ready_for_approval": true
+    },
     "tuffettry|afcc3f6499440f01959cb3bab60602f5ce74226648289a69294ea3f7cf4f2b76": {
       "identity": "tuffettry",
       "source": "Festival_Magiscarf",
@@ -13907,18 +13031,6 @@
       "type2": "Ghost",
       "family": "Cyndaquil / Typhlosion",
       "confidence": "MERCURY_MASTER",
-      "ready_for_approval": true
-    },
-    "typhlosion-hisuian-male|0adad411860c6816dfa1b80cfe88aa9491b4f87e0441b3a9b9c9cfb45da7bc0a": {
-      "identity": "typhlosion-hisuian-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/typhlosion_hisuian/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/typhlosion_hisuian/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Typhlosion Hisuian Male",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
       "ready_for_approval": true
     },
     "typhlosion-hisuian-mega|6cd51e3537bd6a38ca4337f2eb3fa87444f38f018e976550cecb9ea84ba57eb3": {
@@ -14425,18 +13537,6 @@
       "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
       "ready_for_approval": true
     },
-    "voltorb-hisuian-male|d542fb82248406d56aced8310c5ec7740f0efa3448f1750cb68a38194e42c3e1": {
-      "identity": "voltorb-hisuian-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/voltorb_hisuian/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/voltorb_hisuian/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Voltorb Hisuian Male",
-      "type1": "Electric",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
     "vulpix-alolan|0aeda747fa4fbc09d46c3190ca89b2adf3186a40c3a230cb2e6762a1e085c38f": {
       "identity": "vulpix-alolan",
       "source": "Elite_Redux_Bulk",
@@ -14449,18 +13549,6 @@
       "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE;BACK_MATCH_RECOVERED",
       "ready_for_approval": true
     },
-    "vulpix-alolan-male|36b967773cb33dab0074a73fe8eabe34f3c1bb8d5f788137638d11e4d2386f3e": {
-      "identity": "vulpix-alolan-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/vulpix_alolan/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/vulpix_alolan/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Vulpix Alolan Male",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
     "wacish|11e253676ea87837c96edd2eb18df146f08680237d6aa69ff8f99a6ca7f3edd0": {
       "identity": "wacish",
       "source": "Fakemon_Festival_Full",
@@ -14468,6 +13556,18 @@
       "back_path": "",
       "family": "Unresolved family / relationship",
       "name": "Wacish",
+      "type1": "Normal",
+      "type2": "",
+      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
+      "ready_for_approval": false
+    },
+    "walking-wake-male|0f32aa184dfe52cca94b9133ea52337cd9ffba696cd092e4bdaad1229c8c928f": {
+      "identity": "walking-wake-male",
+      "source": "HGSS_Project_Unique_Clumsycat_HG_Hack",
+      "front_path": "DS_CUSTOM_LIBRARY/packs/HGSS_Project_Unique_Clumsycat_HG_Hack/walking_wake/male/front.png",
+      "back_path": "",
+      "family": "Unresolved family / relationship",
+      "name": "Walking Wake Male",
       "type1": "Normal",
       "type2": "",
       "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
@@ -14564,18 +13664,6 @@
       "back_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/weepinbell_redux/back.png",
       "family": "Unresolved family / relationship",
       "name": "Weepinbell Redux",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
-    "weezing-galarian-male|362e497b2b05e5e9f007b67a5f99650ffd5aa667cac9b5163abbef56789ae63c": {
-      "identity": "weezing-galarian-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/weezing_galarian/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/weezing_galarian/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Weezing Galarian Male",
       "type1": "Normal",
       "type2": "",
       "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
@@ -14701,6 +13789,18 @@
       "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
       "ready_for_approval": false
     },
+    "wishiwashi-school-female|5fb6ed9de2d4f5507df147169587b36465091dfed13d4766ffae5ce79d526e1f": {
+      "identity": "wishiwashi-school-female",
+      "source": "HGSS_Project_Unique_Clumsycat_HG_Hack",
+      "front_path": "DS_CUSTOM_LIBRARY/packs/HGSS_Project_Unique_Clumsycat_HG_Hack/wishiwashi_school/female/front.png",
+      "back_path": "DS_CUSTOM_LIBRARY/packs/HGSS_Project_Unique_Clumsycat_HG_Hack/wishiwashi_school/female/back.png",
+      "family": "Unresolved family / relationship",
+      "name": "Wishiwashi School Female",
+      "type1": "Normal",
+      "type2": "",
+      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
+      "ready_for_approval": true
+    },
     "wispywaspy|9b79137c49e6fe5757dda96add9a9855b0d6c672ef542fcbdf2445235ceb8d84": {
       "identity": "wispywaspy",
       "source": "Elite_Redux_Bulk",
@@ -14780,18 +13880,6 @@
       "back_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/wooper_paldean/back.png",
       "family": "Unresolved family / relationship",
       "name": "Wooper Paldean",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
-    "wooper-paldean-male|8342ee27502cc22950826ed4700696daa045f97eb205c3c3f327f77357d63a02": {
-      "identity": "wooper-paldean-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/wooper_paldean/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/wooper_paldean/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Wooper Paldean Male",
       "type1": "Normal",
       "type2": "",
       "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
@@ -14881,18 +13969,6 @@
       "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE;BACK_MATCH_RECOVERED",
       "ready_for_approval": true
     },
-    "yamask-galarian-male|7c4034d5010af1f051b94f3f83f6554f54432e7ba63a3d8754c00e412bfb9bff": {
-      "identity": "yamask-galarian-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/yamask_galarian/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/yamask_galarian/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Yamask Galarian Male",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
     "yveltal-mega|b71113c1df5c261536bbd0342b1d5db9138b3b2650d17942b964760afa0e79ff": {
       "identity": "yveltal-mega",
       "source": "Elite_Redux_Bulk",
@@ -14941,18 +14017,6 @@
       "confidence": "MERCURY_MASTER",
       "ready_for_approval": true
     },
-    "zapdos-galarian-male|fbf33c2b4901947392011b4e9db09c46558864bc26312a1af9a8f0953ddd5a06": {
-      "identity": "zapdos-galarian-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/zapdos_galarian/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/zapdos_galarian/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Zapdos Galarian Male",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
     "zapoteur|63ea44ffd34931ca9b6d9a3fa425c9be33a927638a5bb959ac4ecdc5ae5c9801": {
       "identity": "zapoteur",
       "source": "Festival_Magiscarf",
@@ -14964,6 +14028,18 @@
       "type2": "",
       "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
       "ready_for_approval": false
+    },
+    "zekrom-male|3d54943eb0c552f4eb23b4b798673cc77c746d03b0492f68e97ba229b2a0aa37": {
+      "identity": "zekrom-male",
+      "source": "HGSS_Project_Unique_Dream_Crystal",
+      "front_path": "DS_CUSTOM_LIBRARY/packs/HGSS_Project_Unique_Dream_Crystal/zekrom/male/front.png",
+      "back_path": "DS_CUSTOM_LIBRARY/packs/HGSS_Project_Unique_Dream_Crystal/zekrom/male/back.png",
+      "family": "Unresolved family / relationship",
+      "name": "Zekrom Male",
+      "type1": "Normal",
+      "type2": "",
+      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE;BACK_MATCH_RECOVERED",
+      "ready_for_approval": true
     },
     "zerbbadon|6a98970eade751aa04faab13d93f439e25a3fecad781285267cda82b9b8f1ecc": {
       "identity": "zerbbadon",
@@ -14989,18 +14065,6 @@
       "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
       "ready_for_approval": true
     },
-    "zigzagoon-galarian-male|71b3f8606fa2481c2fdf571be8f212b270fd26d3d8734c34d65c721535b23ecb": {
-      "identity": "zigzagoon-galarian-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/zigzagoon_galarian/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/zigzagoon_galarian/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Zigzagoon Galarian Male",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
     "zoroark-hisuian|d8de90bc9f22dcff8416d0e67c4652780129b78bb89e7375ccfe05512e8e82da": {
       "identity": "zoroark-hisuian",
       "source": "Elite_Redux_Bulk",
@@ -15008,18 +14072,6 @@
       "back_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/zoroark_hisuian/back.png",
       "family": "Unresolved family / relationship",
       "name": "Zoroark Hisuian",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
-    "zoroark-hisuian-male|a11f005f4c4073789f0665839d2b92cf7ae48589775fe243a09374f5ddddde8a": {
-      "identity": "zoroark-hisuian-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/zoroark_hisuian/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/zoroark_hisuian/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Zoroark Hisuian Male",
       "type1": "Normal",
       "type2": "",
       "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
@@ -15037,18 +14089,6 @@
       "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
       "ready_for_approval": true
     },
-    "zorua-hisuian-male|1e21bcb6701c290b607f1c88f2eda645830a8f6c4e0018887fbbe4376fd1d244": {
-      "identity": "zorua-hisuian-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/zorua_hisuian/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/zorua_hisuian/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Zorua Hisuian Male",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
     "zweilous-redux|eb65487276e64811fb0585d616d5706d63f35e349086b1dd757feff38d848446": {
       "identity": "zweilous-redux",
       "source": "Elite_Redux_Bulk",
@@ -15061,18 +14101,6 @@
       "confidence": "MERCURY_MASTER",
       "ready_for_approval": true
     },
-    "zygarde-10-complete-male|de81002d843a5683ae2921e6f8f8c2fd9be097ea590732ed88496617c7932564": {
-      "identity": "zygarde-10-complete-male",
-      "source": "HG_Engine_DS_Sprites",
-      "front_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/zygarde_10_complete/male/front.png",
-      "back_path": "DS_CUSTOM_LIBRARY/packs/HG_Engine_DS_Sprites/zygarde_10_complete/male/back.png",
-      "family": "Unresolved family / relationship",
-      "name": "Zygarde 10 Complete Male",
-      "type1": "Normal",
-      "type2": "",
-      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "ready_for_approval": true
-    },
     "zygarde-complete-mega|12b2bea65cf4f4ba7f228151c5a63e7de1249a050492f998e26fd2198e4e247a": {
       "identity": "zygarde-complete-mega",
       "source": "Elite_Redux_Bulk",
@@ -15080,6 +14108,18 @@
       "back_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/zygarde_complete_mega/back.png",
       "family": "Unresolved family / relationship",
       "name": "Zygarde Complete Mega",
+      "type1": "Normal",
+      "type2": "",
+      "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
+      "ready_for_approval": true
+    },
+    "zygarde-male|a366cc5eedd176b28a4f8073440949a3c9006f24ce6ee4cf1facf8e5af5be567": {
+      "identity": "zygarde-male",
+      "source": "HGSS_Project_Unique_Dream_Crystal",
+      "front_path": "DS_CUSTOM_LIBRARY/packs/HGSS_Project_Unique_Dream_Crystal/zygarde/male/front.png",
+      "back_path": "DS_CUSTOM_LIBRARY/packs/HGSS_Project_Unique_Dream_Crystal/zygarde/male/back.png",
+      "family": "Unresolved family / relationship",
+      "name": "Zygarde Male",
       "type1": "Normal",
       "type2": "",
       "confidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
