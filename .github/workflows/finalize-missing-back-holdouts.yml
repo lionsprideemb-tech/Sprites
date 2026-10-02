@@ -1,0 +1,35 @@
+name: Finalize Missing Back Holdouts
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'DS_CUSTOM_LIBRARY/DS_READY_MASTER/fakemon_excluded_incomplete.csv'
+      - 'tools/finalize_missing_back_holdouts.py'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: mercury-missing-back-holdouts
+  cancel-in-progress: true
+
+jobs:
+  finalize:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Build holdout manifest
+        run: python tools/finalize_missing_back_holdouts.py
+      - name: Commit holdout manifest
+        run: |
+          git config user.name "Mercury Sprite Recovery Bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add DS_CUSTOM_LIBRARY/DS_READY_MASTER/missing_back_holdout_summary.json DS_CUSTOM_LIBRARY/DS_READY_MASTER/missing_back_holdout.csv
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "Finalize missing-back sprite holdouts"
+          git pull --rebase origin main
+          git push origin main
