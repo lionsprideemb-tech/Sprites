@@ -24,12 +24,16 @@ jobs:
           fetch-depth: 0
       - name: Enrich Fakemon metadata
         run: python tools/enrich_fakemon_metadata.py
-      - name: Commit enrichment
+      - name: Commit enrichment from latest main
         run: |
           git config user.name "Mercury Fakemon Metadata Bot"
           git config user.email "actions@users.noreply.github.com"
+          # Regenerate on the latest main so stale concurrent output commits can
+          # never create a rebase conflict.
+          git fetch origin main
+          git reset --hard origin/main
+          python tools/enrich_fakemon_metadata.py
           git add DS_CUSTOM_LIBRARY/DS_READY_MASTER
           if git diff --cached --quiet; then exit 0; fi
           git commit -m "Enrich Fakemon names types families and back-sprite links"
-          git pull --rebase origin main
           git push origin main
