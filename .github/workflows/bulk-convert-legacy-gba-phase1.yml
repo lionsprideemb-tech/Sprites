@@ -1,0 +1,244 @@
+name: Bulk Convert Legacy GBA Auto-Approved Recovery
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "DS_CUSTOM_LIBRARY/comparison/legacy_gba_phase1_triage.csv"
+      - "DS_CUSTOM_LIBRARY/packs/Elite_Redux_ER_nextdex/**"
+      - "tools/mercury_bulk_gba_to_ds.py"
+      - ".github/workflows/bulk-convert-legacy-gba-phase1.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  convert-all:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Clone Mercury source repository
+        run: |
+          set -euo pipefail
+          rm -rf /tmp/platinum-modern-ds
+          git clone --depth 1 --branch work/sprites-audit-20260930 \
+            https://github.com/lionsprideemb-tech/platinum-modern-ds.git \
+            /tmp/platinum-modern-ds
+
+      - name: Install Pillow
+        run: pip install pillow
+
+      - name: Assemble every available GBA source for the 871-item Mercury backlog
+        shell: python
+        run: |
+          from pathlib import Path
+          from collections import defaultdict
+          import base64, csv, json, re, shutil
+
+          root=Path(".")
+          triage=Path("DS_CUSTOM_LIBRARY/comparison/legacy_gba_phase1_triage.csv")
+          er=Path("DS_CUSTOM_LIBRARY/packs/Elite_Redux_ER_nextdex")
+          mercury=Path("/tmp/platinum-modern-ds")
+          staged=Path("DS_CUSTOM_LIBRARY/gba-source-stage/Legacy_GBA_Phase1")
+          staged.mkdir(parents=True,exist_ok=True)
+
+          def norm(s):
+              s=s.lower().strip().replace("_","-").replace(" ","-")
+              s=re.sub(r"[^a-z0-9-]+","-",s)
+              return re.sub(r"-+","-",s).strip("-")
+
+          rows=list(csv.DictReader(triage.open()))
+          wanted={r["mercury_key"]:r for r in rows}
+
+          # Index ER-nextdex flat 4-way files.
+          er_index=defaultdict(dict)
+          for p in er.glob("*.png"):
+              stem=p.stem
+              slot="front"
+              base=stem
+              for suf,sl in [
+                  ("_BACK_SHINY","back_shiny"),
+                  ("_SHINY","front_shiny"),
+                  ("_BACK","back"),
+              ]:
+                  if stem.endswith(suf):
+                      base=stem[:-len(suf)]
+                      slot=sl
+                      break
+              er_index[norm(base)][slot]=p
+
+          # Index directly available Mercury source PNGs by nearby folder/stem.
+          mercury_index=defaultdict(list)
+          source_roots=[
+              mercury/"sprite-work"/"authoritative-sources",
+              mercury/"sprite-work"/"raw-batches",
+          ]
+          for base in source_roots:
+              if not base.exists():
+                  continue
+              for p in base.rglob("*.png"):
+                  parts=[norm(x) for x in p.parts]
+                  stem=norm(p.stem)
+                  keys=set([stem])
+                  for part in parts:
+                      if part:
+                          keys.add(part)
+                  for k in keys:
+                      mercury_index[k].append(p)
+
+          # Decode tracked .png.b64 source/reference files to a temporary pool.
+          decoded=Path("/tmp/mercury-gba-decoded")
+          decoded.mkdir(parents=True,exist_ok=True)
+          for p in (mercury/"sprite-work").rglob("*.png.b64"):
+              # Exclude proof/comparison images and native-DS import proof.
+              rel=p.relative_to(mercury).as_posix().lower()
+              if any(x in rel for x in [
+                  "proof-b64","native-ds-imports","nds-conversions",
+                  "gba_vs_ds","preview"
+              ]):
+                  continue
+              try:
+                  data=base64.b64decode(p.read_text(errors="ignore"))
+                  if not data.startswith(b"\x89PNG"):
+                      continue
+                  out=decoded/(re.sub(r"[^A-Za-z0-9_.-]+","_",p.relative_to(mercury).as_posix())[:-4])
+                  out.write_bytes(data)
+                  for k in {norm(p.stem.replace(".png","")), norm(p.parent.name)}:
+                      if k:
+                          mercury_index[k].append(out)
+              except Exception:
+                  pass
+
+          manifest=[]
+          slot_name={
+              "front":"front",
+              "back":"back",
+              "front_shiny":"front-shiny",
+              "back_shiny":"back-shiny",
+          }
+
+          def copy_fourway(key, assets, source):
+              dest=staged/key
+              dest.mkdir(parents=True,exist_ok=True)
+              copied=[]
+              for slot,p in assets.items():
+                  if slot not in slot_name:
+                      continue
+                  out=dest/f"{slot_name[slot]}.png"
+                  shutil.copy2(p,out)
+                  copied.append(slot)
+              return copied
+
+          # We stage a canonical per-key directory first. Later flatten to converter syntax.
+          for key,row in sorted(wanted.items()):
+              assets=er_index.get(key,{})
+              source=""
+              copied=[]
+              if assets:
+                  copied=copy_fourway(key,assets,"ER-nextdex")
+                  source="ER-nextdex"
+
+              # Direct Mercury source fallback if ER has no source.
+              if not copied:
+                  candidates=mercury_index.get(key,[])
+                  if candidates:
+                      dest=staged/key
+                      dest.mkdir(parents=True,exist_ok=True)
+                      # Conservative: keep source files as references; infer front/back only by filename.
+                      for i,p in enumerate(candidates[:20],1):
+                          low=p.stem.lower()
+                          if "back" in low and "shiny" in low: slot="back-shiny"
+                          elif "front" in low and "shiny" in low: slot="front-shiny"
+                          elif "back" in low: slot="back"
+                          elif "front" in low: slot="front"
+                          else: slot=f"reference-{i:02d}"
+                          out=dest/f"{slot}.png"
+                          if not out.exists(): shutil.copy2(p,out)
+                      copied=[p.stem for p in dest.glob("*.png")]
+                      source="Mercury-repo"
+
+              manifest.append({
+                  "mercury_key":key,
+                  "triage_category":row.get("triage_category",""),
+                  "next_action":row.get("next_action",""),
+                  "source":source or "MISSING",
+                  "staged_files":"|".join(sorted(copied)),
+                  "source_found":bool(copied),
+              })
+
+          report=Path("DS_CUSTOM_LIBRARY/cleanup-audit")
+          report.mkdir(parents=True,exist_ok=True)
+          with (report/"legacy_gba_phase1_source_resolution.csv").open("w",newline="") as f:
+              w=csv.DictWriter(f,fieldnames=manifest[0].keys())
+              w.writeheader(); w.writerows(manifest)
+
+          summary={
+              "backlog_total":len(manifest),
+              "source_found":sum(r["source_found"] for r in manifest),
+              "source_missing":sum(not r["source_found"] for r in manifest),
+              "er_nextdex_matches":sum(r["source"]=="ER-nextdex" for r in manifest),
+              "mercury_repo_matches":sum(r["source"]=="Mercury-repo" for r in manifest),
+          }
+          (report/"legacy_gba_phase1_source_resolution_summary.json").write_text(json.dumps(summary,indent=2)+"\n")
+          print(json.dumps(summary,indent=2))
+
+      - name: Flatten complete/partial staged sets for technical converter
+        shell: python
+        run: |
+          from pathlib import Path
+          import shutil, re
+
+          src=Path("DS_CUSTOM_LIBRARY/gba-source-stage/Legacy_GBA_Phase1")
+          flat=Path("/tmp/mercury-gba-flat")
+          shutil.rmtree(flat,ignore_errors=True)
+          flat.mkdir(parents=True)
+
+          for d in sorted(p for p in src.iterdir() if p.is_dir()):
+              key=d.name.upper().replace("-","_")
+              mapping={
+                  "front.png":f"{key}.png",
+                  "back.png":f"{key}_BACK.png",
+                  "front-shiny.png":f"{key}_SHINY.png",
+                  "back-shiny.png":f"{key}_BACK_SHINY.png",
+              }
+              for name,outname in mapping.items():
+                  p=d/name
+                  if p.exists():
+                      shutil.copy2(p,flat/outname)
+
+      - name: Run bulk technical converter on all resolved Mercury GBA sprites
+        run: |
+          rm -rf DS_CUSTOM_LIBRARY/converted/Legacy_GBA_Phase1
+          mkdir -p DS_CUSTOM_LIBRARY/converted/Legacy_GBA_Phase1
+          python tools/mercury_bulk_gba_to_ds.py \
+            --source /tmp/mercury-gba-flat \
+            --output DS_CUSTOM_LIBRARY/converted/Legacy_GBA_Phase1 \
+            --report-dir DS_CUSTOM_LIBRARY/cleanup-audit
+
+          mv DS_CUSTOM_LIBRARY/cleanup-audit/elite_redux_gba_to_ds_design_classification.csv \
+             DS_CUSTOM_LIBRARY/cleanup-audit/legacy_gba_phase1_design_classification.csv
+          mv DS_CUSTOM_LIBRARY/cleanup-audit/elite_redux_gba_to_ds_slot_audit.csv \
+             DS_CUSTOM_LIBRARY/cleanup-audit/legacy_gba_phase1_slot_audit.csv
+          mv DS_CUSTOM_LIBRARY/cleanup-audit/elite_redux_gba_to_ds_summary.json \
+             DS_CUSTOM_LIBRARY/cleanup-audit/legacy_gba_phase1_conversion_summary.json
+
+      - name: Commit legacy GBA Phase 1 staged results
+        run: |
+          git config user.name "Mercury GBA Conversion Bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add DS_CUSTOM_LIBRARY/gba-source-stage/Legacy_GBA_Phase1 \
+                  DS_CUSTOM_LIBRARY/converted/Legacy_GBA_Phase1 \
+                  DS_CUSTOM_LIBRARY/cleanup-audit/legacy_gba_phase1_source_resolution.csv \
+                  DS_CUSTOM_LIBRARY/cleanup-audit/legacy_gba_phase1_source_resolution_summary.json \
+                  DS_CUSTOM_LIBRARY/cleanup-audit/legacy_gba_phase1_design_classification.csv \
+                  DS_CUSTOM_LIBRARY/cleanup-audit/legacy_gba_phase1_slot_audit.csv \
+                  DS_CUSTOM_LIBRARY/cleanup-audit/legacy_gba_phase1_conversion_summary.json
+          if git diff --cached --quiet; then
+            echo "No changes"
+            exit 0
+          fi
+          git commit -m "Recover and convert legacy approved GBA sprites for DS"
+          git push origin main
