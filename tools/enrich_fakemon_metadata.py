@@ -8,6 +8,7 @@ TYPEMAP=MASTER/"mercury_name_type_map.json"
 OUT=MASTER/"fakemon_enriched_metadata.json"
 REPORT=MASTER/"fakemon_enrichment_report.csv"
 EXCLUDED=MASTER/"fakemon_excluded_incomplete.csv"
+EXTERNAL=MASTER/"external_fakemon_metadata.json"
 
 # Local official-name index so recovery does not depend on PokeAPI availability.
 # DrPrettyman is our broad native DS baseline and already contains the official
@@ -182,6 +183,11 @@ type_map={}
 if TYPEMAP.exists():
     try:type_map=json.loads(TYPEMAP.read_text()).get("entries",{})
     except:pass
+
+external_records={}
+if EXTERNAL.exists():
+    try: external_records=json.loads(EXTERNAL.read_text()).get("records",{})
+    except: external_records={}
 
 # Build a source-file index for robust back matching.
 image_ext={".png",".gif",".bmp",".jpg",".jpeg",".webp"}
@@ -520,6 +526,27 @@ for r in rows:
         if not out.get("type2"):out["type2"]=sm.get("type2","")
         if not out.get("family"):out["family"]=sm.get("family","")
         confidence.append("SOURCE_METADATA")
+
+    # External source databases (Pokengine/Mongratis and Elite Redux guide)
+    # recover donor-intended types and evolution relationships that were not
+    # shipped inside the sprite folders.
+    er=external_records.get(src+"|"+key)
+    if er:
+        if not out.get("name"):out["name"]=er.get("name") or ident
+        if not out.get("type1"):out["type1"]=er.get("type1","")
+        if not out.get("type2"):out["type2"]=er.get("type2","")
+        if not out.get("family"):
+            out["family"]=er.get("family","")
+            if not out["family"] and er.get("standalone"):
+                out["family"]="Standalone — "+(er.get("name") or ident)
+        confidence.append("EXTERNAL_SOURCE_METADATA")
+
+    # A PBS-backed species with explicit typing and no incoming/outgoing
+    # evolution edges is a confirmed standalone donor species, not unresolved.
+    if not out.get("family") and sm and sm.get("type1") and key not in parents and key not in children:
+        out["family"]="Standalone — "+(out.get("name") or ident)
+        confidence.append("SOURCE_STANDALONE")
+
     # Numbered source IDs often encode National Dex species.
     dex=numeric_dex(ident)
     if dex:
