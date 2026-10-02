@@ -266,4 +266,4 @@ for r in targets:
         stats["by_source"][src]=stats["by_source"].get(src,0)+1
 
 OUT.write_text(json.dumps({"generated":"2026-10-02","records":out,"stats":stats},indent=2)+"\n",encoding="utf-8")
-print(json.dumps(stats,indent=2))
+# trigger after workflow install\nprint(json.dumps(stats,indent=2))
