@@ -54,7 +54,14 @@ for ws in wb.worksheets:
         except Exception:
             h="";wh=[0,0]
         near=nearest_text(ws,row,col,4)
-        joined=" | ".join(x["value"] for x in near).lower()
+        # Species/name fields may be far left while the embedded sprite is far right.
+        # Include the full anchor row plus one row above/below when matching identities.
+        rowwide=[]
+        for rr in range(max(1,row-1),min(ws.max_row,row+1)+1):
+            for cc in range(1,ws.max_column+1):
+                v=sval(ws.cell(rr,cc).value)
+                if v: rowwide.append({"row":rr,"col":cc,"value":v})
+        joined=" | ".join(x["value"] for x in (near+rowwide)).lower()
         bases=[]
         for base_name in by_base:
             # exact-ish word presence; punctuation-normalized fallback
@@ -77,7 +84,7 @@ for ws in wb.worksheets:
         rec={
             "sheet":ws.title,"image_index":idx,"anchor_row":row,"anchor_col":col,
             "sha256":h,"repo_path":repo_hash.get(h,""),"size":wh,
-            "nearby":near[:50],"base_candidates":bases[:10],"orientation_hint":orientation,
+            "nearby":near[:50],"rowwide":rowwide[:120],"base_candidates":bases[:10],"orientation_hint":orientation,
             "column_context":headers[-6:]
         }
         anchors.append(rec)
