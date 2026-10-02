@@ -1,0 +1,38 @@
+name: Build Final 262 Polished Review
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "tools/build_final_262_polished_review.py"
+      - ".github/workflows/build-final-262-polished-review.yml"
+      - "DS_CUSTOM_LIBRARY/DS_READY_MASTER/final_262_conversion_audit.csv"
+      - "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/**"
+      - "DS_CUSTOM_LIBRARY/packs/Elite_Redux_ER_nextdex/**"
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - run: python -m pip install --quiet pillow
+      - name: Polish candidates, identify pure recolors, build review page
+        run: python tools/build_final_262_polished_review.py
+      - name: Commit polished review assets
+        run: |
+          git config user.name "Mercury Sprite Polish Bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add mercury-final-polished-sprite-approval.html                   DS_CUSTOM_LIBRARY/converted/Final_262_Polished                   DS_CUSTOM_LIBRARY/cleanup-audit/final_262_polish_audit.csv                   DS_CUSTOM_LIBRARY/cleanup-audit/final-262-recolor-audit.json
+          if git diff --cached --quiet; then
+            echo "No changes"
+            exit 0
+          fi
+          git commit -m "Polish final 262 GBA candidates and classify recolors"
+          git pull --rebase --autostash origin main
+          git push origin main
