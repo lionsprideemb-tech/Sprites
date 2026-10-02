@@ -265,7 +265,22 @@ def parse_romhackguide(identity,display_name=""):
 rows=[]
 with REPORT.open(newline="",encoding="utf-8-sig") as f:
     rows=list(csv.DictReader(f))
-targets=[r for r in rows if (r.get("ready_for_approval","").lower()!="true") and (r.get("back_path") or r.get("source")=="Elite_Redux_Bulk")]
+
+prior_records={}
+if OUT.exists():
+    try:
+        prior_records=json.loads(OUT.read_text(encoding="utf-8")).get("records",{})
+    except Exception:
+        prior_records={}
+
+def extkey(r):
+    return str(r.get("source",""))+"|"+norm(r.get("identity",""))
+
+targets=[
+    r for r in rows
+    if ((r.get("ready_for_approval","").lower()!="true") or extkey(r) in prior_records)
+    and (r.get("back_path") or r.get("source")=="Elite_Redux_Bulk")
+]
 by_source={}
 for r in targets:by_source.setdefault(r["source"],[]).append(r)
 
@@ -279,7 +294,19 @@ known_miki=set(miki)
 known_mong=set(mong)
 
 out={}
-stats={"targets":len(targets),"resolved":0,"by_source":{}}
+for k,v in prior_records.items():
+    if not isinstance(v,dict): continue
+    vv=dict(v)
+    if str(vv.get("name","")).strip() in {"","›","»","→"}:
+        ident=vv.get("identity") or k.split("|",1)[-1]
+        clean=ident.replace("-"," ").title()
+        bad=str(vv.get("name","")).strip()
+        vv["name"]=clean
+        fam=str(vv.get("family",""))
+        if bad: fam=fam.replace(bad,clean)
+        vv["family"]=fam
+    out[k]=vv
+stats={"targets":len(targets),"resolved":0,"by_source":{},"prior_records_loaded":len(prior_records)}
 
 festival_sources={
  "Festival_Magiscarf","Festival_PrincessPhoenix","Festival_Scotsman",
@@ -419,6 +446,7 @@ for rec in out.values():
         rec["family"]=" → ".join(labels.get(x,x.replace("-"," ").title()) for x in order)
         rec["standalone"]=False
 
+stats["records_total"]=len(out)
 stats["with_family"]=sum(1 for r in out.values() if r.get("family"))
 stats["standalone"]=sum(1 for r in out.values() if r.get("standalone"))
 OUT.write_text(json.dumps({"generated":"2026-10-02","records":out,"stats":stats},indent=2)+"\\n",encoding="utf-8")
