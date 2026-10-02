@@ -288,6 +288,14 @@ collections={
  "Mikitari":"https://pokengine.org/collections/10o0ctrn/Mikitari",
  "Mongratis":"https://pokengine.org/collections/107s7x9x/Mongratis",
 }
+
+# Some official species already consume several vanilla form IDs. Their donor
+# collection contains only the added custom forms, so sprite suffix 4 is the
+# first collection entry rather than candidates[4].
+CUSTOM_FORM_OFFSETS={
+    "castform":4,   # Sandy / Windy / Foggy
+    "oricorio":4,   # Mikitari-added styles follow the four official styles
+}
 miki=collection_links(collections["Mikitari"])
 mong=collection_links(collections["Mongratis"])
 known_miki=set(miki)
@@ -356,11 +364,13 @@ for r in targets:
         seen=[]
         for u in candidates:
             if u not in seen:seen.append(u)
-        mform=re.match(r"^.+-(\d+)$",norm(ident))
+        mform=re.match(r"^(.+)-(\d+)$",norm(ident))
         if mform and seen:
-            n=int(mform.group(1))
-            if 0 <= n < len(seen):
-                seen=[seen[n]]+[u for i,u in enumerate(seen) if i!=n]
+            base_form=mform.group(1)
+            n=int(mform.group(2))
+            idx=n-CUSTOM_FORM_OFFSETS.get(base_form,0)
+            if 0 <= idx < len(seen):
+                seen=[seen[idx]]+[u for i,u in enumerate(seen) if i!=idx]
         for u in seen[:8]:
             p=parse_pokengine(u,known)
             if p and p.get("type1") and designer_matches(src,r.get("front_path",""),p.get("designer","")):
