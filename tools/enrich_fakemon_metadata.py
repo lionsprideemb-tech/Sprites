@@ -295,7 +295,8 @@ for r in rows:
         fam=custom_family_order(key)
         out["family"]=" → ".join(x.replace("-"," ").title() for x in fam)
         confidence.append("SOURCE_EVOLUTION_GRAPH")
-    # No known family = standalone; explicit is better than blank.
+    # No known family is unresolved, not approval-ready. Do not pretend a
+    # missing relationship means the species is truly standalone.
     if not out.get("family"):
         out["family"]="Standalone / no evolution data found"
         confidence.append("STANDALONE_PROPOSAL")
@@ -324,10 +325,21 @@ for r in rows:
         t2=""
     out["type1"],out["type2"]=t1,t2
 
+    # User-approved manual recovery for the previously opaque 059_1f sprite.
+    if ident=="059-1f":
+        out["name"]="Proposed Mega Hisuian Arcanine"
+        out["type1"],out["type2"]="Fire","Rock"
+        out["family"]="Growlithe → Hisuian Arcanine"
+        confidence.append("USER_APPROVED_IDENTITY_RECOVERY")
+
     out["type1"]=vanilla_type(out.get("type1"))
     out["type2"]=vanilla_type(out.get("type2"))
     out["confidence"]=";".join(confidence)
-    out["ready_for_approval"]=bool(out.get("name") and out.get("type1")!="TBD" and out.get("family") and out.get("back_path"))
+    unresolved_family=(out.get("family")=="Standalone / no evolution data found")
+    out["ready_for_approval"]=bool(
+        out.get("name") and out.get("type1")!="TBD" and out.get("family")
+        and out.get("back_path") and not unresolved_family
+    )
     enriched[ident+"|"+r.get("structural_hash","")]=out
     report.append(out)
 
@@ -345,7 +357,7 @@ with EXCLUDED.open("w",newline="",encoding="utf-8") as f:
         missing=[]
         if not x.get("name"): missing.append("name")
         if not x.get("type1") or x.get("type1")=="TBD": missing.append("type")
-        if not x.get("family"): missing.append("family")
+        if not x.get("family") or x.get("family")=="Standalone / no evolution data found": missing.append("family/relationship")
         if not x.get("back_path"): missing.append("back sprite")
         row={k:x.get(k,"") for k in fields}
         row["missing"]="; ".join(missing)
@@ -359,7 +371,7 @@ summary={
  "standalone_proposals":sum(1 for x in report if x.get("family")=="Standalone / no evolution data found"),
  "source_metadata_records":len(meta),
  "excluded_from_approval":sum(1 for x in report if not x["ready_for_approval"]),
- "approval_policy":"Only fully identified entries with name, type, family placement, front sprite and back sprite are admitted to approval.",
+ "approval_policy":"Only fully identified entries with name, vanilla type, resolved family/standalone identity, front sprite and back sprite are admitted to approval. 'No evolution data found' is unresolved and excluded.",
 }
 (MASTER/"fakemon_enrichment_summary.json").write_text(json.dumps(summary,indent=2)+"\n")
 print(json.dumps(summary,indent=2))
