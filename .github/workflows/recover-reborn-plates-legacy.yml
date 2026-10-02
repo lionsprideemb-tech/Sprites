@@ -29,7 +29,7 @@ jobs:
           unzip -q /tmp/plates.zip -d /tmp/plates
           test -n "$(find /tmp/plates -type d -path '*/Graphics/Battlers' -print -quit)"
 
-      - name: Recover exact 94 approved Reborn Plates source sets
+      - name: Recover exact Reborn Plates source sets plus Eeveelution comparison candidates
         shell: python
         run: |
           from pathlib import Path
@@ -47,7 +47,18 @@ jobs:
 
           manifest=json.loads((repo/"DS_CUSTOM_LIBRARY/DS_READY_MASTER/legacy_gba_auto_yes_recovery_phase1_source_routes.json").read_text())
           targets=[e for e in manifest["entries"] if e.get("source_recovery_route")=="REBORN_PLATES_STAGED_SOURCE"]
-          assert len(targets)==94, len(targets)
+          # The user wants both Eeveelution alternates available side-by-side for the final choice,
+          # including four older Reborn/Plates candidates that were previously rejected before this
+          # clarification pass and therefore were not part of the 94 auto-yes recovery set.
+          extra_eeveelutions=[
+              {"identity":"vaporeon-alternate-form-3","base":"Vaporeon"},
+              {"identity":"jolteon-alternate-form-3","base":"Jolteon"},
+              {"identity":"espeon-alternate-form-3","base":"Espeon"},
+              {"identity":"umbreon-alternate-form-3","base":"Umbreon"},
+          ]
+          existing={e["identity"] for e in targets}
+          targets += [e for e in extra_eeveelutions if e["identity"] not in existing]
+          assert len(targets)==98, len(targets)
 
           names_url="https://raw.githubusercontent.com/PokeAPI/pokeapi/master/data/v2/csv/pokemon_species_names.csv"
           names_csv=Path("/tmp/pokemon_species_names.csv")
