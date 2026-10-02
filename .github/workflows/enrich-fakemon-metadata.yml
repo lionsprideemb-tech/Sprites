@@ -2,13 +2,6 @@ name: Enrich Fakemon Approval Metadata
 
 on:
   workflow_dispatch:
-  push:
-    branches: [main]
-    paths:
-      - 'tools/enrich_fakemon_metadata.py'
-      - 'DS_CUSTOM_LIBRARY/.run-fakemon-enrichment'
-      - 'DS_CUSTOM_LIBRARY/DS_READY_MASTER/ds_ready_front_design_manifest.csv'
-      - 'DS_CUSTOM_LIBRARY/DS_READY_MASTER/external_fakemon_metadata.json'
 
 permissions:
   contents: write
