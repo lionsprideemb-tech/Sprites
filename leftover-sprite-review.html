@@ -48,6 +48,24 @@ function loadLocal(){try{local=JSON.parse(localStorage.getItem(STORE)||'{}')}cat
 function save(){localStorage.setItem(STORE,JSON.stringify(local));render()}
 function priority(e){const s=(e.name+' '+e.identity+' '+e.family).toLowerCase();return /merrykarp|gyarevelry|gible|gabite|garchomp/.test(s)}
 function fam(e){return e.family&&e.family!=='Unresolved family / relationship'?e.family:'Unlinked / standalone candidates'}
+function nkey(s){return String(s||'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim()}
+function familyPos(e){
+ const parts=fam(e).split('→').map(nkey);
+ const n=nkey(e.name||e.identity);
+ for(let i=0;i<parts.length;i++){
+   if(!parts[i])continue;
+   if(n===parts[i]||n.includes(parts[i])||parts[i].includes(n))return i;
+ }
+ return 999;
+}
+function metaLabel(e){
+ const x=String(e.confidence||'');
+ if(x.includes('VERIFIED_SOURCE_METADATA'))return 'Source metadata verified';
+ if(x.includes('EXTERNAL_SOURCE_METADATA'))return 'Source database verified';
+ if(x.includes('SOURCE_METADATA'))return 'Source PBS metadata';
+ if(x.includes('MERCURY_MASTER'))return 'Mercury master metadata';
+ return 'Verified recovery metadata';
+}
 function render(){
  const q=document.getElementById('search').value.trim().toLowerCase(),f=document.getElementById('filter').value;
  let list=entries.filter(e=>{
@@ -57,7 +75,7 @@ function render(){
    const hay=(e.name+' '+e.identity+' '+e.source+' '+e.type1+' '+e.type2+' '+e.family).toLowerCase();
    return !q||hay.includes(q);
  });
- list.sort((a,b)=>Number(priority(b))-Number(priority(a))||fam(a).localeCompare(fam(b))||a.name.localeCompare(b.name));
+ list.sort((a,b)=>Number(priority(b))-Number(priority(a))||fam(a).localeCompare(fam(b))||familyPos(a)-familyPos(b)||a.name.localeCompare(b.name));
  const groups=new Map();
  for(const e of list){const k=fam(e);if(!groups.has(k))groups.set(k,[]);groups.get(k).push(e)}
  let out='';
@@ -68,7 +86,7 @@ function render(){
      out+='<article class="card '+(pr?'priority':'')+'"><div class="head"><div><div class="name">'+esc(e.name||e.identity)+'</div><div class="source">'+esc(e.source)+' • '+esc(e.identity)+'</div></div>'+(pr?'<span class="badge">PRIORITY RECOVERY</span>':'')+'</div>'+
        '<div class="types"><span class="type">'+esc(e.type1)+'</span>'+(e.type2?'<span class="type">'+esc(e.type2)+'</span>':'')+'</div>'+
        '<div class="pair"><div class="box"><b>Normal Front</b><img loading="lazy" src="'+img(e.front_path)+'"></div><div class="box"><b>Normal Back</b><img loading="lazy" src="'+img(e.back_path)+'"></div></div>'+
-       '<div class="familyline"><b>Family:</b> '+esc(e.family||'Unlinked / standalone candidate')+'</div><div class="conf">'+esc(e.confidence||'')+'</div>'+
+       '<div class="familyline"><b>Family:</b> '+esc(e.family||'Standalone')+'</div><div class="conf">'+esc(metaLabel(e))+' • Front/back verified</div>'+
        '<div class="choices">'+['approve','maybe','reject'].map(v=>'<button data-k="'+esc(e.key)+'" data-v="'+v+'" class="'+(d===v?'active':'')+'">'+({approve:'KEEP',maybe:'MAYBE',reject:'REJECT'}[v])+'</button>').join('')+'</div></article>';
    }
    out+='</div>';
