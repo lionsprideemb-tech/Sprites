@@ -271,7 +271,6 @@ function setupProblems(r){
   if(!(p||(t&&t.type1)))probs.push('type');
   if(!(p||familyDisplay(r)))probs.push('family');
   const e=enrichedRecord(r);
-  if(!((e&&e.back_path)||r.back_path))probs.push('back sprite');
   if(isOpaqueIdentity(r.identity)&&!p)probs.push('identity');
   return probs;
 }
@@ -491,6 +490,7 @@ function render(){
             <div class="spritebox"><span class="viewlabel">SHINY FRONT</span><img class="shinyfront" loading="lazy" alt="${pretty(r.identity)} shiny front"><div class="missingview" style="display:none">No shiny front found</div></div>
             <div class="spritebox"><span class="viewlabel">SHINY BACK</span><img class="shinyback" loading="lazy" alt="${pretty(r.identity)} shiny back"><div class="missingview" style="display:none">No shiny back found</div></div>
           </div>
+          ${!((enrichedRecord(r)&&enrichedRecord(r).back_path)||r.back_path)?'<div class="setupnote">Back sprite recovery needed — you can still approve the design.</div>':''}
           ${needsSetup?'<div class="setupnote">Not ready for approval — missing: '+problems.join(', ')+'</div>':''}
           <div class="choices">
             <button class="approve ${d==='approve'?'active':''}">✓ Approve</button>
@@ -602,7 +602,9 @@ document.getElementById('backup').onclick=()=>download('mercury_ds_sprite_approv
     {
       const existing=new Set(rows.map(x=>key(x)));
       for(const [ek,e] of Object.entries(enrichedMap)){
-        if(!e||!e.front_path||!e.back_path)continue;
+        if(!e||!e.front_path)continue;
+        const linkedFamily=FAMILY_FIXES[e.identity] || (e.family && !/^Standalone\b/i.test(e.family) && !/Unresolved family/i.test(e.family));
+        if(!e.back_path && !linkedFamily)continue;
         const parts=ek.split('|'), identity=e.identity||parts[0], structural=parts.slice(1).join('|')||identity;
         const r={
           identity,is_official:'False',source:e.source||'Recovered metadata',
