@@ -47,7 +47,7 @@ def collection_links(base):
         raw=fetch(base+suffix)
         raws.append(raw)
     for raw in raws:
-        for href in re.findall(r"href=['\"](/mons/[^'\"?]+)(?:\\?[^'\"]*)?['\"]",raw):
+        for href in re.findall(r"href=['\"](/mons/[^'\"?]+)(?:\?[^'\"]*)?['\"]",raw):
             parts=href.split("/")
             if len(parts)<4:continue
             mid,slug=parts[2],urllib.parse.unquote(parts[3])
