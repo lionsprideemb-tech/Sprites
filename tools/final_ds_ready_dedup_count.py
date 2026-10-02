@@ -86,6 +86,16 @@ def role(p):
     if "festival-princessphoenix" in parts and p.stem.lower().endswith("s"):
         mate=p.with_name(p.stem[:-1]+p.suffix)
         if mate.exists(): shiny=True
+    # Festival Misc uses several old-school shiny filename conventions:
+    # MawileS/Mawile, KangaSF/KangaF, and 479s_6/479_6 (same for backs).
+    if "festival-misc" in parts:
+        raw=p.stem
+        candidates=[]
+        if re.search(r"(?i)sf$",raw): candidates.append(re.sub(r"(?i)sf$","F",raw))
+        if re.search(r"(?i)sb$",raw): candidates.append(re.sub(r"(?i)sb$","B",raw))
+        if re.search(r"(?i)s(?=_\d+$)",raw): candidates.append(re.sub(r"(?i)s(?=_\d+$)","",raw))
+        if raw.lower().endswith("s"): candidates.append(raw[:-1])
+        if any(p.with_name(x+p.suffix).exists() for x in candidates): shiny=True
     back=("back" in stem or any(
         x in {"back","backs","backsprite","backsprites","back-shiny"}
         or "backsprite" in x or x.endswith("-backs")
