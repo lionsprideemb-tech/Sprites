@@ -19,7 +19,7 @@ main{max-width:1440px;margin:auto;padding:18px}.intro{background:var(--panel);bo
 .approve.active{background:#123d21;border-color:var(--green)}.reject.active{background:#4a1818;border-color:var(--red)}.maybe.active{background:#4a3714;border-color:var(--amber)}
 .badge{display:inline-block;font-size:11px;padding:3px 7px;border-radius:999px;background:#2b3c57;color:#d8e7fa;margin-left:6px}.badge.multi{background:#503d13;color:#ffd978}.badge.unidentified{background:#5a2020;color:#ffd9d6}
 .labels{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}.labelname{font-size:13px;font-weight:700;color:#e8f1ff}.type{display:inline-block;font-size:11px;font-weight:800;padding:4px 8px;border-radius:999px;border:1px solid #4a5f7c;background:#24364f;color:#fff;text-transform:uppercase;letter-spacing:.35px}.type.unknown{opacity:.65}
-.groupTitle{grid-column:1/-1;margin:18px 0 4px;padding:12px 10px;font-size:18px;font-weight:800;border:1px solid var(--line);border-radius:10px;background:#152238}.familyContext{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:7px;margin:-2px 0 6px}.ctx{font-size:12px;padding:5px 8px;border-radius:999px;background:#22334d;border:1px solid #3a4f6d;color:#d9e8fb}.stageLabel{font-size:11px;font-weight:800;color:#9fb0c7;margin-top:5px;text-transform:uppercase;letter-spacing:.4px}.evolves{font-size:12px;color:#c8d8ee;margin-top:5px}
+.groupTitle{grid-column:1/-1;margin:18px 0 4px;padding:12px 10px;font-size:18px;font-weight:800;border:1px solid var(--line);border-radius:10px;background:#152238}.familyContext{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:7px;margin:-2px 0 6px}.ctx{font-size:12px;padding:5px 9px;border-radius:10px;background:#22334d;border:1px solid #3a4f6d;color:#d9e8fb;display:flex;align-items:center;gap:6px}.ctx img{width:42px;height:42px;object-fit:contain;image-rendering:pixelated}.badge.platinum{background:#4b2b72;color:#eadcff;border:1px solid #7952a8}.stageLabel{font-size:11px;font-weight:800;color:#9fb0c7;margin-top:5px;text-transform:uppercase;letter-spacing:.4px}.evolves{font-size:12px;color:#c8d8ee;margin-top:5px}
 .empty{grid-column:1/-1;text-align:center;color:var(--muted);padding:50px}.footerNote{color:var(--muted);font-size:12px;margin-top:18px;text-align:center}.progress{height:7px;background:#24344d;border-radius:999px;overflow:hidden;margin-top:10px}.progress>div{height:100%;background:linear-gradient(90deg,#2f81f7,#3fb950);width:0}
 @media(max-width:720px){.controls{grid-template-columns:1fr 1fr}.controls input{grid-column:1/-1}.spritebox{height:200px}.spritebox img{width:178px;height:178px}.wrap,main{padding-left:10px;padding-right:10px}}
 </style>
@@ -34,7 +34,7 @@ main{max-width:1440px;margin:auto;padding:18px}.intro{background:var(--panel);bo
   <div class="progress"><div id="bar"></div></div>
   <div class="controls">
     <input id="search" placeholder="Search Pokémon/form or source…">
-    <select id="filter"><option value="all">All approval-ready designs</option><option value="unreviewed" selected>Unreviewed / newly recovered</option><option value="approved">Approved</option><option value="rejected">Rejected</option><option value="maybe">Maybe</option><option value="multi">Multiple designs only</option><option value="unidentified">Needs identification</option></select>
+    <select id="filter"><option value="all">All approval-ready designs</option><option value="unreviewed" selected>Unreviewed / newly recovered</option><option value="approved">Approved</option><option value="rejected">Rejected</option><option value="maybe">Maybe</option><option value="multi">Multiple designs only</option><option value="platinum">Platinum Redux only</option><option value="unidentified">Needs identification</option></select>
     <button id="export">Export decisions CSV</button>
     <button id="backup" class="primary">Backup JSON</button>
   </div>
@@ -42,7 +42,7 @@ main{max-width:1440px;margin:auto;padding:18px}.intro{background:var(--panel);bo
 
 <main>
   <div class="intro">
-    This page contains only <b>approval-ready custom designs</b>. Every entry shown has a usable <b>name, type, family placement, front sprite, and back sprite</b>. Incomplete or unresolved Fakemon have been removed from the approval pool. Evolution families stay together and alternate designs remain grouped for comparison.
+    This page contains only <b>approval-ready custom designs</b>. Your completed decisions are preserved, and the default view shows only <b>newly recovered/unreviewed</b> designs. Every entry shown has a usable <b>name, vanilla type, family placement, front sprite, and back sprite</b>. Platinum Redux is included directly from its Forms workbook. Each family header also shows the vanilla DS family sprites for context so custom evolutions are not judged in isolation.
   </div>
   <div class="grid" id="grid"><div class="empty">Loading sprite manifest…</div></div>
   <div class="footerNote">Mercury Redux DS sprite review • Source: DS_READY_MASTER</div>
@@ -56,6 +56,7 @@ const MANIFEST=RAW+'DS_CUSTOM_LIBRARY/DS_READY_MASTER/ds_ready_front_design_mani
 const TYPEMAP=RAW+'DS_CUSTOM_LIBRARY/DS_READY_MASTER/mercury_name_type_map.json';
 const ENRICHED=RAW+'DS_CUSTOM_LIBRARY/DS_READY_MASTER/fakemon_enriched_metadata.json';
 const BASEDECISIONS=RAW+'DS_CUSTOM_LIBRARY/DS_READY_MASTER/user_sprite_decisions_2026-10-01.json';
+const PLATINUM=RAW+'DS_CUSTOM_LIBRARY/DS_READY_MASTER/platinum_redux_review_entries.json';
 const STORAGE='mercury-ds-sprite-approval-v1';
 let rows=[], decisions={}, familyMap={}, familyLabels={}, typeMap={}, enrichedMap={};
 
@@ -194,6 +195,7 @@ const FAMILY_OVERRIDES={
 };
 function baseSpecies(id){
   let x=id.toLowerCase();
+  if(x.startsWith('platinum-redux-'))return x.slice('platinum-redux-'.length);
   if(FAMILY_OVERRIDES[x])return FAMILY_OVERRIDES[x];
   // Handle common custom form naming without collapsing the species itself.
   let prev='';
@@ -285,12 +287,22 @@ function stageText(r,fk){
   if(idx>=members.length)return 'Powered / alternate form';
   return idx===0?'Base stage':('Evolution stage '+idx);
 }
+function contextSlug(name){
+  let s=String(name||'').toLowerCase().replace(/♀/g,'-f').replace(/♂/g,'-m').replace(/[.’']/g,'');
+  s=s.replace(/\([^)]*\)/g,'').replace(/[^a-z0-9]+/g,'-').replace(/-+/g,'-').replace(/^-|-$/g,'');
+  const special={'mr-mime':'mr-mime','mime-jr':'mime-jr','farfetchd':'farfetchd','porygon-z':'porygon-z'};
+  return special[s]||s;
+}
 function familyContextHTML(fk, identities){
   const sample=[...identities.values()].flat()[0];
   const fam=familyDisplay(sample)||familyLabels[fk]||'';
   const members=familyMembersFromLabel(fam);
   if(!members.length)return '';
-  return '<div class="familyContext">'+members.map((m,i)=>'<span class="ctx">'+(i===0?'Base: ':('Stage '+i+': '))+m+'</span>').join('')+'</div>';
+  return '<div class="familyContext">'+members.map((m,i)=>{
+    const slug=contextSlug(m);
+    const src=imgURL('DS_CUSTOM_LIBRARY/packs/DrPrettyman_DS_64x64/sprites-processed/front/'+slug+'.png');
+    return '<span class="ctx"><img src="'+src+'" alt="" onerror="this.style.display=\'none\'"><span>'+(i===0?'Base: ':('Stage '+i+': '))+m+'</span></span>';
+  }).join('')+'</div>';
 }
 function renderStats(){
   const total=rows.length, reviewed=rows.filter(r=>decisions[key(r)]).length;
@@ -308,6 +320,7 @@ function render(){
     if(f==='rejected'&&d!=='reject')return false;
     if(f==='maybe'&&d!=='maybe')return false;
     if(f==='multi'&&r.multi_design_for_approval!=='True')return false;
+    if(f==='platinum'&&!r._platinum)return false;
     if(f==='unidentified'&&!isOpaqueIdentity(r.identity))return false;
     return true;
   });
@@ -339,7 +352,7 @@ function render(){
         const k=key(r), d=decisions[k]||'', multi=r.multi_design_for_approval==='True', unidentified=isOpaqueIdentity(r.identity)&&!proposedIdentity(r), problems=setupProblems(r), needsSetup=problems.length>0;
         const c=document.createElement('article');c.className='card'+(multi?' multi':'')+(unidentified?' unidentified':'')+(needsSetup?' needssetup':'');
         c.innerHTML=`
-          <div class="head"><div class="name">${displayName(r)} ${unidentified?'<span class="badge unidentified">NEEDS ID</span>':(multi?'<span class="badge multi">COMPARE</span>':'<span class="badge">CUSTOM</span>')}</div>
+          <div class="head"><div class="name">${displayName(r)} ${r._platinum?'<span class="badge platinum">PLATINUM REDUX</span>':(unidentified?'<span class="badge unidentified">NEEDS ID</span>':(multi?'<span class="badge multi">COMPARE</span>':'<span class="badge">CUSTOM</span>'))}</div>
           <div class="labels"><span class="labelname">Name: ${unidentified?'Unknown (source ID '+r.identity+')':displayName(r)}</span>${typeHTML(r)}</div>
           <div class="familytag">Family: ${familyDisplay(r)||'TBD'}</div>
           <div class="stageLabel">${stageText(r,fk)}</div>
@@ -387,11 +400,12 @@ document.getElementById('backup').onclick=()=>download('mercury_ds_sprite_approv
 
 (async()=>{
   try{
-    const [manifestRes,typeRes,enrichedRes,baseDecisionRes]=await Promise.all([
+    const [manifestRes,typeRes,enrichedRes,baseDecisionRes,platinumRes]=await Promise.all([
       fetch(MANIFEST,{cache:'no-store'}),
       fetch(TYPEMAP,{cache:'no-store'}),
       fetch(ENRICHED,{cache:'no-store'}),
-      fetch(BASEDECISIONS,{cache:'no-store'})
+      fetch(BASEDECISIONS,{cache:'no-store'}),
+      fetch(PLATINUM,{cache:'no-store'})
     ]);
     let baseDecisions={};
     if(baseDecisionRes.ok){try{baseDecisions=(await baseDecisionRes.json()).decisions||{}}catch{}}
@@ -407,9 +421,30 @@ document.getElementById('backup').onclick=()=>download('mercury_ds_sprite_approv
     rows=all.filter(r=>{
       if(r.is_official!=='False')return false;
       const e=enrichedMap[r.identity+'|'+r.structural_hash];
-      return !!(e&&e.ready_for_approval);
+      if(!e||!e.ready_for_approval)return false;
+      // "No evolution data found" is unresolved, not proof of a standalone species.
+      if(e.family==='Standalone / no evolution data found' && r.identity!=='059-1f')return false;
+      return true;
     });
-    document.getElementById('shown').textContent=rows.length+' custom designs';
+    if(platinumRes.ok){
+      try{
+        const pe=(await platinumRes.json()).entries||[];
+        for(const p of pe){
+          const r={
+            identity:p.identity,is_official:'False',source:p.source,bucket:p.bucket,
+            front_path:p.front_path,back_path:p.back_path,structural_hash:p.structural_hash,
+            exact_hash:p.structural_hash,multi_design_for_approval:'False',_platinum:true
+          };
+          enrichedMap[r.identity+'|'+r.structural_hash]={
+            identity:p.identity,name:p.name,type1:p.type1,type2:p.type2||'',family:p.family||'',
+            source:p.source,front_path:p.front_path,back_path:p.back_path,
+            confidence:'PLATINUM_REDUX_WORKBOOK',ready_for_approval:true
+          };
+          rows.push(r);
+        }
+      }catch{}
+    }
+    document.getElementById('shown').textContent=rows.length+' approval-ready designs';
     render();
     await buildFamilyMap();
     render();
