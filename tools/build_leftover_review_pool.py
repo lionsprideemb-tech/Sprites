@@ -15,7 +15,13 @@ legacy=json.loads(LEGACY.read_text()).get("decisions",[]) if LEGACY.exists() els
 
 def norm(s):
     import re
-    return re.sub(r"-+","-",re.sub(r"[^a-z0-9]+","-",str(s or "").lower().replace("'","").replace("’",""))).strip("-")
+    x=re.sub(r"-+","-",re.sub(r"[^a-z0-9]+","-",str(s or "").lower().replace("'","").replace("’",""))).strip("-")
+    # Historical typo/constant spelling normalization.
+    aliases={
+        "gyarevalry":"gyarevelry",
+        "species-gyarevalry":"species-gyarevelry",
+    }
+    return aliases.get(x,x)
 
 def source_group(s):
     x=norm(s)
