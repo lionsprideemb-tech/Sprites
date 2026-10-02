@@ -1,41 +1,39 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Mercury Recovered GBA Approval</title>
 <style>
-:root{--bg:#f3efe5;--panel:#fffdf8;--line:#d7cebf;--ink:#202733;--muted:#616977}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,Segoe UI,sans-serif}
-.top{position:sticky;top:0;z-index:5;padding:8px 10px;background:#fffdf8f2;border-bottom:1px solid var(--line);backdrop-filter:blur(7px)}
-h1{font-size:17px;margin:0 0 3px}.sub{font-size:11px;color:var(--muted);margin-bottom:6px}.ctrl{display:flex;gap:6px;flex-wrap:wrap}
-input,select,button,textarea{font:inherit}input,select,button{min-height:38px;border:1px solid #bbc1cb;border-radius:9px;background:#fff;padding:7px 9px}
-input{flex:1 1 165px}button.active{font-weight:800;background:#e7eef8}
-#grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:9px;padding:9px}
-.card{background:var(--panel);border:1px solid var(--line);border-radius:13px;overflow:hidden;box-shadow:0 1px 4px #0000000c}
-.head{padding:9px 10px 7px;border-bottom:1px solid #ece5da}.name{font-weight:800;font-size:15px}.id{font-size:10px;color:var(--muted);margin-top:2px}
-.badges{display:flex;gap:5px;flex-wrap:wrap;margin-top:6px}.badge{font-size:9px;font-weight:800;padding:3px 6px;border-radius:999px;background:#edf1f6}.partial{background:#f9eed6;color:#7b5916}
-.sprites{display:grid;grid-template-columns:repeat(2,1fr);gap:6px;padding:8px}.slot{height:142px;border:1px solid #ebe2d4;background:#f7f3eb;border-radius:9px;display:flex;flex-direction:column;align-items:center;justify-content:center;overflow:hidden}
-.slot img{max-width:118px;max-height:116px;image-rendering:pixelated;object-fit:contain}.lab{font-size:9px;color:var(--muted);font-weight:800;text-transform:uppercase;margin-bottom:3px}.miss{font-size:11px;color:#914039;padding:12px;text-align:center}
-.actions{display:flex;gap:5px;padding:0 8px 8px}.actions button{flex:1}.approve.active{background:#e6f5ea;border-color:#83b998;color:#2d7045}.maybe.active{background:#faf0d8;border-color:#d1b778;color:#82611d}.reject.active{background:#f8e8e6;border-color:#d39c96;color:#9b433d}
-.notes{padding:0 8px 8px}textarea{width:100%;min-height:54px;border:1px solid #d4cbbb;border-radius:9px;padding:7px;background:#fff;resize:vertical}.count{font-size:11px;color:var(--muted);margin-left:auto;align-self:center}
-@media(max-width:620px){#grid{grid-template-columns:1fr;padding:7px}.top{padding:7px 8px}.slot{height:136px}}
+*{box-sizing:border-box}body{margin:0;background:#f3efe5;color:#202733;font-family:system-ui,-apple-system,Segoe UI,sans-serif}
+.top{position:sticky;top:0;z-index:5;padding:7px 9px;background:#fffdf8f2;border-bottom:1px solid #d7cebf;backdrop-filter:blur(6px)}
+h1{font-size:16px;margin:0 0 2px}.sub{font-size:10px;color:#616977;margin-bottom:5px}
+.ctrl{display:flex;gap:5px;flex-wrap:wrap}input,button,textarea{font:inherit}input,button{min-height:35px;border:1px solid #bbc1cb;border-radius:9px;background:#fff;padding:6px 8px}input{flex:1 1 150px}button.active{font-weight:800;background:#e7eef8}
+#grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:8px;padding:8px}
+.card{background:#fffdf8;border:1px solid #d7cebf;border-radius:12px;overflow:hidden}.head{padding:8px 9px 5px;border-bottom:1px solid #ece5da}
+.name{font-weight:800;font-size:14px}.id{font-size:9px;color:#616977;margin-top:2px}.badge{display:inline-block;font-size:9px;font-weight:800;padding:2px 6px;border-radius:999px;background:#edf1f6;margin:4px 4px 0 0}.partial{background:#f9eed6;color:#7b5916}
+.spriteWrap{padding:8px;display:flex;justify-content:center}.sprite{width:176px;height:88px;background-image:url('reborn-front-back-atlas.png');background-repeat:no-repeat;background-size:2112px 704px;image-rendering:pixelated;border:1px solid #ebe2d4;border-radius:8px;background-color:#f7f3eb}
+.labels{display:flex;justify-content:center;gap:46px;font-size:9px;color:#616977;font-weight:800;text-transform:uppercase;margin-top:-5px;margin-bottom:7px}
+.actions{display:flex;gap:4px;padding:0 7px 7px}.actions button{flex:1}.approve.active{background:#e6f5ea;border-color:#83b998;color:#2d7045}.maybe.active{background:#faf0d8;border-color:#d1b778;color:#82611d}.reject.active{background:#f8e8e6;border-color:#d39c96;color:#9b433d}
+.notes{padding:0 7px 7px}textarea{width:100%;min-height:42px;border:1px solid #d4cbbb;border-radius:8px;padding:6px;background:#fff;resize:vertical}.count{font-size:10px;color:#616977;margin-left:auto;align-self:center}
+@media(max-width:620px){#grid{grid-template-columns:1fr;padding:6px}.top{padding:6px 7px}}
 </style></head><body>
 <div class="top"><h1>Mercury — Recovered GBA Sprite Approval</h1>
-<div class="sub">94 old Reborn/Plates GBA approvals recovered from their exact source and added back to the legacy conversion pool.</div>
-<div class="ctrl"><input id="q" placeholder="Search Pokémon / form">
-<select id="complete"><option value="all">All source sets</option><option value="full">4-view complete</option><option value="partial">Missing shiny pair</option></select>
-<button class="f active" data-f="unreviewed">Unreviewed</button><button class="f" data-f="all">All</button><button class="f" data-f="approve">Approved</button><button class="f" data-f="maybe">Maybe</button><button class="f" data-f="reject">Rejected</button><button id="export">Export CSV</button><span class="count" id="count"></span></div></div>
+<div class="sub">94 legacy-approved Reborn/Plates designs recovered from the original source. Front + back are shown together; the badge tells you whether the shiny pair was also recovered.</div>
+<div class="ctrl"><input id="q" placeholder="Search Pokémon / form"><button class="f active" data-f="unreviewed">Unreviewed</button><button class="f" data-f="all">All</button><button class="f" data-f="approve">Approved</button><button class="f" data-f="maybe">Maybe</button><button class="f" data-f="reject">Rejected</button><button id="export">Export CSV</button><span id="count" class="count"></span></div></div>
 <div id="grid"></div>
 <script>
-const STORE="mercury-recovered-gba-approval-v3";let E=[],D=JSON.parse(localStorage.getItem(STORE)||"{}"),F="unreviewed";
-const $=s=>document.querySelector(s),G=$("#grid");
-function st(id){return D[id]||{status:"",note:""}} function save(){localStorage.setItem(STORE,JSON.stringify(D))}
-function esc(s){return String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]))}
-function pretty(s){return s.split("-").map(x=>x==="mega"?"Mega":x==="bt"?"BT":x==="bluetowel"?"BlueTowel":x.charAt(0).toUpperCase()+x.slice(1)).join(" ")}
-function slot(src,l){return src?'<div class="slot"><div class="lab">'+l+'</div><img loading="lazy" src="'+src+'"></div>':'<div class="slot"><div class="lab">'+l+'</div><div class="miss">Not present in recovered source</div></div>'}
-function pass(e){const s=st(e.identity).status,q=$("#q").value.toLowerCase(),c=$("#complete").value;if(F==="unreviewed"&&s)return false;if(!["all","unreviewed"].includes(F)&&s!==F)return false;if(q&&!e.identity.includes(q)&&!pretty(e.identity).toLowerCase().includes(q))return false;if(c==="full"&&e.views<4)return false;if(c==="partial"&&e.views===4)return false;return true}
-function card(e){const d=st(e.identity);return '<div class="card"><div class="head"><div class="name">'+esc(pretty(e.identity))+'</div><div class="id">'+esc(e.identity)+' • Dex #'+e.dex+' • Form '+e.form+'</div><div class="badges"><span class="badge '+(e.views<4?'partial':'')+'">'+e.views+'/4 source views</span><span class="badge">Legacy GBA approval</span></div></div><div class="sprites">'+slot(e.front,"Front")+slot(e.back,"Back")+slot(e.shiny_front,"Shiny Front")+slot(e.shiny_back,"Shiny Back")+'</div><div class="actions"><button class="approve '+(d.status==="approve"?"active":"")+'" data-id="'+e.identity+'" data-s="approve">Approve</button><button class="maybe '+(d.status==="maybe"?"active":"")+'" data-id="'+e.identity+'" data-s="maybe">Maybe</button><button class="reject '+(d.status==="reject"?"active":"")+'" data-id="'+e.identity+'" data-s="reject">Reject</button></div><div class="notes"><textarea data-note="'+e.identity+'" placeholder="Optional note / type / family idea">'+esc(d.note)+'</textarea></div></div>'}
-function render(){const rows=E.filter(pass),reviewed=E.filter(e=>st(e.identity).status).length;$("#count").textContent=rows.length+" shown • "+reviewed+"/94 reviewed";G.innerHTML=rows.map(card).join("");G.querySelectorAll("button[data-s]").forEach(b=>b.onclick=()=>{const d=st(b.dataset.id),s=b.dataset.s;D[b.dataset.id]={...d,status:d.status===s?"":s};save();render()});G.querySelectorAll("textarea").forEach(t=>t.onchange=()=>{D[t.dataset.note]={...st(t.dataset.note),note:t.value};save()})}
-function parseCSV(t){const lines=t.trim().split(/\r?\n/),h=lines.shift().split(",");return lines.map(line=>{const a=line.split(","),o={};h.forEach((k,i)=>o[k]=a[i]);return o})}
-fetch("DS_CUSTOM_LIBRARY/DS_READY_MASTER/reborn_plates_legacy_exact_map.csv?v=2").then(r=>r.text()).then(t=>{E=parseCSV(t).map(r=>{const b="DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/"+r.identity+"/",v=Number(r.source_views);return{identity:r.identity,dex:Number(r.dex),form:Number(r.form),views:v,front:b+"front.png",back:b+"back.png",shiny_front:v===4?b+"shiny_front.png":"",shiny_back:v===4?b+"shiny_back.png":""}});render()});
-document.querySelectorAll(".f").forEach(b=>b.onclick=()=>{document.querySelectorAll(".f").forEach(x=>x.classList.remove("active"));b.classList.add("active");F=b.dataset.f;render()});$("#q").oninput=render;$("#complete").onchange=render;
-$("#export").onclick=()=>{const C=["identity","dex","form","source_views","decision","note"],O=[C.join(",")];for(const e of E){const d=st(e.identity),r={identity:e.identity,dex:e.dex,form:e.form,source_views:e.views,decision:d.status,note:d.note};O.push(C.map(k=>'"'+String(r[k]??"").replaceAll('"','""')+'"').join(","))}const a=document.createElement("a");a.href=URL.createObjectURL(new Blob([O.join("\n")],{type:"text/csv"}));a.download="mercury_recovered_gba_sprite_decisions.csv";a.click()};
+const STORE='mercury-recovered-gba-approval-github-v1',COLS=12,CELLW=88,CELLH=44,SCALE=2;
+let E=[],D=JSON.parse(localStorage.getItem(STORE)||'{}'),F='unreviewed';
+const $=q=>document.querySelector(q),G=$('#grid');
+function csv(t){let R=[],r=[],f='',q=false;for(let i=0;i<t.length;i++){let c=t[i],n=t[i+1];if(q){if(c=='"'&&n=='"'){f+='"';i++}else if(c=='"')q=false;else f+=c}else{if(c=='"')q=true;else if(c==','){r.push(f);f=''}else if(c=='\n'){r.push(f.replace(/\r$/,''));R.push(r);r=[];f=''}else f+=c}}if(f||r.length){r.push(f);R.push(r)}let h=R.shift();return R.filter(x=>x.length>1).map(x=>Object.fromEntries(h.map((k,i)=>[k,x[i]||''])))}
+function nice(s){return s.replaceAll('-',' ').replace(/\b\w/g,m=>m.toUpperCase()).replace('Bluetowel','BlueTowel').replace('Bt ','BT ')}
+function S(id){return D[id]||{status:'',note:''}}function save(){localStorage.setItem(STORE,JSON.stringify(D))}
+function esc(s){return String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]))}
+function pass(e){let s=S(e.identity).status,q=$('#q').value.toLowerCase().trim();if(F==='unreviewed'&&s)return false;if(!['all','unreviewed'].includes(F)&&s!==F)return false;if(q&&!e.identity.toLowerCase().includes(q)&&!nice(e.identity).toLowerCase().includes(q))return false;return true}
+function card(e){let d=S(e.identity),i=e.index,x=(i%COLS)*CELLW*SCALE,y=Math.floor(i/COLS)*CELLH*SCALE,full=Number(e.source_views)===4;
+return '<div class="card"><div class="head"><div class="name">'+esc(nice(e.identity))+'</div><div class="id">'+esc(e.identity)+' • Dex #'+e.dex+' • Form '+e.form+'</div><span class="badge '+(full?'':'partial')+'">'+(full?'4/4 incl. shiny':'2/4 normal only')+'</span></div><div class="spriteWrap"><div class="sprite" style="background-position:-'+x+'px -'+y+'px"></div></div><div class="labels"><span>Front</span><span>Back</span></div><div class="actions"><button class="approve '+(d.status==='approve'?'active':'')+'" data-id="'+e.identity+'" data-s="approve">Approve</button><button class="maybe '+(d.status==='maybe'?'active':'')+'" data-id="'+e.identity+'" data-s="maybe">Maybe</button><button class="reject '+(d.status==='reject'?'active':'')+'" data-id="'+e.identity+'" data-s="reject">Reject</button></div><div class="notes"><textarea data-note="'+e.identity+'" placeholder="Optional note / type / family idea">'+esc(d.note)+'</textarea></div></div>'}
+function render(){let r=E.filter(pass),rev=E.filter(e=>S(e.identity).status).length;$('#count').textContent=r.length+' shown • '+rev+'/94 reviewed';G.innerHTML=r.map(card).join('');G.querySelectorAll('button[data-s]').forEach(b=>b.onclick=()=>{let d=S(b.dataset.id),s=b.dataset.s;D[b.dataset.id]={...d,status:d.status===s?'':s};save();render()});G.querySelectorAll('textarea[data-note]').forEach(t=>t.onchange=()=>{D[t.dataset.note]={...S(t.dataset.note),note:t.value};save()})}
+document.querySelectorAll('.f').forEach(b=>b.onclick=()=>{document.querySelectorAll('.f').forEach(x=>x.classList.remove('active'));b.classList.add('active');F=b.dataset.f;render()});$('#q').oninput=render;
+$('#export').onclick=()=>{let c=['identity','dex','form','source_views','decision','note'],o=[c.join(',')];for(let e of E){let d=S(e.identity),r={identity:e.identity,dex:e.dex,form:e.form,source_views:e.source_views,decision:d.status,note:d.note};o.push(c.map(k=>'"'+String(r[k]??'').replaceAll('"','""')+'"').join(','))}let a=document.createElement('a');a.href=URL.createObjectURL(new Blob([o.join('\n')],{type:'text/csv'}));a.download='mercury_recovered_gba_sprite_decisions.csv';a.click()};
+fetch('DS_CUSTOM_LIBRARY/DS_READY_MASTER/reborn_plates_legacy_exact_map.csv?v=1').then(r=>r.text()).then(t=>{E=csv(t).map((r,i)=>({...r,index:i}));render()});
 </script></body></html>
