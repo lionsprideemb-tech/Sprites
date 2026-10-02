@@ -54,7 +54,33 @@ for k in dups:problems.append({"key":k,"problem":"duplicate_key"})
 
 source_counts=collections.Counter(r.get("source","") for r in rows)
 family_unresolved=sum(1 for r in rows if not r.get("family") or "Unresolved family" in r.get("family",""))
+provisional_types=sum(1 for r in rows if "MERCURY_PROVISIONAL_CANON_TYPE" in str(r.get("confidence","")))
 legacy_collisions=sum(1 for r in rows if r.get("_legacy_name_collision"))
+
+# A single back sprite must never be silently reused for different Pokémon.
+back_owners=collections.defaultdict(set)
+for r in rows:
+    if r.get("back_path"):
+        back_owners[r["back_path"]].add(norm(r.get("identity","")))
+shared_back_collisions={p:sorted(v) for p,v in back_owners.items() if len(v)>1}
+for p,v in shared_back_collisions.items():
+    problems.append({"key":p,"problem":"back_sprite_shared_across_identities","value":";".join(v)})
+
+# Corrected review requires same-source front/back pairing.
+cross_source_pairs=[]
+def source_from_path(p):
+    parts=Path(str(p)).parts
+    for a in ("packs","hack-packs","converted"):
+        if a in parts:
+            i=parts.index(a)
+            return parts[i+1] if i+1<len(parts) else ""
+    return ""
+for r in rows:
+    fs,bs=source_from_path(r.get("front_path","")),source_from_path(r.get("back_path",""))
+    if fs and bs and fs!=bs:
+        cross_source_pairs.append(r.get("key",""))
+        problems.append({"key":r.get("key",""),"problem":"cross_source_front_back","value":fs+" != "+bs})
+
 summary={
  "pool_entries":len(rows),
  "all_front_back_complete":all(r.get("front_path") and r.get("back_path") for r in rows),
@@ -62,6 +88,9 @@ summary={
  "recent_settled_decisions_leaked":sum(1 for p in problems if p["problem"]=="recent_settled_decision_leaked"),
  "duplicate_keys":len(dups),
  "unresolved_family_entries":family_unresolved,
+ "provisional_type_entries":provisional_types,
+ "shared_back_sprite_collisions":len(shared_back_collisions),
+ "cross_source_front_back_pairs":len(cross_source_pairs),
  "legacy_semantic_name_collisions_remaining":legacy_collisions,
  "source_counts":dict(source_counts.most_common()),
  "hard_failures":problems,
