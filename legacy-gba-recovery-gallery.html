@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mercury Legacy GBA Recovery Gallery</title>
+<style>
+:root{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#18212f;background:#f4f1e8}
+*{box-sizing:border-box}body{margin:0}.top{position:sticky;top:0;z-index:5;background:#fffdf8;border-bottom:1px solid #d8d3c7;padding:10px 12px}
+h1{font-size:18px;margin:0 0 6px}.meta{font-size:12px;color:#5b6470}.controls{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}
+button,input{font:inherit;border:1px solid #b9b4a9;background:#fff;border-radius:8px;padding:7px 9px}button.active{font-weight:700;background:#e8eef7}
+#grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:10px;padding:10px}
+.card{background:#fffdf8;border:1px solid #d8d3c7;border-radius:12px;padding:10px;box-shadow:0 1px 3px #0000000d}.missing{opacity:.78}
+.name{font-weight:800;font-size:15px;overflow-wrap:anywhere}.status{font-size:11px;margin:3px 0 8px;color:#5b6470}
+.sprites{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}.slot{background:#f1eee7;border-radius:8px;padding:4px;text-align:center;min-height:92px}
+.slot img{width:64px;height:64px;object-fit:contain;image-rendering:pixelated}.slot small{display:block;font-size:9px;color:#666}
+.note{font-size:11px;line-height:1.35;margin-top:8px;color:#4c5561}.badge{display:inline-block;padding:2px 6px;border-radius:999px;font-size:10px;font-weight:700;background:#e7f3e8;color:#275b32}.badge.no{background:#f5e7e3;color:#7b352d}
+@media(max-width:600px){#grid{grid-template-columns:1fr}.top{padding:8px 10px}.sprites{gap:4px}.slot{min-height:84px}}
+</style>
+</head>
+<body>
+<div class="top">
+<h1>Mercury — Legacy GBA Auto-Yes Recovery</h1>
+<div class="meta" id="summary">Loading…</div>
+<div class="controls">
+<button data-filter="all" class="active">All 259</button>
+<button data-filter="recovered">Recovered</button>
+<button data-filter="missing">Still missing</button>
+<input id="search" placeholder="Search Pokémon / form">
+</div>
+</div>
+<div id="grid"></div>
+<script>
+function parseCSV(text){
+ const rows=[];let row=[],field='',q=false;
+ for(let i=0;i<text.length;i++){const c=text[i],n=text[i+1];
+  if(q){if(c=='"'&&n=='"'){field+='"';i++;}else if(c=='"')q=false;else field+=c}
+  else{if(c=='"')q=true;else if(c==','){row.push(field);field=''}else if(c=='\n'){row.push(field.replace(/\r$/,''));rows.push(row);row=[];field=''}else field+=c}
+ }
+ if(field||row.length){row.push(field);rows.push(row)}
+ const h=rows.shift();return rows.filter(r=>r.length>1).map(r=>Object.fromEntries(h.map((k,i)=>[k,r[i]||''])))
+}
+const base='DS_CUSTOM_LIBRARY/converted/Legacy_GBA_Phase1/';
+const source='DS_CUSTOM_LIBRARY/cleanup-audit/legacy_gba_phase1_source_resolution.csv';
+let data=[],filter='all';
+function img(path,label){return '<div class="slot"><img loading="lazy" src="'+path+'" onerror="this.style.visibility=\'hidden\'"><small>'+label+'</small></div>'}
+function card(r){
+ const found=r.source_found==='True'; const key=r.mercury_key; const dir=base+key.replaceAll('-','_')+'/';
+ return '<div class="card '+(found?'':'missing')+'"><div class="name">'+key.replaceAll('-',' ')+'</div>'+
+ '<div class="status"><span class="badge '+(found?'':'no')+'">'+(found?'RECOVERED + DS READY':'SOURCE STILL MISSING')+'</span> · '+(r.triage_category||'')+'</div>'+
+ (found?'<div class="sprites">'+img(dir+'front.png','front')+img(dir+'back.png','back')+img(dir+'front-shiny.png','shiny front')+img(dir+'back-shiny.png','shiny back')+'</div>':'<div class="note">This was approved in the original GBA review, but its source art was not recovered by the bulk pass yet. It remains approved and stays in the recovery queue.</div>')+
+ '<div class="note">'+(r.next_action||'')+'</div></div>'
+}
+function render(){
+ const q=document.querySelector('#search').value.toLowerCase();
+ const rows=data.filter(r=>(filter==='all'||(filter==='recovered'&&r.source_found==='True')||(filter==='missing'&&r.source_found!=='True'))&&r.mercury_key.toLowerCase().includes(q));
+ document.querySelector('#grid').innerHTML=rows.map(card).join('');
+}
+fetch(source+'?v=1729435d').then(r=>r.text()).then(t=>{
+ data=parseCSV(t); const n=data.filter(x=>x.source_found==='True').length;
+ document.querySelector('#summary').textContent=n+' recovered and visible now · '+(data.length-n)+' still source-blocked · approvals preserved';
+ render();
+});
+document.querySelectorAll('button[data-filter]').forEach(b=>b.onclick=()=>{document.querySelectorAll('button[data-filter]').forEach(x=>x.classList.remove('active'));b.classList.add('active');filter=b.dataset.filter;render()});
+document.querySelector('#search').oninput=render;
+</script>
+</body></html>
