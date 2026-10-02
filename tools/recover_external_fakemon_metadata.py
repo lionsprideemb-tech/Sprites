@@ -324,6 +324,10 @@ festival_sources={
 
 for r in targets:
     src=r["source"];ident=r["identity"];name=r.get("name","")
+    # Revalidate every targeted record from scratch. If a stricter matcher can
+    # no longer reproduce an older external match, drop that stale record
+    # rather than silently carrying bad metadata forward.
+    out.pop(extkey(r),None)
     rec=None
     aliases=target_aliases(ident,name,src)
     linkmap=None;known=None
