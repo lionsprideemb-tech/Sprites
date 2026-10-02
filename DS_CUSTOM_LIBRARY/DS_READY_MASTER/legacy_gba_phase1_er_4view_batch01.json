@@ -1,0 +1,134 @@
+{
+  "generated": "2026-10-02",
+  "phase": "GBA auto-yes recovery phase 1 — ER 4-view verification batch 1",
+  "source_repository": "ForwardFeed/ER-nextdex",
+  "counts": {
+    "targets": 4,
+    "complete_4view_sets": 4,
+    "incomplete_sets": 0,
+    "missing_views": 0
+  },
+  "entries": [
+    {
+      "identity": "rattata-redux",
+      "species_constant": "SPECIES_RATTATA_REDUX",
+      "donor_id": "2270.0",
+      "current_front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/rattata_redux/front.png",
+      "source_repository": "ForwardFeed/ER-nextdex",
+      "source_assets_complete": true,
+      "source_asset_checks": {
+        "front": {
+          "found": true,
+          "path": "static/sprites/RATTATA_REDUX.png",
+          "sha": "32cdc49f81c506d4f48bf893ced80e16db2163b5"
+        },
+        "back": {
+          "found": true,
+          "path": "static/sprites/RATTATA_REDUX_BACK.png",
+          "sha": "77cf39089ff9e76892544cacaa42555472c76e91"
+        },
+        "shiny_front": {
+          "found": true,
+          "path": "static/sprites/RATTATA_REDUX_SHINY.png",
+          "sha": "230538d044b6a8155fc172f97e604a203b9d7fcf"
+        },
+        "shiny_back": {
+          "found": true,
+          "path": "static/sprites/RATTATA_REDUX_BACK_SHINY.png",
+          "sha": "2ed3301e2329f869c9dc957b26d0ea4eeeaba31f"
+        }
+      }
+    },
+    {
+      "identity": "spearow-redux",
+      "species_constant": "SPECIES_SPEAROW_REDUX",
+      "donor_id": "2679.0",
+      "current_front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/spearow_redux/front.png",
+      "source_repository": "ForwardFeed/ER-nextdex",
+      "source_assets_complete": true,
+      "source_asset_checks": {
+        "front": {
+          "found": true,
+          "path": "static/sprites/SPEAROW_REDUX.png",
+          "sha": "22f6177af66228db55982914985fbab7e39b6d38"
+        },
+        "back": {
+          "found": true,
+          "path": "static/sprites/SPEAROW_REDUX_BACK.png",
+          "sha": "df4784ae3b1d6ed12e450dc8528c443c64e727c9"
+        },
+        "shiny_front": {
+          "found": true,
+          "path": "static/sprites/SPEAROW_REDUX_SHINY.png",
+          "sha": "f1e0b6ec6223753a55b68743ffd3e5c83e147d26"
+        },
+        "shiny_back": {
+          "found": true,
+          "path": "static/sprites/SPEAROW_REDUX_BACK_SHINY.png",
+          "sha": "82959137c0eba66424c54ff7bd4bde41117e8024"
+        }
+      }
+    },
+    {
+      "identity": "fearow-redux",
+      "species_constant": "SPECIES_FEAROW_REDUX",
+      "donor_id": "2680.0",
+      "current_front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/fearow_redux/front.png",
+      "source_repository": "ForwardFeed/ER-nextdex",
+      "source_assets_complete": true,
+      "source_asset_checks": {
+        "front": {
+          "found": true,
+          "path": "static/sprites/FEAROW_REDUX.png",
+          "sha": "3c826776af4df9b185903f9db4cb51d12618f239"
+        },
+        "back": {
+          "found": true,
+          "path": "static/sprites/FEAROW_REDUX_BACK.png",
+          "sha": "6f7c524b0dd5a623383649aec0c5a17d8910e0d7"
+        },
+        "shiny_front": {
+          "found": true,
+          "path": "static/sprites/FEAROW_REDUX_SHINY.png",
+          "sha": "0a2ecb165e4ddc4d44a56fb002e71b7d36fdcf80"
+        },
+        "shiny_back": {
+          "found": true,
+          "path": "static/sprites/FEAROW_REDUX_BACK_SHINY.png",
+          "sha": "776069d5fc4c3f8bf9c357b9743b97c7b8149f8b"
+        }
+      }
+    },
+    {
+      "identity": "sandslash-alolan-mega",
+      "species_constant": "SPECIES_SANDSLASH_ALOLAN_MEGA",
+      "donor_id": "2264.0",
+      "current_front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/sandslash_alolan_mega/front.png",
+      "source_repository": "ForwardFeed/ER-nextdex",
+      "source_assets_complete": true,
+      "source_asset_checks": {
+        "front": {
+          "found": true,
+          "path": "static/sprites/SANDSLASH_ALOLAN_MEGA.png",
+          "sha": "80c058e0a3b282b9ddba2124ee2f95c6ae930af9"
+        },
+        "back": {
+          "found": true,
+          "path": "static/sprites/SANDSLASH_ALOLAN_MEGA_BACK.png",
+          "sha": "ae87622dbdb047c392996fffbaf4712cd913b131"
+        },
+        "shiny_front": {
+          "found": true,
+          "path": "static/sprites/SANDSLASH_ALOLAN_MEGA_SHINY.png",
+          "sha": "fa7b40f5bcde95ccecd4195cc2fd9c1bf0027c5c"
+        },
+        "shiny_back": {
+          "found": true,
+          "path": "static/sprites/SANDSLASH_ALOLAN_MEGA_BACK_SHINY.png",
+          "sha": "451deca3e4543848991c787278486cfdfa9bbc33"
+        }
+      }
+    }
+  ],
+  "missing_views": []
+}
