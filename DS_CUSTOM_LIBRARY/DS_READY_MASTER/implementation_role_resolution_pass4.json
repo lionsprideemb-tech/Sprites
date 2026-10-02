@@ -1,0 +1,62 @@
+{
+  "generated": "2026-10-02",
+  "purpose": "Fourth-pass implementation routing and family attachment prep. Suggestions only; no species IDs or user approval decisions changed.",
+  "resolved_base_replacements": [
+    [
+      "Medicham",
+      "Complete approved Platinum Redux front/back pair; no competing Mega is recorded in the role manifest."
+    ],
+    [
+      "Banette",
+      "Complete approved Platinum Redux front/back pair; route as base art unless a dedicated Mega asset is later recovered."
+    ],
+    [
+      "Absol",
+      "Complete approved Platinum Redux pair; keep the separately approved custom Mega Absol Z distinct."
+    ],
+    [
+      "Staraptor",
+      "Complete approved Platinum Redux pair; safe existing-species art replacement."
+    ],
+    [
+      "Bronzong",
+      "Complete approved Platinum Redux pair; keep the separately approved Mega Bronzong distinct."
+    ],
+    [
+      "Porygon-Z",
+      "Complete approved Platinum Redux pair; safe existing-slot replacement."
+    ],
+    [
+      "Palkia",
+      "Complete approved Platinum Redux pair; safe existing-slot replacement rather than a new form."
+    ]
+  ],
+  "held_for_asset_verification": [
+    [
+      "Lapras",
+      "Role manifest references Mega X and Mega Y but repository code search did not locate corroborating source metadata."
+    ],
+    [
+      "Manectric",
+      "Role manifest references a Mega Alternate Form 3 but repository code search did not locate corroborating source metadata."
+    ],
+    [
+      "Rampardos",
+      "Role manifest references Mega Rampardos but repository code search did not locate corroborating source metadata."
+    ],
+    [
+      "Bastiodon",
+      "Role manifest references Mega Bastiodon but repository code search did not locate corroborating source metadata."
+    ],
+    [
+      "Meganium",
+      "Competing entry points back to Platinum Redux Meganium itself; treat as metadata ambiguity rather than evidence of a second design."
+    ]
+  ],
+  "implementation_notes": [
+    "Base replacements reuse existing species slots; Redux typing is design evidence and does not automatically overwrite Mercury typing.",
+    "Separate Elite Redux Delta/Redux identities must not be collapsed into Platinum Redux base replacements.",
+    "Missing or unverified Mega assets block Mega routing but do not reverse sprite approval.",
+    "No rejected sprite was promoted by this pass."
+  ]
+}
