@@ -58,7 +58,10 @@ excluded_approved=excluded_rejected=excluded_incomplete=0
 for key,e in data.items():
     prior=old.get(key,"")
     inherited=legacy_decision(e)
-    effective_prior=prior or inherited
+    # Explicit user-approved recovery annotations are already settled even if
+    # they predate the exported 372-key decision file.
+    manual_approved="USER_APPROVED" in str(e.get("confidence",""))
+    effective_prior=prior or inherited or ("approve" if manual_approved else "")
     if effective_prior=="approve":
         excluded_approved+=1; continue
     if effective_prior=="reject":
