@@ -28,7 +28,7 @@
     "keep_entries_total": 79,
     "reject_entries_with_image_match": 1,
     "unmapped_images": 854,
-    "platinum_review_entries": 0
+    "platinum_review_entries": 142
   },
   "matches_by_review_id": {
     "R0634": [
@@ -2887,8 +2887,8 @@
       ],
       "base_candidates": [
         "butterfree",
-        "charizard",
         "blastoise",
+        "charizard",
         "fearow",
         "arbok"
       ],
@@ -3269,8 +3269,8 @@
       ],
       "base_candidates": [
         "butterfree",
-        "charizard",
         "blastoise",
+        "charizard",
         "fearow",
         "arbok"
       ],
@@ -3611,8 +3611,8 @@
       ],
       "base_candidates": [
         "butterfree",
-        "charizard",
         "blastoise",
+        "charizard",
         "fearow",
         "arbok"
       ],
@@ -4058,8 +4058,8 @@
       ],
       "base_candidates": [
         "butterfree",
-        "charizard",
         "blastoise",
+        "charizard",
         "raticate",
         "raichu",
         "fearow",
@@ -4462,8 +4462,8 @@
       ],
       "base_candidates": [
         "butterfree",
-        "charizard",
         "blastoise",
+        "charizard",
         "raticate",
         "raichu",
         "fearow",
@@ -4821,8 +4821,8 @@
       ],
       "base_candidates": [
         "butterfree",
-        "charizard",
         "blastoise",
+        "charizard",
         "raticate",
         "raichu",
         "fearow",
@@ -5255,8 +5255,8 @@
       ],
       "base_candidates": [
         "butterfree",
-        "charizard",
         "blastoise",
+        "charizard",
         "raticate",
         "raichu",
         "fearow",
@@ -5644,8 +5644,8 @@
       ],
       "base_candidates": [
         "butterfree",
-        "charizard",
         "blastoise",
+        "charizard",
         "raticate",
         "raichu",
         "fearow",
@@ -5988,8 +5988,8 @@
       ],
       "base_candidates": [
         "butterfree",
-        "charizard",
         "blastoise",
+        "charizard",
         "raticate",
         "raichu",
         "fearow",
@@ -6421,8 +6421,8 @@
         }
       ],
       "base_candidates": [
-        "charizard",
         "blastoise",
+        "charizard",
         "raticate",
         "raichu",
         "fearow",
@@ -6809,8 +6809,8 @@
         }
       ],
       "base_candidates": [
-        "charizard",
         "blastoise",
+        "charizard",
         "raticate",
         "raichu",
         "fearow",
@@ -7152,8 +7152,8 @@
         }
       ],
       "base_candidates": [
-        "charizard",
         "blastoise",
+        "charizard",
         "raticate",
         "raichu",
         "fearow",
@@ -7586,8 +7586,8 @@
       ],
       "base_candidates": [
         "blastoise",
-        "fearow",
         "raichu",
+        "fearow",
         "arbok"
       ],
       "orientation_hint": "front",
@@ -7972,8 +7972,8 @@
       ],
       "base_candidates": [
         "blastoise",
-        "fearow",
         "raichu",
+        "fearow",
         "arbok"
       ],
       "orientation_hint": "back",
@@ -8313,8 +8313,8 @@
       ],
       "base_candidates": [
         "blastoise",
-        "fearow",
         "raichu",
+        "fearow",
         "arbok"
       ],
       "orientation_hint": "",
@@ -8744,8 +8744,8 @@
       ],
       "base_candidates": [
         "sandslash",
-        "fearow",
         "raichu",
+        "fearow",
         "arbok"
       ],
       "orientation_hint": "front",
@@ -9130,8 +9130,8 @@
       ],
       "base_candidates": [
         "sandslash",
-        "fearow",
         "raichu",
+        "fearow",
         "arbok"
       ],
       "orientation_hint": "back",
@@ -9471,8 +9471,8 @@
       ],
       "base_candidates": [
         "sandslash",
-        "fearow",
         "raichu",
+        "fearow",
         "arbok"
       ],
       "orientation_hint": "",
@@ -16838,9 +16838,9 @@
       ],
       "base_candidates": [
         "venomoth",
-        "dugtrio",
+        "persian",
         "golduck",
-        "persian"
+        "dugtrio"
       ],
       "orientation_hint": "",
       "column_context": []
@@ -17222,9 +17222,9 @@
       ],
       "base_candidates": [
         "venomoth",
-        "dugtrio",
+        "persian",
         "golduck",
-        "persian"
+        "dugtrio"
       ],
       "orientation_hint": "",
       "column_context": []
@@ -17561,9 +17561,9 @@
       ],
       "base_candidates": [
         "venomoth",
-        "dugtrio",
+        "persian",
         "golduck",
-        "persian"
+        "dugtrio"
       ],
       "orientation_hint": "",
       "column_context": []
@@ -17989,9 +17989,9 @@
         }
       ],
       "base_candidates": [
+        "persian",
         "dugtrio",
-        "golduck",
-        "persian"
+        "golduck"
       ],
       "orientation_hint": "",
       "column_context": []
@@ -18372,9 +18372,9 @@
         }
       ],
       "base_candidates": [
+        "persian",
         "dugtrio",
-        "golduck",
-        "persian"
+        "golduck"
       ],
       "orientation_hint": "",
       "column_context": []
@@ -18710,9 +18710,9 @@
         }
       ],
       "base_candidates": [
+        "persian",
         "dugtrio",
-        "golduck",
-        "persian"
+        "golduck"
       ],
       "orientation_hint": "",
       "column_context": []
@@ -19140,8 +19140,8 @@
       "base_candidates": [
         "victreebel",
         "arcanine",
-        "golduck",
-        "persian"
+        "persian",
+        "golduck"
       ],
       "orientation_hint": "",
       "column_context": []
@@ -19524,8 +19524,8 @@
       "base_candidates": [
         "victreebel",
         "arcanine",
-        "golduck",
-        "persian"
+        "persian",
+        "golduck"
       ],
       "orientation_hint": "",
       "column_context": []
@@ -19863,8 +19863,8 @@
       "base_candidates": [
         "victreebel",
         "arcanine",
-        "golduck",
-        "persian"
+        "persian",
+        "golduck"
       ],
       "orientation_hint": "",
       "column_context": []
@@ -20291,8 +20291,8 @@
       ],
       "base_candidates": [
         "victreebel",
-        "alakazam",
         "arcanine",
+        "alakazam",
         "golduck"
       ],
       "orientation_hint": "",
@@ -20675,8 +20675,8 @@
       ],
       "base_candidates": [
         "victreebel",
-        "alakazam",
         "arcanine",
+        "alakazam",
         "golduck"
       ],
       "orientation_hint": "",
@@ -21014,8 +21014,8 @@
       ],
       "base_candidates": [
         "victreebel",
-        "alakazam",
         "arcanine",
+        "alakazam",
         "golduck"
       ],
       "orientation_hint": "",
@@ -21443,8 +21443,8 @@
       ],
       "base_candidates": [
         "victreebel",
-        "alakazam",
         "arcanine",
+        "alakazam",
         "golduck",
         "machamp"
       ],
@@ -21828,8 +21828,8 @@
       ],
       "base_candidates": [
         "victreebel",
-        "alakazam",
         "arcanine",
+        "alakazam",
         "golduck",
         "machamp"
       ],
@@ -22168,8 +22168,8 @@
       ],
       "base_candidates": [
         "victreebel",
-        "alakazam",
         "arcanine",
+        "alakazam",
         "golduck",
         "machamp"
       ],
@@ -29497,8 +29497,8 @@
         }
       ],
       "base_candidates": [
-        "dewgong",
         "marowak",
+        "dewgong",
         "hypno",
         "muk"
       ],
@@ -29881,8 +29881,8 @@
         }
       ],
       "base_candidates": [
-        "dewgong",
         "marowak",
+        "dewgong",
         "hypno",
         "muk"
       ],
@@ -30220,8 +30220,8 @@
         }
       ],
       "base_candidates": [
-        "dewgong",
         "marowak",
+        "dewgong",
         "hypno",
         "muk"
       ],
@@ -36406,11 +36406,11 @@
         }
       ],
       "base_candidates": [
-        "hitmonchan",
         "kangaskhan",
+        "hitmonchan",
         "hitmonlee",
-        "marowak",
-        "weezing"
+        "weezing",
+        "marowak"
       ],
       "orientation_hint": "",
       "column_context": []
@@ -36791,11 +36791,11 @@
         }
       ],
       "base_candidates": [
-        "hitmonchan",
         "kangaskhan",
+        "hitmonchan",
         "hitmonlee",
-        "marowak",
-        "weezing"
+        "weezing",
+        "marowak"
       ],
       "orientation_hint": "",
       "column_context": []
@@ -37131,11 +37131,11 @@
         }
       ],
       "base_candidates": [
-        "hitmonchan",
         "kangaskhan",
+        "hitmonchan",
         "hitmonlee",
-        "marowak",
-        "weezing"
+        "weezing",
+        "marowak"
       ],
       "orientation_hint": "",
       "column_context": []
@@ -37561,10 +37561,10 @@
         }
       ],
       "base_candidates": [
-        "hitmonchan",
         "kangaskhan",
-        "marowak",
+        "hitmonchan",
         "weezing",
+        "marowak",
         "tauros"
       ],
       "orientation_hint": "",
@@ -37946,10 +37946,10 @@
         }
       ],
       "base_candidates": [
-        "hitmonchan",
         "kangaskhan",
-        "marowak",
+        "hitmonchan",
         "weezing",
+        "marowak",
         "tauros"
       ],
       "orientation_hint": "",
@@ -38286,10 +38286,10 @@
         }
       ],
       "base_candidates": [
-        "hitmonchan",
         "kangaskhan",
-        "marowak",
+        "hitmonchan",
         "weezing",
+        "marowak",
         "tauros"
       ],
       "orientation_hint": "",
@@ -38718,8 +38718,8 @@
       "base_candidates": [
         "kangaskhan",
         "mr. mime",
-        "marowak",
         "weezing",
+        "marowak",
         "tauros"
       ],
       "orientation_hint": "",
@@ -39103,8 +39103,8 @@
       "base_candidates": [
         "kangaskhan",
         "mr. mime",
-        "marowak",
         "weezing",
+        "marowak",
         "tauros"
       ],
       "orientation_hint": "",
@@ -39443,8 +39443,8 @@
       "base_candidates": [
         "kangaskhan",
         "mr. mime",
-        "marowak",
         "weezing",
+        "marowak",
         "tauros"
       ],
       "orientation_hint": "",
@@ -39873,8 +39873,8 @@
       "base_candidates": [
         "kangaskhan",
         "mr. mime",
-        "pinsir",
-        "tauros"
+        "tauros",
+        "pinsir"
       ],
       "orientation_hint": "",
       "column_context": []
@@ -40257,8 +40257,8 @@
       "base_candidates": [
         "kangaskhan",
         "mr. mime",
-        "pinsir",
-        "tauros"
+        "tauros",
+        "pinsir"
       ],
       "orientation_hint": "",
       "column_context": []
@@ -40596,8 +40596,8 @@
       "base_candidates": [
         "kangaskhan",
         "mr. mime",
-        "pinsir",
-        "tauros"
+        "tauros",
+        "pinsir"
       ],
       "orientation_hint": "",
       "column_context": []
@@ -41025,8 +41025,8 @@
       "base_candidates": [
         "kangaskhan",
         "mr. mime",
-        "pinsir",
-        "tauros"
+        "tauros",
+        "pinsir"
       ],
       "orientation_hint": "",
       "column_context": []
@@ -41409,8 +41409,8 @@
       "base_candidates": [
         "kangaskhan",
         "mr. mime",
-        "pinsir",
-        "tauros"
+        "tauros",
+        "pinsir"
       ],
       "orientation_hint": "",
       "column_context": []
@@ -41748,8 +41748,8 @@
       "base_candidates": [
         "kangaskhan",
         "mr. mime",
-        "pinsir",
-        "tauros"
+        "tauros",
+        "pinsir"
       ],
       "orientation_hint": "",
       "column_context": []
@@ -42177,8 +42177,8 @@
       "base_candidates": [
         "kangaskhan",
         "gyarados",
-        "pinsir",
-        "tauros"
+        "tauros",
+        "pinsir"
       ],
       "orientation_hint": "",
       "column_context": []
@@ -42561,8 +42561,8 @@
       "base_candidates": [
         "kangaskhan",
         "gyarados",
-        "pinsir",
-        "tauros"
+        "tauros",
+        "pinsir"
       ],
       "orientation_hint": "",
       "column_context": []
@@ -42900,8 +42900,8 @@
       "base_candidates": [
         "kangaskhan",
         "gyarados",
-        "pinsir",
-        "tauros"
+        "tauros",
+        "pinsir"
       ],
       "orientation_hint": "",
       "column_context": []
@@ -43329,8 +43329,8 @@
       "base_candidates": [
         "kangaskhan",
         "gyarados",
-        "lapras",
-        "tauros"
+        "tauros",
+        "lapras"
       ],
       "orientation_hint": "",
       "column_context": []
@@ -43713,8 +43713,8 @@
       "base_candidates": [
         "kangaskhan",
         "gyarados",
-        "lapras",
-        "tauros"
+        "tauros",
+        "lapras"
       ],
       "orientation_hint": "",
       "column_context": []
@@ -44052,8 +44052,8 @@
       "base_candidates": [
         "kangaskhan",
         "gyarados",
-        "lapras",
-        "tauros"
+        "tauros",
+        "lapras"
       ],
       "orientation_hint": "",
       "column_context": []
@@ -44481,8 +44481,8 @@
       "base_candidates": [
         "vaporeon",
         "gyarados",
-        "lapras",
-        "tauros"
+        "tauros",
+        "lapras"
       ],
       "orientation_hint": "",
       "column_context": []
@@ -44865,8 +44865,8 @@
       "base_candidates": [
         "vaporeon",
         "gyarados",
-        "lapras",
-        "tauros"
+        "tauros",
+        "lapras"
       ],
       "orientation_hint": "",
       "column_context": []
@@ -45204,8 +45204,8 @@
       "base_candidates": [
         "vaporeon",
         "gyarados",
-        "lapras",
-        "tauros"
+        "tauros",
+        "lapras"
       ],
       "orientation_hint": "",
       "column_context": []
@@ -45633,8 +45633,8 @@
       "base_candidates": [
         "vaporeon",
         "jolteon",
-        "lapras",
-        "tauros"
+        "tauros",
+        "lapras"
       ],
       "orientation_hint": "",
       "column_context": []
@@ -46017,8 +46017,8 @@
       "base_candidates": [
         "vaporeon",
         "jolteon",
-        "lapras",
-        "tauros"
+        "tauros",
+        "lapras"
       ],
       "orientation_hint": "",
       "column_context": []
@@ -46356,8 +46356,8 @@
       "base_candidates": [
         "vaporeon",
         "jolteon",
-        "lapras",
-        "tauros"
+        "tauros",
+        "lapras"
       ],
       "orientation_hint": "",
       "column_context": []
@@ -47936,9 +47936,9 @@
       ],
       "base_candidates": [
         "dragonite",
-        "flareon",
+        "jolteon",
         "omastar",
-        "jolteon"
+        "flareon"
       ],
       "orientation_hint": "",
       "column_context": []
@@ -48320,9 +48320,9 @@
       ],
       "base_candidates": [
         "dragonite",
-        "flareon",
+        "jolteon",
         "omastar",
-        "jolteon"
+        "flareon"
       ],
       "orientation_hint": "",
       "column_context": []
@@ -48659,9 +48659,9 @@
       ],
       "base_candidates": [
         "dragonite",
-        "flareon",
+        "jolteon",
         "omastar",
-        "jolteon"
+        "flareon"
       ],
       "orientation_hint": "",
       "column_context": []
@@ -50247,8 +50247,8 @@
       "base_candidates": [
         "dragonite",
         "kabutops",
-        "snorlax",
         "omastar",
+        "snorlax",
         "mewtwo",
         "mew"
       ],
@@ -50633,8 +50633,8 @@
       "base_candidates": [
         "dragonite",
         "kabutops",
-        "snorlax",
         "omastar",
+        "snorlax",
         "mewtwo",
         "mew"
       ],
@@ -50974,8 +50974,8 @@
       "base_candidates": [
         "dragonite",
         "kabutops",
-        "snorlax",
         "omastar",
+        "snorlax",
         "mewtwo",
         "mew"
       ],
@@ -64103,8 +64103,8 @@
       ],
       "base_candidates": [
         "bellossom",
-        "politoed",
         "ampharos",
+        "politoed",
         "ariados"
       ],
       "orientation_hint": "",
@@ -64487,8 +64487,8 @@
       ],
       "base_candidates": [
         "bellossom",
-        "politoed",
         "ampharos",
+        "politoed",
         "ariados"
       ],
       "orientation_hint": "",
@@ -64826,8 +64826,8 @@
       ],
       "base_candidates": [
         "bellossom",
-        "politoed",
         "ampharos",
+        "politoed",
         "ariados"
       ],
       "orientation_hint": "",
@@ -65256,8 +65256,8 @@
       "base_candidates": [
         "azumarill",
         "bellossom",
-        "politoed",
-        "ampharos"
+        "ampharos",
+        "politoed"
       ],
       "orientation_hint": "",
       "column_context": []
@@ -65640,8 +65640,8 @@
       "base_candidates": [
         "azumarill",
         "bellossom",
-        "politoed",
-        "ampharos"
+        "ampharos",
+        "politoed"
       ],
       "orientation_hint": "",
       "column_context": []
@@ -65979,8 +65979,8 @@
       "base_candidates": [
         "azumarill",
         "bellossom",
-        "politoed",
-        "ampharos"
+        "ampharos",
+        "politoed"
       ],
       "orientation_hint": "",
       "column_context": []
@@ -66406,9 +66406,9 @@
         }
       ],
       "base_candidates": [
-        "sudowoodo",
         "azumarill",
         "bellossom",
+        "sudowoodo",
         "politoed"
       ],
       "orientation_hint": "",
@@ -66790,9 +66790,9 @@
         }
       ],
       "base_candidates": [
-        "sudowoodo",
         "azumarill",
         "bellossom",
+        "sudowoodo",
         "politoed"
       ],
       "orientation_hint": "",
@@ -67129,9 +67129,9 @@
         }
       ],
       "base_candidates": [
-        "sudowoodo",
         "azumarill",
         "bellossom",
+        "sudowoodo",
         "politoed"
       ],
       "orientation_hint": "",
@@ -67558,9 +67558,9 @@
         }
       ],
       "base_candidates": [
-        "sudowoodo",
         "azumarill",
         "bellossom",
+        "sudowoodo",
         "politoed"
       ],
       "orientation_hint": "",
@@ -67942,9 +67942,9 @@
         }
       ],
       "base_candidates": [
-        "sudowoodo",
         "azumarill",
         "bellossom",
+        "sudowoodo",
         "politoed"
       ],
       "orientation_hint": "",
@@ -68281,9 +68281,9 @@
         }
       ],
       "base_candidates": [
-        "sudowoodo",
         "azumarill",
         "bellossom",
+        "sudowoodo",
         "politoed"
       ],
       "orientation_hint": "",
@@ -68712,8 +68712,8 @@
       "base_candidates": [
         "sudowoodo",
         "bellossom",
-        "politoed",
-        "sunflora"
+        "sunflora",
+        "politoed"
       ],
       "orientation_hint": "",
       "column_context": []
@@ -69096,8 +69096,8 @@
       "base_candidates": [
         "sudowoodo",
         "bellossom",
-        "politoed",
-        "sunflora"
+        "sunflora",
+        "politoed"
       ],
       "orientation_hint": "",
       "column_context": []
@@ -69435,8 +69435,8 @@
       "base_candidates": [
         "sudowoodo",
         "bellossom",
-        "politoed",
-        "sunflora"
+        "sunflora",
+        "politoed"
       ],
       "orientation_hint": "",
       "column_context": []
@@ -69863,8 +69863,8 @@
       ],
       "base_candidates": [
         "bellossom",
-        "politoed",
         "sunflora",
+        "politoed",
         "espeon"
       ],
       "orientation_hint": "",
@@ -70247,8 +70247,8 @@
       ],
       "base_candidates": [
         "bellossom",
-        "politoed",
         "sunflora",
+        "politoed",
         "espeon"
       ],
       "orientation_hint": "",
@@ -70586,8 +70586,8 @@
       ],
       "base_candidates": [
         "bellossom",
-        "politoed",
         "sunflora",
+        "politoed",
         "espeon"
       ],
       "orientation_hint": "",
@@ -71014,8 +71014,8 @@
         }
       ],
       "base_candidates": [
-        "politoed",
         "ursaring",
+        "politoed",
         "sunflora",
         "umbreon",
         "espeon"
@@ -71399,8 +71399,8 @@
         }
       ],
       "base_candidates": [
-        "politoed",
         "ursaring",
+        "politoed",
         "sunflora",
         "umbreon",
         "espeon"
@@ -71739,8 +71739,8 @@
         }
       ],
       "base_candidates": [
-        "politoed",
         "ursaring",
+        "politoed",
         "sunflora",
         "umbreon",
         "espeon"
@@ -72170,9 +72170,9 @@
       ],
       "base_candidates": [
         "octillery",
-        "politoed",
-        "ursaring",
         "slowking",
+        "ursaring",
+        "politoed",
         "umbreon",
         "espeon"
       ],
@@ -72556,9 +72556,9 @@
       ],
       "base_candidates": [
         "octillery",
-        "politoed",
-        "ursaring",
         "slowking",
+        "ursaring",
+        "politoed",
         "umbreon",
         "espeon"
       ],
@@ -72897,9 +72897,9 @@
       ],
       "base_candidates": [
         "octillery",
-        "politoed",
-        "ursaring",
         "slowking",
+        "ursaring",
+        "politoed",
         "umbreon",
         "espeon"
       ],
@@ -73328,9 +73328,9 @@
       ],
       "base_candidates": [
         "octillery",
-        "politoed",
-        "ursaring",
         "slowking",
+        "ursaring",
+        "politoed",
         "donphan",
         "shuckle",
         "umbreon"
@@ -73715,9 +73715,9 @@
       ],
       "base_candidates": [
         "octillery",
-        "politoed",
-        "ursaring",
         "slowking",
+        "ursaring",
+        "politoed",
         "donphan",
         "shuckle",
         "umbreon"
@@ -74057,9 +74057,9 @@
       ],
       "base_candidates": [
         "octillery",
-        "politoed",
-        "ursaring",
         "slowking",
+        "ursaring",
+        "politoed",
         "donphan",
         "shuckle",
         "umbreon"
@@ -74489,8 +74489,8 @@
       ],
       "base_candidates": [
         "octillery",
-        "ursaring",
         "slowking",
+        "ursaring",
         "stantler",
         "donphan",
         "shuckle"
@@ -74875,8 +74875,8 @@
       ],
       "base_candidates": [
         "octillery",
-        "ursaring",
         "slowking",
+        "ursaring",
         "stantler",
         "donphan",
         "shuckle"
@@ -75216,8 +75216,8 @@
       ],
       "base_candidates": [
         "octillery",
-        "ursaring",
         "slowking",
+        "ursaring",
         "stantler",
         "donphan",
         "shuckle"
@@ -76802,8 +76802,8 @@
       ],
       "base_candidates": [
         "octillery",
-        "ursaring",
         "stantler",
+        "ursaring",
         "donphan"
       ],
       "orientation_hint": "back",
@@ -77186,8 +77186,8 @@
       ],
       "base_candidates": [
         "octillery",
-        "ursaring",
         "stantler",
+        "ursaring",
         "donphan"
       ],
       "orientation_hint": "back",
@@ -77525,8 +77525,8 @@
       ],
       "base_candidates": [
         "octillery",
-        "ursaring",
         "stantler",
+        "ursaring",
         "donphan"
       ],
       "orientation_hint": "back",
@@ -80272,10 +80272,10 @@
         "octillery",
         "ursaring",
         "stantler",
-        "miltank",
         "blissey",
-        "donphan",
+        "miltank",
         "suicune",
+        "donphan",
         "raikou",
         "mew"
       ],
@@ -80661,10 +80661,10 @@
         "octillery",
         "ursaring",
         "stantler",
-        "miltank",
         "blissey",
-        "donphan",
+        "miltank",
         "suicune",
+        "donphan",
         "raikou",
         "mew"
       ],
@@ -81005,10 +81005,10 @@
         "octillery",
         "ursaring",
         "stantler",
-        "miltank",
         "blissey",
-        "donphan",
+        "miltank",
         "suicune",
+        "donphan",
         "raikou",
         "mew"
       ],
@@ -81438,10 +81438,10 @@
       "base_candidates": [
         "octillery",
         "stantler",
-        "miltank",
         "blissey",
-        "donphan",
+        "miltank",
         "suicune",
+        "donphan",
         "raikou",
         "mew"
       ],
@@ -81826,10 +81826,10 @@
       "base_candidates": [
         "octillery",
         "stantler",
-        "miltank",
         "blissey",
-        "donphan",
+        "miltank",
         "suicune",
+        "donphan",
         "raikou",
         "mew"
       ],
@@ -82169,10 +82169,10 @@
       "base_candidates": [
         "octillery",
         "stantler",
-        "miltank",
         "blissey",
-        "donphan",
+        "miltank",
         "suicune",
+        "donphan",
         "raikou",
         "mew"
       ],
@@ -82602,10 +82602,10 @@
       "base_candidates": [
         "stantler",
         "blissey",
-        "donphan",
         "suicune",
-        "raikou",
+        "donphan",
         "celebi",
+        "raikou",
         "entei",
         "mew"
       ],
@@ -82990,10 +82990,10 @@
       "base_candidates": [
         "stantler",
         "blissey",
-        "donphan",
         "suicune",
-        "raikou",
+        "donphan",
         "celebi",
+        "raikou",
         "entei",
         "mew"
       ],
@@ -83333,10 +83333,10 @@
       "base_candidates": [
         "stantler",
         "blissey",
-        "donphan",
         "suicune",
-        "raikou",
+        "donphan",
         "celebi",
+        "raikou",
         "entei",
         "mew"
       ],
@@ -83766,8 +83766,8 @@
       "base_candidates": [
         "stantler",
         "suicune",
-        "raikou",
         "celebi",
+        "raikou",
         "entei",
         "mew"
       ],
@@ -84152,8 +84152,8 @@
       "base_candidates": [
         "stantler",
         "suicune",
-        "raikou",
         "celebi",
+        "raikou",
         "entei",
         "mew"
       ],
@@ -84493,8 +84493,8 @@
       "base_candidates": [
         "stantler",
         "suicune",
-        "raikou",
         "celebi",
+        "raikou",
         "entei",
         "mew"
       ],
@@ -84923,10 +84923,10 @@
       ],
       "base_candidates": [
         "suicune",
-        "raikou",
         "celebi",
-        "lugia",
+        "raikou",
         "entei",
+        "lugia",
         "mew"
       ],
       "orientation_hint": "back",
@@ -85309,10 +85309,10 @@
       ],
       "base_candidates": [
         "suicune",
-        "raikou",
         "celebi",
-        "lugia",
+        "raikou",
         "entei",
+        "lugia",
         "mew"
       ],
       "orientation_hint": "back",
@@ -85650,10 +85650,10 @@
       ],
       "base_candidates": [
         "suicune",
-        "raikou",
         "celebi",
-        "lugia",
+        "raikou",
         "entei",
+        "lugia",
         "mew"
       ],
       "orientation_hint": "back",
@@ -86082,8 +86082,8 @@
       "base_candidates": [
         "mightyena",
         "suicune",
-        "raikou",
         "celebi",
+        "raikou",
         "lugia",
         "mew"
       ],
@@ -86468,8 +86468,8 @@
       "base_candidates": [
         "mightyena",
         "suicune",
-        "raikou",
         "celebi",
+        "raikou",
         "lugia",
         "mew"
       ],
@@ -86809,8 +86809,8 @@
       "base_candidates": [
         "mightyena",
         "suicune",
-        "raikou",
         "celebi",
+        "raikou",
         "lugia",
         "mew"
       ],
@@ -87240,10 +87240,10 @@
       "base_candidates": [
         "mightyena",
         "sceptile",
-        "suicune",
         "linoone",
-        "raikou",
+        "suicune",
         "celebi",
+        "raikou",
         "lugia",
         "mew"
       ],
@@ -87628,10 +87628,10 @@
       "base_candidates": [
         "mightyena",
         "sceptile",
-        "suicune",
         "linoone",
-        "raikou",
+        "suicune",
         "celebi",
+        "raikou",
         "lugia",
         "mew"
       ],
@@ -87971,10 +87971,10 @@
       "base_candidates": [
         "mightyena",
         "sceptile",
-        "suicune",
         "linoone",
-        "raikou",
+        "suicune",
         "celebi",
+        "raikou",
         "lugia",
         "mew"
       ],
@@ -88405,8 +88405,8 @@
         "beautifly",
         "mightyena",
         "sceptile",
-        "suicune",
         "linoone",
+        "suicune",
         "celebi",
         "mew"
       ],
@@ -88792,8 +88792,8 @@
         "beautifly",
         "mightyena",
         "sceptile",
-        "suicune",
         "linoone",
+        "suicune",
         "celebi",
         "mew"
       ],
@@ -89134,8 +89134,8 @@
         "beautifly",
         "mightyena",
         "sceptile",
-        "suicune",
         "linoone",
+        "suicune",
         "celebi",
         "mew"
       ],
@@ -89566,8 +89566,8 @@
         "beautifly",
         "mightyena",
         "sceptile",
-        "suicune",
         "linoone",
+        "suicune",
         "celebi"
       ],
       "orientation_hint": "",
@@ -89952,8 +89952,8 @@
         "beautifly",
         "mightyena",
         "sceptile",
-        "suicune",
         "linoone",
+        "suicune",
         "celebi"
       ],
       "orientation_hint": "",
@@ -90293,8 +90293,8 @@
         "beautifly",
         "mightyena",
         "sceptile",
-        "suicune",
         "linoone",
+        "suicune",
         "celebi"
       ],
       "orientation_hint": "",
@@ -90723,8 +90723,8 @@
       "base_candidates": [
         "beautifly",
         "mightyena",
-        "slaking",
         "linoone",
+        "slaking",
         "celebi"
       ],
       "orientation_hint": "",
@@ -91108,8 +91108,8 @@
       "base_candidates": [
         "beautifly",
         "mightyena",
-        "slaking",
         "linoone",
+        "slaking",
         "celebi"
       ],
       "orientation_hint": "",
@@ -91448,8 +91448,8 @@
       "base_candidates": [
         "beautifly",
         "mightyena",
-        "slaking",
         "linoone",
+        "slaking",
         "celebi"
       ],
       "orientation_hint": "",
@@ -91878,8 +91878,8 @@
       "base_candidates": [
         "beautifly",
         "mightyena",
-        "slaking",
         "linoone",
+        "slaking",
         "celebi"
       ],
       "orientation_hint": "",
@@ -92263,8 +92263,8 @@
       "base_candidates": [
         "beautifly",
         "mightyena",
-        "slaking",
         "linoone",
+        "slaking",
         "celebi"
       ],
       "orientation_hint": "",
@@ -92603,8 +92603,8 @@
       "base_candidates": [
         "beautifly",
         "mightyena",
-        "slaking",
         "linoone",
+        "slaking",
         "celebi"
       ],
       "orientation_hint": "",
@@ -93031,12 +93031,12 @@
         }
       ],
       "base_candidates": [
-        "gardevoir",
         "beautifly",
+        "gardevoir",
         "mightyena",
-        "slaking",
+        "linoone",
         "exploud",
-        "linoone"
+        "slaking"
       ],
       "orientation_hint": "",
       "column_context": []
@@ -93417,12 +93417,12 @@
         }
       ],
       "base_candidates": [
-        "gardevoir",
         "beautifly",
+        "gardevoir",
         "mightyena",
-        "slaking",
+        "linoone",
         "exploud",
-        "linoone"
+        "slaking"
       ],
       "orientation_hint": "",
       "column_context": []
@@ -93758,12 +93758,12 @@
         }
       ],
       "base_candidates": [
-        "gardevoir",
         "beautifly",
+        "gardevoir",
         "mightyena",
-        "slaking",
+        "linoone",
         "exploud",
-        "linoone"
+        "slaking"
       ],
       "orientation_hint": "",
       "column_context": []
@@ -94189,12 +94189,12 @@
         }
       ],
       "base_candidates": [
-        "gardevoir",
         "beautifly",
+        "gardevoir",
         "mightyena",
-        "slaking",
+        "linoone",
         "exploud",
-        "linoone"
+        "slaking"
       ],
       "orientation_hint": "",
       "column_context": []
@@ -94575,12 +94575,12 @@
         }
       ],
       "base_candidates": [
-        "gardevoir",
         "beautifly",
+        "gardevoir",
         "mightyena",
-        "slaking",
+        "linoone",
         "exploud",
-        "linoone"
+        "slaking"
       ],
       "orientation_hint": "",
       "column_context": []
@@ -94916,12 +94916,12 @@
         }
       ],
       "base_candidates": [
-        "gardevoir",
         "beautifly",
+        "gardevoir",
         "mightyena",
-        "slaking",
+        "linoone",
         "exploud",
-        "linoone"
+        "slaking"
       ],
       "orientation_hint": "",
       "column_context": []
@@ -95347,12 +95347,12 @@
         }
       ],
       "base_candidates": [
-        "gardevoir",
         "beautifly",
+        "gardevoir",
         "mightyena",
-        "slaking",
+        "linoone",
         "exploud",
-        "linoone"
+        "slaking"
       ],
       "orientation_hint": "",
       "column_context": []
@@ -95733,12 +95733,12 @@
         }
       ],
       "base_candidates": [
-        "gardevoir",
         "beautifly",
+        "gardevoir",
         "mightyena",
-        "slaking",
+        "linoone",
         "exploud",
-        "linoone"
+        "slaking"
       ],
       "orientation_hint": "",
       "column_context": []
@@ -96074,12 +96074,12 @@
         }
       ],
       "base_candidates": [
-        "gardevoir",
         "beautifly",
+        "gardevoir",
         "mightyena",
-        "slaking",
+        "linoone",
         "exploud",
-        "linoone"
+        "slaking"
       ],
       "orientation_hint": "",
       "column_context": []
@@ -96507,9 +96507,9 @@
       "base_candidates": [
         "beautifly",
         "medicham",
-        "slaking",
+        "linoone",
         "exploud",
-        "linoone"
+        "slaking"
       ],
       "orientation_hint": "",
       "column_context": []
@@ -96892,9 +96892,9 @@
       "base_candidates": [
         "beautifly",
         "medicham",
-        "slaking",
+        "linoone",
         "exploud",
-        "linoone"
+        "slaking"
       ],
       "orientation_hint": "",
       "column_context": []
@@ -97232,9 +97232,9 @@
       "base_candidates": [
         "beautifly",
         "medicham",
-        "slaking",
+        "linoone",
         "exploud",
-        "linoone"
+        "slaking"
       ],
       "orientation_hint": "",
       "column_context": []
@@ -98814,9 +98814,9 @@
       "base_candidates": [
         "medicham",
         "illumise",
-        "slaking",
         "exploud",
         "volbeat",
+        "slaking",
         "mawile"
       ],
       "orientation_hint": "",
@@ -99200,9 +99200,9 @@
       "base_candidates": [
         "medicham",
         "illumise",
-        "slaking",
         "exploud",
         "volbeat",
+        "slaking",
         "mawile"
       ],
       "orientation_hint": "",
@@ -99541,9 +99541,9 @@
       "base_candidates": [
         "medicham",
         "illumise",
-        "slaking",
         "exploud",
         "volbeat",
+        "slaking",
         "mawile"
       ],
       "orientation_hint": "",
@@ -99972,9 +99972,9 @@
       "base_candidates": [
         "medicham",
         "illumise",
-        "slaking",
         "exploud",
         "volbeat",
+        "slaking",
         "mawile"
       ],
       "orientation_hint": "",
@@ -100358,9 +100358,9 @@
       "base_candidates": [
         "medicham",
         "illumise",
-        "slaking",
         "exploud",
         "volbeat",
+        "slaking",
         "mawile"
       ],
       "orientation_hint": "",
@@ -100699,9 +100699,9 @@
       "base_candidates": [
         "medicham",
         "illumise",
-        "slaking",
         "exploud",
         "volbeat",
+        "slaking",
         "mawile"
       ],
       "orientation_hint": "",
@@ -101133,8 +101133,8 @@
         "illumise",
         "exploud",
         "volbeat",
-        "mawile",
-        "swalot"
+        "swalot",
+        "mawile"
       ],
       "orientation_hint": "",
       "column_context": []
@@ -101520,8 +101520,8 @@
         "illumise",
         "exploud",
         "volbeat",
-        "mawile",
-        "swalot"
+        "swalot",
+        "mawile"
       ],
       "orientation_hint": "",
       "column_context": []
@@ -101862,8 +101862,8 @@
         "illumise",
         "exploud",
         "volbeat",
-        "mawile",
-        "swalot"
+        "swalot",
+        "mawile"
       ],
       "orientation_hint": "",
       "column_context": []
@@ -105767,8 +105767,8 @@
         "illumise",
         "camerupt",
         "volbeat",
-        "spinda",
-        "swalot"
+        "swalot",
+        "spinda"
       ],
       "orientation_hint": "",
       "column_context": []
@@ -106153,8 +106153,8 @@
         "illumise",
         "camerupt",
         "volbeat",
-        "spinda",
-        "swalot"
+        "swalot",
+        "spinda"
       ],
       "orientation_hint": "",
       "column_context": []
@@ -106494,8 +106494,8 @@
         "illumise",
         "camerupt",
         "volbeat",
-        "spinda",
-        "swalot"
+        "swalot",
+        "spinda"
       ],
       "orientation_hint": "",
       "column_context": []
@@ -106925,8 +106925,8 @@
         "camerupt",
         "torkoal",
         "volbeat",
-        "spinda",
-        "swalot"
+        "swalot",
+        "spinda"
       ],
       "orientation_hint": "",
       "column_context": []
@@ -107311,8 +107311,8 @@
         "camerupt",
         "torkoal",
         "volbeat",
-        "spinda",
-        "swalot"
+        "swalot",
+        "spinda"
       ],
       "orientation_hint": "",
       "column_context": []
@@ -107652,8 +107652,8 @@
         "camerupt",
         "torkoal",
         "volbeat",
-        "spinda",
-        "swalot"
+        "swalot",
+        "spinda"
       ],
       "orientation_hint": "",
       "column_context": []
@@ -108083,10 +108083,10 @@
         "camerupt",
         "torkoal",
         "altaria",
-        "grumpig",
         "volbeat",
-        "spinda",
+        "grumpig",
         "swalot",
+        "spinda",
         "hypno"
       ],
       "orientation_hint": "",
@@ -108472,10 +108472,10 @@
         "camerupt",
         "torkoal",
         "altaria",
-        "grumpig",
         "volbeat",
-        "spinda",
+        "grumpig",
         "swalot",
+        "spinda",
         "hypno"
       ],
       "orientation_hint": "",
@@ -108816,10 +108816,10 @@
         "camerupt",
         "torkoal",
         "altaria",
-        "grumpig",
         "volbeat",
-        "spinda",
+        "grumpig",
         "swalot",
+        "spinda",
         "hypno"
       ],
       "orientation_hint": "",
@@ -109251,11 +109251,11 @@
         "camerupt",
         "torkoal",
         "altaria",
+        "volbeat",
         "grumpig",
         "seviper",
-        "volbeat",
-        "spinda",
-        "swalot"
+        "swalot",
+        "spinda"
       ],
       "orientation_hint": "",
       "column_context": []
@@ -109641,11 +109641,11 @@
         "camerupt",
         "torkoal",
         "altaria",
+        "volbeat",
         "grumpig",
         "seviper",
-        "volbeat",
-        "spinda",
-        "swalot"
+        "swalot",
+        "spinda"
       ],
       "orientation_hint": "",
       "column_context": []
@@ -109986,11 +109986,11 @@
         "camerupt",
         "torkoal",
         "altaria",
+        "volbeat",
         "grumpig",
         "seviper",
-        "volbeat",
-        "spinda",
-        "swalot"
+        "swalot",
+        "spinda"
       ],
       "orientation_hint": "",
       "column_context": []
@@ -110419,11 +110419,11 @@
         "zangoose",
         "camerupt",
         "altaria",
-        "seviper",
         "grumpig",
+        "seviper",
+        "swalot",
         "spinda",
         "flygon",
-        "swalot",
         "hypno"
       ],
       "orientation_hint": "",
@@ -110808,11 +110808,11 @@
         "zangoose",
         "camerupt",
         "altaria",
-        "seviper",
         "grumpig",
+        "seviper",
+        "swalot",
         "spinda",
         "flygon",
-        "swalot",
         "hypno"
       ],
       "orientation_hint": "",
@@ -111152,11 +111152,11 @@
         "zangoose",
         "camerupt",
         "altaria",
-        "seviper",
         "grumpig",
+        "seviper",
+        "swalot",
         "spinda",
         "flygon",
-        "swalot",
         "hypno"
       ],
       "orientation_hint": "",
@@ -111583,8 +111583,8 @@
         }
       ],
       "base_candidates": [
-        "lunatone",
         "zangoose",
+        "lunatone",
         "camerupt",
         "altaria",
         "seviper",
@@ -111971,8 +111971,8 @@
         }
       ],
       "base_candidates": [
-        "lunatone",
         "zangoose",
+        "lunatone",
         "camerupt",
         "altaria",
         "seviper",
@@ -112314,8 +112314,8 @@
         }
       ],
       "base_candidates": [
-        "lunatone",
         "zangoose",
+        "lunatone",
         "camerupt",
         "altaria",
         "seviper",
@@ -112747,8 +112747,8 @@
         }
       ],
       "base_candidates": [
-        "lunatone",
         "zangoose",
+        "lunatone",
         "altaria",
         "seviper",
         "spinda",
@@ -113134,8 +113134,8 @@
         }
       ],
       "base_candidates": [
-        "lunatone",
         "zangoose",
+        "lunatone",
         "altaria",
         "seviper",
         "spinda",
@@ -113476,8 +113476,8 @@
         }
       ],
       "base_candidates": [
-        "lunatone",
         "zangoose",
+        "lunatone",
         "altaria",
         "seviper",
         "spinda",
@@ -117386,8 +117386,8 @@
         "zangoose",
         "lunatone",
         "altaria",
-        "seviper",
         "milotic",
+        "seviper",
         "hypno"
       ],
       "orientation_hint": "",
@@ -117773,8 +117773,8 @@
         "zangoose",
         "lunatone",
         "altaria",
-        "seviper",
         "milotic",
+        "seviper",
         "hypno"
       ],
       "orientation_hint": "",
@@ -118115,8 +118115,8 @@
         "zangoose",
         "lunatone",
         "altaria",
-        "seviper",
         "milotic",
+        "seviper",
         "hypno"
       ],
       "orientation_hint": "",
@@ -118546,9 +118546,9 @@
         "crawdaunt",
         "zangoose",
         "lunatone",
-        "seviper",
         "milotic",
         "banette",
+        "seviper",
         "glalie"
       ],
       "orientation_hint": "",
@@ -118933,9 +118933,9 @@
         "crawdaunt",
         "zangoose",
         "lunatone",
-        "seviper",
         "milotic",
         "banette",
+        "seviper",
         "glalie"
       ],
       "orientation_hint": "",
@@ -119275,9 +119275,9 @@
         "crawdaunt",
         "zangoose",
         "lunatone",
-        "seviper",
         "milotic",
         "banette",
+        "seviper",
         "glalie"
       ],
       "orientation_hint": "",
@@ -119706,10 +119706,10 @@
       "base_candidates": [
         "zangoose",
         "lunatone",
-        "seviper",
         "milotic",
         "tropius",
         "banette",
+        "seviper",
         "glalie"
       ],
       "orientation_hint": "",
@@ -120093,10 +120093,10 @@
       "base_candidates": [
         "zangoose",
         "lunatone",
-        "seviper",
         "milotic",
         "tropius",
         "banette",
+        "seviper",
         "glalie"
       ],
       "orientation_hint": "",
@@ -120435,10 +120435,10 @@
       "base_candidates": [
         "zangoose",
         "lunatone",
-        "seviper",
         "milotic",
         "tropius",
         "banette",
+        "seviper",
         "glalie"
       ],
       "orientation_hint": "",
@@ -125469,8 +125469,8 @@
       "base_candidates": [
         "salamence",
         "regirock",
-        "glalie",
-        "regice"
+        "regice",
+        "glalie"
       ],
       "orientation_hint": "",
       "column_context": []
@@ -125853,8 +125853,8 @@
       "base_candidates": [
         "salamence",
         "regirock",
-        "glalie",
-        "regice"
+        "regice",
+        "glalie"
       ],
       "orientation_hint": "",
       "column_context": []
@@ -126192,8 +126192,8 @@
       "base_candidates": [
         "salamence",
         "regirock",
-        "glalie",
-        "regice"
+        "regice",
+        "glalie"
       ],
       "orientation_hint": "",
       "column_context": []
@@ -126621,8 +126621,8 @@
       "base_candidates": [
         "registeel",
         "regirock",
-        "glalie",
-        "regice"
+        "regice",
+        "glalie"
       ],
       "orientation_hint": "",
       "column_context": []
@@ -127005,8 +127005,8 @@
       "base_candidates": [
         "registeel",
         "regirock",
-        "glalie",
-        "regice"
+        "regice",
+        "glalie"
       ],
       "orientation_hint": "",
       "column_context": []
@@ -127344,8 +127344,8 @@
       "base_candidates": [
         "registeel",
         "regirock",
-        "glalie",
-        "regice"
+        "regice",
+        "glalie"
       ],
       "orientation_hint": "",
       "column_context": []
@@ -127772,9 +127772,9 @@
       ],
       "base_candidates": [
         "registeel",
+        "regice",
         "glalie",
-        "kyogre",
-        "regice"
+        "kyogre"
       ],
       "orientation_hint": "",
       "column_context": []
@@ -128156,9 +128156,9 @@
       ],
       "base_candidates": [
         "registeel",
+        "regice",
         "glalie",
-        "kyogre",
-        "regice"
+        "kyogre"
       ],
       "orientation_hint": "",
       "column_context": []
@@ -128495,9 +128495,9 @@
       ],
       "base_candidates": [
         "registeel",
+        "regice",
         "glalie",
-        "kyogre",
-        "regice"
+        "kyogre"
       ],
       "orientation_hint": "",
       "column_context": []
@@ -130074,8 +130074,8 @@
       "base_candidates": [
         "groudon",
         "deoxys",
-        "luxray",
-        "kyogre"
+        "kyogre",
+        "luxray"
       ],
       "orientation_hint": "",
       "column_context": []
@@ -130458,8 +130458,8 @@
       "base_candidates": [
         "groudon",
         "deoxys",
-        "luxray",
-        "kyogre"
+        "kyogre",
+        "luxray"
       ],
       "orientation_hint": "",
       "column_context": []
@@ -130797,8 +130797,8 @@
       "base_candidates": [
         "groudon",
         "deoxys",
-        "luxray",
-        "kyogre"
+        "kyogre",
+        "luxray"
       ],
       "orientation_hint": "",
       "column_context": []
@@ -132377,10 +132377,10 @@
       ],
       "base_candidates": [
         "staraptor",
-        "bastiodon",
         "rampardos",
-        "luxray",
-        "deoxys"
+        "bastiodon",
+        "deoxys",
+        "luxray"
       ],
       "orientation_hint": "",
       "column_context": []
@@ -132762,10 +132762,10 @@
       ],
       "base_candidates": [
         "staraptor",
-        "bastiodon",
         "rampardos",
-        "luxray",
-        "deoxys"
+        "bastiodon",
+        "deoxys",
+        "luxray"
       ],
       "orientation_hint": "",
       "column_context": []
@@ -133102,10 +133102,10 @@
       ],
       "base_candidates": [
         "staraptor",
-        "bastiodon",
         "rampardos",
-        "luxray",
-        "deoxys"
+        "bastiodon",
+        "deoxys",
+        "luxray"
       ],
       "orientation_hint": "",
       "column_context": []
@@ -140431,8 +140431,8 @@
         }
       ],
       "base_candidates": [
-        "rampardos",
         "mismagius",
+        "rampardos",
         "bastiodon",
         "lopunny"
       ],
@@ -140815,8 +140815,8 @@
         }
       ],
       "base_candidates": [
-        "rampardos",
         "mismagius",
+        "rampardos",
         "bastiodon",
         "lopunny"
       ],
@@ -141154,8 +141154,8 @@
         }
       ],
       "base_candidates": [
-        "rampardos",
         "mismagius",
+        "rampardos",
         "bastiodon",
         "lopunny"
       ],
@@ -141583,9 +141583,9 @@
         }
       ],
       "base_candidates": [
+        "rampardos",
         "mismagius",
         "bastiodon",
-        "rampardos",
         "skuntank",
         "lopunny"
       ],
@@ -141968,9 +141968,9 @@
         }
       ],
       "base_candidates": [
+        "rampardos",
         "mismagius",
         "bastiodon",
-        "rampardos",
         "skuntank",
         "lopunny"
       ],
@@ -142308,9 +142308,9 @@
         }
       ],
       "base_candidates": [
+        "rampardos",
         "mismagius",
         "bastiodon",
-        "rampardos",
         "skuntank",
         "lopunny"
       ],
@@ -143887,8 +143887,8 @@
         }
       ],
       "base_candidates": [
-        "bronzong",
-        "skuntank"
+        "skuntank",
+        "bronzong"
       ],
       "orientation_hint": "",
       "column_context": []
@@ -144269,8 +144269,8 @@
         }
       ],
       "base_candidates": [
-        "bronzong",
-        "skuntank"
+        "skuntank",
+        "bronzong"
       ],
       "orientation_hint": "",
       "column_context": []
@@ -144606,8 +144606,8 @@
         }
       ],
       "base_candidates": [
-        "bronzong",
-        "skuntank"
+        "skuntank",
+        "bronzong"
       ],
       "orientation_hint": "",
       "column_context": []
@@ -151907,10 +151907,10 @@
       ],
       "base_candidates": [
         "electivire",
-        "magmortar",
         "tangrowth",
-        "glaceon",
-        "leafeon"
+        "magmortar",
+        "leafeon",
+        "glaceon"
       ],
       "orientation_hint": "",
       "column_context": []
@@ -152292,10 +152292,10 @@
       ],
       "base_candidates": [
         "electivire",
-        "magmortar",
         "tangrowth",
-        "glaceon",
-        "leafeon"
+        "magmortar",
+        "leafeon",
+        "glaceon"
       ],
       "orientation_hint": "",
       "column_context": []
@@ -152632,10 +152632,10 @@
       ],
       "base_candidates": [
         "electivire",
-        "magmortar",
         "tangrowth",
-        "glaceon",
-        "leafeon"
+        "magmortar",
+        "leafeon",
+        "glaceon"
       ],
       "orientation_hint": "",
       "column_context": []
@@ -153064,8 +153064,8 @@
         "electivire",
         "magmortar",
         "togekiss",
-        "glaceon",
-        "leafeon"
+        "leafeon",
+        "glaceon"
       ],
       "orientation_hint": "",
       "column_context": []
@@ -153449,8 +153449,8 @@
         "electivire",
         "magmortar",
         "togekiss",
-        "glaceon",
-        "leafeon"
+        "leafeon",
+        "glaceon"
       ],
       "orientation_hint": "",
       "column_context": []
@@ -153789,8 +153789,8 @@
         "electivire",
         "magmortar",
         "togekiss",
-        "glaceon",
-        "leafeon"
+        "leafeon",
+        "glaceon"
       ],
       "orientation_hint": "",
       "column_context": []
@@ -154218,8 +154218,8 @@
       "base_candidates": [
         "magmortar",
         "togekiss",
-        "leafeon",
-        "glaceon"
+        "glaceon",
+        "leafeon"
       ],
       "orientation_hint": "",
       "column_context": []
@@ -154602,8 +154602,8 @@
       "base_candidates": [
         "magmortar",
         "togekiss",
-        "leafeon",
-        "glaceon"
+        "glaceon",
+        "leafeon"
       ],
       "orientation_hint": "",
       "column_context": []
@@ -154941,8 +154941,8 @@
       "base_candidates": [
         "magmortar",
         "togekiss",
-        "leafeon",
-        "glaceon"
+        "glaceon",
+        "leafeon"
       ],
       "orientation_hint": "",
       "column_context": []
@@ -155368,10 +155368,10 @@
         }
       ],
       "base_candidates": [
-        "togekiss",
         "dusknoir",
-        "leafeon",
-        "glaceon"
+        "togekiss",
+        "glaceon",
+        "leafeon"
       ],
       "orientation_hint": "",
       "column_context": []
@@ -155752,10 +155752,10 @@
         }
       ],
       "base_candidates": [
-        "togekiss",
         "dusknoir",
-        "leafeon",
-        "glaceon"
+        "togekiss",
+        "glaceon",
+        "leafeon"
       ],
       "orientation_hint": "",
       "column_context": []
@@ -156091,10 +156091,10 @@
         }
       ],
       "base_candidates": [
-        "togekiss",
         "dusknoir",
-        "leafeon",
-        "glaceon"
+        "togekiss",
+        "glaceon",
+        "leafeon"
       ],
       "orientation_hint": "",
       "column_context": []
@@ -156522,8 +156522,8 @@
       "base_candidates": [
         "porygon-z",
         "dusknoir",
-        "glaceon",
         "leafeon",
+        "glaceon",
         "palkia"
       ],
       "orientation_hint": "",
@@ -156907,8 +156907,8 @@
       "base_candidates": [
         "porygon-z",
         "dusknoir",
-        "glaceon",
         "leafeon",
+        "glaceon",
         "palkia"
       ],
       "orientation_hint": "",
@@ -157247,8 +157247,8 @@
       "base_candidates": [
         "porygon-z",
         "dusknoir",
-        "glaceon",
         "leafeon",
+        "glaceon",
         "palkia"
       ],
       "orientation_hint": "",
@@ -157675,11 +157675,11 @@
         }
       ],
       "base_candidates": [
-        "porygon-z",
         "probopass",
+        "porygon-z",
         "dusknoir",
-        "glaceon",
         "leafeon",
+        "glaceon",
         "palkia"
       ],
       "orientation_hint": "",
@@ -158061,11 +158061,11 @@
         }
       ],
       "base_candidates": [
-        "porygon-z",
         "probopass",
+        "porygon-z",
         "dusknoir",
-        "glaceon",
         "leafeon",
+        "glaceon",
         "palkia"
       ],
       "orientation_hint": "",
@@ -158402,11 +158402,11 @@
         }
       ],
       "base_candidates": [
-        "porygon-z",
         "probopass",
+        "porygon-z",
         "dusknoir",
-        "glaceon",
         "leafeon",
+        "glaceon",
         "palkia"
       ],
       "orientation_hint": "",
@@ -158833,11 +158833,11 @@
         }
       ],
       "base_candidates": [
-        "porygon-z",
         "probopass",
+        "porygon-z",
         "dusknoir",
-        "glaceon",
         "leafeon",
+        "glaceon",
         "palkia"
       ],
       "orientation_hint": "",
@@ -159219,11 +159219,11 @@
         }
       ],
       "base_candidates": [
-        "porygon-z",
         "probopass",
+        "porygon-z",
         "dusknoir",
-        "glaceon",
         "leafeon",
+        "glaceon",
         "palkia"
       ],
       "orientation_hint": "",
@@ -159560,11 +159560,11 @@
         }
       ],
       "base_candidates": [
-        "porygon-z",
         "probopass",
+        "porygon-z",
         "dusknoir",
-        "glaceon",
         "leafeon",
+        "glaceon",
         "palkia"
       ],
       "orientation_hint": "",
@@ -159968,8 +159968,8 @@
       "base_candidates": [
         "probopass",
         "dusknoir",
-        "glaceon",
         "leafeon",
+        "glaceon",
         "palkia"
       ],
       "orientation_hint": "",
@@ -160333,8 +160333,8 @@
       "base_candidates": [
         "probopass",
         "dusknoir",
-        "glaceon",
         "leafeon",
+        "glaceon",
         "palkia"
       ],
       "orientation_hint": "",
@@ -160658,8 +160658,8 @@
       "base_candidates": [
         "probopass",
         "dusknoir",
-        "glaceon",
         "leafeon",
+        "glaceon",
         "palkia"
       ],
       "orientation_hint": "",
