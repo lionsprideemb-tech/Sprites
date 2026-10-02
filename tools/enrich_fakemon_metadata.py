@@ -478,6 +478,9 @@ for (src,suffix,root),items in groups.items():
 enriched={}
 report=[]
 VERIFIED_SOURCE_OVERRIDES={
+    ("Mega_Flygon","flygon-1"):{"name":"Mega Flygon","type1":"Bug","type2":"Dragon","family":"Trapinch → Vibrava → Flygon → Mega Flygon"},
+    ("Mega_Flygon_Animated_Gen5","flygon-1"):{"name":"Mega Flygon","type1":"Bug","type2":"Dragon","family":"Trapinch → Vibrava → Flygon → Mega Flygon"},
+    ("PokeAPI_Mega_Meowstic_Female","pokeapi-mega-meowstic-female"):{"name":"Mega Meowstic Female","type1":"Psychic","type2":"","family":"Espurr → Meowstic → Mega Meowstic Female"},
     ("Festival_PrincessPhoenix","merlicunf"):{"name":"Merlicun","type1":"Dragon","type2":"Bug","family":"Merlicun → Firomenis"},
     ("Festival_PrincessPhoenix","firomenisf"):{"name":"Firomenis","type1":"Dragon","type2":"Bug","family":"Merlicun → Firomenis"},
     ("Festival_PrincessPhoenix","drashimif"):{"name":"Drashimi","type1":"Dragon","type2":"","family":"Drashimi → Tsushimi → Tobishimi"},
