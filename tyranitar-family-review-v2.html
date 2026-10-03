@@ -1,0 +1,22 @@
+<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Tyranitar Family Review</title>
+<style>body{font-family:Arial,sans-serif;background:#f4efe3;margin:0;padding:12px;color:#17202b}h1{margin:0 0 6px}.bar{position:sticky;top:0;background:#f4efe3;padding:8px 0}.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.card{background:white;border:2px solid #d4ccbf;border-radius:14px;padding:10px}.card.keep{border-color:#4e8b66}.card.cut{border-color:#be6c64}.sprite{height:160px;display:flex;align-items:center;justify-content:center;background:#eee7db;border-radius:10px;margin:8px 0}.sprite img{max-width:140px;max-height:140px;image-rendering:pixelated}.buttons{display:flex;gap:8px}.buttons button,.bar button{padding:9px;border-radius:9px;border:1px solid #bbb;background:white;font-weight:700}.export{background:#315a8f!important;color:white}textarea{width:100%;margin-top:8px;min-height:38px}@media(min-width:800px){.grid{grid-template-columns:repeat(3,1fr)}}</style>
+<div class="bar"><h1>Tyranitar Family — Visual Review</h1><div>Vanilla Larvitar → Pupitar → Tyranitar and official Mega Tyranitar stay.</div><p id="sum">0 keep • 0 cut • 7 undecided</p><button class="export" onclick="exp()">Export decisions CSV</button> <button onclick="clr()">Clear</button></div>
+<div class="grid" id="grid"></div>
+<script>
+const E="DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/",R="DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/";
+const a=[
+["larvitar-redux","Larvitar Redux","Rock / Fire",E+"larvitar_redux/front.png"],
+["pupitar-redux","Pupitar Redux","Rock / Fire",E+"pupitar_redux/front.png"],
+["tyranitar-redux","Tyranitar Redux","Rock / Fire",E+"tyranitar_redux/front.png"],
+["tyranitar-mega-redux","Mega Tyranitar Redux","Rock / Fire",E+"tyranitar_mega_redux/front.png"],
+["larvitar-space-form-4","Larvitar — Space","Rock / Dragon",R+"larvitar-space-form-4/front.png"],
+["pupitar-space-form-4","Pupitar — Space","Rock / Dragon",R+"pupitar-space-form-4/front.png"],
+["tyranitar-space-form-4","Tyranitar — Space","Rock / Dragon",R+"tyranitar-space-form-4/front.png"]
+];
+let s=JSON.parse(localStorage.getItem("tyr-v2")||"{}");
+function setd(id,d){s[id]={...(s[id]||{}),decision:d};localStorage.setItem("tyr-v2",JSON.stringify(s));draw()}
+function note(id,v){s[id]={...(s[id]||{}),note:v};localStorage.setItem("tyr-v2",JSON.stringify(s))}
+function draw(){grid.innerHTML=a.map(x=>'<div class="card '+(s[x[0]]?.decision||'')+'"><b>'+x[1]+'</b><div>'+x[2]+'</div><div class="sprite"><img src="'+x[3]+'"></div><div class="buttons"><button onclick="setd(\''+x[0]+'\',\'keep\')">Keep</button><button onclick="setd(\''+x[0]+'\',\'cut\')">Cut</button></div><textarea placeholder="Optional note" onchange="note(\''+x[0]+'\',this.value)">'+(s[x[0]]?.note||'')+'</textarea></div>').join("");let k=a.filter(x=>s[x[0]]?.decision==="keep").length,c=a.filter(x=>s[x[0]]?.decision==="cut").length;sum.textContent=k+" keep • "+c+" cut • "+(7-k-c)+" undecided"}
+function exp(){let r=["identity,name,type,decision,note"];for(const x of a){let d=s[x[0]]||{};r.push([x[0],x[1],x[2],d.decision||"",d.note||""].map(v=>'"'+String(v).replaceAll('"','""')+'"').join(","))}let q=document.createElement("a");q.href=URL.createObjectURL(new Blob([r.join("\n")],{type:"text/csv"}));q.download="mercury_tyranitar_family_curation.csv";q.click()}
+function clr(){s={};localStorage.removeItem("tyr-v2");draw()}draw();
+</script>
