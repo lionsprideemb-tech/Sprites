@@ -6,7 +6,7 @@ const E="DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/",P="DS_CUSTOM_LIBRARY/hac
 const items=[
 {id:"whismur-redux",name:"Whismur Redux",type:"Ghost / Electric",role:"Redux first stage",img:E+"whismur_redux/front.png"},
 {id:"loudred-redux",name:"Loudred Redux",type:"Ghost / Electric",role:"Redux middle stage",img:E+"loudred_redux/front.png"},
-{id:"exploud-redux",name:"Exploud Redux",type:"Normal / Ice",role:"Redux final stage",img:E+"exploud_redux/front.png"},
+{id:"exploud-redux",name:"Exploud Redux",type:"Ghost / Electric",role:"Redux final stage",img:E+"exploud_redux/front.png"},
 {id:"platinum-redux-exploud",name:"Platinum Redux Exploud",type:"Normal / Ice",role:"Platinum alternate Exploud design",img:P+"0173_image242.png"}
 ];
 const KEY="mercury-exploud-review-v1";let S=JSON.parse(localStorage.getItem(KEY)||"{}");function save(){localStorage.setItem(KEY,JSON.stringify(S))}function setd(id,d){S[id]={...(S[id]||{}),decision:d};save();render()}function setn(id,n){S[id]={...(S[id]||{}),note:n};save()}function esc(s){return String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]))}
