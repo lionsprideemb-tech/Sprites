@@ -45,6 +45,7 @@ footer{font-size:11px;color:#536374;text-align:center;margin-top:20px;padding:15
 details.help{margin:10px 0;background:#fffdfa;border:1px solid #d5cbbb;border-radius:10px;padding:9px;font-size:12px;line-height:1.6}
 summary{cursor:pointer;font-weight:750}
 @media (max-width:570px){header{position:relative}h1{font-size:19px}.controls{gap:6px}.controls>button,.file-label{padding:8px}.family-head{flex-wrap:wrap}.sprites{grid-template-columns:1fr 1fr}.sprite img{width:102px;height:96px}.sprite{min-height:121px}.cards{grid-template-columns:1fr}.nav{align-items:center}}
+.identity-warning{font-size:12px;line-height:1.5;background:#fff1d7;border:1px solid #deb983;padding:10px;margin:8px;border-radius:10px}.identity-warning b{color:#8e471c}.creator-credit{font-size:11px;color:#315574;margin-top:4px}.source-name{font-size:11px;color:#66717c;margin-top:2px}.identity-form{display:grid;gap:7px;padding:9px;margin:9px;border:1px solid #d6d4ca;border-radius:10px}.identity-form label{font-size:11px;font-weight:700;display:block}.identity-form input{display:block;width:100%;padding:9px;margin-top:3px;border:1px solid #c5cbd1;border-radius:8px;font-size:13px}.identity-form button{width:100%}.identity-form .small{font-size:11px;color:#64717e}.identity-detail{padding:0 9px 7px;font-size:11px}.identity-detail a{color:#225b88;text-decoration:underline}
 </style>
 </head>
 <body>
@@ -52,12 +53,12 @@ summary{cursor:pointer;font-weight:750}
 <div class="wrap">
 <h1>Pokémon Mercury Redux — Master Sprite Review</h1>
 <p class="sub">Exception-only • Evolution families together • Original approvals protected • No automatic ROM integration</p>
-<div class="stats"><span class="pill" id="total">Loading review…</span><span class="pill" id="done">0 decided</span><span class="pill" id="history">Historical decisions retained</span><span class="pill" id="holds">Technical holds</span><span class="pill" id="legacy">Older browser picks: checking…</span></div>
+<div class="stats"><span class="pill" id="total">Loading review…</span><span class="pill" id="done">0 decided</span><span class="pill" id="history">Historical decisions retained</span><span class="pill" id="holds">Technical holds</span><span class="pill" id="identityCount">Identity checks</span><span class="pill" id="legacy">Older browser picks: checking…</span></div>
 <div class="progress"><div id="bar"></div></div>
 <div class="controls">
 <input id="q" type="search" placeholder="Find a Pokémon, family, type, source…" aria-label="Search sprites">
 <select id="view" aria-label="Review status">
-<option value="pending">Needs my decision (whole families)</option>
+<option value="pending">Needs my decision (whole families)</option><option value="identity">Verify Pokémon name / artist labels</option>
 <option value="decided">Already decided</option>
 <option value="all" selected>All families (including reviewed)</option>
 <option value="holds">Technical repair holds</option>
@@ -132,17 +133,17 @@ function apply(id,choice,skipRender){
     STATE[x.id]={decision:"cut",note:(STATE[x.id]&&STATE[x.id].note)||"Alternative design not selected",updated:new Date().toISOString()};
   });
  }
- STATE[id]={decision:choice,note:(STATE[id]&&STATE[id].note)||"",updated:new Date().toISOString()};
+ STATE[id]={...(STATE[id]||{}),decision:choice,note:(STATE[id]&&STATE[id].note)||"",updated:new Date().toISOString()};
  store();if(!skipRender)render();
 }
 function saveNote(id,value){
  if(!DATA||!DATA.entries.some(function(x){return x.id===id}))return;
- STATE[id]={decision:getChoice(id),note:value,updated:new Date().toISOString()};store();
+ STATE[id]={...(STATE[id]||{}),decision:getChoice(id),note:value,updated:new Date().toISOString()};store();
 }
 function allowedRow(x){
  var q=$("q").value.trim().toLowerCase(),category=$("category").value;
  if(category!=="all"&&x.category!==category)return false;
- if(q&&[x.name,x.identity,x.family,x.source,x.type1,x.type2,x.reason].join(" ").toLowerCase().indexOf(q)<0)return false;
+ if(q&&[x.name,x.displayName,x.creator,x.identityFlag,x.identity,x.family,x.source,x.type1,x.type2,x.reason].join(" ").toLowerCase().indexOf(q)<0)return false;
  return true;
 }
 function imageCell(path,label){
@@ -153,79 +154,59 @@ function imageCell(path,label){
  im.onerror=function(){im.remove();var f=document.createElement("div");f.className="missing";f.textContent="Missing image — flag for repair";box.appendChild(f);box.closest(".card").classList.add("hold")};
  box.appendChild(im);return box;
 }
-function entryCard(x,isHold){
- var card=document.createElement("article");card.className="card "+(isHold?"hold":getChoice(x.id));card.dataset.identity=x.identity;
- var top=document.createElement("div");top.className="card-head";
- top.innerHTML="<strong>"+safe(x.name)+"</strong><div class='muted'><span class='types'>"+safe(x.type1||"Type unverified")+(x.type2?" / "+safe(x.type2):"")+"</span> · "+safe(x.source)+"</div><div class='muted'>"+safe(x.category.replace(/-/g," "))+"</div>";
- card.appendChild(top);
- var views=document.createElement("div");views.className="sprites";views.appendChild(imageCell(x.front,"FRONT"));views.appendChild(imageCell(x.back,"BACK"));card.appendChild(views);
- var detail=document.createElement("div");detail.className="detail";
- detail.innerHTML="<span>"+safe(x.reason||"")+"</span>"+(x.suggested?" <em>Suggestion: "+safe(({"shortlist":"SHORTLIST","prefer-native":"PREFER NATIVE DS","alternate":"COMPARE ALTERNATE","compare":"COMPARE BOTH","confirm":"CONFIRM DECISION"})[x.suggested]||"REVIEW")+".</em> "+safe(x.suggestionReason||""):"")+(x.holdReason?" <em>TECHNICAL HOLD: "+safe(x.holdReason)+"</em>":"");
- card.appendChild(detail);
- if(!isHold){
-  var area=document.createElement("div");area.className="choices";
-  var yes=document.createElement("button"),no=document.createElement("button");
-  yes.textContent=x.category==="design-comparison"?"Use this art":"Keep";
-  no.textContent=x.category==="design-comparison"?"Skip this art":"Cut";
-  yes.className=getChoice(x.id)==="keep"?"keep-active":"";
-  no.className=getChoice(x.id)==="cut"?"cut-active":"";
-  yes.onclick=function(){apply(x.id,"keep")};no.onclick=function(){apply(x.id,"cut")};
-  area.appendChild(yes);area.appendChild(no);card.appendChild(area);
-  var note=document.createElement("textarea");note.className="note";note.rows=2;note.placeholder="Optional note";note.value=STATE[x.id]&&STATE[x.id].note||"";
-  note.onchange=function(){saveNote(x.id,note.value)};card.appendChild(note);
- }
- return card;
+function identityWarning(x){if(!x.identityFlag)return null;var wrap=document.createElement("div");wrap.className="identity-warning";
+var title=document.createElement("b");title.textContent="Needs identity verification — "+x.identityFlag.replace(/_/g," ");wrap.appendChild(title);
+var p=document.createElement("p");p.textContent=x.identityNote||"Source label, creator credit or family needs confirmation.";wrap.appendChild(p);
+if(x.familyAlternatives&&x.familyAlternatives.length){var ul=document.createElement("ul");x.familyAlternatives.forEach(function(v){var li=document.createElement("li");li.textContent=v.family+" (source: "+v.source+")";ul.appendChild(li)});wrap.appendChild(ul)}
+if(x.sourceReference&&/^https:\/\//.test(x.sourceReference)){var a=document.createElement("a");a.href=x.sourceReference;a.target="_blank";a.rel="noopener noreferrer";a.textContent="Open historical source ↗";wrap.appendChild(a)}
+var p2=document.createElement("p");p2.className="small";p2.textContent="Your existing Keep/Cut vote is retained. These sprites cannot be marked integration-ready until their identities are confirmed.";wrap.appendChild(p2);return wrap}
+function identityForm(x){var area=document.createElement("div");area.className="identity-form";var state=STATE[x.id]||{},fields=[["resolvedName","Actual Pokémon / custom-form name",state.resolvedName||x.displayName||x.name],["resolvedFamily","Confirmed evolution family or standalone",state.resolvedFamily||x.family],["resolvedType1","Type 1",state.resolvedType1||x.type1],["resolvedType2","Type 2 (if any)",state.resolvedType2||x.type2]];
+fields.forEach(function(row){var label=document.createElement("label");label.textContent=row[1];var input=document.createElement("input");input.value=row[2]||"";input.placeholder=row[1];input.onchange=function(){STATE[x.id]={...(STATE[x.id]||{}),[row[0]]:input.value,updated:new Date().toISOString()};store()};label.appendChild(input);area.appendChild(label)});
+var btn=document.createElement("button");btn.className="primary";btn.textContent="Confirm identity only (Keep/Cut unchanged)";
+btn.onclick=function(){var inputs=area.querySelectorAll("input"),name=inputs[0].value.trim(),family=inputs[1].value.trim(),first=inputs[2].value.trim(),second=inputs[3].value.trim(),allowed=["Normal","Fire","Water","Grass","Electric","Ice","Fighting","Poison","Ground","Flying","Psychic","Bug","Rock","Ghost","Dragon","Dark","Steel","Fairy"];if(!name||/unverified|name pending|identity to verify|artist-label|^(mikitarian|luminian)$/i.test(name)||!family||!allowed.includes(first)||second&&!allowed.includes(second)){alert("Please give the actual Pokémon/form name, confirmed family, and valid standard Pokémon type(s). Source-artist labels are not sufficient.");return}
+if(!confirm("Confirm identity for "+name+"? Your existing KEEP or CUT decision will remain unchanged."))return;STATE[x.id]={...(STATE[x.id]||{}),resolvedName:name,resolvedFamily:family,resolvedType1:first,resolvedType2:second,identityVerified:true,identityConfirmedAt:new Date().toISOString(),updated:new Date().toISOString()};store();render()};area.appendChild(btn);
+var helper=document.createElement("span");helper.className="small";helper.textContent="This only resolves identification metadata. No Pokémon or sprite will be automatically integrated.";area.appendChild(helper);return area}
+function entryCard(x,isHold,isIdentity){var state=STATE[x.id]||{},card=document.createElement("article");card.className="card "+(isHold?"hold":getChoice(x.id));card.dataset.identity=x.identity;
+var top=document.createElement("div");top.className="card-head";
+top.innerHTML="<strong>"+safe(state.identityVerified&&state.resolvedName?state.resolvedName:x.displayName||x.name)+"</strong><div class='muted'><span class='types'>"+safe(state.identityVerified&&state.resolvedType1?state.resolvedType1:x.type1||"Type unverified")+(state.identityVerified&&state.resolvedType2?" / "+safe(state.resolvedType2):!state.identityVerified&&x.type2?" / "+safe(x.type2):"")+"</span> · "+safe(x.source)+"</div><div class='muted'>"+safe(x.category.replace(/-/g," "))+"</div><div class='creator-credit'>Artist / source attribution: "+safe(x.creator||"not established")+"</div><div class='source-name'>Original source label: "+safe(x.originalSourceName||x.name)+" · "+safe(x.nameConfidence||"historical")+"</div>";
+card.appendChild(top);
+var views=document.createElement("div");views.className="sprites";views.appendChild(imageCell(x.front,"FRONT"));views.appendChild(imageCell(x.back,"BACK"));card.appendChild(views);
+var detail=document.createElement("div");detail.className="detail";detail.innerHTML="<span>"+safe(x.reason||"")+"</span>"+(x.suggested?" <em>Suggestion: "+safe(({"shortlist":"SHORTLIST","prefer-native":"PREFER NATIVE DS","alternate":"COMPARE ALTERNATE","compare":"COMPARE BOTH","confirm":"CONFIRM DECISION"})[x.suggested]||"REVIEW")+".</em> "+safe(x.suggestionReason||""):"")+(x.holdReason?" <em>TECHNICAL HOLD: "+safe(x.holdReason)+"</em>":"");card.appendChild(detail);
+var identity=x.identityFlag&&!state.identityVerified?identityWarning(x):null;if(identity)card.appendChild(identity);
+if(isIdentity){if(x.identityFlag&&!state.identityVerified)card.appendChild(identityForm(x));return card}
+if(!isHold){
+ var area=document.createElement("div");area.className="choices";
+ var yes=document.createElement("button"),no=document.createElement("button");yes.textContent=x.category==="design-comparison"?"Use this art":"Keep";no.textContent=x.category==="design-comparison"?"Skip this art":"Cut";yes.className=getChoice(x.id)==="keep"?"keep-active":"";no.className=getChoice(x.id)==="cut"?"cut-active":"";yes.onclick=function(){apply(x.id,"keep")};no.onclick=function(){apply(x.id,"cut")};area.appendChild(yes);area.appendChild(no);card.appendChild(area);
+ var note=document.createElement("textarea");note.className="note";note.rows=2;note.placeholder="Optional note";note.value=STATE[x.id]&&STATE[x.id].note||"";note.onchange=function(){saveNote(x.id,note.value)};card.appendChild(note);
 }
-function familyCard(family,items,isHold){
- var card=document.createElement("section");card.className="family";
- var head=document.createElement("div");head.className="family-head";
- var h=document.createElement("h2");h.textContent=family;head.appendChild(h);
- var count=document.createElement("small");count.textContent=items.length+" design"+(items.length===1?"":"s");head.appendChild(count);
- var eligible=items.filter(function(x){return !getChoice(x.id)&&x.category!=="design-comparison"&&x.category!=="decision-conflict"});
- if(!isHold&&eligible.length){
-  var btn=document.createElement("button");btn.textContent="Keep family ("+eligible.length+")";btn.onclick=function(){
-   if(confirm("Keep "+eligible.length+" undecided candidate design(s) in this family?")){
-    eligible.forEach(function(x){apply(x.id,"keep",true)});render();
-   }
-  };head.appendChild(btn);
- }
- card.appendChild(head);
- var body=document.createElement("div");body.className="cards";items.slice().sort(function(a,b){return (Number.isFinite(a.evolutionStageOrder)?a.evolutionStageOrder:999)-(Number.isFinite(b.evolutionStageOrder)?b.evolutionStageOrder:999)||a.name.localeCompare(b.name,undefined,{numeric:true})||a.id.localeCompare(b.id)}).forEach(function(x){body.appendChild(entryCard(x,isHold))});card.appendChild(body);
- return card;
-}
+return card}
+function familyCard(family,items,isHold,isIdentity){var card=document.createElement("section");card.className="family";var head=document.createElement("div");head.className="family-head";var h=document.createElement("h2");h.textContent=family;head.appendChild(h);var count=document.createElement("small");count.textContent=items.length+" design"+(items.length===1?"":"s");head.appendChild(count);
+var eligible=items.filter(function(x){return !getChoice(x.id)&&!x.identityFlag&&x.category!=="design-comparison"&&x.category!=="decision-conflict"});
+if(!isHold&&!isIdentity&&eligible.length){var btn=document.createElement("button");btn.textContent="Keep family ("+eligible.length+")";btn.onclick=function(){if(confirm("Keep "+eligible.length+" undecided source-verified candidate design(s) in this family?")){eligible.forEach(function(x){apply(x.id,"keep",true)});render()}};head.appendChild(btn)}
+card.appendChild(head);var body=document.createElement("div");body.className="cards";items.slice().sort(function(a,b){return (Number.isFinite(a.evolutionStageOrder)?a.evolutionStageOrder:999)-(Number.isFinite(b.evolutionStageOrder)?b.evolutionStageOrder:999)||(a.displayName||a.name).localeCompare(b.displayName||b.name,undefined,{numeric:true})||a.id.localeCompare(b.id)}).forEach(function(x){body.appendChild(entryCard(x,isHold,isIdentity))});card.appendChild(body);return card}
 function updateStats(){
  var done=DATA.entries.filter(function(x){return !!getChoice(x.id)}).length;
  $("total").textContent=DATA.entries.length+" actionable designs";
  $("done").textContent=done+" decided · "+(DATA.entries.length-done)+" remain";
  $("history").textContent=DATA.counts.historical+" old decisions preserved";
- $("holds").textContent=DATA.technicalHolds.length+" technical holds";
+ $("holds").textContent=DATA.technicalHolds.length+" technical holds";$("identityCount").textContent=DATA.entries.concat(DATA.technicalHolds).filter(x=>x.identityFlag&&!(STATE[x.id]||{}).identityVerified).length+" identity checks";
  var legacy=legacyBrowserSelections();$("legacy").textContent=legacy.reduce(function(n,g){return n+g.entries.length},0)+" older browser picks located";
  $("bar").style.width=(DATA.entries.length?done*100/DATA.entries.length:0)+"%";
 }
-function render(){
- if(!DATA)return;updateStats();
- var isHold=$("view").value==="holds";
- var pool=isHold?DATA.technicalHolds:DATA.entries.filter(allowedRow);
- if(!isHold && ["pending","decided"].includes($("view").value)){
-  var selector=$("view").value;
-  var familyMatches=new Set(pool.filter(function(x){return selector==="pending"?!getChoice(x.id):!!getChoice(x.id)}).map(function(x){return x.family||x.base||x.name}));
-  pool=pool.filter(function(x){return familyMatches.has(x.family||x.base||x.name)});
- }
- if(isHold){var q=$("q").value.trim().toLowerCase(),category=$("category").value;
-  pool=pool.filter(function(x){return(category==="all"||x.category===category)&&(!q||[x.name,x.family,x.source,x.identity].join(" ").toLowerCase().includes(q))});
- }
- var map=new Map();
- pool.forEach(function(x){var k=x.family||x.base||x.name;if(!map.has(k))map.set(k,[]);map.get(k).push(x)});
- var families=Array.from(map.keys()).sort(function(a,b){return a.localeCompare(b,undefined,{numeric:true})});
- var pageCount=Math.max(1,Math.ceil(families.length/PER_PAGE));PAGE=Math.min(Math.max(PAGE,0),pageCount-1);
+function render(){if(!DATA)return;updateStats();
+ var view=$("view").value,isIdentity=view==="identity",isHold=view==="holds";
+ var pool=isIdentity?DATA.entries.concat(DATA.technicalHolds).filter(function(x){return x.identityFlag&&!(STATE[x.id]||{}).identityVerified}):isHold?DATA.technicalHolds:DATA.entries.filter(allowedRow);
+ if(!isHold&&!isIdentity&&["pending","decided"].includes(view)){var selector=view;var familyMatches=new Set(pool.filter(function(x){return selector==="pending"?!getChoice(x.id):!!getChoice(x.id)}).map(function(x){return x.family||x.base||x.name}));pool=pool.filter(function(x){return familyMatches.has(x.family||x.base||x.name)})}
+ if(isHold||isIdentity){var q=$("q").value.trim().toLowerCase(),category=$("category").value;pool=pool.filter(function(x){return (category==="all"||x.category===category)&&(!q||[x.name,x.displayName,x.creator,x.family,x.source,x.identity].join(" ").toLowerCase().includes(q))})}
+ var map=new Map();pool.forEach(function(x){var k=isIdentity&&x.possibleBaseSpecies?x.possibleBaseSpecies:x.family||x.base||x.name;if(!map.has(k))map.set(k,[]);map.get(k).push(x)});
+ var families=Array.from(map.keys()).sort(function(a,b){return a.localeCompare(b,undefined,{numeric:true})}),pageCount=Math.max(1,Math.ceil(families.length/PER_PAGE));PAGE=Math.min(Math.max(PAGE,0),pageCount-1);
  var shown=families.slice(PAGE*PER_PAGE,(PAGE+1)*PER_PAGE),root=$("root");root.replaceChildren();
- if(!shown.length){var empty=document.createElement("div");empty.className="empty";empty.textContent=isHold?"No matching technical holds.":"No matching designs. Try All review candidates or clear your filters.";root.appendChild(empty)}
- shown.forEach(function(k){root.appendChild(familyCard(k,map.get(k),isHold))});
+ if(!shown.length){var empty=document.createElement("div");empty.className="empty";empty.textContent=isIdentity?"No unresolved identity labels found.":isHold?"No matching technical holds.":"No matching designs. Clear your filters to see all.";root.appendChild(empty)}
+ shown.forEach(function(k){root.appendChild(familyCard(k,map.get(k),isHold,isIdentity))});
  var summary="Page "+(PAGE+1)+" / "+pageCount+" · "+families.length+" families · "+pool.length+" designs";
  $("pages").textContent=summary;$("bottomPages").textContent=summary;
- ["prev","prev2"].forEach(function(k){$(k).disabled=PAGE===0});
- ["next","next2"].forEach(function(k){$(k).disabled=PAGE>=pageCount-1});
- $("bulk").disabled=isHold||!shown.some(function(k){return map.get(k).some(function(x){return !getChoice(x.id)&&["fakemon","new-design"].includes(x.category)})});
+ ["prev","prev2"].forEach(function(k){$(k).disabled=PAGE===0});["next","next2"].forEach(function(k){$(k).disabled=PAGE>=pageCount-1});
+ $("bulk").disabled=isHold||isIdentity||!shown.some(function(k){return map.get(k).some(function(x){return !getChoice(x.id)&&!x.identityFlag&&["fakemon","new-design"].includes(x.category)})});
 }
 function download(name,content,type){
  var b=new Blob([content],{type:type}),u=URL.createObjectURL(b),a=document.createElement("a");
@@ -234,8 +215,9 @@ function download(name,content,type){
 function exportPayload(){
  var currentIds=new Set(DATA.entries.map(function(x){return x.id}));
  var current=DATA.entries.map(function(x){var v=STATE[x.id]||{};return{
-  id:x.id,identity:x.identity,name:x.name,family:x.family,source:x.source,category:x.category,
-  type1:x.type1,type2:x.type2,front_path:x.front,back_path:x.back,decision:v.decision||"pending",
+  id:x.id,identity:x.identity,name:v.identityVerified&&v.resolvedName?v.resolvedName:(x.displayName||x.name),family:v.identityVerified&&v.resolvedFamily?v.resolvedFamily:x.family,source:x.source,category:x.category,
+  type1:v.identityVerified&&v.resolvedType1?v.resolvedType1:x.type1,type2:v.identityVerified?v.resolvedType2||"":x.type2,front_path:x.front,back_path:x.back,decision:v.decision||"pending",
+  original_source_name:x.originalSourceName||x.name,artist_credit:x.creator||"",source_reference:x.sourceReference||"",identity_flag:x.identityFlag||"",identity_verified:!!v.identityVerified,identity_verified_at:v.identityConfirmedAt||"",name_confidence:x.nameConfidence||"",
   note:v.note||"",updated:v.updated||""}});
  var prior=(IMPORTED&&IMPORTED.entries||[]).filter(function(x){return !currentIds.has(x.id)}).map(function(x){
   var state=STATE[x.id]||x;return Object.assign({},x,{decision:state.decision||x.decision,note:state.note||x.note||"",updated:state.updated||x.updated||""});
@@ -249,7 +231,7 @@ function escCSV(s){return '"'+String(s==null?"":s).replace(/"/g,'""')+'"'}
 $("recoverLegacy").onclick=function(){var groups=legacyBrowserSelections(),count=groups.reduce(function(n,g){return n+g.entries.length},0);alert(count+" stored choices/notes found across "+groups.length+" previous Mercury review pages on this browser. They will be included in your Backup / GitHub JSON export without overwriting current master decisions.");updateStats()};
 $("json").onclick=function(){download("mercury_master_sprite_decisions_2026-10-23.json",JSON.stringify(exportPayload(),null,2),"application/json")};
 $("csv").onclick=function(){
- var e=exportPayload().entries,keys=["id","identity","name","family","source","category","type1","type2","front_path","back_path","decision","note","updated"];
+ var e=exportPayload().entries,keys=["id","identity","name","family","source","category","type1","type2","original_source_name","artist_credit","source_reference","identity_flag","identity_verified","name_confidence","front_path","back_path","decision","note","updated"];
  var text=[keys.map(escCSV).join(",")].concat(e.map(function(x){return keys.map(function(k){return escCSV(x[k])}).join(",")})).join("\r\n")+"\r\n";
  download("mercury_master_sprite_decisions_2026-10-23.csv",text,"text/csv;charset=utf-8");
 };
@@ -263,7 +245,7 @@ $("file").onchange=function(ev){
    var known=new Set(DATA.entries.map(function(x){return x.id})),restored=0,unknown=0,incoming={};
    records.forEach(function(x){if(!known.has(x.id)){unknown++;return}
     if(["keep","cut"].includes(x.decision)||x.note){
-     incoming[x.id]={decision:["keep","cut"].includes(x.decision)?x.decision:"",note:String(x.note||""),updated:String(x.updated||"")};
+     incoming[x.id]={decision:["keep","cut"].includes(x.decision)?x.decision:"",note:String(x.note||""),updated:String(x.updated||""),resolvedName:x.identity_verified?String(x.name||""):"",resolvedFamily:x.identity_verified?String(x.family||""):"",resolvedType1:x.identity_verified?String(x.type1||""):"",resolvedType2:x.identity_verified?String(x.type2||""):"",identityVerified:x.identity_verified===true,identityConfirmedAt:String(x.identity_verified_at||"")};
      restored++;
     }
    });
@@ -274,10 +256,10 @@ $("file").onchange=function(ev){
  reader.readAsText(f);ev.target.value="";
 };
 $("bulk").onclick=function(){
- var isHold=$("view").value==="holds";if(isHold)return;
+ var isHold=["holds","identity"].includes($("view").value);if(isHold)return;
  var pool=DATA.entries.filter(allowedRow),map=new Map();pool.forEach(function(x){if(!map.has(x.family))map.set(x.family,[]);map.get(x.family).push(x)});
  var keys=Array.from(map.keys()).sort(function(a,b){return a.localeCompare(b,undefined,{numeric:true})}).slice(PAGE*PER_PAGE,(PAGE+1)*PER_PAGE);
- var batch=keys.flatMap(function(k){return map.get(k)}).filter(function(x){return !getChoice(x.id)&&["fakemon","new-design"].includes(x.category)});
+ var batch=keys.flatMap(function(k){return map.get(k)}).filter(function(x){return !getChoice(x.id)&&!x.identityFlag&&["fakemon","new-design"].includes(x.category)});
  if(!batch.length)return;
  if(!confirm("KEEP "+batch.length+" undecided candidate artworks on THIS page? Competing designs, conflicts, and technical holds are excluded."))return;
  batch.forEach(function(x){apply(x.id,"keep",true)});render();
