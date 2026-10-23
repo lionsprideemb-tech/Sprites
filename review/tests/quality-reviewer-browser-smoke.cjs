@@ -10,7 +10,9 @@ const data={
  "review/user-iphone-decisions-2026-10-23.json":JSON.parse(fs.readFileSync(path.join(root,"review/user-iphone-decisions-2026-10-23.json"),"utf8")),
  "review/recovered-approved-legacy-pairs-2026-10-23.json":JSON.parse(fs.readFileSync(path.join(root,"review/recovered-approved-legacy-pairs-2026-10-23.json"),"utf8")),
  "DS_CUSTOM_LIBRARY/converted/Verified_Source_DS64_Technical_2026_10_23/technical_quality_manifest.json":
-  JSON.parse(fs.readFileSync(path.join(root,"DS_CUSTOM_LIBRARY/converted/Verified_Source_DS64_Technical_2026_10_23/technical_quality_manifest.json"),"utf8"))
+  JSON.parse(fs.readFileSync(path.join(root,"DS_CUSTOM_LIBRARY/converted/Verified_Source_DS64_Technical_2026_10_23/technical_quality_manifest.json"),"utf8")),
+ "DS_CUSTOM_LIBRARY/comparison/DS64_Visual_Triage_2026_10_23/comparison_manifest.json":
+  JSON.parse(fs.readFileSync(path.join(root,"DS_CUSTOM_LIBRARY/comparison/DS64_Visual_Triage_2026_10_23/comparison_manifest.json"),"utf8"))
 };
 const html=fs.readFileSync(path.join(root,"master-review.html"),"utf8");
 const code=html.match(/<script>([\s\S]*?)<\/script>/)?.[1];
@@ -19,6 +21,7 @@ function element(tag="div"){
  return {tagName:tag,children:[],style:{},dataset:{},classList:{add(){},remove(){}},value:"",textContent:"",innerHTML:"",disabled:false,
   appendChild(x){this.children.push(x);return x},replaceChildren(...items){this.children=items},
   remove(){},closest(){return this},focus(){},querySelectorAll(){return []},
+  setAttribute(key,value){this[key]=value},
   click(){if(this.onclick)this.onclick()}};
 }
 const ids=("root notice q view category qualityStat recStat recFilter qualityFilter qualityStatus shinyOnly "+
@@ -56,6 +59,15 @@ async function run(){
  assert.equal(elements.category.disabled,true);
  assert.equal(elements.qualityFilter.style.display,"inline-flex");
  assert.ok(elements.pages.textContent.includes("83 source sets"));
+ const nodes=[];
+ function gather(node){nodes.push(node);(node.children||[]).forEach(gather)}
+ elements.root.children.forEach(gather);
+ const qualityChoices=nodes.filter(x=>x.tagName==="select"&&typeof x.onchange==="function");
+ assert.ok(qualityChoices.length>0,"Source comparison quality controls missing");
+ const first=qualityChoices[0];
+ first.value="needs_source_repair";first.onchange();
+ assert.ok(keys.size>0,"Visual-quality choice must persist separately from creative votes");
+
 
  elements.q.value="Furrva";elements.q.oninput();
  assert.equal(elements.root.children.length,1,"Furrva source family not found");
@@ -70,6 +82,13 @@ async function run(){
  const obj=JSON.parse(blob.parts.join(""));
  assert.equal(obj.schema,"mercury-sprite-decisions-v1");
  assert.equal(obj.dsTechnicalSummary.designs,83);
+ assert.equal(obj.visualComparisonSummary.visualOnly,196);
+ assert.equal(obj.visualComparisonSummary.paletteAudits,40);
+ assert.equal(obj.qualityChecks.length,1,"Visual-quality feedback not exported");
+ assert.equal(obj.qualityChecks[0].decision,"needs_source_repair");
+ assert.equal(obj.qualityChecks[0].notROMApproval,true);
+ assert.equal(obj.qualityChecks[0].notCreativeVote,true);
+ assert.ok(obj.qualityChecks[0].source_sha256,"Visual-quality choice must remain bound to original source hash");
  assert.equal(obj.dsTechnicalSummary.noGameIntegration,true);
  const map=new Map(obj.entries.map(v=>[v.id,v]));
  const before=data["review/user-iphone-decisions-2026-10-23.json"].entries;
@@ -77,6 +96,6 @@ async function run(){
  assert.equal(map.get("compare:rainther:1")?.decision,"pending");
  assert.equal(map.get("compare:rainther:2")?.decision,"pending");
  assert.equal(errors.length,0);
- console.log("PASS browser-simulated iPhone viewer: 83 technical source sets, filters, read-only protection, JSON export and all 166 protected votes.");
+ console.log("PASS simulated iPhone viewer: 196 comparison previews, 40 palette reviews, saved quality feedback, hash-bound JSON export and 166 unchanged KEEP/CUT decisions.");
 }
 run().catch(e=>{console.error(e);process.exitCode=1});
