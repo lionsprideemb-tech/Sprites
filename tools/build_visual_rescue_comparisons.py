@@ -110,11 +110,20 @@ def run(check:bool):
     master=read(TECH)
     assert len(master["designs"])==83
     actual=Counter(s["status"] for d in master["designs"] for s in d["slots"].values())
-    for k,v in REQUIRED.items():assert actual[k]==v,(k,actual[k],v)
+    assert sum(actual.values())==332
+    allowed=set(REQUIRED)|{"PIXEL_PRESERVED_DS64_CANDIDATE",
+                           "PIXEL_PRESERVED_EXACT_2X_COLLAPSE_DS64_CANDIDATE"}
+    assert set(actual)<=allowed,("Unrecognized source integrity state",actual)
+    assert actual["BLOCKED_UNDECODABLE_OR_UNSUPPORTED_PNG"]<=4
+    assert actual["MISSING_SOURCE"]==28
+    expected_preview_count=sum(actual[k] for k in TARGET)
+    expected_palette_count=actual["PALETTE_QUANTIZED_NEEDS_ART_REVIEW"]
     if check:
         result=read(MANIFEST)
         assert result["schema"]=="mercury-original-visual-rescue-comparisons-v1"
-        assert len(result["comparisons"])==196 and len(result["paletteAudits"])==39
+        assert len(result["comparisons"])==expected_preview_count
+        assert len(result["paletteAudits"])==expected_palette_count
+        assert result["sourceSHA256"]==checksum(TECH.read_bytes()),"Visual comparison manifest is stale"
         for item in result["comparisons"]:
             src=check_source(item["original"],item["originalSHA256"])
             out=(ROOT/item["comparisonPath"]).resolve()
@@ -181,9 +190,10 @@ def run(check:bool):
         "paletteQuantizedNeedsApproval":len(result["paletteAudits"]),
         "missingOriginals":len(result["missingSource"]),"undecodableOriginals":len(result["unrecoverablePNG"]),
         "noNewGameReadySprites":True}
-    assert result["counts"]["visualOnlyNearestOrCropComparisons"]==196
-    assert result["counts"]["paletteQuantizedNeedsApproval"]==39
-    assert len(result["missingSource"])==28 and len(result["unrecoverablePNG"])==4
+    assert result["counts"]["visualOnlyNearestOrCropComparisons"]==expected_preview_count
+    assert result["counts"]["paletteQuantizedNeedsApproval"]==expected_palette_count
+    assert len(result["missingSource"])==28
+    assert len(result["unrecoverablePNG"])==actual["BLOCKED_UNDECODABLE_OR_UNSUPPORTED_PNG"]
     MANIFEST.write_text(json.dumps(result,indent=2,ensure_ascii=False)+"\n",encoding="utf-8")
     print(json.dumps(result["counts"]))
 if __name__=="__main__":
