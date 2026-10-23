@@ -1050,6 +1050,24 @@
       "front": "DS_CUSTOM_LIBRARY/converted/All_Mercury_GBA_Queue/tsareena_mega/front.png",
       "back": "DS_CUSTOM_LIBRARY/converted/All_Mercury_GBA_Queue/tsareena_mega/back.png",
       "reason": "Conflicting recorded historical decisions"
+    },
+    {
+      "id": "fakemon:criminalisfront:c6156a0da54f",
+      "identity": "criminalisfront",
+      "name": "Criminalis",
+      "source": "Festival_Misc",
+      "front": "DS_CUSTOM_LIBRARY/packs/Festival_Misc/Misc/Fronts/CriminalisFront.png",
+      "back": "DS_CUSTOM_LIBRARY/packs/Festival_Misc/Misc/Backs/CriminalisBack.png",
+      "reason": "Multi-frame animation strips (5400px front / 6400px back); extract matching single frames before artwork approval"
+    },
+    {
+      "id": "compare:flygon-1:1",
+      "identity": "flygon-1",
+      "name": "Mega Flygon — Design 1",
+      "source": "Mega_Flygon_Animated_Gen5",
+      "front": "DS_CUSTOM_LIBRARY/packs/Mega_Flygon_Animated_Gen5/Mega Flygon/Front/FLYGON_1.png",
+      "back": "DS_CUSTOM_LIBRARY/packs/Mega_Flygon_Animated_Gen5/Mega Flygon/Back/FLYGON_1.png",
+      "reason": "Multi-frame animation strips (1920px front / 1920px back); extract matching single frames before artwork approval"
     }
   ],
   "protectedHistoricalDecisionsFromNewImport": [
@@ -2938,6 +2956,20 @@
       ],
       "conflictingDecision": false,
       "action": "Do not merge or override these rows without identifying the semantic/forme difference."
+    }
+  ],
+  "animationAtlasesHeld": [
+    {
+      "id": "fakemon:criminalisfront:c6156a0da54f",
+      "frontWidth": 5400,
+      "backWidth": 6400,
+      "action": "Extract a true single-frame sprite; do not automatically resize/stretch animation sheet"
+    },
+    {
+      "id": "compare:flygon-1:1",
+      "frontWidth": 1920,
+      "backWidth": 1920,
+      "action": "Extract a true single-frame sprite; do not automatically resize/stretch animation sheet"
     }
   ]
 }
