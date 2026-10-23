@@ -48,7 +48,7 @@ async function run(){
  assert.ok(elements.total.textContent.includes("158 actionable"),"active choices failed to load");
  assert.ok(elements.done.textContent.includes("154 decided"),"historical user votes lost");
  assert.ok(elements.identityCount.textContent.includes("5 identity"),"unverified evolution families changed");
- assert.ok(elements.qualityStat.textContent.includes("83 audited"),"technical report inaccessible");
+ assert.ok(elements.qualityStat.textContent.includes("83 source sets"),"technical report inaccessible");
 
  elements.view.value="dsquality";elements.view.onchange();
  assert.ok(elements.root.children.length>0,"DS64 comparison groups not rendered");
