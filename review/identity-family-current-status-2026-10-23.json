@@ -267,5 +267,26 @@
     "status": "source-hosted original front/back located; not stored locally in GitHub or DS converted",
     "licensingNote": "Credit Mikitari; no fabricated local sprites"
   },
-  "nextGate": "Original creator and named-evolution evidence for the five remaining proposed links; final visual sprite integrity/DS conversion. All unapproved ROM integration remains blocked."
+  "nextGate": "Only five unverified evolution edges remain. Original Furrva source is now preserved, but native DS sprite canvas/palette checks and visual approval have not occurred. No ROM staging authorized.",
+  "furrvaLocalSourceRecovery": {
+    "status": "actual original cropped WebP and lossless PNG preview bytes committed; not DS-certified",
+    "manifest": "DS_CUSTOM_LIBRARY/recovered/Pokengine_Mikitari_Furrva_Source/source_manifest.json",
+    "type": "Bug",
+    "artist": "Mikitari",
+    "dimensions": {
+      "front": [
+        34,
+        30
+      ],
+      "back": [
+        55,
+        51
+      ]
+    },
+    "localOriginal": {
+      "front": "DS_CUSTOM_LIBRARY/recovered/Pokengine_Mikitari_Furrva_Source/front_source.png",
+      "back": "DS_CUSTOM_LIBRARY/recovered/Pokengine_Mikitari_Furrva_Source/back_source.png"
+    },
+    "ROMIntegrationAllowed": false
+  }
 }
