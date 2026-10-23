@@ -58,9 +58,9 @@ summary{cursor:pointer;font-weight:750}
 <div class="controls">
 <input id="q" type="search" placeholder="Find a Pokémon, family, type, source…" aria-label="Search sprites">
 <select id="view" aria-label="Review status">
-<option value="pending">Needs my decision (whole families)</option><option value="identity">Verify Pokémon name / artist labels</option>
+<option value="pending" selected>Needs my decision (whole families)</option><option value="identity">Verify Pokémon name / artist labels</option>
 <option value="decided">Already decided</option>
-<option value="all" selected>All families (including reviewed)</option>
+<option value="all">All families (including reviewed)</option>
 <option value="holds">Technical repair holds</option>
 </select>
 <select id="category" aria-label="Candidate category"><option value="all">All categories</option><option value="fakemon">New Pokémon</option><option value="design-comparison">Competing art</option><option value="new-design">New Megas/forms</option><option value="decision-conflict">Decision conflicts</option></select>
@@ -88,7 +88,7 @@ summary{cursor:pointer;font-weight:750}
 <script>
 (function(){
 "use strict";
-var DATA=null, STATE={}, IMPORTED=null, PAGE=0, PER_PAGE=25;
+var DATA=null, STATE={}, IMPORTED=null, PAGE=0, PER_PAGE=25, VISIBLE_IDS=new Set();
 var STORAGE="mercury-master-review-2026-10-23-v1";
 var $=function(id){return document.getElementById(id)};
 var safe=function(s){return String(s==null?"":s).replace(/[&<>"']/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]})};
@@ -171,7 +171,7 @@ var top=document.createElement("div");top.className="card-head";
 top.innerHTML="<strong>"+safe(state.identityVerified&&state.resolvedName?state.resolvedName:x.displayName||x.name)+"</strong><div class='muted'><span class='types'>"+safe(state.identityVerified&&state.resolvedType1?state.resolvedType1:x.type1||"Type unverified")+(state.identityVerified&&state.resolvedType2?" / "+safe(state.resolvedType2):!state.identityVerified&&x.type2?" / "+safe(x.type2):"")+"</span> · "+safe(x.source)+"</div><div class='muted'>"+safe(x.category.replace(/-/g," "))+"</div><div class='creator-credit'>Artist / source attribution: "+safe(x.creator||"not established")+"</div><div class='source-name'>Original source label: "+safe(x.originalSourceName||x.name)+" · "+safe(x.nameConfidence||"historical")+"</div>";
 card.appendChild(top);
 var views=document.createElement("div");views.className="sprites";views.appendChild(imageCell(x.front,"FRONT"));views.appendChild(imageCell(x.back,"BACK"));card.appendChild(views);
-var detail=document.createElement("div");detail.className="detail";detail.innerHTML="<span>"+safe(x.reason||"")+"</span>"+(x.suggested?" <em>Suggestion: "+safe(({"shortlist":"SHORTLIST","prefer-native":"PREFER NATIVE DS","alternate":"COMPARE ALTERNATE","compare":"COMPARE BOTH","confirm":"CONFIRM DECISION"})[x.suggested]||"REVIEW")+".</em> "+safe(x.suggestionReason||""):"")+(x.holdReason?" <em>TECHNICAL HOLD: "+safe(x.holdReason)+"</em>":"");card.appendChild(detail);
+var detail=document.createElement("div");detail.className="detail";detail.innerHTML="<span>"+safe(x.reason||"")+"</span>"+(x.suggested?" <em>Suggestion: "+safe(({"shortlist":"SHORTLIST","prefer-native":"PREFER NATIVE DS","alternate":"COMPARE ALTERNATE","compare":"COMPARE BOTH","confirm":"CONFIRM DECISION"})[x.suggested]||"REVIEW")+".</em> "+safe(x.suggestionReason||""):"")+(x.holdReason?" <em>TECHNICAL HOLD: "+safe(x.holdReason)+"</em>":"")+(x.previewOnly?" <em>GBA SOURCE PREVIEW: DS conversion not yet verified.</em>":"");card.appendChild(detail);
 var identity=x.identityFlag&&!state.identityVerified?identityWarning(x):null;if(identity)card.appendChild(identity);
 if(isIdentity){if(x.identityFlag&&!state.identityVerified)card.appendChild(identityForm(x));return card}
 if(!isHold){
@@ -200,7 +200,8 @@ function render(){if(!DATA)return;updateStats();
  if(isHold||isIdentity){var q=$("q").value.trim().toLowerCase(),category=$("category").value;pool=pool.filter(function(x){return (category==="all"||x.category===category)&&(!q||[x.name,x.displayName,x.creator,x.family,x.source,x.identity].join(" ").toLowerCase().includes(q))})}
  var map=new Map();pool.forEach(function(x){var k=isIdentity&&x.possibleBaseSpecies?x.possibleBaseSpecies:x.family||x.base||x.name;if(!map.has(k))map.set(k,[]);map.get(k).push(x)});
  var families=Array.from(map.keys()).sort(function(a,b){return a.localeCompare(b,undefined,{numeric:true})}),pageCount=Math.max(1,Math.ceil(families.length/PER_PAGE));PAGE=Math.min(Math.max(PAGE,0),pageCount-1);
- var shown=families.slice(PAGE*PER_PAGE,(PAGE+1)*PER_PAGE),root=$("root");root.replaceChildren();
+ var shown=families.slice(PAGE*PER_PAGE,(PAGE+1)*PER_PAGE),root=$("root");
+ VISIBLE_IDS=new Set(shown.flatMap(function(k){return map.get(k).map(function(x){return x.id})}));root.replaceChildren();
  if(!shown.length){var empty=document.createElement("div");empty.className="empty";empty.textContent=isIdentity?"No unresolved identity labels found.":isHold?"No matching technical holds.":"No matching designs. Clear your filters to see all.";root.appendChild(empty)}
  shown.forEach(function(k){root.appendChild(familyCard(k,map.get(k),isHold,isIdentity))});
  var summary="Page "+(PAGE+1)+" / "+pageCount+" · "+families.length+" families · "+pool.length+" designs";
@@ -257,9 +258,7 @@ $("file").onchange=function(ev){
 };
 $("bulk").onclick=function(){
  var isHold=["holds","identity"].includes($("view").value);if(isHold)return;
- var pool=DATA.entries.filter(allowedRow),map=new Map();pool.forEach(function(x){if(!map.has(x.family))map.set(x.family,[]);map.get(x.family).push(x)});
- var keys=Array.from(map.keys()).sort(function(a,b){return a.localeCompare(b,undefined,{numeric:true})}).slice(PAGE*PER_PAGE,(PAGE+1)*PER_PAGE);
- var batch=keys.flatMap(function(k){return map.get(k)}).filter(function(x){return !getChoice(x.id)&&!x.identityFlag&&["fakemon","new-design"].includes(x.category)});
+ var batch=DATA.entries.filter(function(x){return VISIBLE_IDS.has(x.id)&&!getChoice(x.id)&&!x.identityFlag&&["fakemon","new-design"].includes(x.category)});
  if(!batch.length)return;
  if(!confirm("KEEP "+batch.length+" undecided candidate artworks on THIS page? Competing designs, conflicts, and technical holds are excluded."))return;
  batch.forEach(function(x){apply(x.id,"keep",true)});render();
