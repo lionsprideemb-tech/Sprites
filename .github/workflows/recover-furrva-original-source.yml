@@ -1,0 +1,42 @@
+name: Recover original Furrva source art
+on:
+  push:
+    branches: [main]
+    paths:
+      - "tools/recover_furrva_source.py"
+      - ".github/workflows/recover-furrva-original-source.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: mercury-furrva-original-source
+  cancel-in-progress: false
+
+jobs:
+  recover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out original source library
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Install image verification dependency
+        run: python3 -m pip install --quiet pillow
+      - name: Recover only actual attributed Furrva source front and back
+        run: python3 tools/recover_furrva_source.py
+      - name: Commit original bytes and non-destructive source PNG previews
+        run: |
+          set -euo pipefail
+          git config user.name "Mercury Source Recovery Bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add DS_CUSTOM_LIBRARY/recovered/Pokengine_Mikitari_Furrva_Source/
+          if git diff --cached --quiet; then
+            echo "Source already preserved with matching exact bytes."
+            exit 0
+          fi
+          git commit -m "Recover credited Furrva original front/back sources (no DS integration)"
+          git pull --rebase origin main
+          git push origin HEAD:main
