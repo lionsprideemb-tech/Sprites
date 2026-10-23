@@ -1,0 +1,391 @@
+{
+  "schema": "mercury-oversized-visual-recovery-status-v1",
+  "generated": "2026-10-23",
+  "sourceFiles": {
+    "DS_CUSTOM_LIBRARY/converted/Verified_Source_DS64_Technical_2026_10_23/technical_quality_manifest.json": "493853a105f0c17de1bb7959de7aa5fd8a7289e3",
+    "DS_CUSTOM_LIBRARY/comparison/DS64_Visual_Triage_2026_10_23/comparison_manifest.json": "01829ee1a72c1649234dba69920b16f1de81e19c",
+    "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy_PNG_Container_Repairs/recovery_manifest.json": "a35947bc307b4c7024f9db9c840e980c705fb2ea",
+    "review/user-iphone-decisions-2026-10-23.json": "61c5e53c6ec81b74d192cd62a4c52c970cea15ce",
+    "master-review-data.json": "047ec50ef01f6d8558436ff629e496b58cb0b431"
+  },
+  "inventory": {
+    "sourceSets": 83,
+    "originalApprovedHistoricalVotes": 166,
+    "normalPairs": 27,
+    "fourViewTechnicalSets": 17,
+    "technicalCandidateViews": 108,
+    "technicalOutputViews": 108,
+    "sourcePNGRecovered": 4,
+    "remainingUndecodableOriginals": 0,
+    "nearestNeighborComparisons": 196,
+    "quantizedQualityChecksNeeded": 40,
+    "oversizedBlockedTechnicalSlots": 179,
+    "partialAlphaBlockedTechnicalSlots": 17,
+    "missingOriginalSourceSlots": 28,
+    "remainingIdentityWarnings": 5
+  },
+  "topPaletteVisualCheckCandidates": [
+    {
+      "name": "Poliwag — Alternate (Form 1)",
+      "family": "#0060 Poliwag → #0061 Poliwhirl → #0062 Poliwrath → #0186 Politoed",
+      "slot": "front",
+      "changeFraction": 0.325359,
+      "meanChannelDelta": 3.749,
+      "source": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/poliwag-alternate-form-1/front.png",
+      "preview": "DS_CUSTOM_LIBRARY/converted/Verified_Source_DS64_Technical_2026_10_23/poliwag-alternate-form-1/front.png",
+      "qualityDecision": "pending_user_visual_review"
+    },
+    {
+      "name": "Durant — BlueTowel Alternate form (Form 1)",
+      "family": "#0632 Durant",
+      "slot": "shiny_back",
+      "changeFraction": 0.299757,
+      "meanChannelDelta": 3.04,
+      "source": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/durant-bluetowel-alternate-form-form-1/shiny_back.png",
+      "preview": "DS_CUSTOM_LIBRARY/converted/Verified_Source_DS64_Technical_2026_10_23/durant-bluetowel-alternate-form-form-1/shiny_back.png",
+      "qualityDecision": "pending_user_visual_review"
+    },
+    {
+      "name": "Sunflora — Alternate (Form 1)",
+      "family": "#0191 Sunkern → #0192 Sunflora",
+      "slot": "front",
+      "changeFraction": 0.282967,
+      "meanChannelDelta": 0.773,
+      "source": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/sunflora-alternate-form-1/front.png",
+      "preview": "DS_CUSTOM_LIBRARY/converted/Verified_Source_DS64_Technical_2026_10_23/sunflora-alternate-form-1/front.png",
+      "qualityDecision": "pending_user_visual_review"
+    },
+    {
+      "name": "Sunflora — Alternate (Form 1)",
+      "family": "#0191 Sunkern → #0192 Sunflora",
+      "slot": "back",
+      "changeFraction": 0.276984,
+      "meanChannelDelta": 2.024,
+      "source": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/sunflora-alternate-form-1/back.png",
+      "preview": "DS_CUSTOM_LIBRARY/converted/Verified_Source_DS64_Technical_2026_10_23/sunflora-alternate-form-1/back.png",
+      "qualityDecision": "pending_user_visual_review"
+    },
+    {
+      "name": "Staryu — Alternate (Form 1)",
+      "family": "#0120 Staryu → #0121 Starmie",
+      "slot": "front",
+      "changeFraction": 0.244311,
+      "meanChannelDelta": 2.047,
+      "source": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/staryu-alternate-form-1/front.png",
+      "preview": "DS_CUSTOM_LIBRARY/converted/Verified_Source_DS64_Technical_2026_10_23/staryu-alternate-form-1/front.png",
+      "qualityDecision": "pending_user_visual_review"
+    },
+    {
+      "name": "Durant — BlueTowel Alternate form (Form 1)",
+      "family": "#0632 Durant",
+      "slot": "shiny_front",
+      "changeFraction": 0.235229,
+      "meanChannelDelta": 2.279,
+      "source": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/durant-bluetowel-alternate-form-form-1/shiny_front.png",
+      "preview": "DS_CUSTOM_LIBRARY/converted/Verified_Source_DS64_Technical_2026_10_23/durant-bluetowel-alternate-form-form-1/shiny_front.png",
+      "qualityDecision": "pending_user_visual_review"
+    },
+    {
+      "name": "Butterfree — Alternate (Form 1)",
+      "family": "#0010 Caterpie → #0011 Metapod → #0012 Butterfree",
+      "slot": "front",
+      "changeFraction": 0.227723,
+      "meanChannelDelta": 1.299,
+      "source": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/butterfree-alternate-form-1/front.png",
+      "preview": "DS_CUSTOM_LIBRARY/converted/Verified_Source_DS64_Technical_2026_10_23/butterfree-alternate-form-1/front.png",
+      "qualityDecision": "pending_user_visual_review"
+    },
+    {
+      "name": "Poliwag — Alternate (Form 1)",
+      "family": "#0060 Poliwag → #0061 Poliwhirl → #0062 Poliwrath → #0186 Politoed",
+      "slot": "shiny_front",
+      "changeFraction": 0.227273,
+      "meanChannelDelta": 3.23,
+      "source": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/poliwag-alternate-form-1/shiny_front.png",
+      "preview": "DS_CUSTOM_LIBRARY/converted/Verified_Source_DS64_Technical_2026_10_23/poliwag-alternate-form-1/shiny_front.png",
+      "qualityDecision": "pending_user_visual_review"
+    },
+    {
+      "name": "Probopass — Alternate (Form 1)",
+      "family": "#0299 Nosepass → #0476 Probopass",
+      "slot": "shiny_front",
+      "changeFraction": 0.202209,
+      "meanChannelDelta": 2.409,
+      "source": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/probopass-alternate-form-1/shiny_front.png",
+      "preview": "DS_CUSTOM_LIBRARY/converted/Verified_Source_DS64_Technical_2026_10_23/probopass-alternate-form-1/shiny_front.png",
+      "qualityDecision": "pending_user_visual_review"
+    },
+    {
+      "name": "Poliwag — Alternate (Form 1)",
+      "family": "#0060 Poliwag → #0061 Poliwhirl → #0062 Poliwrath → #0186 Politoed",
+      "slot": "shiny_back",
+      "changeFraction": 0.19685,
+      "meanChannelDelta": 4.562,
+      "source": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/poliwag-alternate-form-1/shiny_back.png",
+      "preview": "DS_CUSTOM_LIBRARY/converted/Verified_Source_DS64_Technical_2026_10_23/poliwag-alternate-form-1/shiny_back.png",
+      "qualityDecision": "pending_user_visual_review"
+    },
+    {
+      "name": "Probopass — Alternate (Form 1)",
+      "family": "#0299 Nosepass → #0476 Probopass",
+      "slot": "front",
+      "changeFraction": 0.196116,
+      "meanChannelDelta": 1.555,
+      "source": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/probopass-alternate-form-1/front.png",
+      "preview": "DS_CUSTOM_LIBRARY/converted/Verified_Source_DS64_Technical_2026_10_23/probopass-alternate-form-1/front.png",
+      "qualityDecision": "pending_user_visual_review"
+    },
+    {
+      "name": "Sunflora — Alternate (Form 1)",
+      "family": "#0191 Sunkern → #0192 Sunflora",
+      "slot": "shiny_front",
+      "changeFraction": 0.174908,
+      "meanChannelDelta": 0.34,
+      "source": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/sunflora-alternate-form-1/shiny_front.png",
+      "preview": "DS_CUSTOM_LIBRARY/converted/Verified_Source_DS64_Technical_2026_10_23/sunflora-alternate-form-1/shiny_front.png",
+      "qualityDecision": "pending_user_visual_review"
+    }
+  ],
+  "incompleteSourceViews": [
+    {
+      "name": "Breloom — Alternate (Form 3)",
+      "key": "breloom-alternate-form-3",
+      "family": "#0285 Shroomish → #0286 Breloom",
+      "slot": "shiny_front",
+      "reviewId": "R0421",
+      "action": "Find matching original creator sprite; do not substitute art"
+    },
+    {
+      "name": "Breloom — Alternate (Form 3)",
+      "key": "breloom-alternate-form-3",
+      "family": "#0285 Shroomish → #0286 Breloom",
+      "slot": "shiny_back",
+      "reviewId": "R0421",
+      "action": "Find matching original creator sprite; do not substitute art"
+    },
+    {
+      "name": "Combee — Alternate (Form 1)",
+      "key": "combee-alternate-form-1",
+      "family": "#0415 Combee → #0416 Vespiquen",
+      "slot": "shiny_front",
+      "reviewId": "R0607",
+      "action": "Find matching original creator sprite; do not substitute art"
+    },
+    {
+      "name": "Combee — Alternate (Form 1)",
+      "key": "combee-alternate-form-1",
+      "family": "#0415 Combee → #0416 Vespiquen",
+      "slot": "shiny_back",
+      "reviewId": "R0607",
+      "action": "Find matching original creator sprite; do not substitute art"
+    },
+    {
+      "name": "Vespiquen — Alternate (Form 1)",
+      "key": "vespiquen-alternate-form-1",
+      "family": "#0415 Combee → #0416 Vespiquen",
+      "slot": "shiny_front",
+      "reviewId": "R0608",
+      "action": "Find matching original creator sprite; do not substitute art"
+    },
+    {
+      "name": "Vespiquen — Alternate (Form 1)",
+      "key": "vespiquen-alternate-form-1",
+      "family": "#0415 Combee → #0416 Vespiquen",
+      "slot": "shiny_back",
+      "reviewId": "R0608",
+      "action": "Find matching original creator sprite; do not substitute art"
+    },
+    {
+      "name": "Dwebble — Alternate (Form 1)",
+      "key": "dwebble-alternate-form-1",
+      "family": "#0557 Dwebble → #0558 Crustle",
+      "slot": "shiny_front",
+      "reviewId": "R0717",
+      "action": "Find matching original creator sprite; do not substitute art"
+    },
+    {
+      "name": "Dwebble — Alternate (Form 1)",
+      "key": "dwebble-alternate-form-1",
+      "family": "#0557 Dwebble → #0558 Crustle",
+      "slot": "shiny_back",
+      "reviewId": "R0717",
+      "action": "Find matching original creator sprite; do not substitute art"
+    },
+    {
+      "name": "Crustle — Alternate (Form 1)",
+      "key": "crustle-alternate-form-1",
+      "family": "#0557 Dwebble → #0558 Crustle",
+      "slot": "shiny_front",
+      "reviewId": "R0718",
+      "action": "Find matching original creator sprite; do not substitute art"
+    },
+    {
+      "name": "Crustle — Alternate (Form 1)",
+      "key": "crustle-alternate-form-1",
+      "family": "#0557 Dwebble → #0558 Crustle",
+      "slot": "shiny_back",
+      "reviewId": "R0718",
+      "action": "Find matching original creator sprite; do not substitute art"
+    },
+    {
+      "name": "Rainther — original battler source artwork",
+      "key": "source_pair_compare_rainther_1",
+      "family": "Dampurr → Rainther → Delugar",
+      "slot": "shiny_front",
+      "reviewId": "compare:rainther:1",
+      "action": "Find matching original creator sprite; do not substitute art"
+    },
+    {
+      "name": "Rainther — original battler source artwork",
+      "key": "source_pair_compare_rainther_1",
+      "family": "Dampurr → Rainther → Delugar",
+      "slot": "shiny_back",
+      "reviewId": "compare:rainther:1",
+      "action": "Find matching original creator sprite; do not substitute art"
+    },
+    {
+      "name": "Rainther — Gen 4 source artwork",
+      "key": "source_pair_compare_rainther_2",
+      "family": "Dampurr → Rainther → Delugar",
+      "slot": "shiny_front",
+      "reviewId": "compare:rainther:2",
+      "action": "Find matching original creator sprite; do not substitute art"
+    },
+    {
+      "name": "Rainther — Gen 4 source artwork",
+      "key": "source_pair_compare_rainther_2",
+      "family": "Dampurr → Rainther → Delugar",
+      "slot": "shiny_back",
+      "reviewId": "compare:rainther:2",
+      "action": "Find matching original creator sprite; do not substitute art"
+    },
+    {
+      "name": "Hissiorite — Design 2",
+      "key": "source_pair_compare_hissiorite_2",
+      "family": "Hissiorite → Cobarett → Pythonova",
+      "slot": "shiny_front",
+      "reviewId": "compare:hissiorite:2",
+      "action": "Find matching original creator sprite; do not substitute art"
+    },
+    {
+      "name": "Hissiorite — Design 2",
+      "key": "source_pair_compare_hissiorite_2",
+      "family": "Hissiorite → Cobarett → Pythonova",
+      "slot": "shiny_back",
+      "reviewId": "compare:hissiorite:2",
+      "action": "Find matching original creator sprite; do not substitute art"
+    },
+    {
+      "name": "Cobarett — Design 2",
+      "key": "source_pair_compare_cobarett_2",
+      "family": "Hissiorite → Cobarett → Pythonova",
+      "slot": "shiny_front",
+      "reviewId": "compare:cobarett:2",
+      "action": "Find matching original creator sprite; do not substitute art"
+    },
+    {
+      "name": "Cobarett — Design 2",
+      "key": "source_pair_compare_cobarett_2",
+      "family": "Hissiorite → Cobarett → Pythonova",
+      "slot": "shiny_back",
+      "reviewId": "compare:cobarett:2",
+      "action": "Find matching original creator sprite; do not substitute art"
+    },
+    {
+      "name": "Pythonova — Design 2",
+      "key": "source_pair_compare_pythonova_2",
+      "family": "Hissiorite → Cobarett → Pythonova",
+      "slot": "shiny_front",
+      "reviewId": "compare:pythonova:2",
+      "action": "Find matching original creator sprite; do not substitute art"
+    },
+    {
+      "name": "Pythonova — Design 2",
+      "key": "source_pair_compare_pythonova_2",
+      "family": "Hissiorite → Cobarett → Pythonova",
+      "slot": "shiny_back",
+      "reviewId": "compare:pythonova:2",
+      "action": "Find matching original creator sprite; do not substitute art"
+    },
+    {
+      "name": "Pythonova — shiny (Gen 3) · asset companion, not a species",
+      "key": "source_pair_compare_pythonovas_1",
+      "family": "Hissiorite → Cobarett → Pythonova",
+      "slot": "shiny_front",
+      "reviewId": "compare:pythonovas:1",
+      "action": "Find matching original creator sprite; do not substitute art"
+    },
+    {
+      "name": "Pythonova — shiny (Gen 3) · asset companion, not a species",
+      "key": "source_pair_compare_pythonovas_1",
+      "family": "Hissiorite → Cobarett → Pythonova",
+      "slot": "shiny_back",
+      "reviewId": "compare:pythonovas:1",
+      "action": "Find matching original creator sprite; do not substitute art"
+    },
+    {
+      "name": "Pythonova — shiny (Gen 4-5) · asset companion, not a species",
+      "key": "source_pair_compare_pythonovas_2",
+      "family": "Hissiorite → Cobarett → Pythonova",
+      "slot": "shiny_front",
+      "reviewId": "compare:pythonovas:2",
+      "action": "Find matching original creator sprite; do not substitute art"
+    },
+    {
+      "name": "Pythonova — shiny (Gen 4-5) · asset companion, not a species",
+      "key": "source_pair_compare_pythonovas_2",
+      "family": "Hissiorite → Cobarett → Pythonova",
+      "slot": "shiny_back",
+      "reviewId": "compare:pythonovas:2",
+      "action": "Find matching original creator sprite; do not substitute art"
+    },
+    {
+      "name": "Noctowl — Atsui-source regional variant (source pair recovered)",
+      "key": "source_pair_compare_noctowl-1_1",
+      "family": "Hoothoot → Noctowl (Atsui variant; Enchantowl pairing unverified)",
+      "slot": "shiny_front",
+      "reviewId": "compare:noctowl-1:1",
+      "action": "Find matching original creator sprite; do not substitute art"
+    },
+    {
+      "name": "Noctowl — Atsui-source regional variant (source pair recovered)",
+      "key": "source_pair_compare_noctowl-1_1",
+      "family": "Hoothoot → Noctowl (Atsui variant; Enchantowl pairing unverified)",
+      "slot": "shiny_back",
+      "reviewId": "compare:noctowl-1:1",
+      "action": "Find matching original creator sprite; do not substitute art"
+    },
+    {
+      "name": "Furrva",
+      "key": "pokengine_mikitari_furrva_original",
+      "family": "Furrva → Kocomb → Granebee / Beelitant",
+      "slot": "shiny_front",
+      "reviewId": null,
+      "action": "Find matching original creator sprite; do not substitute art"
+    },
+    {
+      "name": "Furrva",
+      "key": "pokengine_mikitari_furrva_original",
+      "family": "Furrva → Kocomb → Granebee / Beelitant",
+      "slot": "shiny_back",
+      "reviewId": null,
+      "action": "Find matching original creator sprite; do not substitute art"
+    }
+  ],
+  "lastUnresolvedEvolutionIdentityNames": [
+    "Hayog",
+    "Hogouse",
+    "Hogriks",
+    "Minamai",
+    "Marelstorm"
+  ],
+  "safeguards": {
+    "historicalVotesUntouched": true,
+    "sourcePNGRepairsStripAncillaryOnly": true,
+    "normalAndShinyArtworkNotFabricated": true,
+    "nearestNeighborPreviewsComparisonOnly": true,
+    "qualityChecksSeparateFromCreativeVotes": true,
+    "nativeDSCertified": false,
+    "ROMIntegrated": false
+  }
+}
