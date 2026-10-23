@@ -1,0 +1,2813 @@
+{
+  "schema": "mercury-sprite-repair-queue-v1",
+  "generated": "2026-10-23",
+  "destructiveActionsTaken": 0,
+  "historicalApprovedMissingMappedPaths": [
+    {
+      "identity": "butterfree-alternate-form-1",
+      "name": "Butterfree — Alternate (Form 1)",
+      "source": "Reborn / Plates of Arceus",
+      "resolution": "legacy-embedded",
+      "reason": "Approved design requires linked DS sprite pair verification."
+    },
+    {
+      "identity": "pikachu-mega",
+      "name": "Pikachu Mega",
+      "source": "Elite Redux",
+      "resolution": "unresolved",
+      "reason": "Approved design requires linked DS sprite pair verification."
+    },
+    {
+      "identity": "wigglytuff-mega-y",
+      "name": "Wigglytuff Mega Y",
+      "source": "Elite Redux",
+      "resolution": "unresolved",
+      "reason": "Approved design requires linked DS sprite pair verification."
+    },
+    {
+      "identity": "poliwag-alternate-form-1",
+      "name": "Poliwag — Alternate (Form 1)",
+      "source": "Reborn / Plates of Arceus",
+      "resolution": "legacy-embedded",
+      "reason": "Approved design requires linked DS sprite pair verification."
+    },
+    {
+      "identity": "poliwhirl-alternate-form-1",
+      "name": "Poliwhirl — Alternate (Form 1)",
+      "source": "Reborn / Plates of Arceus",
+      "resolution": "legacy-embedded",
+      "reason": "Approved design requires linked DS sprite pair verification."
+    },
+    {
+      "identity": "poliwrath-alternate-form-1",
+      "name": "Poliwrath — Alternate (Form 1)",
+      "source": "Reborn / Plates of Arceus",
+      "resolution": "legacy-embedded",
+      "reason": "Approved design requires linked DS sprite pair verification."
+    },
+    {
+      "identity": "politoed-alternate-form-1",
+      "name": "Politoed — Alternate (Form 1)",
+      "source": "Reborn / Plates of Arceus",
+      "resolution": "legacy-embedded",
+      "reason": "Approved design requires linked DS sprite pair verification."
+    },
+    {
+      "identity": "geodude-bluetowel-alternate-forms-form-2",
+      "name": "Geodude — BlueTowel Alternate forms (Form 2)",
+      "source": "Reborn / Plates of Arceus",
+      "resolution": "legacy-embedded",
+      "reason": "Approved design requires linked DS sprite pair verification."
+    },
+    {
+      "identity": "graveler-bluetowel-alternate-forms-form-2",
+      "name": "Graveler — BlueTowel Alternate forms (Form 2)",
+      "source": "Reborn / Plates of Arceus",
+      "resolution": "legacy-embedded",
+      "reason": "Approved design requires linked DS sprite pair verification."
+    },
+    {
+      "identity": "golem-bluetowel-alternate-forms-form-2",
+      "name": "Golem — BlueTowel Alternate forms (Form 2)",
+      "source": "Reborn / Plates of Arceus",
+      "resolution": "legacy-embedded",
+      "reason": "Approved design requires linked DS sprite pair verification."
+    },
+    {
+      "identity": "koffing-bluetowel-alternate-forms-form-2",
+      "name": "Koffing — BlueTowel Alternate forms (Form 2)",
+      "source": "Reborn / Plates of Arceus",
+      "resolution": "legacy-embedded",
+      "reason": "Approved design requires linked DS sprite pair verification."
+    },
+    {
+      "identity": "weezing-bluetowel-alternate-forms-form-2",
+      "name": "Weezing — BlueTowel Alternate forms (Form 2)",
+      "source": "Reborn / Plates of Arceus",
+      "resolution": "legacy-embedded",
+      "reason": "Approved design requires linked DS sprite pair verification."
+    },
+    {
+      "identity": "mega-rhyperior",
+      "name": "Mega Rhyperior",
+      "source": "Banished Platinum / Original Megas",
+      "resolution": "unresolved",
+      "reason": "Approved design requires linked DS sprite pair verification."
+    },
+    {
+      "identity": "mega-tangrowth",
+      "name": "Mega Tangrowth",
+      "source": "Banished Platinum / Original Megas",
+      "resolution": "unresolved",
+      "reason": "Approved design requires linked DS sprite pair verification."
+    },
+    {
+      "identity": "kingdra-mega-x",
+      "name": "Kingdra Mega X",
+      "source": "Elite Redux",
+      "resolution": "unresolved",
+      "reason": "Approved design requires linked DS sprite pair verification."
+    },
+    {
+      "identity": "staryu-alternate-form-1",
+      "name": "Staryu — Alternate (Form 1)",
+      "source": "Reborn / Plates of Arceus",
+      "resolution": "legacy-embedded",
+      "reason": "Approved design requires linked DS sprite pair verification."
+    },
+    {
+      "identity": "starmie-alternate-form-1",
+      "name": "Starmie — Alternate (Form 1)",
+      "source": "Reborn / Plates of Arceus",
+      "resolution": "legacy-embedded",
+      "reason": "Approved design requires linked DS sprite pair verification."
+    },
+    {
+      "identity": "mega-electivire",
+      "name": "Mega Electivire",
+      "source": "Banished Platinum / Original Megas",
+      "resolution": "unresolved",
+      "reason": "Approved design requires linked DS sprite pair verification."
+    },
+    {
+      "identity": "mega-magmortar",
+      "name": "Mega Magmortar",
+      "source": "Banished Platinum / Original Megas",
+      "resolution": "unresolved",
+      "reason": "Approved design requires linked DS sprite pair verification."
+    },
+    {
+      "identity": "lapras-mega-y",
+      "name": "Lapras Mega Y",
+      "source": "Elite Redux",
+      "resolution": "unresolved",
+      "reason": "Approved design requires linked DS sprite pair verification."
+    },
+    {
+      "identity": "eevee-mega",
+      "name": "Eevee Mega",
+      "source": "Elite Redux",
+      "resolution": "unresolved",
+      "reason": "Approved design requires linked DS sprite pair verification."
+    },
+    {
+      "identity": "flareon-alternate-form-3",
+      "name": "Flareon — Alternate (Form 3)",
+      "source": "Reborn / Plates of Arceus",
+      "resolution": "legacy-embedded",
+      "reason": "Approved design requires linked DS sprite pair verification."
+    },
+    {
+      "identity": "leafeon-alternate-form-3",
+      "name": "Leafeon — Alternate (Form 3)",
+      "source": "Reborn / Plates of Arceus",
+      "resolution": "legacy-embedded",
+      "reason": "Approved design requires linked DS sprite pair verification."
+    },
+    {
+      "identity": "glaceon-alternate-form-3",
+      "name": "Glaceon — Alternate (Form 3)",
+      "source": "Reborn / Plates of Arceus",
+      "resolution": "legacy-embedded",
+      "reason": "Approved design requires linked DS sprite pair verification."
+    },
+    {
+      "identity": "mega-porygon",
+      "name": "Mega Porygon",
+      "source": "Banished Platinum / Original Megas",
+      "resolution": "unresolved",
+      "reason": "Approved design requires linked DS sprite pair verification."
+    },
+    {
+      "identity": "articuno-mega",
+      "name": "Articuno Mega",
+      "source": "Elite Redux",
+      "resolution": "unresolved",
+      "reason": "Approved design requires linked DS sprite pair verification."
+    },
+    {
+      "identity": "zapdos-mega",
+      "name": "Zapdos Mega",
+      "source": "Elite Redux",
+      "resolution": "unresolved",
+      "reason": "Approved design requires linked DS sprite pair verification."
+    },
+    {
+      "identity": "moltres-mega",
+      "name": "Moltres Mega",
+      "source": "Elite Redux",
+      "resolution": "unresolved",
+      "reason": "Approved design requires linked DS sprite pair verification."
+    },
+    {
+      "identity": "dragonite-alternate-form-1",
+      "name": "Dragonite — Alternate (Form 1)",
+      "source": "Reborn / Plates of Arceus",
+      "resolution": "legacy-embedded",
+      "reason": "Approved design requires linked DS sprite pair verification."
+    },
+    {
+      "identity": "feraligatr-alternate-form-1",
+      "name": "Feraligatr — Alternate (Form 1)",
+      "source": "Reborn / Plates of Arceus",
+      "resolution": "legacy-embedded",
+      "reason": "Approved design requires linked DS sprite pair verification."
+    },
+    {
+      "identity": "hoothoot-alternate-form-1",
+      "name": "Hoothoot — Alternate (Form 1)",
+      "source": "Reborn / Plates of Arceus",
+      "resolution": "legacy-embedded",
+      "reason": "Approved design requires linked DS sprite pair verification."
+    },
+    {
+      "identity": "ampharos-alternate-mega-form-3",
+      "name": "Ampharos — Alternate Mega (Form 3)",
+      "source": "Reborn / Plates of Arceus",
+      "resolution": "legacy-embedded",
+      "reason": "Approved design requires linked DS sprite pair verification."
+    },
+    {
+      "identity": "sunflora-alternate-form-1",
+      "name": "Sunflora — Alternate (Form 1)",
+      "source": "Reborn / Plates of Arceus",
+      "resolution": "legacy-embedded",
+      "reason": "Approved design requires linked DS sprite pair verification."
+    },
+    {
+      "identity": "mega-yanmega",
+      "name": "Mega Yanmega",
+      "source": "Banished Platinum / Original Megas",
+      "resolution": "unresolved",
+      "reason": "Approved design requires linked DS sprite pair verification."
+    },
+    {
+      "identity": "mega-honchkrow",
+      "name": "Mega Honchkrow",
+      "source": "Banished Platinum / Original Megas",
+      "resolution": "unresolved",
+      "reason": "Approved design requires linked DS sprite pair verification."
+    },
+    {
+      "identity": "misdreavus-alternate-form-2",
+      "name": "Misdreavus — Alternate (Form 2)",
+      "source": "Reborn / Plates of Arceus",
+      "resolution": "legacy-embedded",
+      "reason": "Approved design requires linked DS sprite pair verification."
+    },
+    {
+      "identity": "mismagius-alternate-form-2",
+      "name": "Mismagius — Alternate (Form 2)",
+      "source": "Reborn / Plates of Arceus",
+      "resolution": "legacy-embedded",
+      "reason": "Approved design requires linked DS sprite pair verification."
+    },
+    {
+      "identity": "dunsparce-bt-alt-forms-earth-form-2",
+      "name": "Dunsparce — BT Alt Forms - Earth (Form 2)",
+      "source": "Reborn / Plates of Arceus",
+      "resolution": "legacy-embedded",
+      "reason": "Approved design requires linked DS sprite pair verification."
+    },
+    {
+      "identity": "gliscor-alternate-form-1",
+      "name": "Gliscor — Alternate (Form 1)",
+      "source": "Reborn / Plates of Arceus",
+      "resolution": "legacy-embedded",
+      "reason": "Approved design requires linked DS sprite pair verification."
+    },
+    {
+      "identity": "snubbull-alternate-form-1",
+      "name": "Snubbull — Alternate (Form 1)",
+      "source": "Reborn / Plates of Arceus",
+      "resolution": "legacy-embedded",
+      "reason": "Approved design requires linked DS sprite pair verification."
+    },
+    {
+      "identity": "granbull-alternate-form-1",
+      "name": "Granbull — Alternate (Form 1)",
+      "source": "Reborn / Plates of Arceus",
+      "resolution": "legacy-embedded",
+      "reason": "Approved design requires linked DS sprite pair verification."
+    },
+    {
+      "identity": "mega-weavile",
+      "name": "Mega Weavile",
+      "source": "Banished Platinum / Original Megas",
+      "resolution": "unresolved",
+      "reason": "Approved design requires linked DS sprite pair verification."
+    },
+    {
+      "identity": "mega-mamoswine",
+      "name": "Mega Mamoswine",
+      "source": "Banished Platinum / Original Megas",
+      "resolution": "unresolved",
+      "reason": "Approved design requires linked DS sprite pair verification."
+    },
+    {
+      "identity": "mamoswine-mega",
+      "name": "Mamoswine Mega",
+      "source": "Elite Redux",
+      "resolution": "unresolved",
+      "reason": "Approved design requires linked DS sprite pair verification."
+    },
+    {
+      "identity": "skarmory-mega-x",
+      "name": "Skarmory Mega X",
+      "source": "Elite Redux",
+      "resolution": "unresolved",
+      "reason": "Approved design requires linked DS sprite pair verification."
+    },
+    {
+      "identity": "donphan-alternate-form-1",
+      "name": "Donphan — Alternate (Form 1)",
+      "source": "Reborn / Plates of Arceus",
+      "resolution": "legacy-embedded",
+      "reason": "Approved design requires linked DS sprite pair verification."
+    },
+    {
+      "identity": "larvitar-space-form-4",
+      "name": "Larvitar — Space (Form 4)",
+      "source": "Reborn / Plates of Arceus",
+      "resolution": "legacy-embedded",
+      "reason": "Approved design requires linked DS sprite pair verification."
+    },
+    {
+      "identity": "pupitar-space-form-4",
+      "name": "Pupitar — Space (Form 4)",
+      "source": "Reborn / Plates of Arceus",
+      "resolution": "legacy-embedded",
+      "reason": "Approved design requires linked DS sprite pair verification."
+    },
+    {
+      "identity": "tyranitar-space-form-4",
+      "name": "Tyranitar — Space (Form 4)",
+      "source": "Reborn / Plates of Arceus",
+      "resolution": "legacy-embedded",
+      "reason": "Approved design requires linked DS sprite pair verification."
+    },
+    {
+      "identity": "breloom-alternate-form-3",
+      "name": "Breloom — Alternate (Form 3)",
+      "source": "Reborn / Plates of Arceus",
+      "resolution": "legacy-embedded",
+      "reason": "Approved design requires linked DS sprite pair verification."
+    },
+    {
+      "identity": "delta-eelektross",
+      "name": "Platinum Redux Shedinja",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "resolution": "unresolved",
+      "reason": "Approved design requires linked DS sprite pair verification."
+    },
+    {
+      "identity": "mega-probopass",
+      "name": "Mega Probopass",
+      "source": "Banished Platinum / Original Megas",
+      "resolution": "unresolved",
+      "reason": "Approved design requires linked DS sprite pair verification."
+    },
+    {
+      "identity": "probopass-alternate-form-1",
+      "name": "Probopass — Alternate (Form 1)",
+      "source": "Reborn / Plates of Arceus",
+      "resolution": "legacy-embedded",
+      "reason": "Approved design requires linked DS sprite pair verification."
+    },
+    {
+      "identity": "mega-roserade",
+      "name": "Mega Roserade",
+      "source": "Banished Platinum / Original Megas",
+      "resolution": "unresolved",
+      "reason": "Approved design requires linked DS sprite pair verification."
+    },
+    {
+      "identity": "altaria-alternate-form-2",
+      "name": "Altaria — Alternate (Form 2)",
+      "source": "Reborn / Plates of Arceus",
+      "resolution": "legacy-embedded",
+      "reason": "Approved design requires linked DS sprite pair verification."
+    },
+    {
+      "identity": "altaria-alternate-mega-form-3",
+      "name": "Altaria — Alternate Mega (Form 3)",
+      "source": "Reborn / Plates of Arceus",
+      "resolution": "legacy-embedded",
+      "reason": "Approved design requires linked DS sprite pair verification."
+    },
+    {
+      "identity": "revenclaw",
+      "name": "Revenclaw",
+      "source": "Mercury Redux Custom",
+      "resolution": "unresolved",
+      "reason": "Approved design requires linked DS sprite pair verification."
+    },
+    {
+      "identity": "venagon",
+      "name": "Venagon",
+      "source": "Mercury Redux Custom",
+      "resolution": "unresolved",
+      "reason": "Approved design requires linked DS sprite pair verification."
+    },
+    {
+      "identity": "mega-milotic",
+      "name": "Mega Milotic",
+      "source": "Banished Platinum / Original Megas",
+      "resolution": "unresolved",
+      "reason": "Approved design requires linked DS sprite pair verification."
+    },
+    {
+      "identity": "dusknoir-alternate-form-1",
+      "name": "Dusknoir — Alternate (Form 1)",
+      "source": "Reborn / Plates of Arceus",
+      "resolution": "legacy-embedded",
+      "reason": "Approved design requires linked DS sprite pair verification."
+    },
+    {
+      "identity": "froslass-mega-x",
+      "name": "Froslass Mega X",
+      "source": "Elite Redux",
+      "resolution": "unresolved",
+      "reason": "Approved design requires linked DS sprite pair verification."
+    },
+    {
+      "identity": "salamence-alternate-form-2",
+      "name": "Salamence — Alternate (Form 2)",
+      "source": "Reborn / Plates of Arceus",
+      "resolution": "legacy-embedded",
+      "reason": "Approved design requires linked DS sprite pair verification."
+    },
+    {
+      "identity": "salamence-alternate-mega-form-3",
+      "name": "Salamence — Alternate Mega (Form 3)",
+      "source": "Reborn / Plates of Arceus",
+      "resolution": "legacy-embedded",
+      "reason": "Approved design requires linked DS sprite pair verification."
+    },
+    {
+      "identity": "metang-alternate-form-2",
+      "name": "Metang — Alternate (Form 2)",
+      "source": "Reborn / Plates of Arceus",
+      "resolution": "legacy-embedded",
+      "reason": "Approved design requires linked DS sprite pair verification."
+    },
+    {
+      "identity": "metagross-alternate-form-2",
+      "name": "Metagross — Alternate (Form 2)",
+      "source": "Reborn / Plates of Arceus",
+      "resolution": "legacy-embedded",
+      "reason": "Approved design requires linked DS sprite pair verification."
+    },
+    {
+      "identity": "metagross-alternate-mega-form-3",
+      "name": "Metagross — Alternate Mega (Form 3)",
+      "source": "Reborn / Plates of Arceus",
+      "resolution": "legacy-embedded",
+      "reason": "Approved design requires linked DS sprite pair verification."
+    },
+    {
+      "identity": "mega-rampardos",
+      "name": "Mega Rampardos",
+      "source": "Banished Platinum / Original Megas",
+      "resolution": "unresolved",
+      "reason": "Approved design requires linked DS sprite pair verification."
+    },
+    {
+      "identity": "mega-bastiodon",
+      "name": "Mega Bastiodon",
+      "source": "Banished Platinum / Original Megas",
+      "resolution": "unresolved",
+      "reason": "Approved design requires linked DS sprite pair verification."
+    },
+    {
+      "identity": "combee-alternate-form-1",
+      "name": "Combee — Alternate (Form 1)",
+      "source": "Reborn / Plates of Arceus",
+      "resolution": "legacy-embedded",
+      "reason": "Approved design requires linked DS sprite pair verification."
+    },
+    {
+      "identity": "vespiquen-alternate-form-1",
+      "name": "Vespiquen — Alternate (Form 1)",
+      "source": "Reborn / Plates of Arceus",
+      "resolution": "legacy-embedded",
+      "reason": "Approved design requires linked DS sprite pair verification."
+    },
+    {
+      "identity": "mega-spiritomb",
+      "name": "Mega Spiritomb",
+      "source": "Banished Platinum / Original Megas",
+      "resolution": "unresolved",
+      "reason": "Approved design requires linked DS sprite pair verification."
+    },
+    {
+      "identity": "carnivine-alternate-form-2",
+      "name": "Carnivine — Alternate (Form 2)",
+      "source": "Reborn / Plates of Arceus",
+      "resolution": "legacy-embedded",
+      "reason": "Approved design requires linked DS sprite pair verification."
+    },
+    {
+      "identity": "purrloin-alternate-form-1",
+      "name": "Purrloin — Alternate (Form 1)",
+      "source": "Reborn / Plates of Arceus",
+      "resolution": "legacy-embedded",
+      "reason": "Approved design requires linked DS sprite pair verification."
+    },
+    {
+      "identity": "liepard-alternate-form-1",
+      "name": "Liepard — Alternate (Form 1)",
+      "source": "Reborn / Plates of Arceus",
+      "resolution": "legacy-embedded",
+      "reason": "Approved design requires linked DS sprite pair verification."
+    },
+    {
+      "identity": "munna-alternate-form-1",
+      "name": "Munna — Alternate (Form 1)",
+      "source": "Reborn / Plates of Arceus",
+      "resolution": "legacy-embedded",
+      "reason": "Approved design requires linked DS sprite pair verification."
+    },
+    {
+      "identity": "musharna-alternate-form-1",
+      "name": "Musharna — Alternate (Form 1)",
+      "source": "Reborn / Plates of Arceus",
+      "resolution": "legacy-embedded",
+      "reason": "Approved design requires linked DS sprite pair verification."
+    },
+    {
+      "identity": "petilil-alternate-form-1",
+      "name": "Petilil — Alternate (Form 1)",
+      "source": "Reborn / Plates of Arceus",
+      "resolution": "legacy-embedded",
+      "reason": "Approved design requires linked DS sprite pair verification."
+    },
+    {
+      "identity": "lilligant-alternate-form-1",
+      "name": "Lilligant — Alternate (Form 1)",
+      "source": "Reborn / Plates of Arceus",
+      "resolution": "legacy-embedded",
+      "reason": "Approved design requires linked DS sprite pair verification."
+    },
+    {
+      "identity": "sandile-alternate-form-1",
+      "name": "Sandile — Alternate (Form 1)",
+      "source": "Reborn / Plates of Arceus",
+      "resolution": "legacy-embedded",
+      "reason": "Approved design requires linked DS sprite pair verification."
+    },
+    {
+      "identity": "krokorok-alternate-form-1",
+      "name": "Krokorok — Alternate (Form 1)",
+      "source": "Reborn / Plates of Arceus",
+      "resolution": "legacy-embedded",
+      "reason": "Approved design requires linked DS sprite pair verification."
+    },
+    {
+      "identity": "krookodile-alternate-form-1",
+      "name": "Krookodile — Alternate (Form 1)",
+      "source": "Reborn / Plates of Arceus",
+      "resolution": "legacy-embedded",
+      "reason": "Approved design requires linked DS sprite pair verification."
+    },
+    {
+      "identity": "blunder-darmanitan",
+      "name": "Blunder-Darmanitan",
+      "source": "Elite Redux",
+      "resolution": "unresolved",
+      "reason": "Approved design requires linked DS sprite pair verification."
+    },
+    {
+      "identity": "dwebble-alternate-form-1",
+      "name": "Dwebble — Alternate (Form 1)",
+      "source": "Reborn / Plates of Arceus",
+      "resolution": "legacy-embedded",
+      "reason": "Approved design requires linked DS sprite pair verification."
+    },
+    {
+      "identity": "crustle-alternate-form-1",
+      "name": "Crustle — Alternate (Form 1)",
+      "source": "Reborn / Plates of Arceus",
+      "resolution": "legacy-embedded",
+      "reason": "Approved design requires linked DS sprite pair verification."
+    },
+    {
+      "identity": "escavalier-alternate-form-1",
+      "name": "Escavalier — Alternate (Form 1)",
+      "source": "Reborn / Plates of Arceus",
+      "resolution": "legacy-embedded",
+      "reason": "Approved design requires linked DS sprite pair verification."
+    },
+    {
+      "identity": "accelgor-alternate-form-1",
+      "name": "Accelgor — Alternate (Form 1)",
+      "source": "Reborn / Plates of Arceus",
+      "resolution": "legacy-embedded",
+      "reason": "Approved design requires linked DS sprite pair verification."
+    },
+    {
+      "identity": "chandelure-mega-x",
+      "name": "Chandelure Mega X",
+      "source": "Elite Redux",
+      "resolution": "unresolved",
+      "reason": "Approved design requires linked DS sprite pair verification."
+    },
+    {
+      "identity": "cryogonal-alternate-form-1",
+      "name": "Cryogonal — Alternate (Form 1)",
+      "source": "Reborn / Plates of Arceus",
+      "resolution": "legacy-embedded",
+      "reason": "Approved design requires linked DS sprite pair verification."
+    },
+    {
+      "identity": "mienfoo-bluetowel-alternate-form-form-1",
+      "name": "Mienfoo — BlueTowel Alternate form (Form 1)",
+      "source": "Reborn / Plates of Arceus",
+      "resolution": "legacy-embedded",
+      "reason": "Approved design requires linked DS sprite pair verification."
+    },
+    {
+      "identity": "mienshao-bluetowel-alternate-form-form-1",
+      "name": "Mienshao — BlueTowel Alternate form (Form 1)",
+      "source": "Reborn / Plates of Arceus",
+      "resolution": "legacy-embedded",
+      "reason": "Approved design requires linked DS sprite pair verification."
+    },
+    {
+      "identity": "durant-bluetowel-alternate-form-form-1",
+      "name": "Durant — BlueTowel Alternate form (Form 1)",
+      "source": "Reborn / Plates of Arceus",
+      "resolution": "legacy-embedded",
+      "reason": "Approved design requires linked DS sprite pair verification."
+    },
+    {
+      "identity": "aegislash-mega",
+      "name": "Aegislash Mega",
+      "source": "Elite Redux",
+      "resolution": "unresolved",
+      "reason": "Approved design requires linked DS sprite pair verification."
+    },
+    {
+      "identity": "tyrunt-alternate-form-1",
+      "name": "Tyrunt — Alternate (Form 1)",
+      "source": "Reborn / Plates of Arceus",
+      "resolution": "legacy-embedded",
+      "reason": "Approved design requires linked DS sprite pair verification."
+    },
+    {
+      "identity": "tyrantrum-alternate-form-1",
+      "name": "Tyrantrum — Alternate (Form 1)",
+      "source": "Reborn / Plates of Arceus",
+      "resolution": "legacy-embedded",
+      "reason": "Approved design requires linked DS sprite pair verification."
+    },
+    {
+      "identity": "noibat-alternate-form-1",
+      "name": "Noibat — Alternate (Form 1)",
+      "source": "Reborn / Plates of Arceus",
+      "resolution": "legacy-embedded",
+      "reason": "Approved design requires linked DS sprite pair verification."
+    },
+    {
+      "identity": "noivern-alternate-form-1",
+      "name": "Noivern — Alternate (Form 1)",
+      "source": "Reborn / Plates of Arceus",
+      "resolution": "legacy-embedded",
+      "reason": "Approved design requires linked DS sprite pair verification."
+    },
+    {
+      "identity": "hakamo-o-alternate-form-1",
+      "name": "Hakamo-o — Alternate (Form 1)",
+      "source": "Reborn / Plates of Arceus",
+      "resolution": "legacy-embedded",
+      "reason": "Approved design requires linked DS sprite pair verification."
+    },
+    {
+      "identity": "kommo-o-alternate-form-1",
+      "name": "Kommo-o — Alternate (Form 1)",
+      "source": "Reborn / Plates of Arceus",
+      "resolution": "legacy-embedded",
+      "reason": "Approved design requires linked DS sprite pair verification."
+    },
+    {
+      "identity": "clawtificer",
+      "name": "Clawtificer",
+      "source": "Elite Redux",
+      "resolution": "unresolved",
+      "reason": "Approved design requires linked DS sprite pair verification."
+    },
+    {
+      "identity": "corn-tyrant",
+      "name": "Corn Tyrant",
+      "source": "Elite Redux",
+      "resolution": "unresolved",
+      "reason": "Approved design requires linked DS sprite pair verification."
+    },
+    {
+      "identity": "crag-hopper",
+      "name": "Crag Hopper",
+      "source": "Elite Redux",
+      "resolution": "unresolved",
+      "reason": "Approved design requires linked DS sprite pair verification."
+    },
+    {
+      "identity": "crawdauntless",
+      "name": "Crawdauntless",
+      "source": "Elite Redux",
+      "resolution": "unresolved",
+      "reason": "Approved design requires linked DS sprite pair verification."
+    },
+    {
+      "identity": "gyarevelry",
+      "name": "Gyarevelry",
+      "source": "Elite Redux",
+      "resolution": "unresolved",
+      "reason": "Approved design requires linked DS sprite pair verification."
+    },
+    {
+      "identity": "heliomodo",
+      "name": "Heliomodo",
+      "source": "Elite Redux",
+      "resolution": "unresolved",
+      "reason": "Approved design requires linked DS sprite pair verification."
+    },
+    {
+      "identity": "lucineon",
+      "name": "Lucineon",
+      "source": "Elite Redux",
+      "resolution": "unresolved",
+      "reason": "Approved design requires linked DS sprite pair verification."
+    },
+    {
+      "identity": "magnemous",
+      "name": "Magnemous",
+      "source": "Elite Redux",
+      "resolution": "unresolved",
+      "reason": "Approved design requires linked DS sprite pair verification."
+    },
+    {
+      "identity": "terrow",
+      "name": "Terrow",
+      "source": "Elite Redux",
+      "resolution": "unresolved",
+      "reason": "Approved design requires linked DS sprite pair verification."
+    }
+  ],
+  "technicalHolds": [
+    {
+      "id": "new:farfetch-d-alternate-form-1",
+      "identity": "farfetch-d-alternate-form-1",
+      "name": "Farfetch'd — Alternate (Form 1)",
+      "source": "Reborn_Plates",
+      "front": "",
+      "back": "",
+      "reason": "Missing actual front/back file"
+    },
+    {
+      "id": "new:ribombee-bluetowel-alternate-form-form-2",
+      "identity": "ribombee-bluetowel-alternate-form-form-2",
+      "name": "Ribombee — BlueTowel Alternate form (Form 2)",
+      "source": "Reborn_Plates",
+      "front": "",
+      "back": "",
+      "reason": "Missing actual front/back file"
+    },
+    {
+      "id": "new:sirfetch-d-alternate-form-1",
+      "identity": "sirfetch-d-alternate-form-1",
+      "name": "Sirfetch'd — Alternate (Form 1)",
+      "source": "Reborn_Plates",
+      "front": "",
+      "back": "",
+      "reason": "Missing actual front/back file"
+    },
+    {
+      "id": "new:meganium-mega",
+      "identity": "meganium-mega",
+      "name": "MEGANIUM_MEGA",
+      "source": "Elite_Redux",
+      "front": "DS_CUSTOM_LIBRARY/converted/Final_262_Polished/meganium_mega/front.png",
+      "back": "DS_CUSTOM_LIBRARY/converted/Final_262_Polished/meganium_mega/back.png",
+      "reason": "Custom type needs verification"
+    },
+    {
+      "id": "new:meowstic-mega",
+      "identity": "meowstic-mega",
+      "name": "MEOWSTIC_MEGA",
+      "source": "Elite_Redux",
+      "front": "DS_CUSTOM_LIBRARY/converted/Final_262_Polished/meowstic_mega/front.png",
+      "back": "DS_CUSTOM_LIBRARY/converted/Final_262_Polished/meowstic_mega/back.png",
+      "reason": "Custom type needs verification"
+    },
+    {
+      "id": "new:pyroar-mega",
+      "identity": "pyroar-mega",
+      "name": "PYROAR_MEGA",
+      "source": "Elite_Redux",
+      "front": "DS_CUSTOM_LIBRARY/converted/Final_262_Polished/pyroar_mega/front.png",
+      "back": "DS_CUSTOM_LIBRARY/converted/Final_262_Polished/pyroar_mega/back.png",
+      "reason": "Custom type needs verification"
+    },
+    {
+      "id": "new:raichu-mega-x",
+      "identity": "raichu-mega-x",
+      "name": "RAICHU_MEGA_X",
+      "source": "Elite_Redux",
+      "front": "DS_CUSTOM_LIBRARY/converted/Final_262_Polished/raichu_mega_x/front.png",
+      "back": "DS_CUSTOM_LIBRARY/converted/Final_262_Polished/raichu_mega_x/back.png",
+      "reason": "Custom type needs verification"
+    },
+    {
+      "id": "new:raichu-mega-y",
+      "identity": "raichu-mega-y",
+      "name": "RAICHU_MEGA_Y",
+      "source": "Elite_Redux",
+      "front": "DS_CUSTOM_LIBRARY/converted/Final_262_Polished/raichu_mega_y/front.png",
+      "back": "DS_CUSTOM_LIBRARY/converted/Final_262_Polished/raichu_mega_y/back.png",
+      "reason": "Custom type needs verification"
+    },
+    {
+      "id": "new:scolipede-mega",
+      "identity": "scolipede-mega",
+      "name": "SCOLIPEDE_MEGA",
+      "source": "Elite_Redux",
+      "front": "DS_CUSTOM_LIBRARY/converted/Final_262_Polished/scolipede_mega/front.png",
+      "back": "DS_CUSTOM_LIBRARY/converted/Final_262_Polished/scolipede_mega/back.png",
+      "reason": "Custom type needs verification"
+    },
+    {
+      "id": "new:scovillain-mega",
+      "identity": "scovillain-mega",
+      "name": "SCOVILLAIN_MEGA",
+      "source": "Elite_Redux",
+      "front": "DS_CUSTOM_LIBRARY/converted/Final_262_Polished/scovillain_mega/front.png",
+      "back": "DS_CUSTOM_LIBRARY/converted/Final_262_Polished/scovillain_mega/back.png",
+      "reason": "Custom type needs verification"
+    },
+    {
+      "id": "new:scrafty-mega",
+      "identity": "scrafty-mega",
+      "name": "SCRAFTY_MEGA",
+      "source": "Elite_Redux",
+      "front": "DS_CUSTOM_LIBRARY/converted/Final_262_Polished/scrafty_mega/front.png",
+      "back": "DS_CUSTOM_LIBRARY/converted/Final_262_Polished/scrafty_mega/back.png",
+      "reason": "Custom type needs verification"
+    },
+    {
+      "id": "new:skarmory-mega",
+      "identity": "skarmory-mega",
+      "name": "SKARMORY_MEGA",
+      "source": "Elite_Redux",
+      "front": "DS_CUSTOM_LIBRARY/converted/Final_262_Polished/skarmory_mega/front.png",
+      "back": "DS_CUSTOM_LIBRARY/converted/Final_262_Polished/skarmory_mega/back.png",
+      "reason": "Custom type needs verification"
+    },
+    {
+      "id": "new:staraptor-mega",
+      "identity": "staraptor-mega",
+      "name": "STARAPTOR_MEGA",
+      "source": "Elite_Redux",
+      "front": "DS_CUSTOM_LIBRARY/converted/Final_262_Polished/staraptor_mega/front.png",
+      "back": "DS_CUSTOM_LIBRARY/converted/Final_262_Polished/staraptor_mega/back.png",
+      "reason": "Custom type needs verification"
+    },
+    {
+      "id": "new:starmie-mega",
+      "identity": "starmie-mega",
+      "name": "STARMIE_MEGA",
+      "source": "Elite_Redux",
+      "front": "DS_CUSTOM_LIBRARY/converted/Final_262_Polished/starmie_mega/front.png",
+      "back": "DS_CUSTOM_LIBRARY/converted/Final_262_Polished/starmie_mega/back.png",
+      "reason": "Custom type needs verification"
+    },
+    {
+      "id": "new:victreebel-mega",
+      "identity": "victreebel-mega",
+      "name": "VICTREEBEL_MEGA",
+      "source": "Elite_Redux",
+      "front": "DS_CUSTOM_LIBRARY/converted/Final_262_Polished/victreebel_mega/front.png",
+      "back": "DS_CUSTOM_LIBRARY/converted/Final_262_Polished/victreebel_mega/back.png",
+      "reason": "Custom type needs verification"
+    },
+    {
+      "id": "new:zeraora-mega",
+      "identity": "zeraora-mega",
+      "name": "ZERAORA_MEGA",
+      "source": "Elite_Redux",
+      "front": "DS_CUSTOM_LIBRARY/converted/Final_262_Polished/zeraora_mega/front.png",
+      "back": "DS_CUSTOM_LIBRARY/converted/Final_262_Polished/zeraora_mega/back.png",
+      "reason": "Custom type needs verification"
+    },
+    {
+      "id": "compare:cobarett:2",
+      "identity": "cobarett",
+      "name": "Cobarett — Design 2",
+      "source": "Fakemon_Festival_Full",
+      "front": "DS_CUSTOM_LIBRARY/packs/Fakemon_Festival_Full/Fakemon Festival Pack/PrincessPhoenix/Pokemon/Battlers/Gen 3 Frontsprites/Cobarett.png",
+      "back": "",
+      "reason": "Back sprite not confidently mapped"
+    },
+    {
+      "id": "compare:hissiorite:2",
+      "identity": "hissiorite",
+      "name": "Hissiorite — Design 2",
+      "source": "Fakemon_Festival_Full",
+      "front": "DS_CUSTOM_LIBRARY/packs/Fakemon_Festival_Full/Fakemon Festival Pack/PrincessPhoenix/Pokemon/Battlers/Gen 3 Frontsprites/Hissiorite.png",
+      "back": "",
+      "reason": "Back sprite not confidently mapped"
+    },
+    {
+      "id": "compare:pythonova:2",
+      "identity": "pythonova",
+      "name": "Pythonova — Design 2",
+      "source": "Fakemon_Festival_Full",
+      "front": "DS_CUSTOM_LIBRARY/packs/Fakemon_Festival_Full/Fakemon Festival Pack/PrincessPhoenix/Pokemon/Battlers/Gen 3 Frontsprites/Pythonova.png",
+      "back": "",
+      "reason": "Back sprite not confidently mapped"
+    },
+    {
+      "id": "compare:pythonovas:1",
+      "identity": "pythonovas",
+      "name": "Pythonovas — Design 1",
+      "source": "Fakemon_Festival_Full",
+      "front": "DS_CUSTOM_LIBRARY/packs/Fakemon_Festival_Full/Fakemon Festival Pack/PrincessPhoenix/Pokemon/Battlers/Gen 3 Frontsprites/PythonovaS.png",
+      "back": "",
+      "reason": "Type/source identity needs verification"
+    },
+    {
+      "id": "compare:pythonovas:2",
+      "identity": "pythonovas",
+      "name": "Pythonovas — Design 2",
+      "source": "Fakemon_Festival_Full",
+      "front": "DS_CUSTOM_LIBRARY/packs/Fakemon_Festival_Full/Fakemon Festival Pack/PrincessPhoenix/Pokemon/Battlers/Gen 4-5 Frontsprites/PythonovaS.png",
+      "back": "",
+      "reason": "Type/source identity needs verification"
+    },
+    {
+      "id": "compare:noctowl-1:1",
+      "identity": "noctowl-1",
+      "name": "Luminian Noctowl — Design 1",
+      "source": "Festival_Atsui",
+      "front": "DS_CUSTOM_LIBRARY/packs/Festival_Atsui/Atsui/Pokemon/Front/NOCTOWL_1.png",
+      "back": "",
+      "reason": "Back sprite not confidently mapped"
+    },
+    {
+      "id": "compare:dampurr:1",
+      "identity": "dampurr",
+      "name": "Dampurr — Design 1",
+      "source": "Festival_Magiscarf",
+      "front": "DS_CUSTOM_LIBRARY/packs/Festival_Magiscarf/Magiscarf/Battlers Normal/Front/Dampurr.png",
+      "back": "",
+      "reason": "Back sprite not confidently mapped"
+    },
+    {
+      "id": "compare:delugar:1",
+      "identity": "delugar",
+      "name": "Delugar — Design 1",
+      "source": "Festival_Magiscarf",
+      "front": "DS_CUSTOM_LIBRARY/packs/Festival_Magiscarf/Magiscarf/Battlers Normal/Front/Delugar.png",
+      "back": "",
+      "reason": "Back sprite not confidently mapped"
+    },
+    {
+      "id": "compare:rainther:1",
+      "identity": "rainther",
+      "name": "Rainther — Design 1",
+      "source": "Festival_Magiscarf",
+      "front": "DS_CUSTOM_LIBRARY/packs/Festival_Magiscarf/Magiscarf/Battlers Normal/Front/Rainther.png",
+      "back": "",
+      "reason": "Type/source identity needs verification"
+    },
+    {
+      "id": "compare:rainther:2",
+      "identity": "rainther",
+      "name": "Rainther — Design 2",
+      "source": "Festival_Magiscarf",
+      "front": "DS_CUSTOM_LIBRARY/packs/Festival_Magiscarf/Magiscarf/Gen 4 Battlers/Fronts/RAINTHER.png",
+      "back": "",
+      "reason": "Type/source identity needs verification"
+    },
+    {
+      "id": "compare:searpent:2",
+      "identity": "searpent",
+      "name": "Searpent — Design 2",
+      "source": "Festival_Magiscarf",
+      "front": "DS_CUSTOM_LIBRARY/packs/Festival_Magiscarf/Magiscarf/Battlers Normal/Front/Searpent.png",
+      "back": "",
+      "reason": "Back sprite not confidently mapped"
+    },
+    {
+      "id": "compare:flygon-1:2",
+      "identity": "flygon-1",
+      "name": "Mega Flygon — Design 2",
+      "source": "Mega_Flygon",
+      "front": "DS_CUSTOM_LIBRARY/packs/Mega_Flygon/mega flygon/Graphics/Pokemon/Front/FLYGON_1.png",
+      "back": "",
+      "reason": "Back sprite not confidently mapped"
+    },
+    {
+      "id": "compare:garchomp-mega-z:1",
+      "identity": "garchomp-mega-z",
+      "name": "Garchomp Mega Z — Design 1",
+      "source": "PokeDot_Engine_Mega_Intake",
+      "front": "DS_CUSTOM_LIBRARY/packs/PokeDot_Engine_Mega_Intake/garchomp-mega-z/front.png",
+      "back": "",
+      "reason": "Back sprite not confidently mapped"
+    },
+    {
+      "id": "reconcile:wailmer-alternate-form-1",
+      "identity": "wailmer-alternate-form-1",
+      "name": "Wailmer — Alternate (Form 1)",
+      "source": "Reborn / Plates of Arceus",
+      "front": "",
+      "back": "",
+      "reason": "Review requires restored front/back sprite paths"
+    },
+    {
+      "id": "reconcile:wailord-alternate-form-1",
+      "identity": "wailord-alternate-form-1",
+      "name": "Wailord — Alternate (Form 1)",
+      "source": "Reborn / Plates of Arceus",
+      "front": "",
+      "back": "",
+      "reason": "Review requires restored front/back sprite paths"
+    }
+  ],
+  "protectedHistoricalDecisionsFromNewImport": [
+    {
+      "id": "abra-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "abra-alternate-form-2",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "absol-alternate-form-2",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "absol-alternate-mega-form-3",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "aerodactyl-alternate-form-2",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "aerodactyl-alternate-mega-form-3",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "alakazam-alternate-form-2",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "alakazam-mega-alternate-form-3",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "anorith-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "araquanid-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "archen-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "archeops-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "armaldo-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "aromatisse-alternate-form-2",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "arrokuda-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "bagon-alternate-form-2",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "baltoy-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "barbaracle-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "barraskewda-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "bastiodon-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "bayleef-bluetowel-alternate-form-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "beedrill-alternate-form-2",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "beedrill-alternate-mega-form-3",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "bisharp-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "blaziken-alternate-mega-form-2",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "blaziken-alternate-mega-form-3",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "blissey-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "boldore-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "breloom-alternate-form-2",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "buneary-alternate-form-2",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "bunnelby-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "camerupt-alternate-form-3",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "camerupt-mega-alternate-form-4",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "carnivine-bluetowel-alternate-form-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "carracosta-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "caterpie-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "chandelure-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "chansey-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "chesnaught-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "chimecho-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "chingling-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "cinderace-alternate-form-2",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "clauncher-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "clawitzer-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "claydol-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "clefable-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "clefairy-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "cofagrigus-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "combusken-alternate-form-2",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "conkeldurr-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "corsola-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "cradily-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "croconaw-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "dartrix-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "dartrix-alternate-form-2",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "decidueye-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "decidueye-alternate-form-2",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "dedenne-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "deino-cybertank-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "deino-telepathic-form-2",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "delphox-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "dewpider-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "diggersby-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "dodrio-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "doduo-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "dragalge-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "drapion-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "drizzile-alternate-form-2",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "drowzee-alternate-form-2",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "druddigon-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "dunsparce-bt-alt-forms-draco-form-6",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "dunsparce-bt-alt-forms-insect-form-4",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "dunsparce-bt-alt-forms-sky-form-3",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "dunsparce-bt-alt-forms-spooky-form-5",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "dunsparce-bt-alt-forms-toxic-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "duosion-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "dusclops-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "electabuzz-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "electivire-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "emboar-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "empoleon-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "espeon-alternate-form-3",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "ferroseed-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "ferrothorn-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "flaaffy-alternate-form-2",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "flygon-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "fomantis-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "gabite-bluetowel-alternate-forms-form-2",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "garbodor-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "garchomp-alternate-form-2",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "garchomp-alternate-mega-form-3",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "garchomp-bluetowel-alternate-forms-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "gardevoir-alternate-form-3",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "gardevoir-mega-alternate-form-4",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "gengar-alternate-form-2",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "gengar-alternate-form-3",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "gible-bluetowel-alternate-forms-form-2",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "girafarig-bluetowel-alternate-form-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "glameow-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "gligar-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "goodra-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "goodra-alternate-form-2",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "goomy-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "greninja-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "grovyle-alternate-form-2",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "grumpig-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "gurdurr-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "gyarados-alternate-form-2",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "gyarados-mega-alternate-form-3",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "haunter-alternate-form-2",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "hitmonchan-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "hitmonlee-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "hitmontop-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "hydreigon-cybertank-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "hydreigon-telepathic-form-2",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "incineroar-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "infernape-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "inteleon-alternate-form-2",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "jigglypuff-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "jolteon-alternate-form-3",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "kabuto-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "kabutops-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "kadabra-alternate-form-2",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "kakuna-alternate-form-2",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "kingler-alternate-form-2",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "kirlia-alternate-form-3",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "krabby-alternate-form-2",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "lampent-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "larvitar-ice-form-2",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "ledian-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "ledyba-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "lileep-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "lilligant-alternate-form-2",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "litwick-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "lopunny-alternate-form-2",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "lopunny-alternate-mega-form-3",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "lopunny-bluetowel-alternate-forms-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "lurantis-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "luxray-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "magikarp-alternate-form-2",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "magmar-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "magmortar-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "manectric-alternate-form-2",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "meganium-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "metagross-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "mightyena-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "ninetales-alternate-form-2",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "ninetales-alternate-form-3",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "noctowl-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "nosepass-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "numel-alternate-form-3",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "octillery-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "omanyte-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "omastar-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "onix-alternate-form-2",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "pachirisu-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "palossand-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "paras-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "parasect-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "pawniard-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "petilil-alternate-form-2",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "phanpy-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "pidove-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "pignite-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "ponyta-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "primarina-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "pupitar-ice-form-2",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "purugly-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "quagsire-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "quilava-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "raboot-alternate-form-2",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "ralts-alternate-form-3",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "rampardos-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "rapidash-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "remoraid-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "reuniclus-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "rhyperior-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "ribombee-bluetowel-alternate-form-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "rillaboom-alternate-form-2",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "roggenrola-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "sableye-alternate-darkness-form-4",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "sableye-alternate-darkness-mega-form-5",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "sableye-alternate-gemstone-form-2",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "salamence-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "samurott-bluetowel-alternate-form-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "samurott-bluetowel-alternate-form-form-2",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "sandygast-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "sceptile-alternate-form-2",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "sceptile-alternate-mega-form-3",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "scorbunny-alternate-form-2",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "serperior-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "shelgon-alternate-form-2",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "skorupi-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "skorupi-alternate-form-2",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "skrelp-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "sliggoo-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "sliggoo-alternate-form-2",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "slowbro-bluetowel-alternate-forms-form-2",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "slowbro-bluetowel-alternate-forms-form-4",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "slowbro-bluetowel-alternate-forms-form-5",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "slowbro-mega-alt-form-form-3",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "slowking-bluetowel-alternate-forms-form-2",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "sneasel-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "sneasel-alternate-form-2",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "sobble-alternate-form-2",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "spritzee-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "spritzee-alternate-form-2",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "steelix-alternate-form-2",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "steelix-alternate-mega-form-3",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "sunflora-alternate-form-2",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "swalot-alternate-form-2",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "swampert-alternate-mega-form-2",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "swampert-alternate-mega-form-3",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "thwackey-alternate-form-2",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "timburr-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "tirtouga-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "torterra-bluetowel-alternate-form-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "tranquill-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "trapinch-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "tropius-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "trubbish-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "typhlosion-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "typhlosion-alternate-form-2",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "tyranitar-ice-form-2",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "tyranitar-mega-ice-form-3",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "umbreon-alternate-form-3",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "unfezant-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "vanillish-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "vanillite-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "vanilluxe-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "vaporeon-alternate-form-3",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "venomoth-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "venonat-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "vibrava-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "vulpix-alternate-form-3",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "weavile-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "weedle-alternate-form-2",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "wigglytuff-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "wooper-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "xatu-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "yamask-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "yamask-alternate-form-2",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "yanma-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "yanmega-alternate-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "zweilous-cybertank-form-1",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    },
+    {
+      "id": "zweilous-telepathic-form-2",
+      "category": "previous-decision",
+      "status": "cut",
+      "source": "GBA ledger",
+      "audit": "Final_262 import"
+    }
+  ],
+  "excludedRecolorCandidates": [],
+  "sourceSnapshot": {
+    "manifest": {
+      "path": "DS_CUSTOM_LIBRARY/DS_READY_MASTER/gba_master_recovery_manifest.json",
+      "blob": "d35213cdb0b1078209de56583929623d98eb6dfa"
+    },
+    "recovered": {
+      "path": "mercury_recovered_gba_sprite_decisions.csv",
+      "blob": "1233f71ce274f8fe221145aee6c45b58b3cd0a58"
+    },
+    "roster": {
+      "path": "Mercury_Roster_Visual_Reviewer_DEX_ORDER_2026-09-04_v2.csv",
+      "blob": "3843ef9178265e9ccd24e3b61869f101dba428f4"
+    },
+    "final262": {
+      "path": "DS_CUSTOM_LIBRARY/DS_READY_MASTER/final_262_conversion_audit.csv",
+      "blob": "f90dac8ddba3e74769742d3a7bc0b85085228c57"
+    },
+    "recolor": {
+      "path": "DS_CUSTOM_LIBRARY/cleanup-audit/final-262-recolor-audit.json",
+      "blob": "a9fc1de53b7898c9f5c4db1a99c75bcef41a1ce8"
+    },
+    "leftover": {
+      "path": "DS_CUSTOM_LIBRARY/DS_READY_MASTER/leftover_review_pool.csv",
+      "blob": "608c27bcc2df951d023abceccdac200fd73bef01"
+    },
+    "multi": {
+      "path": "DS_CUSTOM_LIBRARY/DS_READY_MASTER/custom_multi_design_approval_candidates.csv",
+      "blob": "57e011c6f7b7312f279f7fa199c495210e914dd2"
+    },
+    "fakemon": {
+      "path": "DS_CUSTOM_LIBRARY/DS_READY_MASTER/fakemon_enriched_metadata.json",
+      "blob": "10c01c2e86a6098c2f1fc24a97b91d77a5b51257"
+    },
+    "roles": {
+      "path": "DS_CUSTOM_LIBRARY/DS_READY_MASTER/implementation_family_routing_pass5.json",
+      "blob": "9f9ffe76af412acf358295f1250692eaf0b39d5a"
+    },
+    "dedup": {
+      "path": "DS_CUSTOM_LIBRARY/DS_READY_MASTER/ds_ready_dedup_summary.json",
+      "blob": "83ed845bd7a021a6639a785d4961c3b9b623732e"
+    },
+    "recovery": {
+      "path": "DS_CUSTOM_LIBRARY/DS_READY_MASTER/legacy_gba_auto_yes_recovery_phase1.json",
+      "blob": "8575845cdf657aa93d3670824771110d0691927d"
+    }
+  },
+  "notes": [
+    "Zero sprite files modified, deleted, or integrated.",
+    "Prior approvals not reoffered merely because artwork needs repair.",
+    "Do not infer backs from unrelated sprite identities."
+  ]
+}
