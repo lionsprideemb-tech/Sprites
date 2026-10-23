@@ -94,11 +94,22 @@ for entry in entries:
         require(entry["family"] == authoritative["family"], "Family split in " + entry["id"])
     require(isinstance(entry.get("evolutionStageOrder"), int), "Stage order missing: " + entry["id"])
 uploaded_by_id = {x["id"]: x for x in USER_IPHONE_DECISIONS["entries"]}
-require({x["id"] for x in entries}.issubset(uploaded_by_id), "New reviewed sprite ID omitted from user votes")
+new_undecided_ids = {x["id"] for x in entries} - set(uploaded_by_id)
+wailmer_current_pass = {"reconcile:wailmer-alternate-form-1", "reconcile:wailord-alternate-form-1"}
+require(new_undecided_ids == wailmer_current_pass,
+        "Only the specifically unreviewed Wailmer/Wailord family may be newly actionable: " + str(new_undecided_ids))
+require(len(entries) == 156 and len(technical) == 16,
+        "Unexpected active/technical hold counts after recovered Wailmer source art")
 for entry in entries:
-    original = uploaded_by_id[entry["id"]]
-    require(original["front_path"] == entry["front"] and original["back_path"] == entry["back"],
-            "Stable sprite identity no longer matches its recorded user vote: " + entry["id"])
+    if entry["id"] in uploaded_by_id:
+        original = uploaded_by_id[entry["id"]]
+        require(original["front_path"] == entry["front"] and original["back_path"] == entry["back"],
+                "Stable sprite identity no longer matches its recorded user vote: " + entry["id"])
+    else:
+        require(entry.get("previewOnly") is True and entry["category"] == "decision-conflict",
+                "New review entry is not a declared GBA-only source-preview conflict: " + entry["id"])
+        require("Reborn_Plates_Legacy" in entry["front"] and "Reborn_Plates_Legacy" in entry["back"],
+                "Wailmer/Wailord review missing original source preview: " + entry["id"])
 require("user-iphone-decisions-2026-10-23.json" in HTML and "familyMatches" in HTML and "evolutionStageOrder" in HTML,
         "Family-aware review and saved votes not wired into mobile page")
 
