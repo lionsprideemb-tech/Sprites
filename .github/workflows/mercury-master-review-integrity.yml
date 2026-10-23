@@ -8,6 +8,9 @@ on:
       - 'master-review-data.json'
       - 'audit/2026-10-23/**'
       - 'tools/validate_master_review.py'
+      - 'tools/verify_identity_provenance.py'
+      - 'mercury-master-review.html'
+      - 'review/**'
       - '.github/workflows/mercury-master-review-integrity.yml'
   pull_request:
     paths:
@@ -15,6 +18,9 @@ on:
       - 'master-review-data.json'
       - 'audit/2026-10-23/**'
       - 'tools/validate_master_review.py'
+      - 'tools/verify_identity_provenance.py'
+      - 'mercury-master-review.html'
+      - 'review/**'
 
 permissions:
   contents: read
@@ -28,3 +34,18 @@ jobs:
         uses: actions/checkout@v4
       - name: Validate review, ledger and PNG files
         run: python3 tools/validate_master_review.py
+      - name: Check artist identities, display provenance and preserved iPhone votes
+        run: python3 tools/verify_identity_provenance.py
+      - name: Verify supplemental reviewer links to one canonical page
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          page = Path("mercury-master-review.html").read_text(encoding="utf-8")
+          canonical = Path("master-review.html").read_text(encoding="utf-8")
+          archive = Path("review/archive/mercury-master-review-experimental-2026-10-23.html")
+          assert 'href="./master-review.html"' in page
+          assert 'mercury-master-review-v2' in page
+          assert archive.exists()
+          assert "master-review-data.json" in canonical
+          print("PASS: one active reviewer, with supplemental draft recovery available")
+          PY
