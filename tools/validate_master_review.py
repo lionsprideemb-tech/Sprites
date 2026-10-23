@@ -18,6 +18,8 @@ ORIGINAL_USER_EXPORTS = json.loads((ROOT / "review/recovered-user-export-decisio
 USER_IPHONE_DECISIONS = json.loads((ROOT / "review/user-iphone-decisions-2026-10-23.json").read_text(encoding="utf-8"))
 FAMILY_AUDIT = json.loads((ROOT / "review/family-regroup-audit-2026-10-23.json").read_text(encoding="utf-8"))
 SOURCE_FAMILY_METADATA = json.loads((ROOT / "DS_CUSTOM_LIBRARY/DS_READY_MASTER/fakemon_enriched_metadata.json").read_text(encoding="utf-8"))
+SOURCE_RECON = json.loads((ROOT / "review/identity-family-reconciliation-2026-10-23.json").read_text(encoding="utf-8"))
+PAIRED_SOURCE = json.loads((ROOT / "review/verified-exception-source-pairs-2026-10-23.json").read_text(encoding="utf-8"))
 
 def require(value, explanation):
     if not value:
@@ -86,30 +88,51 @@ require(SNAPSHOT["familyGrouping"]["schema"] == "mercury-evolution-family-groupi
 require(SNAPSHOT["familyGrouping"]["sourceBlob"] == FAMILY_AUDIT["sourceBlob"], "Family grouping source mismatch")
 by_front_back = {(x["front_path"], x["back_path"]): x for x in SOURCE_FAMILY_METADATA["entries"].values()
                  if x.get("ready_for_approval") and x.get("front_path") and x.get("back_path")}
+corrections = {x["id"]: x for x in SOURCE_RECON["edits"]}
+require(len(corrections) == SOURCE_RECON["totals"]["metadataEdits"] == 27,
+        "Source identity correction ledger count changed")
 for entry in entries:
     if entry["category"] == "fakemon":
         authoritative = by_front_back.get((entry["front"], entry["back"]))
         require(authoritative is not None, "Source-evidence missing for Fakemon: " + entry["id"])
-        require(entry["name"] == authoritative["name"], "Name drift in " + entry["id"])
-        require(entry["family"] == authoritative["family"], "Family split in " + entry["id"])
+        c = corrections.get(entry["id"])
+        if entry["name"] != authoritative["name"]:
+            require(c is not None and c["previousName"] == authoritative["name"]
+                    and c["newName"] == entry["name"]
+                    and entry.get("originalSourceName"),
+                    "Undocumented name drift in " + entry["id"])
+        if entry["family"] != authoritative["family"]:
+            require(c is not None and c["from"] == authoritative["family"] and c["to"] == entry["family"],
+                    "Undocumented evolution family reassignment in " + entry["id"])
     require(isinstance(entry.get("evolutionStageOrder"), int), "Stage order missing: " + entry["id"])
 uploaded_by_id = {x["id"]: x for x in USER_IPHONE_DECISIONS["entries"]}
 new_undecided_ids = {x["id"] for x in entries} - set(uploaded_by_id)
 wailmer_current_pass = {"reconcile:wailmer-alternate-form-1", "reconcile:wailord-alternate-form-1"}
-require(new_undecided_ids == wailmer_current_pass,
-        "Only the specifically unreviewed Wailmer/Wailord family may be newly actionable: " + str(new_undecided_ids))
-require(len(entries) == 156 and len(technical) == 16,
-        "Unexpected active/technical hold counts after recovered Wailmer source art")
+rainther_confirmed_options = {"compare:rainther:1", "compare:rainther:2"}
+asserted_pairs = {x["id"]: x for x in PAIRED_SOURCE["matches"]}
+require(new_undecided_ids == wailmer_current_pass | rainther_confirmed_options,
+        "Unexpected newly actionable artwork: " + str(new_undecided_ids))
+require(len(entries) == 158 and len(technical) == 14,
+        "Changed expected count for source-restored Rainther artwork")
+require(rainther_confirmed_options <= set(asserted_pairs), "Missing authoritative source pair evidence for Rainther")
 for entry in entries:
     if entry["id"] in uploaded_by_id:
         original = uploaded_by_id[entry["id"]]
         require(original["front_path"] == entry["front"] and original["back_path"] == entry["back"],
                 "Stable sprite identity no longer matches its recorded user vote: " + entry["id"])
-    else:
+    elif entry["id"] in wailmer_current_pass:
         require(entry.get("previewOnly") is True and entry["category"] == "decision-conflict",
-                "New review entry is not a declared GBA-only source-preview conflict: " + entry["id"])
+                "Wailmer-family source preview changed: " + entry["id"])
         require("Reborn_Plates_Legacy" in entry["front"] and "Reborn_Plates_Legacy" in entry["back"],
-                "Wailmer/Wailord review missing original source preview: " + entry["id"])
+                "Wailmer/Wailord source preview path changed: " + entry["id"])
+    else:
+        require(entry["id"] in rainther_confirmed_options and entry["category"] == "design-comparison",
+                "Unexpected newly actionable artwork: " + entry["id"])
+        evidence = asserted_pairs[entry["id"]]
+        require(evidence["classification"] == "offer_review" and
+                entry["front"] == evidence["front"]["path"] and entry["back"] == evidence["back"]["path"] and
+                entry["type1"] == "Water" and entry.get("dsReady") is False,
+                "Unverified Rainther artwork exposed: " + entry["id"])
 require("user-iphone-decisions-2026-10-23.json" in HTML and "familyMatches" in HTML and "evolutionStageOrder" in HTML,
         "Family-aware review and saved votes not wired into mobile page")
 
