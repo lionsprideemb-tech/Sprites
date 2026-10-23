@@ -2146,7 +2146,7 @@
       "displayName": "Hayog",
       "familyConfidence": "source_names_verified; evolution_edges_unconfirmed",
       "identityFlag": "evolution_conflict",
-      "identityNote": "All three names and types match source entries, but the Pokéngine records do not explicitly document the entire three-stage evolution graph. Original assumed sequence retained as a hypothesis only.",
+      "identityNote": "Pokéngine confirms this original designer, name and type, but does not give a direct named evolution edge for this member. Keep it grouped with related festival designs as an unverified suggested line, not a canonical evolution.",
       "familyAlternatives": [
         {
           "family": "Hayog → Hogouse → Hogriks",
@@ -2156,7 +2156,9 @@
           "family": "Standalone — Hayog",
           "source": "https://pokengine.org/mons/00jtq3x2/Hayog"
         }
-      ]
+      ],
+      "sourceEvidenceStatus": "source_species_confirmed_evolution_edge_not_explicit",
+      "evolutionEvidencePrimarySource": "https://pokengine.org/mons/00jtq3x2/Hayog"
     },
     {
       "id": "fakemon:hogouse:5aacd2375ea9",
@@ -2188,7 +2190,7 @@
       "displayName": "Hogouse",
       "familyConfidence": "source_names_verified; evolution_edges_unconfirmed",
       "identityFlag": "evolution_conflict",
-      "identityNote": "All three names and types match source entries, but the Pokéngine records do not explicitly document the entire three-stage evolution graph. Original assumed sequence retained as a hypothesis only.",
+      "identityNote": "Pokéngine confirms this original designer, name and type, but does not give a direct named evolution edge for this member. Keep it grouped with related festival designs as an unverified suggested line, not a canonical evolution.",
       "familyAlternatives": [
         {
           "family": "Hayog → Hogouse → Hogriks",
@@ -2198,7 +2200,9 @@
           "family": "Standalone — Hogouse",
           "source": "https://pokengine.org/mons/00bspmsd/Hogouse"
         }
-      ]
+      ],
+      "sourceEvidenceStatus": "source_species_confirmed_evolution_edge_not_explicit",
+      "evolutionEvidencePrimarySource": "https://pokengine.org/mons/00bspmsd/Hogouse"
     },
     {
       "id": "fakemon:hogriks:09d5ea97ceeb",
@@ -2230,7 +2234,7 @@
       "displayName": "Hogriks",
       "familyConfidence": "source_names_verified; evolution_edges_unconfirmed",
       "identityFlag": "evolution_conflict",
-      "identityNote": "All three names and types match source entries, but the Pokéngine records do not explicitly document the entire three-stage evolution graph. Original assumed sequence retained as a hypothesis only.",
+      "identityNote": "Authoritative Pokéngine Hogriks text says it lost Grass typing on evolution, but does not explicitly name which earlier Pokémon evolved into it. Artist Scotsman333 and type are source verified; the exact Hayog/Hogouse/Hogriks evolution graph remains unresolved.",
       "familyAlternatives": [
         {
           "family": "Hayog → Hogouse → Hogriks",
@@ -2240,7 +2244,9 @@
           "family": "Standalone — Hogriks",
           "source": "https://pokengine.org/mons/00jegdpk/Hogriks"
         }
-      ]
+      ],
+      "sourceEvidenceStatus": "source_species_confirmed_evolution_edge_not_explicit",
+      "evolutionEvidencePrimarySource": "https://pokengine.org/mons/00jegdpk/Hogriks"
     },
     {
       "id": "compare:hissiorite:1",
@@ -3041,7 +3047,7 @@
       "displayName": "Minamai",
       "familyConfidence": "source_names_verified; evolution_edges_unconfirmed",
       "identityFlag": "evolution_conflict",
-      "identityNote": "Both source names are legitimate; direct evidence that one evolves into the other is still missing. Do not implement an evolution based only on the former reviewer.",
+      "identityNote": "Pokéngine confirms this original designer, name and type, but does not give a direct named evolution edge for this member. Keep it grouped with related festival designs as an unverified suggested line, not a canonical evolution.",
       "familyAlternatives": [
         {
           "family": "Minamai → Marelstorm",
@@ -3051,7 +3057,9 @@
           "family": "Standalone — Minamai",
           "source": "https://pokengine.org/mons/00rofohd/Minamai"
         }
-      ]
+      ],
+      "sourceEvidenceStatus": "source_species_confirmed_evolution_edge_not_explicit",
+      "evolutionEvidencePrimarySource": "https://pokengine.org/mons/00rofohd/Minamai"
     },
     {
       "id": "fakemon:marelstorm:701ab0bd5780",
@@ -3083,7 +3091,7 @@
       "displayName": "Marelstorm",
       "familyConfidence": "source_names_verified; evolution_edges_unconfirmed",
       "identityFlag": "evolution_conflict",
-      "identityNote": "Both source names are legitimate; direct evidence that one evolves into the other is still missing. Do not implement an evolution based only on the former reviewer.",
+      "identityNote": "Pokéngine confirms this original designer, name and type, but does not give a direct named evolution edge for this member. Keep it grouped with related festival designs as an unverified suggested line, not a canonical evolution.",
       "familyAlternatives": [
         {
           "family": "Minamai → Marelstorm",
@@ -3093,7 +3101,9 @@
           "family": "Standalone — Marelstorm",
           "source": "https://pokengine.org/mons/004bj9kp/Marelstorm"
         }
-      ]
+      ],
+      "sourceEvidenceStatus": "source_species_confirmed_evolution_edge_not_explicit",
+      "evolutionEvidencePrimarySource": "https://pokengine.org/mons/004bj9kp/Marelstorm"
     },
     {
       "id": "fakemon:munchill:1b640ef359e3",
@@ -6106,7 +6116,14 @@
         "name": "Furrva",
         "stage": 0,
         "reference": "https://pokengine.org/mons/00uc0o89/Furrva",
-        "status": "source confirmed; not present as a current actionable sprite review entry"
+        "status": "source confirmed; not present as a current actionable sprite review entry",
+        "sourceStatus": "External original-source imagery identified; not in local DS asset library",
+        "frontReference": "https://pokengine.b-cdn.net/play/images/mons/fronts/00uc0o89.webp?t=56",
+        "backReference": "https://pokengine.b-cdn.net/play/images/mons/backs/00uc0o89.webp?t=56",
+        "sourceCredit": "Artist Mikitari · Pokéngine · Free to use with credit",
+        "sourceType": "Bug",
+        "localAssetComplete": false,
+        "inGameReady": false
       }
     ],
     "familyNotes": {
@@ -6117,8 +6134,8 @@
       "Spinarak → Ariados (Lumio regional forms)": "Lumio denotes the named regional form, not a separate Pokémon species; artist credits are separate.",
       "Buneary → Lopunny (Mikitari regional forms)": "Mikitari denotes a named regional form, not an additional Pokémon species.",
       "Hoothoot → Noctowl → Enchantowl (source-art lineage check)": "Species evolution is source verified, but the specific Lumio/Atsui Noctowl art may not belong to the Enjin/Ender Enchantowl lineage; pairing remains held.",
-      "Hayog / Hogouse / Hogriks — linkage pending confirmation": "Source names verified. Former assumed three-stage evolution edges lack complete primary-source proof; do not implement them.",
-      "Minamai / Marelstorm — linkage pending confirmation": "Source names verified. No documented evolution edge found; keep together as an unresolved proposed line without treating an arrow as confirmed.",
+      "Hayog / Hogouse / Hogriks — linkage pending confirmation": "All three original Scotsman333 source designs are confirmed, including types and source paired sprites. Hogriks' entry explicitly mentions losing Grass typing on evolution; the sources do not establish each directed evolution edge, so arrows must not be invented.",
+      "Minamai / Marelstorm — linkage pending confirmation": "Both Rattila designs and artwork credits are confirmed. The original source pages do not name a specific evolution relationship; comparison grouping is not a Pokédex evolution assignment.",
       "Hoothoot → Noctowl (Atsui variant; Enchantowl pairing unverified)": "Original NOCTOWL_1 front/back source from Atsui recovered. This alternate is not evidence that the Enjin/Ender Noctowl evolves to Enchantowl. Earlier creative approval of Noctowl Design 2 is preserved; no new vote.",
       "Dampurr → Rainther → Delugar": "Magiscarf's original 100×100 and Gen 4 160×160 Rainther source fronts now have the exact matching backs. These are two artwork options for the same Water-type species, not two new species. No automatic DS conversion or implementation.",
       "Hissiorite → Cobarett → Pythonova": "The previously chosen designs retain their original KEEP votes. All three Gen 3 alternate source backs have been recovered; 'PythonovaS' is matching shiny art, not an additional species."
@@ -6566,7 +6583,9 @@
       }
     ],
     "sourceFamilyReconciliation": "review/identity-family-reconciliation-2026-10-23.json",
-    "resolvedSourceFamilyEvidenceEntries": 12
+    "resolvedSourceFamilyEvidenceEntries": 12,
+    "latestRecovery": "review/verified-exception-source-pairs-2026-10-23.json",
+    "latestRemainingWarnings": 5
   },
   "recoveryAddendum": {
     "date": "2026-10-23",
