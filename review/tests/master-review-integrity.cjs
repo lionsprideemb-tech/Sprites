@@ -99,7 +99,29 @@ assert.ok(one("compare:noctowl-1:1").family.includes("Enchantment")===false);
 assert.ok(one("compare:noctowl-1:1").family.includes("pairing unverified"));
 const fm=main.familyGrouping.missingReferenceStages.find(x=>x.name==="Furrva");
 assert.ok(fm.frontReference.includes("00uc0o89.webp")&&fm.backReference.includes("00uc0o89.webp"));
-assert.equal(fm.localAssetComplete,false);
+assert.equal(fm.localAssetComplete,true);
+assert.equal(fm.inGameReady,false);
+const furrva=JSON.parse(read("DS_CUSTOM_LIBRARY/recovered/Pokengine_Mikitari_Furrva_Source/source_manifest.json"));
+assert.equal(furrva.species,"Furrva");
+assert.equal(furrva.type,"Bug");
+assert.equal(furrva.source_artist,"Mikitari");
+assert.equal(furrva.artwork_fabricated,false);
+assert.equal(furrva.game_integration_allowed,false);
+assert.equal(furrva.assets.front.source_pixel_dimensions.join("x"),"34x30");
+assert.equal(furrva.assets.back.source_pixel_dimensions.join("x"),"55x51");
+for(const [side,data] of Object.entries(furrva.assets)){
+ assert.equal(side==="front"?fm.frontLocal:fm.backLocal,data.png_path);
+ const png=fs.readFileSync(path.join(root,data.png_path));
+ const webp=fs.readFileSync(path.join(root,data.raw_path));
+ assert.equal(png.subarray(0,8).toString("hex"),"89504e470d0a1a0a");
+ assert.equal(png.readUInt32BE(16),data.source_pixel_dimensions[0]);
+ assert.equal(png.readUInt32BE(20),data.source_pixel_dimensions[1]);
+ assert.equal(webp.subarray(0,4).toString("ascii"),"RIFF");
+ assert.equal(webp.subarray(8,12).toString("ascii"),"WEBP");
+ assert.equal(crypto.createHash("sha256").update(png).digest("hex"),data.png_sha256);
+ assert.equal(crypto.createHash("sha256").update(webp).digest("hex"),data.raw_sha256);
+}
+
 assert.ok(html.includes("BACK (external reference)"));
 assert.ok(!main.entries.concat(main.technicalHolds).some(x=>x.id.toLowerCase().includes("furrva")));
 for(const e of sources.matches){
@@ -118,6 +140,6 @@ for(const e of sources.matches){
   assert.equal(digest,asset.blobSHA,"Git blob hash "+asset.path);
  }
 }
-console.log("PASS — 8 exact original PNG pairs and SHA-1 hashes; 2 Rainther comparisons; 2 Pythonova shinies; Noctowl isolation; 5 unresolved evolution links.");
+console.log("PASS — 8 PNG source pairs with SHA-1, original Furrva front/back PNG+WebP SHA-256, 2 Rainther options, 2 Pythonova shinies, 5 unresolved edges.");
 
 console.log("PASS — syntax, 166 protected votes, 74 recovered pairs, 39 families, five missing shiny sets, safe merging and read-only master reviewer");
