@@ -45,7 +45,7 @@ footer{font-size:11px;color:#536374;text-align:center;margin-top:20px;padding:15
 details.help{margin:10px 0;background:#fffdfa;border:1px solid #d5cbbb;border-radius:10px;padding:9px;font-size:12px;line-height:1.6}
 summary{cursor:pointer;font-weight:750}
 @media (max-width:570px){header{position:relative}h1{font-size:19px}.controls{gap:6px}.controls>button,.file-label{padding:8px}.family-head{flex-wrap:wrap}.sprites{grid-template-columns:1fr 1fr}.sprite img{width:102px;height:96px}.sprite{min-height:121px}.cards{grid-template-columns:1fr}.nav{align-items:center}}
-.quality-flag{font-size:11px;font-weight:700;line-height:1.4;margin:7px 10px;padding:8px 9px;border-radius:8px;background:#e9e4d8}.quality-flag.blocked{background:#fff0d7}.quality-flag.quantized{background:#e8edf8}.quality-slot{padding:7px 10px;border-top:1px solid #e8e6df;font-size:11px}.quality-slot .sprites{margin-top:5px}.quality-status{font-size:11px;font-weight:700;padding:5px 8px;margin:5px 0;background:#eee;border-radius:7px}.quality-evidence{overflow-wrap:anywhere;font-size:10px;opacity:.85}.quality-filter{display:none;align-items:center;gap:6px;font-size:11px}.rec-filter{display:none;gap:8px;align-items:center;font-size:12px;font-weight:700}.rec-info{margin:8px;padding:9px;border-radius:9px;background:#eaf2f8;font-size:12px;line-height:1.5}.identity-warning{font-size:12px;line-height:1.5;background:#fff1d7;border:1px solid #deb983;padding:10px;margin:8px;border-radius:10px}.identity-warning b{color:#8e471c}.creator-credit{font-size:11px;color:#315574;margin-top:4px}.source-name{font-size:11px;color:#66717c;margin-top:2px}.identity-form{display:grid;gap:7px;padding:9px;margin:9px;border:1px solid #d6d4ca;border-radius:10px}.identity-form label{font-size:11px;font-weight:700;display:block}.identity-form input{display:block;width:100%;padding:9px;margin-top:3px;border:1px solid #c5cbd1;border-radius:8px;font-size:13px}.identity-form button{width:100%}.identity-form .small{font-size:11px;color:#64717e}.identity-detail{padding:0 9px 7px;font-size:11px}.identity-detail a{color:#225b88;text-decoration:underline}
+.quality-flag{font-size:11px;font-weight:700;line-height:1.4;margin:7px 10px;padding:8px 9px;border-radius:8px;background:#e9e4d8}.quality-flag.blocked{background:#fff0d7}.quality-flag.quantized{background:#e8edf8}.quality-slot{padding:7px 10px;border-top:1px solid #e8e6df;font-size:11px}.quality-slot .sprites{margin-top:5px} .quality-decision{margin:8px 0;padding:8px;background:#f8f6ef;border-radius:7px;font-size:11px}.quality-decision select,.quality-decision input{width:100%;margin-top:4px;padding:7px;border:1px solid #c8d0d6;border-radius:7px;background:white}.quality-decision label{display:block;margin:5px 0;font-weight:700}.visual-risk{background:#fff0dc;padding:7px;margin:6px 0;border-radius:6px;font-size:11px}.quality-status{font-size:11px;font-weight:700;padding:5px 8px;margin:5px 0;background:#eee;border-radius:7px}.quality-evidence{overflow-wrap:anywhere;font-size:10px;opacity:.85}.quality-filter{display:none;align-items:center;gap:6px;font-size:11px}.rec-filter{display:none;gap:8px;align-items:center;font-size:12px;font-weight:700}.rec-info{margin:8px;padding:9px;border-radius:9px;background:#eaf2f8;font-size:12px;line-height:1.5}.identity-warning{font-size:12px;line-height:1.5;background:#fff1d7;border:1px solid #deb983;padding:10px;margin:8px;border-radius:10px}.identity-warning b{color:#8e471c}.creator-credit{font-size:11px;color:#315574;margin-top:4px}.source-name{font-size:11px;color:#66717c;margin-top:2px}.identity-form{display:grid;gap:7px;padding:9px;margin:9px;border:1px solid #d6d4ca;border-radius:10px}.identity-form label{font-size:11px;font-weight:700;display:block}.identity-form input{display:block;width:100%;padding:9px;margin-top:3px;border:1px solid #c5cbd1;border-radius:8px;font-size:13px}.identity-form button{width:100%}.identity-form .small{font-size:11px;color:#64717e}.identity-detail{padding:0 9px 7px;font-size:11px}.identity-detail a{color:#225b88;text-decoration:underline}
 </style>
 </head>
 <body>
@@ -81,6 +81,7 @@ summary{cursor:pointer;font-weight:750}
 <p>The latest uploaded decisions are imported from a versioned GitHub backup. Earlier choices removed from the undecided pool remain included in later exports, so nothing disappears from your records. In Needs my decision mode, already-chosen siblings stay visible beside the undecided ones.</p><p>If you previously made decisions in other Mercury Pages review screens on this same browser, <b>Recover older page choices</b> finds relevant local decision records and includes them in the JSON export without rewriting current choices.</p><p><b>Recovered approved source art:</b> Use <b>Already-approved source art (read-only)</b> above to see the 74 source pairs alongside review modes, with four images and a missing-shiny filter. <a href="approved-legacy-recovery.html">The earlier reference gallery remains available.</a> It shows 69 complete shiny sets and five missing shiny pairs. These original GBA-source images still need a separate DS conversion audit; no votes are requested again.</p>
 <p><b>New identity repairs:</b> The former Platerigus / Mikitarian / Traumatisse grouping was incorrect. Yamask → Platerigus, Spritzee → Traumatisse and standalone Falinks now appear separately. Furrva is the first stage in the split Kocomb branch and is marked missing from the active review rather than silently omitted. Original artist and regional credits are retained without being promoted to Pokémon species.</p>
 <p><b>Source-not-yet-confirmed lines:</b> Hayog / Hogouse / Hogriks and Minamai / Marelstorm remain together for review but have no invented evolution arrows. The review distinguishes a source-confirmed species name from an unverified sprite-to-species pairing.</p>
+<p><b>Visual comparison review:</b> In the same <b>DS technical conversion quality</b> mode, compare the authentic original with its source-derived technical crop and, where necessary, a separately labeled nearest-neighbor size comparison. No comparison replaces your original approved art. Mark individual views “Preview looks acceptable,” “Needs repair,” or “Unsure” and export those quality notes in GitHub JSON; they are <b>not</b> species/artwork KEEP votes or native DS integration authorizations.</p>
 <p><b>New DS quality inspector:</b> Choose <b>DS technical conversion quality (read-only)</b> to compare all original artwork with source-derived 64×64 technical candidates, separated by evolution family. Oversize/partial-alpha images are quarantined instead of being rescaled. Palette-reduced candidates require explicit visual approval. No technical candidate is game-ready merely because it fits a canvas or passes an automated hash check. The quality report loads separately so unavailable previews cannot disable creative votes. When an original PNG is proven to be a pixel-perfect 2× enlargement, the conversion may invert that exact duplication; the original pixels must reconstruct exactly. Other oversized images remain quarantined.</p>
 <p><b>External source-only Furrva:</b> The canonical bee-family group now shows GitHub-hosted original Furrva front/back source PNGs and Mikitari credit beside the other stages. The original WebP files are also archived. These are not DS-ready sprites and have not been added to the game. Recovered Rainther pairs are once again available for creative choice; previously approved Hissiorite/Cobarett/Pythonova artwork will not be requeued.</p>
 <p>Previous GBA KEEP/CUT decisions are preserved in <a href="audit/2026-10-23/historical-decisions.json">historical-decisions.json</a>. Pending repairs and candidates deliberately held out of your review are in <a href="audit/2026-10-23/repair-queue.json">repair-queue.json</a>.</p>
@@ -93,7 +94,7 @@ summary{cursor:pointer;font-weight:750}
 <script>
 (function(){
 "use strict";
-var DATA=null, RECOVERY=null, QUALITY=null, STATE={}, IMPORTED=null, RESTORED_UNKNOWN={}, PAGE=0, PER_PAGE=25, VISIBLE_IDS=new Set();
+var DATA=null, RECOVERY=null, QUALITY=null, VISUAL=null, VISUAL_INDEX=new Map(), QUALITY_STATE={}, STATE={}, IMPORTED=null, RESTORED_UNKNOWN={}, PAGE=0, PER_PAGE=25, VISIBLE_IDS=new Set();
 var STORAGE="mercury-master-review-2026-10-23-v1";
 var $=function(id){return document.getElementById(id)};
 var safe=function(s){return String(s==null?"":s).replace(/[&<>"']/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]})};
@@ -126,7 +127,7 @@ function legacyBrowserSelections(){
 }
 
 function store(){
- try{localStorage.setItem(STORAGE,JSON.stringify({schema:"mercury-sprite-decisions-v1",snapshot:DATA.snapshot,state:STATE,archived:RESTORED_UNKNOWN}));}
+ try{localStorage.setItem(STORAGE,JSON.stringify({schema:"mercury-sprite-decisions-v1",snapshot:DATA.snapshot,state:STATE,archived:RESTORED_UNKNOWN,qualityState:QUALITY_STATE}));}
  catch(e){$("notice").textContent="Browser storage is unavailable. Please export JSON after making decisions; your selections may not survive a reload."}
 }
 function apply(id,choice,skipRender){
@@ -230,6 +231,21 @@ function updateStats(){
 }
 
 
+
+function qualitySourceKey(design,slot){return design.key+"|"+slot}
+function qualityArtifacts(design,slot){
+ var row=design.slots[slot],pair=VISUAL_INDEX.get(qualitySourceKey(design,slot))||{};
+ return {source_sha256:row.sha256||"",technical_sha256:row.output_sha256||"",
+         comparison_sha256:pair.comparisonSHA256||""};
+}
+function qualityPick(design,slot,pick,note){
+ var k=qualitySourceKey(design,slot),sha=qualityArtifacts(design,slot);
+ if(!["preview_acceptable","needs_source_repair","hold"].includes(pick))return;
+ QUALITY_STATE[k]={key:design.key,slot,name:design.name,decision:pick,
+   note:String(note||"").slice(0,600),...sha,updated:new Date().toISOString(),
+   notROMApproval:true,notCreativeVote:true};
+ store();updateStats();
+}
 function renderDsQuality(){
  var root=$("root"),q=$("q").value.trim().toLowerCase(),condition=$("qualityStatus").value;
  root.replaceChildren();VISIBLE_IDS=new Set();$("bulk").disabled=true;$("category").disabled=true;
@@ -262,9 +278,35 @@ function renderDsQuality(){
     if(row.status.startsWith("BLOCKED"))header.className+=" blocked";
     else if(row.palette_changed)header.className+=" quantized";
     var compare=document.createElement("div");compare.className="sprites";
-    if(row.original)compare.appendChild(imageCell(row.original,"ORIGINAL source"));
+    if(row.original)compare.appendChild(imageCell(row.original,row.source_container_repaired_without_replacing_approved_original?"IDAT-RECOVERED original pixels":"ORIGINAL source"));
     if(row.output)compare.appendChild(imageCell(row.output,"DS64 TECHNICAL preview"));
+    var triage=VISUAL_INDEX.get(qualitySourceKey(x,slot));
+    if(triage&&triage.comparisonPath)compare.appendChild(imageCell(triage.comparisonPath,"Nearest-neighbor comparison ONLY"));
     wrap.appendChild(compare);
+    if(triage&&triage.comparisonPath){
+     var risk=document.createElement("div");risk.className="visual-risk";
+     risk.textContent="Comparison only. "+triage.preview_operation+" · original "+triage.visible_extent.join("×")+" px → "+triage.preview_ink_extent.join("×")+" px. "+(triage.partial_alpha_present?"Partial transparency retained. ":"")+"No artwork or gameplay approval.";
+     wrap.appendChild(risk)
+    }
+    var palette=VISUAL_INDEX.get(qualitySourceKey(x,slot)+"|palette");
+    if(palette){
+     var delta=document.createElement("div");delta.className="visual-risk";
+     delta.textContent="Palette change: "+(palette.changedPixelFraction*100).toFixed(1)+"% of visible pixels changed · mean RGB channel delta "+palette.averageAbsoluteRGBChannelDelta+". This needs your visual assessment.";wrap.appendChild(delta)
+    }
+    if(row.output||(triage&&triage.comparisonPath)){
+     var qid=qualitySourceKey(x,slot),existing=QUALITY_STATE[qid]||{};
+     var quality=document.createElement("div");quality.className="quality-decision";
+     var lab=document.createElement("label");lab.textContent="Visual-quality check (NOT an in-game approval)";quality.appendChild(lab);
+     var select=document.createElement("select");select.setAttribute("aria-label","Visual quality decision for "+x.name+" "+slot);
+     [["","Not reviewed"],["preview_acceptable","Preview looks acceptable"],["needs_source_repair","Needs original art or palette repair"],["hold","Unsure — hold for later"]].forEach(function(item){var o=document.createElement("option");o.value=item[0];o.textContent=item[1];select.appendChild(o)});
+     select.value=existing.decision||"";
+     var note=document.createElement("input");note.type="text";note.placeholder="Optional notes about colors, outline or sprite pairing";note.value=existing.note||"";
+     select.onchange=function(){if(!select.value){delete QUALITY_STATE[qid];store();updateStats()}else qualityPick(x,slot,select.value,note.value)};
+     note.onchange=function(){if(select.value)qualityPick(x,slot,select.value,note.value)};
+     quality.appendChild(select);quality.appendChild(note);
+     var foot=document.createElement("div");foot.className="legend";foot.textContent="Separate source/preview feedback. Original KEEP/CUT and ROM integration stay unchanged.";quality.appendChild(foot);
+     wrap.appendChild(quality);
+    }
     if(row.original){var evidence=document.createElement("div");evidence.className="quality-evidence";evidence.textContent="Original "+(row.original_canvas||[]).join("×")+" · visible "+(row.visible_content_dimensions||[]).join("×")+" · "+(row.original_opaque_colors==null?"unmeasured":row.original_opaque_colors)+" opaque colors · "+(row.palette_changed?"palette reduced: visual reapproval required":"palette unchanged");if(row.lossless_2x_duplicate_collapse)evidence.textContent+=" · EXACT REVERSIBLE 2× original pixel duplication removed";wrap.appendChild(evidence)}
     el.appendChild(wrap);
    });
@@ -358,6 +400,8 @@ function exportPayload(){
  decision:s.decision||"pending",note:s.note||"",updated:s.updated||""
  }}),
  recoverySummary:RECOVERY?{sourcePairs:RECOVERY.entries.length,missingShiny:RECOVERY.entries.filter(function(x){return x.missingShiny}).map(function(x){return x.reviewId})}:null,
+ qualityChecks:Object.values(QUALITY_STATE).map(function(x){return Object.assign({},x,{notROMApproval:true,notCreativeVote:true})}),
+ visualComparisonSummary:VISUAL?{visualOnly:VISUAL.comparisons.length,paletteAudits:VISUAL.paletteAudits.length,notGameReady:true}:null,
  dsTechnicalSummary:QUALITY?{designs:QUALITY.designs.length,counts:QUALITY.counts,noGameIntegration:true}:null,
  legacyBrowserSelections:legacyBrowserSelections(),entries:current.concat(prior)};
 }
@@ -393,8 +437,17 @@ $("file").onchange=function(ev){
     incoming[x.id]=Object.assign({},existing,patch,{updated:String(x.updated||new Date().toISOString())});restored++;
    });
    if(!confirm("Merge "+restored+" imported records while preserving existing choices absent from this file? "+Object.keys(unknown).length+" non-current IDs will be preserved in the backup. "+(conflicts?conflicts+" explicit conflicts use imported votes.":"No vote conflicts.") ))return;
-   Object.assign(STATE,incoming);Object.assign(RESTORED_UNKNOWN,unknown);store();PAGE=0;render();
-   alert("Merged "+restored+" records. Existing unmentioned choices remain intact. Please export another GitHub backup.");
+   Object.assign(STATE,incoming);Object.assign(RESTORED_UNKNOWN,unknown);
+   var qcAccepted=0,qcSkipped=0;
+   (Array.isArray(parsed.qualityChecks)?parsed.qualityChecks:[]).forEach(function(x){
+    var found=QUALITY&&QUALITY.designs.find(function(v){return v.key===x.key}),s=found&&found.slots&&found.slots[x.slot];
+    if(!s||!["preview_acceptable","needs_source_repair","hold"].includes(x.decision)||s.sha256!==x.source_sha256){qcSkipped++;return}
+    var expected=qualityArtifacts(found,x.slot);
+    if(expected.technical_sha256!==x.technical_sha256||expected.comparison_sha256!==x.comparison_sha256){qcSkipped++;return}
+    QUALITY_STATE[qualitySourceKey(found,x.slot)]=Object.assign({},x,{notROMApproval:true,notCreativeVote:true});qcAccepted++;
+   });
+   store();PAGE=0;render();
+   alert("Merged "+restored+" artwork records and "+qcAccepted+" source-preview quality checks. "+qcSkipped+" stale quality checks skipped. Existing unmentioned choices remain intact. Export another GitHub backup.");
    }catch(e){alert("Could not restore file: "+e.message)}
  };
  reader.readAsText(f);ev.target.value="";
@@ -414,20 +467,34 @@ Promise.all([
  fetch("master-review-data.json",{cache:"no-store"}).then(function(x){if(!x.ok)throw Error("Review data HTTP "+x.status);return x.json()}),
  fetch("review/user-iphone-decisions-2026-10-23.json",{cache:"no-store"}).then(function(x){if(!x.ok)throw Error("Uploaded decisions HTTP "+x.status);return x.json()}),
  fetch("review/recovered-approved-legacy-pairs-2026-10-23.json",{cache:"no-store"}).then(function(x){if(!x.ok)throw Error("Recovery manifest HTTP "+x.status);return x.json()}).catch(function(e){console.warn("Source recovery unavailable; canonical voting stays online:",e);return null}),
- fetch("DS_CUSTOM_LIBRARY/converted/Verified_Source_DS64_Technical_2026_10_23/technical_quality_manifest.json",{cache:"no-store"}).then(function(x){if(!x.ok)throw Error("Technical conversion manifest HTTP "+x.status);return x.json()}).catch(function(e){console.warn("DS technical conversion report not available yet:",e);return null})
+ fetch("DS_CUSTOM_LIBRARY/converted/Verified_Source_DS64_Technical_2026_10_23/technical_quality_manifest.json",{cache:"no-store"}).then(function(x){if(!x.ok)throw Error("Technical conversion manifest HTTP "+x.status);return x.json()}).catch(function(e){console.warn("DS technical conversion report not available yet:",e);return null}),
+ fetch("DS_CUSTOM_LIBRARY/comparison/DS64_Visual_Triage_2026_10_23/comparison_manifest.json",{cache:"no-store"}).then(function(x){if(!x.ok)throw Error("NN comparison report HTTP "+x.status);return x.json()}).catch(function(e){console.warn("Visual source comparison unavailable; original decisions remain available:",e);return null})
 ]).then(function(parts){
- var d=parts[0],backedUp=parts[1],rec=parts[2],quality=parts[3];
+ var d=parts[0],backedUp=parts[1],rec=parts[2],quality=parts[3],visual=parts[4];
  if(d.schema!=="mercury-master-review-v1"||!Array.isArray(d.entries)||!Array.isArray(d.technicalHolds))throw Error("Invalid review dataset");
  if(backedUp.schema!=="mercury-user-iphone-decisions-v1"||!Array.isArray(backedUp.entries))throw Error("Invalid decision backup");
  if(rec&&(rec.schema!=="mercury-recovered-approved-source-pairs-v1"||!Array.isArray(rec.entries)||rec.entries.length!==74)){console.warn("Unexpected recovered-source index; original votes remain available.");rec=null}
  if(quality&&(quality.schema!=="mercury-verified-source-ds64-technical-v1"||!Array.isArray(quality.designs)||quality.designs.length!==83)){console.warn("Invalid DS technical manifest; viewing original art only.");quality=null}
- DATA=d;IMPORTED=backedUp;RECOVERY=rec;QUALITY=quality;
+ if(visual&&(visual.schema!=="mercury-original-visual-rescue-comparisons-v1"||!Array.isArray(visual.comparisons)||!Array.isArray(visual.paletteAudits)))visual=null;
+ DATA=d;IMPORTED=backedUp;RECOVERY=rec;QUALITY=quality;VISUAL=visual;
+ VISUAL_INDEX=new Map();
+ if(VISUAL){VISUAL.comparisons.forEach(function(x){VISUAL_INDEX.set(x.key+"|"+x.slot,x)});
+ VISUAL.paletteAudits.forEach(function(x){VISUAL_INDEX.set(x.key+"|"+x.slot+"|palette",x)})}
  $("qualityStat").textContent=QUALITY?(Object.entries(QUALITY.counts).filter(function(p){return p[0].startsWith("PIXEL_PRESERVED")||p[0].startsWith("PALETTE_QUANTIZED")}).reduce(function(s,p){return s+p[1]},0))+" DS64 technical views · "+QUALITY.designs.length+" source sets":"DS conversion report pending";
  if(!RECOVERY)$("recStat").textContent="Recovery preview temporarily unavailable";
  var archived={};backedUp.entries.forEach(function(x){if(["keep","cut"].includes(x.decision))archived[x.id]={decision:x.decision,note:String(x.note||""),updated:String(x.updated||"")};});
  try{
   var saved=JSON.parse(localStorage.getItem(STORAGE)||"{}");
   if(saved.schema==="mercury-sprite-decisions-v1"&&saved.archived&&typeof saved.archived==="object")RESTORED_UNKNOWN=saved.archived;
+  if(saved.schema==="mercury-sprite-decisions-v1"&&saved.qualityState&&typeof saved.qualityState==="object"){
+   var visualRows=new Map(QUALITY?QUALITY.designs.map(function(x){return [x.key,x]}):[]);
+   Object.entries(saved.qualityState).forEach(function(pair){
+    var record=pair[1],design=visualRows.get(record&&record.key);
+    if(!design||!design.slots[record.slot])return;
+    var hashes=qualityArtifacts(design,record.slot);
+    if(record.source_sha256===hashes.source_sha256&&record.technical_sha256===hashes.technical_sha256&&record.comparison_sha256===hashes.comparison_sha256)QUALITY_STATE[pair[0]]=record;
+   });
+  }
   if(saved.schema==="mercury-sprite-decisions-v1"&&saved.state&&typeof saved.state==="object"){
    Object.entries(saved.state).forEach(function(pair){
     var v=pair[1],existing=archived[pair[0]];
