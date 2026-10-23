@@ -50,6 +50,10 @@ def source_rows() -> list[dict]:
     assert len(extra["matches"]) == 8
     assert votes["count"] == len(votes["entries"]) == 166
     assert votes["keepCount"] == 154 and votes["cutCount"] == 12
+    repairs = obj(ROOT / "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy_PNG_Container_Repairs/recovery_manifest.json")
+    assert repairs["counts"]["recovered"] == 4 and repairs["counts"]["unresolved"] == 0
+    repaired_by_key = {(x["identity"], x["slot"]): x for x in repairs["records"]
+                       if x["status"] == "RECOVERED_ORIGINAL_PIXEL_STREAM"}
     master = obj(ROOT / "master-review-data.json")
     roster = {x["id"]: x for x in master["entries"] + master["technicalHolds"]}
     rows = []
@@ -60,7 +64,22 @@ def source_rows() -> list[dict]:
                                ("shinyFront", "shiny_front"), ("shinyBack", "shiny_back")):
             v = x.get(original)
             if v:
-                files[slot] = {"path": v["path"], "expected_blob": v["gitBlobSha"]}
+                documented = repaired_by_key.get((x["identity"], slot))
+                if documented:
+                    if documented["source"] != v["path"] or documented["original_git_blob_sha"] != v["gitBlobSha"]:
+                        raise ValueError("Unverified Munna/Musharna source redirect")
+                    raw_approved = safe_asset(v["path"]).read_bytes()
+                    if git_blob_sha(raw_approved) != v["gitBlobSha"]:
+                        raise ValueError("Previously approved PNG source was overwritten")
+                    files[slot] = {
+                        "path": documented["repaired_source"],
+                        "expected_sha256": documented["repaired_sha256"],
+                        "approved_original_path": v["path"],
+                        "approved_original_sha1_blob": v["gitBlobSha"],
+                        "original_IDAT_preserved": documented["unchanged_compressed_IDAT"],
+                    }
+                else:
+                    files[slot] = {"path": v["path"], "expected_blob": v["gitBlobSha"]}
         rows.append({"key": x["identity"], "reviewId": x["reviewId"], "name": x["name"],
                      "family": x["family"], "source": x["source"], "tier": "historically_approved_source",
                      "type1": x["type1"], "type2": x.get("type2", ""), "stage": None,
@@ -111,6 +130,12 @@ def build_one(source: Path, expected: dict, output: Path) -> dict:
         raise ValueError("Source SHA-1 blob changed: " + source.as_posix())
     if expected.get("expected_sha256") and sha256(raw) != expected["expected_sha256"]:
         raise ValueError("Source SHA-256 changed: " + source.as_posix())
+    if expected.get("approved_original_path"):
+        original = safe_asset(expected["approved_original_path"])
+        if git_blob_sha(original.read_bytes()) != expected["approved_original_sha1_blob"]:
+            raise ValueError("Original historical approved artwork changed: "+str(original))
+        if expected.get("original_IDAT_preserved") is not True:
+            raise ValueError("Unproven source repair; do not stage source art")
     try:
         with Image.open(source) as image:
             image.load()
@@ -132,6 +157,8 @@ def build_one(source: Path, expected: dict, output: Path) -> dict:
     original_bounds = rgba.getchannel("A").getbbox()
     opaque = {p[:3] for p in rgba.getdata() if p[3] == 255}
     detail = {"original": str(source.relative_to(ROOT)), "sha256": sha256(raw),
+              "source_container_repaired_without_replacing_approved_original":bool(expected.get("approved_original_path")),
+              "approved_original_path":expected.get("approved_original_path"),
               "original_canvas": original_canvas, "bounds": list(original_bounds) if original_bounds else None,
               "original_opaque_colors": len(opaque), "original_alpha_values": len(alphas),
               "output": None, "output_sha256": None, "status": None, "palette_changed": False,
@@ -225,6 +252,10 @@ def main():
                 src = safe_asset(source_meta["path"])
                 raw = src.read_bytes()
                 assert sha256(raw) == meta["sha256"], source_meta["path"]
+                if source_meta.get("approved_original_path"):
+                    orig=safe_asset(source_meta["approved_original_path"])
+                    assert git_blob_sha(orig.read_bytes())==source_meta["approved_original_sha1_blob"]
+                    assert meta["source_container_repaired_without_replacing_approved_original"] is True
                 if meta["output"]:
                     o = ROOT / meta["output"]
                     assert o.is_file() and sha256(o.read_bytes()) == meta["output_sha256"], meta["output"]
@@ -244,6 +275,7 @@ def main():
                           "sourceFilesNeverReplaced": True, "neverAutomaticallyApproved": True,
                           "noNewEvolutionLinks": True, "noFabricatedArt": True},
                "sources": {"historicallyApprovedFamilies": 74, "repairedSourceComparisons": 8,
+                           "recoveredOriginalPNGContainers": 4,
                            "originalFurrvaSource": 1, "originalHistoricalVotes": 166},
                "counts": dict(sorted(counts.items())), "designs": result}
     OUT.mkdir(parents=True, exist_ok=True)
