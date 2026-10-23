@@ -12,17 +12,17 @@
   "sources": {
     "historicallyApprovedFamilies": 74,
     "repairedSourceComparisons": 8,
+    "recoveredOriginalPNGContainers": 4,
     "originalFurrvaSource": 1,
     "originalHistoricalVotes": 166
   },
   "counts": {
     "BLOCKED_OVERSIZE_NO_SCALING": 179,
     "BLOCKED_PARTIAL_ALPHA": 17,
-    "BLOCKED_UNDECODABLE_OR_UNSUPPORTED_PNG": 4,
     "MISSING_SOURCE": 28,
-    "PALETTE_QUANTIZED_NEEDS_ART_REVIEW": 39,
-    "PIXEL_PRESERVED_DS64_CANDIDATE": 12,
-    "PIXEL_PRESERVED_EXACT_2X_COLLAPSE_DS64_CANDIDATE": 53
+    "PALETTE_QUANTIZED_NEEDS_ART_REVIEW": 40,
+    "PIXEL_PRESERVED_DS64_CANDIDATE": 13,
+    "PIXEL_PRESERVED_EXACT_2X_COLLAPSE_DS64_CANDIDATE": 55
   },
   "designs": [
     {
@@ -40,6 +40,8 @@
         "front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/butterfree-alternate-form-1/front.png",
           "sha256": "ce5b8feaab1298f1130e3fc7574516ce1ccb8ac719e4d65535ac6e00a4dda628",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             160,
             160
@@ -78,6 +80,8 @@
         "back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/butterfree-alternate-form-1/back.png",
           "sha256": "02c27878ddb5fe33110a5e1be166880718ab1fdec96ba2ba7074710c917f1b2f",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -116,6 +120,8 @@
         "shiny_front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/butterfree-alternate-form-1/shiny_front.png",
           "sha256": "f2f55cd8d76c2c984639575121debe4d959d33fa1b87b33b486bc770d9609509",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             160,
             160
@@ -144,6 +150,8 @@
         "shiny_back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/butterfree-alternate-form-1/shiny_back.png",
           "sha256": "dc16137994a08a76d078285900ab9cd2c46adc975c8a1df07b24c5f9b78c8d2e",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -196,6 +204,8 @@
         "front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/poliwag-alternate-form-1/front.png",
           "sha256": "3656f31d3417e1ef30dd50bba4fb3a815092f7b9563910168acd3390aa6e25c7",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             160,
             160
@@ -234,6 +244,8 @@
         "back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/poliwag-alternate-form-1/back.png",
           "sha256": "2b0bd8158963dc3087174196112db6d04b6ec964c788d71d1489acb07d95ff2f",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -262,6 +274,8 @@
         "shiny_front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/poliwag-alternate-form-1/shiny_front.png",
           "sha256": "f75da0c5780cd10a4b4233906efab8a2adeb853c15370a79ca733c84b1667f64",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             160,
             160
@@ -300,6 +314,8 @@
         "shiny_back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/poliwag-alternate-form-1/shiny_back.png",
           "sha256": "2e9d712565510b001277a956301cb41efc6f75cf13e90dd013abafc82b0cd25e",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -352,6 +368,8 @@
         "front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/poliwhirl-alternate-form-1/front.png",
           "sha256": "7dd1aa4400e9e656534f244f3862df11d5436740c683a77fbe1661279bccbcac",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             160,
             160
@@ -380,6 +398,8 @@
         "back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/poliwhirl-alternate-form-1/back.png",
           "sha256": "c03cb496a62e5709df10c8898c9655ad680cda332c801dd6b5dcdfc2d63446de",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -408,6 +428,8 @@
         "shiny_front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/poliwhirl-alternate-form-1/shiny_front.png",
           "sha256": "9247a98928f2b2c5c999ee7e498769b3af87f2f5613b95060914aa9884cb9da9",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             160,
             160
@@ -436,6 +458,8 @@
         "shiny_back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/poliwhirl-alternate-form-1/shiny_back.png",
           "sha256": "35a0dcbcbde36c4ce8eee8f0569952c33b3830a5433b3d849fbb04f5eec7eac0",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -478,6 +502,8 @@
         "front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/poliwrath-alternate-form-1/front.png",
           "sha256": "276cc689d864c2c6221d6ed9efc5fadb8ab534fb5370f5e40f0645fd9024cf74",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             160,
             160
@@ -506,6 +532,8 @@
         "back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/poliwrath-alternate-form-1/back.png",
           "sha256": "34fc2d4b953b3abf749900e1bb432389ff608f57a1bc4a2346b82b9f08aa5d7e",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -534,6 +562,8 @@
         "shiny_front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/poliwrath-alternate-form-1/shiny_front.png",
           "sha256": "76ada968fdd141b5959125f0841da8b1546577f15f8b6d9e6e9913ea200891c8",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             160,
             160
@@ -562,6 +592,8 @@
         "shiny_back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/poliwrath-alternate-form-1/shiny_back.png",
           "sha256": "160295bf1bc3b522a3319df011f3fc0c0ed96c440f2d2c38fb93345dda141d1a",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -604,6 +636,8 @@
         "front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/politoed-alternate-form-1/front.png",
           "sha256": "7ba9db73f7e6cbf87f85cea71e56e897a34c2be3c80231206346a5e4d82043e0",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             160,
             160
@@ -632,6 +666,8 @@
         "back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/politoed-alternate-form-1/back.png",
           "sha256": "691ab1028da2d03581553f7df6a3710b060142e02e941c6b2bcc3720711b7a4e",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -660,6 +696,8 @@
         "shiny_front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/politoed-alternate-form-1/shiny_front.png",
           "sha256": "c6b3835285e5c65ff2be49311da8d735372754af5d30e168063ea8eb4e78d122",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             160,
             160
@@ -698,6 +736,8 @@
         "shiny_back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/politoed-alternate-form-1/shiny_back.png",
           "sha256": "e89598b28c9e54274e58ba5559261c3238fc56567a275bf3031f24e30cf491c5",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -750,6 +790,8 @@
         "front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/geodude-bluetowel-alternate-forms-form-2/front.png",
           "sha256": "499aac3a57fb93d7e2ce3da4aa4fa9e725a3c5a9c9583bcab831d0d7b3168310",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             160,
             160
@@ -778,6 +820,8 @@
         "back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/geodude-bluetowel-alternate-forms-form-2/back.png",
           "sha256": "5e2211bafc02e6e715676cd156379b2b99bbee576a129eac0a4d327cdac2e7d9",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -806,6 +850,8 @@
         "shiny_front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/geodude-bluetowel-alternate-forms-form-2/shiny_front.png",
           "sha256": "b5445dd8b71193440dcf254d441901e3dd33a5effde7f9c5fb40dd41d0ad33c1",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             160,
             160
@@ -834,6 +880,8 @@
         "shiny_back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/geodude-bluetowel-alternate-forms-form-2/shiny_back.png",
           "sha256": "5ce60f26bc68f59c1f3c24551180b530c5040cd1933684dc6fc3710743245dcb",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -876,6 +924,8 @@
         "front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/graveler-bluetowel-alternate-forms-form-2/front.png",
           "sha256": "d7fe7982730f1bffca3c2722aaef8557e70ed4a97c9f5429adc7df8bce04b552",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             160,
             160
@@ -904,6 +954,8 @@
         "back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/graveler-bluetowel-alternate-forms-form-2/back.png",
           "sha256": "979e23027d49d85a442e95f5436c0acb090ce4e3fd2a89b51ee37977e02d11ac",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -932,6 +984,8 @@
         "shiny_front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/graveler-bluetowel-alternate-forms-form-2/shiny_front.png",
           "sha256": "9581ee053b706628be5ea4f122e90664211d703a82af72525cf492ca9460b4dd",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             160,
             160
@@ -960,6 +1014,8 @@
         "shiny_back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/graveler-bluetowel-alternate-forms-form-2/shiny_back.png",
           "sha256": "42062cdd653cca9b140b68c00636e408c4586fc85c503a44bdabafd3774cf49d",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -1002,6 +1058,8 @@
         "front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/golem-bluetowel-alternate-forms-form-2/front.png",
           "sha256": "c42486690316ae2dcd4de421892950b22f0bef367bf909454837ef48e9d7c06f",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             160,
             160
@@ -1030,6 +1088,8 @@
         "back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/golem-bluetowel-alternate-forms-form-2/back.png",
           "sha256": "643891f5f7ecd8bebbbc735e9006e2d414445b4410dc0e5bd479a7a2266ba287",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -1058,6 +1118,8 @@
         "shiny_front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/golem-bluetowel-alternate-forms-form-2/shiny_front.png",
           "sha256": "3ef7909f7a10d49319894a2ba90b19fbf6575484f41cd0bc8a4a3ff1ebb5dcc5",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             160,
             160
@@ -1086,6 +1148,8 @@
         "shiny_back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/golem-bluetowel-alternate-forms-form-2/shiny_back.png",
           "sha256": "68a352d0214bd3c5056cb0e192f7373aff4f660aec2411e10b6ddf4449a54e7c",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -1128,6 +1192,8 @@
         "front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/koffing-bluetowel-alternate-forms-form-2/front.png",
           "sha256": "fc949329635e3a138d9d0d8a12707bcc8de32462bf64004e0f15e54dccd8b781",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             160,
             160
@@ -1156,6 +1222,8 @@
         "back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/koffing-bluetowel-alternate-forms-form-2/back.png",
           "sha256": "379085ed5b36b5846a127185d236749614df3889ca539145b0a60e3799dc5866",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -1184,6 +1252,8 @@
         "shiny_front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/koffing-bluetowel-alternate-forms-form-2/shiny_front.png",
           "sha256": "f95e189271ffb01352851858cb09e4c47bd133a3794d9e0607fa68f6511393a5",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             160,
             160
@@ -1212,6 +1282,8 @@
         "shiny_back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/koffing-bluetowel-alternate-forms-form-2/shiny_back.png",
           "sha256": "319598de695b0dd85d62d583a8274104fac338d6baef7ddea302e113f312e390",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -1254,6 +1326,8 @@
         "front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/weezing-bluetowel-alternate-forms-form-2/front.png",
           "sha256": "05e2f33373dfb58b6913796126089399ad4f1dbd3116a799efe444dc647e6e30",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             160,
             160
@@ -1282,6 +1356,8 @@
         "back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/weezing-bluetowel-alternate-forms-form-2/back.png",
           "sha256": "0fdf84df049ca9913456bf3c18cceee90bc124b4bbc67b986d8235c644a2b5f9",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -1310,6 +1386,8 @@
         "shiny_front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/weezing-bluetowel-alternate-forms-form-2/shiny_front.png",
           "sha256": "57408ab9eadc135470655184ab713026cfbc2659a74711cbde88cbf641457629",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             160,
             160
@@ -1338,6 +1416,8 @@
         "shiny_back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/weezing-bluetowel-alternate-forms-form-2/shiny_back.png",
           "sha256": "c1d34654272826615615577592af5490b73b78c43a09e4082feaa04acbe24882",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -1380,6 +1460,8 @@
         "front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/staryu-alternate-form-1/front.png",
           "sha256": "7ad4660bcd0aa443ca385cefc19b0c6a9e5b7ace826bbc6ac0fe48903cce07ac",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             160,
             160
@@ -1418,6 +1500,8 @@
         "back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/staryu-alternate-form-1/back.png",
           "sha256": "116bba68b71ad9de73eafa0c7941322d0d72c4bd167a351528f75ee4a5d76b92",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -1456,6 +1540,8 @@
         "shiny_front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/staryu-alternate-form-1/shiny_front.png",
           "sha256": "71000cb8cb6fc5b8b938198957bbc7530365e0c9281a00eab49c171b50996412",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             160,
             160
@@ -1484,6 +1570,8 @@
         "shiny_back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/staryu-alternate-form-1/shiny_back.png",
           "sha256": "41b92a9db094a3261699a171379ea0e7cd55190cd907612aa1be686fbf17dfe7",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -1526,6 +1614,8 @@
         "front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/starmie-alternate-form-1/front.png",
           "sha256": "ecaae3c41244d029d47f290402990e662d69f28a0e9d19faeb6cf087d6a4db65",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             160,
             160
@@ -1564,6 +1654,8 @@
         "back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/starmie-alternate-form-1/back.png",
           "sha256": "4c44f8d8e4e0c4a9f7dda9599195ce24fff45a156cd2a2caf7fd1b15c62effd7",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -1602,6 +1694,8 @@
         "shiny_front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/starmie-alternate-form-1/shiny_front.png",
           "sha256": "bb19fa9ea37df879874c4256ac339637c2a4515ed654fa5d7840353a7252fee4",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             160,
             160
@@ -1630,6 +1724,8 @@
         "shiny_back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/starmie-alternate-form-1/shiny_back.png",
           "sha256": "edcde42880951f6b25c67598805033936cd218e0dfcff269b447e00dc0db841e",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -1672,6 +1768,8 @@
         "front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/flareon-alternate-form-3/front.png",
           "sha256": "95b0df7c193461f853a2e918c248c738b60dfa5f28612f47814ef44314865b61",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -1710,6 +1808,8 @@
         "back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/flareon-alternate-form-3/back.png",
           "sha256": "59a4bf1a6a0ce008f29cba9e8f36a530c70620cf63e431e3aea62e91ff7f94bb",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -1738,6 +1838,8 @@
         "shiny_front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/flareon-alternate-form-3/shiny_front.png",
           "sha256": "a11582eb7e9c19830d57332ba37ab8c511cd01ca7c66207f34be0b887d308325",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -1776,6 +1878,8 @@
         "shiny_back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/flareon-alternate-form-3/shiny_back.png",
           "sha256": "d5fdc75dfdbd607010772bc4d117553e69bdc751897176249e04c23cd1952620",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -1818,6 +1922,8 @@
         "front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/leafeon-alternate-form-3/front.png",
           "sha256": "f396612be2bd834f37c1cbf2c02f10b34a720d6844e0ff25c9bd12be73a04c32",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             160,
             160
@@ -1856,6 +1962,8 @@
         "back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/leafeon-alternate-form-3/back.png",
           "sha256": "9bdfd09c6cb9d298583f7e0ba9adff5cc6a3da7912099cd9e16fa0872c425349",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -1894,6 +2002,8 @@
         "shiny_front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/leafeon-alternate-form-3/shiny_front.png",
           "sha256": "aa523dbbbbe8774a3ac0b4ad5042b4270e4de015961e67bc4ad55524d8463401",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             160,
             160
@@ -1932,6 +2042,8 @@
         "shiny_back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/leafeon-alternate-form-3/shiny_back.png",
           "sha256": "31205b07a038642ac9f359e16e3a3a6d5741f618fd0b03a24f3a9469ba75a100",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -1984,6 +2096,8 @@
         "front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/glaceon-alternate-form-3/front.png",
           "sha256": "34fbebe5fefd579063dcabc65b9bf6d60b724b956e5fa7cd5b1f24a103bfd3a9",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             160,
             160
@@ -2022,6 +2136,8 @@
         "back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/glaceon-alternate-form-3/back.png",
           "sha256": "4d499df2e2fa18e6e8ea5434971dfa9b65c466c895f0c719ba53821529d5861b",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -2060,6 +2176,8 @@
         "shiny_front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/glaceon-alternate-form-3/shiny_front.png",
           "sha256": "4d10028c0be9a6f1ea3824ca927bed3da4f7dd6d2a3d8c6288746510881c2d27",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             160,
             160
@@ -2098,6 +2216,8 @@
         "shiny_back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/glaceon-alternate-form-3/shiny_back.png",
           "sha256": "bdfd921130554caa9cc3dddd4669d196fceab412442b56b77fd4856b856b05c4",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -2150,6 +2270,8 @@
         "front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/dragonite-alternate-form-1/front.png",
           "sha256": "612d049710ce937d9df0b016cee3112bb1e83e1e40db99abf7de6e92023b8b5d",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             160,
             160
@@ -2178,6 +2300,8 @@
         "back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/dragonite-alternate-form-1/back.png",
           "sha256": "fe8192f66c191b8d85eef27077c3073bc41d3f02fcdb83a4110f189dd1decd9a",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -2206,6 +2330,8 @@
         "shiny_front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/dragonite-alternate-form-1/shiny_front.png",
           "sha256": "472fe636c964fc2d57b6452e9de2a3e091741f7515fa5c8e077b95882ba6e597",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             160,
             160
@@ -2234,6 +2360,8 @@
         "shiny_back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/dragonite-alternate-form-1/shiny_back.png",
           "sha256": "4fe70b3bd4b99d7dae54563b3abec112739c215686f52d069d85fb72f6aab635",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -2276,6 +2404,8 @@
         "front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/feraligatr-alternate-form-1/front.png",
           "sha256": "10ed5ceb9810b3b0bd33cac45882e96138675479361b78ac5f77f4e0b603cfd6",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             160,
             192
@@ -2304,6 +2434,8 @@
         "back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/feraligatr-alternate-form-1/back.png",
           "sha256": "e9296f0ade321090af335331c42005a8fb794045ef8133b90a7a702100600bd7",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -2332,6 +2464,8 @@
         "shiny_front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/feraligatr-alternate-form-1/shiny_front.png",
           "sha256": "f2f81b58443163f7006c4fe16986b0eb07ab415b25681f5b26b0f9250e74a16d",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             160,
             192
@@ -2360,6 +2494,8 @@
         "shiny_back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/feraligatr-alternate-form-1/shiny_back.png",
           "sha256": "822da9def592f74ad4c1ec7b8e0fcc9d61d44a70e9e7544d6e28dd22afda52e3",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -2402,6 +2538,8 @@
         "front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/hoothoot-alternate-form-1/front.png",
           "sha256": "dfa1e5530551c3d93790d02bf8fd39860e0ff14e7546228f33da18acbe057dba",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             160,
             160
@@ -2430,6 +2568,8 @@
         "back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/hoothoot-alternate-form-1/back.png",
           "sha256": "ea28bc35bedd24320c4ba404686cb7678c39141c2c7fa3c4dd51776f95b1d921",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -2458,6 +2598,8 @@
         "shiny_front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/hoothoot-alternate-form-1/shiny_front.png",
           "sha256": "a559332ed4a0dcc8e3f5c4d8507c95434419a8f9e46f2c8b3e46278f738be312",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             160,
             160
@@ -2496,6 +2638,8 @@
         "shiny_back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/hoothoot-alternate-form-1/shiny_back.png",
           "sha256": "9915328cd5706c8a6db35725308b4bd3cf0829bf7e1dfabd78602e0618c7ee53",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -2538,6 +2682,8 @@
         "front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/ampharos-alternate-mega-form-3/front.png",
           "sha256": "421b8e106a89cce4e860db82818e66d337bfc590df803b233d689e5ab48d8f2d",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -2566,6 +2712,8 @@
         "back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/ampharos-alternate-mega-form-3/back.png",
           "sha256": "88a1904af130246cf17c77084af7d07a85f6c9258d83dc93c445d9c1adfeebc0",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -2594,6 +2742,8 @@
         "shiny_front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/ampharos-alternate-mega-form-3/shiny_front.png",
           "sha256": "3a27906cfd6faa34119900b928900ecd67ca5bd7183f14163b3099ca5fd86ae4",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -2622,6 +2772,8 @@
         "shiny_back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/ampharos-alternate-mega-form-3/shiny_back.png",
           "sha256": "6c6a91ceb076443b09b3dd2491237929411d1fc13466ee361c632b5d66a1bbad",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -2664,6 +2816,8 @@
         "front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/sunflora-alternate-form-1/front.png",
           "sha256": "8890de4552366b61860d9bb5c748ffad99b94aaf5f681d7a1f10930f23134b13",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             160,
             160
@@ -2702,6 +2856,8 @@
         "back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/sunflora-alternate-form-1/back.png",
           "sha256": "0a08fc819e14c167fae3c0cfb56eef2a2e3df3835a1782095b731bf7f377373c",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             160,
             160
@@ -2740,6 +2896,8 @@
         "shiny_front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/sunflora-alternate-form-1/shiny_front.png",
           "sha256": "fa26021fee3ea2c5e418923adebd51123da80749828aa7599d4c57f4dc219572",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             160,
             160
@@ -2778,6 +2936,8 @@
         "shiny_back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/sunflora-alternate-form-1/shiny_back.png",
           "sha256": "177c261da1a5810af88cf1913a1fe222bab38425b8034a89090c13d8340bb0b6",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             160,
             160
@@ -2830,6 +2990,8 @@
         "front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/misdreavus-alternate-form-2/front.png",
           "sha256": "3f14d51cdff4d62d854c357e2a3b7ee8868c452002e3b7773ceb1c0462e9d050",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             160,
             160
@@ -2858,6 +3020,8 @@
         "back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/misdreavus-alternate-form-2/back.png",
           "sha256": "9086685e52f04f1762dcf67e8013abababaf90aaf59e36b456df6ede4e6f6429",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -2896,6 +3060,8 @@
         "shiny_front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/misdreavus-alternate-form-2/shiny_front.png",
           "sha256": "14727323a7b00ef529c82ec928e1a292a2647750f2372292b7636d7e4b9ee92f",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             160,
             160
@@ -2934,6 +3100,8 @@
         "shiny_back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/misdreavus-alternate-form-2/shiny_back.png",
           "sha256": "abbba7488a5b49838ca2bda9a0a89cf136c955d2c7470441bd160a154d4c0e5c",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -2986,6 +3154,8 @@
         "front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/mismagius-alternate-form-2/front.png",
           "sha256": "d4a023b68d981ce992043b8ff1fa73aafb83e0cc8acc68534162ec479f5efd8d",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             160,
             160
@@ -3014,6 +3184,8 @@
         "back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/mismagius-alternate-form-2/back.png",
           "sha256": "9002b8bc64c95ec5b2fcdd9aef4e51f5acb44ace80e51cb2484b1ada7d81b12a",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -3042,6 +3214,8 @@
         "shiny_front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/mismagius-alternate-form-2/shiny_front.png",
           "sha256": "b22fa7bd51e5eaaaefe5264431ef4834b5e956511e76524fa08f9013b030af4f",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             160,
             160
@@ -3070,6 +3244,8 @@
         "shiny_back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/mismagius-alternate-form-2/shiny_back.png",
           "sha256": "8702b29bfb488cb9cd9e7524e60bf726abb7180466e86b8d3a094adfe7dcc1fe",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -3112,6 +3288,8 @@
         "front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/dunsparce-bt-alt-forms-earth-form-2/front.png",
           "sha256": "550fb125133fcfa78c91f347ebac3cc09d5bdc05f052df6a1dcac075b19057a7",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             160,
             160
@@ -3136,6 +3314,8 @@
         "back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/dunsparce-bt-alt-forms-earth-form-2/back.png",
           "sha256": "71699f0d8027f350b651105ebc6e573911a265a2a585722299dc16e9e046d269",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -3174,6 +3354,8 @@
         "shiny_front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/dunsparce-bt-alt-forms-earth-form-2/shiny_front.png",
           "sha256": "7426de21542de035b2d07065808bd611d19e0801bfefb1e49848360d2035aef2",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             160,
             160
@@ -3198,6 +3380,8 @@
         "shiny_back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/dunsparce-bt-alt-forms-earth-form-2/shiny_back.png",
           "sha256": "adf26d41ba053de395109d03abedb89c637caa9ce9cdc363a05fea5c74010a82",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -3250,6 +3434,8 @@
         "front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/gliscor-alternate-form-1/front.png",
           "sha256": "9a87a7b8b523e1367f3dddda81688909a74986e0f2015db6abd48beed366629e",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             160,
             160
@@ -3278,6 +3464,8 @@
         "back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/gliscor-alternate-form-1/back.png",
           "sha256": "e9a962d0917ec969ae625bb1bd6e0c1715040ee654806b5c07a4f45feb76bf2c",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -3306,6 +3494,8 @@
         "shiny_front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/gliscor-alternate-form-1/shiny_front.png",
           "sha256": "2dd9e61d50879c204de3372e4fbad614bc9d67838f3b759a139113cb3e3ef924",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             160,
             160
@@ -3334,6 +3524,8 @@
         "shiny_back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/gliscor-alternate-form-1/shiny_back.png",
           "sha256": "adcb98f1ced093685507dca9190a3b90a5cec69b92ff017703f91a39505b4d43",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -3376,6 +3568,8 @@
         "front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/snubbull-alternate-form-1/front.png",
           "sha256": "981ba4fe8f756418cce40ee5bc62c5c88fba6c95bf9a33f8afcaa19e49dc5afc",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             160,
             160
@@ -3404,6 +3598,8 @@
         "back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/snubbull-alternate-form-1/back.png",
           "sha256": "4b4742598b01774aa0272d817c62b9ac4a8fcdfe7198c9d9b107b30a84b108f2",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -3442,6 +3638,8 @@
         "shiny_front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/snubbull-alternate-form-1/shiny_front.png",
           "sha256": "c866d42de35fec5eeb0d37e33c50e2c18c61cbeac3d460da88ef24047334b766",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             160,
             160
@@ -3470,6 +3668,8 @@
         "shiny_back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/snubbull-alternate-form-1/shiny_back.png",
           "sha256": "7a225813f64224f1a7047ef13612ee392b9f3e04a89614abbfb9440744f3803e",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -3522,6 +3722,8 @@
         "front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/granbull-alternate-form-1/front.png",
           "sha256": "156f23aef4fbb15378d9a3af8503f39c317778f1087a4f2646a1d0988f8d017e",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             160,
             160
@@ -3560,6 +3762,8 @@
         "back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/granbull-alternate-form-1/back.png",
           "sha256": "a95b591169f6d4602ea3bd56b8cff3ca0f964e251a3883f920aad6658052dc7b",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -3598,6 +3802,8 @@
         "shiny_front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/granbull-alternate-form-1/shiny_front.png",
           "sha256": "25c9a33b3a86bb84fd36785ddb4e1acdcf450ea56c47cf17c9e42a61f299e936",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             160,
             160
@@ -3636,6 +3842,8 @@
         "shiny_back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/granbull-alternate-form-1/shiny_back.png",
           "sha256": "8ddc174642b3bd3a956d8cb52c515e202ff59270ceedb68a77709fc0f0599f5a",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -3688,6 +3896,8 @@
         "front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/donphan-alternate-form-1/front.png",
           "sha256": "6d8f85e5b45b0d4e801502e18dc4a746be2a03fd8d36a0b4c57b889bb59cc079",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             160,
             160
@@ -3716,6 +3926,8 @@
         "back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/donphan-alternate-form-1/back.png",
           "sha256": "df68e01f3a21c2f769b2a82be36f3aacf3e78fb7063d9b5cf37fd1ce29581d35",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -3744,6 +3956,8 @@
         "shiny_front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/donphan-alternate-form-1/shiny_front.png",
           "sha256": "dd626a4521e6a59b78098b4c15b7e2b9ff8dfc7f928ab6f82155c7f6b1131f51",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             160,
             160
@@ -3772,6 +3986,8 @@
         "shiny_back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/donphan-alternate-form-1/shiny_back.png",
           "sha256": "4402dacb5420b7ba1aaf5dfb4e8b38b4a9cd9ff705b511d19733e205c50fd7c9",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -3814,6 +4030,8 @@
         "front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/larvitar-space-form-4/front.png",
           "sha256": "d14666568ea01b5dd530a9134b66f8b8ee13c80b26f375d7ae31efa7eaec2742",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             160,
             160
@@ -3852,6 +4070,8 @@
         "back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/larvitar-space-form-4/back.png",
           "sha256": "96ce56a45d5fef5b87c4840afdab527c9ad134d4be5fbdbaf84c684196d83c0a",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -3890,6 +4110,8 @@
         "shiny_front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/larvitar-space-form-4/shiny_front.png",
           "sha256": "4c235adacf8519202e5174526da230f25de08f5a6e6d73ac245a798c2e8718f3",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             160,
             160
@@ -3928,6 +4150,8 @@
         "shiny_back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/larvitar-space-form-4/shiny_back.png",
           "sha256": "9c13983f0061b12975379ea7613d701df38601befc90bce17c3089ecfd77f14e",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -3980,6 +4204,8 @@
         "front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/pupitar-space-form-4/front.png",
           "sha256": "0ec5941e277be77d9400224fe599e8de7261f60d22fa3977ca14e70deb086e2e",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             160,
             160
@@ -4018,6 +4244,8 @@
         "back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/pupitar-space-form-4/back.png",
           "sha256": "0d1bcd032235286f253962df0a1976a8a7cf1a71d80534e1f404bbe0de83c80f",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -4056,6 +4284,8 @@
         "shiny_front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/pupitar-space-form-4/shiny_front.png",
           "sha256": "fbe36c9aa3eb955ff57637364e341844b5c2195b729bd32c42f8fd02f882dbf4",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             160,
             160
@@ -4094,6 +4324,8 @@
         "shiny_back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/pupitar-space-form-4/shiny_back.png",
           "sha256": "f688ac3b481ca067d506824c5ee997296bcc941781884a166da63ab8752d9976",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -4146,6 +4378,8 @@
         "front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/tyranitar-space-form-4/front.png",
           "sha256": "0dc7611f1eeafb9daae64713e8c32c6453b55f8806fb1e46bddb7a61cbe387fa",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             160,
             160
@@ -4170,6 +4404,8 @@
         "back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/tyranitar-space-form-4/back.png",
           "sha256": "c17ca539bdb4b42c1cc4c77932b0197ffcf8f81196e39837864f82095709d591",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -4198,6 +4434,8 @@
         "shiny_front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/tyranitar-space-form-4/shiny_front.png",
           "sha256": "78317a680d15c233480de85005745425c20a14ba8678ac9b967af4b77d99a1a0",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             160,
             160
@@ -4226,6 +4464,8 @@
         "shiny_back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/tyranitar-space-form-4/shiny_back.png",
           "sha256": "04d9e05abd27718c4e9a6d0b394576430a3815235c2ec0a8b4ea48987245ff32",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -4268,6 +4508,8 @@
         "front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/breloom-alternate-form-3/front.png",
           "sha256": "1d0772be7dfdaf01690168b87da118654c2853d79659f2476f56947971bc2291",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             160,
             160
@@ -4292,6 +4534,8 @@
         "back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/breloom-alternate-form-3/back.png",
           "sha256": "c58c9cbf0a475eb524691c6fe12dc796952e218ee5feacbe61370668a5b0b886",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -4338,6 +4582,8 @@
         "front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/probopass-alternate-form-1/front.png",
           "sha256": "682d70387f572e976a819b11f83c395ff833222e89842983844eb07d0f46ed2b",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             160,
             160
@@ -4376,6 +4622,8 @@
         "back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/probopass-alternate-form-1/back.png",
           "sha256": "316270ec3b0df95cdba4ba61fce5044343206f7493eaafa609b8e3870587f627",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -4414,6 +4662,8 @@
         "shiny_front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/probopass-alternate-form-1/shiny_front.png",
           "sha256": "5d108c380364ea4935b571b960936b300b1ebb0b326049d3157448c6713ecdad",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             160,
             160
@@ -4452,6 +4702,8 @@
         "shiny_back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/probopass-alternate-form-1/shiny_back.png",
           "sha256": "569c9617dd5b016990de7b0bab42a4ea1fe8aafeae86d7a9ef9fd3e43bd9b74e",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -4504,6 +4756,8 @@
         "front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/altaria-alternate-form-2/front.png",
           "sha256": "5348feb3aefb33907727596f9b75ff5ef8220ad70f660daaa6a9b3a04b65139d",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             160,
             160
@@ -4532,6 +4786,8 @@
         "back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/altaria-alternate-form-2/back.png",
           "sha256": "0994fea34f2a9dd7c9d919e3fdf11564478f421bdb6735fdb49530c3b58ba2ba",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -4560,6 +4816,8 @@
         "shiny_front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/altaria-alternate-form-2/shiny_front.png",
           "sha256": "2bb1c99d2f27cd927b6bf8ec20fe502072bfc1942d2c143a4b5575f75e969b2b",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             160,
             160
@@ -4588,6 +4846,8 @@
         "shiny_back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/altaria-alternate-form-2/shiny_back.png",
           "sha256": "0b9a093003f54bd39d69195359411ac9b5700ca6f2dcd1516e85f8b257f7c9d3",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -4630,6 +4890,8 @@
         "front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/altaria-alternate-mega-form-3/front.png",
           "sha256": "ee2354ee0cf7f7bbebd8d6757059526f3391c647cc98c952219e780de7049519",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -4658,6 +4920,8 @@
         "back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/altaria-alternate-mega-form-3/back.png",
           "sha256": "84b5baef312e54ee48c5a223e1c0cf48c992790ab14d97702c8a308fb1b9040c",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -4686,6 +4950,8 @@
         "shiny_front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/altaria-alternate-mega-form-3/shiny_front.png",
           "sha256": "ab3952f82d8524ea7ba58b107383e8a86a885811d75ccd74e989ca2ad0a26612",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -4714,6 +4980,8 @@
         "shiny_back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/altaria-alternate-mega-form-3/shiny_back.png",
           "sha256": "b32ebdc2554ee521be2d4cc215b6f09377320dee873d8daf44877870e6a800f5",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -4756,6 +5024,8 @@
         "front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/dusknoir-alternate-form-1/front.png",
           "sha256": "5ea5d84face41d5f13c83f83ddcc6eb38c024f76338d75837a7d0089488e4bcb",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             160,
             160
@@ -4780,6 +5050,8 @@
         "back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/dusknoir-alternate-form-1/back.png",
           "sha256": "885a42029399a014d51c9b0b629c1d32f9ce3e8817442db1c31b83a27c5b34a9",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -4804,6 +5076,8 @@
         "shiny_front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/dusknoir-alternate-form-1/shiny_front.png",
           "sha256": "8520d7301ba1a9f8f4823ce49b3d716c66b7c3dcee9ef0c27c152b0dcdcd1ed5",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             160,
             160
@@ -4828,6 +5102,8 @@
         "shiny_back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/dusknoir-alternate-form-1/shiny_back.png",
           "sha256": "06e254fc93d0abc5efaa93a390cea1ed0b191e537b624178317e1ae8a824420c",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -4866,6 +5142,8 @@
         "front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/salamence-alternate-form-2/front.png",
           "sha256": "95da7e356200e2e1aa93ce74ab3c673bc8b4686ae8ce5faa25f578460a752692",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             160,
             160
@@ -4894,6 +5172,8 @@
         "back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/salamence-alternate-form-2/back.png",
           "sha256": "8556d14a043bfd5b279cb32d92a5c6d824c7fd3b1d8943230c08cd3e64df66da",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -4922,6 +5202,8 @@
         "shiny_front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/salamence-alternate-form-2/shiny_front.png",
           "sha256": "f939acaff2fdc2092c67842c1822e1fbb5aa5a6334300337c9d26116dc9bf614",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             160,
             160
@@ -4950,6 +5232,8 @@
         "shiny_back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/salamence-alternate-form-2/shiny_back.png",
           "sha256": "6abc2945d98a43a05f961b0c596814b34651920e29a859b3019044e273d6d819",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -4992,6 +5276,8 @@
         "front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/salamence-alternate-mega-form-3/front.png",
           "sha256": "cb233600dcb177b1f3eba79b83c03799b3c0520c2841c548e8284ff39d7cbf4c",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -5020,6 +5306,8 @@
         "back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/salamence-alternate-mega-form-3/back.png",
           "sha256": "46ae92d7933b78760be9fc1a48e8003d96041f893bb389202102a58d4cdd6540",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -5048,6 +5336,8 @@
         "shiny_front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/salamence-alternate-mega-form-3/shiny_front.png",
           "sha256": "a0c5aa9b9f019108b5c8b5491d543e211badf0c08f5bdac1ccff82325929d8f0",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -5076,6 +5366,8 @@
         "shiny_back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/salamence-alternate-mega-form-3/shiny_back.png",
           "sha256": "37c71654085893cdd0a3beefed99ea979cebab56a06c4354bbaefe9ff2bb5cc2",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -5118,6 +5410,8 @@
         "front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/metang-alternate-form-2/front.png",
           "sha256": "bc80729dde69e422c0a066305846331a927efa0626e583f26a7934dee730a7eb",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             160,
             160
@@ -5146,6 +5440,8 @@
         "back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/metang-alternate-form-2/back.png",
           "sha256": "3a6302d38fbd0d9457361402e404dca2ff343977f428f3db9d207d9e1d2a5190",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -5174,6 +5470,8 @@
         "shiny_front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/metang-alternate-form-2/shiny_front.png",
           "sha256": "a2d67e67c9e7051250499e9aa8473f57e26dc48d598c38ecd796b71befd2c769",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             160,
             160
@@ -5202,6 +5500,8 @@
         "shiny_back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/metang-alternate-form-2/shiny_back.png",
           "sha256": "4bed1afdc6f442cfbc9df4570c8b53a0b5dcfc4b0368ce27976b6843214238c1",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -5244,6 +5544,8 @@
         "front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/metagross-alternate-form-2/front.png",
           "sha256": "a4954a732340214b00c843a8dc9efd53801810addd336e3c1236ecd3d0d6ef18",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             160,
             160
@@ -5272,6 +5574,8 @@
         "back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/metagross-alternate-form-2/back.png",
           "sha256": "351eddfa837218b239837306401475715c18e1247184b2cd0268fdcc693eeae6",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -5300,6 +5604,8 @@
         "shiny_front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/metagross-alternate-form-2/shiny_front.png",
           "sha256": "5a10ea4f0d0423c2faea5d113d16303894e8c1c088768dda0505f0a41947a249",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             160,
             160
@@ -5328,6 +5634,8 @@
         "shiny_back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/metagross-alternate-form-2/shiny_back.png",
           "sha256": "3c1a2454ca00386d2b4502356608a5836676efccf34c647f9e6fda82c0d4b6fa",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -5370,6 +5678,8 @@
         "front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/metagross-alternate-mega-form-3/front.png",
           "sha256": "2e73e0555fae6082938de2188de211ee1af48df1ba55e3a7d45c993bfdbbd9b8",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -5394,6 +5704,8 @@
         "back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/metagross-alternate-mega-form-3/back.png",
           "sha256": "bd536e26ab77e27a1172aaa47402441763016f2bc0669d9d8e92bb92b32a4dce",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -5418,6 +5730,8 @@
         "shiny_front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/metagross-alternate-mega-form-3/shiny_front.png",
           "sha256": "763db0cae70b43b865f1e5e26b5e2d19b1911bf616e84b5657846ec47a99752a",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -5442,6 +5756,8 @@
         "shiny_back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/metagross-alternate-mega-form-3/shiny_back.png",
           "sha256": "6a3b67d62445c0be4be3265e499ca06b164bb613110e5408c68699bb24ebbd62",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -5480,6 +5796,8 @@
         "front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/combee-alternate-form-1/front.png",
           "sha256": "f8d6227560a77be10991f5947e4ab4ade28362148f1b3ea911cb7ea0bed05139",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             160,
             160
@@ -5518,6 +5836,8 @@
         "back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/combee-alternate-form-1/back.png",
           "sha256": "45234a17cfe971d67e28adb4481428cd311c347d7838b2c00c639f92f7016b45",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -5578,6 +5898,8 @@
         "front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/vespiquen-alternate-form-1/front.png",
           "sha256": "685cb1ba2151d993d1948818fecfe3649d6251ee0306a837819e45bc29ac5e30",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             160,
             160
@@ -5606,6 +5928,8 @@
         "back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/vespiquen-alternate-form-1/back.png",
           "sha256": "b56900eddb1eee9aa3d2583be7c2129e8abba530372a10da55259a44dd7c5545",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -5656,6 +5980,8 @@
         "front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/carnivine-alternate-form-2/front.png",
           "sha256": "8e386a73e8f4851314bb8b45559ad4d4cf2126cda2a96cea8a2e0a8590de5cbf",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             160,
             160
@@ -5684,6 +6010,8 @@
         "back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/carnivine-alternate-form-2/back.png",
           "sha256": "f198dc1c07575c5d4e1928bd5214b19533acc3823bc3148d28d1021e9fe54292",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -5722,6 +6050,8 @@
         "shiny_front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/carnivine-alternate-form-2/shiny_front.png",
           "sha256": "a66fdddf6721c95617f0b37fbabeb9babc331c945167115105406affe151dcb4",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             160,
             160
@@ -5750,6 +6080,8 @@
         "shiny_back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/carnivine-alternate-form-2/shiny_back.png",
           "sha256": "c244c12a59b7e4199b26c989695b341d243281182e776b22c9d702fa5a934b76",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -5802,6 +6134,8 @@
         "front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/purrloin-alternate-form-1/front.png",
           "sha256": "8a44c8f8219ddfcad0d85af018e5b3fddc239f8e646058c0b8db357cad68dabb",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -5840,6 +6174,8 @@
         "back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/purrloin-alternate-form-1/back.png",
           "sha256": "92d119e73bf48acea6f1eb2bdbcfad875ed82c26b9cb6969e3f0d00b7d537d1e",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -5878,6 +6214,8 @@
         "shiny_front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/purrloin-alternate-form-1/shiny_front.png",
           "sha256": "976c0639ba4b139e176204696398659473d6041d23ac5befc26dc84cf387d991",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -5916,6 +6254,8 @@
         "shiny_back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/purrloin-alternate-form-1/shiny_back.png",
           "sha256": "0befde33a892fdb547c7ab17878be078e330b0625f84b0db3c989a36a6662ec6",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -5968,6 +6308,8 @@
         "front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/liepard-alternate-form-1/front.png",
           "sha256": "91fc638657a66adf582c1665a410a795fb8d74daf72ebdb299bbd8a01094984b",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -5992,6 +6334,8 @@
         "back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/liepard-alternate-form-1/back.png",
           "sha256": "b00617bb47481a760ca48888056144568e0e23e9d9f9764dac7e855df9e450b6",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -6030,6 +6374,8 @@
         "shiny_front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/liepard-alternate-form-1/shiny_front.png",
           "sha256": "979d7fec357553c5cb849b18957f987af86b6357031bd8e9a4d8d42d8bd3a95c",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -6054,6 +6400,8 @@
         "shiny_back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/liepard-alternate-form-1/shiny_back.png",
           "sha256": "e34d9284bf97010d25f20253a0db6b758cb6487ddd9b8a520cec6f7989891c68",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -6094,38 +6442,90 @@
       "creativeVote": "KEEP (original specific artwork only)",
       "slots": {
         "front": {
-          "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/munna-alternate-form-1/front.png",
-          "sha256": "c24dbea3b5522c3dea47848f5fdb4a9001ea29572abf1688da2474046252a4b2",
-          "original_canvas": null,
-          "bounds": null,
-          "original_opaque_colors": null,
-          "original_alpha_values": null,
-          "output": null,
-          "output_sha256": null,
-          "status": "BLOCKED_UNDECODABLE_OR_UNSUPPORTED_PNG",
-          "failure_type": "UnidentifiedImageError",
-          "palette_changed": false,
+          "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy_PNG_Container_Repairs/munna-alternate-form-1/front.png",
+          "sha256": "7c843ac99ecc91a5b652cec4a678821310250f36ae1bc2147c74896382977457",
+          "source_container_repaired_without_replacing_approved_original": true,
+          "approved_original_path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/munna-alternate-form-1/front.png",
+          "original_canvas": [
+            192,
+            192
+          ],
+          "bounds": [
+            64,
+            64,
+            126,
+            126
+          ],
+          "original_opaque_colors": 24,
+          "original_alpha_values": 2,
+          "output": "DS_CUSTOM_LIBRARY/converted/Verified_Source_DS64_Technical_2026_10_23/munna-alternate-form-1/front.png",
+          "output_sha256": "10919c784ebc4976ae62144eabc43827dab0e4703dbc3c85cf1eac866ad2176a",
+          "status": "PALETTE_QUANTIZED_NEEDS_ART_REVIEW",
+          "palette_changed": true,
           "pixel_art_scaled": false,
-          "gameIntegrationAllowed": false
+          "lossless_2x_duplicate_collapse": false,
+          "original_pixels_reconstructible": false,
+          "gameIntegrationAllowed": false,
+          "visible_content_dimensions": [
+            62,
+            62
+          ],
+          "output_opaque_colors": 14,
+          "output_canvas": [
+            64,
+            64
+          ],
+          "placement_offset": [
+            1,
+            2
+          ],
+          "origin": "alpha-cropped, bottom-centered"
         },
         "back": {
-          "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/munna-alternate-form-1/back.png",
-          "sha256": "592cfcc5bf3f8b462c1d4bdb0b65736ada0c2c8387ec82d30c4fa6a297ddd9d6",
-          "original_canvas": null,
-          "bounds": null,
-          "original_opaque_colors": null,
-          "original_alpha_values": null,
-          "output": null,
-          "output_sha256": null,
-          "status": "BLOCKED_UNDECODABLE_OR_UNSUPPORTED_PNG",
-          "failure_type": "UnidentifiedImageError",
+          "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy_PNG_Container_Repairs/munna-alternate-form-1/back.png",
+          "sha256": "7eb842c6f8bd90300f6055935836f403cc6426f4802beb851455f5fd100ecb93",
+          "source_container_repaired_without_replacing_approved_original": true,
+          "approved_original_path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/munna-alternate-form-1/back.png",
+          "original_canvas": [
+            192,
+            192
+          ],
+          "bounds": [
+            64,
+            64,
+            126,
+            126
+          ],
+          "original_opaque_colors": 8,
+          "original_alpha_values": 2,
+          "output": "DS_CUSTOM_LIBRARY/converted/Verified_Source_DS64_Technical_2026_10_23/munna-alternate-form-1/back.png",
+          "output_sha256": "ba84ee170e56f03568c35d5ccd353a9ef86c3f8c400709ca134fa32ac4e49d13",
+          "status": "PIXEL_PRESERVED_DS64_CANDIDATE",
           "palette_changed": false,
           "pixel_art_scaled": false,
-          "gameIntegrationAllowed": false
+          "lossless_2x_duplicate_collapse": false,
+          "original_pixels_reconstructible": false,
+          "gameIntegrationAllowed": false,
+          "visible_content_dimensions": [
+            62,
+            62
+          ],
+          "output_opaque_colors": 8,
+          "output_canvas": [
+            64,
+            64
+          ],
+          "placement_offset": [
+            1,
+            2
+          ],
+          "origin": "alpha-cropped, bottom-centered"
         },
         "shiny_front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/munna-alternate-form-1/shiny_front.png",
           "sha256": "7c3ab902966943566143a057f785325f1b8ce8c3cf92027bbba2526aff249919",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -6164,6 +6564,8 @@
         "shiny_back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/munna-alternate-form-1/shiny_back.png",
           "sha256": "c1cb833b78abaface81d8103989902934e7da956625b6436f16d69dae9e523b0",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -6214,38 +6616,90 @@
       "creativeVote": "KEEP (original specific artwork only)",
       "slots": {
         "front": {
-          "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/musharna-alternate-form-1/front.png",
-          "sha256": "a2d73caca1303738d235d91d7abe505ce0e5890c7b01b657b18afa643526e0b2",
-          "original_canvas": null,
-          "bounds": null,
-          "original_opaque_colors": null,
-          "original_alpha_values": null,
-          "output": null,
-          "output_sha256": null,
-          "status": "BLOCKED_UNDECODABLE_OR_UNSUPPORTED_PNG",
-          "failure_type": "UnidentifiedImageError",
+          "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy_PNG_Container_Repairs/musharna-alternate-form-1/front.png",
+          "sha256": "1fcac4f7ba139baad100ee92b3754c850992548be87ea571ae4a61fd3fc3da59",
+          "source_container_repaired_without_replacing_approved_original": true,
+          "approved_original_path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/musharna-alternate-form-1/front.png",
+          "original_canvas": [
+            192,
+            192
+          ],
+          "bounds": [
+            32,
+            34,
+            160,
+            156
+          ],
+          "original_opaque_colors": 14,
+          "original_alpha_values": 2,
+          "output": "DS_CUSTOM_LIBRARY/converted/Verified_Source_DS64_Technical_2026_10_23/musharna-alternate-form-1/front.png",
+          "output_sha256": "bb7fa48c1131024731709cd80af30365e99edf7704ada7c766f796a475cce3eb",
+          "status": "PIXEL_PRESERVED_EXACT_2X_COLLAPSE_DS64_CANDIDATE",
           "palette_changed": false,
           "pixel_art_scaled": false,
-          "gameIntegrationAllowed": false
+          "lossless_2x_duplicate_collapse": true,
+          "original_pixels_reconstructible": true,
+          "gameIntegrationAllowed": false,
+          "visible_content_dimensions": [
+            64,
+            61
+          ],
+          "output_opaque_colors": 14,
+          "output_canvas": [
+            64,
+            64
+          ],
+          "placement_offset": [
+            0,
+            3
+          ],
+          "origin": "alpha-cropped, bottom-centered"
         },
         "back": {
-          "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/musharna-alternate-form-1/back.png",
-          "sha256": "65c933cfc7d8452e6be4de0886dc57eef506b4cc1f124189c2afb967492aed07",
-          "original_canvas": null,
-          "bounds": null,
-          "original_opaque_colors": null,
-          "original_alpha_values": null,
-          "output": null,
-          "output_sha256": null,
-          "status": "BLOCKED_UNDECODABLE_OR_UNSUPPORTED_PNG",
-          "failure_type": "UnidentifiedImageError",
+          "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy_PNG_Container_Repairs/musharna-alternate-form-1/back.png",
+          "sha256": "bd0f98b14a26b31321f4bb0b6f88c90762160156bc5eff8a8869d6f8c75826c2",
+          "source_container_repaired_without_replacing_approved_original": true,
+          "approved_original_path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/musharna-alternate-form-1/back.png",
+          "original_canvas": [
+            192,
+            192
+          ],
+          "bounds": [
+            38,
+            36,
+            158,
+            154
+          ],
+          "original_opaque_colors": 14,
+          "original_alpha_values": 2,
+          "output": "DS_CUSTOM_LIBRARY/converted/Verified_Source_DS64_Technical_2026_10_23/musharna-alternate-form-1/back.png",
+          "output_sha256": "363e403e10a84c147963079da961821970c99970dca658708cdccda4cffe1278",
+          "status": "PIXEL_PRESERVED_EXACT_2X_COLLAPSE_DS64_CANDIDATE",
           "palette_changed": false,
           "pixel_art_scaled": false,
-          "gameIntegrationAllowed": false
+          "lossless_2x_duplicate_collapse": true,
+          "original_pixels_reconstructible": true,
+          "gameIntegrationAllowed": false,
+          "visible_content_dimensions": [
+            60,
+            59
+          ],
+          "output_opaque_colors": 14,
+          "output_canvas": [
+            64,
+            64
+          ],
+          "placement_offset": [
+            2,
+            5
+          ],
+          "origin": "alpha-cropped, bottom-centered"
         },
         "shiny_front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/musharna-alternate-form-1/shiny_front.png",
           "sha256": "946b4f9cb1ad71e929efcb627d35b5647f6240467616f326d51f46780c1f46c6",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -6284,6 +6738,8 @@
         "shiny_back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/musharna-alternate-form-1/shiny_back.png",
           "sha256": "be21b3fa37a0a9e98fc57cfa7b3e5405d9aca424e72ba8a6a41cbf06a37985f7",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -6336,6 +6792,8 @@
         "front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/petilil-alternate-form-1/front.png",
           "sha256": "cc11d10de84ecfa47ca48df54f971bf5fa84280f9cbcd3a721fd285c26f53d58",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -6374,6 +6832,8 @@
         "back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/petilil-alternate-form-1/back.png",
           "sha256": "21d32ebdc7dc14f5473b7fd8ddb347f9b62a93371d7092d9f69af3284145817a",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -6412,6 +6872,8 @@
         "shiny_front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/petilil-alternate-form-1/shiny_front.png",
           "sha256": "75c9694b817a1f98c4a8aac6aba36ac9d613d53613b2a08e76c974c649644067",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -6450,6 +6912,8 @@
         "shiny_back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/petilil-alternate-form-1/shiny_back.png",
           "sha256": "06fe1cbd6350d75267bb067a13346db752a70904d028a2818a7ca75af9fe6624",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -6502,6 +6966,8 @@
         "front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/lilligant-alternate-form-1/front.png",
           "sha256": "62420d879bcf93e598a1ba6f71f055c8c5eb7e998c7ee58f799f7cf1a1b8dfed",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -6530,6 +6996,8 @@
         "back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/lilligant-alternate-form-1/back.png",
           "sha256": "918a98270d02c79149647f41b1e6b53c148e649d1fb16a37ce8a8c553543471d",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -6558,6 +7026,8 @@
         "shiny_front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/lilligant-alternate-form-1/shiny_front.png",
           "sha256": "7ee5edd684b6ecb78a9ac224743d79b760789c72fec315a6a792c0e9217528e5",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -6586,6 +7056,8 @@
         "shiny_back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/lilligant-alternate-form-1/shiny_back.png",
           "sha256": "2da2b9437ba928789fd4456847c5689105c0ccf57705892c3feff2a481adfb56",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -6628,6 +7100,8 @@
         "front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/sandile-alternate-form-1/front.png",
           "sha256": "5a4240465917f90a9bcebd772118895b1a93243841e0d6a2245264315af33d42",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -6666,6 +7140,8 @@
         "back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/sandile-alternate-form-1/back.png",
           "sha256": "e04a6a7fd073c059de443ab2a0756c34a2116f81d8016cc4ddf5755c1a3690bd",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -6704,6 +7180,8 @@
         "shiny_front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/sandile-alternate-form-1/shiny_front.png",
           "sha256": "3b2616c1e53ba4dfed4fb7e30ee703b225aca2c855bf51a565cb8e5ea81b54e8",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -6742,6 +7220,8 @@
         "shiny_back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/sandile-alternate-form-1/shiny_back.png",
           "sha256": "729686f7d7bcf7422b25fce8e4ce106913b5546e87ac637280a718edfb7d266a",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -6794,6 +7274,8 @@
         "front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/krokorok-alternate-form-1/front.png",
           "sha256": "2bc371e52da5483f06a6a7be81bffbc4256782601238b7eed14ecd71079e54f3",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -6822,6 +7304,8 @@
         "back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/krokorok-alternate-form-1/back.png",
           "sha256": "b91ef94063cf6640e7ecc7b1aff34cc7238cd709af3b5b4ca31a4b25edbb535d",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -6850,6 +7334,8 @@
         "shiny_front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/krokorok-alternate-form-1/shiny_front.png",
           "sha256": "51c42eccd706b07f5fcc5f19d8a38f903f2870988b6cd0fe1e1fb3a7989abc7f",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -6878,6 +7364,8 @@
         "shiny_back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/krokorok-alternate-form-1/shiny_back.png",
           "sha256": "dc0170caa76a1c0e2a34cd6ab7eb2693b89fd92b6a3f754a27e6f905c8495980",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -6920,6 +7408,8 @@
         "front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/krookodile-alternate-form-1/front.png",
           "sha256": "716a01026c3e5f97f630175bfafcc8c9bac606366ab3feb0cf66a9aa53bc401c",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -6948,6 +7438,8 @@
         "back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/krookodile-alternate-form-1/back.png",
           "sha256": "f76b47fc7251677cf9abce1532172484b8d54513443b2a47101d2ce58668177a",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -6976,6 +7468,8 @@
         "shiny_front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/krookodile-alternate-form-1/shiny_front.png",
           "sha256": "1e5c81cab5de5b1ee2f57035ad31b512ac88de5bb4d85aee1cca766bde09f6d7",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -7004,6 +7498,8 @@
         "shiny_back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/krookodile-alternate-form-1/shiny_back.png",
           "sha256": "b37eff6e260d658f764326e2b65862b594e00e24b0aa485b74531c79906d3650",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -7046,6 +7542,8 @@
         "front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/dwebble-alternate-form-1/front.png",
           "sha256": "824011fb5e1119734e09525b2c1bd7041da51a3400098dff6527d6cc45dd4ac2",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -7084,6 +7582,8 @@
         "back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/dwebble-alternate-form-1/back.png",
           "sha256": "b27b0a2e021c0c24b8d796e12db7d693f78c59ea69690b176d6498ccedcc0537",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -7144,6 +7644,8 @@
         "front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/crustle-alternate-form-1/front.png",
           "sha256": "0855388998e5261b684d0fe1ed5bf57478ff9274ec8113923e513278b6976a21",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -7172,6 +7674,8 @@
         "back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/crustle-alternate-form-1/back.png",
           "sha256": "8ddeae04a84f8f7c5a166073a565a74278ff8ae92b64c5e22a50f5119718292c",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -7222,6 +7726,8 @@
         "front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/escavalier-alternate-form-1/front.png",
           "sha256": "563a0c9111d5a9121a7b1da5b80ee541f5c1927fb1ff9565880c44be8d9748c2",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -7250,6 +7756,8 @@
         "back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/escavalier-alternate-form-1/back.png",
           "sha256": "112b11bfd9eff665cc61f686555191fbd9018c2128ad7b7cbb186c1f852cf5cf",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -7278,6 +7786,8 @@
         "shiny_front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/escavalier-alternate-form-1/shiny_front.png",
           "sha256": "30d765301e53e9af6663db996668062ccf9c7420e5fe24a4190ef513e46b1007",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -7306,6 +7816,8 @@
         "shiny_back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/escavalier-alternate-form-1/shiny_back.png",
           "sha256": "9f3bf5dea2b92f7df5f06f9831d1008c66a56bc2564852b2d87dd467e56dbcea",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -7348,6 +7860,8 @@
         "front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/accelgor-alternate-form-1/front.png",
           "sha256": "4cd87503d73976829806b6c4e4645efa85c6e525cf1552fc3500ec6240785b55",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -7376,6 +7890,8 @@
         "back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/accelgor-alternate-form-1/back.png",
           "sha256": "5c09e87e6140c9140689e872cc309549074122dcc6053b69f9854a550cf39d6d",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -7404,6 +7920,8 @@
         "shiny_front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/accelgor-alternate-form-1/shiny_front.png",
           "sha256": "29de1eb16100d907ecba42564191776f97488c8f71764fdddad100ad919984d7",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -7432,6 +7950,8 @@
         "shiny_back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/accelgor-alternate-form-1/shiny_back.png",
           "sha256": "56d87ced6fa672cacea9110f84d01d8ebf0897384560b9e6a3b9d4d32f2d75d6",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -7474,6 +7994,8 @@
         "front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/cryogonal-alternate-form-1/front.png",
           "sha256": "f2ba9787be70b1f39489b84968205ca880060bf7c550a374d8ed81cb29ddae1d",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -7502,6 +8024,8 @@
         "back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/cryogonal-alternate-form-1/back.png",
           "sha256": "d7c36bad2ccd4c5c720b88676212c0f32334cf918ea0efeb7b7c28556b3ba1cc",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -7530,6 +8054,8 @@
         "shiny_front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/cryogonal-alternate-form-1/shiny_front.png",
           "sha256": "99afe2c03b813b5abda1ebeca4ad59217cdb741a836f4921a937bb5736ad8f14",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -7558,6 +8084,8 @@
         "shiny_back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/cryogonal-alternate-form-1/shiny_back.png",
           "sha256": "90164adf9cb950178e9a7dd76dac1069a8f275ae9eddbed0865f4c6f98162474",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -7600,6 +8128,8 @@
         "front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/mienfoo-bluetowel-alternate-form-form-1/front.png",
           "sha256": "a66dba72def6147a72d19e6c5b14aad7abe28e81f3ca05a690f8814d4194106b",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -7638,6 +8168,8 @@
         "back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/mienfoo-bluetowel-alternate-form-form-1/back.png",
           "sha256": "5049634e4455ca5b62d8421118ecfbb6345545fda38ad1521b709d7c90309a26",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -7676,6 +8208,8 @@
         "shiny_front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/mienfoo-bluetowel-alternate-form-form-1/shiny_front.png",
           "sha256": "ad9c3c111691531cd00cc7f012f1e6da0b110378f10b7ee1c057605325249df3",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -7714,6 +8248,8 @@
         "shiny_back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/mienfoo-bluetowel-alternate-form-form-1/shiny_back.png",
           "sha256": "cfc24897ca0f14caca1b0d32235ab7fe6b0b7eba9e9a0655981e83583a6f33e4",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -7766,6 +8302,8 @@
         "front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/mienshao-bluetowel-alternate-form-form-1/front.png",
           "sha256": "5453ea0cb3f290f953c74d1fd96ebc3a9aac97337de07bbec3c2cb512737d251",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -7794,6 +8332,8 @@
         "back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/mienshao-bluetowel-alternate-form-form-1/back.png",
           "sha256": "9905f21d54892c5e57f611684dee27b2a8d6ee5efbf4289c58c247f56b8db4e4",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -7822,6 +8362,8 @@
         "shiny_front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/mienshao-bluetowel-alternate-form-form-1/shiny_front.png",
           "sha256": "999521a2b2707016c33d6b33f13dd5bb585cf63638cfd4b54417868f90ced323",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -7850,6 +8392,8 @@
         "shiny_back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/mienshao-bluetowel-alternate-form-form-1/shiny_back.png",
           "sha256": "e92ba0bc4910d1bf34b5c146dcaeb3e244f784da8170c0cf731e779f223a06d4",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -7892,6 +8436,8 @@
         "front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/durant-bluetowel-alternate-form-form-1/front.png",
           "sha256": "0cc5bbe1c64af85be7c68a6d9ca72e6b8297fd5125b69507505ac0329934eef7",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -7930,6 +8476,8 @@
         "back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/durant-bluetowel-alternate-form-form-1/back.png",
           "sha256": "f77e3d957bad0bce01f4f1e1b17b5ff5dd5851340fce93cefdf68e0202d3c05c",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -7968,6 +8516,8 @@
         "shiny_front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/durant-bluetowel-alternate-form-form-1/shiny_front.png",
           "sha256": "a396b267ac7d7a73c990c055e8e5ba200f9c9c2d38a205b7e9c9e599f510c2c6",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -8006,6 +8556,8 @@
         "shiny_back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/durant-bluetowel-alternate-form-form-1/shiny_back.png",
           "sha256": "146360943c3f69bb2d0441fd01df381032f0d8537dd203dee50c33be39936bc5",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -8058,6 +8610,8 @@
         "front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/tyrunt-alternate-form-1/front.png",
           "sha256": "b9625e2265242c01ddf09a10b1b80439360f9023ac123b1881fe714a0e566592",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -8096,6 +8650,8 @@
         "back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/tyrunt-alternate-form-1/back.png",
           "sha256": "3c63c4f7b6b0107054e5410ecbba30b4efc81631e6d687019001885957cb127f",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -8134,6 +8690,8 @@
         "shiny_front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/tyrunt-alternate-form-1/shiny_front.png",
           "sha256": "ac025bf416162a451bc367f5243269627ad0787ca947ce6c6a8e774fa0d9df58",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -8172,6 +8730,8 @@
         "shiny_back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/tyrunt-alternate-form-1/shiny_back.png",
           "sha256": "07af741da9b8712978702659458a19e56880766c92cc7d2a0f91d55133b09fd4",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -8224,6 +8784,8 @@
         "front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/tyrantrum-alternate-form-1/front.png",
           "sha256": "639cca34e2a6436d8b3e755b5b294391efdc02bca5d49d247e391d43c2db61b6",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -8252,6 +8814,8 @@
         "back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/tyrantrum-alternate-form-1/back.png",
           "sha256": "78cea69f3d3ffbbcf05e1a6f2890ebcec5a6f84ecf7c3bf9a11fc69712ccf9bd",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -8280,6 +8844,8 @@
         "shiny_front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/tyrantrum-alternate-form-1/shiny_front.png",
           "sha256": "227ec3f1e1c7312c5880509a25d2ca6167c24581ae9c8a95ce1b3dd87ac74ea7",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -8308,6 +8874,8 @@
         "shiny_back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/tyrantrum-alternate-form-1/shiny_back.png",
           "sha256": "af3e726dea26dbbe343e150c9d564d0dfbaa241975e47c951a49df5859d25594",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -8350,6 +8918,8 @@
         "front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/noibat-alternate-form-1/front.png",
           "sha256": "813f202e828701f087a9df601f9e5184592ebea15b48b5dfd3e2aa3f499d0c14",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -8388,6 +8958,8 @@
         "back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/noibat-alternate-form-1/back.png",
           "sha256": "daa2c060174b12e8f984d5b423478b19680bd521396b1b34363a951cc28a11f8",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -8426,6 +8998,8 @@
         "shiny_front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/noibat-alternate-form-1/shiny_front.png",
           "sha256": "5544ec7b92862189d542c77dc1149f61480729bf04434282219dc5dc3feffe6c",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -8464,6 +9038,8 @@
         "shiny_back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/noibat-alternate-form-1/shiny_back.png",
           "sha256": "5a2665ad19dccba420815e53138abb6a2ab7be23a30bf74de33b9c87d18e4538",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -8516,6 +9092,8 @@
         "front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/noivern-alternate-form-1/front.png",
           "sha256": "7b54379c4842323eaf042c6760b2f61783615fd35c0d7e60a2b9422f63662a37",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -8544,6 +9122,8 @@
         "back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/noivern-alternate-form-1/back.png",
           "sha256": "21822b3fff069405bc55f179aaaca96c478d271b93e51bc4232bb0606d9dec37",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -8572,6 +9152,8 @@
         "shiny_front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/noivern-alternate-form-1/shiny_front.png",
           "sha256": "d3b1574afb50f4fddcbcc3d839be88716f1fa6d2030f3665d049ec2bbcabc9ac",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -8600,6 +9182,8 @@
         "shiny_back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/noivern-alternate-form-1/shiny_back.png",
           "sha256": "4dc48cc355b9be829c6cf95ea67d050868097c84ce648fcdb08942026af17dee",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -8642,6 +9226,8 @@
         "front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/hakamo-o-alternate-form-1/front.png",
           "sha256": "881b8f2f6d4bb0a00349bb8f338c17b11ee89e41797a37fa8061ab772d4ca284",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -8670,6 +9256,8 @@
         "back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/hakamo-o-alternate-form-1/back.png",
           "sha256": "a121be30fdfa44dc5c9072f2d1f6a3b93b922943f2c83068b043b0d6c73b5df5",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -8698,6 +9286,8 @@
         "shiny_front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/hakamo-o-alternate-form-1/shiny_front.png",
           "sha256": "efb86248889f5ace300cdc52cf1fe727e73ed67fd1cbb5e204bca59c3c6cb361",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -8726,6 +9316,8 @@
         "shiny_back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/hakamo-o-alternate-form-1/shiny_back.png",
           "sha256": "9cc6c5e74b95d4a96e721e293f2ee4348315fd6a9f94906b1393892a0f424934",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -8768,6 +9360,8 @@
         "front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/kommo-o-alternate-form-1/front.png",
           "sha256": "9b96f5d75e489a74733bf94fe75d13be4ddc79a5491f5c5d1fa8dae5c1174aaf",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -8796,6 +9390,8 @@
         "back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/kommo-o-alternate-form-1/back.png",
           "sha256": "9c52b8845fe6caa1f6a4cbfad0a913fc249ad2ec8889d90d09490e09d0aad271",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -8824,6 +9420,8 @@
         "shiny_front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/kommo-o-alternate-form-1/shiny_front.png",
           "sha256": "94f1fbbb89d59350b25653a7e771bed6b3b7ede02dcb96e7cf2728d0900878bf",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -8852,6 +9450,8 @@
         "shiny_back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/kommo-o-alternate-form-1/shiny_back.png",
           "sha256": "19a699457802ce52a48df7cc8c6ce9120f3c5a3f930c53eb0885509725cd6d14",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -8894,6 +9494,8 @@
         "front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/phanpy-alternate-form-1/front.png",
           "sha256": "55ca7d154b4eff17ee27002eb9c9dd8a422fca3ca67b9a7b142827f0a171539d",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             160,
             160
@@ -8932,6 +9534,8 @@
         "back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/phanpy-alternate-form-1/back.png",
           "sha256": "543527bfbe53802e61e34a1a0ce3027745f535249f0063c0ba8d0bc2620bdc5c",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -8970,6 +9574,8 @@
         "shiny_front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/phanpy-alternate-form-1/shiny_front.png",
           "sha256": "789f7c546191dc330e2751b48a3fafd0ce35717213f9086d1b7b7052f00cea1e",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             160,
             160
@@ -9008,6 +9614,8 @@
         "shiny_back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/phanpy-alternate-form-1/shiny_back.png",
           "sha256": "672e0a905f210a1a3ba95c24bcc6fc643f475e4d318556bf118ccf8399e8b4eb",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -9060,6 +9668,8 @@
         "front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/mightyena-alternate-form-1/front.png",
           "sha256": "b140d65a23782d96a49bd569f83a1ae58dd61740b027c5d2a480bbe84f95644b",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -9084,6 +9694,8 @@
         "back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/mightyena-alternate-form-1/back.png",
           "sha256": "84747377b37f84603ec905fdfc730cdc655a5665791ed1b410fd70924044ecfc",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -9112,6 +9724,8 @@
         "shiny_front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/mightyena-alternate-form-1/shiny_front.png",
           "sha256": "354fd290883e8eeb46ac92ec93f438e3ecf35e3e00689e5121129d6481467d19",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -9136,6 +9750,8 @@
         "shiny_back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/mightyena-alternate-form-1/shiny_back.png",
           "sha256": "201dacc584105b62370dd60887da678a4fd6762e03cb358673747342093c4be5",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -9178,6 +9794,8 @@
         "front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/gible-bluetowel-alternate-forms-form-2/front.png",
           "sha256": "8f9bc8808da9902ef130881f58921526721c65dcbb2a6910422fdbf2ae677586",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             160,
             160
@@ -9206,6 +9824,8 @@
         "back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/gible-bluetowel-alternate-forms-form-2/back.png",
           "sha256": "495d6e99ffda067553e5650685ec085d5d964a19cbe790ed4316435310752f34",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -9234,6 +9854,8 @@
         "shiny_front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/gible-bluetowel-alternate-forms-form-2/shiny_front.png",
           "sha256": "8d34896a10d6fd919e2e4398933142e4d7aa8482eb5591f1d1944303dd84f5cb",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             160,
             160
@@ -9262,6 +9884,8 @@
         "shiny_back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/gible-bluetowel-alternate-forms-form-2/shiny_back.png",
           "sha256": "b2763d9c1cf529b7b5438e67374324c47693635fa852aa4dbb74c306e9838313",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -9304,6 +9928,8 @@
         "front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/gabite-bluetowel-alternate-forms-form-2/front.png",
           "sha256": "916f4794fdd8e5ec7f47db64ee1d3c936aebc8856d7ecb1ff5440302ee83a140",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             160,
             160
@@ -9332,6 +9958,8 @@
         "back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/gabite-bluetowel-alternate-forms-form-2/back.png",
           "sha256": "34972d4f82d01aee1a68242276f7a46f8c0d43300232ee51c0ebb0cf01ace40d",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -9360,6 +9988,8 @@
         "shiny_front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/gabite-bluetowel-alternate-forms-form-2/shiny_front.png",
           "sha256": "d7bc25b7882885158fc530f56b28fbab5abb881e5624ccb9e6f7c0e4662c1b2d",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             160,
             160
@@ -9388,6 +10018,8 @@
         "shiny_back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/gabite-bluetowel-alternate-forms-form-2/shiny_back.png",
           "sha256": "5862d0f67ac56f5ef2c3b2d227a3b50d7f2ab68c279a7db0fa4b1e54641b58c5",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -9430,6 +10062,8 @@
         "front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/garchomp-alternate-form-2/front.png",
           "sha256": "9b9b11221c9ad157b3a64bb30aa93fdf45f2d3ffa7a8bd6f473a6e2e8c252ef7",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             160,
             160
@@ -9458,6 +10092,8 @@
         "back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/garchomp-alternate-form-2/back.png",
           "sha256": "a63b6ca0006ffe0a46a9d690608a87735e86a6b16fad82124fff183d0a558f51",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -9486,6 +10122,8 @@
         "shiny_front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/garchomp-alternate-form-2/shiny_front.png",
           "sha256": "ab15c28ca9bd5494eac83a20c1640a24d6c87738fb31808571d17a19da2e87d9",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             160,
             160
@@ -9514,6 +10152,8 @@
         "shiny_back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/garchomp-alternate-form-2/shiny_back.png",
           "sha256": "9033de114e56e8816aa7f5905fffb75914c50320282f80974bb4772eed6c4ce6",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -9556,6 +10196,8 @@
         "front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/garchomp-alternate-mega-form-3/front.png",
           "sha256": "23ae0d97e516a96bb8b3f39a6547930f84fe4c537c02b7389d6f65777ec875a3",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -9584,6 +10226,8 @@
         "back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/garchomp-alternate-mega-form-3/back.png",
           "sha256": "b6edd6fe697f487e69da20eaf9c543f18b2df52c3f2c323e8da8ea1481291273",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -9612,6 +10256,8 @@
         "shiny_front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/garchomp-alternate-mega-form-3/shiny_front.png",
           "sha256": "2223256480638002b998816252196cafc57e8b8fdfabbfdc46a92c32b9aa6204",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -9640,6 +10286,8 @@
         "shiny_back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/garchomp-alternate-mega-form-3/shiny_back.png",
           "sha256": "1d80108850b9015843442da5654336cbf11aa7e4440bcae624023fbae590e01e",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -9682,6 +10330,8 @@
         "front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/carnivine-bluetowel-alternate-form-form-1/front.png",
           "sha256": "e1f936738b17bbe9dca7866940edece91f722d8884e7b7cca4485ddf2f991643",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             160,
             160
@@ -9710,6 +10360,8 @@
         "back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/carnivine-bluetowel-alternate-form-form-1/back.png",
           "sha256": "cc2e2627796fdc1068e46e82f35359ad2fc5c2abb093c2d8f00238bd207b277d",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -9738,6 +10390,8 @@
         "shiny_front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/carnivine-bluetowel-alternate-form-form-1/shiny_front.png",
           "sha256": "12d340594bfea090fff2116e397eb7c4dc3cffee25bb8cf8dee4f325dd01843d",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             160,
             160
@@ -9766,6 +10420,8 @@
         "shiny_back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/carnivine-bluetowel-alternate-form-form-1/shiny_back.png",
           "sha256": "76443179937ca196ff50d1d6434279f8a701eaec5b673a0994e54ab015b61f7d",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -9808,6 +10464,8 @@
         "front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/lilligant-alternate-form-2/front.png",
           "sha256": "b59a5f1317fac0e5ebcf24c5cc69e15ed553db32acddfb723297707c5a3079f4",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -9836,6 +10494,8 @@
         "back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/lilligant-alternate-form-2/back.png",
           "sha256": "b0fb163438b0e267fbae089d235bdd3a69bc7735a4799a6d9716ff9b58fb52c9",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -9864,6 +10524,8 @@
         "shiny_front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/lilligant-alternate-form-2/shiny_front.png",
           "sha256": "8c421d958ee336c594dbe7f248a9f7b37d2c0f5c815062d8112f030b73d7d658",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -9892,6 +10554,8 @@
         "shiny_back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/lilligant-alternate-form-2/shiny_back.png",
           "sha256": "6b5e6fc30a4de0341a26a1ab37d7d698c3333f233ab5fd0ef100ed02d927bd04",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             192,
             192
@@ -9934,6 +10598,8 @@
         "front": {
           "original": "DS_CUSTOM_LIBRARY/packs/Festival_Magiscarf/Magiscarf/Battlers Normal/Front/Rainther.png",
           "sha256": "f89335ae9f32c824e235e61675439bb3472941e9413df5413c7b6025e8623a99",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             100,
             100
@@ -9962,6 +10628,8 @@
         "back": {
           "original": "DS_CUSTOM_LIBRARY/packs/Festival_Magiscarf/Magiscarf/Battlers Normal/Back/Rainther.png",
           "sha256": "7ffd9f27faa74f6f097d81ded45fb7c632003b859bb54aea3ff5cf97c01550c7",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             100,
             100
@@ -10012,6 +10680,8 @@
         "front": {
           "original": "DS_CUSTOM_LIBRARY/packs/Festival_Magiscarf/Magiscarf/Gen 4 Battlers/Fronts/RAINTHER.png",
           "sha256": "d112adb6020f4303474c44e20ba52b3ca224e81e196d03937a49e04a0ee6a074",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             160,
             160
@@ -10050,6 +10720,8 @@
         "back": {
           "original": "DS_CUSTOM_LIBRARY/packs/Festival_Magiscarf/Magiscarf/Gen 4 Battlers/Backs/RAINTHER.png",
           "sha256": "060cc878ecdcf87364859629a59811d9583b737863fa2e73ba9d3b6c0002212d",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             160,
             160
@@ -10100,6 +10772,8 @@
         "front": {
           "original": "DS_CUSTOM_LIBRARY/packs/Fakemon_Festival_Full/Fakemon Festival Pack/PrincessPhoenix/Pokemon/Battlers/Gen 3 Frontsprites/Hissiorite.png",
           "sha256": "0df4c498d8c16332dbe8581e40d24ceccecb072fed7f08ecea121e9b52a11b99",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             64,
             64
@@ -10138,6 +10812,8 @@
         "back": {
           "original": "DS_CUSTOM_LIBRARY/packs/Fakemon_Festival_Full/Fakemon Festival Pack/PrincessPhoenix/Pokemon/Battlers/Gen 3 Backsprites/Backsprites Full/HissioriteB3.png",
           "sha256": "2df25fb5a215a896b1198831d1660f903c0c43d5172dcb3321f9817dd26868f5",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             64,
             64
@@ -10198,6 +10874,8 @@
         "front": {
           "original": "DS_CUSTOM_LIBRARY/packs/Fakemon_Festival_Full/Fakemon Festival Pack/PrincessPhoenix/Pokemon/Battlers/Gen 3 Frontsprites/Cobarett.png",
           "sha256": "62157f4947160a78ce90375436d7bca77344ea6e77db0102c069a4b6fb3b0e1f",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             64,
             64
@@ -10236,6 +10914,8 @@
         "back": {
           "original": "DS_CUSTOM_LIBRARY/packs/Fakemon_Festival_Full/Fakemon Festival Pack/PrincessPhoenix/Pokemon/Battlers/Gen 3 Backsprites/Backsprites Full/CobarettB3.png",
           "sha256": "fa39a3d54ec20ba8f6d33f0dfe8185eb5be4cf3fd88fa02483a0b97284510687",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             64,
             64
@@ -10296,6 +10976,8 @@
         "front": {
           "original": "DS_CUSTOM_LIBRARY/packs/Fakemon_Festival_Full/Fakemon Festival Pack/PrincessPhoenix/Pokemon/Battlers/Gen 3 Frontsprites/Pythonova.png",
           "sha256": "0fe7f435b2cb817694191d262a4ed0fad29ebb35ca63672d9761fe02925932c6",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             64,
             64
@@ -10334,6 +11016,8 @@
         "back": {
           "original": "DS_CUSTOM_LIBRARY/packs/Fakemon_Festival_Full/Fakemon Festival Pack/PrincessPhoenix/Pokemon/Battlers/Gen 3 Backsprites/Backsprites Full/Pythonova.png",
           "sha256": "cfac3c004cf87c9fee687c49b2a0193f0d2025f009aed08814af685c25ebcefa",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             64,
             64
@@ -10394,6 +11078,8 @@
         "front": {
           "original": "DS_CUSTOM_LIBRARY/packs/Fakemon_Festival_Full/Fakemon Festival Pack/PrincessPhoenix/Pokemon/Battlers/Gen 3 Frontsprites/PythonovaS.png",
           "sha256": "74b9ed249c77daf28e0aa0d90aee7ffcf9f2516a79790c3bee37f84e08d67752",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             64,
             64
@@ -10432,6 +11118,8 @@
         "back": {
           "original": "DS_CUSTOM_LIBRARY/packs/Fakemon_Festival_Full/Fakemon Festival Pack/PrincessPhoenix/Pokemon/Battlers/Gen 3 Backsprites/Backsprites Full/PythonovaS.png",
           "sha256": "d75462b3d890959383d21befce5cde3296b3fe07c0a9abe26bf74a71d013e457",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             64,
             64
@@ -10492,6 +11180,8 @@
         "front": {
           "original": "DS_CUSTOM_LIBRARY/packs/Fakemon_Festival_Full/Fakemon Festival Pack/PrincessPhoenix/Pokemon/Battlers/Gen 4-5 Frontsprites/PythonovaS.png",
           "sha256": "f5ed19d0f9cac811bdb18cf3bf1dea8c98f9980236d941e0be513e517fccdf5b",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             96,
             96
@@ -10520,6 +11210,8 @@
         "back": {
           "original": "DS_CUSTOM_LIBRARY/packs/Fakemon_Festival_Full/Fakemon Festival Pack/PrincessPhoenix/Pokemon/Battlers/Gen 4 Backsprites/PythonovaB4S.png",
           "sha256": "7eff2dd9ae215035a882bbea97cbeacc21cc9a77f61b76807d0e51c5c65e92d6",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             96,
             96
@@ -10570,6 +11262,8 @@
         "front": {
           "original": "DS_CUSTOM_LIBRARY/packs/Festival_Atsui/Atsui/Pokemon/Front/NOCTOWL_1.png",
           "sha256": "2cf2996acd25229de549c3e0349eedb0c94b89dfa39e922bfff07f0fc457cf9d",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             96,
             96
@@ -10598,6 +11292,8 @@
         "back": {
           "original": "DS_CUSTOM_LIBRARY/packs/Festival_Atsui/Atsui/Pokemon/Back/NOCTOWL_1.png",
           "sha256": "bc368abf590123626514ec47b97313acd4ac873c87ef1c6eae75e408ef34903c",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             96,
             96
@@ -10648,6 +11344,8 @@
         "front": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Pokengine_Mikitari_Furrva_Source/front_source.png",
           "sha256": "fdeefd44cb5af6b8c96633318f83e7cba3f52358028c21966a1cbb48891de9d5",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             34,
             30
@@ -10686,6 +11384,8 @@
         "back": {
           "original": "DS_CUSTOM_LIBRARY/recovered/Pokengine_Mikitari_Furrva_Source/back_source.png",
           "sha256": "e3f2bd848a553a09a1d5fd0bc0122f02cbd7c4d537eb04b71f5a93456566c9a4",
+          "source_container_repaired_without_replacing_approved_original": false,
+          "approved_original_path": null,
           "original_canvas": [
             55,
             51
