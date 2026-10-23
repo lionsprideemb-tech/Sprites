@@ -99,7 +99,17 @@
       "note": "Previous status: cut; recovered: cut",
       "evidence": "R0473",
       "suggestionReason": "Historical and later records disagree. Confirm your latest preference.",
-      "evolutionStageOrder": 1
+      "evolutionStageOrder": 1,
+      "originalSourceName": "Platinum Redux Swalot",
+      "originalSourceFamily": "#0316 Gulpin → #0317 Swalot",
+      "creator": "Not established",
+      "creatorEvidence": "source pack only; individual author unverified",
+      "sourceReference": "",
+      "nameConfidence": "historical",
+      "displayName": "Platinum Redux Swalot",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "fakemon:baoby:efb013fde74e",
@@ -121,7 +131,17 @@
       "note": "",
       "evidence": "VERIFIED_SOURCE_METADATA;BACK_MATCH_RECOVERED",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 0
+      "evolutionStageOrder": 0,
+      "originalSourceName": "Baoby",
+      "originalSourceFamily": "Baoby → Baobaraffe",
+      "creator": "Princess-Phoenix",
+      "creatorEvidence": "source pack only; individual author unverified",
+      "sourceReference": "",
+      "nameConfidence": "VERIFIED_SOURCE_METADATA;BACK_MATCH_RECOVERED",
+      "displayName": "Baoby",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "fakemon:baobaraffe:f756c00f0c14",
@@ -143,7 +163,17 @@
       "note": "",
       "evidence": "VERIFIED_SOURCE_METADATA;BACK_MATCH_RECOVERED",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 1
+      "evolutionStageOrder": 1,
+      "originalSourceName": "Baobaraffe",
+      "originalSourceFamily": "Baoby → Baobaraffe",
+      "creator": "Princess-Phoenix",
+      "creatorEvidence": "source pack only; individual author unverified",
+      "sourceReference": "",
+      "nameConfidence": "VERIFIED_SOURCE_METADATA;BACK_MATCH_RECOVERED",
+      "displayName": "Baobaraffe",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "fakemon:beelitant:e5c0e29ea74f",
@@ -165,7 +195,27 @@
       "note": "",
       "evidence": "VERIFIED_SOURCE_METADATA;EXTERNAL_SOURCE_METADATA",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 0
+      "evolutionStageOrder": 0,
+      "originalSourceName": "Beelitant",
+      "originalSourceFamily": "Beelitant → Kocomb → Granebee",
+      "creator": "Mikitari",
+      "creatorEvidence": "source linked",
+      "sourceReference": "https://pokengine.org/mons/00wiz4bc/Beelitant",
+      "nameConfidence": "linked source reference",
+      "displayName": "Beelitant",
+      "familyConfidence": "disputed between source records",
+      "identityFlag": "evolution_conflict",
+      "identityNote": "Evolution relationships disagree between two metadata records. No new evolution link should be assigned automatically.",
+      "familyAlternatives": [
+        {
+          "family": "Beelitant → Kocomb → Granebee",
+          "source": "enriched source ledger"
+        },
+        {
+          "family": "Beelitant → Kocomb → Furrva → Granebee",
+          "source": "https://pokengine.org/mons/00wiz4bc/Beelitant"
+        }
+      ]
     },
     {
       "id": "fakemon:kocomb-1:9e0c820d55c7",
@@ -187,7 +237,27 @@
       "note": "",
       "evidence": "VERIFIED_SOURCE_METADATA;EXTERNAL_SOURCE_METADATA",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 1
+      "evolutionStageOrder": 1,
+      "originalSourceName": "Kocomb",
+      "originalSourceFamily": "Beelitant → Kocomb → Granebee",
+      "creator": "Mikitari",
+      "creatorEvidence": "source linked",
+      "sourceReference": "https://pokengine.org/mons/001ddhus/Kocomb",
+      "nameConfidence": "linked source reference",
+      "displayName": "Kocomb",
+      "familyConfidence": "disputed between source records",
+      "identityFlag": "evolution_conflict",
+      "identityNote": "Evolution relationships disagree between two metadata records. No new evolution link should be assigned automatically.",
+      "familyAlternatives": [
+        {
+          "family": "Beelitant → Kocomb → Granebee",
+          "source": "enriched source ledger"
+        },
+        {
+          "family": "Beelitant → Kocomb → Furrva → Granebee",
+          "source": "https://pokengine.org/mons/001ddhus/Kocomb"
+        }
+      ]
     },
     {
       "id": "fakemon:kocomb:5f5be9a1eeeb",
@@ -209,7 +279,27 @@
       "note": "",
       "evidence": "VERIFIED_SOURCE_METADATA;EXTERNAL_SOURCE_METADATA",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 1
+      "evolutionStageOrder": 1,
+      "originalSourceName": "Kocomb",
+      "originalSourceFamily": "Beelitant → Kocomb → Granebee",
+      "creator": "Mikitari",
+      "creatorEvidence": "source linked",
+      "sourceReference": "https://pokengine.org/mons/004m6vrv/Kocomb",
+      "nameConfidence": "linked source reference",
+      "displayName": "Kocomb",
+      "familyConfidence": "disputed between source records",
+      "identityFlag": "evolution_conflict",
+      "identityNote": "Evolution relationships disagree between two metadata records. No new evolution link should be assigned automatically.",
+      "familyAlternatives": [
+        {
+          "family": "Beelitant → Kocomb → Granebee",
+          "source": "enriched source ledger"
+        },
+        {
+          "family": "Beelitant → Kocomb → Furrva → Granebee",
+          "source": "https://pokengine.org/mons/004m6vrv/Kocomb"
+        }
+      ]
     },
     {
       "id": "fakemon:granebee:65fc8136a344",
@@ -231,7 +321,27 @@
       "note": "",
       "evidence": "VERIFIED_SOURCE_METADATA;EXTERNAL_SOURCE_METADATA",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 2
+      "evolutionStageOrder": 2,
+      "originalSourceName": "Granebee",
+      "originalSourceFamily": "Beelitant → Kocomb → Granebee",
+      "creator": "Mikitari",
+      "creatorEvidence": "source linked",
+      "sourceReference": "https://pokengine.org/mons/00eqh4t5/Granebee",
+      "nameConfidence": "linked source reference",
+      "displayName": "Granebee",
+      "familyConfidence": "disputed between source records",
+      "identityFlag": "evolution_conflict",
+      "identityNote": "Evolution relationships disagree between two metadata records. No new evolution link should be assigned automatically.",
+      "familyAlternatives": [
+        {
+          "family": "Beelitant → Kocomb → Granebee",
+          "source": "enriched source ledger"
+        },
+        {
+          "family": "Beelitant → Kocomb → Furrva → Granebee",
+          "source": "https://pokengine.org/mons/00eqh4t5/Granebee"
+        }
+      ]
     },
     {
       "id": "fakemon:belstatue-2-moon-shard:ca0fced633b1",
@@ -253,7 +363,17 @@
       "note": "",
       "evidence": "SOURCE_METADATA;SOURCE_STANDALONE;BACK_MATCH_RECOVERED",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 6
+      "evolutionStageOrder": 6,
+      "originalSourceName": "Moon Shard Belstatue",
+      "originalSourceFamily": "Belstatue forms",
+      "creator": "Not established",
+      "creatorEvidence": "source pack only; individual author unverified",
+      "sourceReference": "",
+      "nameConfidence": "SOURCE_METADATA;SOURCE_STANDALONE;BACK_MATCH_RECOVERED;FAMILY_AUDIT_CORRECTED",
+      "displayName": "Moon Shard Belstatue",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "fakemon:belstatue-1-sun-shard:5728aff6b963",
@@ -275,7 +395,17 @@
       "note": "",
       "evidence": "SOURCE_METADATA;SOURCE_STANDALONE",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 6
+      "evolutionStageOrder": 6,
+      "originalSourceName": "Sun Shard Belstatue",
+      "originalSourceFamily": "Belstatue forms",
+      "creator": "Not established",
+      "creatorEvidence": "source pack only; individual author unverified",
+      "sourceReference": "",
+      "nameConfidence": "SOURCE_METADATA;SOURCE_STANDALONE;FAMILY_AUDIT_CORRECTED",
+      "displayName": "Sun Shard Belstatue",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "fakemon:mega-barbaracle:95022e077bf9",
@@ -297,7 +427,17 @@
       "note": "maybe",
       "evidence": "MERCURY_MASTER;BACK_MATCH_RECOVERED",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 6
+      "evolutionStageOrder": 6,
+      "originalSourceName": "Mega Barbaracle",
+      "originalSourceFamily": "Binacle",
+      "creator": "Various artists",
+      "creatorEvidence": "source pack only; individual author unverified",
+      "sourceReference": "",
+      "nameConfidence": "MERCURY_MASTER;BACK_MATCH_RECOVERED",
+      "displayName": "Mega Barbaracle",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "fakemon:bonfur:babfa656d34a",
@@ -319,7 +459,17 @@
       "note": "",
       "evidence": "EXTERNAL_SOURCE_METADATA",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 0
+      "evolutionStageOrder": 0,
+      "originalSourceName": "Bonfur",
+      "originalSourceFamily": "Bonfur → Tindursa → Sizzly",
+      "creator": "Magiscarf",
+      "creatorEvidence": "source linked",
+      "sourceReference": "https://pokengine.org/mons/002ou25m/Bonfur",
+      "nameConfidence": "linked source reference",
+      "displayName": "Bonfur",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "fakemon:tindursa:bcfa0d338db5",
@@ -341,7 +491,17 @@
       "note": "",
       "evidence": "EXTERNAL_SOURCE_METADATA",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 1
+      "evolutionStageOrder": 1,
+      "originalSourceName": "Tindursa",
+      "originalSourceFamily": "Bonfur → Tindursa → Sizzly",
+      "creator": "Magiscarf",
+      "creatorEvidence": "source linked",
+      "sourceReference": "https://pokengine.org/mons/00cdgu25/Tindursa",
+      "nameConfidence": "linked source reference",
+      "displayName": "Tindursa",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "fakemon:sizzly:734ae15a066e",
@@ -363,7 +523,17 @@
       "note": "",
       "evidence": "EXTERNAL_SOURCE_METADATA",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 2
+      "evolutionStageOrder": 2,
+      "originalSourceName": "Sizzly",
+      "originalSourceFamily": "Bonfur → Tindursa → Sizzly",
+      "creator": "Magiscarf",
+      "creatorEvidence": "source linked",
+      "sourceReference": "https://pokengine.org/mons/00xeztwu/Sizzly",
+      "nameConfidence": "linked source reference",
+      "displayName": "Sizzly",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "fakemon:cabatfe:2407bc8bb381",
@@ -385,7 +555,17 @@
       "note": "",
       "evidence": "EXTERNAL_SOURCE_METADATA",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 0
+      "evolutionStageOrder": 0,
+      "originalSourceName": "Cabat♀",
+      "originalSourceFamily": "Cabat♀ → Stalass → Packbats → Cabat♂ → Stalad",
+      "creator": "Mikitari",
+      "creatorEvidence": "source linked",
+      "sourceReference": "https://pokengine.org/mons/00k4zgoo/Cabat%E2%99%80",
+      "nameConfidence": "linked source reference",
+      "displayName": "Cabat♀",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "fakemon:cabatma:c66870632bd1",
@@ -407,7 +587,17 @@
       "note": "",
       "evidence": "EXTERNAL_SOURCE_METADATA",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 0
+      "evolutionStageOrder": 0,
+      "originalSourceName": "Cabat♂",
+      "originalSourceFamily": "Cabat♀ → Stalass → Packbats → Cabat♂ → Stalad",
+      "creator": "Mikitari",
+      "creatorEvidence": "source linked",
+      "sourceReference": "https://pokengine.org/mons/009e208d/Cabat%E2%99%82",
+      "nameConfidence": "linked source reference",
+      "displayName": "Cabat♂",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "fakemon:stalass:aa4fd348666c",
@@ -429,7 +619,17 @@
       "note": "",
       "evidence": "EXTERNAL_SOURCE_METADATA",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 1
+      "evolutionStageOrder": 1,
+      "originalSourceName": "Stalass",
+      "originalSourceFamily": "Cabat♀ → Stalass → Packbats → Cabat♂ → Stalad",
+      "creator": "Mikitari",
+      "creatorEvidence": "source linked",
+      "sourceReference": "https://pokengine.org/mons/00s40hcl/Stalass",
+      "nameConfidence": "linked source reference",
+      "displayName": "Stalass",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "fakemon:stalad:b946f6457d5e",
@@ -451,7 +651,17 @@
       "note": "",
       "evidence": "EXTERNAL_SOURCE_METADATA",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 4
+      "evolutionStageOrder": 4,
+      "originalSourceName": "Stalad",
+      "originalSourceFamily": "Cabat♀ → Stalass → Packbats → Cabat♂ → Stalad",
+      "creator": "Mikitari",
+      "creatorEvidence": "source linked",
+      "sourceReference": "https://pokengine.org/mons/00t9enl5/Stalad",
+      "nameConfidence": "linked source reference",
+      "displayName": "Stalad",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "fakemon:chubboink:55fc6abb7f29",
@@ -473,7 +683,17 @@
       "note": "",
       "evidence": "EXTERNAL_SOURCE_METADATA",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 0
+      "evolutionStageOrder": 0,
+      "originalSourceName": "Chubboink",
+      "originalSourceFamily": "Chubboink → Muchog",
+      "creator": "Mikitari",
+      "creatorEvidence": "source linked",
+      "sourceReference": "https://pokengine.org/mons/001fnz32/Chubboink",
+      "nameConfidence": "linked source reference",
+      "displayName": "Chubboink",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "fakemon:muchog:b24bffcbde28",
@@ -495,7 +715,17 @@
       "note": "",
       "evidence": "EXTERNAL_SOURCE_METADATA",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 1
+      "evolutionStageOrder": 1,
+      "originalSourceName": "Muchog",
+      "originalSourceFamily": "Chubboink → Muchog",
+      "creator": "Mikitari",
+      "creatorEvidence": "source linked",
+      "sourceReference": "https://pokengine.org/mons/00aovxv3/Muchog",
+      "nameConfidence": "linked source reference",
+      "displayName": "Muchog",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "fakemon:crishy:44a629a6e18f",
@@ -517,7 +747,17 @@
       "note": "",
       "evidence": "EXTERNAL_SOURCE_METADATA",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 0
+      "evolutionStageOrder": 0,
+      "originalSourceName": "Crishy",
+      "originalSourceFamily": "Crishy → Contamullet",
+      "creator": "Mikitari",
+      "creatorEvidence": "source linked",
+      "sourceReference": "https://pokengine.org/mons/00mkc1rx/Crishy",
+      "nameConfidence": "linked source reference",
+      "displayName": "Crishy",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "fakemon:contamullet:16a3e2a71ea0",
@@ -539,7 +779,17 @@
       "note": "",
       "evidence": "EXTERNAL_SOURCE_METADATA",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 1
+      "evolutionStageOrder": 1,
+      "originalSourceName": "Contamullet",
+      "originalSourceFamily": "Crishy → Contamullet",
+      "creator": "Mikitari",
+      "creatorEvidence": "source linked",
+      "sourceReference": "https://pokengine.org/mons/001t9vup/Contamullet",
+      "nameConfidence": "linked source reference",
+      "displayName": "Contamullet",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "fakemon:cryscross:0ff6059512dc",
@@ -561,7 +811,17 @@
       "note": "",
       "evidence": "EXTERNAL_SOURCE_METADATA",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 0
+      "evolutionStageOrder": 0,
+      "originalSourceName": "Cryscross",
+      "originalSourceFamily": "Cryscross → Cryogonal",
+      "creator": "JWNutz",
+      "creatorEvidence": "source linked",
+      "sourceReference": "https://pokengine.org/mons/00lp5xuj/Cryscross",
+      "nameConfidence": "linked source reference",
+      "displayName": "Cryscross",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "compare:dampurr:2",
@@ -583,7 +843,17 @@
       "note": "",
       "evidence": "exact:664fb15d6953; structural:8dd554b6d5f7",
       "suggestionReason": "Distinct sourced artwork; choose visually rather than automatically.",
-      "evolutionStageOrder": 0
+      "evolutionStageOrder": 0,
+      "originalSourceName": "Dampurr — Design 2",
+      "originalSourceFamily": "Dampurr → Rainther → Delugar",
+      "creator": "Magiscarf",
+      "creatorEvidence": "source linked",
+      "sourceReference": "https://pokengine.org/mons/00ie8he1/Dampurr",
+      "nameConfidence": "linked source reference",
+      "displayName": "Dampurr — Design 2",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "compare:delugar:2",
@@ -605,7 +875,17 @@
       "note": "",
       "evidence": "exact:1715beba8098; structural:7ec9a27bbe47",
       "suggestionReason": "Distinct sourced artwork; choose visually rather than automatically.",
-      "evolutionStageOrder": 2
+      "evolutionStageOrder": 2,
+      "originalSourceName": "Delugar — Design 2",
+      "originalSourceFamily": "Dampurr → Rainther → Delugar",
+      "creator": "Magiscarf",
+      "creatorEvidence": "source linked",
+      "sourceReference": "https://pokengine.org/mons/00nfmggx/Delugar",
+      "nameConfidence": "linked source reference",
+      "displayName": "Delugar — Design 2",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "fakemon:dampybara:10e18aa013bb",
@@ -627,7 +907,17 @@
       "note": "",
       "evidence": "EXTERNAL_SOURCE_METADATA",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 0
+      "evolutionStageOrder": 0,
+      "originalSourceName": "Dampybara",
+      "originalSourceFamily": "Dampybara → Glovet → Mortarine",
+      "creator": "Mikitari",
+      "creatorEvidence": "source linked",
+      "sourceReference": "https://pokengine.org/mons/00m38scv/Dampybara",
+      "nameConfidence": "linked source reference",
+      "displayName": "Dampybara",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "fakemon:glovet:78f50bedb06c",
@@ -649,7 +939,17 @@
       "note": "",
       "evidence": "EXTERNAL_SOURCE_METADATA",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 1
+      "evolutionStageOrder": 1,
+      "originalSourceName": "Glovet",
+      "originalSourceFamily": "Dampybara → Glovet → Mortarine",
+      "creator": "Mikitari",
+      "creatorEvidence": "source linked",
+      "sourceReference": "https://pokengine.org/mons/004c3gep/Glovet",
+      "nameConfidence": "linked source reference",
+      "displayName": "Glovet",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "fakemon:mortarine:bc81a7504531",
@@ -671,7 +971,17 @@
       "note": "",
       "evidence": "EXTERNAL_SOURCE_METADATA",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 2
+      "evolutionStageOrder": 2,
+      "originalSourceName": "Mortarine",
+      "originalSourceFamily": "Dampybara → Glovet → Mortarine",
+      "creator": "Mikitari",
+      "creatorEvidence": "source linked",
+      "sourceReference": "https://pokengine.org/mons/00kdr1lh/Mortarine",
+      "nameConfidence": "linked source reference",
+      "displayName": "Mortarine",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "fakemon:dorewee:38024997a200",
@@ -693,7 +1003,17 @@
       "note": "",
       "evidence": "EXTERNAL_SOURCE_METADATA",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 0
+      "evolutionStageOrder": 0,
+      "originalSourceName": "Dorewee",
+      "originalSourceFamily": "Dorewee → Doperami",
+      "creator": "Mikitari",
+      "creatorEvidence": "source linked",
+      "sourceReference": "https://pokengine.org/mons/009k79kg/Dorewee",
+      "nameConfidence": "linked source reference",
+      "displayName": "Dorewee",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "fakemon:doperami-female:8e034e45c891",
@@ -715,7 +1035,17 @@
       "note": "",
       "evidence": "EXTERNAL_SOURCE_METADATA;BACK_MATCH_RECOVERED",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 1
+      "evolutionStageOrder": 1,
+      "originalSourceName": "Doperami",
+      "originalSourceFamily": "Dorewee → Doperami",
+      "creator": "Mikitari",
+      "creatorEvidence": "source linked",
+      "sourceReference": "https://pokengine.org/mons/00d28t23/Doperami",
+      "nameConfidence": "linked source reference",
+      "displayName": "Doperami",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "fakemon:doperami:88542955f959",
@@ -737,7 +1067,17 @@
       "note": "",
       "evidence": "EXTERNAL_SOURCE_METADATA",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 1
+      "evolutionStageOrder": 1,
+      "originalSourceName": "Doperami",
+      "originalSourceFamily": "Dorewee → Doperami",
+      "creator": "Mikitari",
+      "creatorEvidence": "source linked",
+      "sourceReference": "https://pokengine.org/mons/00d28t23/Doperami",
+      "nameConfidence": "linked source reference",
+      "displayName": "Doperami",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "fakemon:drashimif:a17da0648570",
@@ -759,7 +1099,17 @@
       "note": "",
       "evidence": "VERIFIED_SOURCE_METADATA;BACK_MATCH_RECOVERED",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 0
+      "evolutionStageOrder": 0,
+      "originalSourceName": "Drashimi",
+      "originalSourceFamily": "Drashimi → Tsushimi → Tobishimi",
+      "creator": "Princess-Phoenix",
+      "creatorEvidence": "source pack only; individual author unverified",
+      "sourceReference": "",
+      "nameConfidence": "VERIFIED_SOURCE_METADATA;BACK_MATCH_RECOVERED",
+      "displayName": "Drashimi",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "fakemon:tsushimif:b8eaf3dd8bd6",
@@ -781,7 +1131,17 @@
       "note": "",
       "evidence": "VERIFIED_SOURCE_METADATA;BACK_MATCH_RECOVERED",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 1
+      "evolutionStageOrder": 1,
+      "originalSourceName": "Tsushimi",
+      "originalSourceFamily": "Drashimi → Tsushimi → Tobishimi",
+      "creator": "Princess-Phoenix",
+      "creatorEvidence": "source pack only; individual author unverified",
+      "sourceReference": "",
+      "nameConfidence": "VERIFIED_SOURCE_METADATA;BACK_MATCH_RECOVERED",
+      "displayName": "Tsushimi",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "fakemon:tobishimif:95b3ba19b579",
@@ -803,7 +1163,17 @@
       "note": "",
       "evidence": "VERIFIED_SOURCE_METADATA;BACK_MATCH_RECOVERED",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 2
+      "evolutionStageOrder": 2,
+      "originalSourceName": "Tobishimi",
+      "originalSourceFamily": "Drashimi → Tsushimi → Tobishimi",
+      "creator": "Princess-Phoenix",
+      "creatorEvidence": "source pack only; individual author unverified",
+      "sourceReference": "",
+      "nameConfidence": "VERIFIED_SOURCE_METADATA;BACK_MATCH_RECOVERED",
+      "displayName": "Tobishimi",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "fakemon:dripwirt:d78a662d4daa",
@@ -825,7 +1195,17 @@
       "note": "",
       "evidence": "EXTERNAL_SOURCE_METADATA",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 0
+      "evolutionStageOrder": 0,
+      "originalSourceName": "Dripwirt",
+      "originalSourceFamily": "Dripwirt → Pourka",
+      "creator": "Magiscarf",
+      "creatorEvidence": "source linked",
+      "sourceReference": "https://pokengine.org/mons/00zdk0mf/Dripwirt",
+      "nameConfidence": "linked source reference",
+      "displayName": "Dripwirt",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "fakemon:droopig:eb7800cc3026",
@@ -847,7 +1227,17 @@
       "note": "",
       "evidence": "EXTERNAL_SOURCE_METADATA",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 0
+      "evolutionStageOrder": 0,
+      "originalSourceName": "Droopig",
+      "originalSourceFamily": "Droopig → Hoolihog",
+      "creator": "Magiscarf",
+      "creatorEvidence": "source linked",
+      "sourceReference": "https://pokengine.org/mons/00jdufjz/Droopig",
+      "nameConfidence": "linked source reference",
+      "displayName": "Droopig",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "fakemon:hoolihog:1e9f27498b47",
@@ -869,7 +1259,17 @@
       "note": "",
       "evidence": "EXTERNAL_SOURCE_METADATA",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 1
+      "evolutionStageOrder": 1,
+      "originalSourceName": "Hoolihog",
+      "originalSourceFamily": "Droopig → Hoolihog",
+      "creator": "Magiscarf",
+      "creatorEvidence": "source linked",
+      "sourceReference": "https://pokengine.org/mons/00z8qht4/Hoolihog",
+      "nameConfidence": "linked source reference",
+      "displayName": "Hoolihog",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "fakemon:flampy:c61bb48bed9f",
@@ -891,7 +1291,17 @@
       "note": "",
       "evidence": "VERIFIED_SOURCE_METADATA;EXTERNAL_SOURCE_METADATA",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 0
+      "evolutionStageOrder": 0,
+      "originalSourceName": "Flampy",
+      "originalSourceFamily": "Flampy → Murasalem",
+      "creator": "Mikitari",
+      "creatorEvidence": "source linked",
+      "sourceReference": "https://pokengine.org/mons/004z8vqo/Flampy",
+      "nameConfidence": "linked source reference",
+      "displayName": "Flampy",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "fakemon:murasalem:4ffc32d7237c",
@@ -913,7 +1323,17 @@
       "note": "",
       "evidence": "VERIFIED_SOURCE_METADATA",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 1
+      "evolutionStageOrder": 1,
+      "originalSourceName": "Murasalem",
+      "originalSourceFamily": "Flampy → Murasalem",
+      "creator": "Mikitari",
+      "creatorEvidence": "source pack only; individual author unverified",
+      "sourceReference": "",
+      "nameConfidence": "VERIFIED_SOURCE_METADATA",
+      "displayName": "Murasalem",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "fakemon:flarepent:99b6d0d1e5e2",
@@ -935,7 +1355,17 @@
       "note": "",
       "evidence": "EXTERNAL_SOURCE_METADATA",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 0
+      "evolutionStageOrder": 0,
+      "originalSourceName": "Flarepent",
+      "originalSourceFamily": "Flarepent → Searpent → Conflevour",
+      "creator": "Mikitari",
+      "creatorEvidence": "source linked",
+      "sourceReference": "https://pokengine.org/mons/008lrviv/Flarepent",
+      "nameConfidence": "linked source reference",
+      "displayName": "Flarepent",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "compare:searpent:1",
@@ -957,7 +1387,17 @@
       "note": "",
       "evidence": "exact:77735f1d4520; structural:6f7d456842a1",
       "suggestionReason": "Distinct sourced artwork; choose visually rather than automatically.",
-      "evolutionStageOrder": 1
+      "evolutionStageOrder": 1,
+      "originalSourceName": "Searpent — Design 1",
+      "originalSourceFamily": "Flarepent → Searpent → Conflevour",
+      "creator": "Mikitari",
+      "creatorEvidence": "source pack only; individual author unverified",
+      "sourceReference": "",
+      "nameConfidence": "WEB_VERIFIED_SOURCE_METADATA;FRONT_BACK_VERIFIED",
+      "displayName": "Searpent — Design 1",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "fakemon:conflevour:f6f62c907c06",
@@ -979,7 +1419,17 @@
       "note": "",
       "evidence": "EXTERNAL_SOURCE_METADATA",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 2
+      "evolutionStageOrder": 2,
+      "originalSourceName": "Conflevour",
+      "originalSourceFamily": "Flarepent → Searpent → Conflevour",
+      "creator": "Mikitari",
+      "creatorEvidence": "source linked",
+      "sourceReference": "https://pokengine.org/mons/00p8f9nn/Conflevour",
+      "nameConfidence": "linked source reference",
+      "displayName": "Conflevour",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "fakemon:geocko:8e6331f867e2",
@@ -1001,7 +1451,17 @@
       "note": "",
       "evidence": "EXTERNAL_SOURCE_METADATA",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 0
+      "evolutionStageOrder": 0,
+      "originalSourceName": "Geocko",
+      "originalSourceFamily": "Geocko → Grexclub → Geolidon",
+      "creator": "Mikitari",
+      "creatorEvidence": "source linked",
+      "sourceReference": "https://pokengine.org/mons/00jsd64z/Geocko",
+      "nameConfidence": "linked source reference",
+      "displayName": "Geocko",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "fakemon:grexclub:64b963b83068",
@@ -1023,7 +1483,17 @@
       "note": "",
       "evidence": "EXTERNAL_SOURCE_METADATA",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 1
+      "evolutionStageOrder": 1,
+      "originalSourceName": "Grexclub",
+      "originalSourceFamily": "Geocko → Grexclub → Geolidon",
+      "creator": "Mikitari",
+      "creatorEvidence": "source linked",
+      "sourceReference": "https://pokengine.org/mons/00p57f3r/Grexclub",
+      "nameConfidence": "linked source reference",
+      "displayName": "Grexclub",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "fakemon:geolidon:94a24f7d0db2",
@@ -1045,7 +1515,17 @@
       "note": "",
       "evidence": "EXTERNAL_SOURCE_METADATA",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 2
+      "evolutionStageOrder": 2,
+      "originalSourceName": "Geolidon",
+      "originalSourceFamily": "Geocko → Grexclub → Geolidon",
+      "creator": "Mikitari",
+      "creatorEvidence": "source linked",
+      "sourceReference": "https://pokengine.org/mons/008dd2hc/Geolidon",
+      "nameConfidence": "linked source reference",
+      "displayName": "Geolidon",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "fakemon:glyptoblock-1:1782a977e02d",
@@ -1067,7 +1547,17 @@
       "note": "",
       "evidence": "EXTERNAL_SOURCE_METADATA",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 0
+      "evolutionStageOrder": 0,
+      "originalSourceName": "Glyptoblock",
+      "originalSourceFamily": "Glyptoblock → Furnadon",
+      "creator": "Mikitari",
+      "creatorEvidence": "source linked",
+      "sourceReference": "https://pokengine.org/mons/004ukbd6/Glyptoblock",
+      "nameConfidence": "linked source reference",
+      "displayName": "Glyptoblock",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "fakemon:glyptoblock:6dccabde2300",
@@ -1089,7 +1579,17 @@
       "note": "",
       "evidence": "EXTERNAL_SOURCE_METADATA",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 0
+      "evolutionStageOrder": 0,
+      "originalSourceName": "Glyptoblock",
+      "originalSourceFamily": "Glyptoblock → Furnadon",
+      "creator": "Mikitari",
+      "creatorEvidence": "source linked",
+      "sourceReference": "https://pokengine.org/mons/00h9msv1/Glyptoblock",
+      "nameConfidence": "linked source reference",
+      "displayName": "Glyptoblock",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "fakemon:furnadon-1:338c6886fc8e",
@@ -1111,7 +1611,17 @@
       "note": "",
       "evidence": "EXTERNAL_SOURCE_METADATA",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 1
+      "evolutionStageOrder": 1,
+      "originalSourceName": "Furnadon",
+      "originalSourceFamily": "Glyptoblock → Furnadon",
+      "creator": "Mikitari",
+      "creatorEvidence": "source linked",
+      "sourceReference": "https://pokengine.org/mons/001vcbhs/Furnadon",
+      "nameConfidence": "linked source reference",
+      "displayName": "Furnadon",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "fakemon:furnadon:c340e9ecd835",
@@ -1133,7 +1643,17 @@
       "note": "",
       "evidence": "EXTERNAL_SOURCE_METADATA",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 1
+      "evolutionStageOrder": 1,
+      "originalSourceName": "Furnadon",
+      "originalSourceFamily": "Glyptoblock → Furnadon",
+      "creator": "Mikitari",
+      "creatorEvidence": "source linked",
+      "sourceReference": "https://pokengine.org/mons/00pv5mpt/Furnadon",
+      "nameConfidence": "linked source reference",
+      "displayName": "Furnadon",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "fakemon:goobolt:21ba232a2ab4",
@@ -1155,7 +1675,17 @@
       "note": "",
       "evidence": "EXTERNAL_SOURCE_METADATA",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 0
+      "evolutionStageOrder": 0,
+      "originalSourceName": "Goobolt",
+      "originalSourceFamily": "Goobolt → Chargoo → Plasmatina",
+      "creator": "Mikitari",
+      "creatorEvidence": "source linked",
+      "sourceReference": "https://pokengine.org/mons/00pghjai/Goobolt",
+      "nameConfidence": "linked source reference",
+      "displayName": "Goobolt",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "fakemon:chargoo:c3e27a61f2d0",
@@ -1177,7 +1707,17 @@
       "note": "",
       "evidence": "EXTERNAL_SOURCE_METADATA",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 1
+      "evolutionStageOrder": 1,
+      "originalSourceName": "Chargoo",
+      "originalSourceFamily": "Goobolt → Chargoo → Plasmatina",
+      "creator": "Mikitari",
+      "creatorEvidence": "source linked",
+      "sourceReference": "https://pokengine.org/mons/0005vttv/Chargoo",
+      "nameConfidence": "linked source reference",
+      "displayName": "Chargoo",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "fakemon:plasmatina:bf181dbbe662",
@@ -1199,7 +1739,17 @@
       "note": "",
       "evidence": "WEB_VERIFIED_SOURCE_METADATA;FRONT_BACK_VERIFIED",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 2
+      "evolutionStageOrder": 2,
+      "originalSourceName": "Plasmatina",
+      "originalSourceFamily": "Goobolt → Chargoo → Plasmatina",
+      "creator": "Mikitari",
+      "creatorEvidence": "source pack only; individual author unverified",
+      "sourceReference": "",
+      "nameConfidence": "WEB_VERIFIED_SOURCE_METADATA;FRONT_BACK_VERIFIED",
+      "displayName": "Plasmatina",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "fakemon:hauntray:3bd9b9dce0e1",
@@ -1221,7 +1771,17 @@
       "note": "",
       "evidence": "EXTERNAL_SOURCE_METADATA",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 0
+      "evolutionStageOrder": 0,
+      "originalSourceName": "Hauntray",
+      "originalSourceFamily": "Hauntray → Phantabys",
+      "creator": "Mikitari",
+      "creatorEvidence": "source linked",
+      "sourceReference": "https://pokengine.org/mons/001eethc/Hauntray",
+      "nameConfidence": "linked source reference",
+      "displayName": "Hauntray",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "fakemon:phantabys:5ab70f82ad78",
@@ -1243,7 +1803,17 @@
       "note": "",
       "evidence": "WEB_VERIFIED_SOURCE_METADATA;FRONT_BACK_VERIFIED",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 1
+      "evolutionStageOrder": 1,
+      "originalSourceName": "Phantabys",
+      "originalSourceFamily": "Hauntray → Phantabys",
+      "creator": "Mikitari",
+      "creatorEvidence": "source pack only; individual author unverified",
+      "sourceReference": "",
+      "nameConfidence": "WEB_VERIFIED_SOURCE_METADATA;FRONT_BACK_VERIFIED",
+      "displayName": "Phantabys",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "fakemon:hayog:c54be050251a",
@@ -1265,7 +1835,27 @@
       "note": "",
       "evidence": "EXTERNAL_SOURCE_METADATA",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 0
+      "evolutionStageOrder": 0,
+      "originalSourceName": "Hayog",
+      "originalSourceFamily": "Hayog → Hogouse → Hogriks",
+      "creator": "Scotsman333",
+      "creatorEvidence": "source linked",
+      "sourceReference": "https://pokengine.org/mons/00jtq3x2/Hayog",
+      "nameConfidence": "linked source reference",
+      "displayName": "Hayog",
+      "familyConfidence": "disputed between source records",
+      "identityFlag": "evolution_conflict",
+      "identityNote": "Evolution relationships disagree between two metadata records. No new evolution link should be assigned automatically.",
+      "familyAlternatives": [
+        {
+          "family": "Hayog → Hogouse → Hogriks",
+          "source": "enriched source ledger"
+        },
+        {
+          "family": "Standalone — Hayog",
+          "source": "https://pokengine.org/mons/00jtq3x2/Hayog"
+        }
+      ]
     },
     {
       "id": "fakemon:hogouse:5aacd2375ea9",
@@ -1287,7 +1877,27 @@
       "note": "",
       "evidence": "EXTERNAL_SOURCE_METADATA",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 1
+      "evolutionStageOrder": 1,
+      "originalSourceName": "Hogouse",
+      "originalSourceFamily": "Hayog → Hogouse → Hogriks",
+      "creator": "Scotsman333",
+      "creatorEvidence": "source linked",
+      "sourceReference": "https://pokengine.org/mons/00bspmsd/Hogouse",
+      "nameConfidence": "linked source reference",
+      "displayName": "Hogouse",
+      "familyConfidence": "disputed between source records",
+      "identityFlag": "evolution_conflict",
+      "identityNote": "Evolution relationships disagree between two metadata records. No new evolution link should be assigned automatically.",
+      "familyAlternatives": [
+        {
+          "family": "Hayog → Hogouse → Hogriks",
+          "source": "enriched source ledger"
+        },
+        {
+          "family": "Standalone — Hogouse",
+          "source": "https://pokengine.org/mons/00bspmsd/Hogouse"
+        }
+      ]
     },
     {
       "id": "fakemon:hogriks:09d5ea97ceeb",
@@ -1309,7 +1919,27 @@
       "note": "",
       "evidence": "EXTERNAL_SOURCE_METADATA",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 2
+      "evolutionStageOrder": 2,
+      "originalSourceName": "Hogriks",
+      "originalSourceFamily": "Hayog → Hogouse → Hogriks",
+      "creator": "Scotsman333",
+      "creatorEvidence": "source linked",
+      "sourceReference": "https://pokengine.org/mons/00jegdpk/Hogriks",
+      "nameConfidence": "linked source reference",
+      "displayName": "Hogriks",
+      "familyConfidence": "disputed between source records",
+      "identityFlag": "evolution_conflict",
+      "identityNote": "Evolution relationships disagree between two metadata records. No new evolution link should be assigned automatically.",
+      "familyAlternatives": [
+        {
+          "family": "Hayog → Hogouse → Hogriks",
+          "source": "enriched source ledger"
+        },
+        {
+          "family": "Standalone — Hogriks",
+          "source": "https://pokengine.org/mons/00jegdpk/Hogriks"
+        }
+      ]
     },
     {
       "id": "compare:hissiorite:1",
@@ -1331,7 +1961,17 @@
       "note": "",
       "evidence": "exact:1197e593f39f; structural:4c89c27889f7",
       "suggestionReason": "Distinct sourced artwork; choose visually rather than automatically.",
-      "evolutionStageOrder": 0
+      "evolutionStageOrder": 0,
+      "originalSourceName": "Hissiorite — Design 1",
+      "originalSourceFamily": "Hissiorite → Cobarett → Pythonova",
+      "creator": "Princess-Phoenix",
+      "creatorEvidence": "source pack only; individual author unverified",
+      "sourceReference": "",
+      "nameConfidence": "VERIFIED_SOURCE_METADATA;BACK_MATCH_RECOVERED",
+      "displayName": "Hissiorite — Design 1",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "compare:cobarett:1",
@@ -1353,7 +1993,17 @@
       "note": "",
       "evidence": "exact:2010eff7c7ee; structural:4a35dccdb495",
       "suggestionReason": "Distinct sourced artwork; choose visually rather than automatically.",
-      "evolutionStageOrder": 1
+      "evolutionStageOrder": 1,
+      "originalSourceName": "Cobarett — Design 1",
+      "originalSourceFamily": "Hissiorite → Cobarett → Pythonova",
+      "creator": "Princess-Phoenix",
+      "creatorEvidence": "source pack only; individual author unverified",
+      "sourceReference": "",
+      "nameConfidence": "VERIFIED_SOURCE_METADATA;BACK_MATCH_RECOVERED",
+      "displayName": "Cobarett — Design 1",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "compare:pythonova:1",
@@ -1375,7 +2025,17 @@
       "note": "",
       "evidence": "exact:664616b59057; structural:300b610d4192",
       "suggestionReason": "Distinct sourced artwork; choose visually rather than automatically.",
-      "evolutionStageOrder": 2
+      "evolutionStageOrder": 2,
+      "originalSourceName": "Pythonova — Design 1",
+      "originalSourceFamily": "Hissiorite → Cobarett → Pythonova",
+      "creator": "Princess-Phoenix",
+      "creatorEvidence": "source pack only; individual author unverified",
+      "sourceReference": "",
+      "nameConfidence": "MANIFEST_BACK_REJECTED;VERIFIED_SOURCE_METADATA;BACK_MATCH_RECOVERED",
+      "displayName": "Pythonova — Design 1",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "fakemon:hopidey:02fdb2d53e02",
@@ -1397,7 +2057,17 @@
       "note": "",
       "evidence": "EXTERNAL_SOURCE_METADATA",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 0
+      "evolutionStageOrder": 0,
+      "originalSourceName": "Hopidey",
+      "originalSourceFamily": "Hopidey → Raknaleap",
+      "creator": "Mikitari",
+      "creatorEvidence": "source linked",
+      "sourceReference": "https://pokengine.org/mons/00uw5f66/Hopidey",
+      "nameConfidence": "linked source reference",
+      "displayName": "Hopidey",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "fakemon:raknaleap:171a9b0d4869",
@@ -1419,7 +2089,17 @@
       "note": "",
       "evidence": "WEB_VERIFIED_SOURCE_METADATA;FRONT_BACK_VERIFIED",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 1
+      "evolutionStageOrder": 1,
+      "originalSourceName": "Raknaleap",
+      "originalSourceFamily": "Hopidey → Raknaleap",
+      "creator": "Mikitari",
+      "creatorEvidence": "source pack only; individual author unverified",
+      "sourceReference": "",
+      "nameConfidence": "WEB_VERIFIED_SOURCE_METADATA;FRONT_BACK_VERIFIED",
+      "displayName": "Raknaleap",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "fakemon:impurp:9b7fa21a1c74",
@@ -1441,7 +2121,17 @@
       "note": "",
       "evidence": "EXTERNAL_SOURCE_METADATA",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 0
+      "evolutionStageOrder": 0,
+      "originalSourceName": "Impurp",
+      "originalSourceFamily": "Impurp → Nymfusha",
+      "creator": "Magiscarf",
+      "creatorEvidence": "source linked",
+      "sourceReference": "https://pokengine.org/mons/00mfujdo/Impurp",
+      "nameConfidence": "linked source reference",
+      "displayName": "Impurp",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "fakemon:kankwart:2cd4d130ba7f",
@@ -1463,7 +2153,17 @@
       "note": "",
       "evidence": "EXTERNAL_SOURCE_METADATA",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 0
+      "evolutionStageOrder": 0,
+      "originalSourceName": "Kankwart",
+      "originalSourceFamily": "Kankwart → Kankryst → Kankersaur",
+      "creator": "Magiscarf",
+      "creatorEvidence": "source linked",
+      "sourceReference": "https://pokengine.org/mons/00wx8qqb/Kankwart",
+      "nameConfidence": "linked source reference",
+      "displayName": "Kankwart",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "fakemon:kankryst:372c4017c1b1",
@@ -1485,7 +2185,17 @@
       "note": "",
       "evidence": "EXTERNAL_SOURCE_METADATA",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 1
+      "evolutionStageOrder": 1,
+      "originalSourceName": "Kankryst",
+      "originalSourceFamily": "Kankwart → Kankryst → Kankersaur",
+      "creator": "Magiscarf",
+      "creatorEvidence": "source linked",
+      "sourceReference": "https://pokengine.org/mons/00fihoms/Kankryst",
+      "nameConfidence": "linked source reference",
+      "displayName": "Kankryst",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "fakemon:kankersaur:739080c01802",
@@ -1507,7 +2217,17 @@
       "note": "",
       "evidence": "WEB_VERIFIED_SOURCE_METADATA;FRONT_BACK_VERIFIED",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 2
+      "evolutionStageOrder": 2,
+      "originalSourceName": "Kankersaur",
+      "originalSourceFamily": "Kankwart → Kankryst → Kankersaur",
+      "creator": "Magiscarf",
+      "creatorEvidence": "source pack only; individual author unverified",
+      "sourceReference": "",
+      "nameConfidence": "WEB_VERIFIED_SOURCE_METADATA;FRONT_BACK_VERIFIED",
+      "displayName": "Kankersaur",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "fakemon:lamby:97eb25d1871e",
@@ -1529,7 +2249,17 @@
       "note": "",
       "evidence": "EXTERNAL_SOURCE_METADATA",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 0
+      "evolutionStageOrder": 0,
+      "originalSourceName": "Lambi",
+      "originalSourceFamily": "Lambi → Mourin → Keerin",
+      "creator": "Mikitari",
+      "creatorEvidence": "source linked",
+      "sourceReference": "https://pokengine.org/mons/00bimah4/Lambi",
+      "nameConfidence": "linked source reference",
+      "displayName": "Lambi",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "fakemon:mourin:ddafbe9e88df",
@@ -1551,7 +2281,17 @@
       "note": "",
       "evidence": "EXTERNAL_SOURCE_METADATA",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 1
+      "evolutionStageOrder": 1,
+      "originalSourceName": "Mourin",
+      "originalSourceFamily": "Lambi → Mourin → Keerin",
+      "creator": "Mikitari",
+      "creatorEvidence": "source linked",
+      "sourceReference": "https://pokengine.org/mons/00yg8xsk/Mourin",
+      "nameConfidence": "linked source reference",
+      "displayName": "Mourin",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "fakemon:keerin:f5330c4efd31",
@@ -1573,7 +2313,17 @@
       "note": "",
       "evidence": "EXTERNAL_SOURCE_METADATA",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 2
+      "evolutionStageOrder": 2,
+      "originalSourceName": "Keerin",
+      "originalSourceFamily": "Lambi → Mourin → Keerin",
+      "creator": "Mikitari",
+      "creatorEvidence": "source linked",
+      "sourceReference": "https://pokengine.org/mons/00aswode/Keerin",
+      "nameConfidence": "linked source reference",
+      "displayName": "Keerin",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "fakemon:lediastra:5ac38222b3b5",
@@ -1595,7 +2345,17 @@
       "note": "",
       "evidence": "EXTERNAL_SOURCE_METADATA",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 2
+      "evolutionStageOrder": 2,
+      "originalSourceName": "Lediastra",
+      "originalSourceFamily": "Ledyba → Ledian → Lediastra",
+      "creator": "Mikitari",
+      "creatorEvidence": "source linked",
+      "sourceReference": "https://pokengine.org/mons/00qlhj6j/Lediastra",
+      "nameConfidence": "linked source reference",
+      "displayName": "Lediastra",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "fakemon:lilleo:9657de039a39",
@@ -1617,7 +2377,17 @@
       "note": "",
       "evidence": "EXTERNAL_SOURCE_METADATA",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 0
+      "evolutionStageOrder": 0,
+      "originalSourceName": "Lilleo",
+      "originalSourceFamily": "Lilleo → Germeit",
+      "creator": "Mikitari",
+      "creatorEvidence": "source linked",
+      "sourceReference": "https://pokengine.org/mons/006exu5w/Lilleo",
+      "nameConfidence": "linked source reference",
+      "displayName": "Lilleo",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "fakemon:germeit:c332b0cdaa8e",
@@ -1639,7 +2409,17 @@
       "note": "",
       "evidence": "EXTERNAL_SOURCE_METADATA",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 1
+      "evolutionStageOrder": 1,
+      "originalSourceName": "Germeit",
+      "originalSourceFamily": "Lilleo → Germeit",
+      "creator": "Mikitari",
+      "creatorEvidence": "source linked",
+      "sourceReference": "https://pokengine.org/mons/00sss3t4/Germeit",
+      "nameConfidence": "linked source reference",
+      "displayName": "Germeit",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "fakemon:lollybog:3c96d8cb29a9",
@@ -1661,7 +2441,17 @@
       "note": "",
       "evidence": "EXTERNAL_SOURCE_METADATA",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 0
+      "evolutionStageOrder": 0,
+      "originalSourceName": "Lollybog",
+      "originalSourceFamily": "Lollybog → Brewtrid → Forbiddron",
+      "creator": "MagiscarfConcept, design, name, type, sprites, and dex entry by [url=https://www.deviantart.com/magi",
+      "creatorEvidence": "source linked",
+      "sourceReference": "https://pokengine.org/mons/00jxgaaf/Lollybog",
+      "nameConfidence": "linked source reference",
+      "displayName": "Lollybog",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "fakemon:brewtrid:a1ecf9a73eef",
@@ -1683,7 +2473,17 @@
       "note": "",
       "evidence": "EXTERNAL_SOURCE_METADATA",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 1
+      "evolutionStageOrder": 1,
+      "originalSourceName": "Brewtrid",
+      "originalSourceFamily": "Lollybog → Brewtrid → Forbiddron",
+      "creator": "Magiscarf",
+      "creatorEvidence": "source linked",
+      "sourceReference": "https://pokengine.org/mons/00p5b36m/Brewtrid",
+      "nameConfidence": "linked source reference",
+      "displayName": "Brewtrid",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "fakemon:forbiddron:e2d8e564fce3",
@@ -1705,7 +2505,17 @@
       "note": "",
       "evidence": "EXTERNAL_SOURCE_METADATA",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 2
+      "evolutionStageOrder": 2,
+      "originalSourceName": "Forbiddron",
+      "originalSourceFamily": "Lollybog → Brewtrid → Forbiddron",
+      "creator": "Magiscarf",
+      "creatorEvidence": "source linked",
+      "sourceReference": "https://pokengine.org/mons/00k0excm/Forbiddron",
+      "nameConfidence": "linked source reference",
+      "displayName": "Forbiddron",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "fakemon:lumini:1fdb4fd64ddd",
@@ -1727,7 +2537,17 @@
       "note": "",
       "evidence": "EXTERNAL_SOURCE_METADATA",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 0
+      "evolutionStageOrder": 0,
+      "originalSourceName": "Lumini",
+      "originalSourceFamily": "Lumini → Lumedi → Lumaxi",
+      "creator": "Magiscarf",
+      "creatorEvidence": "source linked",
+      "sourceReference": "https://pokengine.org/mons/00q4gnm7/Lumini",
+      "nameConfidence": "linked source reference",
+      "displayName": "Lumini",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "fakemon:spinarak-1:d9f9617a90e2",
@@ -1749,7 +2569,18 @@
       "note": "maybe",
       "evidence": "SOURCE_METADATA;SOURCE_EVOLUTION_GRAPH",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 0
+      "evolutionStageOrder": 0,
+      "originalSourceName": "Luminian Spinarak",
+      "originalSourceFamily": "Luminian Spinarak → Luminian Ariados",
+      "creator": "Lumio",
+      "creatorEvidence": "source pack only; individual author unverified",
+      "sourceReference": "",
+      "nameConfidence": "SOURCE_METADATA;SOURCE_EVOLUTION_GRAPH",
+      "displayName": "Spinarak — custom source variant (name unverified)",
+      "familyConfidence": "unverified source-label grouping",
+      "identityFlag": "artist_or_region_label",
+      "identityNote": "\"Luminian Spinarak\" appears as a source or creator-derived label, not enough proof of a standalone Pokémon. Original label and your vote are preserved.",
+      "possibleBaseSpecies": "Spinarak"
     },
     {
       "id": "fakemon:ariados-1:25da075190b5",
@@ -1771,7 +2602,28 @@
       "note": "",
       "evidence": "EXTERNAL_SOURCE_METADATA",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 1
+      "evolutionStageOrder": 1,
+      "originalSourceName": "Luminian Ariados",
+      "originalSourceFamily": "Luminian Spinarak → Luminian Ariados",
+      "creator": "cubeR & KajiAtsui",
+      "creatorEvidence": "source linked",
+      "sourceReference": "https://pokengine.org/mons/0057zpyp/Ariados",
+      "nameConfidence": "linked source reference",
+      "displayName": "Ariados — custom source variant (name unverified)",
+      "familyConfidence": "disputed between source records",
+      "identityFlag": "artist_or_region_label",
+      "identityNote": "\"Luminian\" appears as a source or creator-derived label, not enough proof of a standalone Pokémon. Original label and your vote are preserved. Evolution relationships disagree between two metadata records. No new evolution link should be assigned automatically.",
+      "possibleBaseSpecies": "Ariados",
+      "familyAlternatives": [
+        {
+          "family": "Luminian Spinarak → Luminian Ariados",
+          "source": "enriched source ledger"
+        },
+        {
+          "family": "Standalone — Luminian",
+          "source": "https://pokengine.org/mons/0057zpyp/Ariados"
+        }
+      ]
     },
     {
       "id": "fakemon:mantoon:a22b10f0a26a",
@@ -1793,7 +2645,17 @@
       "note": "",
       "evidence": "EXTERNAL_SOURCE_METADATA",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 0
+      "evolutionStageOrder": 0,
+      "originalSourceName": "Mantoon",
+      "originalSourceFamily": "Mantoon → Stormanta",
+      "creator": "Mikitari",
+      "creatorEvidence": "source linked",
+      "sourceReference": "https://pokengine.org/mons/00qh7m84/Mantoon",
+      "nameConfidence": "linked source reference",
+      "displayName": "Mantoon",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "fakemon:stormanta:ce55e462c704",
@@ -1815,7 +2677,17 @@
       "note": "",
       "evidence": "EXTERNAL_SOURCE_METADATA",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 1
+      "evolutionStageOrder": 1,
+      "originalSourceName": "Stormanta",
+      "originalSourceFamily": "Mantoon → Stormanta",
+      "creator": "Mikitari",
+      "creatorEvidence": "source linked",
+      "sourceReference": "https://pokengine.org/mons/00h0x8e7/Stormanta",
+      "nameConfidence": "linked source reference",
+      "displayName": "Stormanta",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "fakemon:merlicunf:9e4f5293e250",
@@ -1837,7 +2709,17 @@
       "note": "",
       "evidence": "VERIFIED_SOURCE_METADATA;BACK_MATCH_RECOVERED",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 0
+      "evolutionStageOrder": 0,
+      "originalSourceName": "Merlicun",
+      "originalSourceFamily": "Merlicun → Firomenis",
+      "creator": "Princess-Phoenix",
+      "creatorEvidence": "source pack only; individual author unverified",
+      "sourceReference": "",
+      "nameConfidence": "VERIFIED_SOURCE_METADATA;BACK_MATCH_RECOVERED",
+      "displayName": "Merlicun",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "fakemon:firomenisf:5f9fd6b87b07",
@@ -1859,7 +2741,17 @@
       "note": "",
       "evidence": "VERIFIED_SOURCE_METADATA;BACK_MATCH_RECOVERED",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 1
+      "evolutionStageOrder": 1,
+      "originalSourceName": "Firomenis",
+      "originalSourceFamily": "Merlicun → Firomenis",
+      "creator": "Princess-Phoenix",
+      "creatorEvidence": "source pack only; individual author unverified",
+      "sourceReference": "",
+      "nameConfidence": "VERIFIED_SOURCE_METADATA;BACK_MATCH_RECOVERED",
+      "displayName": "Firomenis",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "fakemon:buneary-1:13f7b40cc329",
@@ -1881,7 +2773,28 @@
       "note": "",
       "evidence": "EXTERNAL_SOURCE_METADATA",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 0
+      "evolutionStageOrder": 0,
+      "originalSourceName": "Mikitarian Buneary",
+      "originalSourceFamily": "Mikitarian Buneary → Mikitarian Lopunny",
+      "creator": "Mikitari",
+      "creatorEvidence": "source linked",
+      "sourceReference": "https://pokengine.org/mons/00oh3oh8/Buneary",
+      "nameConfidence": "linked source reference",
+      "displayName": "Buneary — custom source variant (name unverified)",
+      "familyConfidence": "disputed between source records",
+      "identityFlag": "artist_or_region_label",
+      "identityNote": "\"Mikitarian\" appears as a source or creator-derived label, not enough proof of a standalone Pokémon. Original label and your vote are preserved. Evolution relationships disagree between two metadata records. No new evolution link should be assigned automatically.",
+      "possibleBaseSpecies": "Buneary",
+      "familyAlternatives": [
+        {
+          "family": "Mikitarian Buneary → Mikitarian Lopunny",
+          "source": "enriched source ledger"
+        },
+        {
+          "family": "Standalone — Mikitarian",
+          "source": "https://pokengine.org/mons/00oh3oh8/Buneary"
+        }
+      ]
     },
     {
       "id": "fakemon:lopunny-1:06d969db7760",
@@ -1903,7 +2816,28 @@
       "note": "",
       "evidence": "EXTERNAL_SOURCE_METADATA",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 1
+      "evolutionStageOrder": 1,
+      "originalSourceName": "Mikitarian Lopunny",
+      "originalSourceFamily": "Mikitarian Buneary → Mikitarian Lopunny",
+      "creator": "Mikitari",
+      "creatorEvidence": "source linked",
+      "sourceReference": "https://pokengine.org/mons/00xongth/Lopunny",
+      "nameConfidence": "linked source reference",
+      "displayName": "Lopunny — custom source variant (name unverified)",
+      "familyConfidence": "disputed between source records",
+      "identityFlag": "artist_or_region_label",
+      "identityNote": "\"Mikitarian\" appears as a source or creator-derived label, not enough proof of a standalone Pokémon. Original label and your vote are preserved. Evolution relationships disagree between two metadata records. No new evolution link should be assigned automatically.",
+      "possibleBaseSpecies": "Lopunny",
+      "familyAlternatives": [
+        {
+          "family": "Mikitarian Buneary → Mikitarian Lopunny",
+          "source": "enriched source ledger"
+        },
+        {
+          "family": "Standalone — Mikitarian",
+          "source": "https://pokengine.org/mons/00xongth/Lopunny"
+        }
+      ]
     },
     {
       "id": "fakemon:minamai:a49139765a74",
@@ -1925,7 +2859,27 @@
       "note": "",
       "evidence": "EXTERNAL_SOURCE_METADATA",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 0
+      "evolutionStageOrder": 0,
+      "originalSourceName": "Minamai",
+      "originalSourceFamily": "Minamai → Marelstorm",
+      "creator": "Rattila",
+      "creatorEvidence": "source linked",
+      "sourceReference": "https://pokengine.org/mons/00rofohd/Minamai",
+      "nameConfidence": "linked source reference",
+      "displayName": "Minamai",
+      "familyConfidence": "disputed between source records",
+      "identityFlag": "evolution_conflict",
+      "identityNote": "Evolution relationships disagree between two metadata records. No new evolution link should be assigned automatically.",
+      "familyAlternatives": [
+        {
+          "family": "Minamai → Marelstorm",
+          "source": "enriched source ledger"
+        },
+        {
+          "family": "Standalone — Minamai",
+          "source": "https://pokengine.org/mons/00rofohd/Minamai"
+        }
+      ]
     },
     {
       "id": "fakemon:marelstorm:701ab0bd5780",
@@ -1947,7 +2901,27 @@
       "note": "",
       "evidence": "EXTERNAL_SOURCE_METADATA",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 1
+      "evolutionStageOrder": 1,
+      "originalSourceName": "Marelstorm",
+      "originalSourceFamily": "Minamai → Marelstorm",
+      "creator": "Rattila",
+      "creatorEvidence": "source linked",
+      "sourceReference": "https://pokengine.org/mons/004bj9kp/Marelstorm",
+      "nameConfidence": "linked source reference",
+      "displayName": "Marelstorm",
+      "familyConfidence": "disputed between source records",
+      "identityFlag": "evolution_conflict",
+      "identityNote": "Evolution relationships disagree between two metadata records. No new evolution link should be assigned automatically.",
+      "familyAlternatives": [
+        {
+          "family": "Minamai → Marelstorm",
+          "source": "enriched source ledger"
+        },
+        {
+          "family": "Standalone — Marelstorm",
+          "source": "https://pokengine.org/mons/004bj9kp/Marelstorm"
+        }
+      ]
     },
     {
       "id": "fakemon:munchill:1b640ef359e3",
@@ -1969,7 +2943,17 @@
       "note": "",
       "evidence": "EXTERNAL_SOURCE_METADATA",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 0
+      "evolutionStageOrder": 0,
+      "originalSourceName": "Munchill",
+      "originalSourceFamily": "Munchill → Crunchill",
+      "creator": "Mikitari",
+      "creatorEvidence": "source linked",
+      "sourceReference": "https://pokengine.org/mons/00uvh97j/Munchill",
+      "nameConfidence": "linked source reference",
+      "displayName": "Munchill",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "fakemon:crunchill:e5fb20e303fb",
@@ -1991,7 +2975,17 @@
       "note": "",
       "evidence": "EXTERNAL_SOURCE_METADATA",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 1
+      "evolutionStageOrder": 1,
+      "originalSourceName": "Crunchill",
+      "originalSourceFamily": "Munchill → Crunchill",
+      "creator": "Mikitari",
+      "creatorEvidence": "source linked",
+      "sourceReference": "https://pokengine.org/mons/00punrvz/Crunchill",
+      "nameConfidence": "linked source reference",
+      "displayName": "Crunchill",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "fakemon:enchantowl:c4f31a6f6f3c",
@@ -2013,7 +3007,17 @@
       "note": "",
       "evidence": "SOURCE_METADATA;SOURCE_EVOLUTION_GRAPH",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 1
+      "evolutionStageOrder": 1,
+      "originalSourceName": "Enchantowl",
+      "originalSourceFamily": "Noctowl 1 → Enchantowl",
+      "creator": "Lumio",
+      "creatorEvidence": "source pack only; individual author unverified",
+      "sourceReference": "",
+      "nameConfidence": "SOURCE_METADATA;SOURCE_EVOLUTION_GRAPH",
+      "displayName": "Enchantowl",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "fakemon:pansimi:621636128805",
@@ -2035,7 +3039,17 @@
       "note": "",
       "evidence": "SOURCE_METADATA;SOURCE_EVOLUTION_GRAPH;BACK_MATCH_RECOVERED",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 0
+      "evolutionStageOrder": 0,
+      "originalSourceName": "Pansimi",
+      "originalSourceFamily": "Pansimi → Panpour → Pansage → Pansear",
+      "creator": "Various artists",
+      "creatorEvidence": "source pack only; individual author unverified",
+      "sourceReference": "",
+      "nameConfidence": "SOURCE_METADATA;SOURCE_EVOLUTION_GRAPH;BACK_MATCH_RECOVERED",
+      "displayName": "Pansimi",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "fakemon:glanchog:b9cd1d7e4aa9",
@@ -2057,7 +3071,17 @@
       "note": "",
       "evidence": "EXTERNAL_SOURCE_METADATA",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 2
+      "evolutionStageOrder": 2,
+      "originalSourceName": "Glanchog",
+      "originalSourceFamily": "Patrat → Watchog → Glanchog",
+      "creator": "Mikitari",
+      "creatorEvidence": "source linked",
+      "sourceReference": "https://pokengine.org/mons/00hl9l4z/Glanchog",
+      "nameConfidence": "linked source reference",
+      "displayName": "Glanchog",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "fakemon:peclay:3f8e82e245f7",
@@ -2079,7 +3103,17 @@
       "note": "",
       "evidence": "WEB_VERIFIED_SOURCE_METADATA;FRONT_BACK_VERIFIED",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 0
+      "evolutionStageOrder": 0,
+      "originalSourceName": "Peclay",
+      "originalSourceFamily": "Peclay → Tektalon",
+      "creator": "Mikitari",
+      "creatorEvidence": "source pack only; individual author unverified",
+      "sourceReference": "",
+      "nameConfidence": "WEB_VERIFIED_SOURCE_METADATA;FRONT_BACK_VERIFIED",
+      "displayName": "Peclay",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "fakemon:tektalon-1:17952668282a",
@@ -2101,7 +3135,17 @@
       "note": "",
       "evidence": "EXTERNAL_SOURCE_METADATA",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 1
+      "evolutionStageOrder": 1,
+      "originalSourceName": "Tektalon",
+      "originalSourceFamily": "Peclay → Tektalon",
+      "creator": "Mikitari",
+      "creatorEvidence": "source linked",
+      "sourceReference": "https://pokengine.org/mons/00bpfwjm/Tektalon",
+      "nameConfidence": "linked source reference",
+      "displayName": "Tektalon",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "fakemon:tektalon:b8476aea5e7a",
@@ -2123,7 +3167,17 @@
       "note": "",
       "evidence": "EXTERNAL_SOURCE_METADATA",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 1
+      "evolutionStageOrder": 1,
+      "originalSourceName": "Tektalon",
+      "originalSourceFamily": "Peclay → Tektalon",
+      "creator": "Mikitari",
+      "creatorEvidence": "source linked",
+      "sourceReference": "https://pokengine.org/mons/002vq36y/Tektalon",
+      "nameConfidence": "linked source reference",
+      "displayName": "Tektalon",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "fakemon:petidaw:b6ad684c91cc",
@@ -2145,7 +3199,17 @@
       "note": "",
       "evidence": "WEB_VERIFIED_SOURCE_METADATA;FRONT_BACK_VERIFIED",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 0
+      "evolutionStageOrder": 0,
+      "originalSourceName": "Petidaw",
+      "originalSourceFamily": "Petidaw → Croober → Ravendler",
+      "creator": "Mikitari",
+      "creatorEvidence": "source pack only; individual author unverified",
+      "sourceReference": "",
+      "nameConfidence": "WEB_VERIFIED_SOURCE_METADATA;FRONT_BACK_VERIFIED",
+      "displayName": "Petidaw",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "fakemon:croober-female:c7f9a1d70229",
@@ -2167,7 +3231,17 @@
       "note": "",
       "evidence": "EXTERNAL_SOURCE_METADATA",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 1
+      "evolutionStageOrder": 1,
+      "originalSourceName": "Croober",
+      "originalSourceFamily": "Petidaw → Croober → Ravendler",
+      "creator": "Mikitari",
+      "creatorEvidence": "source linked",
+      "sourceReference": "https://pokengine.org/mons/0096hldy/Croober",
+      "nameConfidence": "linked source reference",
+      "displayName": "Croober",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "fakemon:croober:ee00fc109ee9",
@@ -2189,7 +3263,17 @@
       "note": "",
       "evidence": "EXTERNAL_SOURCE_METADATA",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 1
+      "evolutionStageOrder": 1,
+      "originalSourceName": "Croober",
+      "originalSourceFamily": "Petidaw → Croober → Ravendler",
+      "creator": "Mikitari",
+      "creatorEvidence": "source linked",
+      "sourceReference": "https://pokengine.org/mons/0096hldy/Croober",
+      "nameConfidence": "linked source reference",
+      "displayName": "Croober",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "fakemon:ravendler:6787c6756a78",
@@ -2211,7 +3295,17 @@
       "note": "",
       "evidence": "WEB_VERIFIED_SOURCE_METADATA;FRONT_BACK_VERIFIED",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 2
+      "evolutionStageOrder": 2,
+      "originalSourceName": "Ravendler",
+      "originalSourceFamily": "Petidaw → Croober → Ravendler",
+      "creator": "Mikitari",
+      "creatorEvidence": "source pack only; individual author unverified",
+      "sourceReference": "",
+      "nameConfidence": "WEB_VERIFIED_SOURCE_METADATA;FRONT_BACK_VERIFIED",
+      "displayName": "Ravendler",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "fakemon:gorochu:d978e1cda2a9",
@@ -2233,7 +3327,17 @@
       "note": "",
       "evidence": "EXTERNAL_SOURCE_METADATA",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 2
+      "evolutionStageOrder": 2,
+      "originalSourceName": "Gorochu",
+      "originalSourceFamily": "Pichu → Pikachu → Gorochu",
+      "creator": "Foxeaf",
+      "creatorEvidence": "source linked",
+      "sourceReference": "https://pokengine.org/mons/00534nhb/Gorochu",
+      "nameConfidence": "linked source reference",
+      "displayName": "Gorochu",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "fakemon:platerigus:277910002af1",
@@ -2255,7 +3359,17 @@
       "note": "",
       "evidence": "WEB_VERIFIED_SOURCE_METADATA;FRONT_BACK_VERIFIED",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 0
+      "evolutionStageOrder": 0,
+      "originalSourceName": "Platerigus",
+      "originalSourceFamily": "Platerigus → Mikitarian → Traumatisse",
+      "creator": "Mikitari",
+      "creatorEvidence": "source pack only; individual author unverified",
+      "sourceReference": "",
+      "nameConfidence": "WEB_VERIFIED_SOURCE_METADATA;FRONT_BACK_VERIFIED",
+      "displayName": "Platerigus",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "fakemon:falinks-1:0c48c12e936e",
@@ -2277,7 +3391,28 @@
       "note": "",
       "evidence": "EXTERNAL_SOURCE_METADATA",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 1
+      "evolutionStageOrder": 1,
+      "originalSourceName": "Mikitarian Falinks",
+      "originalSourceFamily": "Platerigus → Mikitarian → Traumatisse",
+      "creator": "Mikitari",
+      "creatorEvidence": "source linked",
+      "sourceReference": "https://pokengine.org/mons/00dun911/Falinks",
+      "nameConfidence": "linked source reference",
+      "displayName": "Falinks — custom source variant (name unverified)",
+      "familyConfidence": "disputed between source records",
+      "identityFlag": "artist_or_region_label",
+      "identityNote": "\"Mikitarian\" appears as a source or creator-derived label, not enough proof of a standalone Pokémon. Original label and your vote are preserved. Evolution relationships disagree between two metadata records. No new evolution link should be assigned automatically.",
+      "possibleBaseSpecies": "Falinks",
+      "familyAlternatives": [
+        {
+          "family": "Platerigus → Mikitarian → Traumatisse",
+          "source": "enriched source ledger"
+        },
+        {
+          "family": "Standalone — Mikitarian",
+          "source": "https://pokengine.org/mons/00dun911/Falinks"
+        }
+      ]
     },
     {
       "id": "fakemon:spritzee-1:f9749b90bdb0",
@@ -2299,7 +3434,18 @@
       "note": "",
       "evidence": "EXTERNAL_SOURCE_METADATA",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 1
+      "evolutionStageOrder": 1,
+      "originalSourceName": "Mikitarian Spritzee",
+      "originalSourceFamily": "Platerigus → Mikitarian → Traumatisse",
+      "creator": "Mikitari",
+      "creatorEvidence": "source linked",
+      "sourceReference": "https://pokengine.org/mons/00pm8f1c/Spritzee",
+      "nameConfidence": "linked source reference",
+      "displayName": "Spritzee — custom source variant (name unverified)",
+      "familyConfidence": "unverified source-label grouping",
+      "identityFlag": "artist_or_region_label",
+      "identityNote": "\"Mikitarian\" appears as a source or creator-derived label, not enough proof of a standalone Pokémon. Original label and your vote are preserved.",
+      "possibleBaseSpecies": "Spritzee"
     },
     {
       "id": "fakemon:yamask-2:9ae97cd58dea",
@@ -2321,7 +3467,18 @@
       "note": "",
       "evidence": "EXTERNAL_SOURCE_METADATA",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 1
+      "evolutionStageOrder": 1,
+      "originalSourceName": "Mikitarian Yamask",
+      "originalSourceFamily": "Platerigus → Mikitarian → Traumatisse",
+      "creator": "Mikitari",
+      "creatorEvidence": "source linked",
+      "sourceReference": "https://pokengine.org/mons/0063w7vk/Yamask",
+      "nameConfidence": "linked source reference",
+      "displayName": "Yamask — custom source variant (name unverified)",
+      "familyConfidence": "unverified source-label grouping",
+      "identityFlag": "artist_or_region_label",
+      "identityNote": "\"Mikitarian\" appears as a source or creator-derived label, not enough proof of a standalone Pokémon. Original label and your vote are preserved.",
+      "possibleBaseSpecies": "Yamask"
     },
     {
       "id": "fakemon:traumatisse:c91020460452",
@@ -2343,7 +3500,27 @@
       "note": "",
       "evidence": "EXTERNAL_SOURCE_METADATA",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 2
+      "evolutionStageOrder": 2,
+      "originalSourceName": "Traumatisse",
+      "originalSourceFamily": "Platerigus → Mikitarian → Traumatisse",
+      "creator": "Mikitari",
+      "creatorEvidence": "source linked",
+      "sourceReference": "https://pokengine.org/mons/00y8pwe3/Traumatisse+",
+      "nameConfidence": "linked source reference",
+      "displayName": "Traumatisse",
+      "familyConfidence": "disputed between source records",
+      "identityFlag": "evolution_conflict",
+      "identityNote": "Evolution relationships disagree between two metadata records. No new evolution link should be assigned automatically.",
+      "familyAlternatives": [
+        {
+          "family": "Platerigus → Mikitarian → Traumatisse",
+          "source": "enriched source ledger"
+        },
+        {
+          "family": "Standalone — Traumatisse",
+          "source": "https://pokengine.org/mons/00y8pwe3/Traumatisse+"
+        }
+      ]
     },
     {
       "id": "fakemon:rhinplink:d44e960196c9",
@@ -2365,7 +3542,17 @@
       "note": "",
       "evidence": "WEB_VERIFIED_SOURCE_METADATA;FRONT_BACK_VERIFIED",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 0
+      "evolutionStageOrder": 0,
+      "originalSourceName": "Rhinplink",
+      "originalSourceFamily": "Rhinplink → Trunkorn → Rhintain",
+      "creator": "Mikitari",
+      "creatorEvidence": "source pack only; individual author unverified",
+      "sourceReference": "",
+      "nameConfidence": "WEB_VERIFIED_SOURCE_METADATA;FRONT_BACK_VERIFIED",
+      "displayName": "Rhinplink",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "fakemon:trunkorn:fe4adae9de02",
@@ -2387,7 +3574,17 @@
       "note": "",
       "evidence": "EXTERNAL_SOURCE_METADATA",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 1
+      "evolutionStageOrder": 1,
+      "originalSourceName": "Trunkorn",
+      "originalSourceFamily": "Rhinplink → Trunkorn → Rhintain",
+      "creator": "Mikitari",
+      "creatorEvidence": "source linked",
+      "sourceReference": "https://pokengine.org/mons/00jg5ftj/Trunkorn",
+      "nameConfidence": "linked source reference",
+      "displayName": "Trunkorn",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "fakemon:rhintain:70156cdf466d",
@@ -2409,7 +3606,17 @@
       "note": "",
       "evidence": "WEB_VERIFIED_SOURCE_METADATA;FRONT_BACK_VERIFIED",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 2
+      "evolutionStageOrder": 2,
+      "originalSourceName": "Rhintain",
+      "originalSourceFamily": "Rhinplink → Trunkorn → Rhintain",
+      "creator": "Mikitari",
+      "creatorEvidence": "source pack only; individual author unverified",
+      "sourceReference": "",
+      "nameConfidence": "WEB_VERIFIED_SOURCE_METADATA;FRONT_BACK_VERIFIED",
+      "displayName": "Rhintain",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "fakemon:skelleks:8fb265d7817f",
@@ -2431,7 +3638,17 @@
       "note": "",
       "evidence": "EXTERNAL_SOURCE_METADATA",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 0
+      "evolutionStageOrder": 0,
+      "originalSourceName": "Skelleks",
+      "originalSourceFamily": "Skelleks → Negagen",
+      "creator": "Magiscarf",
+      "creatorEvidence": "source linked",
+      "sourceReference": "https://pokengine.org/mons/00msw0uq/Skelleks",
+      "nameConfidence": "linked source reference",
+      "displayName": "Skelleks",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "fakemon:negagen:de4424124489",
@@ -2453,7 +3670,17 @@
       "note": "",
       "evidence": "WEB_VERIFIED_SOURCE_METADATA;FRONT_BACK_VERIFIED",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 1
+      "evolutionStageOrder": 1,
+      "originalSourceName": "Negagen",
+      "originalSourceFamily": "Skelleks → Negagen",
+      "creator": "Magiscarf",
+      "creatorEvidence": "source pack only; individual author unverified",
+      "sourceReference": "",
+      "nameConfidence": "WEB_VERIFIED_SOURCE_METADATA;FRONT_BACK_VERIFIED",
+      "displayName": "Negagen",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "fakemon:skindling:2083b6e89eea",
@@ -2475,7 +3702,17 @@
       "note": "",
       "evidence": "EXTERNAL_SOURCE_METADATA",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 0
+      "evolutionStageOrder": 0,
+      "originalSourceName": "Skindling",
+      "originalSourceFamily": "Skindling → Skingnite → Eruptile",
+      "creator": "Mikitari",
+      "creatorEvidence": "source linked",
+      "sourceReference": "https://pokengine.org/mons/00crtdbm/Skindling",
+      "nameConfidence": "linked source reference",
+      "displayName": "Skindling",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "fakemon:skingnite:5ab1d496309b",
@@ -2497,7 +3734,17 @@
       "note": "",
       "evidence": "EXTERNAL_SOURCE_METADATA",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 1
+      "evolutionStageOrder": 1,
+      "originalSourceName": "Skingnite",
+      "originalSourceFamily": "Skindling → Skingnite → Eruptile",
+      "creator": "Mikitari",
+      "creatorEvidence": "source linked",
+      "sourceReference": "https://pokengine.org/mons/00o10gbo/Skingnite",
+      "nameConfidence": "linked source reference",
+      "displayName": "Skingnite",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "fakemon:eruptile:f7dd5e359b3c",
@@ -2519,7 +3766,17 @@
       "note": "",
       "evidence": "EXTERNAL_SOURCE_METADATA",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 2
+      "evolutionStageOrder": 2,
+      "originalSourceName": "Eruptile",
+      "originalSourceFamily": "Skindling → Skingnite → Eruptile",
+      "creator": "Mikitari",
+      "creatorEvidence": "source linked",
+      "sourceReference": "https://pokengine.org/mons/00n64pqg/Eruptile",
+      "nameConfidence": "linked source reference",
+      "displayName": "Eruptile",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "fakemon:slidune-1:ae8c06d4fc39",
@@ -2541,7 +3798,17 @@
       "note": "",
       "evidence": "EXTERNAL_SOURCE_METADATA",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 0
+      "evolutionStageOrder": 0,
+      "originalSourceName": "Slidune",
+      "originalSourceFamily": "Slidune → Duntesert",
+      "creator": "Mikitari",
+      "creatorEvidence": "source linked",
+      "sourceReference": "https://pokengine.org/mons/005f8a5k/Slidune",
+      "nameConfidence": "linked source reference",
+      "displayName": "Slidune",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "fakemon:slidune:05f634850f07",
@@ -2563,7 +3830,17 @@
       "note": "",
       "evidence": "EXTERNAL_SOURCE_METADATA",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 0
+      "evolutionStageOrder": 0,
+      "originalSourceName": "Slidune",
+      "originalSourceFamily": "Slidune → Duntesert",
+      "creator": "Mikitari",
+      "creatorEvidence": "source linked",
+      "sourceReference": "https://pokengine.org/mons/00sii3gp/Slidune",
+      "nameConfidence": "linked source reference",
+      "displayName": "Slidune",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "fakemon:duntesert-1:1f2ad75e064c",
@@ -2585,7 +3862,17 @@
       "note": "",
       "evidence": "EXTERNAL_SOURCE_METADATA",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 1
+      "evolutionStageOrder": 1,
+      "originalSourceName": "Duntesert",
+      "originalSourceFamily": "Slidune → Duntesert",
+      "creator": "Mikitari",
+      "creatorEvidence": "source linked",
+      "sourceReference": "https://pokengine.org/mons/00f95cl0/Duntesert",
+      "nameConfidence": "linked source reference",
+      "displayName": "Duntesert",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "fakemon:duntesert:7520cf4d4134",
@@ -2607,7 +3894,17 @@
       "note": "",
       "evidence": "EXTERNAL_SOURCE_METADATA",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 1
+      "evolutionStageOrder": 1,
+      "originalSourceName": "Duntesert",
+      "originalSourceFamily": "Slidune → Duntesert",
+      "creator": "Mikitari",
+      "creatorEvidence": "source linked",
+      "sourceReference": "https://pokengine.org/mons/008lrz7k/Duntesert",
+      "nameConfidence": "linked source reference",
+      "displayName": "Duntesert",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "fakemon:sligment:0e27556d0266",
@@ -2629,7 +3926,17 @@
       "note": "",
       "evidence": "EXTERNAL_SOURCE_METADATA",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 0
+      "evolutionStageOrder": 0,
+      "originalSourceName": "Sligment",
+      "originalSourceFamily": "Sligment → Viscolor → Gelescent",
+      "creator": "Magiscarf",
+      "creatorEvidence": "source linked",
+      "sourceReference": "https://pokengine.org/mons/00a9flqr/Sligment",
+      "nameConfidence": "linked source reference",
+      "displayName": "Sligment",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "fakemon:viscolor:9da3cdc6dca3",
@@ -2651,7 +3958,17 @@
       "note": "",
       "evidence": "EXTERNAL_SOURCE_METADATA",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 1
+      "evolutionStageOrder": 1,
+      "originalSourceName": "Viscolor",
+      "originalSourceFamily": "Sligment → Viscolor → Gelescent",
+      "creator": "Magiscarf",
+      "creatorEvidence": "source linked",
+      "sourceReference": "https://pokengine.org/mons/00asdmog/Viscolor",
+      "nameConfidence": "linked source reference",
+      "displayName": "Viscolor",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "fakemon:gelescent:8953de041b16",
@@ -2673,7 +3990,17 @@
       "note": "",
       "evidence": "EXTERNAL_SOURCE_METADATA",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 2
+      "evolutionStageOrder": 2,
+      "originalSourceName": "Gelescent",
+      "originalSourceFamily": "Sligment → Viscolor → Gelescent",
+      "creator": "Magiscarf",
+      "creatorEvidence": "source linked",
+      "sourceReference": "https://pokengine.org/mons/00rjqecl/Gelescent",
+      "nameConfidence": "linked source reference",
+      "displayName": "Gelescent",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "fakemon:smoald:5eb9c950effe",
@@ -2695,7 +4022,17 @@
       "note": "",
       "evidence": "EXTERNAL_SOURCE_METADATA",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 0
+      "evolutionStageOrder": 0,
+      "originalSourceName": "Smoald",
+      "originalSourceFamily": "Smoald → Bombustoad",
+      "creator": "Magiscarf",
+      "creatorEvidence": "source linked",
+      "sourceReference": "https://pokengine.org/mons/00qplors/Smoald",
+      "nameConfidence": "linked source reference",
+      "displayName": "Smoald",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "fakemon:bombustoad:b46cb17c2758",
@@ -2717,7 +4054,17 @@
       "note": "",
       "evidence": "EXTERNAL_SOURCE_METADATA",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 1
+      "evolutionStageOrder": 1,
+      "originalSourceName": "Bombustoad",
+      "originalSourceFamily": "Smoald → Bombustoad",
+      "creator": "Magiscarf",
+      "creatorEvidence": "source linked",
+      "sourceReference": "https://pokengine.org/mons/001271g9/Bombustoad",
+      "nameConfidence": "linked source reference",
+      "displayName": "Bombustoad",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "fakemon:sneepy:5850577d30a5",
@@ -2739,7 +4086,17 @@
       "note": "",
       "evidence": "EXTERNAL_SOURCE_METADATA",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 0
+      "evolutionStageOrder": 0,
+      "originalSourceName": "Sneepy",
+      "originalSourceFamily": "Sneepy → Flambafee",
+      "creator": "Mikitari",
+      "creatorEvidence": "source linked",
+      "sourceReference": "https://pokengine.org/mons/002ty1el/Sneepy",
+      "nameConfidence": "linked source reference",
+      "displayName": "Sneepy",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "fakemon:flambafee-female:8ca9160cf40c",
@@ -2761,7 +4118,17 @@
       "note": "",
       "evidence": "EXTERNAL_SOURCE_METADATA",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 1
+      "evolutionStageOrder": 1,
+      "originalSourceName": "Flambafee",
+      "originalSourceFamily": "Sneepy → Flambafee",
+      "creator": "Mikitari",
+      "creatorEvidence": "source linked",
+      "sourceReference": "https://pokengine.org/mons/00l997mx/Flambafee",
+      "nameConfidence": "linked source reference",
+      "displayName": "Flambafee",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "fakemon:flambafee:3766fc431b37",
@@ -2783,7 +4150,17 @@
       "note": "",
       "evidence": "EXTERNAL_SOURCE_METADATA",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 1
+      "evolutionStageOrder": 1,
+      "originalSourceName": "Flambafee",
+      "originalSourceFamily": "Sneepy → Flambafee",
+      "creator": "Mikitari",
+      "creatorEvidence": "source linked",
+      "sourceReference": "https://pokengine.org/mons/00l997mx/Flambafee",
+      "nameConfidence": "linked source reference",
+      "displayName": "Flambafee",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "fakemon:sphertle:e2e9e3cecc8f",
@@ -2805,7 +4182,17 @@
       "note": "",
       "evidence": "EXTERNAL_SOURCE_METADATA",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 0
+      "evolutionStageOrder": 0,
+      "originalSourceName": "Sphertle",
+      "originalSourceFamily": "Sphertle → Wroomtoise",
+      "creator": "Mikitari",
+      "creatorEvidence": "source linked",
+      "sourceReference": "https://pokengine.org/mons/00hjnk89/Sphertle",
+      "nameConfidence": "linked source reference",
+      "displayName": "Sphertle",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "fakemon:wroomtoise:238dfda52b6b",
@@ -2827,7 +4214,17 @@
       "note": "",
       "evidence": "EXTERNAL_SOURCE_METADATA",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 1
+      "evolutionStageOrder": 1,
+      "originalSourceName": "Wroomtoise",
+      "originalSourceFamily": "Sphertle → Wroomtoise",
+      "creator": "Mikitari",
+      "creatorEvidence": "source linked",
+      "sourceReference": "https://pokengine.org/mons/00j9qhqi/Wroomtoise",
+      "nameConfidence": "linked source reference",
+      "displayName": "Wroomtoise",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "fakemon:sproutsy:e4f905be03cc",
@@ -2849,7 +4246,17 @@
       "note": "",
       "evidence": "EXTERNAL_SOURCE_METADATA",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 0
+      "evolutionStageOrder": 0,
+      "originalSourceName": "Sprousy",
+      "originalSourceFamily": "Sprousy → Petalnia → Floramona",
+      "creator": "Mikitari",
+      "creatorEvidence": "source linked",
+      "sourceReference": "https://pokengine.org/mons/00q3ro2z/Sprousy",
+      "nameConfidence": "linked source reference",
+      "displayName": "Sprousy",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "fakemon:petalnia:741e1053e95d",
@@ -2871,7 +4278,17 @@
       "note": "",
       "evidence": "WEB_VERIFIED_SOURCE_METADATA;FRONT_BACK_VERIFIED",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 1
+      "evolutionStageOrder": 1,
+      "originalSourceName": "Petalnia",
+      "originalSourceFamily": "Sprousy → Petalnia → Floramona",
+      "creator": "Mikitari",
+      "creatorEvidence": "source pack only; individual author unverified",
+      "sourceReference": "",
+      "nameConfidence": "WEB_VERIFIED_SOURCE_METADATA;FRONT_BACK_VERIFIED",
+      "displayName": "Petalnia",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "fakemon:floramona-1:74eaeefaf084",
@@ -2893,7 +4310,17 @@
       "note": "",
       "evidence": "EXTERNAL_SOURCE_METADATA;BACK_MATCH_RECOVERED",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 2
+      "evolutionStageOrder": 2,
+      "originalSourceName": "Floramona",
+      "originalSourceFamily": "Sprousy → Petalnia → Floramona",
+      "creator": "Mikitari",
+      "creatorEvidence": "source linked",
+      "sourceReference": "https://pokengine.org/mons/00723ddn/Floramona",
+      "nameConfidence": "linked source reference",
+      "displayName": "Floramona",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "fakemon:floramona-6:90a209f96454",
@@ -2915,7 +4342,17 @@
       "note": "",
       "evidence": "EXTERNAL_SOURCE_METADATA;BACK_MATCH_RECOVERED",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 2
+      "evolutionStageOrder": 2,
+      "originalSourceName": "Floramona",
+      "originalSourceFamily": "Sprousy → Petalnia → Floramona",
+      "creator": "Mikitari",
+      "creatorEvidence": "source linked",
+      "sourceReference": "https://pokengine.org/mons/007gwpnk/Floramona",
+      "nameConfidence": "linked source reference",
+      "displayName": "Floramona",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "fakemon:floramona:3295c0630e41",
@@ -2937,7 +4374,17 @@
       "note": "",
       "evidence": "EXTERNAL_SOURCE_METADATA",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 2
+      "evolutionStageOrder": 2,
+      "originalSourceName": "Floramona",
+      "originalSourceFamily": "Sprousy → Petalnia → Floramona",
+      "creator": "Mikitari",
+      "creatorEvidence": "source linked",
+      "sourceReference": "https://pokengine.org/mons/000vz5ct/Floramona",
+      "nameConfidence": "linked source reference",
+      "displayName": "Floramona",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "fakemon:anuf:fd3a05d9dedb",
@@ -2959,7 +4406,17 @@
       "note": "",
       "evidence": "EXTERNAL_SOURCE_METADATA;BACK_MATCH_RECOVERED",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 6
+      "evolutionStageOrder": 6,
+      "originalSourceName": "Anu",
+      "originalSourceFamily": "Standalone — Anu",
+      "creator": "Princess-Phoenix",
+      "creatorEvidence": "source linked",
+      "sourceReference": "https://pokengine.org/mons/00whcgac/Anu",
+      "nameConfidence": "linked source reference",
+      "displayName": "Anu",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "fakemon:botanine:171567e22353",
@@ -2981,7 +4438,17 @@
       "note": "",
       "evidence": "EXTERNAL_SOURCE_METADATA",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 6
+      "evolutionStageOrder": 6,
+      "originalSourceName": "Botanine",
+      "originalSourceFamily": "Standalone — Botanine",
+      "creator": "Magiscarf",
+      "creatorEvidence": "source linked",
+      "sourceReference": "https://pokengine.org/mons/00h5ifhc/Botanine",
+      "nameConfidence": "linked source reference",
+      "displayName": "Botanine",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "fakemon:castform-4:2ac6980a65e9",
@@ -3003,7 +4470,17 @@
       "note": "",
       "evidence": "EXTERNAL_SOURCE_METADATA",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 6
+      "evolutionStageOrder": 6,
+      "originalSourceName": "Castform",
+      "originalSourceFamily": "Standalone — Castform",
+      "creator": "Mikitari",
+      "creatorEvidence": "source linked",
+      "sourceReference": "https://pokengine.org/mons/00si3jl9/Castform",
+      "nameConfidence": "linked source reference",
+      "displayName": "Castform",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "fakemon:castform-5:3140038d31ab",
@@ -3025,7 +4502,17 @@
       "note": "",
       "evidence": "EXTERNAL_SOURCE_METADATA",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 6
+      "evolutionStageOrder": 6,
+      "originalSourceName": "Castform",
+      "originalSourceFamily": "Standalone — Castform",
+      "creator": "Mikitari",
+      "creatorEvidence": "source linked",
+      "sourceReference": "https://pokengine.org/mons/00nfane9/Castform",
+      "nameConfidence": "linked source reference",
+      "displayName": "Castform",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "fakemon:castform-6:f6cc7e9f7871",
@@ -3047,7 +4534,17 @@
       "note": "",
       "evidence": "EXTERNAL_SOURCE_METADATA",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 6
+      "evolutionStageOrder": 6,
+      "originalSourceName": "Castform",
+      "originalSourceFamily": "Standalone — Castform",
+      "creator": "Mikitari",
+      "creatorEvidence": "source linked",
+      "sourceReference": "https://pokengine.org/mons/00v4rpol/Castform",
+      "nameConfidence": "linked source reference",
+      "displayName": "Castform",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "fakemon:commant:f4600f93a1d1",
@@ -3069,7 +4566,17 @@
       "note": "",
       "evidence": "EXTERNAL_SOURCE_METADATA",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 6
+      "evolutionStageOrder": 6,
+      "originalSourceName": "Commant",
+      "originalSourceFamily": "Standalone — Commant",
+      "creator": "Mikitari",
+      "creatorEvidence": "source linked",
+      "sourceReference": "https://pokengine.org/mons/007tlits/Commant",
+      "nameConfidence": "linked source reference",
+      "displayName": "Commant",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "fakemon:dynabit:21b6eb76c830",
@@ -3091,7 +4598,17 @@
       "note": "",
       "evidence": "EXTERNAL_SOURCE_METADATA",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 6
+      "evolutionStageOrder": 6,
+      "originalSourceName": "Dynabit",
+      "originalSourceFamily": "Standalone — Dynabit",
+      "creator": "Magiscarf",
+      "creatorEvidence": "source linked",
+      "sourceReference": "https://pokengine.org/mons/00vjb07z/Dynabit",
+      "nameConfidence": "linked source reference",
+      "displayName": "Dynabit",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "fakemon:homurant:ea9119efb146",
@@ -3113,7 +4630,17 @@
       "note": "",
       "evidence": "EXTERNAL_SOURCE_METADATA",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 6
+      "evolutionStageOrder": 6,
+      "originalSourceName": "Homurant",
+      "originalSourceFamily": "Standalone — Homurant",
+      "creator": "Mikitari",
+      "creatorEvidence": "source linked",
+      "sourceReference": "https://pokengine.org/mons/00icxkhj/Homurant",
+      "nameConfidence": "linked source reference",
+      "displayName": "Homurant",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "fakemon:howliage:2615136cf0d0",
@@ -3135,7 +4662,17 @@
       "note": "",
       "evidence": "EXTERNAL_SOURCE_METADATA",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 6
+      "evolutionStageOrder": 6,
+      "originalSourceName": "Howliage",
+      "originalSourceFamily": "Standalone — Howliage",
+      "creator": "Magiscarf",
+      "creatorEvidence": "source linked",
+      "sourceReference": "https://pokengine.org/mons/00bkgyjp/Howliage",
+      "nameConfidence": "linked source reference",
+      "displayName": "Howliage",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "fakemon:mivota:c778b556225b",
@@ -3157,7 +4694,17 @@
       "note": "",
       "evidence": "EXTERNAL_SOURCE_METADATA",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 6
+      "evolutionStageOrder": 6,
+      "originalSourceName": "Mivota",
+      "originalSourceFamily": "Standalone — Mivota",
+      "creator": "Magiscarf",
+      "creatorEvidence": "source linked",
+      "sourceReference": "https://pokengine.org/mons/00fvw6tf/Mivota",
+      "nameConfidence": "linked source reference",
+      "displayName": "Mivota",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "fakemon:timberry:dcc9beb38290",
@@ -3179,7 +4726,17 @@
       "note": "",
       "evidence": "EXTERNAL_SOURCE_METADATA",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 6
+      "evolutionStageOrder": 6,
+      "originalSourceName": "Timberry",
+      "originalSourceFamily": "Standalone — Timberry",
+      "creator": "Magiscarf",
+      "creatorEvidence": "source linked",
+      "sourceReference": "https://pokengine.org/mons/004yr1up/Timberry",
+      "nameConfidence": "linked source reference",
+      "displayName": "Timberry",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "fakemon:umbreeze:54c246670fba",
@@ -3201,7 +4758,17 @@
       "note": "",
       "evidence": "EXTERNAL_SOURCE_METADATA",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 6
+      "evolutionStageOrder": 6,
+      "originalSourceName": "Umbreeze",
+      "originalSourceFamily": "Standalone — Umbreeze",
+      "creator": "Magiscarf",
+      "creatorEvidence": "source linked",
+      "sourceReference": "https://pokengine.org/mons/005axjf6/Umbreeze",
+      "nameConfidence": "linked source reference",
+      "displayName": "Umbreeze",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "fakemon:webruiser:bea1e82f88b1",
@@ -3223,7 +4790,17 @@
       "note": "",
       "evidence": "EXTERNAL_SOURCE_METADATA",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 6
+      "evolutionStageOrder": 6,
+      "originalSourceName": "Webruiser",
+      "originalSourceFamily": "Standalone — Webruiser",
+      "creator": "Scotsman333",
+      "creatorEvidence": "source linked",
+      "sourceReference": "https://pokengine.org/mons/00qwht05/Webruiser",
+      "nameConfidence": "linked source reference",
+      "displayName": "Webruiser",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "fakemon:sufferub:ecfb8bab5f98",
@@ -3245,7 +4822,17 @@
       "note": "",
       "evidence": "EXTERNAL_SOURCE_METADATA",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 0
+      "evolutionStageOrder": 0,
+      "originalSourceName": "Sufferub",
+      "originalSourceFamily": "Sufferub → Inhalis → Gasarnet",
+      "creator": "Mikitari",
+      "creatorEvidence": "source linked",
+      "sourceReference": "https://pokengine.org/mons/008d05gv/Sufferub",
+      "nameConfidence": "linked source reference",
+      "displayName": "Sufferub",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "fakemon:inhalis:e5cbf5de8511",
@@ -3267,7 +4854,17 @@
       "note": "",
       "evidence": "EXTERNAL_SOURCE_METADATA",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 1
+      "evolutionStageOrder": 1,
+      "originalSourceName": "Inhalis",
+      "originalSourceFamily": "Sufferub → Inhalis → Gasarnet",
+      "creator": "Mikitari",
+      "creatorEvidence": "source linked",
+      "sourceReference": "https://pokengine.org/mons/00cm4irv/Inhalis",
+      "nameConfidence": "linked source reference",
+      "displayName": "Inhalis",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "fakemon:gasarnet:e5d87e7ae431",
@@ -3289,7 +4886,17 @@
       "note": "",
       "evidence": "EXTERNAL_SOURCE_METADATA",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 2
+      "evolutionStageOrder": 2,
+      "originalSourceName": "Gasarnet",
+      "originalSourceFamily": "Sufferub → Inhalis → Gasarnet",
+      "creator": "Mikitari",
+      "creatorEvidence": "source linked",
+      "sourceReference": "https://pokengine.org/mons/00lutxx3/Gasarnet",
+      "nameConfidence": "linked source reference",
+      "displayName": "Gasarnet",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "fakemon:timpot:a498e0e7b64a",
@@ -3311,7 +4918,17 @@
       "note": "",
       "evidence": "EXTERNAL_SOURCE_METADATA",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 0
+      "evolutionStageOrder": 0,
+      "originalSourceName": "Timpot",
+      "originalSourceFamily": "Timpot → Prankmare",
+      "creator": "Mikitari",
+      "creatorEvidence": "source linked",
+      "sourceReference": "https://pokengine.org/mons/00qewoog/Timpot",
+      "nameConfidence": "linked source reference",
+      "displayName": "Timpot",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "fakemon:prankmare:79f0048a5f20",
@@ -3333,7 +4950,17 @@
       "note": "",
       "evidence": "WEB_VERIFIED_SOURCE_METADATA;FRONT_BACK_VERIFIED",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 1
+      "evolutionStageOrder": 1,
+      "originalSourceName": "Prankmare",
+      "originalSourceFamily": "Timpot → Prankmare",
+      "creator": "Mikitari",
+      "creatorEvidence": "source pack only; individual author unverified",
+      "sourceReference": "",
+      "nameConfidence": "WEB_VERIFIED_SOURCE_METADATA;FRONT_BACK_VERIFIED",
+      "displayName": "Prankmare",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "fakemon:tormine:c3d06e8f1f58",
@@ -3355,7 +4982,17 @@
       "note": "",
       "evidence": "EXTERNAL_SOURCE_METADATA",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 1
+      "evolutionStageOrder": 1,
+      "originalSourceName": "Tormine",
+      "originalSourceFamily": "Torkoal → Tormine",
+      "creator": "WaterTrainer",
+      "creatorEvidence": "source linked",
+      "sourceReference": "https://pokengine.org/mons/00gmc3cs/Tormine",
+      "nameConfidence": "linked source reference",
+      "displayName": "Tormine",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "fakemon:troutle:f721426d8a70",
@@ -3377,7 +5014,17 @@
       "note": "",
       "evidence": "EXTERNAL_SOURCE_METADATA",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 0
+      "evolutionStageOrder": 0,
+      "originalSourceName": "Troutle",
+      "originalSourceFamily": "Troutle → Basculin → Basstile",
+      "creator": "Mikitari",
+      "creatorEvidence": "source linked",
+      "sourceReference": "https://pokengine.org/mons/00ip3ihm/Troutle",
+      "nameConfidence": "linked source reference",
+      "displayName": "Troutle",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "fakemon:basculin-2:1384cfe24e54",
@@ -3399,7 +5046,17 @@
       "note": "",
       "evidence": "EXTERNAL_SOURCE_METADATA",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 1
+      "evolutionStageOrder": 1,
+      "originalSourceName": "Basculin",
+      "originalSourceFamily": "Troutle → Basculin → Basstile",
+      "creator": "Mikitari",
+      "creatorEvidence": "source linked",
+      "sourceReference": "https://pokengine.org/mons/00x8dozp/Basculin",
+      "nameConfidence": "linked source reference",
+      "displayName": "Basculin",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "fakemon:basstile-1:42c3f86927c1",
@@ -3421,7 +5078,17 @@
       "note": "",
       "evidence": "EXTERNAL_SOURCE_METADATA",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 2
+      "evolutionStageOrder": 2,
+      "originalSourceName": "Basstile",
+      "originalSourceFamily": "Troutle → Basculin → Basstile",
+      "creator": "Mikitari",
+      "creatorEvidence": "source linked",
+      "sourceReference": "https://pokengine.org/mons/00jayxm3/Basstile",
+      "nameConfidence": "linked source reference",
+      "displayName": "Basstile",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "fakemon:basstile-2:9b5f568609a3",
@@ -3443,7 +5110,17 @@
       "note": "",
       "evidence": "EXTERNAL_SOURCE_METADATA",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 2
+      "evolutionStageOrder": 2,
+      "originalSourceName": "Basstile",
+      "originalSourceFamily": "Troutle → Basculin → Basstile",
+      "creator": "Mikitari",
+      "creatorEvidence": "source linked",
+      "sourceReference": "https://pokengine.org/mons/001f64ep/Basstile",
+      "nameConfidence": "linked source reference",
+      "displayName": "Basstile",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "fakemon:basstile:b9f5105aa1e4",
@@ -3465,7 +5142,17 @@
       "note": "",
       "evidence": "EXTERNAL_SOURCE_METADATA",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 2
+      "evolutionStageOrder": 2,
+      "originalSourceName": "Basstile",
+      "originalSourceFamily": "Troutle → Basculin → Basstile",
+      "creator": "Mikitari",
+      "creatorEvidence": "source linked",
+      "sourceReference": "https://pokengine.org/mons/00iwk4l3/Basstile",
+      "nameConfidence": "linked source reference",
+      "displayName": "Basstile",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     }
   ],
   "technicalHolds": [
@@ -3489,7 +5176,17 @@
       "note": "",
       "evidence": "",
       "holdReason": "Custom type needs verification",
-      "evolutionStageOrder": 0
+      "evolutionStageOrder": 0,
+      "originalSourceName": "SKARMORY_MEGA",
+      "originalSourceFamily": "SKARMORY_MEGA",
+      "creator": "Not established",
+      "creatorEvidence": "source pack only; individual author unverified",
+      "sourceReference": "",
+      "nameConfidence": "historical",
+      "displayName": "SKARMORY_MEGA",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "compare:cobarett:2",
@@ -3511,7 +5208,17 @@
       "note": "",
       "evidence": "exact:2dd6afdeb7db; structural:50e8252692bc",
       "holdReason": "Back sprite not confidently mapped",
-      "evolutionStageOrder": 1
+      "evolutionStageOrder": 1,
+      "originalSourceName": "Cobarett — Design 2",
+      "originalSourceFamily": "Hissiorite → Cobarett → Pythonova",
+      "creator": "Not established",
+      "creatorEvidence": "source pack only; individual author unverified",
+      "sourceReference": "",
+      "nameConfidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
+      "displayName": "Cobarett — Design 2",
+      "familyConfidence": "historical",
+      "identityFlag": "provisional_identification",
+      "identityNote": "Earlier source filename/type/family inference was provisional. It has not been promoted to an official Pokémon identity."
     },
     {
       "id": "compare:hissiorite:2",
@@ -3533,7 +5240,17 @@
       "note": "",
       "evidence": "exact:87999dccd2cf; structural:7886f1ade29a",
       "holdReason": "Back sprite not confidently mapped",
-      "evolutionStageOrder": 0
+      "evolutionStageOrder": 0,
+      "originalSourceName": "Hissiorite — Design 2",
+      "originalSourceFamily": "Hissiorite → Cobarett → Pythonova",
+      "creator": "Not established",
+      "creatorEvidence": "source pack only; individual author unverified",
+      "sourceReference": "",
+      "nameConfidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
+      "displayName": "Hissiorite — Design 2",
+      "familyConfidence": "historical",
+      "identityFlag": "provisional_identification",
+      "identityNote": "Earlier source filename/type/family inference was provisional. It has not been promoted to an official Pokémon identity."
     },
     {
       "id": "compare:pythonova:2",
@@ -3555,7 +5272,17 @@
       "note": "",
       "evidence": "exact:3600f80bdafc; structural:93d898a29d16",
       "holdReason": "Back sprite not confidently mapped",
-      "evolutionStageOrder": 2
+      "evolutionStageOrder": 2,
+      "originalSourceName": "Pythonova — Design 2",
+      "originalSourceFamily": "Hissiorite → Cobarett → Pythonova",
+      "creator": "Not established",
+      "creatorEvidence": "source pack only; individual author unverified",
+      "sourceReference": "",
+      "nameConfidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
+      "displayName": "Pythonova — Design 2",
+      "familyConfidence": "historical",
+      "identityFlag": "provisional_identification",
+      "identityNote": "Earlier source filename/type/family inference was provisional. It has not been promoted to an official Pokémon identity."
     },
     {
       "id": "compare:pythonovas:1",
@@ -3577,7 +5304,17 @@
       "note": "",
       "evidence": "exact:1802b774bbe9; structural:0712cb80faa9",
       "holdReason": "Type/source identity needs verification",
-      "evolutionStageOrder": 0
+      "evolutionStageOrder": 0,
+      "originalSourceName": "Pythonovas — Design 1",
+      "originalSourceFamily": "Pythonovas",
+      "creator": "Not established",
+      "creatorEvidence": "source pack only; individual author unverified",
+      "sourceReference": "",
+      "nameConfidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
+      "displayName": "Pythonova S — possible shiny or alternate frame",
+      "familyConfidence": "historical",
+      "identityFlag": "possible_shiny_alias",
+      "identityNote": "An S suffix in a file name is not proof of a separate Pokémon species."
     },
     {
       "id": "compare:pythonovas:2",
@@ -3599,7 +5336,17 @@
       "note": "",
       "evidence": "exact:5542d9e3bd24; structural:19caefc47afc",
       "holdReason": "Type/source identity needs verification",
-      "evolutionStageOrder": 0
+      "evolutionStageOrder": 0,
+      "originalSourceName": "Pythonovas — Design 2",
+      "originalSourceFamily": "Pythonovas",
+      "creator": "Not established",
+      "creatorEvidence": "source pack only; individual author unverified",
+      "sourceReference": "",
+      "nameConfidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
+      "displayName": "Pythonova S — possible shiny or alternate frame",
+      "familyConfidence": "historical",
+      "identityFlag": "possible_shiny_alias",
+      "identityNote": "An S suffix in a file name is not proof of a separate Pokémon species."
     },
     {
       "id": "compare:noctowl-1:1",
@@ -3621,7 +5368,18 @@
       "note": "",
       "evidence": "exact:29404e237d0e; structural:874cd3c121a0",
       "holdReason": "Back sprite not confidently mapped",
-      "evolutionStageOrder": 0
+      "evolutionStageOrder": 0,
+      "originalSourceName": "Luminian Noctowl — Design 1",
+      "originalSourceFamily": "Noctowl 1 → Enchantowl",
+      "creator": "Atsui",
+      "creatorEvidence": "source pack only; individual author unverified",
+      "sourceReference": "",
+      "nameConfidence": "SOURCE_EVOLUTION_GRAPH;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
+      "displayName": "Noctowl — custom source variant (name unverified)",
+      "familyConfidence": "unverified source-label grouping",
+      "identityFlag": "artist_or_region_label",
+      "identityNote": "\"Noctowl 1\" appears as a source or creator-derived label, not enough proof of a standalone Pokémon. Original label and your vote are preserved.",
+      "possibleBaseSpecies": "Noctowl"
     },
     {
       "id": "compare:dampurr:1",
@@ -3643,7 +5401,17 @@
       "note": "",
       "evidence": "exact:b5d318c282cf; structural:8f0f15fc94c8",
       "holdReason": "Back sprite not confidently mapped",
-      "evolutionStageOrder": 0
+      "evolutionStageOrder": 0,
+      "originalSourceName": "Dampurr — Design 1",
+      "originalSourceFamily": "Dampurr → Rainther → Delugar",
+      "creator": "Magiscarf",
+      "creatorEvidence": "source linked",
+      "sourceReference": "https://pokengine.org/mons/00ie8he1/Dampurr",
+      "nameConfidence": "linked source reference",
+      "displayName": "Dampurr — Design 1",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "compare:delugar:1",
@@ -3665,7 +5433,17 @@
       "note": "",
       "evidence": "exact:ef7d9a027e15; structural:004727b09b1d",
       "holdReason": "Back sprite not confidently mapped",
-      "evolutionStageOrder": 2
+      "evolutionStageOrder": 2,
+      "originalSourceName": "Delugar — Design 1",
+      "originalSourceFamily": "Dampurr → Rainther → Delugar",
+      "creator": "Magiscarf",
+      "creatorEvidence": "source linked",
+      "sourceReference": "https://pokengine.org/mons/00nfmggx/Delugar",
+      "nameConfidence": "linked source reference",
+      "displayName": "Delugar — Design 1",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "compare:rainther:1",
@@ -3687,7 +5465,17 @@
       "note": "",
       "evidence": "exact:c2f31eb9aaf2; structural:9bd1392ed421",
       "holdReason": "Type/source identity needs verification",
-      "evolutionStageOrder": 1
+      "evolutionStageOrder": 1,
+      "originalSourceName": "Rainther — Design 1",
+      "originalSourceFamily": "Dampurr → Rainther → Delugar",
+      "creator": "Magiscarf",
+      "creatorEvidence": "source pack only; individual author unverified",
+      "sourceReference": "",
+      "nameConfidence": "FAMILY_RECOVERED;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
+      "displayName": "Rainther — Design 1",
+      "familyConfidence": "historical",
+      "identityFlag": "provisional_identification",
+      "identityNote": "Earlier source filename/type/family inference was provisional. It has not been promoted to an official Pokémon identity."
     },
     {
       "id": "compare:rainther:2",
@@ -3709,7 +5497,17 @@
       "note": "",
       "evidence": "exact:71ded939bcc9; structural:7f3adf7765a5",
       "holdReason": "Type/source identity needs verification",
-      "evolutionStageOrder": 1
+      "evolutionStageOrder": 1,
+      "originalSourceName": "Rainther — Design 2",
+      "originalSourceFamily": "Dampurr → Rainther → Delugar",
+      "creator": "Magiscarf",
+      "creatorEvidence": "source pack only; individual author unverified",
+      "sourceReference": "",
+      "nameConfidence": "FAMILY_RECOVERED;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
+      "displayName": "Rainther — Design 2",
+      "familyConfidence": "historical",
+      "identityFlag": "provisional_identification",
+      "identityNote": "Earlier source filename/type/family inference was provisional. It has not been promoted to an official Pokémon identity."
     },
     {
       "id": "compare:searpent:2",
@@ -3731,7 +5529,17 @@
       "note": "",
       "evidence": "exact:3f0d8ab3dd56; structural:4b3348e1e0de",
       "holdReason": "Back sprite not confidently mapped",
-      "evolutionStageOrder": 1
+      "evolutionStageOrder": 1,
+      "originalSourceName": "Searpent — Design 2",
+      "originalSourceFamily": "Flarepent → Searpent → Conflevour",
+      "creator": "Magiscarf",
+      "creatorEvidence": "source pack only; individual author unverified",
+      "sourceReference": "",
+      "nameConfidence": "WEB_VERIFIED_SOURCE_METADATA;FRONT_BACK_VERIFIED",
+      "displayName": "Searpent — Design 2",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "compare:flygon-1:2",
@@ -3753,7 +5561,17 @@
       "note": "",
       "evidence": "exact:df8a26189a7f; structural:4906a9ac03e2",
       "holdReason": "Back sprite not confidently mapped",
-      "evolutionStageOrder": 3
+      "evolutionStageOrder": 3,
+      "originalSourceName": "Mega Flygon — Design 2",
+      "originalSourceFamily": "Trapinch → Vibrava → Flygon → Mega Flygon",
+      "creator": "Not established",
+      "creatorEvidence": "source pack only; individual author unverified",
+      "sourceReference": "",
+      "nameConfidence": "VERIFIED_SOURCE_METADATA;SOURCE_METADATA",
+      "displayName": "Mega Flygon — Design 2",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "reconcile:wailmer-alternate-form-1",
@@ -3775,7 +5593,17 @@
       "note": "Previous status: keep; recovered: cut",
       "evidence": "R0477",
       "holdReason": "Review requires restored front/back sprite paths",
-      "evolutionStageOrder": 0
+      "evolutionStageOrder": 0,
+      "originalSourceName": "Wailmer — Alternate (Form 1)",
+      "originalSourceFamily": "#0320 Wailmer → #0321 Wailord",
+      "creator": "Not established",
+      "creatorEvidence": "source pack only; individual author unverified",
+      "sourceReference": "",
+      "nameConfidence": "historical",
+      "displayName": "Wailmer — Alternate (Form 1)",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "reconcile:wailord-alternate-form-1",
@@ -3797,7 +5625,17 @@
       "note": "Previous status: keep; recovered: cut",
       "evidence": "R0479",
       "holdReason": "Review requires restored front/back sprite paths",
-      "evolutionStageOrder": 1
+      "evolutionStageOrder": 1,
+      "originalSourceName": "Wailord — Alternate (Form 1)",
+      "originalSourceFamily": "#0320 Wailmer → #0321 Wailord",
+      "creator": "Not established",
+      "creatorEvidence": "source pack only; individual author unverified",
+      "sourceReference": "",
+      "nameConfidence": "historical",
+      "displayName": "Wailord — Alternate (Form 1)",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "collision:hydreigon-mega",
@@ -3814,7 +5652,17 @@
       "back": "DS_CUSTOM_LIBRARY/converted/All_Mercury_GBA_Queue/hydreigon_mega/back.png",
       "reason": "The same historical identity has both KEEP and CUT approvals; original distinct review IDs must be preserved.",
       "holdReason": "Conflicting review IDs: R0786=keep; R0787=cut",
-      "evolutionStageOrder": 2
+      "evolutionStageOrder": 2,
+      "originalSourceName": "Hydreigon Mega",
+      "originalSourceFamily": "#0633 Deino → #0634 Zweilous → #0635 Hydreigon",
+      "creator": "Not established",
+      "creatorEvidence": "source pack only; individual author unverified",
+      "sourceReference": "",
+      "nameConfidence": "historical",
+      "displayName": "Hydreigon Mega",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "collision:tsareena-mega",
@@ -3831,7 +5679,17 @@
       "back": "DS_CUSTOM_LIBRARY/converted/All_Mercury_GBA_Queue/tsareena_mega/back.png",
       "reason": "The same historical identity has both KEEP and CUT approvals; original distinct review IDs must be preserved.",
       "holdReason": "Conflicting review IDs: R0867=keep; R0868=cut",
-      "evolutionStageOrder": 2
+      "evolutionStageOrder": 2,
+      "originalSourceName": "Tsareena Mega",
+      "originalSourceFamily": "#0761 Bounsweet → #0762 Steenee → #0763 Tsareena",
+      "creator": "Not established",
+      "creatorEvidence": "source pack only; individual author unverified",
+      "sourceReference": "",
+      "nameConfidence": "historical",
+      "displayName": "Tsareena Mega",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     },
     {
       "id": "fakemon:criminalisfront:c6156a0da54f",
@@ -3853,7 +5711,17 @@
       "note": "",
       "evidence": "EXTERNAL_SOURCE_METADATA;BACK_MATCH_RECOVERED",
       "holdReason": "Multi-frame animation strips (5400px front / 6400px back); extract matching single frames before artwork approval",
-      "evolutionStageOrder": 1
+      "evolutionStageOrder": 1,
+      "originalSourceName": "Criminalis",
+      "originalSourceFamily": "Pilfetch → Criminalis",
+      "creator": "AceTrainerAvery",
+      "creatorEvidence": "source linked",
+      "sourceReference": "https://pokengine.org/mons/00n7m78l/Criminalis",
+      "nameConfidence": "linked source reference",
+      "displayName": "Criminalis",
+      "familyConfidence": "historical",
+      "identityFlag": "",
+      "identityNote": ""
     }
   ],
   "reviewHistoryNotes": [
@@ -3874,7 +5742,205 @@
       "note": "Latest conversation differs from older reject; needs confirmation."
     }
   ],
-  "recommendationPolicy": "Technical shortlist only. Never interpret suggestions as user decisions; never auto-integrate. Native DS art is a tentative preference where the same custom identity has a converted counterpart.",
+  "recommendationPolicy": {
+    "0": "T",
+    "1": "e",
+    "2": "c",
+    "3": "h",
+    "4": "n",
+    "5": "i",
+    "6": "c",
+    "7": "a",
+    "8": "l",
+    "9": " ",
+    "10": "s",
+    "11": "h",
+    "12": "o",
+    "13": "r",
+    "14": "t",
+    "15": "l",
+    "16": "i",
+    "17": "s",
+    "18": "t",
+    "19": " ",
+    "20": "o",
+    "21": "n",
+    "22": "l",
+    "23": "y",
+    "24": ".",
+    "25": " ",
+    "26": "N",
+    "27": "e",
+    "28": "v",
+    "29": "e",
+    "30": "r",
+    "31": " ",
+    "32": "i",
+    "33": "n",
+    "34": "t",
+    "35": "e",
+    "36": "r",
+    "37": "p",
+    "38": "r",
+    "39": "e",
+    "40": "t",
+    "41": " ",
+    "42": "s",
+    "43": "u",
+    "44": "g",
+    "45": "g",
+    "46": "e",
+    "47": "s",
+    "48": "t",
+    "49": "i",
+    "50": "o",
+    "51": "n",
+    "52": "s",
+    "53": " ",
+    "54": "a",
+    "55": "s",
+    "56": " ",
+    "57": "u",
+    "58": "s",
+    "59": "e",
+    "60": "r",
+    "61": " ",
+    "62": "d",
+    "63": "e",
+    "64": "c",
+    "65": "i",
+    "66": "s",
+    "67": "i",
+    "68": "o",
+    "69": "n",
+    "70": "s",
+    "71": ";",
+    "72": " ",
+    "73": "n",
+    "74": "e",
+    "75": "v",
+    "76": "e",
+    "77": "r",
+    "78": " ",
+    "79": "a",
+    "80": "u",
+    "81": "t",
+    "82": "o",
+    "83": "-",
+    "84": "i",
+    "85": "n",
+    "86": "t",
+    "87": "e",
+    "88": "g",
+    "89": "r",
+    "90": "a",
+    "91": "t",
+    "92": "e",
+    "93": ".",
+    "94": " ",
+    "95": "N",
+    "96": "a",
+    "97": "t",
+    "98": "i",
+    "99": "v",
+    "100": "e",
+    "101": " ",
+    "102": "D",
+    "103": "S",
+    "104": " ",
+    "105": "a",
+    "106": "r",
+    "107": "t",
+    "108": " ",
+    "109": "i",
+    "110": "s",
+    "111": " ",
+    "112": "a",
+    "113": " ",
+    "114": "t",
+    "115": "e",
+    "116": "n",
+    "117": "t",
+    "118": "a",
+    "119": "t",
+    "120": "i",
+    "121": "v",
+    "122": "e",
+    "123": " ",
+    "124": "p",
+    "125": "r",
+    "126": "e",
+    "127": "f",
+    "128": "e",
+    "129": "r",
+    "130": "e",
+    "131": "n",
+    "132": "c",
+    "133": "e",
+    "134": " ",
+    "135": "w",
+    "136": "h",
+    "137": "e",
+    "138": "r",
+    "139": "e",
+    "140": " ",
+    "141": "t",
+    "142": "h",
+    "143": "e",
+    "144": " ",
+    "145": "s",
+    "146": "a",
+    "147": "m",
+    "148": "e",
+    "149": " ",
+    "150": "c",
+    "151": "u",
+    "152": "s",
+    "153": "t",
+    "154": "o",
+    "155": "m",
+    "156": " ",
+    "157": "i",
+    "158": "d",
+    "159": "e",
+    "160": "n",
+    "161": "t",
+    "162": "i",
+    "163": "t",
+    "164": "y",
+    "165": " ",
+    "166": "h",
+    "167": "a",
+    "168": "s",
+    "169": " ",
+    "170": "a",
+    "171": " ",
+    "172": "c",
+    "173": "o",
+    "174": "n",
+    "175": "v",
+    "176": "e",
+    "177": "r",
+    "178": "t",
+    "179": "e",
+    "180": "d",
+    "181": " ",
+    "182": "c",
+    "183": "o",
+    "184": "u",
+    "185": "n",
+    "186": "t",
+    "187": "e",
+    "188": "r",
+    "189": "p",
+    "190": "a",
+    "191": "r",
+    "192": "t",
+    "193": ".",
+    "identityRule": "Bulk Keep must skip identityFlag entries, even if historically considered technically complete.",
+    "creatorCredits": "Creator / source attribution is stored separately from species name; copied source labels are provisional.",
+    "voteProtection": "All 166 recovered mobile user decisions remain unchanged and keyed by immutable IDs."
+  },
   "reconciledUserExport": {
     "sourceFile": "review/recovered-user-export-decisions-2026-10-23.json",
     "sourceBlob": "99a8335db6be68412399e17bffc7b234710b60ce",
@@ -3935,6 +6001,448 @@
       "Artwork variants from a stage remain alongside that stage.",
       "Already-approved user decisions remain keyed by immutable review ID.",
       "If family relationships cannot be verified, retain technical hold; do not invent evolutions."
+    ]
+  },
+  "identityAudit": {
+    "schema": "mercury-sprite-name-attribution-v1",
+    "updated": "2026-10-23",
+    "rule": "A sprite filename, creator name, region-like prefix or converted asset identity is NOT automatically the Pokémon species name. Artwork decisions preserved; integration requires verified identity.",
+    "sourceMetadata": [
+      "DS_CUSTOM_LIBRARY/DS_READY_MASTER/external_fakemon_metadata.json",
+      "DS_CUSTOM_LIBRARY/DS_READY_MASTER/fakemon_enriched_metadata.json"
+    ],
+    "linkedRecords": 125,
+    "flaggedReviewEntries": 17,
+    "flaggedTechnicalHolds": 8,
+    "flagged": 25,
+    "artistSources": 15,
+    "flags": [
+      {
+        "id": "fakemon:beelitant:e5c0e29ea74f",
+        "identity": "beelitant",
+        "priorName": "Beelitant",
+        "display": "Beelitant",
+        "flag": "evolution_conflict",
+        "creator": "Mikitari",
+        "sourceReference": "https://pokengine.org/mons/00wiz4bc/Beelitant",
+        "priorFamily": "Beelitant → Kocomb → Granebee",
+        "alternatives": [
+          {
+            "family": "Beelitant → Kocomb → Granebee",
+            "source": "enriched source ledger"
+          },
+          {
+            "family": "Beelitant → Kocomb → Furrva → Granebee",
+            "source": "https://pokengine.org/mons/00wiz4bc/Beelitant"
+          }
+        ],
+        "isHold": false
+      },
+      {
+        "id": "fakemon:kocomb-1:9e0c820d55c7",
+        "identity": "kocomb-1",
+        "priorName": "Kocomb",
+        "display": "Kocomb",
+        "flag": "evolution_conflict",
+        "creator": "Mikitari",
+        "sourceReference": "https://pokengine.org/mons/001ddhus/Kocomb",
+        "priorFamily": "Beelitant → Kocomb → Granebee",
+        "alternatives": [
+          {
+            "family": "Beelitant → Kocomb → Granebee",
+            "source": "enriched source ledger"
+          },
+          {
+            "family": "Beelitant → Kocomb → Furrva → Granebee",
+            "source": "https://pokengine.org/mons/001ddhus/Kocomb"
+          }
+        ],
+        "isHold": false
+      },
+      {
+        "id": "fakemon:kocomb:5f5be9a1eeeb",
+        "identity": "kocomb",
+        "priorName": "Kocomb",
+        "display": "Kocomb",
+        "flag": "evolution_conflict",
+        "creator": "Mikitari",
+        "sourceReference": "https://pokengine.org/mons/004m6vrv/Kocomb",
+        "priorFamily": "Beelitant → Kocomb → Granebee",
+        "alternatives": [
+          {
+            "family": "Beelitant → Kocomb → Granebee",
+            "source": "enriched source ledger"
+          },
+          {
+            "family": "Beelitant → Kocomb → Furrva → Granebee",
+            "source": "https://pokengine.org/mons/004m6vrv/Kocomb"
+          }
+        ],
+        "isHold": false
+      },
+      {
+        "id": "fakemon:granebee:65fc8136a344",
+        "identity": "granebee",
+        "priorName": "Granebee",
+        "display": "Granebee",
+        "flag": "evolution_conflict",
+        "creator": "Mikitari",
+        "sourceReference": "https://pokengine.org/mons/00eqh4t5/Granebee",
+        "priorFamily": "Beelitant → Kocomb → Granebee",
+        "alternatives": [
+          {
+            "family": "Beelitant → Kocomb → Granebee",
+            "source": "enriched source ledger"
+          },
+          {
+            "family": "Beelitant → Kocomb → Furrva → Granebee",
+            "source": "https://pokengine.org/mons/00eqh4t5/Granebee"
+          }
+        ],
+        "isHold": false
+      },
+      {
+        "id": "fakemon:hayog:c54be050251a",
+        "identity": "hayog",
+        "priorName": "Hayog",
+        "display": "Hayog",
+        "flag": "evolution_conflict",
+        "creator": "Scotsman333",
+        "sourceReference": "https://pokengine.org/mons/00jtq3x2/Hayog",
+        "priorFamily": "Hayog → Hogouse → Hogriks",
+        "alternatives": [
+          {
+            "family": "Hayog → Hogouse → Hogriks",
+            "source": "enriched source ledger"
+          },
+          {
+            "family": "Standalone — Hayog",
+            "source": "https://pokengine.org/mons/00jtq3x2/Hayog"
+          }
+        ],
+        "isHold": false
+      },
+      {
+        "id": "fakemon:hogouse:5aacd2375ea9",
+        "identity": "hogouse",
+        "priorName": "Hogouse",
+        "display": "Hogouse",
+        "flag": "evolution_conflict",
+        "creator": "Scotsman333",
+        "sourceReference": "https://pokengine.org/mons/00bspmsd/Hogouse",
+        "priorFamily": "Hayog → Hogouse → Hogriks",
+        "alternatives": [
+          {
+            "family": "Hayog → Hogouse → Hogriks",
+            "source": "enriched source ledger"
+          },
+          {
+            "family": "Standalone — Hogouse",
+            "source": "https://pokengine.org/mons/00bspmsd/Hogouse"
+          }
+        ],
+        "isHold": false
+      },
+      {
+        "id": "fakemon:hogriks:09d5ea97ceeb",
+        "identity": "hogriks",
+        "priorName": "Hogriks",
+        "display": "Hogriks",
+        "flag": "evolution_conflict",
+        "creator": "Scotsman333",
+        "sourceReference": "https://pokengine.org/mons/00jegdpk/Hogriks",
+        "priorFamily": "Hayog → Hogouse → Hogriks",
+        "alternatives": [
+          {
+            "family": "Hayog → Hogouse → Hogriks",
+            "source": "enriched source ledger"
+          },
+          {
+            "family": "Standalone — Hogriks",
+            "source": "https://pokengine.org/mons/00jegdpk/Hogriks"
+          }
+        ],
+        "isHold": false
+      },
+      {
+        "id": "fakemon:spinarak-1:d9f9617a90e2",
+        "identity": "spinarak-1",
+        "priorName": "Luminian Spinarak",
+        "display": "Spinarak — custom source variant (name unverified)",
+        "flag": "artist_or_region_label",
+        "creator": "Lumio",
+        "sourceReference": "",
+        "priorFamily": "Luminian Spinarak → Luminian Ariados",
+        "alternatives": [],
+        "isHold": false
+      },
+      {
+        "id": "fakemon:ariados-1:25da075190b5",
+        "identity": "ariados-1",
+        "priorName": "Luminian Ariados",
+        "display": "Ariados — custom source variant (name unverified)",
+        "flag": "artist_or_region_label",
+        "creator": "cubeR & KajiAtsui",
+        "sourceReference": "https://pokengine.org/mons/0057zpyp/Ariados",
+        "priorFamily": "Luminian Spinarak → Luminian Ariados",
+        "alternatives": [
+          {
+            "family": "Luminian Spinarak → Luminian Ariados",
+            "source": "enriched source ledger"
+          },
+          {
+            "family": "Standalone — Luminian",
+            "source": "https://pokengine.org/mons/0057zpyp/Ariados"
+          }
+        ],
+        "isHold": false
+      },
+      {
+        "id": "fakemon:buneary-1:13f7b40cc329",
+        "identity": "buneary-1",
+        "priorName": "Mikitarian Buneary",
+        "display": "Buneary — custom source variant (name unverified)",
+        "flag": "artist_or_region_label",
+        "creator": "Mikitari",
+        "sourceReference": "https://pokengine.org/mons/00oh3oh8/Buneary",
+        "priorFamily": "Mikitarian Buneary → Mikitarian Lopunny",
+        "alternatives": [
+          {
+            "family": "Mikitarian Buneary → Mikitarian Lopunny",
+            "source": "enriched source ledger"
+          },
+          {
+            "family": "Standalone — Mikitarian",
+            "source": "https://pokengine.org/mons/00oh3oh8/Buneary"
+          }
+        ],
+        "isHold": false
+      },
+      {
+        "id": "fakemon:lopunny-1:06d969db7760",
+        "identity": "lopunny-1",
+        "priorName": "Mikitarian Lopunny",
+        "display": "Lopunny — custom source variant (name unverified)",
+        "flag": "artist_or_region_label",
+        "creator": "Mikitari",
+        "sourceReference": "https://pokengine.org/mons/00xongth/Lopunny",
+        "priorFamily": "Mikitarian Buneary → Mikitarian Lopunny",
+        "alternatives": [
+          {
+            "family": "Mikitarian Buneary → Mikitarian Lopunny",
+            "source": "enriched source ledger"
+          },
+          {
+            "family": "Standalone — Mikitarian",
+            "source": "https://pokengine.org/mons/00xongth/Lopunny"
+          }
+        ],
+        "isHold": false
+      },
+      {
+        "id": "fakemon:minamai:a49139765a74",
+        "identity": "minamai",
+        "priorName": "Minamai",
+        "display": "Minamai",
+        "flag": "evolution_conflict",
+        "creator": "Rattila",
+        "sourceReference": "https://pokengine.org/mons/00rofohd/Minamai",
+        "priorFamily": "Minamai → Marelstorm",
+        "alternatives": [
+          {
+            "family": "Minamai → Marelstorm",
+            "source": "enriched source ledger"
+          },
+          {
+            "family": "Standalone — Minamai",
+            "source": "https://pokengine.org/mons/00rofohd/Minamai"
+          }
+        ],
+        "isHold": false
+      },
+      {
+        "id": "fakemon:marelstorm:701ab0bd5780",
+        "identity": "marelstorm",
+        "priorName": "Marelstorm",
+        "display": "Marelstorm",
+        "flag": "evolution_conflict",
+        "creator": "Rattila",
+        "sourceReference": "https://pokengine.org/mons/004bj9kp/Marelstorm",
+        "priorFamily": "Minamai → Marelstorm",
+        "alternatives": [
+          {
+            "family": "Minamai → Marelstorm",
+            "source": "enriched source ledger"
+          },
+          {
+            "family": "Standalone — Marelstorm",
+            "source": "https://pokengine.org/mons/004bj9kp/Marelstorm"
+          }
+        ],
+        "isHold": false
+      },
+      {
+        "id": "fakemon:falinks-1:0c48c12e936e",
+        "identity": "falinks-1",
+        "priorName": "Mikitarian Falinks",
+        "display": "Falinks — custom source variant (name unverified)",
+        "flag": "artist_or_region_label",
+        "creator": "Mikitari",
+        "sourceReference": "https://pokengine.org/mons/00dun911/Falinks",
+        "priorFamily": "Platerigus → Mikitarian → Traumatisse",
+        "alternatives": [
+          {
+            "family": "Platerigus → Mikitarian → Traumatisse",
+            "source": "enriched source ledger"
+          },
+          {
+            "family": "Standalone — Mikitarian",
+            "source": "https://pokengine.org/mons/00dun911/Falinks"
+          }
+        ],
+        "isHold": false
+      },
+      {
+        "id": "fakemon:spritzee-1:f9749b90bdb0",
+        "identity": "spritzee-1",
+        "priorName": "Mikitarian Spritzee",
+        "display": "Spritzee — custom source variant (name unverified)",
+        "flag": "artist_or_region_label",
+        "creator": "Mikitari",
+        "sourceReference": "https://pokengine.org/mons/00pm8f1c/Spritzee",
+        "priorFamily": "Platerigus → Mikitarian → Traumatisse",
+        "alternatives": [],
+        "isHold": false
+      },
+      {
+        "id": "fakemon:yamask-2:9ae97cd58dea",
+        "identity": "yamask-2",
+        "priorName": "Mikitarian Yamask",
+        "display": "Yamask — custom source variant (name unverified)",
+        "flag": "artist_or_region_label",
+        "creator": "Mikitari",
+        "sourceReference": "https://pokengine.org/mons/0063w7vk/Yamask",
+        "priorFamily": "Platerigus → Mikitarian → Traumatisse",
+        "alternatives": [],
+        "isHold": false
+      },
+      {
+        "id": "fakemon:traumatisse:c91020460452",
+        "identity": "traumatisse",
+        "priorName": "Traumatisse",
+        "display": "Traumatisse",
+        "flag": "evolution_conflict",
+        "creator": "Mikitari",
+        "sourceReference": "https://pokengine.org/mons/00y8pwe3/Traumatisse+",
+        "priorFamily": "Platerigus → Mikitarian → Traumatisse",
+        "alternatives": [
+          {
+            "family": "Platerigus → Mikitarian → Traumatisse",
+            "source": "enriched source ledger"
+          },
+          {
+            "family": "Standalone — Traumatisse",
+            "source": "https://pokengine.org/mons/00y8pwe3/Traumatisse+"
+          }
+        ],
+        "isHold": false
+      },
+      {
+        "id": "compare:cobarett:2",
+        "identity": "cobarett",
+        "priorName": "Cobarett — Design 2",
+        "display": "Cobarett — Design 2",
+        "flag": "provisional_identification",
+        "creator": "Not established",
+        "sourceReference": "",
+        "priorFamily": "Hissiorite → Cobarett → Pythonova",
+        "alternatives": [],
+        "isHold": true
+      },
+      {
+        "id": "compare:hissiorite:2",
+        "identity": "hissiorite",
+        "priorName": "Hissiorite — Design 2",
+        "display": "Hissiorite — Design 2",
+        "flag": "provisional_identification",
+        "creator": "Not established",
+        "sourceReference": "",
+        "priorFamily": "Hissiorite → Cobarett → Pythonova",
+        "alternatives": [],
+        "isHold": true
+      },
+      {
+        "id": "compare:pythonova:2",
+        "identity": "pythonova",
+        "priorName": "Pythonova — Design 2",
+        "display": "Pythonova — Design 2",
+        "flag": "provisional_identification",
+        "creator": "Not established",
+        "sourceReference": "",
+        "priorFamily": "Hissiorite → Cobarett → Pythonova",
+        "alternatives": [],
+        "isHold": true
+      },
+      {
+        "id": "compare:pythonovas:1",
+        "identity": "pythonovas",
+        "priorName": "Pythonovas — Design 1",
+        "display": "Pythonova S — possible shiny or alternate frame",
+        "flag": "possible_shiny_alias",
+        "creator": "Not established",
+        "sourceReference": "",
+        "priorFamily": "Pythonovas",
+        "alternatives": [],
+        "isHold": true
+      },
+      {
+        "id": "compare:pythonovas:2",
+        "identity": "pythonovas",
+        "priorName": "Pythonovas — Design 2",
+        "display": "Pythonova S — possible shiny or alternate frame",
+        "flag": "possible_shiny_alias",
+        "creator": "Not established",
+        "sourceReference": "",
+        "priorFamily": "Pythonovas",
+        "alternatives": [],
+        "isHold": true
+      },
+      {
+        "id": "compare:noctowl-1:1",
+        "identity": "noctowl-1",
+        "priorName": "Luminian Noctowl — Design 1",
+        "display": "Noctowl — custom source variant (name unverified)",
+        "flag": "artist_or_region_label",
+        "creator": "Atsui",
+        "sourceReference": "",
+        "priorFamily": "Noctowl 1 → Enchantowl",
+        "alternatives": [],
+        "isHold": true
+      },
+      {
+        "id": "compare:rainther:1",
+        "identity": "rainther",
+        "priorName": "Rainther — Design 1",
+        "display": "Rainther — Design 1",
+        "flag": "provisional_identification",
+        "creator": "Magiscarf",
+        "sourceReference": "",
+        "priorFamily": "Dampurr → Rainther → Delugar",
+        "alternatives": [],
+        "isHold": true
+      },
+      {
+        "id": "compare:rainther:2",
+        "identity": "rainther",
+        "priorName": "Rainther — Design 2",
+        "display": "Rainther — Design 2",
+        "flag": "provisional_identification",
+        "creator": "Magiscarf",
+        "sourceReference": "",
+        "priorFamily": "Dampurr → Rainther → Delugar",
+        "alternatives": [],
+        "isHold": true
+      }
     ]
   }
 }
