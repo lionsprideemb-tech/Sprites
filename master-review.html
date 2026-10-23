@@ -249,11 +249,11 @@ function renderDsQuality(){
   var top=document.createElement("div");top.className="family-head";var title=document.createElement("h2");title.textContent=name;top.appendChild(title);
   var sub=document.createElement("small");sub.textContent=fam.get(name).length+" source artwork set(s)";top.appendChild(sub);group.appendChild(top);
   var cards=document.createElement("div");cards.className="cards";
-  fam.get(name).forEach(function(x){
+  fam.get(name).slice().sort(function(a,b){return (Number.isInteger(a.stage)?a.stage:999)-(Number.isInteger(b.stage)?b.stage:999)||a.name.localeCompare(b.name,undefined,{numeric:true})}).forEach(function(x){
    var el=document.createElement("article");el.className="card";
    var hd=document.createElement("div");hd.className="card-head";
    var label=document.createElement("strong");label.textContent=x.name;hd.appendChild(label);
-   var meta=document.createElement("div");meta.className="muted";meta.textContent=x.tier+" · "+x.source;hd.appendChild(meta);el.appendChild(hd);
+   var meta=document.createElement("div");meta.className="muted";meta.textContent=([x.type1,x.type2].filter(Boolean).join(" / ")||"Type source pending")+" · "+x.tier+" · "+x.source;hd.appendChild(meta);el.appendChild(hd);
    var banner=document.createElement("div");banner.className="quality-flag";banner.textContent="Technical 64×64 preview only — not DS engine binary, creative approval, or game integration.";el.appendChild(banner);
    ["front","back","shiny_front","shiny_back"].forEach(function(slot){
     var row=x.slots&&x.slots[slot];if(!row)return;
@@ -422,7 +422,7 @@ Promise.all([
  if(rec&&(rec.schema!=="mercury-recovered-approved-source-pairs-v1"||!Array.isArray(rec.entries)||rec.entries.length!==74)){console.warn("Unexpected recovered-source index; original votes remain available.");rec=null}
  if(quality&&(quality.schema!=="mercury-verified-source-ds64-technical-v1"||!Array.isArray(quality.designs)||quality.designs.length!==83)){console.warn("Invalid DS technical manifest; viewing original art only.");quality=null}
  DATA=d;IMPORTED=backedUp;RECOVERY=rec;QUALITY=quality;
- $("qualityStat").textContent=QUALITY?QUALITY.designs.length+" audited source sets · not ROM-ready":"DS conversion report pending";
+ $("qualityStat").textContent=QUALITY?(Object.entries(QUALITY.counts).filter(function(p){return p[0].startsWith("PIXEL_PRESERVED")||p[0].startsWith("PALETTE_QUANTIZED")}).reduce(function(s,p){return s+p[1]},0))+" DS64 technical views · "+QUALITY.designs.length+" source sets":"DS conversion report pending";
  if(!RECOVERY)$("recStat").textContent="Recovery preview temporarily unavailable";
  var archived={};backedUp.entries.forEach(function(x){if(["keep","cut"].includes(x.decision))archived[x.id]={decision:x.decision,note:String(x.note||""),updated:String(x.updated||"")};});
  try{
