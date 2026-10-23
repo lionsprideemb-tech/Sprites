@@ -114,7 +114,7 @@ for(const e of sources.matches){
   assert.equal(bytes.subarray(0,8).toString("hex"),"89504e470d0a1a0a","PNG signature");
   assert.equal(bytes.readUInt32BE(16),asset.dimensions.width,"PNG width "+asset.path);
   assert.equal(bytes.readUInt32BE(20),asset.dimensions.height,"PNG height "+asset.path);
-  const digest=crypto.createHash("sha1").update(Buffer.from("blob "+bytes.length+"\\0")).update(bytes).digest("hex");
+  const digest=crypto.createHash("sha1").update(Buffer.from("blob "+bytes.length+"\0")).update(bytes).digest("hex");
   assert.equal(digest,asset.blobSHA,"Git blob hash "+asset.path);
  }
 }
