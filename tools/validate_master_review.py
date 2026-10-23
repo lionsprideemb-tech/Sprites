@@ -30,6 +30,7 @@ def safe_file(relative):
             "Invalid PNG header: " + relative)
     width, height = struct.unpack(">II", header[16:24])
     require(0 < width <= 65535 and 0 < height <= 65535, "Invalid PNG dimensions: " + relative)
+    require(max(width, height) <= 512 and max(width, height) / min(width, height) <= 5, "Unextracted animation strip in actionable review: " + relative)
     return (width, height)
 
 require(SNAPSHOT["schema"] == "mercury-master-review-v1", "Unexpected snapshot schema")
