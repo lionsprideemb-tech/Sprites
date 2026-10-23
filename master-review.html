@@ -122,7 +122,7 @@ function legacyBrowserSelections(){
 }
 
 function store(){
- try{localStorage.setItem(STORAGE,JSON.stringify({schema:"mercury-sprite-decisions-v1",snapshot:DATA.snapshot,state:STATE}));}
+ try{localStorage.setItem(STORAGE,JSON.stringify({schema:"mercury-sprite-decisions-v1",snapshot:DATA.snapshot,state:STATE,archived:RESTORED_UNKNOWN}));}
  catch(e){$("notice").textContent="Browser storage is unavailable. Please export JSON after making decisions; your selections may not survive a reload."}
 }
 function apply(id,choice,skipRender){
@@ -266,6 +266,14 @@ function exportPayload(){
  return {schema:"mercury-sprite-decisions-v1",exportedAt:new Date().toISOString(),snapshot:DATA.snapshot,
  datasetSourceCommit:DATA.sourceCommit,repository:DATA.reviewRepository,
  uploadedDecisionSource:"review/user-iphone-decisions-2026-10-23.json",
+ archivedOriginalVoteCount:(IMPORTED&&IMPORTED.entries||[]).filter(function(x){return ["keep","cut"].includes(x.decision)}).length,
+ technicalHoldCorrections:DATA.technicalHolds.filter(function(x){var s=STATE[x.id]||{};return s.identityVerified||s.note||s.decision}).map(function(x){var s=STATE[x.id]||{};return{
+ id:x.id,name:s.resolvedName||x.displayName||x.name,family:s.resolvedFamily||x.family,
+ type1:s.resolvedType1||x.type1,type2:s.resolvedType2||x.type2,
+ identity_verified:!!s.identityVerified,identity_verified_at:s.identityConfirmedAt||"",
+ decision:s.decision||"pending",note:s.note||"",updated:s.updated||""
+ }}),
+ recoverySummary:RECOVERY?{sourcePairs:RECOVERY.entries.length,missingShiny:RECOVERY.entries.filter(function(x){return x.missingShiny}).map(function(x){return x.reviewId})}:null,
  legacyBrowserSelections:legacyBrowserSelections(),entries:current.concat(prior)};
 }
 function escCSV(s){return '"'+String(s==null?"":s).replace(/"/g,'""')+'"'}
@@ -281,7 +289,7 @@ $("file").onchange=function(ev){
  var reader=new FileReader();
  reader.onload=function(){
   try{
-   var parsed=JSON.parse(String(reader.result)),records=parsed.entries||[];
+   var parsed=JSON.parse(String(reader.result)),records=(parsed.entries||[]).concat(parsed.technicalHoldCorrections||[]);
    if(parsed.schema!=="mercury-sprite-decisions-v1"||!Array.isArray(records))throw Error("Not a Mercury sprite decisions v1 export");
    var known=new Set(DATA.entries.concat(DATA.technicalHolds).map(function(x){return x.id})),incoming={},unknown={},conflicts=0,restored=0;
    records.forEach(function(x){
@@ -330,6 +338,7 @@ Promise.all([
  var archived={};backedUp.entries.forEach(function(x){if(["keep","cut"].includes(x.decision))archived[x.id]={decision:x.decision,note:String(x.note||""),updated:String(x.updated||"")};});
  try{
   var saved=JSON.parse(localStorage.getItem(STORAGE)||"{}");
+  if(saved.schema==="mercury-sprite-decisions-v1"&&saved.archived&&typeof saved.archived==="object")RESTORED_UNKNOWN=saved.archived;
   if(saved.schema==="mercury-sprite-decisions-v1"&&saved.state&&typeof saved.state==="object"){
    Object.entries(saved.state).forEach(function(pair){
     var v=pair[1],existing=archived[pair[0]];
