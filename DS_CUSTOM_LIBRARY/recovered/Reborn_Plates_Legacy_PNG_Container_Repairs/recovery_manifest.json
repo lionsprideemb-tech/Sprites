@@ -1,0 +1,273 @@
+{
+  "schema": "mercury-original-png-container-triage-v1",
+  "sourceLedger": "review/recovered-approved-legacy-pairs-2026-10-23.json",
+  "originalApprovedFilesNeverModified": true,
+  "artRedrawn": false,
+  "ROMIntegrationAllowed": false,
+  "records": [
+    {
+      "identity": "munna-alternate-form-1",
+      "slot": "front",
+      "source": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/munna-alternate-form-1/front.png",
+      "source_sha256": "c24dbea3b5522c3dea47848f5fdb4a9001ea29572abf1688da2474046252a4b2",
+      "original_git_blob_sha": "190fe0f0292807d98c0aaa153441c6d6ad2ef58f",
+      "source_never_overwritten": true,
+      "status": "RECOVERED_ORIGINAL_PIXEL_STREAM",
+      "repaired_source": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy_PNG_Container_Repairs/munna-alternate-form-1/front.png",
+      "repaired_sha256": "7c843ac99ecc91a5b652cec4a678821310250f36ae1bc2147c74896382977457",
+      "png_pixel_rgba_sha256": "1a102eb0728376e5d6ba019b9c5f402fa766a7c4847dd0c6f67de3c230afdcb8",
+      "original_canvas": [
+        192,
+        192
+      ],
+      "retained_chunks": [
+        {
+          "type": "IHDR",
+          "bytes": 25
+        },
+        {
+          "type": "IDAT",
+          "bytes": 1502
+        },
+        {
+          "type": "IEND",
+          "bytes": 12
+        }
+      ],
+      "stripped_ancillary": [
+        {
+          "type": "zTXt",
+          "bytes": 3454,
+          "crc_ok": true
+        },
+        {
+          "type": "iCCP",
+          "bytes": 66,
+          "crc_ok": false
+        },
+        {
+          "type": "iCCP",
+          "bytes": 2630,
+          "crc_ok": true
+        },
+        {
+          "type": "bKGD",
+          "bytes": 18,
+          "crc_ok": true
+        },
+        {
+          "type": "pHYs",
+          "bytes": 21,
+          "crc_ok": true
+        },
+        {
+          "type": "tIME",
+          "bytes": 19,
+          "crc_ok": true
+        }
+      ],
+      "unchanged_compressed_IDAT": true,
+      "warning": "Unmodified pixel stream. Ancillary profile/metadata stripped: visually inspect source colors.",
+      "gameIntegrationAllowed": false
+    },
+    {
+      "identity": "munna-alternate-form-1",
+      "slot": "back",
+      "source": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/munna-alternate-form-1/back.png",
+      "source_sha256": "592cfcc5bf3f8b462c1d4bdb0b65736ada0c2c8387ec82d30c4fa6a297ddd9d6",
+      "original_git_blob_sha": "2f58407890003b2f1a1c900a42bdc4e40bc2462b",
+      "source_never_overwritten": true,
+      "status": "RECOVERED_ORIGINAL_PIXEL_STREAM",
+      "repaired_source": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy_PNG_Container_Repairs/munna-alternate-form-1/back.png",
+      "repaired_sha256": "7eb842c6f8bd90300f6055935836f403cc6426f4802beb851455f5fd100ecb93",
+      "png_pixel_rgba_sha256": "6a51567c3c66f7219940b4acb1dfffd544e219aade4786832bf46026e0cd993d",
+      "original_canvas": [
+        192,
+        192
+      ],
+      "retained_chunks": [
+        {
+          "type": "IHDR",
+          "bytes": 25
+        },
+        {
+          "type": "IDAT",
+          "bytes": 1293
+        },
+        {
+          "type": "IEND",
+          "bytes": 12
+        }
+      ],
+      "stripped_ancillary": [
+        {
+          "type": "zTXt",
+          "bytes": 3207,
+          "crc_ok": true
+        },
+        {
+          "type": "iCCP",
+          "bytes": 67,
+          "crc_ok": false
+        },
+        {
+          "type": "iCCP",
+          "bytes": 2630,
+          "crc_ok": true
+        },
+        {
+          "type": "bKGD",
+          "bytes": 18,
+          "crc_ok": true
+        },
+        {
+          "type": "pHYs",
+          "bytes": 21,
+          "crc_ok": true
+        },
+        {
+          "type": "tIME",
+          "bytes": 19,
+          "crc_ok": true
+        }
+      ],
+      "unchanged_compressed_IDAT": true,
+      "warning": "Unmodified pixel stream. Ancillary profile/metadata stripped: visually inspect source colors.",
+      "gameIntegrationAllowed": false
+    },
+    {
+      "identity": "musharna-alternate-form-1",
+      "slot": "front",
+      "source": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/musharna-alternate-form-1/front.png",
+      "source_sha256": "a2d73caca1303738d235d91d7abe505ce0e5890c7b01b657b18afa643526e0b2",
+      "original_git_blob_sha": "f6155875741848fd47313a5d53f58de8775345df",
+      "source_never_overwritten": true,
+      "status": "RECOVERED_ORIGINAL_PIXEL_STREAM",
+      "repaired_source": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy_PNG_Container_Repairs/musharna-alternate-form-1/front.png",
+      "repaired_sha256": "1fcac4f7ba139baad100ee92b3754c850992548be87ea571ae4a61fd3fc3da59",
+      "png_pixel_rgba_sha256": "84eff5563d66bc2cbf4ff6e4a6a105a6f565f5ef5cb06eb50a333840d86de47c",
+      "original_canvas": [
+        192,
+        192
+      ],
+      "retained_chunks": [
+        {
+          "type": "IHDR",
+          "bytes": 25
+        },
+        {
+          "type": "IDAT",
+          "bytes": 2106
+        },
+        {
+          "type": "IEND",
+          "bytes": 12
+        }
+      ],
+      "stripped_ancillary": [
+        {
+          "type": "zTXt",
+          "bytes": 8510,
+          "crc_ok": true
+        },
+        {
+          "type": "iCCP",
+          "bytes": 1402,
+          "crc_ok": false
+        },
+        {
+          "type": "iCCP",
+          "bytes": 2630,
+          "crc_ok": true
+        },
+        {
+          "type": "bKGD",
+          "bytes": 18,
+          "crc_ok": true
+        },
+        {
+          "type": "pHYs",
+          "bytes": 21,
+          "crc_ok": true
+        },
+        {
+          "type": "tIME",
+          "bytes": 19,
+          "crc_ok": true
+        }
+      ],
+      "unchanged_compressed_IDAT": true,
+      "warning": "Unmodified pixel stream. Ancillary profile/metadata stripped: visually inspect source colors.",
+      "gameIntegrationAllowed": false
+    },
+    {
+      "identity": "musharna-alternate-form-1",
+      "slot": "back",
+      "source": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/musharna-alternate-form-1/back.png",
+      "source_sha256": "65c933cfc7d8452e6be4de0886dc57eef506b4cc1f124189c2afb967492aed07",
+      "original_git_blob_sha": "455c5aa8bbc735a1a008b0393155761d3c2571bd",
+      "source_never_overwritten": true,
+      "status": "RECOVERED_ORIGINAL_PIXEL_STREAM",
+      "repaired_source": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy_PNG_Container_Repairs/musharna-alternate-form-1/back.png",
+      "repaired_sha256": "bd0f98b14a26b31321f4bb0b6f88c90762160156bc5eff8a8869d6f8c75826c2",
+      "png_pixel_rgba_sha256": "d38c7b07b11591a4936e08c0ead9c80c54dd4d1b12c5d1b171bcd8e290ac3f64",
+      "original_canvas": [
+        192,
+        192
+      ],
+      "retained_chunks": [
+        {
+          "type": "IHDR",
+          "bytes": 25
+        },
+        {
+          "type": "IDAT",
+          "bytes": 2153
+        },
+        {
+          "type": "IEND",
+          "bytes": 12
+        }
+      ],
+      "stripped_ancillary": [
+        {
+          "type": "zTXt",
+          "bytes": 8012,
+          "crc_ok": true
+        },
+        {
+          "type": "iCCP",
+          "bytes": 1410,
+          "crc_ok": false
+        },
+        {
+          "type": "iCCP",
+          "bytes": 2630,
+          "crc_ok": true
+        },
+        {
+          "type": "bKGD",
+          "bytes": 18,
+          "crc_ok": true
+        },
+        {
+          "type": "pHYs",
+          "bytes": 21,
+          "crc_ok": true
+        },
+        {
+          "type": "tIME",
+          "bytes": 19,
+          "crc_ok": true
+        }
+      ],
+      "unchanged_compressed_IDAT": true,
+      "warning": "Unmodified pixel stream. Ancillary profile/metadata stripped: visually inspect source colors.",
+      "gameIntegrationAllowed": false
+    }
+  ],
+  "counts": {
+    "recovered": 4,
+    "unresolved": 0
+  }
+}
