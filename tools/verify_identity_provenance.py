@@ -29,20 +29,34 @@ verify(votes["schema"] == "mercury-user-iphone-decisions-v1", "user iPhone expor
 verify(len(votes["entries"]) == 166, "all 166 originally submitted iPhone votes preserved")
 verify(sum(x["decision"] == "keep" for x in votes["entries"]) == 154, "154 user KEEP choices preserved")
 verify(sum(x["decision"] == "cut" for x in votes["entries"]) == 12, "12 user CUT choices preserved")
-verify(len(entries) == 156, "154 originally reviewed cards plus 2 verified Wailmer/Wailord source previews")
-verify(len(holds) == 16, "16 unresolved technical hold cards retained after restoring Wailmer/Wailord")
+verify(len(entries) == 158, "154 originally reviewed cards, 2 Wailmer/Wailord and 2 newly recovered Rainther source comparisons")
+verify(len(holds) == 14, "14 technical cards remain after recovering two Rainther front/back pairs")
 verify(len(ids) == len(all_items), "each active card has a stable unique ID")
 original_voted_ids = {x["id"] for x in votes["entries"]}
 actionable_ids = {x["id"] for x in entries}
 new_ids = actionable_ids - original_voted_ids
-verify(new_ids == {"reconcile:wailmer-alternate-form-1", "reconcile:wailord-alternate-form-1"},
-       "only the two previously unreviewed Wailmer-family designs were newly exposed")
+authorized_new = {"reconcile:wailmer-alternate-form-1", "reconcile:wailord-alternate-form-1",
+                  "compare:rainther:1", "compare:rainther:2"}
+verify(new_ids == authorized_new, "newly reviewable choices limited to Wailmer/Wailord and recovered Rainther")
+pairs = json.loads((BASE / "review/verified-exception-source-pairs-2026-10-23.json").read_text("utf-8"))
+pair_by_id = {x["id"]: x for x in pairs["matches"]}
+verify({"compare:rainther:1", "compare:rainther:2"} <= set(pair_by_id),
+       "both Rainther front/back pairs are documented in source integrity ledger")
 for x in entries:
     if x["id"] in new_ids:
-        verify(x.get("previewOnly") is True and "Reborn_Plates_Legacy" in x["front"] and x["back"],
-               "Wailmer source pair is present and explicitly marked unconverted: " + x["id"])
-verify(identity["flagged"] == 25, "25 source-label/family/identity exceptions documented")
-verify(identity["flaggedReviewEntries"] == 17 and identity["flaggedTechnicalHolds"] == 8, "identity exceptions scoped correctly")
+        if x["id"].startswith("reconcile:wail"):
+            verify(x.get("previewOnly") is True and "Reborn_Plates_Legacy" in x["front"] and x["back"],
+                   "Wailmer source pair is present and explicitly marked unconverted: " + x["id"])
+        else:
+            evidence = pair_by_id[x["id"]]
+            verify(x.get("previewOnly") is True and x.get("dsReady") is False and
+                   x.get("type1") == "Water" and x["front"] == evidence["front"]["path"] and
+                   x["back"] == evidence["back"]["path"],
+                   "Rainther exact source art is paired but not DS-certified: " + x["id"])
+verify(identity["flagged"] == 25, "original 25 source-label/family/identity exceptions retained in historical audit")
+verify(sum(bool(x.get("identityFlag")) for x in all_items) == 5,
+       "exactly five direct evolution-link conflicts remain unresolved in current master reviewer")
+verify(identity["flaggedReviewEntries"] == 17 and identity["flaggedTechnicalHolds"] == 8, "original artist-name exception counts retained for audit history")
 verify(all(x.get("originalSourceName") and "creator" in x and "identityFlag" in x for x in all_items), "original labels and creator fields preserved")
 verify(all(x.get("displayName") for x in all_items), "every card retains a safe visible name")
 verify(all(x.get("sourceReference","")=="" or x["sourceReference"].startswith("https://") for x in all_items), "external source references use HTTPS")
