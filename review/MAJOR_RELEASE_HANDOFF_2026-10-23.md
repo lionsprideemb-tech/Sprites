@@ -24,3 +24,20 @@ Date: 2026-10-23
 1. Original matching shiny-source recovery for the exact five outstanding cases, then verifiable DS conversion/format and palette checks across all 74 pairs.
 2. Resolve evidence-backed identity and evolution-family disputes without turning source labels into new species.
 3. Validate complete image load on GitHub Pages in iPhone Safari, run and review CI, confirm exported user decisions and only then prepare a separate explicit ROM integration gate.
+
+
+## Follow-up: source family and artist-name repair (October 23)
+
+**Committed correction:** [source reconciliation](identity-family-reconciliation-2026-10-23.json), [latest unresolved exception list](identity-family-current-status-2026-10-23.json).
+
+- 27 existing review metadata rows changed in-place, **zero review IDs or uploaded vote records changed**.
+- 12 earlier identity-warning rows were resolved against exact Pokéngine/Tuxepedia pages. Current reviewer warnings: **13** (5 unverified evolution edges, 5 pending artwork/identity pairings, 2 possible shiny aliases, and 1 ambiguous regional source-art match).
+- Fixed the incorrect mixed family "Platerigus → Mikitarian → Traumatisse" by separating Yamask→Platerigus, Spritzee→Traumatisse, and standalone Falinks, while showing Buneary→Lopunny and Spinarak→Ariados with actual Pokémon names rather than regional/artist labels as species.
+- Fixed bee group to **Furrva→Kocomb (normal or militant)→Granebee or Beelitant**. An explicit Furrva **reference-only** warning now appears in the reviewer; the verified source page identifies it, but no actionable local source sprite record has been matched. Simple candidate paths `Mikitari/Fakemon Pack/Front|Back/FURRVA.png` are not present in the GitHub repo; do not assume other packs have none.
+- Source-verified Water typing was added to both held Rainther artwork choices. Pythonova S artwork stays on technical hold in the Hissiorite→Cobarett→Pythonova family rather than being treated as an independent species.
+- Proposed Hayog/Hogouse/Hogriks and Minamai/Marelstorm relationships remain **noncanonical review-group references**, lacking complete primary-source evolution graph evidence. No unapproved artwork has been integrated into the game.
+- The master reviewer now displays per-family source explanations, branch notes, region/creator separation, original source links, and the missing Furrva reference.
+
+**Verification performed:** The committed integrity-test source was run against the latest live-fetched GitHub files using Node-compatible adapters, passing source count, family, identity, type and decision checks. A separate browser-script run in a simulated DOM loaded the saved dataset and 166 original choices, showed **154 of 156 active cards decided**, opened the corrected Spritzee and Beelitant pages, rendered the missing Furrva warning, and verified the recovered-source view disables approvals; zero simulated runtime errors. This is **not** a native Safari or GitHub Actions pass.
+
+The Mercury-redux-dex and platinum-modern-ds repositories received **handoff documentation only**, preserving their gameplay, Dex species IDs and ROM builds. Future work should use the 13-record current exception list rather than reopening the old 19-source/25-warning snapshot.
