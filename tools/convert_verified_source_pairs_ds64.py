@@ -103,12 +103,23 @@ def build_one(source: Path, expected: dict, output: Path) -> dict:
         raise ValueError("Source SHA-1 blob changed: " + source.as_posix())
     if expected.get("expected_sha256") and sha256(raw) != expected["expected_sha256"]:
         raise ValueError("Source SHA-256 changed: " + source.as_posix())
-    with Image.open(source) as image:
-        image.load()
-        if image.format != "PNG" or getattr(image, "n_frames", 1) != 1:
-            raise ValueError("Not a standalone original PNG " + str(source))
-        original_canvas = list(image.size)
-        rgba = image.convert("RGBA")
+    try:
+        with Image.open(source) as image:
+            image.load()
+            if image.format != "PNG" or getattr(image, "n_frames", 1) != 1:
+                raise ValueError("Not a standalone original PNG")
+            original_canvas = list(image.size)
+            rgba = image.convert("RGBA")
+    except (OSError, ValueError) as err:
+        # A PNG magic header is not proof the actual pixel stream can be decoded.
+        # Keep the original source, explicitly quarantine instead of forging art.
+        return {"original": str(source.relative_to(ROOT)), "sha256": sha256(raw),
+                "original_canvas": None, "bounds": None, "original_opaque_colors": None,
+                "original_alpha_values": None, "output": None, "output_sha256": None,
+                "status": "BLOCKED_UNDECODABLE_OR_UNSUPPORTED_PNG",
+                "failure_type": type(err).__name__,
+                "palette_changed": False, "pixel_art_scaled": False,
+                "gameIntegrationAllowed": False}
     alphas = set(rgba.getchannel("A").getdata())
     bounds = rgba.getchannel("A").getbbox()
     opaque = {p[:3] for p in rgba.getdata() if p[3] == 255}
