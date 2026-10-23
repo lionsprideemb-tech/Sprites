@@ -4,10 +4,12 @@ on:
   push:
     branches: [main]
     paths:
-      - 'master-review.html'\n      - 'approved-legacy-recovery.html'
+      - 'master-review.html'
+      - 'approved-legacy-recovery.html'
       - 'master-review-data.json'
       - 'audit/2026-10-23/**'
-      - 'tools/validate_master_review.py'\n      - 'tools/verify_recovered_approved_legacy.py'
+      - 'tools/validate_master_review.py'
+      - 'tools/verify_recovered_approved_legacy.py'
       - 'tools/verify_identity_provenance.py'
       - 'mercury-master-review.html'
       - 'review/**'
@@ -34,7 +36,9 @@ jobs:
         uses: actions/checkout@v4
       - name: Validate review, ledger and PNG files
         run: python3 tools/validate_master_review.py
-      - name: Verify recovered approved source pairs and missing-shiny disclosure\n        run: python3 tools/verify_recovered_approved_legacy.py\n      - name: Check artist identities, display provenance and preserved iPhone votes
+      - name: Verify recovered approved source pairs and missing-shiny disclosure
+        run: python3 tools/verify_recovered_approved_legacy.py
+      - name: Check artist identities, display provenance and preserved iPhone votes
         run: python3 tools/verify_identity_provenance.py
       - name: Verify supplemental reviewer links to one canonical page
         run: |
