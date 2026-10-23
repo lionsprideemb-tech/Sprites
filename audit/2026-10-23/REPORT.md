@@ -19,8 +19,8 @@
 | Earlier verified Fakemon pool entries | 158 |
 | Genuine competing-art identity groups | 15 |
 | Competing design options | 30 |
-| Actionable sprite-art choices now in master reviewer | 164 |
-| Items held for metadata/sprite/identity repair | 35 |
+| Actionable sprite-art choices now in master reviewer | 154 |
+| Items held for metadata/sprite/identity repair | 18 |
 | Historical approved rows lacking a linked front/back path | 107 |
 | Historical duplicate identity keys | 5 |
 | Duplicate identities containing conflicting decisions | 2 |
@@ -37,7 +37,7 @@ Arcanine Mega (R0077/R0078), Reuniclus Mega (R0737/R0738), Hydreigon Mega (R0786
 
 ### Image verification
 
-The 164 actionable review entries each declare a front and a back path. Their **328 referenced PNG paths** were checked against the GitHub Git tree of each source pack/converted sprite folder on 2026-10-23; all 328 were present. A separate standard-library GitHub Actions validation also checks PNG signatures/dimensions, identity exclusions, metadata completeness, and export support. Git tree presence alone is not a full DS integration-quality guarantee.
+The 154 actionable review entries each declare a front and a back path. Their **308 referenced PNG paths** were checked against the GitHub Git tree of each source pack/converted sprite folder on 2026-10-23; all 308 were present. A separate standard-library GitHub Actions validation also checks PNG signatures/dimensions, identity exclusions, metadata completeness, and export support. Git tree presence alone is not a full DS integration-quality guarantee.
 
 ### Data contracts
 
@@ -59,4 +59,12 @@ This is an **artwork selection** system. Pokémon forms remain unimplemented unt
 
 ### Multi-frame image exclusions
 
-The image-dimension validator caught two animated-strip records: Criminalis (5400×100 front, 6400×100 back) and a Mega Flygon option (1920×96 each). These PNGs are preserved without modification but moved from actionable review into technical holds. Their matching standalone frame must be extracted and validated before the reviewer can display them as sprites. Counts after this correction: **164 actionable, 35 technical holds**.
+The image-dimension validator caught two animated-strip records: Criminalis (5400×100 front, 6400×100 back) and a Mega Flygon option (1920×96 each). These PNGs are preserved without modification but moved from actionable review into technical holds. Their matching standalone frame must be extracted and validated before the reviewer can display them as sprites. Counts after this correction: **164 actionable, 35 technical holds at that intermediate checkpoint**; the subsequent recovered user-export reconciliation lowered the live totals further..
+
+### Original user-export recovery (later than GBA audit)
+
+Recovered decision evidence was added to `review/recovered-user-export-decisions-2026-10-23.json`: 372 DS-art decision rows, 262 polished first-pass rows and 19 polished follow-up rows. This changes our interpretation of the older import ledger. Of the 246 polished imports that matched an older GBA CUT, **eight were explicitly marked KEEP in the later polished export** and are now protected as approved; the other 238 remained CUT. The 16 previously unknown imported identities also resolve as 15 DELETE and one KEEP (Skarmory Mega, held until verified type metadata). No previously rejected artwork has been deleted from the repo.
+
+Ten remaining master-review design-option rows matched the user's exact source+front-path choices in the DS export (including Absol Z, Baxcalibur, Lucario Z, Golisopod and Garchomp Z); these were moved out of the undecided queue into preserved history, not re-reviewed. Seventeen technical holds were already explicitly rejected by a later exported choice and have been marked resolved; their original evidence remains linked in the repair queue.
+
+**Current master reviewer after exported-user-decision reconciliation: 154 actionable designs, 18 technical holds.** This is a visual-artwork review count, not a Pokédex species count. The eight restored KEEP identities remain safe for later front/back family verification. Historical raw files were never overwritten.
