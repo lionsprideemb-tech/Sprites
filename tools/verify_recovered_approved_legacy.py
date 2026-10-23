@@ -39,7 +39,7 @@ for entry in DATA["entries"]:
         assert path.is_relative_to(ROOT)
         assert path.is_file(), str(path)
         assert path.stat().st_size == info["bytes"] and info["bytes"] >= 24, str(path)
-        assert path.open("rb").read(8) == b"\\x89PNG\\r\\n\\x1a\\n", str(path)
+        assert path.open("rb").read(8) == b"\x89PNG\r\n\x1a\n", str(path)
         file_count += 1
     assert bool(entry["shinyFront"]) == bool(entry["shinyBack"])
     assert entry["missingShiny"] == (entry["shinyFront"] is None)
