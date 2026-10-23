@@ -122,7 +122,7 @@ for(const [side,data] of Object.entries(furrva.assets)){
  assert.equal(crypto.createHash("sha256").update(webp).digest("hex"),data.raw_sha256);
 }
 
-assert.ok(html.includes("BACK (external reference)"));
+assert.ok(html.includes("BACK (original source)") && html.includes("frontLocal||x.frontReference"));
 assert.ok(!main.entries.concat(main.technicalHolds).some(x=>x.id.toLowerCase().includes("furrva")));
 for(const e of sources.matches){
  const row=one(e.id);
