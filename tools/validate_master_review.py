@@ -41,7 +41,9 @@ technical = SNAPSHOT["technicalHolds"]
 history = HISTORY["entries"]
 ids = [x["id"] for x in entries]
 require(len(ids) == len(set(ids)), "Duplicate actionable review IDs")
-require(len(history) == len({x["id"] for x in history}), "Duplicate historical identity IDs")
+require(len(history) == len({(x["reviewId"], x["id"]) for x in history}), "Duplicate historical review ID pairs")
+require(len(HISTORY["identityCollisions"]) == SNAPSHOT["counts"]["historicalIdentityCollisions"], "Untracked historical ID collisions")
+require(sum(1 for x in HISTORY["identityCollisions"] if x["conflictingDecision"]) == SNAPSHOT["counts"]["contradictoryIdentityCollisions"], "Untracked contradictory decisions")
 require(len(history) == SNAPSHOT["counts"]["historical"], "Historical count mismatch")
 require(len(entries) == SNAPSHOT["counts"]["actionable"], "Actionable count mismatch")
 require(len(technical) == SNAPSHOT["counts"]["blocked"], "Hold count mismatch")
