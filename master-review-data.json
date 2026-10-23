@@ -180,7 +180,7 @@
       "identity": "beelitant",
       "name": "Beelitant",
       "base": "beelitant",
-      "family": "Beelitant → Kocomb → Granebee",
+      "family": "Furrva → Kocomb (normal / militant) → Granebee / Beelitant",
       "source": "Mikitari",
       "category": "fakemon",
       "type1": "Bug",
@@ -195,17 +195,17 @@
       "note": "",
       "evidence": "VERIFIED_SOURCE_METADATA;EXTERNAL_SOURCE_METADATA",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 0,
+      "evolutionStageOrder": 2,
       "originalSourceName": "Beelitant",
       "originalSourceFamily": "Beelitant → Kocomb → Granebee",
       "creator": "Mikitari",
       "creatorEvidence": "source linked",
       "sourceReference": "https://pokengine.org/mons/00wiz4bc/Beelitant",
-      "nameConfidence": "linked source reference",
-      "displayName": "Beelitant",
-      "familyConfidence": "disputed between source records",
-      "identityFlag": "evolution_conflict",
-      "identityNote": "Evolution relationships disagree between two metadata records. No new evolution link should be assigned automatically.",
+      "nameConfidence": "source_verified",
+      "displayName": "Beelitant — militant branch",
+      "familyConfidence": "source_verified",
+      "identityFlag": "",
+      "identityNote": "Pokéngine species/form identity checked against the exact linked source. Original creator and source label retained separately.",
       "familyAlternatives": [
         {
           "family": "Beelitant → Kocomb → Granebee",
@@ -215,14 +215,17 @@
           "family": "Beelitant → Kocomb → Furrva → Granebee",
           "source": "https://pokengine.org/mons/00wiz4bc/Beelitant"
         }
-      ]
+      ],
+      "familyBranch": "Furrva → Kocomb (militant) → Beelitant",
+      "familyEvidenceUrl": "https://pokengine.org/mons/00wiz4bc/Beelitant",
+      "sourceIdentityStatus": "verified_source_species_or_form"
     },
     {
       "id": "fakemon:kocomb-1:9e0c820d55c7",
       "identity": "kocomb-1",
       "name": "Kocomb",
       "base": "kocomb-1",
-      "family": "Beelitant → Kocomb → Granebee",
+      "family": "Furrva → Kocomb (normal / militant) → Granebee / Beelitant",
       "source": "Mikitari",
       "category": "fakemon",
       "type1": "Bug",
@@ -243,11 +246,11 @@
       "creator": "Mikitari",
       "creatorEvidence": "source linked",
       "sourceReference": "https://pokengine.org/mons/001ddhus/Kocomb",
-      "nameConfidence": "linked source reference",
-      "displayName": "Kocomb",
-      "familyConfidence": "disputed between source records",
-      "identityFlag": "evolution_conflict",
-      "identityNote": "Evolution relationships disagree between two metadata records. No new evolution link should be assigned automatically.",
+      "nameConfidence": "source_verified",
+      "displayName": "Kocomb — militant form",
+      "familyConfidence": "source_verified",
+      "identityFlag": "",
+      "identityNote": "Pokéngine species/form identity checked against the exact linked source. Original creator and source label retained separately.",
       "familyAlternatives": [
         {
           "family": "Beelitant → Kocomb → Granebee",
@@ -257,14 +260,17 @@
           "family": "Beelitant → Kocomb → Furrva → Granebee",
           "source": "https://pokengine.org/mons/001ddhus/Kocomb"
         }
-      ]
+      ],
+      "familyBranch": "Furrva → Kocomb (militant) → Beelitant",
+      "familyEvidenceUrl": "https://pokengine.org/mons/001ddhus/Kocomb",
+      "sourceIdentityStatus": "verified_source_species_or_form"
     },
     {
       "id": "fakemon:kocomb:5f5be9a1eeeb",
       "identity": "kocomb",
       "name": "Kocomb",
       "base": "kocomb",
-      "family": "Beelitant → Kocomb → Granebee",
+      "family": "Furrva → Kocomb (normal / militant) → Granebee / Beelitant",
       "source": "Mikitari",
       "category": "fakemon",
       "type1": "Bug",
@@ -285,11 +291,11 @@
       "creator": "Mikitari",
       "creatorEvidence": "source linked",
       "sourceReference": "https://pokengine.org/mons/004m6vrv/Kocomb",
-      "nameConfidence": "linked source reference",
-      "displayName": "Kocomb",
-      "familyConfidence": "disputed between source records",
-      "identityFlag": "evolution_conflict",
-      "identityNote": "Evolution relationships disagree between two metadata records. No new evolution link should be assigned automatically.",
+      "nameConfidence": "source_verified",
+      "displayName": "Kocomb — normal form",
+      "familyConfidence": "source_verified",
+      "identityFlag": "",
+      "identityNote": "Pokéngine species/form identity checked against the exact linked source. Original creator and source label retained separately.",
       "familyAlternatives": [
         {
           "family": "Beelitant → Kocomb → Granebee",
@@ -299,14 +305,17 @@
           "family": "Beelitant → Kocomb → Furrva → Granebee",
           "source": "https://pokengine.org/mons/004m6vrv/Kocomb"
         }
-      ]
+      ],
+      "familyBranch": "Furrva → Kocomb (normal) → Granebee",
+      "familyEvidenceUrl": "https://pokengine.org/mons/004m6vrv/Kocomb",
+      "sourceIdentityStatus": "verified_source_species_or_form"
     },
     {
       "id": "fakemon:granebee:65fc8136a344",
       "identity": "granebee",
       "name": "Granebee",
       "base": "granebee",
-      "family": "Beelitant → Kocomb → Granebee",
+      "family": "Furrva → Kocomb (normal / militant) → Granebee / Beelitant",
       "source": "Mikitari",
       "category": "fakemon",
       "type1": "Bug",
@@ -327,11 +336,11 @@
       "creator": "Mikitari",
       "creatorEvidence": "source linked",
       "sourceReference": "https://pokengine.org/mons/00eqh4t5/Granebee",
-      "nameConfidence": "linked source reference",
-      "displayName": "Granebee",
-      "familyConfidence": "disputed between source records",
-      "identityFlag": "evolution_conflict",
-      "identityNote": "Evolution relationships disagree between two metadata records. No new evolution link should be assigned automatically.",
+      "nameConfidence": "source_verified",
+      "displayName": "Granebee — normal branch",
+      "familyConfidence": "source_verified",
+      "identityFlag": "",
+      "identityNote": "Pokéngine species/form identity checked against the exact linked source. Original creator and source label retained separately.",
       "familyAlternatives": [
         {
           "family": "Beelitant → Kocomb → Granebee",
@@ -341,7 +350,10 @@
           "family": "Beelitant → Kocomb → Furrva → Granebee",
           "source": "https://pokengine.org/mons/00eqh4t5/Granebee"
         }
-      ]
+      ],
+      "familyBranch": "Furrva → Kocomb (normal) → Granebee",
+      "familyEvidenceUrl": "https://pokengine.org/mons/00eqh4t5/Granebee",
+      "sourceIdentityStatus": "verified_source_species_or_form"
     },
     {
       "id": "fakemon:belstatue-2-moon-shard:ca0fced633b1",
@@ -1820,7 +1832,7 @@
       "identity": "hayog",
       "name": "Hayog",
       "base": "hayog",
-      "family": "Hayog → Hogouse → Hogriks",
+      "family": "Hayog / Hogouse / Hogriks — linkage pending confirmation",
       "source": "Festival_Scotsman",
       "category": "fakemon",
       "type1": "Ground",
@@ -1843,9 +1855,9 @@
       "sourceReference": "https://pokengine.org/mons/00jtq3x2/Hayog",
       "nameConfidence": "linked source reference",
       "displayName": "Hayog",
-      "familyConfidence": "disputed between source records",
+      "familyConfidence": "source_names_verified; evolution_edges_unconfirmed",
       "identityFlag": "evolution_conflict",
-      "identityNote": "Evolution relationships disagree between two metadata records. No new evolution link should be assigned automatically.",
+      "identityNote": "All three names and types match source entries, but the Pokéngine records do not explicitly document the entire three-stage evolution graph. Original assumed sequence retained as a hypothesis only.",
       "familyAlternatives": [
         {
           "family": "Hayog → Hogouse → Hogriks",
@@ -1862,7 +1874,7 @@
       "identity": "hogouse",
       "name": "Hogouse",
       "base": "hogouse",
-      "family": "Hayog → Hogouse → Hogriks",
+      "family": "Hayog / Hogouse / Hogriks — linkage pending confirmation",
       "source": "Festival_Scotsman",
       "category": "fakemon",
       "type1": "Ground",
@@ -1885,9 +1897,9 @@
       "sourceReference": "https://pokengine.org/mons/00bspmsd/Hogouse",
       "nameConfidence": "linked source reference",
       "displayName": "Hogouse",
-      "familyConfidence": "disputed between source records",
+      "familyConfidence": "source_names_verified; evolution_edges_unconfirmed",
       "identityFlag": "evolution_conflict",
-      "identityNote": "Evolution relationships disagree between two metadata records. No new evolution link should be assigned automatically.",
+      "identityNote": "All three names and types match source entries, but the Pokéngine records do not explicitly document the entire three-stage evolution graph. Original assumed sequence retained as a hypothesis only.",
       "familyAlternatives": [
         {
           "family": "Hayog → Hogouse → Hogriks",
@@ -1904,7 +1916,7 @@
       "identity": "hogriks",
       "name": "Hogriks",
       "base": "hogriks",
-      "family": "Hayog → Hogouse → Hogriks",
+      "family": "Hayog / Hogouse / Hogriks — linkage pending confirmation",
       "source": "Festival_Scotsman",
       "category": "fakemon",
       "type1": "Ground",
@@ -1927,9 +1939,9 @@
       "sourceReference": "https://pokengine.org/mons/00jegdpk/Hogriks",
       "nameConfidence": "linked source reference",
       "displayName": "Hogriks",
-      "familyConfidence": "disputed between source records",
+      "familyConfidence": "source_names_verified; evolution_edges_unconfirmed",
       "identityFlag": "evolution_conflict",
-      "identityNote": "Evolution relationships disagree between two metadata records. No new evolution link should be assigned automatically.",
+      "identityNote": "All three names and types match source entries, but the Pokéngine records do not explicitly document the entire three-stage evolution graph. Original assumed sequence retained as a hypothesis only.",
       "familyAlternatives": [
         {
           "family": "Hayog → Hogouse → Hogriks",
@@ -2552,9 +2564,9 @@
     {
       "id": "fakemon:spinarak-1:d9f9617a90e2",
       "identity": "spinarak-1",
-      "name": "Luminian Spinarak",
+      "name": "Spinarak",
       "base": "spinarak-1",
-      "family": "Luminian Spinarak → Luminian Ariados",
+      "family": "Spinarak → Ariados (Lumio regional forms)",
       "source": "Festival_Lumio",
       "category": "fakemon",
       "type1": "Bug",
@@ -2574,20 +2586,24 @@
       "originalSourceFamily": "Luminian Spinarak → Luminian Ariados",
       "creator": "Lumio",
       "creatorEvidence": "source pack only; individual author unverified",
-      "sourceReference": "",
-      "nameConfidence": "SOURCE_METADATA;SOURCE_EVOLUTION_GRAPH",
-      "displayName": "Spinarak — custom source variant (name unverified)",
-      "familyConfidence": "unverified source-label grouping",
-      "identityFlag": "artist_or_region_label",
-      "identityNote": "\"Luminian Spinarak\" appears as a source or creator-derived label, not enough proof of a standalone Pokémon. Original label and your vote are preserved.",
-      "possibleBaseSpecies": "Spinarak"
+      "sourceReference": "https://pokengine.org/mons/00170bva/Spinarak",
+      "nameConfidence": "source_verified",
+      "displayName": "Spinarak — Lumio regional form",
+      "familyConfidence": "source_verified",
+      "identityFlag": "",
+      "identityNote": "Pokéngine species/form identity checked against the exact linked source. Original creator and source label retained separately.",
+      "possibleBaseSpecies": "Spinarak",
+      "sourceRegionLabel": "Lumio",
+      "canonicalSpeciesName": "Spinarak",
+      "familyEvidenceUrl": "https://pokengine.org/mons/00170bva/Spinarak",
+      "sourceIdentityStatus": "verified_source_species_or_form"
     },
     {
       "id": "fakemon:ariados-1:25da075190b5",
       "identity": "ariados-1",
-      "name": "Luminian Ariados",
+      "name": "Ariados",
       "base": "ariados-1",
-      "family": "Luminian Spinarak → Luminian Ariados",
+      "family": "Spinarak → Ariados (Lumio regional forms)",
       "source": "Festival_Lumio",
       "category": "fakemon",
       "type1": "Bug",
@@ -2608,11 +2624,11 @@
       "creator": "cubeR & KajiAtsui",
       "creatorEvidence": "source linked",
       "sourceReference": "https://pokengine.org/mons/0057zpyp/Ariados",
-      "nameConfidence": "linked source reference",
-      "displayName": "Ariados — custom source variant (name unverified)",
-      "familyConfidence": "disputed between source records",
-      "identityFlag": "artist_or_region_label",
-      "identityNote": "\"Luminian\" appears as a source or creator-derived label, not enough proof of a standalone Pokémon. Original label and your vote are preserved. Evolution relationships disagree between two metadata records. No new evolution link should be assigned automatically.",
+      "nameConfidence": "source_verified",
+      "displayName": "Ariados — Lumio regional form",
+      "familyConfidence": "source_verified",
+      "identityFlag": "",
+      "identityNote": "Pokéngine species/form identity checked against the exact linked source. Original creator and source label retained separately.",
       "possibleBaseSpecies": "Ariados",
       "familyAlternatives": [
         {
@@ -2623,7 +2639,11 @@
           "family": "Standalone — Luminian",
           "source": "https://pokengine.org/mons/0057zpyp/Ariados"
         }
-      ]
+      ],
+      "sourceRegionLabel": "Lumio",
+      "canonicalSpeciesName": "Ariados",
+      "familyEvidenceUrl": "https://pokengine.org/mons/0057zpyp/Ariados",
+      "sourceIdentityStatus": "verified_source_species_or_form"
     },
     {
       "id": "fakemon:mantoon:a22b10f0a26a",
@@ -2756,9 +2776,9 @@
     {
       "id": "fakemon:buneary-1:13f7b40cc329",
       "identity": "buneary-1",
-      "name": "Mikitarian Buneary",
+      "name": "Buneary",
       "base": "buneary-1",
-      "family": "Mikitarian Buneary → Mikitarian Lopunny",
+      "family": "Buneary → Lopunny (Mikitari regional forms)",
       "source": "Mikitari",
       "category": "fakemon",
       "type1": "Dark",
@@ -2779,11 +2799,11 @@
       "creator": "Mikitari",
       "creatorEvidence": "source linked",
       "sourceReference": "https://pokengine.org/mons/00oh3oh8/Buneary",
-      "nameConfidence": "linked source reference",
-      "displayName": "Buneary — custom source variant (name unverified)",
-      "familyConfidence": "disputed between source records",
-      "identityFlag": "artist_or_region_label",
-      "identityNote": "\"Mikitarian\" appears as a source or creator-derived label, not enough proof of a standalone Pokémon. Original label and your vote are preserved. Evolution relationships disagree between two metadata records. No new evolution link should be assigned automatically.",
+      "nameConfidence": "source_verified",
+      "displayName": "Buneary — Mikitari regional form",
+      "familyConfidence": "source_verified",
+      "identityFlag": "",
+      "identityNote": "Pokéngine species/form identity checked against the exact linked source. Original creator and source label retained separately.",
       "possibleBaseSpecies": "Buneary",
       "familyAlternatives": [
         {
@@ -2794,14 +2814,18 @@
           "family": "Standalone — Mikitarian",
           "source": "https://pokengine.org/mons/00oh3oh8/Buneary"
         }
-      ]
+      ],
+      "sourceRegionLabel": "Mikitari",
+      "canonicalSpeciesName": "Buneary",
+      "familyEvidenceUrl": "https://pokengine.org/mons/00oh3oh8/Buneary",
+      "sourceIdentityStatus": "verified_source_species_or_form"
     },
     {
       "id": "fakemon:lopunny-1:06d969db7760",
       "identity": "lopunny-1",
-      "name": "Mikitarian Lopunny",
+      "name": "Lopunny",
       "base": "lopunny-1",
-      "family": "Mikitarian Buneary → Mikitarian Lopunny",
+      "family": "Buneary → Lopunny (Mikitari regional forms)",
       "source": "Mikitari",
       "category": "fakemon",
       "type1": "Dark",
@@ -2822,11 +2846,11 @@
       "creator": "Mikitari",
       "creatorEvidence": "source linked",
       "sourceReference": "https://pokengine.org/mons/00xongth/Lopunny",
-      "nameConfidence": "linked source reference",
-      "displayName": "Lopunny — custom source variant (name unverified)",
-      "familyConfidence": "disputed between source records",
-      "identityFlag": "artist_or_region_label",
-      "identityNote": "\"Mikitarian\" appears as a source or creator-derived label, not enough proof of a standalone Pokémon. Original label and your vote are preserved. Evolution relationships disagree between two metadata records. No new evolution link should be assigned automatically.",
+      "nameConfidence": "source_verified",
+      "displayName": "Lopunny — Mikitari regional form",
+      "familyConfidence": "source_verified",
+      "identityFlag": "",
+      "identityNote": "Pokéngine species/form identity checked against the exact linked source. Original creator and source label retained separately.",
       "possibleBaseSpecies": "Lopunny",
       "familyAlternatives": [
         {
@@ -2837,14 +2861,18 @@
           "family": "Standalone — Mikitarian",
           "source": "https://pokengine.org/mons/00xongth/Lopunny"
         }
-      ]
+      ],
+      "sourceRegionLabel": "Mikitari",
+      "canonicalSpeciesName": "Lopunny",
+      "familyEvidenceUrl": "https://pokengine.org/mons/00xongth/Lopunny",
+      "sourceIdentityStatus": "verified_source_species_or_form"
     },
     {
       "id": "fakemon:minamai:a49139765a74",
       "identity": "minamai",
       "name": "Minamai",
       "base": "minamai",
-      "family": "Minamai → Marelstorm",
+      "family": "Minamai / Marelstorm — linkage pending confirmation",
       "source": "Festival_Lumio",
       "category": "fakemon",
       "type1": "Water",
@@ -2867,9 +2895,9 @@
       "sourceReference": "https://pokengine.org/mons/00rofohd/Minamai",
       "nameConfidence": "linked source reference",
       "displayName": "Minamai",
-      "familyConfidence": "disputed between source records",
+      "familyConfidence": "source_names_verified; evolution_edges_unconfirmed",
       "identityFlag": "evolution_conflict",
-      "identityNote": "Evolution relationships disagree between two metadata records. No new evolution link should be assigned automatically.",
+      "identityNote": "Both source names are legitimate; direct evidence that one evolves into the other is still missing. Do not implement an evolution based only on the former reviewer.",
       "familyAlternatives": [
         {
           "family": "Minamai → Marelstorm",
@@ -2886,7 +2914,7 @@
       "identity": "marelstorm",
       "name": "Marelstorm",
       "base": "marelstorm",
-      "family": "Minamai → Marelstorm",
+      "family": "Minamai / Marelstorm — linkage pending confirmation",
       "source": "Festival_Lumio",
       "category": "fakemon",
       "type1": "Water",
@@ -2909,9 +2937,9 @@
       "sourceReference": "https://pokengine.org/mons/004bj9kp/Marelstorm",
       "nameConfidence": "linked source reference",
       "displayName": "Marelstorm",
-      "familyConfidence": "disputed between source records",
+      "familyConfidence": "source_names_verified; evolution_edges_unconfirmed",
       "identityFlag": "evolution_conflict",
-      "identityNote": "Evolution relationships disagree between two metadata records. No new evolution link should be assigned automatically.",
+      "identityNote": "Both source names are legitimate; direct evidence that one evolves into the other is still missing. Do not implement an evolution based only on the former reviewer.",
       "familyAlternatives": [
         {
           "family": "Minamai → Marelstorm",
@@ -2992,7 +3020,7 @@
       "identity": "enchantowl",
       "name": "Enchantowl",
       "base": "enchantowl",
-      "family": "Noctowl 1 → Enchantowl",
+      "family": "Hoothoot → Noctowl → Enchantowl (source-art lineage check)",
       "source": "Festival_Lumio",
       "category": "fakemon",
       "type1": "Psychic",
@@ -3007,7 +3035,7 @@
       "note": "",
       "evidence": "SOURCE_METADATA;SOURCE_EVOLUTION_GRAPH",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 1,
+      "evolutionStageOrder": 2,
       "originalSourceName": "Enchantowl",
       "originalSourceFamily": "Noctowl 1 → Enchantowl",
       "creator": "Lumio",
@@ -3015,9 +3043,10 @@
       "sourceReference": "",
       "nameConfidence": "SOURCE_METADATA;SOURCE_EVOLUTION_GRAPH",
       "displayName": "Enchantowl",
-      "familyConfidence": "historical",
+      "familyConfidence": "species_evolution_graph_verified; variant_artwork_match_unverified",
       "identityFlag": "",
-      "identityNote": ""
+      "identityNote": "",
+      "familyEvidenceUrl": "https://pokengine.org/mons/001cx6e0/Enchantowl"
     },
     {
       "id": "fakemon:pansimi:621636128805",
@@ -3344,7 +3373,7 @@
       "identity": "platerigus",
       "name": "Platerigus",
       "base": "platerigus",
-      "family": "Platerigus → Mikitarian → Traumatisse",
+      "family": "Yamask (Mikitari form) → Platerigus",
       "source": "Mikitari",
       "category": "fakemon",
       "type1": "Rock",
@@ -3359,7 +3388,7 @@
       "note": "",
       "evidence": "WEB_VERIFIED_SOURCE_METADATA;FRONT_BACK_VERIFIED",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 0,
+      "evolutionStageOrder": 1,
       "originalSourceName": "Platerigus",
       "originalSourceFamily": "Platerigus → Mikitarian → Traumatisse",
       "creator": "Mikitari",
@@ -3367,16 +3396,17 @@
       "sourceReference": "",
       "nameConfidence": "WEB_VERIFIED_SOURCE_METADATA;FRONT_BACK_VERIFIED",
       "displayName": "Platerigus",
-      "familyConfidence": "historical",
+      "familyConfidence": "source_verified",
       "identityFlag": "",
-      "identityNote": ""
+      "identityNote": "",
+      "familyEvidenceUrl": "https://pokengine.org/mons/00qxajnu/Platerigus"
     },
     {
       "id": "fakemon:falinks-1:0c48c12e936e",
       "identity": "falinks-1",
-      "name": "Mikitarian Falinks",
+      "name": "Falinks",
       "base": "falinks-1",
-      "family": "Platerigus → Mikitarian → Traumatisse",
+      "family": "Falinks (Mikitari regional form) — standalone",
       "source": "Mikitari",
       "category": "fakemon",
       "type1": "Psychic",
@@ -3391,17 +3421,17 @@
       "note": "",
       "evidence": "EXTERNAL_SOURCE_METADATA",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 1,
+      "evolutionStageOrder": 0,
       "originalSourceName": "Mikitarian Falinks",
       "originalSourceFamily": "Platerigus → Mikitarian → Traumatisse",
       "creator": "Mikitari",
       "creatorEvidence": "source linked",
       "sourceReference": "https://pokengine.org/mons/00dun911/Falinks",
-      "nameConfidence": "linked source reference",
-      "displayName": "Falinks — custom source variant (name unverified)",
-      "familyConfidence": "disputed between source records",
-      "identityFlag": "artist_or_region_label",
-      "identityNote": "\"Mikitarian\" appears as a source or creator-derived label, not enough proof of a standalone Pokémon. Original label and your vote are preserved. Evolution relationships disagree between two metadata records. No new evolution link should be assigned automatically.",
+      "nameConfidence": "source_verified",
+      "displayName": "Falinks — Mikitari regional form",
+      "familyConfidence": "source_verified",
+      "identityFlag": "",
+      "identityNote": "Pokéngine species/form identity checked against the exact linked source. Original creator and source label retained separately.",
       "possibleBaseSpecies": "Falinks",
       "familyAlternatives": [
         {
@@ -3412,14 +3442,18 @@
           "family": "Standalone — Mikitarian",
           "source": "https://pokengine.org/mons/00dun911/Falinks"
         }
-      ]
+      ],
+      "sourceRegionLabel": "Mikitari",
+      "canonicalSpeciesName": "Falinks",
+      "familyEvidenceUrl": "https://pokengine.org/mons/00dun911/Falinks",
+      "sourceIdentityStatus": "verified_source_species_or_form"
     },
     {
       "id": "fakemon:spritzee-1:f9749b90bdb0",
       "identity": "spritzee-1",
-      "name": "Mikitarian Spritzee",
+      "name": "Spritzee",
       "base": "spritzee-1",
-      "family": "Platerigus → Mikitarian → Traumatisse",
+      "family": "Spritzee (Mikitari form) → Traumatisse",
       "source": "Mikitari",
       "category": "fakemon",
       "type1": "Fairy",
@@ -3434,25 +3468,29 @@
       "note": "",
       "evidence": "EXTERNAL_SOURCE_METADATA",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 1,
+      "evolutionStageOrder": 0,
       "originalSourceName": "Mikitarian Spritzee",
       "originalSourceFamily": "Platerigus → Mikitarian → Traumatisse",
       "creator": "Mikitari",
       "creatorEvidence": "source linked",
       "sourceReference": "https://pokengine.org/mons/00pm8f1c/Spritzee",
-      "nameConfidence": "linked source reference",
-      "displayName": "Spritzee — custom source variant (name unverified)",
-      "familyConfidence": "unverified source-label grouping",
-      "identityFlag": "artist_or_region_label",
-      "identityNote": "\"Mikitarian\" appears as a source or creator-derived label, not enough proof of a standalone Pokémon. Original label and your vote are preserved.",
-      "possibleBaseSpecies": "Spritzee"
+      "nameConfidence": "source_verified",
+      "displayName": "Spritzee — Mikitari regional form",
+      "familyConfidence": "source_verified",
+      "identityFlag": "",
+      "identityNote": "Pokéngine species/form identity checked against the exact linked source. Original creator and source label retained separately.",
+      "possibleBaseSpecies": "Spritzee",
+      "sourceRegionLabel": "Mikitari",
+      "canonicalSpeciesName": "Spritzee",
+      "familyEvidenceUrl": "https://pokengine.org/mons/00pm8f1c/Spritzee",
+      "sourceIdentityStatus": "verified_source_species_or_form"
     },
     {
       "id": "fakemon:yamask-2:9ae97cd58dea",
       "identity": "yamask-2",
-      "name": "Mikitarian Yamask",
+      "name": "Yamask",
       "base": "yamask-2",
-      "family": "Platerigus → Mikitarian → Traumatisse",
+      "family": "Yamask (Mikitari form) → Platerigus",
       "source": "Mikitari",
       "category": "fakemon",
       "type1": "Rock",
@@ -3467,25 +3505,29 @@
       "note": "",
       "evidence": "EXTERNAL_SOURCE_METADATA",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 1,
+      "evolutionStageOrder": 0,
       "originalSourceName": "Mikitarian Yamask",
       "originalSourceFamily": "Platerigus → Mikitarian → Traumatisse",
       "creator": "Mikitari",
       "creatorEvidence": "source linked",
       "sourceReference": "https://pokengine.org/mons/0063w7vk/Yamask",
-      "nameConfidence": "linked source reference",
-      "displayName": "Yamask — custom source variant (name unverified)",
-      "familyConfidence": "unverified source-label grouping",
-      "identityFlag": "artist_or_region_label",
-      "identityNote": "\"Mikitarian\" appears as a source or creator-derived label, not enough proof of a standalone Pokémon. Original label and your vote are preserved.",
-      "possibleBaseSpecies": "Yamask"
+      "nameConfidence": "source_verified",
+      "displayName": "Yamask — Mikitari regional form",
+      "familyConfidence": "source_verified",
+      "identityFlag": "",
+      "identityNote": "Pokéngine species/form identity checked against the exact linked source. Original creator and source label retained separately.",
+      "possibleBaseSpecies": "Yamask",
+      "sourceRegionLabel": "Mikitari",
+      "canonicalSpeciesName": "Yamask",
+      "familyEvidenceUrl": "https://pokengine.org/mons/0063w7vk/Yamask",
+      "sourceIdentityStatus": "verified_source_species_or_form"
     },
     {
       "id": "fakemon:traumatisse:c91020460452",
       "identity": "traumatisse",
       "name": "Traumatisse",
       "base": "traumatisse",
-      "family": "Platerigus → Mikitarian → Traumatisse",
+      "family": "Spritzee (Mikitari form) → Traumatisse",
       "source": "Mikitari",
       "category": "fakemon",
       "type1": "Fairy",
@@ -3500,17 +3542,17 @@
       "note": "",
       "evidence": "EXTERNAL_SOURCE_METADATA",
       "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice.",
-      "evolutionStageOrder": 2,
+      "evolutionStageOrder": 1,
       "originalSourceName": "Traumatisse",
       "originalSourceFamily": "Platerigus → Mikitarian → Traumatisse",
       "creator": "Mikitari",
       "creatorEvidence": "source linked",
       "sourceReference": "https://pokengine.org/mons/00y8pwe3/Traumatisse+",
-      "nameConfidence": "linked source reference",
+      "nameConfidence": "source_verified",
       "displayName": "Traumatisse",
-      "familyConfidence": "disputed between source records",
-      "identityFlag": "evolution_conflict",
-      "identityNote": "Evolution relationships disagree between two metadata records. No new evolution link should be assigned automatically.",
+      "familyConfidence": "source_verified",
+      "identityFlag": "",
+      "identityNote": "Pokéngine species/form identity checked against the exact linked source. Original creator and source label retained separately.",
       "familyAlternatives": [
         {
           "family": "Platerigus → Mikitarian → Traumatisse",
@@ -3520,7 +3562,9 @@
           "family": "Standalone — Traumatisse",
           "source": "https://pokengine.org/mons/00y8pwe3/Traumatisse+"
         }
-      ]
+      ],
+      "familyEvidenceUrl": "https://pokengine.org/mons/00y8pwe3/Traumatisse+",
+      "sourceIdentityStatus": "verified_source_species_or_form"
     },
     {
       "id": "fakemon:rhinplink:d44e960196c9",
@@ -5286,11 +5330,12 @@
       "creator": "Not established",
       "creatorEvidence": "source pack only; individual author unverified",
       "sourceReference": "",
-      "nameConfidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
+      "nameConfidence": "source_name_verified_artwork_mapping_pending",
       "displayName": "Cobarett — Design 2",
-      "familyConfidence": "historical",
+      "familyConfidence": "published_species_and_family_names_verified; artwork_mapping_pending",
       "identityFlag": "provisional_identification",
-      "identityNote": "Earlier source filename/type/family inference was provisional. It has not been promoted to an official Pokémon identity."
+      "identityNote": "Published source confirms this species name and Hissiorite → Cobarett → Pythonova lineage. Still on technical hold for this artwork option until front/back identity is checked.",
+      "familyEvidenceUrl": "https://wiki.tuxemon.org/Cobarett"
     },
     {
       "id": "compare:hissiorite:2",
@@ -5318,11 +5363,12 @@
       "creator": "Not established",
       "creatorEvidence": "source pack only; individual author unverified",
       "sourceReference": "",
-      "nameConfidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
+      "nameConfidence": "source_name_verified_artwork_mapping_pending",
       "displayName": "Hissiorite — Design 2",
-      "familyConfidence": "historical",
+      "familyConfidence": "published_species_and_family_names_verified; artwork_mapping_pending",
       "identityFlag": "provisional_identification",
-      "identityNote": "Earlier source filename/type/family inference was provisional. It has not been promoted to an official Pokémon identity."
+      "identityNote": "Published source confirms this species name and Hissiorite → Cobarett → Pythonova lineage. Still on technical hold for this artwork option until front/back identity is checked.",
+      "familyEvidenceUrl": "https://wiki.tuxemon.org/Hissiorite"
     },
     {
       "id": "compare:pythonova:2",
@@ -5350,18 +5396,19 @@
       "creator": "Not established",
       "creatorEvidence": "source pack only; individual author unverified",
       "sourceReference": "",
-      "nameConfidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
+      "nameConfidence": "source_name_verified_artwork_mapping_pending",
       "displayName": "Pythonova — Design 2",
-      "familyConfidence": "historical",
+      "familyConfidence": "published_species_and_family_names_verified; artwork_mapping_pending",
       "identityFlag": "provisional_identification",
-      "identityNote": "Earlier source filename/type/family inference was provisional. It has not been promoted to an official Pokémon identity."
+      "identityNote": "Published source confirms this species name and Hissiorite → Cobarett → Pythonova lineage. Still on technical hold for this artwork option until front/back identity is checked.",
+      "familyEvidenceUrl": "https://www.pokengine.org/mons/00rgw87i/Pythonova"
     },
     {
       "id": "compare:pythonovas:1",
       "identity": "pythonovas",
       "name": "Pythonovas — Design 1",
       "base": "Pythonovas",
-      "family": "Pythonovas",
+      "family": "Hissiorite → Cobarett → Pythonova",
       "source": "Fakemon_Festival_Full",
       "category": "design-comparison",
       "type1": "",
@@ -5376,24 +5423,25 @@
       "note": "",
       "evidence": "exact:1802b774bbe9; structural:0712cb80faa9",
       "holdReason": "Type/source identity needs verification",
-      "evolutionStageOrder": 0,
+      "evolutionStageOrder": 2,
       "originalSourceName": "Pythonovas — Design 1",
       "originalSourceFamily": "Pythonovas",
       "creator": "Not established",
       "creatorEvidence": "source pack only; individual author unverified",
       "sourceReference": "",
       "nameConfidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "displayName": "Pythonova S — possible shiny or alternate frame",
+      "displayName": "Pythonova S — possible shiny/frame (not a species)",
       "familyConfidence": "historical",
       "identityFlag": "possible_shiny_alias",
-      "identityNote": "An S suffix in a file name is not proof of a separate Pokémon species."
+      "identityNote": "Filename S may designate shiny or animation variant. This is NOT another evolutionary species; original image still held until image-level match.",
+      "familyEvidenceUrl": "https://wiki.tuxemon.org/Hissiorite"
     },
     {
       "id": "compare:pythonovas:2",
       "identity": "pythonovas",
       "name": "Pythonovas — Design 2",
       "base": "Pythonovas",
-      "family": "Pythonovas",
+      "family": "Hissiorite → Cobarett → Pythonova",
       "source": "Fakemon_Festival_Full",
       "category": "design-comparison",
       "type1": "",
@@ -5408,24 +5456,25 @@
       "note": "",
       "evidence": "exact:5542d9e3bd24; structural:19caefc47afc",
       "holdReason": "Type/source identity needs verification",
-      "evolutionStageOrder": 0,
+      "evolutionStageOrder": 2,
       "originalSourceName": "Pythonovas — Design 2",
       "originalSourceFamily": "Pythonovas",
       "creator": "Not established",
       "creatorEvidence": "source pack only; individual author unverified",
       "sourceReference": "",
       "nameConfidence": "UNRESOLVED_FAMILY;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "displayName": "Pythonova S — possible shiny or alternate frame",
+      "displayName": "Pythonova S — possible shiny/frame (not a species)",
       "familyConfidence": "historical",
       "identityFlag": "possible_shiny_alias",
-      "identityNote": "An S suffix in a file name is not proof of a separate Pokémon species."
+      "identityNote": "Filename S may designate shiny or animation variant. This is NOT another evolutionary species; original image still held until image-level match.",
+      "familyEvidenceUrl": "https://wiki.tuxemon.org/Hissiorite"
     },
     {
       "id": "compare:noctowl-1:1",
       "identity": "noctowl-1",
       "name": "Luminian Noctowl — Design 1",
       "base": "Luminian Noctowl",
-      "family": "Noctowl 1 → Enchantowl",
+      "family": "Hoothoot → Noctowl → Enchantowl (source-art lineage check)",
       "source": "Festival_Atsui",
       "category": "design-comparison",
       "type1": "Psychic",
@@ -5440,18 +5489,19 @@
       "note": "",
       "evidence": "exact:29404e237d0e; structural:874cd3c121a0",
       "holdReason": "Back sprite not confidently mapped",
-      "evolutionStageOrder": 0,
+      "evolutionStageOrder": 1,
       "originalSourceName": "Luminian Noctowl — Design 1",
       "originalSourceFamily": "Noctowl 1 → Enchantowl",
       "creator": "Atsui",
       "creatorEvidence": "source pack only; individual author unverified",
       "sourceReference": "",
       "nameConfidence": "SOURCE_EVOLUTION_GRAPH;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
-      "displayName": "Noctowl — custom source variant (name unverified)",
+      "displayName": "Noctowl — Lumio-source alternate (specific evo design unverified)",
       "familyConfidence": "unverified source-label grouping",
       "identityFlag": "artist_or_region_label",
-      "identityNote": "\"Noctowl 1\" appears as a source or creator-derived label, not enough proof of a standalone Pokémon. Original label and your vote are preserved.",
-      "possibleBaseSpecies": "Noctowl"
+      "identityNote": "The Hoothoot → Noctowl → Enchantowl evolutionary concept is documented on Pokéngine, but this separate Atsui/Lumio Noctowl sprite is not yet proven to be the Enjin/Ender Noctowl that specifically evolves into Enchantowl. Keep the art on hold; no inferred sprite binding.",
+      "possibleBaseSpecies": "Noctowl",
+      "familyEvidenceUrl": "https://pokengine.org/mons/00634t3c/Noctowl"
     },
     {
       "id": "compare:dampurr:1",
@@ -5525,9 +5575,9 @@
       "family": "Dampurr → Rainther → Delugar",
       "source": "Festival_Magiscarf",
       "category": "design-comparison",
-      "type1": "",
+      "type1": "Water",
       "type2": "",
-      "typeAuthority": "Unverified",
+      "typeAuthority": "Pokéngine Rainther species page; alternate artwork pairing not yet verified",
       "front": "DS_CUSTOM_LIBRARY/packs/Festival_Magiscarf/Magiscarf/Battlers Normal/Front/Rainther.png",
       "back": "",
       "shinyFront": "",
@@ -5543,11 +5593,12 @@
       "creator": "Magiscarf",
       "creatorEvidence": "source pack only; individual author unverified",
       "sourceReference": "",
-      "nameConfidence": "FAMILY_RECOVERED;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
+      "nameConfidence": "source_name_verified_artwork_mapping_pending",
       "displayName": "Rainther — Design 1",
       "familyConfidence": "historical",
       "identityFlag": "provisional_identification",
-      "identityNote": "Earlier source filename/type/family inference was provisional. It has not been promoted to an official Pokémon identity."
+      "identityNote": "Rainther is a genuine source name and Water type in Dampurr → Rainther → Delugar; exact alternative artwork/front-back pairing still requires technical verification.",
+      "familyEvidenceUrl": "https://pokengine.org/mons/00w927yf/Rainther"
     },
     {
       "id": "compare:rainther:2",
@@ -5557,9 +5608,9 @@
       "family": "Dampurr → Rainther → Delugar",
       "source": "Festival_Magiscarf",
       "category": "design-comparison",
-      "type1": "",
+      "type1": "Water",
       "type2": "",
-      "typeAuthority": "Unverified",
+      "typeAuthority": "Pokéngine Rainther species page; alternate artwork pairing not yet verified",
       "front": "DS_CUSTOM_LIBRARY/packs/Festival_Magiscarf/Magiscarf/Gen 4 Battlers/Fronts/RAINTHER.png",
       "back": "",
       "shinyFront": "",
@@ -5575,11 +5626,12 @@
       "creator": "Magiscarf",
       "creatorEvidence": "source pack only; individual author unverified",
       "sourceReference": "",
-      "nameConfidence": "FAMILY_RECOVERED;SOURCE_NAME;MERCURY_PROVISIONAL_CANON_TYPE",
+      "nameConfidence": "source_name_verified_artwork_mapping_pending",
       "displayName": "Rainther — Design 2",
       "familyConfidence": "historical",
       "identityFlag": "provisional_identification",
-      "identityNote": "Earlier source filename/type/family inference was provisional. It has not been promoted to an official Pokémon identity."
+      "identityNote": "Rainther is a genuine source name and Water type in Dampurr → Rainther → Delugar; exact alternative artwork/front-back pairing still requires technical verification.",
+      "familyEvidenceUrl": "https://pokengine.org/mons/00w927yf/Rainther"
     },
     {
       "id": "compare:searpent:2",
@@ -6000,7 +6052,7 @@
   },
   "familyGrouping": {
     "schema": "mercury-evolution-family-grouping-v2",
-    "method": "Exact front/back match to validated DS_CUSTOM_LIBRARY/DS_READY_MASTER/fakemon_enriched_metadata.json, followed by stage ordering within each family",
+    "method": "Authoritative Pokéngine/Tuxepedia family links with source-linked provenance; explicit non-evolutions separated",
     "sourceBlob": "10c01c2e86a6098c2f1fc24a97b91d77a5b51257",
     "correctedRows": 15,
     "sourceFile": "review/family-regroup-audit-2026-10-23.json",
@@ -6009,7 +6061,29 @@
       "Artwork variants from a stage remain alongside that stage.",
       "Already-approved user decisions remain keyed by immutable review ID.",
       "If family relationships cannot be verified, retain technical hold; do not invent evolutions."
-    ]
+    ],
+    "correctionDate": "2026-10-23",
+    "reconciliation": "Original review IDs and approval files retained. Display-family grouping does not stage art into ROM.",
+    "missingReferenceStages": [
+      {
+        "family": "Furrva → Kocomb (normal / militant) → Granebee / Beelitant",
+        "name": "Furrva",
+        "stage": 0,
+        "reference": "https://pokengine.org/mons/00uc0o89/Furrva",
+        "status": "source confirmed; not present as a current actionable sprite review entry"
+      }
+    ],
+    "familyNotes": {
+      "Furrva → Kocomb (normal / militant) → Granebee / Beelitant": "Source-verified split evolution. Furrva is the missing starting stage in this review pool; normal Kocomb evolves to Granebee, militant Kocomb to Beelitant.",
+      "Spritzee (Mikitari form) → Traumatisse": "Mikitari regional Spritzee evolves into Traumatisse after ending a battle poisoned; not related to Platerigus or Falinks.",
+      "Yamask (Mikitari form) → Platerigus": "Mikitari regional Yamask evolves to Platerigus at Lv. 34.",
+      "Falinks (Mikitari regional form) — standalone": "Standalone Pokémon regional form; was incorrectly placed inside a fictional Mikitarian chain.",
+      "Spinarak → Ariados (Lumio regional forms)": "Lumio denotes the named regional form, not a separate Pokémon species; artist credits are separate.",
+      "Buneary → Lopunny (Mikitari regional forms)": "Mikitari denotes a named regional form, not an additional Pokémon species.",
+      "Hoothoot → Noctowl → Enchantowl (source-art lineage check)": "Species evolution is source verified, but the specific Lumio/Atsui Noctowl art may not belong to the Enjin/Ender Enchantowl lineage; pairing remains held.",
+      "Hayog / Hogouse / Hogriks — linkage pending confirmation": "Source names verified. Former assumed three-stage evolution edges lack complete primary-source proof; do not implement them.",
+      "Minamai / Marelstorm — linkage pending confirmation": "Source names verified. No documented evolution edge found; keep together as an unresolved proposed line without treating an arrow as confirmed."
+    }
   },
   "identityAudit": {
     "schema": "mercury-sprite-name-attribution-v1",
@@ -6451,7 +6525,9 @@
         "alternatives": [],
         "isHold": true
       }
-    ]
+    ],
+    "sourceFamilyReconciliation": "review/identity-family-reconciliation-2026-10-23.json",
+    "resolvedSourceFamilyEvidenceEntries": 12
   },
   "recoveryAddendum": {
     "date": "2026-10-23",
