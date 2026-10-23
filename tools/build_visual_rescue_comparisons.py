@@ -144,22 +144,20 @@ def run(check:bool):
             status=meta["status"]
             if status in TARGET:
                 source=check_source(meta["original"],meta["sha256"])
-                with Image.open(source) as image:
-                    image.load()
-                    canvas=stage_image(image,meta.copy())
                 relative=(DEST/design["key"]/(slot+"_NN_COMPARISON_ONLY.png")).relative_to(ROOT)
                 output=ROOT/relative
-                output.parent.mkdir(parents=True,exist_ok=True)
-                canvas.save(output,format="PNG",optimize=False)
                 entry={"name":design["name"],"family":design["family"],
                        "reviewId":design["reviewId"],"sourceType1":design.get("type1",""),
                        "sourceType2":design.get("type2",""),"key":design["key"],
                        "slot":slot,"originalStatus":status,"original":meta["original"],
                        "originalSHA256":meta["sha256"],"comparisonPath":str(relative),
-                       "comparisonSHA256":checksum(output.read_bytes()),
                        "source":design["source"],"tier":design["tier"]}
-                before=meta.copy()
-                stage_image(image,entry)
+                with Image.open(source) as image:
+                    image.load()
+                    canvas=stage_image(image,entry)
+                output.parent.mkdir(parents=True,exist_ok=True)
+                canvas.save(output,format="PNG",optimize=False)
+                entry["comparisonSHA256"]=checksum(output.read_bytes())
                 result["comparisons"].append(entry)
             elif status=="PALETTE_QUANTIZED_NEEDS_ART_REVIEW":
                 audit=calculate_palette_delta(meta)
