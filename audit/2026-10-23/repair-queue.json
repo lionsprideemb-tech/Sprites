@@ -1032,6 +1032,24 @@
       "front": "",
       "back": "",
       "reason": "Review requires restored front/back sprite paths"
+    },
+    {
+      "id": "collision:hydreigon-mega",
+      "identity": "hydreigon-mega",
+      "name": "Hydreigon Mega",
+      "source": "historical duplicated identity",
+      "front": "DS_CUSTOM_LIBRARY/converted/All_Mercury_GBA_Queue/hydreigon_mega/front.png",
+      "back": "DS_CUSTOM_LIBRARY/converted/All_Mercury_GBA_Queue/hydreigon_mega/back.png",
+      "reason": "Conflicting recorded historical decisions"
+    },
+    {
+      "id": "collision:tsareena-mega",
+      "identity": "tsareena-mega",
+      "name": "Tsareena Mega",
+      "source": "historical duplicated identity",
+      "front": "DS_CUSTOM_LIBRARY/converted/All_Mercury_GBA_Queue/tsareena_mega/front.png",
+      "back": "DS_CUSTOM_LIBRARY/converted/All_Mercury_GBA_Queue/tsareena_mega/back.png",
+      "reason": "Conflicting recorded historical decisions"
     }
   ],
   "protectedHistoricalDecisionsFromNewImport": [
@@ -2809,5 +2827,117 @@
     "Zero sprite files modified, deleted, or integrated.",
     "Prior approvals not reoffered merely because artwork needs repair.",
     "Do not infer backs from unrelated sprite identities."
+  ],
+  "historicalIdentityCollisions": [
+    {
+      "id": "arcanine-mega",
+      "name": "Arcanine Mega",
+      "rows": [
+        {
+          "reviewId": "R0077",
+          "effective": "keep",
+          "source": "Elite Redux",
+          "front": "DS_CUSTOM_LIBRARY/converted/All_Mercury_GBA_Queue/arcanine_mega/front.png",
+          "back": "DS_CUSTOM_LIBRARY/converted/All_Mercury_GBA_Queue/arcanine_mega/back.png"
+        },
+        {
+          "reviewId": "R0078",
+          "effective": "keep",
+          "source": "Elite Redux",
+          "front": "DS_CUSTOM_LIBRARY/converted/All_Mercury_GBA_Queue/arcanine_mega/front.png",
+          "back": "DS_CUSTOM_LIBRARY/converted/All_Mercury_GBA_Queue/arcanine_mega/back.png"
+        }
+      ],
+      "conflictingDecision": false,
+      "action": "Do not merge or override these rows without identifying the semantic/forme difference."
+    },
+    {
+      "id": "reuniclus-mega",
+      "name": "Reuniclus Mega",
+      "rows": [
+        {
+          "reviewId": "R0737",
+          "effective": "keep",
+          "source": "Elite Redux",
+          "front": "DS_CUSTOM_LIBRARY/converted/All_Mercury_GBA_Queue/reuniclus_mega/front.png",
+          "back": "DS_CUSTOM_LIBRARY/converted/All_Mercury_GBA_Queue/reuniclus_mega/back.png"
+        },
+        {
+          "reviewId": "R0738",
+          "effective": "keep",
+          "source": "Elite Redux",
+          "front": "DS_CUSTOM_LIBRARY/converted/All_Mercury_GBA_Queue/reuniclus_mega/front.png",
+          "back": "DS_CUSTOM_LIBRARY/converted/All_Mercury_GBA_Queue/reuniclus_mega/back.png"
+        }
+      ],
+      "conflictingDecision": false,
+      "action": "Do not merge or override these rows without identifying the semantic/forme difference."
+    },
+    {
+      "id": "hydreigon-mega",
+      "name": "Hydreigon Mega",
+      "rows": [
+        {
+          "reviewId": "R0786",
+          "effective": "keep",
+          "source": "Elite Redux",
+          "front": "DS_CUSTOM_LIBRARY/converted/All_Mercury_GBA_Queue/hydreigon_mega/front.png",
+          "back": "DS_CUSTOM_LIBRARY/converted/All_Mercury_GBA_Queue/hydreigon_mega/back.png"
+        },
+        {
+          "reviewId": "R0787",
+          "effective": "cut",
+          "source": "Elite Redux",
+          "front": "DS_CUSTOM_LIBRARY/converted/All_Mercury_GBA_Queue/hydreigon_mega/front.png",
+          "back": "DS_CUSTOM_LIBRARY/converted/All_Mercury_GBA_Queue/hydreigon_mega/back.png"
+        }
+      ],
+      "conflictingDecision": true,
+      "action": "Do not merge or override these rows without identifying the semantic/forme difference."
+    },
+    {
+      "id": "tsareena-mega",
+      "name": "Tsareena Mega",
+      "rows": [
+        {
+          "reviewId": "R0867",
+          "effective": "keep",
+          "source": "Elite Redux",
+          "front": "DS_CUSTOM_LIBRARY/converted/All_Mercury_GBA_Queue/tsareena_mega/front.png",
+          "back": "DS_CUSTOM_LIBRARY/converted/All_Mercury_GBA_Queue/tsareena_mega/back.png"
+        },
+        {
+          "reviewId": "R0868",
+          "effective": "cut",
+          "source": "Elite Redux",
+          "front": "DS_CUSTOM_LIBRARY/converted/All_Mercury_GBA_Queue/tsareena_mega/front.png",
+          "back": "DS_CUSTOM_LIBRARY/converted/All_Mercury_GBA_Queue/tsareena_mega/back.png"
+        }
+      ],
+      "conflictingDecision": true,
+      "action": "Do not merge or override these rows without identifying the semantic/forme difference."
+    },
+    {
+      "id": "toxtricity-mega",
+      "name": "Toxtricity Mega",
+      "rows": [
+        {
+          "reviewId": "R0901",
+          "effective": "keep",
+          "source": "Elite Redux",
+          "front": "DS_CUSTOM_LIBRARY/converted/All_Mercury_GBA_Queue/toxtricity_mega/front.png",
+          "back": "DS_CUSTOM_LIBRARY/converted/All_Mercury_GBA_Queue/toxtricity_mega/back.png"
+        },
+        {
+          "reviewId": "R0902",
+          "effective": "keep",
+          "source": "Elite Redux",
+          "front": "DS_CUSTOM_LIBRARY/converted/All_Mercury_GBA_Queue/toxtricity_mega/front.png",
+          "back": "DS_CUSTOM_LIBRARY/converted/All_Mercury_GBA_Queue/toxtricity_mega/back.png"
+        }
+      ],
+      "conflictingDecision": false,
+      "action": "Do not merge or override these rows without identifying the semantic/forme difference."
+    }
   ]
 }
