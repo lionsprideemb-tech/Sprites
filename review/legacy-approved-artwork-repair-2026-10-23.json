@@ -1,0 +1,158 @@
+{
+  "schema": "mercury-legacy-approved-artwork-repair-v1",
+  "generated": "2026-10-23",
+  "source": "review/recovered-approved-legacy-pairs-2026-10-23.json",
+  "counts": {
+    "originalApprovedPairs": 74,
+    "evolutionFamilies": 39,
+    "completeShinySets": 69,
+    "incompleteShinySets": 5
+  },
+  "safety": {
+    "preserveKEEPs": true,
+    "doNotReapprove": true,
+    "noArtDeletion": true,
+    "noInventedShinies": true,
+    "dsConversionPending": true,
+    "noSpeciesAssignment": true,
+    "noROMIntegration": true
+  },
+  "repairs": [
+    {
+      "reviewId": "R0421",
+      "identity": "breloom-alternate-form-3",
+      "name": "Breloom — Alternate (Form 3)",
+      "family": "#0285 Shroomish → #0286 Breloom",
+      "type1": "Ghost",
+      "type2": "Fighting",
+      "source": "Reborn / Plates of Arceus",
+      "originalGbaSource": {
+        "front": "Graphics/Battlers/286_3.png",
+        "back": "Graphics/Battlers/286b_3.png",
+        "shiny_front": "",
+        "shiny_back": "",
+        "view_count": "2"
+      },
+      "verifiedNormalSource": {
+        "front": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/breloom-alternate-form-3/front.png",
+        "back": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/breloom-alternate-form-3/back.png"
+      },
+      "missing": [
+        "matching original shiny front",
+        "matching original shiny back"
+      ],
+      "nextAction": "Locate matching original source files and verify artist/form/normal-shiny pairing before DS conversion.",
+      "status": "source_lookup_required"
+    },
+    {
+      "reviewId": "R0607",
+      "identity": "combee-alternate-form-1",
+      "name": "Combee — Alternate (Form 1)",
+      "family": "#0415 Combee → #0416 Vespiquen",
+      "type1": "Bug",
+      "type2": "Psychic",
+      "source": "Reborn / Plates of Arceus",
+      "originalGbaSource": {
+        "front": "Graphics/Battlers/415_1.png",
+        "back": "Graphics/Battlers/415b_1.png",
+        "shiny_front": "",
+        "shiny_back": "",
+        "view_count": "2"
+      },
+      "verifiedNormalSource": {
+        "front": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/combee-alternate-form-1/front.png",
+        "back": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/combee-alternate-form-1/back.png"
+      },
+      "missing": [
+        "matching original shiny front",
+        "matching original shiny back"
+      ],
+      "nextAction": "Locate matching original source files and verify artist/form/normal-shiny pairing before DS conversion.",
+      "status": "source_lookup_required"
+    },
+    {
+      "reviewId": "R0608",
+      "identity": "vespiquen-alternate-form-1",
+      "name": "Vespiquen — Alternate (Form 1)",
+      "family": "#0415 Combee → #0416 Vespiquen",
+      "type1": "Bug",
+      "type2": "Psychic",
+      "source": "Reborn / Plates of Arceus",
+      "originalGbaSource": {
+        "front": "Graphics/Battlers/416_1.png",
+        "back": "Graphics/Battlers/416b_1.png",
+        "shiny_front": "",
+        "shiny_back": "",
+        "view_count": "2"
+      },
+      "verifiedNormalSource": {
+        "front": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/vespiquen-alternate-form-1/front.png",
+        "back": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/vespiquen-alternate-form-1/back.png"
+      },
+      "missing": [
+        "matching original shiny front",
+        "matching original shiny back"
+      ],
+      "nextAction": "Locate matching original source files and verify artist/form/normal-shiny pairing before DS conversion.",
+      "status": "source_lookup_required"
+    },
+    {
+      "reviewId": "R0717",
+      "identity": "dwebble-alternate-form-1",
+      "name": "Dwebble — Alternate (Form 1)",
+      "family": "#0557 Dwebble → #0558 Crustle",
+      "type1": "Bug",
+      "type2": "Ground",
+      "source": "Reborn / Plates of Arceus",
+      "originalGbaSource": {
+        "front": "Graphics/Battlers/557_1.png",
+        "back": "Graphics/Battlers/557b_1.png",
+        "shiny_front": "",
+        "shiny_back": "",
+        "view_count": "2"
+      },
+      "verifiedNormalSource": {
+        "front": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/dwebble-alternate-form-1/front.png",
+        "back": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/dwebble-alternate-form-1/back.png"
+      },
+      "missing": [
+        "matching original shiny front",
+        "matching original shiny back"
+      ],
+      "nextAction": "Locate matching original source files and verify artist/form/normal-shiny pairing before DS conversion.",
+      "status": "source_lookup_required"
+    },
+    {
+      "reviewId": "R0718",
+      "identity": "crustle-alternate-form-1",
+      "name": "Crustle — Alternate (Form 1)",
+      "family": "#0557 Dwebble → #0558 Crustle",
+      "type1": "Bug",
+      "type2": "Ground",
+      "source": "Reborn / Plates of Arceus",
+      "originalGbaSource": {
+        "front": "Graphics/Battlers/558_1.png",
+        "back": "Graphics/Battlers/558b_1.png",
+        "shiny_front": "",
+        "shiny_back": "",
+        "view_count": "2"
+      },
+      "verifiedNormalSource": {
+        "front": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/crustle-alternate-form-1/front.png",
+        "back": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/crustle-alternate-form-1/back.png"
+      },
+      "missing": [
+        "matching original shiny front",
+        "matching original shiny back"
+      ],
+      "nextAction": "Locate matching original source files and verify artist/form/normal-shiny pairing before DS conversion.",
+      "status": "source_lookup_required"
+    }
+  ],
+  "outstandingShared": [
+    "Pixel-format and palette conversion of all 74 source pairs to DS-ready art (NOT yet certified)",
+    "DS front/back quality verification and spritesheet geometry checks",
+    "Keep source evidence and published approvals separate from actual ROM integration"
+  ],
+  "note": "Historical user approvals are not new votes. The five shiny repairs are precisely scoped; no generic shiny synthesis or substitute back sprite is authorized."
+}
