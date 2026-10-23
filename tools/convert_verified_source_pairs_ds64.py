@@ -50,6 +50,8 @@ def source_rows() -> list[dict]:
     assert len(extra["matches"]) == 8
     assert votes["count"] == len(votes["entries"]) == 166
     assert votes["keepCount"] == 154 and votes["cutCount"] == 12
+    master = obj(ROOT / "master-review-data.json")
+    roster = {x["id"]: x for x in master["entries"] + master["technicalHolds"]}
     rows = []
     for x in historical["entries"]:
         assert x["effectiveDecision"] == "keep" and x["artworkIntegrationAllowed"] is False
@@ -61,13 +63,18 @@ def source_rows() -> list[dict]:
                 files[slot] = {"path": v["path"], "expected_blob": v["gitBlobSha"]}
         rows.append({"key": x["identity"], "reviewId": x["reviewId"], "name": x["name"],
                      "family": x["family"], "source": x["source"], "tier": "historically_approved_source",
+                     "type1": x["type1"], "type2": x.get("type2", ""), "stage": None,
                      "creativeVote": "KEEP (original specific artwork only)", "files": files})
     for x in extra["matches"]:
         assert x["romIntegrated"] is False and x["artChanged"] is False
         files = {slot: {"path": x[slot]["path"], "expected_blob": x[slot]["blobSHA"]}
                  for slot in ("front", "back")}
+        metadata = roster.get(x["id"], {})
         rows.append({"key": "source_pair_" + x["id"].replace(":", "_"), "reviewId": x["id"],
-                     "name": x["originalName"], "family": None, "source": x["source"],
+                     "name": metadata.get("displayName") or x["originalName"],
+                     "family": metadata.get("family"), "source": x["source"],
+                     "type1": metadata.get("type1", ""), "type2": metadata.get("type2", ""),
+                     "stage": metadata.get("evolutionStageOrder"),
                      "tier": x["classification"], "creativeVote": "NO NEW VOTE",
                      "files": files})
     assert furrva["species"] == "Furrva" and not furrva["game_integration_allowed"]
@@ -78,6 +85,7 @@ def source_rows() -> list[dict]:
                  "name": "Furrva", "family": "Furrva → Kocomb → Granebee / Beelitant",
                  "source": furrva["source"] + " (credit " + furrva["source_artist"] + ")",
                  "tier": "unapproved_external_original_source", "creativeVote": "NONE",
+                 "type1": "Bug", "type2": "", "stage": 0,
                  "files": files})
     if len(rows) != 83 or len({r["key"] for r in rows}) != len(rows):
         raise ValueError("source inventory changed; reject ambiguous overlap")
