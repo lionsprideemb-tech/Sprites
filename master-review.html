@@ -52,7 +52,7 @@ summary{cursor:pointer;font-weight:750}
 <div class="wrap">
 <h1>Pokémon Mercury Redux — Master Sprite Review</h1>
 <p class="sub">Exception-only • Evolution families together • Original approvals protected • No automatic ROM integration</p>
-<div class="stats"><span class="pill" id="total">Loading review…</span><span class="pill" id="done">0 decided</span><span class="pill" id="history">Historical decisions retained</span><span class="pill" id="holds">Technical holds</span></div>
+<div class="stats"><span class="pill" id="total">Loading review…</span><span class="pill" id="done">0 decided</span><span class="pill" id="history">Historical decisions retained</span><span class="pill" id="holds">Technical holds</span><span class="pill" id="legacy">Older browser picks: checking…</span></div>
 <div class="progress"><div id="bar"></div></div>
 <div class="controls">
 <input id="q" type="search" placeholder="Find a Pokémon, family, type, source…" aria-label="Search sprites">
@@ -68,7 +68,7 @@ summary{cursor:pointer;font-weight:750}
 <button class="primary" id="json">Backup / GitHub JSON</button>
 <button id="csv">Export CSV</button>
 <label class="file-label" for="file">Restore progress</label><input id="file" type="file" accept=".json,application/json">
-<button id="bulk" title="Keeps undecided verified designs on this page, excluding competing art and conflicts">Keep eligible on this page</button>
+<button id="bulk" title="Keeps undecided verified designs on this page, excluding competing art and conflicts">Keep eligible on this page</button><button id="recoverLegacy" title="Read decisions already saved by old Mercury GitHub Pages screens on this device">Recover older page choices</button>
 </div>
 </div>
 </header>
@@ -77,7 +77,7 @@ summary{cursor:pointer;font-weight:750}
 <details class="help"><summary>How this review works (and how to save to GitHub)</summary>
 <p>Keep and Cut refer to <b>the specific candidate artwork</b>, not the vanilla Pokémon. For two designs with the same identity, choosing one automatically marks the alternate as not selected. Bulk Keep deliberately skips comparison/conflict cases.</p>
 <p>Decisions autosave in this browser. <b>Backup / GitHub JSON</b> downloads an auditable file with the dataset version, complete decisions, notes, and original identifiers. Send that exported file in ChatGPT to have it applied to GitHub, or commit it in the Sprites repository under <code>audit/user-decisions/</code>. Use Restore progress to import a previous export. This webpage cannot silently write into your GitHub account.</p>
-<p>Previous GBA KEEP/CUT decisions are preserved in <a href="audit/2026-10-23/historical-decisions.json">historical-decisions.json</a>. Pending repairs and candidates deliberately held out of your review are in <a href="audit/2026-10-23/repair-queue.json">repair-queue.json</a>.</p>
+<p>If you previously made decisions in other Mercury Pages review screens on this same browser, <b>Recover older page choices</b> finds relevant local decision records and includes them in the JSON export without rewriting current choices.</p><p>Previous GBA KEEP/CUT decisions are preserved in <a href="audit/2026-10-23/historical-decisions.json">historical-decisions.json</a>. Pending repairs and candidates deliberately held out of your review are in <a href="audit/2026-10-23/repair-queue.json">repair-queue.json</a>.</p>
 </details>
 <div class="nav"><small id="pages">Loading…</small><span class="toolbar"><button id="prev">Previous</button><button id="next">Next</button></span></div>
 <div id="root" aria-live="polite"></div>
@@ -93,6 +93,32 @@ var $=function(id){return document.getElementById(id)};
 var safe=function(s){return String(s==null?"":s).replace(/[&<>"']/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]})};
 var urlPath=function(p){return "./"+String(p||"").split("/").map(function(v){return encodeURIComponent(v)}).join("/")};
 var getChoice=function(id){return STATE[id]&&STATE[id].decision||""};
+function legacyBrowserSelections(){
+ var found=[];try{
+  for(var i=0;i<localStorage.length;i++){
+   var key=localStorage.key(i)||"";
+   if(key===STORAGE||!/^mercury[-_]/i.test(key)||!/(review|approval|decision|picks|polished|placement|legacy|sprite|curation)/i.test(key))continue;
+   var raw=localStorage.getItem(key)||"";
+   if(raw.length>1800000)continue;
+   var data;try{data=JSON.parse(raw)}catch(e){continue}
+   if(!data||typeof data!=="object")continue;
+   var entries=[],group=Array.isArray(data)?data:(data.state&&typeof data.state==="object"?data.state:data);
+   var rows=Array.isArray(group)?group.map(function(x,i){return [String(i),x]}):Object.entries(group);
+   rows.forEach(function(pair){
+    var id=pair[0],v=pair[1],decision="",note="",role="",selection="";
+    if(typeof v==="string"){if(["keep","cut","approve","reject","maybe","hold","yes","no"].includes(v.toLowerCase()))decision=v;else if(v)selection=v}
+    else if(v&&typeof v==="object"){
+     decision=String(v.decision||v.status||"");note=String(v.note||v.notes||"");
+     role=String(v.role||"");selection=String(v.selection||"");
+    }
+    if(decision||note||role||selection)entries.push({identity:id,decision:decision,note:note,role:role,selection:selection});
+   });
+   if(entries.length)found.push({storageKey:key,entries:entries});
+  }
+ }catch(e){}
+ return found;
+}
+
 function store(){
  try{localStorage.setItem(STORAGE,JSON.stringify({schema:"mercury-sprite-decisions-v1",snapshot:DATA.snapshot,state:STATE}));}
  catch(e){$("notice").textContent="Browser storage is unavailable. Please export JSON after making decisions; your selections may not survive a reload."}
@@ -175,6 +201,7 @@ function updateStats(){
  $("done").textContent=done+" decided · "+(DATA.entries.length-done)+" remain";
  $("history").textContent=DATA.counts.historical+" old decisions preserved";
  $("holds").textContent=DATA.technicalHolds.length+" technical holds";
+ var legacy=legacyBrowserSelections();$("legacy").textContent=legacy.reduce(function(n,g){return n+g.entries.length},0)+" older browser picks located";
  $("bar").style.width=(DATA.entries.length?done*100/DATA.entries.length:0)+"%";
 }
 function render(){
@@ -204,12 +231,14 @@ function download(name,content,type){
 function exportPayload(){
  return {schema:"mercury-sprite-decisions-v1",exportedAt:new Date().toISOString(),snapshot:DATA.snapshot,
  datasetSourceCommit:DATA.sourceCommit,repository:DATA.reviewRepository,
+ legacyBrowserSelections:legacyBrowserSelections(),
  entries:DATA.entries.map(function(x){var v=STATE[x.id]||{};return{
  id:x.id,identity:x.identity,name:x.name,family:x.family,source:x.source,category:x.category,
  type1:x.type1,type2:x.type2,front_path:x.front,back_path:x.back,decision:v.decision||"pending",
  note:v.note||"",updated:v.updated||""}})};
 }
 function escCSV(s){return '"'+String(s==null?"":s).replace(/"/g,'""')+'"'}
+$("recoverLegacy").onclick=function(){var groups=legacyBrowserSelections(),count=groups.reduce(function(n,g){return n+g.entries.length},0);alert(count+" stored choices/notes found across "+groups.length+" previous Mercury review pages on this browser. They will be included in your Backup / GitHub JSON export without overwriting current master decisions.");updateStats()};
 $("json").onclick=function(){download("mercury_master_sprite_decisions_2026-10-23.json",JSON.stringify(exportPayload(),null,2),"application/json")};
 $("csv").onclick=function(){
  var e=exportPayload().entries,keys=["id","identity","name","family","source","category","type1","type2","front_path","back_path","decision","note","updated"];
