@@ -26,7 +26,16 @@ for entry in DATA["entries"]:
     original = originals[entry["identity"]]
     assert original["reviewId"] == entry["reviewId"]
     assert original["family"] == entry["family"]
-    assert original["type1"] == entry["type1"] and original["type2"] == entry["type2"]
+    assert original["type1"] == entry["type1"]
+    if original["type2"] != entry["type2"]:
+        normalized = {x["reviewId"]: x for x in DATA.get("typeDisplayNormalization", {}).get("records", [])}
+        # The three historically duplicated Dragon/Dragon labels were normalized
+        # to a genuine Dragon mono-type without changing source art or user votes.
+        assert entry["reviewId"] in normalized
+        assert original["type1"] == original["type2"] == "Dragon"
+        assert entry["type1"] == "Dragon" and entry["type2"] == ""
+        assert normalized[entry["reviewId"]]["before"] == "Dragon / Dragon"
+        assert normalized[entry["reviewId"]]["after"] == "Dragon"
     assert entry["effectiveDecision"] == "keep" and entry["reviewRequired"] is False
     assert entry["artworkIntegrationAllowed"] is False
     assert entry["previewFormat"] == "original-GBA-artwork-not-DS-certified"
