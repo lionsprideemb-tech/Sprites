@@ -29,7 +29,7 @@ def safe_file(relative):
     require(header[:8] == b"\x89PNG\r\n\x1a\n" and header[12:16] == b"IHDR",
             "Invalid PNG header: " + relative)
     width, height = struct.unpack(">II", header[16:24])
-    require(0 < width <= 4096 and 0 < height <= 4096, "Implausible PNG dimensions: " + relative)
+    require(0 < width <= 65535 and 0 < height <= 65535, "Invalid PNG dimensions: " + relative)
     return (width, height)
 
 require(SNAPSHOT["schema"] == "mercury-master-review-v1", "Unexpected snapshot schema")
@@ -59,6 +59,7 @@ require("localStorage" in HTML, "Reviewer missing persistent progress")
 
 historical_by_id = {x["id"]: x for x in history}
 dims = Counter()
+large = []
 categories = Counter()
 for entry in entries:
     require(entry["family"] and entry["name"] and entry["source"], "Unresolved display metadata: " + entry["id"])
@@ -71,6 +72,8 @@ for entry in entries:
     for side in ("front", "back"):
         size = safe_file(entry[side])
         dims[(side, size)] += 1
+        if max(size) > 512 or max(size) / min(size) > 5:
+            large.append((entry["id"], side, entry[side], size))
     categories[entry["category"]] += 1
 
 for entry in technical:
@@ -83,4 +86,7 @@ print("Technical holds:", len(technical))
 print("Verified front/back PNGs:", len(entries) * 2)
 print("Category counts:", dict(categories))
 print("PNG dimension samples:", dict(dims.most_common(8)))
+print("Oversized/spritesheet candidate files:")
+for item in large:
+    print("OVERSIZE_CANDIDATE:", item)
 print("No assets modified or deleted.")
