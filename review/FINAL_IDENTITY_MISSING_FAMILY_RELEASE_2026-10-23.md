@@ -35,3 +35,12 @@ Both candidate groups remain visually together *without new evolution arrows or 
 
 ## Next conditions
 Confirm Furrva's actual source-byte intake and committed manifest, inspect source-pair visuals for pose/quality and implement DS palette/atlas conversion separately. Do not silently approve artwork, promote unsure evolutions, copy unrelated Noctowl art, invent missing sprites or integrate unverified species.
+
+
+## Verified post-release original Furrva binary recovery
+
+Original source bytes were successfully fetched and committed by [the Furrva GitHub workflow run](https://github.com/lionsprideemb-tech/Sprites/actions/runs/40038462240). [Source manifest](https://github.com/lionsprideemb-tech/Sprites/blob/main/DS_CUSTOM_LIBRARY/recovered/Pokengine_Mikitari_Furrva_Source/source_manifest.json) records source SHA-256 and attribution; the original **34×30 front** and **55×51 back** have each been preserved as WebP and decoded losslessly as PNG, without resizing or altering their drawings. Local source preview paths are now used in the canonical reviewer. Source owner/artist: **Mikitari**, original page [Pokéngine Furrva](https://pokengine.org/mons/00uc0o89/Furrva), terms **Free to use with credit**.
+
+These original dimensions are deliberately **not** assumed to be final DS game canvases. This recovery does not create a playable species, shiny sprites, new art approval, or a ROM insertion. The review and integrated sources now track **eight matched previously held source pairs plus one newly downloaded original Furrva front/back pair**. The [updated exception status](identity-family-current-status-2026-10-23.json) still has **five unverified evolution relationship records**, not missing Furrva assets.
+
+The original master integrity workflow subsequently passed [run 40038389959](https://github.com/lionsprideemb-tech/Sprites/actions/runs/40038389959), and the separate Node regression workflow passed [run 40038389954](https://github.com/lionsprideemb-tech/Sprites/actions/runs/40038389954) before the Furrva physical file validation was added. For later commits, use their own run IDs and actual conclusions; the new Node test also checks exact Furrva WebP/PNG SHA-256 and original dimensions.
