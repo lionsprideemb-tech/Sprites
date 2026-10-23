@@ -19,8 +19,8 @@
 | Earlier verified Fakemon pool entries | 158 |
 | Genuine competing-art identity groups | 15 |
 | Competing design options | 30 |
-| Actionable sprite-art choices now in master reviewer | 166 |
-| Items held for metadata/sprite/identity repair | 33 |
+| Actionable sprite-art choices now in master reviewer | 164 |
+| Items held for metadata/sprite/identity repair | 35 |
 | Historical approved rows lacking a linked front/back path | 107 |
 | Historical duplicate identity keys | 5 |
 | Duplicate identities containing conflicting decisions | 2 |
@@ -37,7 +37,7 @@ Arcanine Mega (R0077/R0078), Reuniclus Mega (R0737/R0738), Hydreigon Mega (R0786
 
 ### Image verification
 
-The 166 actionable review entries each declare a front and a back path. Their **332 referenced PNG paths** were checked against the GitHub Git tree of each source pack/converted sprite folder on 2026-10-23; all 332 were present. A separate standard-library GitHub Actions validation also checks PNG signatures/dimensions, identity exclusions, metadata completeness, and export support. Git tree presence alone is not a full DS integration-quality guarantee.
+The 164 actionable review entries each declare a front and a back path. Their **328 referenced PNG paths** were checked against the GitHub Git tree of each source pack/converted sprite folder on 2026-10-23; all 328 were present. A separate standard-library GitHub Actions validation also checks PNG signatures/dimensions, identity exclusions, metadata completeness, and export support. Git tree presence alone is not a full DS integration-quality guarantee.
 
 ### Data contracts
 
@@ -56,3 +56,7 @@ This is an **artwork selection** system. Pokémon forms remain unimplemented unt
 - Some official/custom Megas require source/type/role verification; no provisional type is asserted as canon.
 - Legacy approved rows with missing linked image paths are held for technical recovery, not re-rejected.
 - A real ROM-integrated front/back/shiny/icon quality check has not been performed by this metadata audit.
+
+### Multi-frame image exclusions
+
+The image-dimension validator caught two animated-strip records: Criminalis (5400×100 front, 6400×100 back) and a Mega Flygon option (1920×96 each). These PNGs are preserved without modification but moved from actionable review into technical holds. Their matching standalone frame must be extracted and validated before the reviewer can display them as sprites. Counts after this correction: **164 actionable, 35 technical holds**.
