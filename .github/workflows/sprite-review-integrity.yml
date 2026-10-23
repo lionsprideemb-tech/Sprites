@@ -6,6 +6,8 @@ on:
       - master-review-data.json
       - review/**
       - DS_CUSTOM_LIBRARY/converted/Verified_Source_DS64_Technical_2026_10_23/technical_quality_manifest.json
+      - DS_CUSTOM_LIBRARY/comparison/DS64_Visual_Triage_2026_10_23/comparison_manifest.json
+      - DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy_PNG_Container_Repairs/recovery_manifest.json
       - .github/workflows/sprite-review-integrity.yml
   workflow_dispatch:
 jobs:
@@ -23,3 +25,4 @@ jobs:
         run: |
           python3 -m pip install --quiet pillow
           python3 tools/convert_verified_source_pairs_ds64.py --check
+          python3 tools/build_visual_rescue_comparisons.py --check
