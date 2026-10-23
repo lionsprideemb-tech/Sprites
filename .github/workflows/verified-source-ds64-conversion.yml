@@ -1,0 +1,50 @@
+name: Verified source DS64 conversion quality
+on:
+  push:
+    branches: [main]
+    paths:
+      - "tools/convert_verified_source_pairs_ds64.py"
+      - ".github/workflows/verified-source-ds64-conversion.yml"
+      - "review/recovered-approved-legacy-pairs-2026-10-23.json"
+      - "review/verified-exception-source-pairs-2026-10-23.json"
+      - "DS_CUSTOM_LIBRARY/recovered/Pokengine_Mikitari_Furrva_Source/source_manifest.json"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: mercury-verified-source-ds64-20261023
+  cancel-in-progress: false
+
+jobs:
+  convert:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout existing sprite library
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Install technical converter dependency
+        run: python3 -m pip install --quiet pillow
+      - name: Build all safe 64x64 source-derived candidate previews
+        run: python3 tools/convert_verified_source_pairs_ds64.py
+      - name: Verify output hashes, palettes, silhouettes and original source bytes
+        run: python3 tools/convert_verified_source_pairs_ds64.py --check
+      - name: Verify original 166 votes remain immutable
+        run: node review/tests/master-review-integrity.cjs
+      - name: Commit isolated technical candidate images and audit manifest
+        run: |
+          set -euo pipefail
+          git config user.name "Mercury Sprite Technical Conversion Bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add DS_CUSTOM_LIBRARY/converted/Verified_Source_DS64_Technical_2026_10_23
+          if git diff --cached --quiet; then
+            echo "Deterministic technical previews already present."
+            exit 0
+          fi
+          git commit -m "Stage source-preserving DS64 technical previews and report quarantined oversize/palette cases"
+          git pull --rebase origin main
+          python3 tools/convert_verified_source_pairs_ds64.py --check
+          git push origin HEAD:main
