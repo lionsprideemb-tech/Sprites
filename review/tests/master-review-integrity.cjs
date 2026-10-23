@@ -33,6 +33,7 @@ for(const x of src.entries){
  assert.ok(!ids.has(x.reviewId),"duplicate review ID");ids.add(x.reviewId);
  assert.ok(x.front?.path&&x.back?.path&&x.front?.gitBlobSha&&x.back?.gitBlobSha);
  assert.ok(types.has(x.type1)&&(!x.type2||types.has(x.type2)),"noncanonical type");
+ assert.ok(!x.type2||x.type1!==x.type2,"duplicate primary and secondary type");
  assert.equal(x.effectiveDecision,"keep");
  assert.equal(x.reviewRequired,false);
  assert.equal(x.artworkIntegrationAllowed,false);
