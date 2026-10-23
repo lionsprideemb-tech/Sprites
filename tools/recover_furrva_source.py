@@ -40,7 +40,7 @@ def main() -> None:
             raise ValueError(f"Invalid or oversized original source image: {direction}")
         with Image.open(BytesIO(raw)) as image:
             image.load()
-            if image.format != "WEBP" or image.size != (64, 64) or getattr(image, "n_frames", 1) != 1:
+            if image.format != "WEBP" or not all(0 < n <= 128 for n in image.size) or getattr(image, "n_frames", 1) != 1:
                 raise ValueError(f"Unexpected original Furrva artwork: {direction}, {image.format} {image.size}")
             rgba = image.convert("RGBA")
             if not rgba.getbbox():
@@ -56,7 +56,7 @@ def main() -> None:
             "png_path": (DEST / f"{direction}_source.png").relative_to(ROOT).as_posix(),
             "raw_sha256": hashlib.sha256(raw).hexdigest(),
             "png_sha256": hashlib.sha256(png).hexdigest(),
-            "size": [64, 64],
+            "source_pixel_dimensions": [rgba.width, rgba.height],
             "content_type": mime,
             "conversion": "lossless rendering to RGBA PNG; original WebP retained",
             "ds_certified": False,
@@ -84,7 +84,7 @@ def main() -> None:
         "lossless decoded RGBA previews for technical inspection, **not** polished or newly drawn sprites.\n\n"
         "No new Pokémon IDs, approvals, evolutions, DS-format claims or ROM changes are made.\n"
     ).encode("utf-8"))
-    print("PASS: original Furrva fronts/backs preserved with attribution; source-only, no ROM integration")
+    print("PASS: original cropped Furrva source pixels preserved without padding/scaling; not DS-certified")
     print(json.dumps(manifest, indent=2))
 
 
