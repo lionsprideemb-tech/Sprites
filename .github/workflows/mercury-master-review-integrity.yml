@@ -1,0 +1,30 @@
+name: Mercury Master Sprite Reviewer Integrity
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'master-review.html'
+      - 'master-review-data.json'
+      - 'audit/2026-10-23/**'
+      - 'tools/validate_master_review.py'
+      - '.github/workflows/mercury-master-review-integrity.yml'
+  pull_request:
+    paths:
+      - 'master-review.html'
+      - 'master-review-data.json'
+      - 'audit/2026-10-23/**'
+      - 'tools/validate_master_review.py'
+
+permissions:
+  contents: read
+
+jobs:
+  integrity:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Check out sprite library
+        uses: actions/checkout@v4
+      - name: Validate review, ledger and PNG files
+        run: python3 tools/validate_master_review.py
