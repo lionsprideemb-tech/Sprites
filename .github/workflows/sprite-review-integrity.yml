@@ -5,6 +5,7 @@ on:
       - master-review.html
       - master-review-data.json
       - review/**
+      - DS_CUSTOM_LIBRARY/converted/Verified_Source_DS64_Technical_2026_10_23/technical_quality_manifest.json
       - .github/workflows/sprite-review-integrity.yml
   workflow_dispatch:
 jobs:
@@ -16,3 +17,9 @@ jobs:
         with:
           node-version: "22"
       - run: node review/tests/master-review-integrity.cjs
+      - name: Simulated iPhone quality inspector and protected JSON export
+        run: node review/tests/quality-reviewer-browser-smoke.cjs
+      - name: Reverify original source pixels and every technical candidate hash
+        run: |
+          python3 -m pip install --quiet pillow
+          python3 tools/convert_verified_source_pairs_ds64.py --check
