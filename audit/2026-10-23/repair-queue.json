@@ -751,108 +751,65 @@
       "source": "Elite Redux",
       "resolution": "unresolved",
       "reason": "Approved design requires linked DS sprite pair verification."
+    },
+    {
+      "identity": "phanpy-alternate-form-1",
+      "name": "Phanpy — Alternate (Form 1)",
+      "source": "Reborn / Plates of Arceus",
+      "resolution": "legacy-embedded",
+      "reason": "User-exported Final 262 KEEP overrode older CUT; requires true DS front/back mapping before integration."
+    },
+    {
+      "identity": "mightyena-alternate-form-1",
+      "name": "Mightyena — Alternate (Form 1)",
+      "source": "Reborn / Plates of Arceus",
+      "resolution": "legacy-embedded",
+      "reason": "User-exported Final 262 KEEP overrode older CUT; requires true DS front/back mapping before integration."
+    },
+    {
+      "identity": "gible-bluetowel-alternate-forms-form-2",
+      "name": "Gible — BlueTowel Alternate forms (Form 2)",
+      "source": "Reborn / Plates of Arceus",
+      "resolution": "legacy-embedded",
+      "reason": "User-exported Final 262 KEEP overrode older CUT; requires true DS front/back mapping before integration."
+    },
+    {
+      "identity": "gabite-bluetowel-alternate-forms-form-2",
+      "name": "Gabite — BlueTowel Alternate forms (Form 2)",
+      "source": "Reborn / Plates of Arceus",
+      "resolution": "legacy-embedded",
+      "reason": "User-exported Final 262 KEEP overrode older CUT; requires true DS front/back mapping before integration."
+    },
+    {
+      "identity": "garchomp-alternate-form-2",
+      "name": "Garchomp — Alternate (Form 2)",
+      "source": "Reborn / Plates of Arceus",
+      "resolution": "legacy-embedded",
+      "reason": "User-exported Final 262 KEEP overrode older CUT; requires true DS front/back mapping before integration."
+    },
+    {
+      "identity": "garchomp-alternate-mega-form-3",
+      "name": "Garchomp — Alternate Mega (Form 3)",
+      "source": "Reborn / Plates of Arceus",
+      "resolution": "legacy-embedded",
+      "reason": "User-exported Final 262 KEEP overrode older CUT; requires true DS front/back mapping before integration."
+    },
+    {
+      "identity": "carnivine-bluetowel-alternate-form-form-1",
+      "name": "Carnivine — BlueTowel Alternate form (Form 1)",
+      "source": "Reborn / Plates of Arceus",
+      "resolution": "legacy-embedded",
+      "reason": "User-exported Final 262 KEEP overrode older CUT; requires true DS front/back mapping before integration."
+    },
+    {
+      "identity": "lilligant-alternate-form-2",
+      "name": "Lilligant — Alternate (Form 2)",
+      "source": "Reborn / Plates of Arceus",
+      "resolution": "legacy-embedded",
+      "reason": "User-exported Final 262 KEEP overrode older CUT; requires true DS front/back mapping before integration."
     }
   ],
   "technicalHolds": [
-    {
-      "id": "new:farfetch-d-alternate-form-1",
-      "identity": "farfetch-d-alternate-form-1",
-      "name": "Farfetch'd — Alternate (Form 1)",
-      "source": "Reborn_Plates",
-      "front": "",
-      "back": "",
-      "reason": "Missing actual front/back file"
-    },
-    {
-      "id": "new:ribombee-bluetowel-alternate-form-form-2",
-      "identity": "ribombee-bluetowel-alternate-form-form-2",
-      "name": "Ribombee — BlueTowel Alternate form (Form 2)",
-      "source": "Reborn_Plates",
-      "front": "",
-      "back": "",
-      "reason": "Missing actual front/back file"
-    },
-    {
-      "id": "new:sirfetch-d-alternate-form-1",
-      "identity": "sirfetch-d-alternate-form-1",
-      "name": "Sirfetch'd — Alternate (Form 1)",
-      "source": "Reborn_Plates",
-      "front": "",
-      "back": "",
-      "reason": "Missing actual front/back file"
-    },
-    {
-      "id": "new:meganium-mega",
-      "identity": "meganium-mega",
-      "name": "MEGANIUM_MEGA",
-      "source": "Elite_Redux",
-      "front": "DS_CUSTOM_LIBRARY/converted/Final_262_Polished/meganium_mega/front.png",
-      "back": "DS_CUSTOM_LIBRARY/converted/Final_262_Polished/meganium_mega/back.png",
-      "reason": "Custom type needs verification"
-    },
-    {
-      "id": "new:meowstic-mega",
-      "identity": "meowstic-mega",
-      "name": "MEOWSTIC_MEGA",
-      "source": "Elite_Redux",
-      "front": "DS_CUSTOM_LIBRARY/converted/Final_262_Polished/meowstic_mega/front.png",
-      "back": "DS_CUSTOM_LIBRARY/converted/Final_262_Polished/meowstic_mega/back.png",
-      "reason": "Custom type needs verification"
-    },
-    {
-      "id": "new:pyroar-mega",
-      "identity": "pyroar-mega",
-      "name": "PYROAR_MEGA",
-      "source": "Elite_Redux",
-      "front": "DS_CUSTOM_LIBRARY/converted/Final_262_Polished/pyroar_mega/front.png",
-      "back": "DS_CUSTOM_LIBRARY/converted/Final_262_Polished/pyroar_mega/back.png",
-      "reason": "Custom type needs verification"
-    },
-    {
-      "id": "new:raichu-mega-x",
-      "identity": "raichu-mega-x",
-      "name": "RAICHU_MEGA_X",
-      "source": "Elite_Redux",
-      "front": "DS_CUSTOM_LIBRARY/converted/Final_262_Polished/raichu_mega_x/front.png",
-      "back": "DS_CUSTOM_LIBRARY/converted/Final_262_Polished/raichu_mega_x/back.png",
-      "reason": "Custom type needs verification"
-    },
-    {
-      "id": "new:raichu-mega-y",
-      "identity": "raichu-mega-y",
-      "name": "RAICHU_MEGA_Y",
-      "source": "Elite_Redux",
-      "front": "DS_CUSTOM_LIBRARY/converted/Final_262_Polished/raichu_mega_y/front.png",
-      "back": "DS_CUSTOM_LIBRARY/converted/Final_262_Polished/raichu_mega_y/back.png",
-      "reason": "Custom type needs verification"
-    },
-    {
-      "id": "new:scolipede-mega",
-      "identity": "scolipede-mega",
-      "name": "SCOLIPEDE_MEGA",
-      "source": "Elite_Redux",
-      "front": "DS_CUSTOM_LIBRARY/converted/Final_262_Polished/scolipede_mega/front.png",
-      "back": "DS_CUSTOM_LIBRARY/converted/Final_262_Polished/scolipede_mega/back.png",
-      "reason": "Custom type needs verification"
-    },
-    {
-      "id": "new:scovillain-mega",
-      "identity": "scovillain-mega",
-      "name": "SCOVILLAIN_MEGA",
-      "source": "Elite_Redux",
-      "front": "DS_CUSTOM_LIBRARY/converted/Final_262_Polished/scovillain_mega/front.png",
-      "back": "DS_CUSTOM_LIBRARY/converted/Final_262_Polished/scovillain_mega/back.png",
-      "reason": "Custom type needs verification"
-    },
-    {
-      "id": "new:scrafty-mega",
-      "identity": "scrafty-mega",
-      "name": "SCRAFTY_MEGA",
-      "source": "Elite_Redux",
-      "front": "DS_CUSTOM_LIBRARY/converted/Final_262_Polished/scrafty_mega/front.png",
-      "back": "DS_CUSTOM_LIBRARY/converted/Final_262_Polished/scrafty_mega/back.png",
-      "reason": "Custom type needs verification"
-    },
     {
       "id": "new:skarmory-mega",
       "identity": "skarmory-mega",
@@ -860,42 +817,6 @@
       "source": "Elite_Redux",
       "front": "DS_CUSTOM_LIBRARY/converted/Final_262_Polished/skarmory_mega/front.png",
       "back": "DS_CUSTOM_LIBRARY/converted/Final_262_Polished/skarmory_mega/back.png",
-      "reason": "Custom type needs verification"
-    },
-    {
-      "id": "new:staraptor-mega",
-      "identity": "staraptor-mega",
-      "name": "STARAPTOR_MEGA",
-      "source": "Elite_Redux",
-      "front": "DS_CUSTOM_LIBRARY/converted/Final_262_Polished/staraptor_mega/front.png",
-      "back": "DS_CUSTOM_LIBRARY/converted/Final_262_Polished/staraptor_mega/back.png",
-      "reason": "Custom type needs verification"
-    },
-    {
-      "id": "new:starmie-mega",
-      "identity": "starmie-mega",
-      "name": "STARMIE_MEGA",
-      "source": "Elite_Redux",
-      "front": "DS_CUSTOM_LIBRARY/converted/Final_262_Polished/starmie_mega/front.png",
-      "back": "DS_CUSTOM_LIBRARY/converted/Final_262_Polished/starmie_mega/back.png",
-      "reason": "Custom type needs verification"
-    },
-    {
-      "id": "new:victreebel-mega",
-      "identity": "victreebel-mega",
-      "name": "VICTREEBEL_MEGA",
-      "source": "Elite_Redux",
-      "front": "DS_CUSTOM_LIBRARY/converted/Final_262_Polished/victreebel_mega/front.png",
-      "back": "DS_CUSTOM_LIBRARY/converted/Final_262_Polished/victreebel_mega/back.png",
-      "reason": "Custom type needs verification"
-    },
-    {
-      "id": "new:zeraora-mega",
-      "identity": "zeraora-mega",
-      "name": "ZERAORA_MEGA",
-      "source": "Elite_Redux",
-      "front": "DS_CUSTOM_LIBRARY/converted/Final_262_Polished/zeraora_mega/front.png",
-      "back": "DS_CUSTOM_LIBRARY/converted/Final_262_Polished/zeraora_mega/back.png",
       "reason": "Custom type needs verification"
     },
     {
@@ -1007,15 +928,6 @@
       "reason": "Back sprite not confidently mapped"
     },
     {
-      "id": "compare:garchomp-mega-z:1",
-      "identity": "garchomp-mega-z",
-      "name": "Garchomp Mega Z — Design 1",
-      "source": "PokeDot_Engine_Mega_Intake",
-      "front": "DS_CUSTOM_LIBRARY/packs/PokeDot_Engine_Mega_Intake/garchomp-mega-z/front.png",
-      "back": "",
-      "reason": "Back sprite not confidently mapped"
-    },
-    {
       "id": "reconcile:wailmer-alternate-form-1",
       "identity": "wailmer-alternate-form-1",
       "name": "Wailmer — Alternate (Form 1)",
@@ -1059,15 +971,6 @@
       "front": "DS_CUSTOM_LIBRARY/packs/Festival_Misc/Misc/Fronts/CriminalisFront.png",
       "back": "DS_CUSTOM_LIBRARY/packs/Festival_Misc/Misc/Backs/CriminalisBack.png",
       "reason": "Multi-frame animation strips (5400px front / 6400px back); extract matching single frames before artwork approval"
-    },
-    {
-      "id": "compare:flygon-1:1",
-      "identity": "flygon-1",
-      "name": "Mega Flygon — Design 1",
-      "source": "Mega_Flygon_Animated_Gen5",
-      "front": "DS_CUSTOM_LIBRARY/packs/Mega_Flygon_Animated_Gen5/Mega Flygon/Front/FLYGON_1.png",
-      "back": "DS_CUSTOM_LIBRARY/packs/Mega_Flygon_Animated_Gen5/Mega Flygon/Back/FLYGON_1.png",
-      "reason": "Multi-frame animation strips (1920px front / 1920px back); extract matching single frames before artwork approval"
     }
   ],
   "protectedHistoricalDecisionsFromNewImport": [
@@ -2971,5 +2874,541 @@
       "backWidth": 1920,
       "action": "Extract a true single-frame sprite; do not automatically resize/stretch animation sheet"
     }
-  ]
+  ],
+  "resolvedByRecoveredUserExports": {
+    "sourceFile": "review/recovered-user-export-decisions-2026-10-23.json",
+    "sourceBlob": "99a8335db6be68412399e17bffc7b234710b60ce",
+    "selectedArtwork": [
+      {
+        "key": "absol-mega-z|DrPrettyman_DS_64x64|DS_CUSTOM_LIBRARY/packs/DrPrettyman_DS_64x64/sprites-processed/front/absol-mega-z.png",
+        "identity": "absol-mega-z",
+        "source": "DrPrettyman_DS_64x64",
+        "front": "DS_CUSTOM_LIBRARY/packs/DrPrettyman_DS_64x64/sprites-processed/front/absol-mega-z.png",
+        "decision": "cut",
+        "sourceExport": "ds_sprite_decisions_2026_10_02",
+        "sourceFilename": "mercury_ds_sprite_decisions(2).csv",
+        "reviewId": "compare:absol-mega-z:1",
+        "name": "Absol Mega Z — Design 1",
+        "family": "Absol",
+        "type1": "Dark",
+        "type2": "Ghost"
+      },
+      {
+        "key": "absol-mega-z|Elite_Redux_Bulk|DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/absol_mega_z/front.png",
+        "identity": "absol-mega-z",
+        "source": "Elite_Redux_Bulk",
+        "front": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/absol_mega_z/front.png",
+        "decision": "keep",
+        "sourceExport": "ds_sprite_decisions_2026_10_02",
+        "sourceFilename": "mercury_ds_sprite_decisions(2).csv",
+        "reviewId": "compare:absol-mega-z:2",
+        "name": "Absol Mega Z — Design 2",
+        "family": "Absol",
+        "type1": "Dark",
+        "type2": "Ghost"
+      },
+      {
+        "key": "baxcalibur-mega|DrPrettyman_DS_64x64|DS_CUSTOM_LIBRARY/packs/DrPrettyman_DS_64x64/sprites-processed/front/baxcalibur-mega.png",
+        "identity": "baxcalibur-mega",
+        "source": "DrPrettyman_DS_64x64",
+        "front": "DS_CUSTOM_LIBRARY/packs/DrPrettyman_DS_64x64/sprites-processed/front/baxcalibur-mega.png",
+        "decision": "keep",
+        "sourceExport": "ds_sprite_decisions_2026_10_02",
+        "sourceFilename": "mercury_ds_sprite_decisions(2).csv",
+        "reviewId": "compare:baxcalibur-mega:1",
+        "name": "Baxcalibur Mega — Design 1",
+        "family": "Frigibax → Arctibax → Baxcalibur",
+        "type1": "Dragon",
+        "type2": "Ice"
+      },
+      {
+        "key": "baxcalibur-mega|Elite_Redux_Bulk|DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/baxcalibur_mega/front.png",
+        "identity": "baxcalibur-mega",
+        "source": "Elite_Redux_Bulk",
+        "front": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/baxcalibur_mega/front.png",
+        "decision": "cut",
+        "sourceExport": "ds_sprite_decisions_2026_10_02",
+        "sourceFilename": "mercury_ds_sprite_decisions(2).csv",
+        "reviewId": "compare:baxcalibur-mega:2",
+        "name": "Baxcalibur Mega — Design 2",
+        "family": "Frigibax → Arctibax → Baxcalibur",
+        "type1": "Dragon",
+        "type2": "Ice"
+      },
+      {
+        "key": "garchomp-mega-z|Elite_Redux_Bulk|DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/garchomp_mega_z/front.png",
+        "identity": "garchomp-mega-z",
+        "source": "Elite_Redux_Bulk",
+        "front": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/garchomp_mega_z/front.png",
+        "decision": "keep",
+        "sourceExport": "ds_sprite_decisions_2026_10_02",
+        "sourceFilename": "mercury_ds_sprite_decisions(2).csv",
+        "reviewId": "compare:garchomp-mega-z:2",
+        "name": "Garchomp Mega Z — Design 2",
+        "family": "Gible → Gabite → Garchomp",
+        "type1": "Dragon",
+        "type2": ""
+      },
+      {
+        "key": "noctowl-1|Festival_Lumio|DS_CUSTOM_LIBRARY/packs/Festival_Lumio/Lumio/Pokemon/Front/NOCTOWL_1.png",
+        "identity": "noctowl-1",
+        "source": "Festival_Lumio",
+        "front": "DS_CUSTOM_LIBRARY/packs/Festival_Lumio/Lumio/Pokemon/Front/NOCTOWL_1.png",
+        "decision": "keep",
+        "sourceExport": "ds_sprite_decisions_2026_10_02",
+        "sourceFilename": "mercury_ds_sprite_decisions(2).csv",
+        "reviewId": "compare:noctowl-1:2",
+        "name": "Luminian Noctowl — Design 2",
+        "family": "Noctowl 1 → Enchantowl",
+        "type1": "Psychic",
+        "type2": ""
+      },
+      {
+        "key": "lucario-mega-z|DrPrettyman_DS_64x64|DS_CUSTOM_LIBRARY/packs/DrPrettyman_DS_64x64/sprites-processed/front/lucario-mega-z.png",
+        "identity": "lucario-mega-z",
+        "source": "DrPrettyman_DS_64x64",
+        "front": "DS_CUSTOM_LIBRARY/packs/DrPrettyman_DS_64x64/sprites-processed/front/lucario-mega-z.png",
+        "decision": "keep",
+        "sourceExport": "ds_sprite_decisions_2026_10_02",
+        "sourceFilename": "mercury_ds_sprite_decisions(2).csv",
+        "reviewId": "compare:lucario-mega-z:1",
+        "name": "Lucario Mega Z — Design 1",
+        "family": "Riolu → Lucario",
+        "type1": "Fighting",
+        "type2": "Psychic"
+      },
+      {
+        "key": "lucario-mega-z|Elite_Redux_Bulk|DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/lucario_mega_z/front.png",
+        "identity": "lucario-mega-z",
+        "source": "Elite_Redux_Bulk",
+        "front": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/lucario_mega_z/front.png",
+        "decision": "cut",
+        "sourceExport": "ds_sprite_decisions_2026_10_02",
+        "sourceFilename": "mercury_ds_sprite_decisions(2).csv",
+        "reviewId": "compare:lucario-mega-z:2",
+        "name": "Lucario Mega Z — Design 2",
+        "family": "Riolu → Lucario",
+        "type1": "Fighting",
+        "type2": "Psychic"
+      },
+      {
+        "key": "golisopod-mega|DrPrettyman_DS_64x64|DS_CUSTOM_LIBRARY/packs/DrPrettyman_DS_64x64/sprites-processed/front/golisopod-mega.png",
+        "identity": "golisopod-mega",
+        "source": "DrPrettyman_DS_64x64",
+        "front": "DS_CUSTOM_LIBRARY/packs/DrPrettyman_DS_64x64/sprites-processed/front/golisopod-mega.png",
+        "decision": "cut",
+        "sourceExport": "ds_sprite_decisions_2026_10_02",
+        "sourceFilename": "mercury_ds_sprite_decisions(2).csv",
+        "reviewId": "compare:golisopod-mega:1",
+        "name": "Golisopod Mega — Design 1",
+        "family": "Wimpod → Golisopod",
+        "type1": "Bug",
+        "type2": "Steel"
+      },
+      {
+        "key": "golisopod-mega|Elite_Redux_Bulk|DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/golisopod_mega/front.png",
+        "identity": "golisopod-mega",
+        "source": "Elite_Redux_Bulk",
+        "front": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/golisopod_mega/front.png",
+        "decision": "keep",
+        "sourceExport": "ds_sprite_decisions_2026_10_02",
+        "sourceFilename": "mercury_ds_sprite_decisions(2).csv",
+        "reviewId": "compare:golisopod-mega:2",
+        "name": "Golisopod Mega — Design 2",
+        "family": "Wimpod → Golisopod",
+        "type1": "Bug",
+        "type2": "Steel"
+      }
+    ],
+    "technicallyBlockedButAlreadyRejected": [
+      {
+        "id": "new:farfetch-d-alternate-form-1",
+        "identity": "farfetch-d-alternate-form-1",
+        "decision": "cut",
+        "evidence": {
+          "identity": "farfetch-d-alternate-form-1",
+          "decision": "cut",
+          "role": "",
+          "note": "",
+          "export": "final_polished_initial_2026_10_02",
+          "file": "mercury_final_polished_sprite_decisions.csv"
+        },
+        "reason": "Final polished export explicitly deletes this candidate"
+      },
+      {
+        "id": "new:ribombee-bluetowel-alternate-form-form-2",
+        "identity": "ribombee-bluetowel-alternate-form-form-2",
+        "decision": "cut",
+        "evidence": {
+          "identity": "ribombee-bluetowel-alternate-form-form-2",
+          "decision": "cut",
+          "role": "",
+          "note": "",
+          "export": "final_polished_initial_2026_10_02",
+          "file": "mercury_final_polished_sprite_decisions.csv"
+        },
+        "reason": "Final polished export explicitly deletes this candidate"
+      },
+      {
+        "id": "new:sirfetch-d-alternate-form-1",
+        "identity": "sirfetch-d-alternate-form-1",
+        "decision": "cut",
+        "evidence": {
+          "identity": "sirfetch-d-alternate-form-1",
+          "decision": "cut",
+          "role": "",
+          "note": "",
+          "export": "final_polished_initial_2026_10_02",
+          "file": "mercury_final_polished_sprite_decisions.csv"
+        },
+        "reason": "Final polished export explicitly deletes this candidate"
+      },
+      {
+        "id": "new:meganium-mega",
+        "identity": "meganium-mega",
+        "decision": "cut",
+        "evidence": {
+          "identity": "meganium-mega",
+          "decision": "cut",
+          "role": "",
+          "note": "",
+          "export": "final_polished_initial_2026_10_02",
+          "file": "mercury_final_polished_sprite_decisions.csv"
+        },
+        "reason": "Final polished export explicitly deletes this candidate"
+      },
+      {
+        "id": "new:meowstic-mega",
+        "identity": "meowstic-mega",
+        "decision": "cut",
+        "evidence": {
+          "identity": "meowstic-mega",
+          "decision": "cut",
+          "role": "",
+          "note": "",
+          "export": "final_polished_initial_2026_10_02",
+          "file": "mercury_final_polished_sprite_decisions.csv"
+        },
+        "reason": "Final polished export explicitly deletes this candidate"
+      },
+      {
+        "id": "new:pyroar-mega",
+        "identity": "pyroar-mega",
+        "decision": "cut",
+        "evidence": {
+          "identity": "pyroar-mega",
+          "decision": "cut",
+          "role": "",
+          "note": "",
+          "export": "final_polished_initial_2026_10_02",
+          "file": "mercury_final_polished_sprite_decisions.csv"
+        },
+        "reason": "Final polished export explicitly deletes this candidate"
+      },
+      {
+        "id": "new:raichu-mega-x",
+        "identity": "raichu-mega-x",
+        "decision": "cut",
+        "evidence": {
+          "identity": "raichu-mega-x",
+          "decision": "cut",
+          "role": "",
+          "note": "",
+          "export": "final_polished_initial_2026_10_02",
+          "file": "mercury_final_polished_sprite_decisions.csv"
+        },
+        "reason": "Final polished export explicitly deletes this candidate"
+      },
+      {
+        "id": "new:raichu-mega-y",
+        "identity": "raichu-mega-y",
+        "decision": "cut",
+        "evidence": {
+          "identity": "raichu-mega-y",
+          "decision": "cut",
+          "role": "",
+          "note": "",
+          "export": "final_polished_initial_2026_10_02",
+          "file": "mercury_final_polished_sprite_decisions.csv"
+        },
+        "reason": "Final polished export explicitly deletes this candidate"
+      },
+      {
+        "id": "new:scolipede-mega",
+        "identity": "scolipede-mega",
+        "decision": "cut",
+        "evidence": {
+          "identity": "scolipede-mega",
+          "decision": "cut",
+          "role": "",
+          "note": "",
+          "export": "final_polished_initial_2026_10_02",
+          "file": "mercury_final_polished_sprite_decisions.csv"
+        },
+        "reason": "Final polished export explicitly deletes this candidate"
+      },
+      {
+        "id": "new:scovillain-mega",
+        "identity": "scovillain-mega",
+        "decision": "cut",
+        "evidence": {
+          "identity": "scovillain-mega",
+          "decision": "cut",
+          "role": "",
+          "note": "",
+          "export": "final_polished_initial_2026_10_02",
+          "file": "mercury_final_polished_sprite_decisions.csv"
+        },
+        "reason": "Final polished export explicitly deletes this candidate"
+      },
+      {
+        "id": "new:scrafty-mega",
+        "identity": "scrafty-mega",
+        "decision": "cut",
+        "evidence": {
+          "identity": "scrafty-mega",
+          "decision": "cut",
+          "role": "",
+          "note": "",
+          "export": "final_polished_initial_2026_10_02",
+          "file": "mercury_final_polished_sprite_decisions.csv"
+        },
+        "reason": "Final polished export explicitly deletes this candidate"
+      },
+      {
+        "id": "new:staraptor-mega",
+        "identity": "staraptor-mega",
+        "decision": "cut",
+        "evidence": {
+          "identity": "staraptor-mega",
+          "decision": "cut",
+          "role": "",
+          "note": "",
+          "export": "final_polished_initial_2026_10_02",
+          "file": "mercury_final_polished_sprite_decisions.csv"
+        },
+        "reason": "Final polished export explicitly deletes this candidate"
+      },
+      {
+        "id": "new:starmie-mega",
+        "identity": "starmie-mega",
+        "decision": "cut",
+        "evidence": {
+          "identity": "starmie-mega",
+          "decision": "cut",
+          "role": "",
+          "note": "",
+          "export": "final_polished_initial_2026_10_02",
+          "file": "mercury_final_polished_sprite_decisions.csv"
+        },
+        "reason": "Final polished export explicitly deletes this candidate"
+      },
+      {
+        "id": "new:victreebel-mega",
+        "identity": "victreebel-mega",
+        "decision": "cut",
+        "evidence": {
+          "identity": "victreebel-mega",
+          "decision": "cut",
+          "role": "",
+          "note": "",
+          "export": "final_polished_initial_2026_10_02",
+          "file": "mercury_final_polished_sprite_decisions.csv"
+        },
+        "reason": "Final polished export explicitly deletes this candidate"
+      },
+      {
+        "id": "new:zeraora-mega",
+        "identity": "zeraora-mega",
+        "decision": "cut",
+        "evidence": {
+          "identity": "zeraora-mega",
+          "decision": "cut",
+          "role": "",
+          "note": "",
+          "export": "final_polished_initial_2026_10_02",
+          "file": "mercury_final_polished_sprite_decisions.csv"
+        },
+        "reason": "Final polished export explicitly deletes this candidate"
+      },
+      {
+        "id": "compare:garchomp-mega-z:1",
+        "identity": "garchomp-mega-z",
+        "decision": "cut",
+        "evidence": {
+          "key": "garchomp-mega-z|PokeDot_Engine_Mega_Intake|DS_CUSTOM_LIBRARY/packs/PokeDot_Engine_Mega_Intake/garchomp-mega-z/front.png",
+          "identity": "garchomp-mega-z",
+          "source": "PokeDot_Engine_Mega_Intake",
+          "front": "DS_CUSTOM_LIBRARY/packs/PokeDot_Engine_Mega_Intake/garchomp-mega-z/front.png",
+          "decision": "cut",
+          "sourceExport": "ds_sprite_decisions_2026_10_02",
+          "sourceFilename": "mercury_ds_sprite_decisions(2).csv"
+        },
+        "reason": "Original DS art comparison export already rejected this exact sprite"
+      },
+      {
+        "id": "compare:flygon-1:1",
+        "identity": "flygon-1",
+        "decision": "cut",
+        "evidence": {
+          "key": "flygon-1|Mega_Flygon_Animated_Gen5|DS_CUSTOM_LIBRARY/packs/Mega_Flygon_Animated_Gen5/Mega Flygon/Front/FLYGON_1.png",
+          "identity": "flygon-1",
+          "source": "Mega_Flygon_Animated_Gen5",
+          "front": "DS_CUSTOM_LIBRARY/packs/Mega_Flygon_Animated_Gen5/Mega Flygon/Front/FLYGON_1.png",
+          "decision": "cut",
+          "sourceExport": "ds_sprite_decisions_2026_10_02",
+          "sourceFilename": "mercury_ds_sprite_decisions(2).csv"
+        },
+        "reason": "Original DS art comparison export already rejected this exact sprite"
+      }
+    ],
+    "restoredPolishedKeeps": [
+      {
+        "reviewId": "R0370",
+        "id": "phanpy-alternate-form-1",
+        "from": "cut",
+        "to": "keep",
+        "export": "final_polished_initial_2026_10_02"
+      },
+      {
+        "reviewId": "R0402",
+        "id": "mightyena-alternate-form-1",
+        "from": "cut",
+        "to": "keep",
+        "export": "final_polished_initial_2026_10_02"
+      },
+      {
+        "reviewId": "R0640",
+        "id": "gible-bluetowel-alternate-forms-form-2",
+        "from": "cut",
+        "to": "keep",
+        "export": "final_polished_initial_2026_10_02"
+      },
+      {
+        "reviewId": "R0642",
+        "id": "gabite-bluetowel-alternate-forms-form-2",
+        "from": "cut",
+        "to": "keep",
+        "export": "final_polished_initial_2026_10_02"
+      },
+      {
+        "reviewId": "R0645",
+        "id": "garchomp-alternate-form-2",
+        "from": "cut",
+        "to": "keep",
+        "export": "final_polished_initial_2026_10_02"
+      },
+      {
+        "reviewId": "R0647",
+        "id": "garchomp-alternate-mega-form-3",
+        "from": "cut",
+        "to": "keep",
+        "export": "final_polished_initial_2026_10_02"
+      },
+      {
+        "reviewId": "R0656",
+        "id": "carnivine-bluetowel-alternate-form-form-1",
+        "from": "cut",
+        "to": "keep",
+        "export": "final_polished_initial_2026_10_02"
+      },
+      {
+        "reviewId": "R0708",
+        "id": "lilligant-alternate-form-2",
+        "from": "cut",
+        "to": "keep",
+        "export": "final_polished_initial_2026_10_02"
+      }
+    ],
+    "polishedKeepEntries": [
+      {
+        "identity": "skarmory-mega",
+        "decision": "keep",
+        "role": "",
+        "note": "",
+        "export": "final_polished_initial_2026_10_02",
+        "file": "mercury_final_polished_sprite_decisions.csv"
+      },
+      {
+        "identity": "phanpy-alternate-form-1",
+        "decision": "keep",
+        "role": "",
+        "note": "",
+        "export": "final_polished_initial_2026_10_02",
+        "file": "mercury_final_polished_sprite_decisions.csv"
+      },
+      {
+        "identity": "mightyena-alternate-form-1",
+        "decision": "keep",
+        "role": "",
+        "note": "",
+        "export": "final_polished_initial_2026_10_02",
+        "file": "mercury_final_polished_sprite_decisions.csv"
+      },
+      {
+        "identity": "gabite-bluetowel-alternate-forms-form-2",
+        "decision": "keep",
+        "role": "",
+        "note": "",
+        "export": "final_polished_initial_2026_10_02",
+        "file": "mercury_final_polished_sprite_decisions.csv"
+      },
+      {
+        "identity": "garchomp-alternate-form-2",
+        "decision": "keep",
+        "role": "",
+        "note": "",
+        "export": "final_polished_initial_2026_10_02",
+        "file": "mercury_final_polished_sprite_decisions.csv"
+      },
+      {
+        "identity": "garchomp-alternate-mega-form-3",
+        "decision": "keep",
+        "role": "",
+        "note": "",
+        "export": "final_polished_initial_2026_10_02",
+        "file": "mercury_final_polished_sprite_decisions.csv"
+      },
+      {
+        "identity": "gible-bluetowel-alternate-forms-form-2",
+        "decision": "keep",
+        "role": "",
+        "note": "",
+        "export": "final_polished_initial_2026_10_02",
+        "file": "mercury_final_polished_sprite_decisions.csv"
+      },
+      {
+        "identity": "carnivine-bluetowel-alternate-form-form-1",
+        "decision": "keep",
+        "role": "",
+        "note": "",
+        "export": "final_polished_initial_2026_10_02",
+        "file": "mercury_final_polished_sprite_decisions.csv"
+      },
+      {
+        "identity": "lilligant-alternate-form-2",
+        "decision": "keep",
+        "role": "",
+        "note": "",
+        "export": "final_polished_initial_2026_10_02",
+        "file": "mercury_final_polished_sprite_decisions.csv"
+      },
+      {
+        "identity": "merrykarp",
+        "decision": "keep",
+        "role": "Delta",
+        "note": "",
+        "export": "final_polished_followup_2026_10_02",
+        "file": "mercury_final_polished_sprite_decisions(2).csv"
+      },
+      {
+        "identity": "gyarevalry",
+        "decision": "keep",
+        "role": "Delta",
+        "note": "",
+        "export": "final_polished_followup_2026_10_02",
+        "file": "mercury_final_polished_sprite_decisions(2).csv"
+      }
+    ]
+  }
 }
