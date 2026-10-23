@@ -45,7 +45,7 @@ footer{font-size:11px;color:#536374;text-align:center;margin-top:20px;padding:15
 details.help{margin:10px 0;background:#fffdfa;border:1px solid #d5cbbb;border-radius:10px;padding:9px;font-size:12px;line-height:1.6}
 summary{cursor:pointer;font-weight:750}
 @media (max-width:570px){header{position:relative}h1{font-size:19px}.controls{gap:6px}.controls>button,.file-label{padding:8px}.family-head{flex-wrap:wrap}.sprites{grid-template-columns:1fr 1fr}.sprite img{width:102px;height:96px}.sprite{min-height:121px}.cards{grid-template-columns:1fr}.nav{align-items:center}}
-.rec-filter{display:none;gap:8px;align-items:center;font-size:12px;font-weight:700}.rec-info{margin:8px;padding:9px;border-radius:9px;background:#eaf2f8;font-size:12px;line-height:1.5}.identity-warning{font-size:12px;line-height:1.5;background:#fff1d7;border:1px solid #deb983;padding:10px;margin:8px;border-radius:10px}.identity-warning b{color:#8e471c}.creator-credit{font-size:11px;color:#315574;margin-top:4px}.source-name{font-size:11px;color:#66717c;margin-top:2px}.identity-form{display:grid;gap:7px;padding:9px;margin:9px;border:1px solid #d6d4ca;border-radius:10px}.identity-form label{font-size:11px;font-weight:700;display:block}.identity-form input{display:block;width:100%;padding:9px;margin-top:3px;border:1px solid #c5cbd1;border-radius:8px;font-size:13px}.identity-form button{width:100%}.identity-form .small{font-size:11px;color:#64717e}.identity-detail{padding:0 9px 7px;font-size:11px}.identity-detail a{color:#225b88;text-decoration:underline}
+.quality-flag{font-size:11px;font-weight:700;line-height:1.4;margin:7px 10px;padding:8px 9px;border-radius:8px;background:#e9e4d8}.quality-flag.blocked{background:#fff0d7}.quality-flag.quantized{background:#e8edf8}.quality-slot{padding:7px 10px;border-top:1px solid #e8e6df;font-size:11px}.quality-slot .sprites{margin-top:5px}.quality-status{font-size:11px;font-weight:700;padding:5px 8px;margin:5px 0;background:#eee;border-radius:7px}.quality-evidence{overflow-wrap:anywhere;font-size:10px;opacity:.85}.quality-filter{display:none;align-items:center;gap:6px;font-size:11px}.rec-filter{display:none;gap:8px;align-items:center;font-size:12px;font-weight:700}.rec-info{margin:8px;padding:9px;border-radius:9px;background:#eaf2f8;font-size:12px;line-height:1.5}.identity-warning{font-size:12px;line-height:1.5;background:#fff1d7;border:1px solid #deb983;padding:10px;margin:8px;border-radius:10px}.identity-warning b{color:#8e471c}.creator-credit{font-size:11px;color:#315574;margin-top:4px}.source-name{font-size:11px;color:#66717c;margin-top:2px}.identity-form{display:grid;gap:7px;padding:9px;margin:9px;border:1px solid #d6d4ca;border-radius:10px}.identity-form label{font-size:11px;font-weight:700;display:block}.identity-form input{display:block;width:100%;padding:9px;margin-top:3px;border:1px solid #c5cbd1;border-radius:8px;font-size:13px}.identity-form button{width:100%}.identity-form .small{font-size:11px;color:#64717e}.identity-detail{padding:0 9px 7px;font-size:11px}.identity-detail a{color:#225b88;text-decoration:underline}
 </style>
 </head>
 <body>
@@ -53,7 +53,7 @@ summary{cursor:pointer;font-weight:750}
 <div class="wrap">
 <h1>Pokémon Mercury Redux — Master Sprite Review</h1>
 <p class="sub">Exception-only • Evolution families together • Original approvals protected • No automatic ROM integration</p>
-<div class="stats"><span class="pill" id="total">Loading review…</span><span class="pill" id="done">0 decided</span><span class="pill" id="history">Historical decisions retained</span><span class="pill" id="holds">Technical holds</span><span class="pill" id="identityCount">Identity checks</span><span class="pill" id="legacy">Older browser picks: checking…</span><span class="pill" id="recStat">74 recovered original pairs</span></div>
+<div class="stats"><span class="pill" id="total">Loading review…</span><span class="pill" id="done">0 decided</span><span class="pill" id="history">Historical decisions retained</span><span class="pill" id="holds">Technical holds</span><span class="pill" id="identityCount">Identity checks</span><span class="pill" id="legacy">Older browser picks: checking…</span><span class="pill" id="recStat">74 recovered original pairs</span><span class="pill" id="qualityStat">DS technical audit: loading…</span></div>
 <div class="progress"><div id="bar"></div></div>
 <div class="controls">
 <input id="q" type="search" placeholder="Find a Pokémon, family, type, source…" aria-label="Search sprites">
@@ -61,9 +61,9 @@ summary{cursor:pointer;font-weight:750}
 <option value="pending" selected>Needs my decision (whole families)</option><option value="identity">Verify Pokémon name / artist labels</option>
 <option value="decided">Already decided</option>
 <option value="all">All families (including reviewed)</option>
-<option value="holds">Technical repair holds</option><option value="recovered">Already-approved source art (read-only)</option>
+<option value="holds">Technical repair holds</option><option value="recovered">Already-approved source art (read-only)</option><option value="dsquality">DS technical conversion quality (read-only)</option>
 </select>
-<select id="category" aria-label="Candidate category"><option value="all">All categories</option><option value="fakemon">New Pokémon</option><option value="design-comparison">Competing art</option><option value="new-design">New Megas/forms</option><option value="decision-conflict">Decision conflicts</option></select><label class="rec-filter" id="recFilter"><input type="checkbox" id="shinyOnly"> Missing shiny only</label>
+<select id="category" aria-label="Candidate category"><option value="all">All categories</option><option value="fakemon">New Pokémon</option><option value="design-comparison">Competing art</option><option value="new-design">New Megas/forms</option><option value="decision-conflict">Decision conflicts</option></select><label class="rec-filter" id="recFilter"><input type="checkbox" id="shinyOnly"> Missing shiny only</label><label class="quality-filter" id="qualityFilter"><select id="qualityStatus" aria-label="Technical conversion status"><option value="all">All technical outcomes</option><option value="blocked">Needs source repair</option><option value="quantized">Palette review</option><option value="preserved">Original colors retained</option></select></label>
 </div>
 <div class="controls">
 <button class="primary" id="json">Backup / GitHub JSON</button>
@@ -81,6 +81,7 @@ summary{cursor:pointer;font-weight:750}
 <p>The latest uploaded decisions are imported from a versioned GitHub backup. Earlier choices removed from the undecided pool remain included in later exports, so nothing disappears from your records. In Needs my decision mode, already-chosen siblings stay visible beside the undecided ones.</p><p>If you previously made decisions in other Mercury Pages review screens on this same browser, <b>Recover older page choices</b> finds relevant local decision records and includes them in the JSON export without rewriting current choices.</p><p><b>Recovered approved source art:</b> Use <b>Already-approved source art (read-only)</b> above to see the 74 source pairs alongside review modes, with four images and a missing-shiny filter. <a href="approved-legacy-recovery.html">The earlier reference gallery remains available.</a> It shows 69 complete shiny sets and five missing shiny pairs. These original GBA-source images still need a separate DS conversion audit; no votes are requested again.</p>
 <p><b>New identity repairs:</b> The former Platerigus / Mikitarian / Traumatisse grouping was incorrect. Yamask → Platerigus, Spritzee → Traumatisse and standalone Falinks now appear separately. Furrva is the first stage in the split Kocomb branch and is marked missing from the active review rather than silently omitted. Original artist and regional credits are retained without being promoted to Pokémon species.</p>
 <p><b>Source-not-yet-confirmed lines:</b> Hayog / Hogouse / Hogriks and Minamai / Marelstorm remain together for review but have no invented evolution arrows. The review distinguishes a source-confirmed species name from an unverified sprite-to-species pairing.</p>
+<p><b>New DS quality inspector:</b> Choose <b>DS technical conversion quality (read-only)</b> to compare all original artwork with source-derived 64×64 technical candidates, separated by evolution family. Oversize/partial-alpha images are quarantined instead of being rescaled. Palette-reduced candidates require explicit visual approval. No technical candidate is game-ready merely because it fits a canvas or passes an automated hash check. The quality report loads separately so unavailable previews cannot disable creative votes.</p>
 <p><b>External source-only Furrva:</b> The canonical bee-family group now shows GitHub-hosted original Furrva front/back source PNGs and Mikitari credit beside the other stages. The original WebP files are also archived. These are not DS-ready sprites and have not been added to the game. Recovered Rainther pairs are once again available for creative choice; previously approved Hissiorite/Cobarett/Pythonova artwork will not be requeued.</p>
 <p>Previous GBA KEEP/CUT decisions are preserved in <a href="audit/2026-10-23/historical-decisions.json">historical-decisions.json</a>. Pending repairs and candidates deliberately held out of your review are in <a href="audit/2026-10-23/repair-queue.json">repair-queue.json</a>.</p>
 </details>
@@ -92,7 +93,7 @@ summary{cursor:pointer;font-weight:750}
 <script>
 (function(){
 "use strict";
-var DATA=null, RECOVERY=null, STATE={}, IMPORTED=null, RESTORED_UNKNOWN={}, PAGE=0, PER_PAGE=25, VISIBLE_IDS=new Set();
+var DATA=null, RECOVERY=null, QUALITY=null, STATE={}, IMPORTED=null, RESTORED_UNKNOWN={}, PAGE=0, PER_PAGE=25, VISIBLE_IDS=new Set();
 var STORAGE="mercury-master-review-2026-10-23-v1";
 var $=function(id){return document.getElementById(id)};
 var safe=function(s){return String(s==null?"":s).replace(/[&<>"']/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]})};
@@ -228,6 +229,55 @@ function updateStats(){
  $("bar").style.width=(DATA.entries.length?done*100/DATA.entries.length:0)+"%";
 }
 
+
+function renderDsQuality(){
+ var root=$("root"),q=$("q").value.trim().toLowerCase(),condition=$("qualityStatus").value;
+ root.replaceChildren();VISIBLE_IDS=new Set();$("bulk").disabled=true;$("category").disabled=true;
+ $("recFilter").style.display="none";$("qualityFilter").style.display="inline-flex";
+ if(!QUALITY){var pending=document.createElement("div");pending.className="empty";pending.textContent="Conversion manifest not published yet. The GitHub technical workflow must finish before candidates are shown. Source approval data remains available.";root.appendChild(pending);$("pages").textContent="Conversion manifest not published";$("bottomPages").textContent="";return}
+ var fallback=new Map(DATA.entries.concat(DATA.technicalHolds).map(function(x){return [x.id,x]}));
+ var all=QUALITY.designs.filter(function(x){
+  var statuses=Object.values(x.slots||{}).map(function(v){return v.status||""});
+  var allowed=condition==="all"||(condition==="blocked"&&statuses.some(function(s){return s.startsWith("BLOCKED")||s==="MISSING_SOURCE"}))||(condition==="quantized"&&statuses.includes("PALETTE_QUANTIZED_NEEDS_ART_REVIEW"))||(condition==="preserved"&&statuses.includes("PIXEL_PRESERVED_DS64_CANDIDATE"));
+  return allowed&&(!q||[x.name,x.family,x.source,x.key,x.tier,x.reviewId].join(" ").toLowerCase().includes(q));
+ });
+ var fam=new Map();all.forEach(function(x){var card= fallback.get(x.reviewId),name=x.family||(card&&card.family)||x.name;if(!fam.has(name))fam.set(name,[]);fam.get(name).push(x)});
+ var keys=Array.from(fam.keys()).sort(function(a,b){return a.localeCompare(b,undefined,{numeric:true})});
+ var n=Math.max(1,Math.ceil(keys.length/PER_PAGE));PAGE=Math.max(0,Math.min(PAGE,n-1));
+ keys.slice(PAGE*PER_PAGE,(PAGE+1)*PER_PAGE).forEach(function(name){
+  var group=document.createElement("section");group.className="family";
+  var top=document.createElement("div");top.className="family-head";var title=document.createElement("h2");title.textContent=name;top.appendChild(title);
+  var sub=document.createElement("small");sub.textContent=fam.get(name).length+" source artwork set(s)";top.appendChild(sub);group.appendChild(top);
+  var cards=document.createElement("div");cards.className="cards";
+  fam.get(name).forEach(function(x){
+   var el=document.createElement("article");el.className="card";
+   var hd=document.createElement("div");hd.className="card-head";
+   var label=document.createElement("strong");label.textContent=x.name;hd.appendChild(label);
+   var meta=document.createElement("div");meta.className="muted";meta.textContent=x.tier+" · "+x.source;hd.appendChild(meta);el.appendChild(hd);
+   var banner=document.createElement("div");banner.className="quality-flag";banner.textContent="Technical 64×64 preview only — not DS engine binary, creative approval, or game integration.";el.appendChild(banner);
+   ["front","back","shiny_front","shiny_back"].forEach(function(slot){
+    var row=x.slots&&x.slots[slot];if(!row)return;
+    var wrap=document.createElement("div");wrap.className="quality-slot";
+    var header=document.createElement("div");header.className="quality-status";header.textContent=slot.replace("_"," ").toUpperCase()+" — "+row.status;wrap.appendChild(header);
+    if(row.status.startsWith("BLOCKED"))header.className+=" blocked";
+    else if(row.palette_changed)header.className+=" quantized";
+    var compare=document.createElement("div");compare.className="sprites";
+    if(row.original)compare.appendChild(imageCell(row.original,"ORIGINAL source"));
+    if(row.output)compare.appendChild(imageCell(row.output,"DS64 TECHNICAL preview"));
+    wrap.appendChild(compare);
+    if(row.original){var evidence=document.createElement("div");evidence.className="quality-evidence";evidence.textContent="Original "+(row.original_canvas||[]).join("×")+" · visible "+(row.visible_content_dimensions||[]).join("×")+" · "+(row.original_opaque_colors==null?"unmeasured":row.original_opaque_colors)+" opaque colors · "+(row.palette_changed?"palette reduced: visual reapproval required":"palette unchanged");wrap.appendChild(evidence)}
+    el.appendChild(wrap);
+   });
+   cards.appendChild(el);
+  });
+  group.appendChild(cards);root.appendChild(group);
+ });
+ if(!keys.length){var empty=document.createElement("div");empty.className="empty";empty.textContent="No matching source art under this filter.";root.appendChild(empty)}
+ var status="Page "+(PAGE+1)+" / "+n+" · "+keys.length+" families · "+all.length+" source sets · technical preview only";
+ $("pages").textContent=status;$("bottomPages").textContent=status;
+ ["prev","prev2"].forEach(function(k){$(k).disabled=PAGE===0});
+ ["next","next2"].forEach(function(k){$(k).disabled=PAGE>=n-1});
+}
 function renderRecovered(){
  var root=$("root"),q=$("q").value.trim().toLowerCase();
  root.replaceChildren();VISIBLE_IDS=new Set();$("bulk").disabled=true;$("category").disabled=true;$("recFilter").style.display="inline-flex";
@@ -264,8 +314,9 @@ function renderRecovered(){
  ["next","next2"].forEach(function(k){$(k).disabled=PAGE>=pages-1});
 }
 function render(){if(!DATA)return;updateStats();
- if($("view").value==="recovered"){renderRecovered();return}
- $("recFilter").style.display="none";$("category").disabled=false;
+ if($("view").value==="recovered"){$("qualityFilter").style.display="none";renderRecovered();return}
+ if($("view").value==="dsquality"){renderDsQuality();return}
+ $("recFilter").style.display="none";$("qualityFilter").style.display="none";$("category").disabled=false;
  var view=$("view").value,isIdentity=view==="identity",isHold=view==="holds";
  var pool=isIdentity?DATA.entries.concat(DATA.technicalHolds).filter(function(x){return x.identityFlag&&!(STATE[x.id]||{}).identityVerified}):isHold?DATA.technicalHolds:DATA.entries.filter(allowedRow);
  if(!isHold&&!isIdentity&&["pending","decided"].includes(view)){var selector=view;var familyMatches=new Set(pool.filter(function(x){return selector==="pending"?!getChoice(x.id):!!getChoice(x.id)}).map(function(x){return x.family||x.base||x.name}));pool=pool.filter(function(x){return familyMatches.has(x.family||x.base||x.name)})}
@@ -307,6 +358,7 @@ function exportPayload(){
  decision:s.decision||"pending",note:s.note||"",updated:s.updated||""
  }}),
  recoverySummary:RECOVERY?{sourcePairs:RECOVERY.entries.length,missingShiny:RECOVERY.entries.filter(function(x){return x.missingShiny}).map(function(x){return x.reviewId})}:null,
+ dsTechnicalSummary:QUALITY?{designs:QUALITY.designs.length,counts:QUALITY.counts,noGameIntegration:true}:null,
  legacyBrowserSelections:legacyBrowserSelections(),entries:current.concat(prior)};
 }
 function escCSV(s){return '"'+String(s==null?"":s).replace(/"/g,'""')+'"'}
@@ -355,19 +407,22 @@ $("bulk").onclick=function(){
  batch.forEach(function(x){apply(x.id,"keep",true)});render();
 };
 $("q").oninput=function(){PAGE=0;render()};
-$("view").onchange=$("category").onchange=$("shinyOnly").onchange=function(){PAGE=0;render()};
+$("view").onchange=$("category").onchange=$("shinyOnly").onchange=$("qualityStatus").onchange=function(){PAGE=0;render()};
 ["prev","prev2"].forEach(function(k){$(k).onclick=function(){PAGE--;render();window.scrollTo({top:0,behavior:"smooth"})}});
 ["next","next2"].forEach(function(k){$(k).onclick=function(){PAGE++;render();window.scrollTo({top:0,behavior:"smooth"})}});
 Promise.all([
  fetch("master-review-data.json",{cache:"no-store"}).then(function(x){if(!x.ok)throw Error("Review data HTTP "+x.status);return x.json()}),
  fetch("review/user-iphone-decisions-2026-10-23.json",{cache:"no-store"}).then(function(x){if(!x.ok)throw Error("Uploaded decisions HTTP "+x.status);return x.json()}),
- fetch("review/recovered-approved-legacy-pairs-2026-10-23.json",{cache:"no-store"}).then(function(x){if(!x.ok)throw Error("Recovery manifest HTTP "+x.status);return x.json()}).catch(function(e){console.warn("Source recovery unavailable; canonical voting stays online:",e);return null})
+ fetch("review/recovered-approved-legacy-pairs-2026-10-23.json",{cache:"no-store"}).then(function(x){if(!x.ok)throw Error("Recovery manifest HTTP "+x.status);return x.json()}).catch(function(e){console.warn("Source recovery unavailable; canonical voting stays online:",e);return null}),
+ fetch("DS_CUSTOM_LIBRARY/converted/Verified_Source_DS64_Technical_2026_10_23/technical_quality_manifest.json",{cache:"no-store"}).then(function(x){if(!x.ok)throw Error("Technical conversion manifest HTTP "+x.status);return x.json()}).catch(function(e){console.warn("DS technical conversion report not available yet:",e);return null})
 ]).then(function(parts){
- var d=parts[0],backedUp=parts[1],rec=parts[2];
+ var d=parts[0],backedUp=parts[1],rec=parts[2],quality=parts[3];
  if(d.schema!=="mercury-master-review-v1"||!Array.isArray(d.entries)||!Array.isArray(d.technicalHolds))throw Error("Invalid review dataset");
  if(backedUp.schema!=="mercury-user-iphone-decisions-v1"||!Array.isArray(backedUp.entries))throw Error("Invalid decision backup");
  if(rec&&(rec.schema!=="mercury-recovered-approved-source-pairs-v1"||!Array.isArray(rec.entries)||rec.entries.length!==74)){console.warn("Unexpected recovered-source index; original votes remain available.");rec=null}
- DATA=d;IMPORTED=backedUp;RECOVERY=rec;
+ if(quality&&(quality.schema!=="mercury-verified-source-ds64-technical-v1"||!Array.isArray(quality.designs)||quality.designs.length!==83)){console.warn("Invalid DS technical manifest; viewing original art only.");quality=null}
+ DATA=d;IMPORTED=backedUp;RECOVERY=rec;QUALITY=quality;
+ $("qualityStat").textContent=QUALITY?QUALITY.designs.length+" audited source sets · not ROM-ready":"DS conversion report pending";
  if(!RECOVERY)$("recStat").textContent="Recovery preview temporarily unavailable";
  var archived={};backedUp.entries.forEach(function(x){if(["keep","cut"].includes(x.decision))archived[x.id]={decision:x.decision,note:String(x.note||""),updated:String(x.updated||"")};});
  try{
