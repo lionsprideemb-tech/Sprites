@@ -14,6 +14,7 @@ SNAPSHOT = json.loads((ROOT / "master-review-data.json").read_text(encoding="utf
 HISTORY = json.loads((ROOT / "audit/2026-10-23/historical-decisions.json").read_text(encoding="utf-8"))
 REPAIR = json.loads((ROOT / "audit/2026-10-23/repair-queue.json").read_text(encoding="utf-8"))
 HTML = (ROOT / "master-review.html").read_text(encoding="utf-8")
+ORIGINAL_USER_EXPORTS = json.loads((ROOT / "review/recovered-user-export-decisions-2026-10-23.json").read_text(encoding="utf-8"))
 
 def require(value, explanation):
     if not value:
@@ -57,6 +58,18 @@ require("master-review-data.json" in HTML and "mercury-sprite-decisions-v1" in H
 require("Backup / GitHub JSON" in HTML and "Export CSV" in HTML and "Restore progress" in HTML,
         "Reviewer missing required export/import controls")
 require("localStorage" in HTML, "Reviewer missing persistent progress")
+require(ORIGINAL_USER_EXPORTS["schema"] == "mercury.sprite.review.user-exports.v1", "Unexpected recovered export format")
+require(len(ORIGINAL_USER_EXPORTS["exports"]) == 3, "Missing recovered review export source")
+require(SNAPSHOT["reconciledUserExport"]["designSelectionsRecovered"] == 10, "Recovered design decisions lost")
+require(SNAPSHOT["reconciledUserExport"]["polishedKeepsRestored"] == 8, "Polished KEEP restoration lost")
+require(len(REPAIR["resolvedByRecoveredUserExports"]["technicallyBlockedButAlreadyRejected"]) == 17, "Excluded previously rejected technical hold count changed")
+require(len(HISTORY["userExportReconciliation"]["designReviewAlreadyDecided"]) == 10, "Design decision evidence lost")
+recovered_review_ids = {x["reviewId"] for x in HISTORY["userExportReconciliation"]["designReviewAlreadyDecided"]}
+require(not recovered_review_ids.intersection({x["id"] for x in entries}), "Old approved/rejected art appeared as an undecided choice")
+for restored in HISTORY["userExportReconciliation"]["supersededHistoricalRejections"]:
+    require(any(x["reviewId"] == restored["reviewId"] and x["effective"] == "keep" for x in history),
+            "Restored polished approval not retained: " + restored["id"])
+
 
 historical_by_id = {x["id"]: x for x in history}
 dims = Counter()
