@@ -1,0 +1,271 @@
+{
+  "schema": "mercury-identity-family-current-status-v2",
+  "date": "2026-10-23",
+  "currentMaster": "master-review-data.json",
+  "historicalSourceAudit": "review/identity-provenance-audit-2026-10-23.json",
+  "reconciliation": "review/identity-family-reconciliation-2026-10-23.json",
+  "totals": {
+    "actionable": 156,
+    "holds": 16,
+    "historicalWarningsBefore": 25,
+    "currentWarnings": 13,
+    "cleared": 12,
+    "byFlag": {
+      "evolution_conflict": 5,
+      "provisional_identification": 5,
+      "possible_shiny_alias": 2,
+      "artist_or_region_label": 1
+    }
+  },
+  "resolvedExamples": [
+    {
+      "family": "Furrva → Kocomb → Granebee / Beelitant",
+      "evidence": "https://pokengine.org/mons/00uc0o89/Furrva",
+      "note": "Two real cocoon forms and split late-stage outcomes; missing starter source not promoted to approval"
+    },
+    {
+      "family": "Spritzee → Traumatisse",
+      "evidence": "https://pokengine.org/mons/00pm8f1c/Spritzee"
+    },
+    {
+      "family": "Yamask → Platerigus",
+      "evidence": "https://pokengine.org/mons/0063w7vk/Yamask"
+    },
+    {
+      "family": "Buneary → Lopunny",
+      "evidence": "https://pokengine.org/mons/00oh3oh8/Buneary"
+    },
+    {
+      "family": "Spinarak → Ariados",
+      "evidence": "https://pokengine.org/mons/00170bva/Spinarak"
+    },
+    {
+      "family": "Falinks (Mikitari)",
+      "evidence": "https://pokengine.org/mons/00dun911/Falinks"
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "fakemon:hayog:c54be050251a",
+      "name": "Hayog",
+      "family": "Hayog / Hogouse / Hogriks — linkage pending confirmation",
+      "type": [
+        "Ground",
+        "Grass"
+      ],
+      "status": "evolution_conflict",
+      "needs": "All three names and types match source entries, but the Pokéngine records do not explicitly document the entire three-stage evolution graph. Original assumed sequence retained as a hypothesis only.",
+      "source": "https://pokengine.org/mons/00jtq3x2/Hayog",
+      "sourceArt": {
+        "front": "DS_CUSTOM_LIBRARY/packs/Festival_Scotsman/Scotsman/Hayog_Front.png",
+        "back": "DS_CUSTOM_LIBRARY/packs/Festival_Scotsman/Scotsman/Hayog_Back.png"
+      },
+      "artworkApprovalUnchanged": true,
+      "ROMIntegrationAllowed": false
+    },
+    {
+      "id": "fakemon:hogouse:5aacd2375ea9",
+      "name": "Hogouse",
+      "family": "Hayog / Hogouse / Hogriks — linkage pending confirmation",
+      "type": [
+        "Ground",
+        "Grass"
+      ],
+      "status": "evolution_conflict",
+      "needs": "All three names and types match source entries, but the Pokéngine records do not explicitly document the entire three-stage evolution graph. Original assumed sequence retained as a hypothesis only.",
+      "source": "https://pokengine.org/mons/00bspmsd/Hogouse",
+      "sourceArt": {
+        "front": "DS_CUSTOM_LIBRARY/packs/Festival_Scotsman/Scotsman/Hogouse_Front.png",
+        "back": "DS_CUSTOM_LIBRARY/packs/Festival_Scotsman/Scotsman/Hogouse_Back.png"
+      },
+      "artworkApprovalUnchanged": true,
+      "ROMIntegrationAllowed": false
+    },
+    {
+      "id": "fakemon:hogriks:09d5ea97ceeb",
+      "name": "Hogriks",
+      "family": "Hayog / Hogouse / Hogriks — linkage pending confirmation",
+      "type": [
+        "Ground",
+        "Rock"
+      ],
+      "status": "evolution_conflict",
+      "needs": "All three names and types match source entries, but the Pokéngine records do not explicitly document the entire three-stage evolution graph. Original assumed sequence retained as a hypothesis only.",
+      "source": "https://pokengine.org/mons/00jegdpk/Hogriks",
+      "sourceArt": {
+        "front": "DS_CUSTOM_LIBRARY/packs/Festival_Scotsman/Scotsman/Hogriks_Front.png",
+        "back": "DS_CUSTOM_LIBRARY/packs/Festival_Scotsman/Scotsman/Hogriks_Back.png"
+      },
+      "artworkApprovalUnchanged": true,
+      "ROMIntegrationAllowed": false
+    },
+    {
+      "id": "fakemon:minamai:a49139765a74",
+      "name": "Minamai",
+      "family": "Minamai / Marelstorm — linkage pending confirmation",
+      "type": [
+        "Water"
+      ],
+      "status": "evolution_conflict",
+      "needs": "Both source names are legitimate; direct evidence that one evolves into the other is still missing. Do not implement an evolution based only on the former reviewer.",
+      "source": "https://pokengine.org/mons/00rofohd/Minamai",
+      "sourceArt": {
+        "front": "DS_CUSTOM_LIBRARY/packs/Festival_Lumio/Lumio/Pokemon/Front/MINAMAI.png",
+        "back": "DS_CUSTOM_LIBRARY/packs/Festival_Lumio/Lumio/Pokemon/Back/MINAMAI.png"
+      },
+      "artworkApprovalUnchanged": true,
+      "ROMIntegrationAllowed": false
+    },
+    {
+      "id": "fakemon:marelstorm:701ab0bd5780",
+      "name": "Marelstorm",
+      "family": "Minamai / Marelstorm — linkage pending confirmation",
+      "type": [
+        "Water",
+        "Steel"
+      ],
+      "status": "evolution_conflict",
+      "needs": "Both source names are legitimate; direct evidence that one evolves into the other is still missing. Do not implement an evolution based only on the former reviewer.",
+      "source": "https://pokengine.org/mons/004bj9kp/Marelstorm",
+      "sourceArt": {
+        "front": "DS_CUSTOM_LIBRARY/packs/Festival_Lumio/Lumio/Pokemon/Front/MARELSTORM.png",
+        "back": "DS_CUSTOM_LIBRARY/packs/Festival_Lumio/Lumio/Pokemon/Back/MARELSTORM.png"
+      },
+      "artworkApprovalUnchanged": true,
+      "ROMIntegrationAllowed": false
+    },
+    {
+      "id": "compare:cobarett:2",
+      "name": "Cobarett — Design 2",
+      "family": "Hissiorite → Cobarett → Pythonova",
+      "type": [
+        "Fire"
+      ],
+      "status": "provisional_identification",
+      "needs": "Published source confirms this species name and Hissiorite → Cobarett → Pythonova lineage. Still on technical hold for this artwork option until front/back identity is checked.",
+      "source": "https://wiki.tuxemon.org/Cobarett",
+      "sourceArt": {
+        "front": "DS_CUSTOM_LIBRARY/packs/Fakemon_Festival_Full/Fakemon Festival Pack/PrincessPhoenix/Pokemon/Battlers/Gen 3 Frontsprites/Cobarett.png",
+        "back": ""
+      },
+      "artworkApprovalUnchanged": true,
+      "ROMIntegrationAllowed": false
+    },
+    {
+      "id": "compare:hissiorite:2",
+      "name": "Hissiorite — Design 2",
+      "family": "Hissiorite → Cobarett → Pythonova",
+      "type": [
+        "Fire"
+      ],
+      "status": "provisional_identification",
+      "needs": "Published source confirms this species name and Hissiorite → Cobarett → Pythonova lineage. Still on technical hold for this artwork option until front/back identity is checked.",
+      "source": "https://wiki.tuxemon.org/Hissiorite",
+      "sourceArt": {
+        "front": "DS_CUSTOM_LIBRARY/packs/Fakemon_Festival_Full/Fakemon Festival Pack/PrincessPhoenix/Pokemon/Battlers/Gen 3 Frontsprites/Hissiorite.png",
+        "back": ""
+      },
+      "artworkApprovalUnchanged": true,
+      "ROMIntegrationAllowed": false
+    },
+    {
+      "id": "compare:pythonova:2",
+      "name": "Pythonova — Design 2",
+      "family": "Hissiorite → Cobarett → Pythonova",
+      "type": [
+        "Fire"
+      ],
+      "status": "provisional_identification",
+      "needs": "Published source confirms this species name and Hissiorite → Cobarett → Pythonova lineage. Still on technical hold for this artwork option until front/back identity is checked.",
+      "source": "https://www.pokengine.org/mons/00rgw87i/Pythonova",
+      "sourceArt": {
+        "front": "DS_CUSTOM_LIBRARY/packs/Fakemon_Festival_Full/Fakemon Festival Pack/PrincessPhoenix/Pokemon/Battlers/Gen 3 Frontsprites/Pythonova.png",
+        "back": ""
+      },
+      "artworkApprovalUnchanged": true,
+      "ROMIntegrationAllowed": false
+    },
+    {
+      "id": "compare:pythonovas:1",
+      "name": "Pythonova S — possible shiny/frame (not a species)",
+      "family": "Hissiorite → Cobarett → Pythonova",
+      "type": [],
+      "status": "possible_shiny_alias",
+      "needs": "Filename S may designate shiny or animation variant. This is NOT another evolutionary species; original image still held until image-level match.",
+      "source": "https://wiki.tuxemon.org/Hissiorite",
+      "sourceArt": {
+        "front": "DS_CUSTOM_LIBRARY/packs/Fakemon_Festival_Full/Fakemon Festival Pack/PrincessPhoenix/Pokemon/Battlers/Gen 3 Frontsprites/PythonovaS.png",
+        "back": ""
+      },
+      "artworkApprovalUnchanged": true,
+      "ROMIntegrationAllowed": false
+    },
+    {
+      "id": "compare:pythonovas:2",
+      "name": "Pythonova S — possible shiny/frame (not a species)",
+      "family": "Hissiorite → Cobarett → Pythonova",
+      "type": [],
+      "status": "possible_shiny_alias",
+      "needs": "Filename S may designate shiny or animation variant. This is NOT another evolutionary species; original image still held until image-level match.",
+      "source": "https://wiki.tuxemon.org/Hissiorite",
+      "sourceArt": {
+        "front": "DS_CUSTOM_LIBRARY/packs/Fakemon_Festival_Full/Fakemon Festival Pack/PrincessPhoenix/Pokemon/Battlers/Gen 4-5 Frontsprites/PythonovaS.png",
+        "back": ""
+      },
+      "artworkApprovalUnchanged": true,
+      "ROMIntegrationAllowed": false
+    },
+    {
+      "id": "compare:noctowl-1:1",
+      "name": "Noctowl — Lumio-source alternate (specific evo design unverified)",
+      "family": "Hoothoot → Noctowl → Enchantowl (source-art lineage check)",
+      "type": [
+        "Psychic"
+      ],
+      "status": "artist_or_region_label",
+      "needs": "The Hoothoot → Noctowl → Enchantowl evolutionary concept is documented on Pokéngine, but this separate Atsui/Lumio Noctowl sprite is not yet proven to be the Enjin/Ender Noctowl that specifically evolves into Enchantowl. Keep the art on hold; no inferred sprite binding.",
+      "source": "https://pokengine.org/mons/00634t3c/Noctowl",
+      "sourceArt": {
+        "front": "DS_CUSTOM_LIBRARY/packs/Festival_Atsui/Atsui/Pokemon/Front/NOCTOWL_1.png",
+        "back": ""
+      },
+      "artworkApprovalUnchanged": true,
+      "ROMIntegrationAllowed": false
+    },
+    {
+      "id": "compare:rainther:1",
+      "name": "Rainther — Design 1",
+      "family": "Dampurr → Rainther → Delugar",
+      "type": [
+        "Water"
+      ],
+      "status": "provisional_identification",
+      "needs": "Rainther is a genuine source name and Water type in Dampurr → Rainther → Delugar; exact alternative artwork/front-back pairing still requires technical verification.",
+      "source": "https://pokengine.org/mons/00w927yf/Rainther",
+      "sourceArt": {
+        "front": "DS_CUSTOM_LIBRARY/packs/Festival_Magiscarf/Magiscarf/Battlers Normal/Front/Rainther.png",
+        "back": ""
+      },
+      "artworkApprovalUnchanged": true,
+      "ROMIntegrationAllowed": false
+    },
+    {
+      "id": "compare:rainther:2",
+      "name": "Rainther — Design 2",
+      "family": "Dampurr → Rainther → Delugar",
+      "type": [
+        "Water"
+      ],
+      "status": "provisional_identification",
+      "needs": "Rainther is a genuine source name and Water type in Dampurr → Rainther → Delugar; exact alternative artwork/front-back pairing still requires technical verification.",
+      "source": "https://pokengine.org/mons/00w927yf/Rainther",
+      "sourceArt": {
+        "front": "DS_CUSTOM_LIBRARY/packs/Festival_Magiscarf/Magiscarf/Gen 4 Battlers/Fronts/RAINTHER.png",
+        "back": ""
+      },
+      "artworkApprovalUnchanged": true,
+      "ROMIntegrationAllowed": false
+    }
+  ],
+  "policy": "Only the approved original decision file represents user creative choices; changing source identity/preview metadata never adds Pokémon to ROM or authorizes artwork integration."
+}
