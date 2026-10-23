@@ -238,8 +238,28 @@
     "source": "https://pokengine.org/mons/00uc0o89/Furrva",
     "frontReference": "https://pokengine.b-cdn.net/play/images/mons/fronts/00uc0o89.webp?t=56",
     "backReference": "https://pokengine.b-cdn.net/play/images/mons/backs/00uc0o89.webp?t=56",
-    "status": "source-hosted original front/back located; not stored locally in GitHub or DS converted",
-    "licensingNote": "Credit Mikitari; no fabricated local sprites"
+    "status": "original source WebP bytes and lossless PNG previews now physically committed in GitHub, pending DS canvas/palette verification",
+    "licensingNote": "Credit Mikitari; no fabricated local sprites",
+    "localSourceManifest": "DS_CUSTOM_LIBRARY/recovered/Pokengine_Mikitari_Furrva_Source/source_manifest.json",
+    "localOriginal": {
+      "front": "DS_CUSTOM_LIBRARY/recovered/Pokengine_Mikitari_Furrva_Source/front_original.webp",
+      "back": "DS_CUSTOM_LIBRARY/recovered/Pokengine_Mikitari_Furrva_Source/back_original.webp"
+    },
+    "localPNG": {
+      "front": "DS_CUSTOM_LIBRARY/recovered/Pokengine_Mikitari_Furrva_Source/front_source.png",
+      "back": "DS_CUSTOM_LIBRARY/recovered/Pokengine_Mikitari_Furrva_Source/back_source.png"
+    },
+    "sourcePixelDimensions": {
+      "front": [
+        34,
+        30
+      ],
+      "back": [
+        55,
+        51
+      ]
+    },
+    "gameIntegrationAllowed": false
   },
   "policy": {
     "preserveApprovedVotes": true,
@@ -255,6 +275,7 @@
     "archivedPriorAlternatives": 4,
     "remainingIdentityWarnings": 5,
     "actionable": 158,
-    "technicalHolds": 14
+    "technicalHolds": 14,
+    "additionalFurrvaSourcePair": 1
   }
 }
