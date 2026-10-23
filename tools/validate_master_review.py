@@ -15,6 +15,9 @@ HISTORY = json.loads((ROOT / "audit/2026-10-23/historical-decisions.json").read_
 REPAIR = json.loads((ROOT / "audit/2026-10-23/repair-queue.json").read_text(encoding="utf-8"))
 HTML = (ROOT / "master-review.html").read_text(encoding="utf-8")
 ORIGINAL_USER_EXPORTS = json.loads((ROOT / "review/recovered-user-export-decisions-2026-10-23.json").read_text(encoding="utf-8"))
+USER_IPHONE_DECISIONS = json.loads((ROOT / "review/user-iphone-decisions-2026-10-23.json").read_text(encoding="utf-8"))
+FAMILY_AUDIT = json.loads((ROOT / "review/family-regroup-audit-2026-10-23.json").read_text(encoding="utf-8"))
+SOURCE_FAMILY_METADATA = json.loads((ROOT / "DS_CUSTOM_LIBRARY/DS_READY_MASTER/fakemon_enriched_metadata.json").read_text(encoding="utf-8"))
 
 def require(value, explanation):
     if not value:
@@ -70,6 +73,34 @@ for restored in HISTORY["userExportReconciliation"]["supersededHistoricalRejecti
     require(any(x["reviewId"] == restored["reviewId"] and x["effective"] == "keep" for x in history),
             "Restored polished approval not retained: " + restored["id"])
 
+
+require(USER_IPHONE_DECISIONS["schema"] == "mercury-user-iphone-decisions-v1", "User decision export schema mismatch")
+require(USER_IPHONE_DECISIONS["count"] == 166, "Original 166 user choices lost")
+require(USER_IPHONE_DECISIONS["keepCount"] == 154 and USER_IPHONE_DECISIONS["cutCount"] == 12, "Vote tally mismatch")
+require(USER_IPHONE_DECISIONS["sourceSHA256"] == "a0a00a257359449b034ac012b73676c8a24c13b05f190d96fb963bb26619718b", "User upload evidence changed")
+require(len({x["id"] for x in USER_IPHONE_DECISIONS["entries"]}) == 166, "Duplicate ID in user submitted votes")
+require(len(USER_IPHONE_DECISIONS["historicalVoteDisagreements"]) == 4, "Later Mega art changes not preserved")
+require(FAMILY_AUDIT["schema"] == "mercury-family-regroup-v1", "Family audit schema mismatch")
+require(len(FAMILY_AUDIT["corrections"]) == 15, "Unexpected source-family correction count")
+require(SNAPSHOT["familyGrouping"]["schema"] == "mercury-evolution-family-grouping-v2", "Wrong family grouping version")
+require(SNAPSHOT["familyGrouping"]["sourceBlob"] == FAMILY_AUDIT["sourceBlob"], "Family grouping source mismatch")
+by_front_back = {(x["front_path"], x["back_path"]): x for x in SOURCE_FAMILY_METADATA["entries"].values()
+                 if x.get("ready_for_approval") and x.get("front_path") and x.get("back_path")}
+for entry in entries:
+    if entry["category"] == "fakemon":
+        authoritative = by_front_back.get((entry["front"], entry["back"]))
+        require(authoritative is not None, "Source-evidence missing for Fakemon: " + entry["id"])
+        require(entry["name"] == authoritative["name"], "Name drift in " + entry["id"])
+        require(entry["family"] == authoritative["family"], "Family split in " + entry["id"])
+    require(isinstance(entry.get("evolutionStageOrder"), int), "Stage order missing: " + entry["id"])
+uploaded_by_id = {x["id"]: x for x in USER_IPHONE_DECISIONS["entries"]}
+require({x["id"] for x in entries}.issubset(uploaded_by_id), "New reviewed sprite ID omitted from user votes")
+for entry in entries:
+    original = uploaded_by_id[entry["id"]]
+    require(original["front_path"] == entry["front"] and original["back_path"] == entry["back"],
+            "Stable sprite identity no longer matches its recorded user vote: " + entry["id"])
+require("user-iphone-decisions-2026-10-23.json" in HTML and "familyMatches" in HTML and "evolutionStageOrder" in HTML,
+        "Family-aware review and saved votes not wired into mobile page")
 
 historical_by_id = {x["id"]: x for x in history}
 dims = Counter()
