@@ -1,0 +1,360 @@
+{
+  "schema": "mercury-identity-family-triage-v1",
+  "generated": "2026-10-23",
+  "source": "review/identity-provenance-audit-2026-10-23.json",
+  "counts": {
+    "heldSourceRecords": 19,
+    "byFlag": {
+      "SOURCE_FAMILY_CONFLICT": 10,
+      "unverified_source_label": 3,
+      "AMBIGUOUS_ARTIST_OR_REGION_LABEL": 6
+    },
+    "evidenceLinks": 16,
+    "conflictedEvolutionEvidence": 14
+  },
+  "policy": {
+    "artistIsNotSpecies": true,
+    "noInventedLineage": true,
+    "noDefaultNormalType": true,
+    "existingArtworkVotesUnaffected": true,
+    "noPokedexOrROMChanges": true
+  },
+  "groups": [
+    {
+      "priority": "Review conflicting source evolution evidence",
+      "flag": "SOURCE_FAMILY_CONFLICT",
+      "records": [
+        {
+          "record_id": "leftover:beelitant|e5c0e29ea74f5bcad2fec134da742af2406e2a10de2f6b234b3f11045586d052",
+          "previous_label": "Beelitant",
+          "display": "Beelitant",
+          "source": "Mikitari",
+          "creator": "Mikitari",
+          "status": "SOURCE_FAMILY_CONFLICT",
+          "linked_evidence": "https://pokengine.org/mons/00wiz4bc/Beelitant",
+          "familyAlternatives": [
+            {
+              "family": "Beelitant → Kocomb → Granebee",
+              "evidence": "Previous enrichment metadata"
+            },
+            {
+              "family": "Beelitant → Kocomb → Furrva → Granebee",
+              "evidence": "https://pokengine.org/mons/00wiz4bc/Beelitant"
+            }
+          ]
+        },
+        {
+          "record_id": "leftover:granebee|65fc8136a34439a6d348e9e79f3214d27544fd921d2ffe12f5d572890f0fe2a4",
+          "previous_label": "Granebee",
+          "display": "Granebee",
+          "source": "Mikitari",
+          "creator": "Mikitari",
+          "status": "SOURCE_FAMILY_CONFLICT",
+          "linked_evidence": "https://pokengine.org/mons/00eqh4t5/Granebee",
+          "familyAlternatives": [
+            {
+              "family": "Beelitant → Kocomb → Granebee",
+              "evidence": "Previous enrichment metadata"
+            },
+            {
+              "family": "Beelitant → Kocomb → Furrva → Granebee",
+              "evidence": "https://pokengine.org/mons/00eqh4t5/Granebee"
+            }
+          ]
+        },
+        {
+          "record_id": "leftover:kocomb|5f5be9a1eeebb4c5177bb6d17c09c8995d28f30702b5f5320628f28bf4171615",
+          "previous_label": "Kocomb",
+          "display": "Kocomb",
+          "source": "Mikitari",
+          "creator": "Mikitari",
+          "status": "SOURCE_FAMILY_CONFLICT",
+          "linked_evidence": "https://pokengine.org/mons/004m6vrv/Kocomb",
+          "familyAlternatives": [
+            {
+              "family": "Beelitant → Kocomb → Granebee",
+              "evidence": "Previous enrichment metadata"
+            },
+            {
+              "family": "Beelitant → Kocomb → Furrva → Granebee",
+              "evidence": "https://pokengine.org/mons/004m6vrv/Kocomb"
+            }
+          ]
+        },
+        {
+          "record_id": "leftover:kocomb-1|9e0c820d55c7111eba5ddb108ff97edaed6957403e3f3cc41a633a7a3836d94f",
+          "previous_label": "Kocomb",
+          "display": "Kocomb",
+          "source": "Mikitari",
+          "creator": "Mikitari",
+          "status": "SOURCE_FAMILY_CONFLICT",
+          "linked_evidence": "https://pokengine.org/mons/001ddhus/Kocomb",
+          "familyAlternatives": [
+            {
+              "family": "Beelitant → Kocomb → Granebee",
+              "evidence": "Previous enrichment metadata"
+            },
+            {
+              "family": "Beelitant → Kocomb → Furrva → Granebee",
+              "evidence": "https://pokengine.org/mons/001ddhus/Kocomb"
+            }
+          ]
+        },
+        {
+          "record_id": "leftover:hayog|c54be050251a8d398df694b0d7d17c0adfcf817d7de705f2c2cc4d6ac4c2c5e2",
+          "previous_label": "Hayog",
+          "display": "Hayog",
+          "source": "Festival_Scotsman",
+          "creator": "Scotsman333",
+          "status": "SOURCE_FAMILY_CONFLICT",
+          "linked_evidence": "https://pokengine.org/mons/00jtq3x2/Hayog",
+          "familyAlternatives": [
+            {
+              "family": "Hayog → Hogouse → Hogriks",
+              "evidence": "Previous enrichment metadata"
+            },
+            {
+              "family": "Standalone — Hayog",
+              "evidence": "https://pokengine.org/mons/00jtq3x2/Hayog"
+            }
+          ]
+        },
+        {
+          "record_id": "leftover:hogouse|5aacd2375ea937d120c8dd38ae4dc65793acff3034356b8c9216cc62c85e505c",
+          "previous_label": "Hogouse",
+          "display": "Hogouse",
+          "source": "Festival_Scotsman",
+          "creator": "Scotsman333",
+          "status": "SOURCE_FAMILY_CONFLICT",
+          "linked_evidence": "https://pokengine.org/mons/00bspmsd/Hogouse",
+          "familyAlternatives": [
+            {
+              "family": "Hayog → Hogouse → Hogriks",
+              "evidence": "Previous enrichment metadata"
+            },
+            {
+              "family": "Standalone — Hogouse",
+              "evidence": "https://pokengine.org/mons/00bspmsd/Hogouse"
+            }
+          ]
+        },
+        {
+          "record_id": "leftover:hogriks|09d5ea97ceebd38a842145be9cbcb86fcc47fe1be023b4d63ea4ab77448c9723",
+          "previous_label": "Hogriks",
+          "display": "Hogriks",
+          "source": "Festival_Scotsman",
+          "creator": "Scotsman333",
+          "status": "SOURCE_FAMILY_CONFLICT",
+          "linked_evidence": "https://pokengine.org/mons/00jegdpk/Hogriks",
+          "familyAlternatives": [
+            {
+              "family": "Hayog → Hogouse → Hogriks",
+              "evidence": "Previous enrichment metadata"
+            },
+            {
+              "family": "Standalone — Hogriks",
+              "evidence": "https://pokengine.org/mons/00jegdpk/Hogriks"
+            }
+          ]
+        },
+        {
+          "record_id": "leftover:marelstorm|701ab0bd5780adb0bea624453acae9657bca8ada52deeed7b9af58b52e462d69",
+          "previous_label": "Marelstorm",
+          "display": "Marelstorm",
+          "source": "Festival_Lumio",
+          "creator": "Rattila",
+          "status": "SOURCE_FAMILY_CONFLICT",
+          "linked_evidence": "https://pokengine.org/mons/004bj9kp/Marelstorm",
+          "familyAlternatives": [
+            {
+              "family": "Minamai → Marelstorm",
+              "evidence": "Previous enrichment metadata"
+            },
+            {
+              "family": "Standalone — Marelstorm",
+              "evidence": "https://pokengine.org/mons/004bj9kp/Marelstorm"
+            }
+          ]
+        },
+        {
+          "record_id": "leftover:minamai|a49139765a744dc5de150f489cd978c6a61988571818104bae5005c80b6051cd",
+          "previous_label": "Minamai",
+          "display": "Minamai",
+          "source": "Festival_Lumio",
+          "creator": "Rattila",
+          "status": "SOURCE_FAMILY_CONFLICT",
+          "linked_evidence": "https://pokengine.org/mons/00rofohd/Minamai",
+          "familyAlternatives": [
+            {
+              "family": "Minamai → Marelstorm",
+              "evidence": "Previous enrichment metadata"
+            },
+            {
+              "family": "Standalone — Minamai",
+              "evidence": "https://pokengine.org/mons/00rofohd/Minamai"
+            }
+          ]
+        },
+        {
+          "record_id": "leftover:traumatisse|c91020460452dc778616be9586543b616d025eab7e08b1b920556d5c2038b537",
+          "previous_label": "Traumatisse",
+          "display": "Traumatisse",
+          "source": "Mikitari",
+          "creator": "Mikitari",
+          "status": "SOURCE_FAMILY_CONFLICT",
+          "linked_evidence": "https://pokengine.org/mons/00y8pwe3/Traumatisse+",
+          "familyAlternatives": [
+            {
+              "family": "Platerigus → Mikitarian → Traumatisse",
+              "evidence": "Previous enrichment metadata"
+            },
+            {
+              "family": "Standalone — Traumatisse",
+              "evidence": "https://pokengine.org/mons/00y8pwe3/Traumatisse+"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "priority": "Disambiguate region / artist labels from species and forms",
+      "flag": "AMBIGUOUS_ARTIST_OR_REGION_LABEL",
+      "records": [
+        {
+          "record_id": "leftover:spritzee-1|f9749b90bdb04d9a3d1d546eb2f023c18f91a28049397d152bb867ee4b12b9b1",
+          "previous_label": "Mikitarian",
+          "display": "Spritzee — alternate sprite (identity to verify)",
+          "source": "Mikitari",
+          "creator": "Mikitari",
+          "status": "AMBIGUOUS_ARTIST_OR_REGION_LABEL",
+          "linked_evidence": "https://pokengine.org/mons/00pm8f1c/Spritzee",
+          "familyAlternatives": []
+        },
+        {
+          "record_id": "leftover:yamask-2|9ae97cd58dea46c14b3cfcad180525056af49b644dc57d16471b41bf12022504",
+          "previous_label": "Mikitarian",
+          "display": "Yamask — alternate sprite (identity to verify)",
+          "source": "Mikitari",
+          "creator": "Mikitari",
+          "status": "AMBIGUOUS_ARTIST_OR_REGION_LABEL",
+          "linked_evidence": "https://pokengine.org/mons/0063w7vk/Yamask",
+          "familyAlternatives": []
+        },
+        {
+          "record_id": "leftover:ariados-1|25da075190b5ce183c2ddecd9926115a3b51a38b555648fc5ebffec730caa843",
+          "previous_label": "Luminian",
+          "display": "Ariados — alternate sprite (identity to verify)",
+          "source": "Festival_Lumio",
+          "creator": "cubeR & KajiAtsui",
+          "status": "AMBIGUOUS_ARTIST_OR_REGION_LABEL",
+          "linked_evidence": "https://pokengine.org/mons/0057zpyp/Ariados",
+          "familyAlternatives": [
+            {
+              "family": "Luminian Spinarak → Luminian Ariados",
+              "evidence": "Previous enrichment metadata"
+            },
+            {
+              "family": "Standalone — Luminian",
+              "evidence": "https://pokengine.org/mons/0057zpyp/Ariados"
+            }
+          ]
+        },
+        {
+          "record_id": "leftover:buneary-1|13f7b40cc3296950c02a6d6ac2f2d3810e931bd2ec700a5ce44a5b26a3c701cf",
+          "previous_label": "Mikitarian",
+          "display": "Buneary — alternate sprite (identity to verify)",
+          "source": "Mikitari",
+          "creator": "Mikitari",
+          "status": "AMBIGUOUS_ARTIST_OR_REGION_LABEL",
+          "linked_evidence": "https://pokengine.org/mons/00oh3oh8/Buneary",
+          "familyAlternatives": [
+            {
+              "family": "Mikitarian Buneary → Mikitarian Lopunny",
+              "evidence": "Previous enrichment metadata"
+            },
+            {
+              "family": "Standalone — Mikitarian",
+              "evidence": "https://pokengine.org/mons/00oh3oh8/Buneary"
+            }
+          ]
+        },
+        {
+          "record_id": "leftover:falinks-1|0c48c12e936ea707d87d55816f36c35b81fda778fbe0578673f705797a0c3cba",
+          "previous_label": "Mikitarian",
+          "display": "Falinks — alternate sprite (identity to verify)",
+          "source": "Mikitari",
+          "creator": "Mikitari",
+          "status": "AMBIGUOUS_ARTIST_OR_REGION_LABEL",
+          "linked_evidence": "https://pokengine.org/mons/00dun911/Falinks",
+          "familyAlternatives": [
+            {
+              "family": "Platerigus → Mikitarian → Traumatisse",
+              "evidence": "Previous enrichment metadata"
+            },
+            {
+              "family": "Standalone — Mikitarian",
+              "evidence": "https://pokengine.org/mons/00dun911/Falinks"
+            }
+          ]
+        },
+        {
+          "record_id": "leftover:lopunny-1|06d969db776016edf726ef1746de9962f9f221aab71614352765e52e6f52ba01",
+          "previous_label": "Mikitarian",
+          "display": "Lopunny — alternate sprite (identity to verify)",
+          "source": "Mikitari",
+          "creator": "Mikitari",
+          "status": "AMBIGUOUS_ARTIST_OR_REGION_LABEL",
+          "linked_evidence": "https://pokengine.org/mons/00xongth/Lopunny",
+          "familyAlternatives": [
+            {
+              "family": "Mikitarian Buneary → Mikitarian Lopunny",
+              "evidence": "Previous enrichment metadata"
+            },
+            {
+              "family": "Standalone — Mikitarian",
+              "evidence": "https://pokengine.org/mons/00xongth/Lopunny"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "priority": "Recover authoritative species label from original artwork pack",
+      "flag": "unverified_source_label",
+      "records": [
+        {
+          "record_id": "leftover:mega-barbaracle|95022e077bf94c8ee25635e3db1760fb5208b18ee3ba0f59cfea23e531e0b146",
+          "previous_label": "Mega Barbaracle",
+          "display": "Unverified identity — Mega Barbaracle",
+          "source": "Festival_Misc",
+          "creator": "",
+          "status": "unverified_source_label",
+          "linked_evidence": "",
+          "familyAlternatives": []
+        },
+        {
+          "record_id": "leftover:rainther|9bd1392ed4216f97385675a1e0200beb046ff0bde9f9d5dd58f7d122050a6eae",
+          "previous_label": "Rainther",
+          "display": "Unverified identity — Rainther",
+          "source": "Festival_Magiscarf",
+          "creator": "Magiscarf",
+          "status": "unverified_source_label",
+          "linked_evidence": "",
+          "familyAlternatives": []
+        },
+        {
+          "record_id": "leftover:rainther|7f3adf7765a5483676fad9e753944c4afce9f37024eede619364a6caf873fe7e",
+          "previous_label": "Rainther",
+          "display": "Unverified identity — Rainther",
+          "source": "Festival_Magiscarf",
+          "creator": "Magiscarf",
+          "status": "unverified_source_label",
+          "linked_evidence": "",
+          "familyAlternatives": []
+        }
+      ]
+    }
+  ],
+  "noSilentAutoResolution": true,
+  "note": "Retains every historical relationship as evidence and records conflicting alternatives. Do not promote a guess to a canonical Pokémon without source-backed identity and deliberate review."
+}
