@@ -1,7 +1,7 @@
 {
   "schema": "mercury-original-visual-rescue-comparisons-v1",
   "source": "DS_CUSTOM_LIBRARY/converted/Verified_Source_DS64_Technical_2026_10_23/technical_quality_manifest.json",
-  "sourceSHA256": "20ac8b0e0d0cb5d9450ccaad1343f1304b190f4696abeedc921fc4ca122a9272",
+  "sourceSHA256": "6495387cbda691f684fbf8a8b7e14cf7ae4d8607a0ddfc5ed441472e4088ddb6",
   "policy": {
     "sourceAlwaysPreserved": true,
     "nearestNeighborComparisonNotDSReady": true,
@@ -8555,6 +8555,27 @@
       "source": "Reborn / Plates of Arceus"
     },
     {
+      "originalSource": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy_PNG_Container_Repairs/munna-alternate-form-1/front.png",
+      "sourceSHA256": "7c843ac99ecc91a5b652cec4a678821310250f36ae1bc2147c74896382977457",
+      "quantizedTechnicalCandidate": "DS_CUSTOM_LIBRARY/converted/Verified_Source_DS64_Technical_2026_10_23/munna-alternate-form-1/front.png",
+      "candidateSHA256": "10919c784ebc4976ae62144eabc43827dab0e4703dbc3c85cf1eac866ad2176a",
+      "opaquePixels": 2916,
+      "changedOpaquePixels": 68,
+      "changedPixelFraction": 0.02332,
+      "averageAbsoluteRGBChannelDelta": 0.229,
+      "originalOpaqueColors": 24,
+      "technicalOpaqueColors": 14,
+      "requiresExplicitVisualApproval": true,
+      "notCreativeApproved": true,
+      "gameIntegrationAllowed": false,
+      "name": "Munna — Alternate (Form 1)",
+      "family": "#0517 Munna → #0518 Musharna",
+      "reviewId": "R0691",
+      "key": "munna-alternate-form-1",
+      "slot": "front",
+      "source": "Reborn / Plates of Arceus"
+    },
+    {
       "originalSource": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/mienfoo-bluetowel-alternate-form-form-1/front.png",
       "sourceSHA256": "a66dba72def6147a72d19e6c5b14aad7abe28e81f3ca05a690f8814d4194106b",
       "quantizedTechnicalCandidate": "DS_CUSTOM_LIBRARY/converted/Verified_Source_DS64_Technical_2026_10_23/mienfoo-bluetowel-alternate-form-form-1/front.png",
@@ -9096,55 +9117,14 @@
       "action": "Find matching original creator sprite; do not substitute art"
     }
   ],
-  "unrecoverablePNG": [
-    {
-      "name": "Munna — Alternate (Form 1)",
-      "key": "munna-alternate-form-1",
-      "family": "#0517 Munna → #0518 Musharna",
-      "slot": "front",
-      "reviewId": "R0691",
-      "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/munna-alternate-form-1/front.png",
-      "sourceSHA256": "c24dbea3b5522c3dea47848f5fdb4a9001ea29572abf1688da2474046252a4b2",
-      "action": "Recover genuine original pixel stream; no forged replacement"
-    },
-    {
-      "name": "Munna — Alternate (Form 1)",
-      "key": "munna-alternate-form-1",
-      "family": "#0517 Munna → #0518 Musharna",
-      "slot": "back",
-      "reviewId": "R0691",
-      "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/munna-alternate-form-1/back.png",
-      "sourceSHA256": "592cfcc5bf3f8b462c1d4bdb0b65736ada0c2c8387ec82d30c4fa6a297ddd9d6",
-      "action": "Recover genuine original pixel stream; no forged replacement"
-    },
-    {
-      "name": "Musharna — Alternate (Form 1)",
-      "key": "musharna-alternate-form-1",
-      "family": "#0517 Munna → #0518 Musharna",
-      "slot": "front",
-      "reviewId": "R0692",
-      "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/musharna-alternate-form-1/front.png",
-      "sourceSHA256": "a2d73caca1303738d235d91d7abe505ce0e5890c7b01b657b18afa643526e0b2",
-      "action": "Recover genuine original pixel stream; no forged replacement"
-    },
-    {
-      "name": "Musharna — Alternate (Form 1)",
-      "key": "musharna-alternate-form-1",
-      "family": "#0517 Munna → #0518 Musharna",
-      "slot": "back",
-      "reviewId": "R0692",
-      "original": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/musharna-alternate-form-1/back.png",
-      "sourceSHA256": "65c933cfc7d8452e6be4de0886dc57eef506b4cc1f124189c2afb967492aed07",
-      "action": "Recover genuine original pixel stream; no forged replacement"
-    }
-  ],
+  "unrecoverablePNG": [],
   "counts": {
     "visualOnlyNearestOrCropComparisons": 196,
     "alphaConcernComparisons": 17,
     "oversizeComparisons": 179,
-    "paletteQuantizedNeedsApproval": 39,
+    "paletteQuantizedNeedsApproval": 40,
     "missingOriginals": 28,
-    "undecodableOriginals": 4,
+    "undecodableOriginals": 0,
     "noNewGameReadySprites": true
   }
 }
