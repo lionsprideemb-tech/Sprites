@@ -1,0 +1,372 @@
+{
+  "schema": "mercury-source-identity-family-reconciliation-v2",
+  "date": "2026-10-23",
+  "upstream": {
+    "reviewDatasetBlob": "945f5c302452028158ccb918c214bcfe377e24b4",
+    "sources": [
+      "https://pokengine.org/mons/00uc0o89/Furrva",
+      "https://pokengine.org/mons/00pm8f1c/Spritzee",
+      "https://pokengine.org/mons/0063w7vk/Yamask",
+      "https://pokengine.org/mons/00oh3oh8/Buneary",
+      "https://pokengine.org/mons/00xongth/Lopunny",
+      "https://pokengine.org/mons/00170bva/Spinarak",
+      "https://wiki.tuxemon.org/Hissiorite"
+    ]
+  },
+  "totals": {
+    "sourceRowsReviewed": 25,
+    "metadataEdits": 27,
+    "sourceIdentityWarningsBefore": 0,
+    "approvedVotesChanged": 0,
+    "artworkFilesChanged": 0,
+    "romChanges": 0
+  },
+  "edits": [
+    {
+      "id": "fakemon:beelitant:e5c0e29ea74f",
+      "from": "Beelitant → Kocomb → Granebee",
+      "to": "Furrva → Kocomb (normal / militant) → Granebee / Beelitant",
+      "previousName": "Beelitant",
+      "newName": "Beelitant",
+      "previousFlag": "evolution_conflict",
+      "currentFlag": "",
+      "previousStage": 0,
+      "currentStage": 2,
+      "proof": "https://pokengine.org/mons/00wiz4bc/Beelitant"
+    },
+    {
+      "id": "fakemon:kocomb-1:9e0c820d55c7",
+      "from": "Beelitant → Kocomb → Granebee",
+      "to": "Furrva → Kocomb (normal / militant) → Granebee / Beelitant",
+      "previousName": "Kocomb",
+      "newName": "Kocomb",
+      "previousFlag": "evolution_conflict",
+      "currentFlag": "",
+      "previousStage": 1,
+      "currentStage": 1,
+      "proof": "https://pokengine.org/mons/001ddhus/Kocomb"
+    },
+    {
+      "id": "fakemon:kocomb:5f5be9a1eeeb",
+      "from": "Beelitant → Kocomb → Granebee",
+      "to": "Furrva → Kocomb (normal / militant) → Granebee / Beelitant",
+      "previousName": "Kocomb",
+      "newName": "Kocomb",
+      "previousFlag": "evolution_conflict",
+      "currentFlag": "",
+      "previousStage": 1,
+      "currentStage": 1,
+      "proof": "https://pokengine.org/mons/004m6vrv/Kocomb"
+    },
+    {
+      "id": "fakemon:granebee:65fc8136a344",
+      "from": "Beelitant → Kocomb → Granebee",
+      "to": "Furrva → Kocomb (normal / militant) → Granebee / Beelitant",
+      "previousName": "Granebee",
+      "newName": "Granebee",
+      "previousFlag": "evolution_conflict",
+      "currentFlag": "",
+      "previousStage": 2,
+      "currentStage": 2,
+      "proof": "https://pokengine.org/mons/00eqh4t5/Granebee"
+    },
+    {
+      "id": "fakemon:buneary-1:13f7b40cc329",
+      "from": "Mikitarian Buneary → Mikitarian Lopunny",
+      "to": "Buneary → Lopunny (Mikitari regional forms)",
+      "previousName": "Mikitarian Buneary",
+      "newName": "Buneary",
+      "previousFlag": "artist_or_region_label",
+      "currentFlag": "",
+      "previousStage": 0,
+      "currentStage": 0,
+      "proof": "https://pokengine.org/mons/00oh3oh8/Buneary"
+    },
+    {
+      "id": "fakemon:lopunny-1:06d969db7760",
+      "from": "Mikitarian Buneary → Mikitarian Lopunny",
+      "to": "Buneary → Lopunny (Mikitari regional forms)",
+      "previousName": "Mikitarian Lopunny",
+      "newName": "Lopunny",
+      "previousFlag": "artist_or_region_label",
+      "currentFlag": "",
+      "previousStage": 1,
+      "currentStage": 1,
+      "proof": "https://pokengine.org/mons/00xongth/Lopunny"
+    },
+    {
+      "id": "fakemon:spinarak-1:d9f9617a90e2",
+      "from": "Luminian Spinarak → Luminian Ariados",
+      "to": "Spinarak → Ariados (Lumio regional forms)",
+      "previousName": "Luminian Spinarak",
+      "newName": "Spinarak",
+      "previousFlag": "artist_or_region_label",
+      "currentFlag": "",
+      "previousStage": 0,
+      "currentStage": 0,
+      "proof": "https://pokengine.org/mons/00170bva/Spinarak"
+    },
+    {
+      "id": "fakemon:ariados-1:25da075190b5",
+      "from": "Luminian Spinarak → Luminian Ariados",
+      "to": "Spinarak → Ariados (Lumio regional forms)",
+      "previousName": "Luminian Ariados",
+      "newName": "Ariados",
+      "previousFlag": "artist_or_region_label",
+      "currentFlag": "",
+      "previousStage": 1,
+      "currentStage": 1,
+      "proof": "https://pokengine.org/mons/0057zpyp/Ariados"
+    },
+    {
+      "id": "fakemon:spritzee-1:f9749b90bdb0",
+      "from": "Platerigus → Mikitarian → Traumatisse",
+      "to": "Spritzee (Mikitari form) → Traumatisse",
+      "previousName": "Mikitarian Spritzee",
+      "newName": "Spritzee",
+      "previousFlag": "artist_or_region_label",
+      "currentFlag": "",
+      "previousStage": 1,
+      "currentStage": 0,
+      "proof": "https://pokengine.org/mons/00pm8f1c/Spritzee"
+    },
+    {
+      "id": "fakemon:traumatisse:c91020460452",
+      "from": "Platerigus → Mikitarian → Traumatisse",
+      "to": "Spritzee (Mikitari form) → Traumatisse",
+      "previousName": "Traumatisse",
+      "newName": "Traumatisse",
+      "previousFlag": "evolution_conflict",
+      "currentFlag": "",
+      "previousStage": 2,
+      "currentStage": 1,
+      "proof": "https://pokengine.org/mons/00y8pwe3/Traumatisse+"
+    },
+    {
+      "id": "fakemon:yamask-2:9ae97cd58dea",
+      "from": "Platerigus → Mikitarian → Traumatisse",
+      "to": "Yamask (Mikitari form) → Platerigus",
+      "previousName": "Mikitarian Yamask",
+      "newName": "Yamask",
+      "previousFlag": "artist_or_region_label",
+      "currentFlag": "",
+      "previousStage": 1,
+      "currentStage": 0,
+      "proof": "https://pokengine.org/mons/0063w7vk/Yamask"
+    },
+    {
+      "id": "fakemon:platerigus:277910002af1",
+      "from": "Platerigus → Mikitarian → Traumatisse",
+      "to": "Yamask (Mikitari form) → Platerigus",
+      "previousName": "Platerigus",
+      "newName": "Platerigus",
+      "previousFlag": "",
+      "currentFlag": "",
+      "previousStage": 0,
+      "currentStage": 1,
+      "proof": "https://pokengine.org/mons/00qxajnu/Platerigus"
+    },
+    {
+      "id": "fakemon:falinks-1:0c48c12e936e",
+      "from": "Platerigus → Mikitarian → Traumatisse",
+      "to": "Falinks (Mikitari regional form) — standalone",
+      "previousName": "Mikitarian Falinks",
+      "newName": "Falinks",
+      "previousFlag": "artist_or_region_label",
+      "currentFlag": "",
+      "previousStage": 1,
+      "currentStage": 0,
+      "proof": "https://pokengine.org/mons/00dun911/Falinks"
+    },
+    {
+      "id": "fakemon:hayog:c54be050251a",
+      "from": "Hayog → Hogouse → Hogriks",
+      "to": "Hayog / Hogouse / Hogriks — linkage pending confirmation",
+      "previousName": "Hayog",
+      "newName": "Hayog",
+      "previousFlag": "evolution_conflict",
+      "currentFlag": "evolution_conflict",
+      "previousStage": 0,
+      "currentStage": 0,
+      "proof": "https://pokengine.org/mons/00jtq3x2/Hayog"
+    },
+    {
+      "id": "fakemon:hogouse:5aacd2375ea9",
+      "from": "Hayog → Hogouse → Hogriks",
+      "to": "Hayog / Hogouse / Hogriks — linkage pending confirmation",
+      "previousName": "Hogouse",
+      "newName": "Hogouse",
+      "previousFlag": "evolution_conflict",
+      "currentFlag": "evolution_conflict",
+      "previousStage": 1,
+      "currentStage": 1,
+      "proof": "https://pokengine.org/mons/00bspmsd/Hogouse"
+    },
+    {
+      "id": "fakemon:hogriks:09d5ea97ceeb",
+      "from": "Hayog → Hogouse → Hogriks",
+      "to": "Hayog / Hogouse / Hogriks — linkage pending confirmation",
+      "previousName": "Hogriks",
+      "newName": "Hogriks",
+      "previousFlag": "evolution_conflict",
+      "currentFlag": "evolution_conflict",
+      "previousStage": 2,
+      "currentStage": 2,
+      "proof": "https://pokengine.org/mons/00jegdpk/Hogriks"
+    },
+    {
+      "id": "fakemon:minamai:a49139765a74",
+      "from": "Minamai → Marelstorm",
+      "to": "Minamai / Marelstorm — linkage pending confirmation",
+      "previousName": "Minamai",
+      "newName": "Minamai",
+      "previousFlag": "evolution_conflict",
+      "currentFlag": "evolution_conflict",
+      "previousStage": 0,
+      "currentStage": 0,
+      "proof": "https://pokengine.org/mons/00rofohd/Minamai"
+    },
+    {
+      "id": "fakemon:marelstorm:701ab0bd5780",
+      "from": "Minamai → Marelstorm",
+      "to": "Minamai / Marelstorm — linkage pending confirmation",
+      "previousName": "Marelstorm",
+      "newName": "Marelstorm",
+      "previousFlag": "evolution_conflict",
+      "currentFlag": "evolution_conflict",
+      "previousStage": 1,
+      "currentStage": 1,
+      "proof": "https://pokengine.org/mons/004bj9kp/Marelstorm"
+    },
+    {
+      "id": "compare:rainther:1",
+      "from": "Dampurr → Rainther → Delugar",
+      "to": "Dampurr → Rainther → Delugar",
+      "previousName": "Rainther — Design 1",
+      "newName": "Rainther — Design 1",
+      "previousFlag": "provisional_identification",
+      "currentFlag": "provisional_identification",
+      "previousStage": 1,
+      "currentStage": 1,
+      "proof": "https://pokengine.org/mons/00w927yf/Rainther"
+    },
+    {
+      "id": "compare:rainther:2",
+      "from": "Dampurr → Rainther → Delugar",
+      "to": "Dampurr → Rainther → Delugar",
+      "previousName": "Rainther — Design 2",
+      "newName": "Rainther — Design 2",
+      "previousFlag": "provisional_identification",
+      "currentFlag": "provisional_identification",
+      "previousStage": 1,
+      "currentStage": 1,
+      "proof": "https://pokengine.org/mons/00w927yf/Rainther"
+    },
+    {
+      "id": "compare:hissiorite:2",
+      "from": "Hissiorite → Cobarett → Pythonova",
+      "to": "Hissiorite → Cobarett → Pythonova",
+      "previousName": "Hissiorite — Design 2",
+      "newName": "Hissiorite — Design 2",
+      "previousFlag": "provisional_identification",
+      "currentFlag": "provisional_identification",
+      "previousStage": 0,
+      "currentStage": 0,
+      "proof": "https://wiki.tuxemon.org/Hissiorite"
+    },
+    {
+      "id": "compare:cobarett:2",
+      "from": "Hissiorite → Cobarett → Pythonova",
+      "to": "Hissiorite → Cobarett → Pythonova",
+      "previousName": "Cobarett — Design 2",
+      "newName": "Cobarett — Design 2",
+      "previousFlag": "provisional_identification",
+      "currentFlag": "provisional_identification",
+      "previousStage": 1,
+      "currentStage": 1,
+      "proof": "https://wiki.tuxemon.org/Cobarett"
+    },
+    {
+      "id": "compare:pythonova:2",
+      "from": "Hissiorite → Cobarett → Pythonova",
+      "to": "Hissiorite → Cobarett → Pythonova",
+      "previousName": "Pythonova — Design 2",
+      "newName": "Pythonova — Design 2",
+      "previousFlag": "provisional_identification",
+      "currentFlag": "provisional_identification",
+      "previousStage": 2,
+      "currentStage": 2,
+      "proof": "https://www.pokengine.org/mons/00rgw87i/Pythonova"
+    },
+    {
+      "id": "compare:noctowl-1:1",
+      "from": "Noctowl 1 → Enchantowl",
+      "to": "Hoothoot → Noctowl → Enchantowl (source-art lineage check)",
+      "previousName": "Luminian Noctowl — Design 1",
+      "newName": "Luminian Noctowl — Design 1",
+      "previousFlag": "artist_or_region_label",
+      "currentFlag": "artist_or_region_label",
+      "previousStage": 0,
+      "currentStage": 1,
+      "proof": "https://pokengine.org/mons/00634t3c/Noctowl"
+    },
+    {
+      "id": "fakemon:enchantowl:c4f31a6f6f3c",
+      "from": "Noctowl 1 → Enchantowl",
+      "to": "Hoothoot → Noctowl → Enchantowl (source-art lineage check)",
+      "previousName": "Enchantowl",
+      "newName": "Enchantowl",
+      "previousFlag": "",
+      "currentFlag": "",
+      "previousStage": 1,
+      "currentStage": 2,
+      "proof": "https://pokengine.org/mons/001cx6e0/Enchantowl"
+    },
+    {
+      "id": "compare:pythonovas:1",
+      "from": "Pythonovas",
+      "to": "Hissiorite → Cobarett → Pythonova",
+      "previousName": "Pythonovas — Design 1",
+      "newName": "Pythonovas — Design 1",
+      "previousFlag": "possible_shiny_alias",
+      "currentFlag": "possible_shiny_alias",
+      "previousStage": 0,
+      "currentStage": 2,
+      "proof": "https://wiki.tuxemon.org/Hissiorite"
+    },
+    {
+      "id": "compare:pythonovas:2",
+      "from": "Pythonovas",
+      "to": "Hissiorite → Cobarett → Pythonova",
+      "previousName": "Pythonovas — Design 2",
+      "newName": "Pythonovas — Design 2",
+      "previousFlag": "possible_shiny_alias",
+      "currentFlag": "possible_shiny_alias",
+      "previousStage": 0,
+      "currentStage": 2,
+      "proof": "https://wiki.tuxemon.org/Hissiorite"
+    }
+  ],
+  "missingReferenceStage": [
+    {
+      "family": "Furrva → Kocomb (normal / militant) → Granebee / Beelitant",
+      "name": "Furrva",
+      "stage": 0,
+      "reference": "https://pokengine.org/mons/00uc0o89/Furrva",
+      "status": "source confirmed; not present as a current actionable sprite review entry"
+    }
+  ],
+  "unresolvedSourceIssues": [
+    "Verify Lumio Noctowl artwork is correctly paired with Enchantowl (not assumed)",
+    "Hayog/Hogouse/Hogriks full evolution graph",
+    "Minamai/Marelstorm evolution edge",
+    "Pythonova S shiny/animation status",
+    "Rainther and Hissiorite comparison front/back pair verification"
+  ],
+  "safeguards": {
+    "keepOriginalSourceNames": true,
+    "doNotModifyUserVotes": true,
+    "doNotAutoIntegrate": true,
+    "doNotInventMissingSprites": true
+  }
+}
