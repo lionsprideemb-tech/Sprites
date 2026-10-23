@@ -1,0 +1,37 @@
+name: Recover original PNG pixel streams without redraw
+on:
+  push:
+    branches: [main]
+    paths:
+      - "tools/recover_legacy_png_containers.py"
+      - ".github/workflows/recover-legacy-png-containers.yml"
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: mercury-original-png-container-recovery
+  cancel-in-progress: false
+jobs:
+  salvage:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - run: python3 -m pip install --quiet pillow
+      - name: Attempt image-IDAT-preserving original PNG container rescue
+        run: python3 tools/recover_legacy_png_containers.py
+      - name: Commit only separate attribution-verified source recoveries
+        run: |
+          set -euo pipefail
+          git config user.name "Mercury Original Image Audit"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy_PNG_Container_Repairs/
+          if git diff --cached --quiet; then
+            echo "Recovery manifest already current."
+            exit 0
+          fi
+          git commit -m "Preserve any recoverable original Munna Musharna IDAT sources without overwrite"
+          git pull --rebase origin main
+          git push origin HEAD:main
