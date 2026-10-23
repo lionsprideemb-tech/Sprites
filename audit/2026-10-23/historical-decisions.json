@@ -21,7 +21,9 @@
     "legacyApproved": 566,
     "legacyRejected": 477,
     "laterRecovered": 94,
-    "changed": 27
+    "changed": 27,
+    "identityCollisions": 5,
+    "contradictoryIdentityCollisions": 2
   },
   "rule": "Later recovered GBA decision is recorded as effective; a historical imported KEEP is not a current-pass approval.",
   "changedHistory": [
@@ -24567,6 +24569,118 @@
       "shinyFront": "DS_CUSTOM_LIBRARY/converted/All_Mercury_GBA_Queue/wooly_worm/front-shiny.png",
       "shinyBack": "DS_CUSTOM_LIBRARY/converted/All_Mercury_GBA_Queue/wooly_worm/back-shiny.png",
       "legacyEmbedded": false
+    }
+  ],
+  "identityCollisions": [
+    {
+      "id": "arcanine-mega",
+      "name": "Arcanine Mega",
+      "rows": [
+        {
+          "reviewId": "R0077",
+          "effective": "keep",
+          "source": "Elite Redux",
+          "front": "DS_CUSTOM_LIBRARY/converted/All_Mercury_GBA_Queue/arcanine_mega/front.png",
+          "back": "DS_CUSTOM_LIBRARY/converted/All_Mercury_GBA_Queue/arcanine_mega/back.png"
+        },
+        {
+          "reviewId": "R0078",
+          "effective": "keep",
+          "source": "Elite Redux",
+          "front": "DS_CUSTOM_LIBRARY/converted/All_Mercury_GBA_Queue/arcanine_mega/front.png",
+          "back": "DS_CUSTOM_LIBRARY/converted/All_Mercury_GBA_Queue/arcanine_mega/back.png"
+        }
+      ],
+      "conflictingDecision": false,
+      "action": "Do not merge or override these rows without identifying the semantic/forme difference."
+    },
+    {
+      "id": "reuniclus-mega",
+      "name": "Reuniclus Mega",
+      "rows": [
+        {
+          "reviewId": "R0737",
+          "effective": "keep",
+          "source": "Elite Redux",
+          "front": "DS_CUSTOM_LIBRARY/converted/All_Mercury_GBA_Queue/reuniclus_mega/front.png",
+          "back": "DS_CUSTOM_LIBRARY/converted/All_Mercury_GBA_Queue/reuniclus_mega/back.png"
+        },
+        {
+          "reviewId": "R0738",
+          "effective": "keep",
+          "source": "Elite Redux",
+          "front": "DS_CUSTOM_LIBRARY/converted/All_Mercury_GBA_Queue/reuniclus_mega/front.png",
+          "back": "DS_CUSTOM_LIBRARY/converted/All_Mercury_GBA_Queue/reuniclus_mega/back.png"
+        }
+      ],
+      "conflictingDecision": false,
+      "action": "Do not merge or override these rows without identifying the semantic/forme difference."
+    },
+    {
+      "id": "hydreigon-mega",
+      "name": "Hydreigon Mega",
+      "rows": [
+        {
+          "reviewId": "R0786",
+          "effective": "keep",
+          "source": "Elite Redux",
+          "front": "DS_CUSTOM_LIBRARY/converted/All_Mercury_GBA_Queue/hydreigon_mega/front.png",
+          "back": "DS_CUSTOM_LIBRARY/converted/All_Mercury_GBA_Queue/hydreigon_mega/back.png"
+        },
+        {
+          "reviewId": "R0787",
+          "effective": "cut",
+          "source": "Elite Redux",
+          "front": "DS_CUSTOM_LIBRARY/converted/All_Mercury_GBA_Queue/hydreigon_mega/front.png",
+          "back": "DS_CUSTOM_LIBRARY/converted/All_Mercury_GBA_Queue/hydreigon_mega/back.png"
+        }
+      ],
+      "conflictingDecision": true,
+      "action": "Do not merge or override these rows without identifying the semantic/forme difference."
+    },
+    {
+      "id": "tsareena-mega",
+      "name": "Tsareena Mega",
+      "rows": [
+        {
+          "reviewId": "R0867",
+          "effective": "keep",
+          "source": "Elite Redux",
+          "front": "DS_CUSTOM_LIBRARY/converted/All_Mercury_GBA_Queue/tsareena_mega/front.png",
+          "back": "DS_CUSTOM_LIBRARY/converted/All_Mercury_GBA_Queue/tsareena_mega/back.png"
+        },
+        {
+          "reviewId": "R0868",
+          "effective": "cut",
+          "source": "Elite Redux",
+          "front": "DS_CUSTOM_LIBRARY/converted/All_Mercury_GBA_Queue/tsareena_mega/front.png",
+          "back": "DS_CUSTOM_LIBRARY/converted/All_Mercury_GBA_Queue/tsareena_mega/back.png"
+        }
+      ],
+      "conflictingDecision": true,
+      "action": "Do not merge or override these rows without identifying the semantic/forme difference."
+    },
+    {
+      "id": "toxtricity-mega",
+      "name": "Toxtricity Mega",
+      "rows": [
+        {
+          "reviewId": "R0901",
+          "effective": "keep",
+          "source": "Elite Redux",
+          "front": "DS_CUSTOM_LIBRARY/converted/All_Mercury_GBA_Queue/toxtricity_mega/front.png",
+          "back": "DS_CUSTOM_LIBRARY/converted/All_Mercury_GBA_Queue/toxtricity_mega/back.png"
+        },
+        {
+          "reviewId": "R0902",
+          "effective": "keep",
+          "source": "Elite Redux",
+          "front": "DS_CUSTOM_LIBRARY/converted/All_Mercury_GBA_Queue/toxtricity_mega/front.png",
+          "back": "DS_CUSTOM_LIBRARY/converted/All_Mercury_GBA_Queue/toxtricity_mega/back.png"
+        }
+      ],
+      "conflictingDecision": false,
+      "action": "Do not merge or override these rows without identifying the semantic/forme difference."
     }
   ]
 }
