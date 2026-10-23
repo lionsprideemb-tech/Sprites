@@ -1,0 +1,1504 @@
+{
+  "schema": "mercury.sprite.name-provenance-audit.v2",
+  "generated": "2026-10-23",
+  "policy": {
+    "creditAndSpeciesDistinct": true,
+    "unknownNamesHeld": true,
+    "noAutoRenameToArtist": true,
+    "preserveUserDecisions": true,
+    "noDelete": true
+  },
+  "summary": {
+    "source": "Source metadata + externally documented creator labels already in repository",
+    "recordsEvaluated": 1837,
+    "leftoverMetadataCandidates": 158,
+    "actualDisplayNamesCorrected": 9,
+    "generatedCreatorAttributions": 124,
+    "namesWithIssueFlags": 91,
+    "quarantinedRowsFromPreviouslyVisibleQueue": 80,
+    "provisionalTypeRows": 2,
+    "correctedFamilyRows": 5,
+    "artworkOptionsRecoveredBackPaths": 15,
+    "pendingRecords": 146,
+    "pendingChoices": 4,
+    "metadataHolds": 3,
+    "artHolds": 194,
+    "safetyNote": "No user KEEP/CUT vote changed. No source file moved, deleted, or integrated."
+  },
+  "artStatuses": [
+    {
+      "identity": "cobarett",
+      "bucket": "technical_hold",
+      "missingBack": [
+        "Fakemon_Festival_Full"
+      ]
+    },
+    {
+      "identity": "hissiorite",
+      "bucket": "technical_hold",
+      "missingBack": [
+        "Fakemon_Festival_Full"
+      ]
+    },
+    {
+      "identity": "pythonova",
+      "bucket": "needs_review",
+      "missingBack": []
+    },
+    {
+      "identity": "pythonovas",
+      "bucket": "metadata_hold",
+      "missingBack": []
+    },
+    {
+      "identity": "noctowl-1",
+      "bucket": "metadata_hold",
+      "missingBack": []
+    },
+    {
+      "identity": "dampurr",
+      "bucket": "needs_review",
+      "missingBack": []
+    },
+    {
+      "identity": "delugar",
+      "bucket": "needs_review",
+      "missingBack": []
+    },
+    {
+      "identity": "rainther",
+      "bucket": "needs_review",
+      "missingBack": []
+    },
+    {
+      "identity": "searpent",
+      "bucket": "technical_hold",
+      "missingBack": [
+        "Festival_Magiscarf"
+      ]
+    }
+  ],
+  "flags": [
+    {
+      "id": "gba:R0002",
+      "identity": "platinum-redux-venusaur",
+      "name": "Platinum Redux Venusaur",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "bucket": "technical_hold",
+      "issues": [
+        "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED"
+      ]
+    },
+    {
+      "id": "gba:R0004",
+      "identity": "platinum-redux-charizard",
+      "name": "Platinum Redux Charizard",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "bucket": "technical_hold",
+      "issues": [
+        "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED"
+      ]
+    },
+    {
+      "id": "gba:R0006",
+      "identity": "platinum-redux-blastoise",
+      "name": "Platinum Redux Blastoise",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "bucket": "technical_hold",
+      "issues": [
+        "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED"
+      ]
+    },
+    {
+      "id": "gba:R0025",
+      "identity": "platinum-redux-raticate",
+      "name": "Platinum Redux Raticate",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "bucket": "technical_hold",
+      "issues": [
+        "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED"
+      ]
+    },
+    {
+      "id": "gba:R0028",
+      "identity": "platinum-redux-fearow",
+      "name": "Platinum Redux Fearow",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "bucket": "technical_hold",
+      "issues": [
+        "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED"
+      ]
+    },
+    {
+      "id": "gba:R0030",
+      "identity": "platinum-redux-arbok",
+      "name": "Platinum Redux Arbok",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "bucket": "technical_hold",
+      "issues": [
+        "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED"
+      ]
+    },
+    {
+      "id": "gba:R0046",
+      "identity": "platinum-redux-clefable",
+      "name": "Platinum Redux Clefable",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "bucket": "technical_hold",
+      "issues": [
+        "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED"
+      ]
+    },
+    {
+      "id": "gba:R0050",
+      "identity": "platinum-redux-ninetales",
+      "name": "Platinum Redux Ninetales",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "bucket": "technical_hold",
+      "issues": [
+        "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED"
+      ]
+    },
+    {
+      "id": "gba:R0062",
+      "identity": "platinum-redux-bellossom",
+      "name": "Platinum Redux Bellossom",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "bucket": "technical_hold",
+      "issues": [
+        "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED"
+      ]
+    },
+    {
+      "id": "gba:R0066",
+      "identity": "platinum-redux-venomoth",
+      "name": "Platinum Redux Venomoth",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "bucket": "technical_hold",
+      "issues": [
+        "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED"
+      ]
+    },
+    {
+      "id": "gba:R0068",
+      "identity": "platinum-redux-dugtrio",
+      "name": "Platinum Redux Dugtrio",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "bucket": "technical_hold",
+      "issues": [
+        "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED"
+      ]
+    },
+    {
+      "id": "gba:R0071",
+      "identity": "platinum-redux-persian",
+      "name": "Platinum Redux Persian",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "bucket": "technical_hold",
+      "issues": [
+        "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED"
+      ]
+    },
+    {
+      "id": "gba:R0100",
+      "identity": "platinum-redux-machamp",
+      "name": "Platinum Redux Machamp",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "bucket": "technical_hold",
+      "issues": [
+        "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED"
+      ]
+    },
+    {
+      "id": "gba:R0104",
+      "identity": "platinum-redux-victreebel",
+      "name": "Platinum Redux Victreebel",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "bucket": "technical_hold",
+      "issues": [
+        "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED"
+      ]
+    },
+    {
+      "id": "gba:R0111",
+      "identity": "platinum-redux-rapidash",
+      "name": "Platinum Redux Rapidash",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "bucket": "technical_hold",
+      "issues": [
+        "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED"
+      ]
+    },
+    {
+      "id": "gba:R0136",
+      "identity": "platinum-redux-muk",
+      "name": "Platinum Redux Muk",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "bucket": "technical_hold",
+      "issues": [
+        "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED"
+      ]
+    },
+    {
+      "id": "gba:R0155",
+      "identity": "platinum-redux-kingler",
+      "name": "Platinum Redux Kingler",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "bucket": "technical_hold",
+      "issues": [
+        "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED"
+      ]
+    },
+    {
+      "id": "gba:R0157",
+      "identity": "platinum-redux-electrode",
+      "name": "Platinum Redux Electrode",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "bucket": "technical_hold",
+      "issues": [
+        "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED"
+      ]
+    },
+    {
+      "id": "gba:R0160",
+      "identity": "platinum-redux-marowak",
+      "name": "Platinum Redux Marowak",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "bucket": "technical_hold",
+      "issues": [
+        "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED"
+      ]
+    },
+    {
+      "id": "gba:R0163",
+      "identity": "platinum-redux-hitmonlee",
+      "name": "Platinum Redux Hitmonlee",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "bucket": "technical_hold",
+      "issues": [
+        "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED"
+      ]
+    },
+    {
+      "id": "gba:R0166",
+      "identity": "platinum-redux-hitmonchan",
+      "name": "Platinum Redux Hitmonchan",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "bucket": "technical_hold",
+      "issues": [
+        "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED"
+      ]
+    },
+    {
+      "id": "gba:R0186",
+      "identity": "platinum-redux-kangaskhan",
+      "name": "Platinum Redux Kangaskhan",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "bucket": "technical_hold",
+      "issues": [
+        "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED"
+      ]
+    },
+    {
+      "id": "gba:R0206",
+      "identity": "platinum-redux-electivire",
+      "name": "Platinum Redux Electivire",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "bucket": "technical_hold",
+      "issues": [
+        "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED"
+      ]
+    },
+    {
+      "id": "gba:R0211",
+      "identity": "platinum-redux-magmortar",
+      "name": "Platinum Redux Magmortar",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "bucket": "technical_hold",
+      "issues": [
+        "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED"
+      ]
+    },
+    {
+      "id": "gba:R0214",
+      "identity": "platinum-redux-tauros",
+      "name": "Platinum Redux Tauros",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "bucket": "technical_hold",
+      "issues": [
+        "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED"
+      ]
+    },
+    {
+      "id": "gba:R0217",
+      "identity": "platinum-redux-gyarados",
+      "name": "Platinum Redux Gyarados",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "bucket": "technical_hold",
+      "issues": [
+        "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED"
+      ]
+    },
+    {
+      "id": "gba:R0222",
+      "identity": "platinum-redux-lapras",
+      "name": "Platinum Redux Lapras",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "bucket": "technical_hold",
+      "issues": [
+        "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED"
+      ]
+    },
+    {
+      "id": "gba:R0225",
+      "identity": "platinum-redux-vaporeon",
+      "name": "Platinum Redux Vaporeon",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "bucket": "technical_hold",
+      "issues": [
+        "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED"
+      ]
+    },
+    {
+      "id": "gba:R0227",
+      "identity": "platinum-redux-jolteon",
+      "name": "Platinum Redux Jolteon",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "bucket": "technical_hold",
+      "issues": [
+        "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED"
+      ]
+    },
+    {
+      "id": "gba:R0232",
+      "identity": "platinum-redux-espeon",
+      "name": "Platinum Redux Espeon",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "bucket": "technical_hold",
+      "issues": [
+        "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED"
+      ]
+    },
+    {
+      "id": "gba:R0234",
+      "identity": "platinum-redux-umbreon",
+      "name": "Platinum Redux Umbreon",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "bucket": "technical_hold",
+      "issues": [
+        "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED"
+      ]
+    },
+    {
+      "id": "gba:R0242",
+      "identity": "platinum-redux-porygon-z",
+      "name": "Platinum Redux Porygon-Z",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "bucket": "technical_hold",
+      "issues": [
+        "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED"
+      ]
+    },
+    {
+      "id": "gba:R0244",
+      "identity": "platinum-redux-omastar",
+      "name": "Platinum Redux Omastar",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "bucket": "technical_hold",
+      "issues": [
+        "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED"
+      ]
+    },
+    {
+      "id": "gba:R0247",
+      "identity": "platinum-redux-kabutops",
+      "name": "Platinum Redux Kabutops",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "bucket": "technical_hold",
+      "issues": [
+        "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED"
+      ]
+    },
+    {
+      "id": "gba:R0257",
+      "identity": "platinum-redux-snorlax",
+      "name": "Platinum Redux Snorlax",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "bucket": "technical_hold",
+      "issues": [
+        "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED"
+      ]
+    },
+    {
+      "id": "gba:R0269",
+      "identity": "platinum-redux-mew",
+      "name": "Platinum Redux Mew",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "bucket": "technical_hold",
+      "issues": [
+        "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED"
+      ]
+    },
+    {
+      "id": "gba:R0271",
+      "identity": "platinum-redux-meganium",
+      "name": "Platinum Redux Meganium",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "bucket": "technical_hold",
+      "issues": [
+        "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED"
+      ]
+    },
+    {
+      "id": "gba:R0276",
+      "identity": "platinum-redux-typhlosion",
+      "name": "Platinum Redux Typhlosion",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "bucket": "technical_hold",
+      "issues": [
+        "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED"
+      ]
+    },
+    {
+      "id": "gba:R0284",
+      "identity": "platinum-redux-furret",
+      "name": "Platinum Redux Furret",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "bucket": "technical_hold",
+      "issues": [
+        "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED"
+      ]
+    },
+    {
+      "id": "gba:R0286",
+      "identity": "platinum-redux-noctowl",
+      "name": "Platinum Redux Noctowl",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "bucket": "technical_hold",
+      "issues": [
+        "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED"
+      ]
+    },
+    {
+      "id": "gba:R0289",
+      "identity": "platinum-redux-ledian",
+      "name": "Platinum Redux Ledian",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "bucket": "technical_hold",
+      "issues": [
+        "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED"
+      ]
+    },
+    {
+      "id": "gba:R0291",
+      "identity": "platinum-redux-ariados",
+      "name": "Platinum Redux Ariados",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "bucket": "technical_hold",
+      "issues": [
+        "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED"
+      ]
+    },
+    {
+      "id": "gba:R0303",
+      "identity": "platinum-redux-sudowoodo",
+      "name": "Platinum Redux Sudowoodo",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "bucket": "technical_hold",
+      "issues": [
+        "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED"
+      ]
+    },
+    {
+      "id": "gba:R0348",
+      "identity": "platinum-redux-ursaring",
+      "name": "Platinum Redux Ursaring",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "bucket": "technical_hold",
+      "issues": [
+        "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED"
+      ]
+    },
+    {
+      "id": "gba:R0362",
+      "identity": "platinum-redux-octillery",
+      "name": "Platinum Redux Octillery",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "bucket": "technical_hold",
+      "issues": [
+        "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED"
+      ]
+    },
+    {
+      "id": "gba:R0373",
+      "identity": "platinum-redux-stantler",
+      "name": "Platinum Redux Stantler",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "bucket": "technical_hold",
+      "issues": [
+        "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED"
+      ]
+    },
+    {
+      "id": "gba:R0376",
+      "identity": "platinum-redux-raikou",
+      "name": "Platinum Redux Raikou",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "bucket": "technical_hold",
+      "issues": [
+        "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED"
+      ]
+    },
+    {
+      "id": "gba:R0377",
+      "identity": "platinum-redux-entei",
+      "name": "Platinum Redux Entei",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "bucket": "technical_hold",
+      "issues": [
+        "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED"
+      ]
+    },
+    {
+      "id": "gba:R0378",
+      "identity": "platinum-redux-suicune",
+      "name": "Platinum Redux Suicune",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "bucket": "technical_hold",
+      "issues": [
+        "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED"
+      ]
+    },
+    {
+      "id": "gba:R0390",
+      "identity": "platinum-redux-lugia",
+      "name": "Platinum Redux Lugia",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "bucket": "technical_hold",
+      "issues": [
+        "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED"
+      ]
+    },
+    {
+      "id": "gba:R0391",
+      "identity": "platinum-redux-celebi",
+      "name": "Platinum Redux Celebi",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "bucket": "technical_hold",
+      "issues": [
+        "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED"
+      ]
+    },
+    {
+      "id": "gba:R0401",
+      "identity": "platinum-redux-mightyena",
+      "name": "Platinum Redux Mightyena",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "bucket": "technical_hold",
+      "issues": [
+        "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED"
+      ]
+    },
+    {
+      "id": "gba:R0405",
+      "identity": "platinum-redux-beautifly",
+      "name": "Platinum Redux Beautifly",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "bucket": "technical_hold",
+      "issues": [
+        "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED"
+      ]
+    },
+    {
+      "id": "gba:R0412",
+      "identity": "platinum-redux-gardevoir",
+      "name": "Platinum Redux Gardevoir",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "bucket": "technical_hold",
+      "issues": [
+        "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED"
+      ]
+    },
+    {
+      "id": "gba:R0424",
+      "identity": "platinum-redux-slaking",
+      "name": "Platinum Redux Slaking",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "bucket": "technical_hold",
+      "issues": [
+        "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED"
+      ]
+    },
+    {
+      "id": "gba:R0455",
+      "identity": "platinum-redux-mawile",
+      "name": "Platinum Redux Mawile",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "bucket": "technical_hold",
+      "issues": [
+        "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED"
+      ]
+    },
+    {
+      "id": "gba:R0460",
+      "identity": "platinum-redux-medicham",
+      "name": "Platinum Redux Medicham",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "bucket": "technical_hold",
+      "issues": [
+        "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED"
+      ]
+    },
+    {
+      "id": "gba:R0462",
+      "identity": "platinum-redux-manectric",
+      "name": "Platinum Redux Manectric",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "bucket": "technical_hold",
+      "issues": [
+        "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED"
+      ]
+    },
+    {
+      "id": "gba:R0467",
+      "identity": "platinum-redux-volbeat",
+      "name": "Platinum Redux Volbeat",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "bucket": "technical_hold",
+      "issues": [
+        "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED"
+      ]
+    },
+    {
+      "id": "gba:R0468",
+      "identity": "platinum-redux-illumise",
+      "name": "Platinum Redux Illumise",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "bucket": "technical_hold",
+      "issues": [
+        "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED"
+      ]
+    },
+    {
+      "id": "gba:R0485",
+      "identity": "platinum-redux-torkoal",
+      "name": "Platinum Redux Torkoal",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "bucket": "technical_hold",
+      "issues": [
+        "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED"
+      ]
+    },
+    {
+      "id": "gba:R0498",
+      "identity": "platinum-redux-flygon",
+      "name": "Platinum Redux Flygon",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "bucket": "technical_hold",
+      "issues": [
+        "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED"
+      ]
+    },
+    {
+      "id": "gba:R0508",
+      "identity": "platinum-redux-lunatone",
+      "name": "Platinum Redux Lunatone",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "bucket": "technical_hold",
+      "issues": [
+        "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED"
+      ]
+    },
+    {
+      "id": "gba:R0510",
+      "identity": "platinum-redux-crawdaunt",
+      "name": "Platinum Redux Crawdaunt",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "bucket": "technical_hold",
+      "issues": [
+        "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED"
+      ]
+    },
+    {
+      "id": "gba:R0519",
+      "identity": "platinum-redux-milotic",
+      "name": "Platinum Redux Milotic",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "bucket": "technical_hold",
+      "issues": [
+        "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED"
+      ]
+    },
+    {
+      "id": "gba:R0524",
+      "identity": "platinum-redux-banette",
+      "name": "Platinum Redux Banette",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "bucket": "technical_hold",
+      "issues": [
+        "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED"
+      ]
+    },
+    {
+      "id": "gba:R0535",
+      "identity": "platinum-redux-absol",
+      "name": "Platinum Redux Absol",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "bucket": "technical_hold",
+      "issues": [
+        "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED"
+      ]
+    },
+    {
+      "id": "gba:R0562",
+      "identity": "platinum-redux-regirock",
+      "name": "Platinum Redux Regirock",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "bucket": "technical_hold",
+      "issues": [
+        "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED"
+      ]
+    },
+    {
+      "id": "gba:R0563",
+      "identity": "platinum-redux-regice",
+      "name": "Platinum Redux Regice",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "bucket": "technical_hold",
+      "issues": [
+        "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED"
+      ]
+    },
+    {
+      "id": "gba:R0564",
+      "identity": "platinum-redux-registeel",
+      "name": "Platinum Redux Registeel",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "bucket": "technical_hold",
+      "issues": [
+        "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED"
+      ]
+    },
+    {
+      "id": "gba:R0587",
+      "identity": "platinum-redux-staraptor",
+      "name": "Platinum Redux Staraptor",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "bucket": "technical_hold",
+      "issues": [
+        "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED"
+      ]
+    },
+    {
+      "id": "gba:R0595",
+      "identity": "platinum-redux-luxray",
+      "name": "Platinum Redux Luxray",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "bucket": "technical_hold",
+      "issues": [
+        "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED"
+      ]
+    },
+    {
+      "id": "gba:R0599",
+      "identity": "platinum-redux-rampardos",
+      "name": "Platinum Redux Rampardos",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "bucket": "technical_hold",
+      "issues": [
+        "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED"
+      ]
+    },
+    {
+      "id": "gba:R0603",
+      "identity": "platinum-redux-bastiodon",
+      "name": "Platinum Redux Bastiodon",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "bucket": "technical_hold",
+      "issues": [
+        "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED"
+      ]
+    },
+    {
+      "id": "gba:R0632",
+      "identity": "platinum-redux-skuntank",
+      "name": "Platinum Redux Skuntank",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "bucket": "technical_hold",
+      "issues": [
+        "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED"
+      ]
+    },
+    {
+      "id": "gba:R0634",
+      "identity": "platinum-redux-bronzong",
+      "name": "Platinum Redux Bronzong",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "bucket": "technical_hold",
+      "issues": [
+        "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED"
+      ]
+    },
+    {
+      "id": "gba:R0649",
+      "identity": "platinum-redux-hippowdon",
+      "name": "Platinum Redux Hippowdon",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "bucket": "technical_hold",
+      "issues": [
+        "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED"
+      ]
+    },
+    {
+      "id": "gba:R0666",
+      "identity": "platinum-redux-palkia",
+      "name": "Platinum Redux Palkia",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "bucket": "technical_hold",
+      "issues": [
+        "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED"
+      ]
+    },
+    {
+      "id": "gba:R0473",
+      "identity": "platinum-redux-swalot",
+      "name": "Platinum Redux Swalot",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "bucket": "technical_hold",
+      "issues": [
+        "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED"
+      ]
+    },
+    {
+      "id": "leftover:mega-barbaracle|95022e077bf94c8ee25635e3db1760fb5208b18ee3ba0f59cfea23e531e0b146",
+      "identity": "mega-barbaracle",
+      "name": "Mega Barbaracle",
+      "source": "Festival_Misc",
+      "bucket": "identity_hold",
+      "issues": [
+        "UNVERIFIED_CUSTOM_MEGA_IDENTITY"
+      ]
+    },
+    {
+      "id": "leftover:rainther|9bd1392ed4216f97385675a1e0200beb046ff0bde9f9d5dd58f7d122050a6eae",
+      "identity": "rainther",
+      "name": "Rainther",
+      "source": "Festival_Magiscarf",
+      "bucket": "identity_hold",
+      "issues": [
+        "PROVISIONAL_TYPE"
+      ]
+    },
+    {
+      "id": "leftover:rainther|7f3adf7765a5483676fad9e753944c4afce9f37024eede619364a6caf873fe7e",
+      "identity": "rainther",
+      "name": "Rainther",
+      "source": "Festival_Magiscarf",
+      "bucket": "identity_hold",
+      "issues": [
+        "PROVISIONAL_TYPE"
+      ]
+    },
+    {
+      "id": "leftover:enchantowl|c4f31a6f6f3c3c25a86d89f1b3dd26440b166aba36d1cc6001856dfa1737811a",
+      "identity": "enchantowl",
+      "name": "Enchantowl",
+      "source": "Festival_Lumio",
+      "bucket": "needs_review",
+      "issues": [
+        "FAMILY_CHAIN_UNVERIFIED"
+      ]
+    },
+    {
+      "id": "leftover:spritzee-1|f9749b90bdb04d9a3d1d546eb2f023c18f91a28049397d152bb867ee4b12b9b1",
+      "identity": "spritzee-1",
+      "name": "Spritzee — Mikitarian form",
+      "source": "Mikitari",
+      "bucket": "identity_hold",
+      "issues": [
+        "REGION_LABEL_NOT_SPECIES",
+        "FAMILY_LINE_CONTAINS_FORM_LABEL",
+        "EXTERNAL_LABEL_PARSE"
+      ]
+    },
+    {
+      "id": "leftover:yamask-2|9ae97cd58dea46c14b3cfcad180525056af49b644dc57d16471b41bf12022504",
+      "identity": "yamask-2",
+      "name": "Yamask — Mikitarian form",
+      "source": "Mikitari",
+      "bucket": "identity_hold",
+      "issues": [
+        "REGION_LABEL_NOT_SPECIES",
+        "FAMILY_LINE_CONTAINS_FORM_LABEL",
+        "EXTERNAL_LABEL_PARSE"
+      ]
+    },
+    {
+      "id": "leftover:ariados-1|25da075190b5ce183c2ddecd9926115a3b51a38b555648fc5ebffec730caa843",
+      "identity": "ariados-1",
+      "name": "Ariados — Luminian form",
+      "source": "Festival_Lumio",
+      "bucket": "identity_hold",
+      "issues": [
+        "REGION_LABEL_NOT_SPECIES",
+        "EXTERNAL_LABEL_PARSE"
+      ]
+    },
+    {
+      "id": "leftover:buneary-1|13f7b40cc3296950c02a6d6ac2f2d3810e931bd2ec700a5ce44a5b26a3c701cf",
+      "identity": "buneary-1",
+      "name": "Buneary — Mikitarian form",
+      "source": "Mikitari",
+      "bucket": "identity_hold",
+      "issues": [
+        "REGION_LABEL_NOT_SPECIES",
+        "EXTERNAL_LABEL_PARSE"
+      ]
+    },
+    {
+      "id": "leftover:falinks-1|0c48c12e936ea707d87d55816f36c35b81fda778fbe0578673f705797a0c3cba",
+      "identity": "falinks-1",
+      "name": "Falinks — Mikitarian form",
+      "source": "Mikitari",
+      "bucket": "identity_hold",
+      "issues": [
+        "REGION_LABEL_NOT_SPECIES",
+        "FAMILY_LINE_CONTAINS_FORM_LABEL",
+        "EXTERNAL_LABEL_PARSE"
+      ]
+    },
+    {
+      "id": "leftover:lopunny-1|06d969db776016edf726ef1746de9962f9f221aab71614352765e52e6f52ba01",
+      "identity": "lopunny-1",
+      "name": "Lopunny — Mikitarian form",
+      "source": "Mikitari",
+      "bucket": "identity_hold",
+      "issues": [
+        "REGION_LABEL_NOT_SPECIES",
+        "EXTERNAL_LABEL_PARSE"
+      ]
+    },
+    {
+      "id": "leftover:traumatisse|c91020460452dc778616be9586543b616d025eab7e08b1b920556d5c2038b537",
+      "identity": "traumatisse",
+      "name": "Traumatisse",
+      "source": "Mikitari",
+      "bucket": "identity_hold",
+      "issues": [
+        "FAMILY_LINE_CONTAINS_FORM_LABEL"
+      ]
+    },
+    {
+      "id": "leftover:platerigus|277910002af1632f2aed75c8df2c72732a4ccdff0c572a514821ac2606802448",
+      "identity": "platerigus",
+      "name": "Platerigus",
+      "source": "Mikitari",
+      "bucket": "metadata_hold",
+      "issues": [
+        "FAMILY_LINE_CONTAINS_FORM_LABEL"
+      ]
+    }
+  ],
+  "provenance": [
+    {
+      "id": "gba:R0002",
+      "code": "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED",
+      "detail": "Only 3 of 212 authoritative entries had an image match in the last repository map summary; do not assume embedded image numbers are species-specific."
+    },
+    {
+      "id": "gba:R0004",
+      "code": "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED",
+      "detail": "Only 3 of 212 authoritative entries had an image match in the last repository map summary; do not assume embedded image numbers are species-specific."
+    },
+    {
+      "id": "gba:R0006",
+      "code": "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED",
+      "detail": "Only 3 of 212 authoritative entries had an image match in the last repository map summary; do not assume embedded image numbers are species-specific."
+    },
+    {
+      "id": "gba:R0025",
+      "code": "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED",
+      "detail": "Only 3 of 212 authoritative entries had an image match in the last repository map summary; do not assume embedded image numbers are species-specific."
+    },
+    {
+      "id": "gba:R0028",
+      "code": "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED",
+      "detail": "Only 3 of 212 authoritative entries had an image match in the last repository map summary; do not assume embedded image numbers are species-specific."
+    },
+    {
+      "id": "gba:R0030",
+      "code": "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED",
+      "detail": "Only 3 of 212 authoritative entries had an image match in the last repository map summary; do not assume embedded image numbers are species-specific."
+    },
+    {
+      "id": "gba:R0046",
+      "code": "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED",
+      "detail": "Only 3 of 212 authoritative entries had an image match in the last repository map summary; do not assume embedded image numbers are species-specific."
+    },
+    {
+      "id": "gba:R0050",
+      "code": "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED",
+      "detail": "Only 3 of 212 authoritative entries had an image match in the last repository map summary; do not assume embedded image numbers are species-specific."
+    },
+    {
+      "id": "gba:R0062",
+      "code": "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED",
+      "detail": "Only 3 of 212 authoritative entries had an image match in the last repository map summary; do not assume embedded image numbers are species-specific."
+    },
+    {
+      "id": "gba:R0066",
+      "code": "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED",
+      "detail": "Only 3 of 212 authoritative entries had an image match in the last repository map summary; do not assume embedded image numbers are species-specific."
+    },
+    {
+      "id": "gba:R0068",
+      "code": "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED",
+      "detail": "Only 3 of 212 authoritative entries had an image match in the last repository map summary; do not assume embedded image numbers are species-specific."
+    },
+    {
+      "id": "gba:R0071",
+      "code": "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED",
+      "detail": "Only 3 of 212 authoritative entries had an image match in the last repository map summary; do not assume embedded image numbers are species-specific."
+    },
+    {
+      "id": "gba:R0100",
+      "code": "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED",
+      "detail": "Only 3 of 212 authoritative entries had an image match in the last repository map summary; do not assume embedded image numbers are species-specific."
+    },
+    {
+      "id": "gba:R0104",
+      "code": "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED",
+      "detail": "Only 3 of 212 authoritative entries had an image match in the last repository map summary; do not assume embedded image numbers are species-specific."
+    },
+    {
+      "id": "gba:R0111",
+      "code": "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED",
+      "detail": "Only 3 of 212 authoritative entries had an image match in the last repository map summary; do not assume embedded image numbers are species-specific."
+    },
+    {
+      "id": "gba:R0136",
+      "code": "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED",
+      "detail": "Only 3 of 212 authoritative entries had an image match in the last repository map summary; do not assume embedded image numbers are species-specific."
+    },
+    {
+      "id": "gba:R0155",
+      "code": "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED",
+      "detail": "Only 3 of 212 authoritative entries had an image match in the last repository map summary; do not assume embedded image numbers are species-specific."
+    },
+    {
+      "id": "gba:R0157",
+      "code": "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED",
+      "detail": "Only 3 of 212 authoritative entries had an image match in the last repository map summary; do not assume embedded image numbers are species-specific."
+    },
+    {
+      "id": "gba:R0160",
+      "code": "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED",
+      "detail": "Only 3 of 212 authoritative entries had an image match in the last repository map summary; do not assume embedded image numbers are species-specific."
+    },
+    {
+      "id": "gba:R0163",
+      "code": "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED",
+      "detail": "Only 3 of 212 authoritative entries had an image match in the last repository map summary; do not assume embedded image numbers are species-specific."
+    },
+    {
+      "id": "gba:R0166",
+      "code": "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED",
+      "detail": "Only 3 of 212 authoritative entries had an image match in the last repository map summary; do not assume embedded image numbers are species-specific."
+    },
+    {
+      "id": "gba:R0186",
+      "code": "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED",
+      "detail": "Only 3 of 212 authoritative entries had an image match in the last repository map summary; do not assume embedded image numbers are species-specific."
+    },
+    {
+      "id": "gba:R0206",
+      "code": "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED",
+      "detail": "Only 3 of 212 authoritative entries had an image match in the last repository map summary; do not assume embedded image numbers are species-specific."
+    },
+    {
+      "id": "gba:R0211",
+      "code": "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED",
+      "detail": "Only 3 of 212 authoritative entries had an image match in the last repository map summary; do not assume embedded image numbers are species-specific."
+    },
+    {
+      "id": "gba:R0214",
+      "code": "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED",
+      "detail": "Only 3 of 212 authoritative entries had an image match in the last repository map summary; do not assume embedded image numbers are species-specific."
+    },
+    {
+      "id": "gba:R0217",
+      "code": "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED",
+      "detail": "Only 3 of 212 authoritative entries had an image match in the last repository map summary; do not assume embedded image numbers are species-specific."
+    },
+    {
+      "id": "gba:R0222",
+      "code": "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED",
+      "detail": "Only 3 of 212 authoritative entries had an image match in the last repository map summary; do not assume embedded image numbers are species-specific."
+    },
+    {
+      "id": "gba:R0225",
+      "code": "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED",
+      "detail": "Only 3 of 212 authoritative entries had an image match in the last repository map summary; do not assume embedded image numbers are species-specific."
+    },
+    {
+      "id": "gba:R0227",
+      "code": "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED",
+      "detail": "Only 3 of 212 authoritative entries had an image match in the last repository map summary; do not assume embedded image numbers are species-specific."
+    },
+    {
+      "id": "gba:R0232",
+      "code": "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED",
+      "detail": "Only 3 of 212 authoritative entries had an image match in the last repository map summary; do not assume embedded image numbers are species-specific."
+    },
+    {
+      "id": "gba:R0234",
+      "code": "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED",
+      "detail": "Only 3 of 212 authoritative entries had an image match in the last repository map summary; do not assume embedded image numbers are species-specific."
+    },
+    {
+      "id": "gba:R0242",
+      "code": "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED",
+      "detail": "Only 3 of 212 authoritative entries had an image match in the last repository map summary; do not assume embedded image numbers are species-specific."
+    },
+    {
+      "id": "gba:R0244",
+      "code": "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED",
+      "detail": "Only 3 of 212 authoritative entries had an image match in the last repository map summary; do not assume embedded image numbers are species-specific."
+    },
+    {
+      "id": "gba:R0247",
+      "code": "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED",
+      "detail": "Only 3 of 212 authoritative entries had an image match in the last repository map summary; do not assume embedded image numbers are species-specific."
+    },
+    {
+      "id": "gba:R0257",
+      "code": "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED",
+      "detail": "Only 3 of 212 authoritative entries had an image match in the last repository map summary; do not assume embedded image numbers are species-specific."
+    },
+    {
+      "id": "gba:R0269",
+      "code": "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED",
+      "detail": "Only 3 of 212 authoritative entries had an image match in the last repository map summary; do not assume embedded image numbers are species-specific."
+    },
+    {
+      "id": "gba:R0271",
+      "code": "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED",
+      "detail": "Only 3 of 212 authoritative entries had an image match in the last repository map summary; do not assume embedded image numbers are species-specific."
+    },
+    {
+      "id": "gba:R0276",
+      "code": "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED",
+      "detail": "Only 3 of 212 authoritative entries had an image match in the last repository map summary; do not assume embedded image numbers are species-specific."
+    },
+    {
+      "id": "gba:R0284",
+      "code": "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED",
+      "detail": "Only 3 of 212 authoritative entries had an image match in the last repository map summary; do not assume embedded image numbers are species-specific."
+    },
+    {
+      "id": "gba:R0286",
+      "code": "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED",
+      "detail": "Only 3 of 212 authoritative entries had an image match in the last repository map summary; do not assume embedded image numbers are species-specific."
+    },
+    {
+      "id": "gba:R0289",
+      "code": "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED",
+      "detail": "Only 3 of 212 authoritative entries had an image match in the last repository map summary; do not assume embedded image numbers are species-specific."
+    },
+    {
+      "id": "gba:R0291",
+      "code": "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED",
+      "detail": "Only 3 of 212 authoritative entries had an image match in the last repository map summary; do not assume embedded image numbers are species-specific."
+    },
+    {
+      "id": "gba:R0303",
+      "code": "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED",
+      "detail": "Only 3 of 212 authoritative entries had an image match in the last repository map summary; do not assume embedded image numbers are species-specific."
+    },
+    {
+      "id": "gba:R0348",
+      "code": "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED",
+      "detail": "Only 3 of 212 authoritative entries had an image match in the last repository map summary; do not assume embedded image numbers are species-specific."
+    },
+    {
+      "id": "gba:R0362",
+      "code": "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED",
+      "detail": "Only 3 of 212 authoritative entries had an image match in the last repository map summary; do not assume embedded image numbers are species-specific."
+    },
+    {
+      "id": "gba:R0373",
+      "code": "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED",
+      "detail": "Only 3 of 212 authoritative entries had an image match in the last repository map summary; do not assume embedded image numbers are species-specific."
+    },
+    {
+      "id": "gba:R0376",
+      "code": "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED",
+      "detail": "Only 3 of 212 authoritative entries had an image match in the last repository map summary; do not assume embedded image numbers are species-specific."
+    },
+    {
+      "id": "gba:R0377",
+      "code": "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED",
+      "detail": "Only 3 of 212 authoritative entries had an image match in the last repository map summary; do not assume embedded image numbers are species-specific."
+    },
+    {
+      "id": "gba:R0378",
+      "code": "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED",
+      "detail": "Only 3 of 212 authoritative entries had an image match in the last repository map summary; do not assume embedded image numbers are species-specific."
+    },
+    {
+      "id": "gba:R0390",
+      "code": "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED",
+      "detail": "Only 3 of 212 authoritative entries had an image match in the last repository map summary; do not assume embedded image numbers are species-specific."
+    },
+    {
+      "id": "gba:R0391",
+      "code": "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED",
+      "detail": "Only 3 of 212 authoritative entries had an image match in the last repository map summary; do not assume embedded image numbers are species-specific."
+    },
+    {
+      "id": "gba:R0401",
+      "code": "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED",
+      "detail": "Only 3 of 212 authoritative entries had an image match in the last repository map summary; do not assume embedded image numbers are species-specific."
+    },
+    {
+      "id": "gba:R0405",
+      "code": "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED",
+      "detail": "Only 3 of 212 authoritative entries had an image match in the last repository map summary; do not assume embedded image numbers are species-specific."
+    },
+    {
+      "id": "gba:R0412",
+      "code": "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED",
+      "detail": "Only 3 of 212 authoritative entries had an image match in the last repository map summary; do not assume embedded image numbers are species-specific."
+    },
+    {
+      "id": "gba:R0424",
+      "code": "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED",
+      "detail": "Only 3 of 212 authoritative entries had an image match in the last repository map summary; do not assume embedded image numbers are species-specific."
+    },
+    {
+      "id": "gba:R0455",
+      "code": "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED",
+      "detail": "Only 3 of 212 authoritative entries had an image match in the last repository map summary; do not assume embedded image numbers are species-specific."
+    },
+    {
+      "id": "gba:R0460",
+      "code": "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED",
+      "detail": "Only 3 of 212 authoritative entries had an image match in the last repository map summary; do not assume embedded image numbers are species-specific."
+    },
+    {
+      "id": "gba:R0462",
+      "code": "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED",
+      "detail": "Only 3 of 212 authoritative entries had an image match in the last repository map summary; do not assume embedded image numbers are species-specific."
+    },
+    {
+      "id": "gba:R0467",
+      "code": "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED",
+      "detail": "Only 3 of 212 authoritative entries had an image match in the last repository map summary; do not assume embedded image numbers are species-specific."
+    },
+    {
+      "id": "gba:R0468",
+      "code": "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED",
+      "detail": "Only 3 of 212 authoritative entries had an image match in the last repository map summary; do not assume embedded image numbers are species-specific."
+    },
+    {
+      "id": "gba:R0485",
+      "code": "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED",
+      "detail": "Only 3 of 212 authoritative entries had an image match in the last repository map summary; do not assume embedded image numbers are species-specific."
+    },
+    {
+      "id": "gba:R0498",
+      "code": "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED",
+      "detail": "Only 3 of 212 authoritative entries had an image match in the last repository map summary; do not assume embedded image numbers are species-specific."
+    },
+    {
+      "id": "gba:R0508",
+      "code": "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED",
+      "detail": "Only 3 of 212 authoritative entries had an image match in the last repository map summary; do not assume embedded image numbers are species-specific."
+    },
+    {
+      "id": "gba:R0510",
+      "code": "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED",
+      "detail": "Only 3 of 212 authoritative entries had an image match in the last repository map summary; do not assume embedded image numbers are species-specific."
+    },
+    {
+      "id": "gba:R0519",
+      "code": "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED",
+      "detail": "Only 3 of 212 authoritative entries had an image match in the last repository map summary; do not assume embedded image numbers are species-specific."
+    },
+    {
+      "id": "gba:R0524",
+      "code": "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED",
+      "detail": "Only 3 of 212 authoritative entries had an image match in the last repository map summary; do not assume embedded image numbers are species-specific."
+    },
+    {
+      "id": "gba:R0535",
+      "code": "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED",
+      "detail": "Only 3 of 212 authoritative entries had an image match in the last repository map summary; do not assume embedded image numbers are species-specific."
+    },
+    {
+      "id": "gba:R0562",
+      "code": "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED",
+      "detail": "Only 3 of 212 authoritative entries had an image match in the last repository map summary; do not assume embedded image numbers are species-specific."
+    },
+    {
+      "id": "gba:R0563",
+      "code": "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED",
+      "detail": "Only 3 of 212 authoritative entries had an image match in the last repository map summary; do not assume embedded image numbers are species-specific."
+    },
+    {
+      "id": "gba:R0564",
+      "code": "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED",
+      "detail": "Only 3 of 212 authoritative entries had an image match in the last repository map summary; do not assume embedded image numbers are species-specific."
+    },
+    {
+      "id": "gba:R0587",
+      "code": "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED",
+      "detail": "Only 3 of 212 authoritative entries had an image match in the last repository map summary; do not assume embedded image numbers are species-specific."
+    },
+    {
+      "id": "gba:R0595",
+      "code": "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED",
+      "detail": "Only 3 of 212 authoritative entries had an image match in the last repository map summary; do not assume embedded image numbers are species-specific."
+    },
+    {
+      "id": "gba:R0599",
+      "code": "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED",
+      "detail": "Only 3 of 212 authoritative entries had an image match in the last repository map summary; do not assume embedded image numbers are species-specific."
+    },
+    {
+      "id": "gba:R0603",
+      "code": "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED",
+      "detail": "Only 3 of 212 authoritative entries had an image match in the last repository map summary; do not assume embedded image numbers are species-specific."
+    },
+    {
+      "id": "gba:R0632",
+      "code": "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED",
+      "detail": "Only 3 of 212 authoritative entries had an image match in the last repository map summary; do not assume embedded image numbers are species-specific."
+    },
+    {
+      "id": "gba:R0634",
+      "code": "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED",
+      "detail": "Only 3 of 212 authoritative entries had an image match in the last repository map summary; do not assume embedded image numbers are species-specific."
+    },
+    {
+      "id": "gba:R0649",
+      "code": "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED",
+      "detail": "Only 3 of 212 authoritative entries had an image match in the last repository map summary; do not assume embedded image numbers are species-specific."
+    },
+    {
+      "id": "gba:R0666",
+      "code": "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED",
+      "detail": "Only 3 of 212 authoritative entries had an image match in the last repository map summary; do not assume embedded image numbers are species-specific."
+    },
+    {
+      "id": "gba:R0473",
+      "code": "PLATINUM_WORKBOOK_MAPPING_UNVERIFIED",
+      "detail": "Only 3 of 212 authoritative entries had an image match in the last repository map summary; do not assume embedded image numbers are species-specific."
+    },
+    {
+      "id": "leftover:mega-barbaracle|95022e077bf94c8ee25635e3db1760fb5208b18ee3ba0f59cfea23e531e0b146",
+      "code": "UNVERIFIED_CUSTOM_MEGA_IDENTITY",
+      "detail": "Source notes explicitly identify this artwork as an unverified identity."
+    },
+    {
+      "id": "leftover:rainther|9bd1392ed4216f97385675a1e0200beb046ff0bde9f9d5dd58f7d122050a6eae",
+      "code": "PROVISIONAL_TYPE",
+      "detail": "Source type is only a Mercury inference, not verified original typing."
+    },
+    {
+      "id": "leftover:rainther|7f3adf7765a5483676fad9e753944c4afce9f37024eede619364a6caf873fe7e",
+      "code": "PROVISIONAL_TYPE",
+      "detail": "Source type is only a Mercury inference, not verified original typing."
+    },
+    {
+      "id": "leftover:enchantowl|c4f31a6f6f3c3c25a86d89f1b3dd26440b166aba36d1cc6001856dfa1737811a",
+      "code": "FAMILY_CHAIN_UNVERIFIED",
+      "detail": "Noctowl 1 is a source filename, not the form's species name."
+    },
+    {
+      "id": "leftover:spritzee-1|f9749b90bdb04d9a3d1d546eb2f023c18f91a28049397d152bb867ee4b12b9b1",
+      "code": "REGION_LABEL_NOT_SPECIES",
+      "detail": "External metadata used Mikitarian as the species name; canonical base recovered from file identity."
+    },
+    {
+      "id": "leftover:spritzee-1|f9749b90bdb04d9a3d1d546eb2f023c18f91a28049397d152bb867ee4b12b9b1",
+      "code": "FAMILY_LINE_CONTAINS_FORM_LABEL",
+      "detail": "Prior family incorrectly contained an artist/region label as a Pokémon stage."
+    },
+    {
+      "id": "leftover:spritzee-1|f9749b90bdb04d9a3d1d546eb2f023c18f91a28049397d152bb867ee4b12b9b1",
+      "code": "EXTERNAL_LABEL_PARSE",
+      "detail": "External import returned a form label rather than the name."
+    },
+    {
+      "id": "leftover:yamask-2|9ae97cd58dea46c14b3cfcad180525056af49b644dc57d16471b41bf12022504",
+      "code": "REGION_LABEL_NOT_SPECIES",
+      "detail": "External metadata used Mikitarian as the species name; canonical base recovered from file identity."
+    },
+    {
+      "id": "leftover:yamask-2|9ae97cd58dea46c14b3cfcad180525056af49b644dc57d16471b41bf12022504",
+      "code": "FAMILY_LINE_CONTAINS_FORM_LABEL",
+      "detail": "Prior family incorrectly contained an artist/region label as a Pokémon stage."
+    },
+    {
+      "id": "leftover:yamask-2|9ae97cd58dea46c14b3cfcad180525056af49b644dc57d16471b41bf12022504",
+      "code": "EXTERNAL_LABEL_PARSE",
+      "detail": "External import returned a form label rather than the name."
+    },
+    {
+      "id": "leftover:ariados-1|25da075190b5ce183c2ddecd9926115a3b51a38b555648fc5ebffec730caa843",
+      "code": "REGION_LABEL_NOT_SPECIES",
+      "detail": "External metadata used Luminian as the species name; canonical base recovered from file identity."
+    },
+    {
+      "id": "leftover:ariados-1|25da075190b5ce183c2ddecd9926115a3b51a38b555648fc5ebffec730caa843",
+      "code": "EXTERNAL_LABEL_PARSE",
+      "detail": "External import returned a form label rather than the name."
+    },
+    {
+      "id": "leftover:buneary-1|13f7b40cc3296950c02a6d6ac2f2d3810e931bd2ec700a5ce44a5b26a3c701cf",
+      "code": "REGION_LABEL_NOT_SPECIES",
+      "detail": "External metadata used Mikitarian as the species name; canonical base recovered from file identity."
+    },
+    {
+      "id": "leftover:buneary-1|13f7b40cc3296950c02a6d6ac2f2d3810e931bd2ec700a5ce44a5b26a3c701cf",
+      "code": "EXTERNAL_LABEL_PARSE",
+      "detail": "External import returned a form label rather than the name."
+    },
+    {
+      "id": "leftover:falinks-1|0c48c12e936ea707d87d55816f36c35b81fda778fbe0578673f705797a0c3cba",
+      "code": "REGION_LABEL_NOT_SPECIES",
+      "detail": "External metadata used Mikitarian as the species name; canonical base recovered from file identity."
+    },
+    {
+      "id": "leftover:falinks-1|0c48c12e936ea707d87d55816f36c35b81fda778fbe0578673f705797a0c3cba",
+      "code": "FAMILY_LINE_CONTAINS_FORM_LABEL",
+      "detail": "Prior family incorrectly contained an artist/region label as a Pokémon stage."
+    },
+    {
+      "id": "leftover:falinks-1|0c48c12e936ea707d87d55816f36c35b81fda778fbe0578673f705797a0c3cba",
+      "code": "EXTERNAL_LABEL_PARSE",
+      "detail": "External import returned a form label rather than the name."
+    },
+    {
+      "id": "leftover:lopunny-1|06d969db776016edf726ef1746de9962f9f221aab71614352765e52e6f52ba01",
+      "code": "REGION_LABEL_NOT_SPECIES",
+      "detail": "External metadata used Mikitarian as the species name; canonical base recovered from file identity."
+    },
+    {
+      "id": "leftover:lopunny-1|06d969db776016edf726ef1746de9962f9f221aab71614352765e52e6f52ba01",
+      "code": "EXTERNAL_LABEL_PARSE",
+      "detail": "External import returned a form label rather than the name."
+    },
+    {
+      "id": "leftover:traumatisse|c91020460452dc778616be9586543b616d025eab7e08b1b920556d5c2038b537",
+      "code": "FAMILY_LINE_CONTAINS_FORM_LABEL",
+      "detail": "The prior family chain put Mikitarian as an evolution stage."
+    },
+    {
+      "id": "leftover:platerigus|277910002af1632f2aed75c8df2c72732a4ccdff0c572a514821ac2606802448",
+      "code": "FAMILY_LINE_CONTAINS_FORM_LABEL",
+      "detail": "The prior family chain put Mikitarian as an evolution stage."
+    }
+  ]
+}
