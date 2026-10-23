@@ -6117,13 +6117,18 @@
         "stage": 0,
         "reference": "https://pokengine.org/mons/00uc0o89/Furrva",
         "status": "source confirmed; not present as a current actionable sprite review entry",
-        "sourceStatus": "External original-source imagery identified; not in local DS asset library",
+        "sourceStatus": "Original WebP bytes and unaltered-pixel PNG source previews committed to GitHub; no DS canvas conversion",
         "frontReference": "https://pokengine.b-cdn.net/play/images/mons/fronts/00uc0o89.webp?t=56",
         "backReference": "https://pokengine.b-cdn.net/play/images/mons/backs/00uc0o89.webp?t=56",
         "sourceCredit": "Artist Mikitari · Pokéngine · Free to use with credit",
         "sourceType": "Bug",
-        "localAssetComplete": false,
-        "inGameReady": false
+        "localAssetComplete": true,
+        "inGameReady": false,
+        "frontLocal": "DS_CUSTOM_LIBRARY/recovered/Pokengine_Mikitari_Furrva_Source/front_source.png",
+        "backLocal": "DS_CUSTOM_LIBRARY/recovered/Pokengine_Mikitari_Furrva_Source/back_source.png",
+        "rawFrontLocal": "DS_CUSTOM_LIBRARY/recovered/Pokengine_Mikitari_Furrva_Source/front_original.webp",
+        "rawBackLocal": "DS_CUSTOM_LIBRARY/recovered/Pokengine_Mikitari_Furrva_Source/back_original.webp",
+        "localSourceManifest": "DS_CUSTOM_LIBRARY/recovered/Pokengine_Mikitari_Furrva_Source/source_manifest.json"
       }
     ],
     "familyNotes": {
