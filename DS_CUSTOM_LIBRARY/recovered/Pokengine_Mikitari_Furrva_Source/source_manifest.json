@@ -1,0 +1,42 @@
+{
+  "schema": "mercury-original-source-furrva-v1",
+  "species": "Furrva",
+  "identity": "00uc0o89",
+  "type": "Bug",
+  "source": "https://pokengine.org/mons/00uc0o89/Furrva",
+  "source_artist": "Mikitari",
+  "source_permission": "Free to use with credit",
+  "usage": "Source-only technical recovery. Not a DS-ready sprite, not an approval vote, not implemented in ROM.",
+  "assets": {
+    "front": {
+      "source_url": "https://pokengine.b-cdn.net/play/images/mons/fronts/00uc0o89.webp?t=56",
+      "raw_path": "DS_CUSTOM_LIBRARY/recovered/Pokengine_Mikitari_Furrva_Source/front_original.webp",
+      "png_path": "DS_CUSTOM_LIBRARY/recovered/Pokengine_Mikitari_Furrva_Source/front_source.png",
+      "raw_sha256": "7412a5697fc2468b5123590e3aa331313ce0a1f6f14b49b952e7c39b7292251d",
+      "png_sha256": "fdeefd44cb5af6b8c96633318f83e7cba3f52358028c21966a1cbb48891de9d5",
+      "source_pixel_dimensions": [
+        34,
+        30
+      ],
+      "content_type": "image/webp",
+      "conversion": "lossless rendering to RGBA PNG; original WebP retained",
+      "ds_certified": false
+    },
+    "back": {
+      "source_url": "https://pokengine.b-cdn.net/play/images/mons/backs/00uc0o89.webp?t=56",
+      "raw_path": "DS_CUSTOM_LIBRARY/recovered/Pokengine_Mikitari_Furrva_Source/back_original.webp",
+      "png_path": "DS_CUSTOM_LIBRARY/recovered/Pokengine_Mikitari_Furrva_Source/back_source.png",
+      "raw_sha256": "57b8e7e2e21d03d9d897e7e9db03be5715de4a628868f30ac313b80db946bedf",
+      "png_sha256": "e3f2bd848a553a09a1d5fd0bc0122f02cbd7c4d537eb04b71f5a93456566c9a4",
+      "source_pixel_dimensions": [
+        55,
+        51
+      ],
+      "content_type": "image/webp",
+      "conversion": "lossless rendering to RGBA PNG; original WebP retained",
+      "ds_certified": false
+    }
+  },
+  "artwork_fabricated": false,
+  "game_integration_allowed": false
+}
