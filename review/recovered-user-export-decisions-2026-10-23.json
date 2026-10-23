@@ -1,0 +1,4972 @@
+{
+  "schema": "mercury.sprite.review.user-exports.v1",
+  "generated": "2026-10-23",
+  "source": "Previously uploaded user-approved CSVs recovered from Project Library read API",
+  "note": "Source read text preserved as row records. Empty decisions are not approvals. No historical record is deleted.",
+  "exports": [
+    {
+      "name": "ds_sprite_decisions_2026_10_02",
+      "source_filename": "mercury_ds_sprite_decisions(2).csv",
+      "source_file_id": "file_00000000585881f69abf388418233fc8",
+      "rows": [
+        {
+          "index": "0",
+          "identity": "abomasnow-santa",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/abomasnow_santa/front.png",
+          "structural_hash": "c681b8e2c02b078885b884d13c3caac8097d24e976460c78f3fbb72d6e449b6e",
+          "decision": "reject"
+        },
+        {
+          "index": "1",
+          "identity": "absol-mega-z",
+          "source": "DrPrettyman_DS_64x64",
+          "front_path": "DS_CUSTOM_LIBRARY/packs/DrPrettyman_DS_64x64/sprites-processed/front/absol-mega-z.png",
+          "structural_hash": "73672c4352a427593225729d491b27380b9c137761ca97294a9638396fb32ea7",
+          "decision": "reject"
+        },
+        {
+          "index": "2",
+          "identity": "absol-mega-z",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/absol_mega_z/front.png",
+          "structural_hash": "6dfb525182557350b3b8db412ffef6f1ef7f15e97d295aedef32c1213ab2ab50",
+          "decision": "approve"
+        },
+        {
+          "index": "3",
+          "identity": "abyssand",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/abyssand/front.png",
+          "structural_hash": "de729b7f399f67a165405837f2773ca7c19a913826f55946e6c7eda53e0ca962",
+          "decision": "approve"
+        },
+        {
+          "index": "4",
+          "identity": "aegislash-blade-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/aegislash_blade_redux/front.png",
+          "structural_hash": "bbe46d87630fe7f4e086928b55c0377ea545ec8fd9b09029f2736854de7d620b",
+          "decision": "reject"
+        },
+        {
+          "index": "5",
+          "identity": "aegislash-blade-redux-mega",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/aegislash_blade_redux_mega/front.png",
+          "structural_hash": "58bfbd1d898579bbae4e06fb0076d9acd5e5fbcebb062d204a3bf53004a62f99",
+          "decision": "approve"
+        },
+        {
+          "index": "6",
+          "identity": "aegislash-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/aegislash_redux/front.png",
+          "structural_hash": "d0c90e0cf52b47ecd142d5130d12609e5e13bc613d69ce180c2c7fc65ce922dd",
+          "decision": "reject"
+        },
+        {
+          "index": "7",
+          "identity": "aegislash-redux-mega",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/aegislash_redux_mega/front.png",
+          "structural_hash": "2d652db7551d7e099846632cce088e402247bcdf17e1f935d02fd6e7afc62eef",
+          "decision": "reject"
+        },
+        {
+          "index": "8",
+          "identity": "aggron-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/aggron_redux/front.png",
+          "structural_hash": "1285103b6e048098da99fc514dbecc6fb2cc44cff072da90fcb2ce89e72febc2",
+          "decision": "approve"
+        },
+        {
+          "index": "9",
+          "identity": "aggron-redux-mega",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/aggron_redux_mega/front.png",
+          "structural_hash": "1a8ee36042e9c6139ef98a5d6857d20f19985a7e23d449c81ef285e52b25c1d2",
+          "decision": "approve"
+        },
+        {
+          "index": "10",
+          "identity": "altaria-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/altaria_redux/front.png",
+          "structural_hash": "fc3402b522f54fd19af326a30057ce3315ac06d024204a87925dc0d635bce3d3",
+          "decision": "approve"
+        },
+        {
+          "index": "11",
+          "identity": "altaria-redux-mega",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/altaria_redux_mega/front.png",
+          "structural_hash": "aaf70e5c72b2cb25d3565631d39fa0e3ec71eec3a847414eede5b245ca9afea0",
+          "decision": "approve"
+        },
+        {
+          "index": "12",
+          "identity": "apprensith",
+          "source": "Earthretha",
+          "front_path": "DS_CUSTOM_LIBRARY/packs/Earthretha/Earthretha Fakemon Pack/Graphics/Pokemon/Front/APPRENSITH.png",
+          "structural_hash": "cd9f353c1776100442c4bd0384f4e23291004eafbd6e9b09a67ff24b400f696d",
+          "decision": "approve"
+        },
+        {
+          "index": "13",
+          "identity": "arachtres",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/arachtres/front.png",
+          "structural_hash": "7ab8be69d99ae0613fbee193cc5e0c35c42485be8b83f23560f0ecc301d9bac1",
+          "decision": "approve"
+        },
+        {
+          "index": "14",
+          "identity": "araquanid-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/araquanid_redux/front.png",
+          "structural_hash": "fdeb1b51fd2eca3e5b5abd9b56bb8e8057ac4fc5d659a6c75ae3adc2769cb4f7",
+          "decision": "approve"
+        },
+        {
+          "index": "15",
+          "identity": "arashinne",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/arashinne/front.png",
+          "structural_hash": "2ac24d93e418c11b68ced3534dd452808a5c351e6ab64333b887595d1704a18a",
+          "decision": "approve"
+        },
+        {
+          "index": "16",
+          "identity": "aron-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/aron_redux/front.png",
+          "structural_hash": "847bc25e05808f8901683c18f548dbd4cacbd8d1c017070fb0840f25e58dec17",
+          "decision": "approve"
+        },
+        {
+          "index": "17",
+          "identity": "articuno-ex",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/articuno_ex/front.png",
+          "structural_hash": "0cacf0bdf713a8b6b82f448bb3331312fcd3d14742bd0f23e60cd65bc39bc0b5",
+          "decision": "approve"
+        },
+        {
+          "index": "18",
+          "identity": "articuno-galarian",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/articuno_galarian/front.png",
+          "structural_hash": "5df4e5a97a152324db02f8131effb3919986cebfdf62a0d2129ca7a15702611a",
+          "decision": "approve"
+        },
+        {
+          "index": "19",
+          "identity": "azelf-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/azelf_redux/front.png",
+          "structural_hash": "e3a30246f7aba78f9bb33eaf2dab45a1a4ea88545d31cfb86c10ed1b17b4974f",
+          "decision": "approve"
+        },
+        {
+          "index": "20",
+          "identity": "baxcalibur-mega",
+          "source": "DrPrettyman_DS_64x64",
+          "front_path": "DS_CUSTOM_LIBRARY/packs/DrPrettyman_DS_64x64/sprites-processed/front/baxcalibur-mega.png",
+          "structural_hash": "d4b0d5de080f49b0b80d16eac78e7d659ab3de288937f432133252ed56e78fc2",
+          "decision": "approve"
+        },
+        {
+          "index": "21",
+          "identity": "baxcalibur-mega",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/baxcalibur_mega/front.png",
+          "structural_hash": "3592399560d0398289217b996b436bb7643e8824dcf59700715650164452581d",
+          "decision": "reject"
+        },
+        {
+          "index": "22",
+          "identity": "beefender",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/beefender/front.png",
+          "structural_hash": "0671e987142078d0528fc5db9ade97a3c9bde98fb7dd96c49e34ccd1074b3baa",
+          "decision": "approve"
+        },
+        {
+          "index": "23",
+          "identity": "belstatue",
+          "source": "Earthretha",
+          "front_path": "DS_CUSTOM_LIBRARY/packs/Earthretha/Earthretha Fakemon Pack/Graphics/Pokemon/Front/BELSTATUE.png",
+          "structural_hash": "b9bb2aea3cbd300e42f74bd0171398d084d8d9da365d0c6247b912f4d49fe71f",
+          "decision": "approve"
+        },
+        {
+          "index": "24",
+          "identity": "beniccino",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/beniccino/front.png",
+          "structural_hash": "d6e3455c8939843df4b5ef1ff5f898a1c92c0436f5f74c111d912d6787fb90c0",
+          "decision": "approve"
+        },
+        {
+          "index": "25",
+          "identity": "bewear-angry",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/bewear_angry/front.png",
+          "structural_hash": "b068e538b85aed885ea28444b172fe2ec9f7dae4d3e5d1f79fd76228397aa504",
+          "decision": "reject"
+        },
+        {
+          "index": "26",
+          "identity": "bewear-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/bewear_redux/front.png",
+          "structural_hash": "733ae1a85c1c9909baf9ee701e511e9a4a9648686e682f4a28b33856fef14d1e",
+          "decision": "approve"
+        },
+        {
+          "index": "27",
+          "identity": "bisharp-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/bisharp_redux/front.png",
+          "structural_hash": "cad45319eb7d270da8120111e9965084ee1c431ddef074a50f8067e73d22cc52",
+          "decision": "approve"
+        },
+        {
+          "index": "28",
+          "identity": "blissey-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/blissey_redux/front.png",
+          "structural_hash": "291cab39c8587561e7299fde46ee5d35e7e418236fd4eac1d3687a7cbb87f251",
+          "decision": "reject"
+        },
+        {
+          "index": "29",
+          "identity": "boarlock",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/boarlock/front.png",
+          "structural_hash": "c99fb83e92563eea1b77f13d99fbc8af75b54341bd66cb4a590d8ee3118ff832",
+          "decision": "approve"
+        },
+        {
+          "index": "30",
+          "identity": "bounsweet-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/bounsweet_redux/front.png",
+          "structural_hash": "016e893eb5623fd0b8f5c9ac92c9ae771cd6031d00d4ccbaec3e51d0173f49cc",
+          "decision": "maybe"
+        },
+        {
+          "index": "31",
+          "identity": "breloom-mega",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/breloom_mega/front.png",
+          "structural_hash": "98fd405a5b663d5ca20820d43ffe1ab7ea0ca69fd3e62426fbc19d2b4fbf6e67",
+          "decision": "approve"
+        },
+        {
+          "index": "32",
+          "identity": "brontonana",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/brontonana/front.png",
+          "structural_hash": "985f4aae31e23e5292a1355ed6621f06bc4a5f19203b9f24ebec7469ad501b25",
+          "decision": "approve"
+        },
+        {
+          "index": "33",
+          "identity": "buizel-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/buizel_redux/front.png",
+          "structural_hash": "3936786b4e115cc1456c0bf750e966586a2007a0fda9f5821a9fcb4a7e0815ab",
+          "decision": "reject"
+        },
+        {
+          "index": "34",
+          "identity": "bunninja",
+          "source": "Earthretha",
+          "front_path": "DS_CUSTOM_LIBRARY/packs/Earthretha/Earthretha Fakemon Pack/Graphics/Pokemon/Front/BUNNINJA.png",
+          "structural_hash": "bccfac24004b54c1b41ff5c7907c6b36c8b23438c34a2ec1071f6686f2372fad",
+          "decision": "approve"
+        },
+        {
+          "index": "35",
+          "identity": "cacjack",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/cacjack/front.png",
+          "structural_hash": "99c3dba2f6f4758248acf5fe28005801a8367cd3b8f7fed7d58b7e91c50a0a32",
+          "decision": "approve"
+        },
+        {
+          "index": "36",
+          "identity": "calyrex-cloud-rider",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/calyrex_cloud_rider/front.png",
+          "structural_hash": "a24d800ef1a3dfd061a9b10ab203d403882bcf0be30ae7e5390d94b95b5725bc",
+          "decision": "reject"
+        },
+        {
+          "index": "37",
+          "identity": "carbonix",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/carbonix/front.png",
+          "structural_hash": "9f842945a0046d2bbaa127480e1253b93ad2074e9d4b7c130b68aeef021de35d",
+          "decision": "approve"
+        },
+        {
+          "index": "38",
+          "identity": "cascoon-primal",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/cascoon_primal/front.png",
+          "structural_hash": "af7b13e1d185ffa4d163783113cfe45fb164ae4cbf9423232e2c8869a2a32b63",
+          "decision": "reject"
+        },
+        {
+          "index": "39",
+          "identity": "castform-foggy",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/castform_foggy/front.png",
+          "structural_hash": "35fd8a3eb5bcad46e96835ece06becab303bd9804772f30cc542d5269f322da9",
+          "decision": "approve"
+        },
+        {
+          "index": "40",
+          "identity": "castform-sandy",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/castform_sandy/front.png",
+          "structural_hash": "9ea97917e39a3c4cb7e34b4a479fe344911d865cd348f59ec337756f7da7c77b",
+          "decision": "approve"
+        },
+        {
+          "index": "41",
+          "identity": "cetitan-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/cetitan_redux/front.png",
+          "structural_hash": "c5b2c41ef1a01c7da935d9369aa79cc385de2d92d545d39817a15eab15b34082",
+          "decision": "reject"
+        },
+        {
+          "index": "42",
+          "identity": "cetoddle-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/cetoddle_redux/front.png",
+          "structural_hash": "70241dc5a5aa60c8443f4ede265db295c21598f1af44b4c936e0216f5e5537e4",
+          "decision": "reject"
+        },
+        {
+          "index": "43",
+          "identity": "chandelure-mega-y",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/chandelure_mega_y/front.png",
+          "structural_hash": "91beb376325331fa993023e888662d3674c02c735d2b076ffa2e2b0be94559d6",
+          "decision": "approve"
+        },
+        {
+          "index": "44",
+          "identity": "chandelure-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/chandelure_redux/front.png",
+          "structural_hash": "0c2e63f396b25049f2f32538739154d48d7b909f4717f31c90e5bd8d4d6d1197",
+          "decision": "approve"
+        },
+        {
+          "index": "45",
+          "identity": "chandelure-redux-mega",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/chandelure_redux_mega/front.png",
+          "structural_hash": "ebc2556b83d4d6065bf07a5b106139d975c7c96c7246d85c0b9b889d390a9a78",
+          "decision": "approve"
+        },
+        {
+          "index": "46",
+          "identity": "chansey-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/chansey_redux/front.png",
+          "structural_hash": "46c2a46cd63d1d93db640328fc8754aef0d5f49cf19df08fa0f713a921b0fd78",
+          "decision": "reject"
+        },
+        {
+          "index": "47",
+          "identity": "chien-pao-mega",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/chien_pao_mega/front.png",
+          "structural_hash": "5b112068166d32a1938f6a5a590dce11a1715333efd2d3ae1ec834ade4498104",
+          "decision": "approve"
+        },
+        {
+          "index": "48",
+          "identity": "chimchar-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/chimchar_redux/front.png",
+          "structural_hash": "528171dcc6c4eb10028cca9c6a11d31ada9d8c2551dbdefed5a1564b19a80792",
+          "decision": "reject"
+        },
+        {
+          "index": "49",
+          "identity": "cinccino-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/cinccino_redux/front.png",
+          "structural_hash": "4bdb087efc0bb9b6be91dfb45bbf303d6a3493630efcb6da3b422eee36eff57e",
+          "decision": "approve"
+        },
+        {
+          "index": "50",
+          "identity": "clawitzer-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/clawitzer_redux/front.png",
+          "structural_hash": "663bbf9b1bfec6930585cbe28ed3bdacac40f4a07199755cf8dc6e336705ea47",
+          "decision": "approve"
+        },
+        {
+          "index": "51",
+          "identity": "clefable-redux-mega",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/clefable_redux_mega/front.png",
+          "structural_hash": "08f5f4f5e3b1e023f6cc5926f57d4b346239717d77f36c75f49fd31d08547c5e",
+          "decision": "reject"
+        },
+        {
+          "index": "52",
+          "identity": "clodsire-mega",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/clodsire_mega/front.png",
+          "structural_hash": "f1f1620f3401b59b52680c025d7491bf519f8c6fa7a16fc6aebd071126055067",
+          "decision": "approve"
+        },
+        {
+          "index": "53",
+          "identity": "corsola-galarian",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/corsola_galarian/front.png",
+          "structural_hash": "4d7c3a0fa07dbd69df2370ae91c4ce7b907b6a23662eaa894770d0b1f620fc2c",
+          "decision": "approve"
+        },
+        {
+          "index": "54",
+          "identity": "crabominable-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/crabominable_redux/front.png",
+          "structural_hash": "198db5c1bf0526cc7133b1f72a59cae9bf91c8821bf16dbc4652e242c3eabcad",
+          "decision": "reject"
+        },
+        {
+          "index": "55",
+          "identity": "crabrawler-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/crabrawler_redux/front.png",
+          "structural_hash": "14d608a3e8683eeede2b1ed5f42f55a9bc60c35349123ae7d0ccca37242835af",
+          "decision": "reject"
+        },
+        {
+          "index": "56",
+          "identity": "cubchestra",
+          "source": "Earthretha",
+          "front_path": "DS_CUSTOM_LIBRARY/packs/Earthretha/Earthretha Fakemon Pack/Graphics/Pokemon/Front/CUBCHESTRA.png",
+          "structural_hash": "3fcf1777269c02e7e1bd05609218c0ca4f05016316db0949d7dcacf9ace52635",
+          "decision": "approve"
+        },
+        {
+          "index": "57",
+          "identity": "darkrai-nightmare",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/darkrai_nightmare/front.png",
+          "structural_hash": "435d488c35905a4e0a64d6e54beded3f39b2c6a54db93424132d219d1367b670",
+          "decision": "approve"
+        },
+        {
+          "index": "58",
+          "identity": "darmanitan-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/darmanitan_redux/front.png",
+          "structural_hash": "cf82528e3a2cbc03016428c1a82236ce5ccdae364014b1825c0ab7b8e20e5c5e",
+          "decision": "approve"
+        },
+        {
+          "index": "59",
+          "identity": "darmanitan-redux-aura",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/darmanitan_redux_aura/front.png",
+          "structural_hash": "ba395ecdea7f4bcd1cdd2e7f2ddedb0058ff8bdff18af6b81d7d83f42a781d86",
+          "decision": "approve"
+        },
+        {
+          "index": "60",
+          "identity": "darmanitan-zen-mode",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/darmanitan_zen_mode/front.png",
+          "structural_hash": "ffe0be8a9ecd3f1c5a3ae959aa80145455959213db0837777cbcfb9487c25fdf",
+          "decision": "approve"
+        },
+        {
+          "index": "61",
+          "identity": "darumaka-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/darumaka_redux/front.png",
+          "structural_hash": "5a29f2bf631a98f5ad077f06abd14745db26835ff581adf8e26a4970be398891",
+          "decision": "approve"
+        },
+        {
+          "index": "62",
+          "identity": "decidueye-hisuian-mega",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/decidueye_hisuian_mega/front.png",
+          "structural_hash": "9012168a929481257f37d348625d6eec9cf73dd955d2358da2455c141478c40f",
+          "decision": "approve"
+        },
+        {
+          "index": "63",
+          "identity": "decidueye-mega",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/decidueye_mega/front.png",
+          "structural_hash": "d5df039397e1fe9b0217c2c284cd5111fbd89c4d70f681c37a48c907903bbb71",
+          "decision": "approve"
+        },
+        {
+          "index": "64",
+          "identity": "dedelibird",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/dedelibird/front.png",
+          "structural_hash": "6de9d2653e9183eaa104f9b5210362fd70debc46ed54c04591d7fea8b40199c9",
+          "decision": "approve"
+        },
+        {
+          "index": "65",
+          "identity": "deino-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/deino_redux/front.png",
+          "structural_hash": "1bd65905d6e0f4ad79b53bc8f80e0575dec56983872a199f0470b69821a7813e",
+          "decision": "reject"
+        },
+        {
+          "index": "66",
+          "identity": "dewgong-mega",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/dewgong_mega/front.png",
+          "structural_hash": "4a06c8b5bed52a5b5f82cd0d762f68f9270fad6a4ac0d7622dfa1703c825f3c0",
+          "decision": "approve"
+        },
+        {
+          "index": "67",
+          "identity": "dewgong-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/dewgong_redux/front.png",
+          "structural_hash": "d99e207e753aad7ec51708764609dd27dd5f0aed8b4d7dcb60027e3b3aaf82ac",
+          "decision": "approve"
+        },
+        {
+          "index": "68",
+          "identity": "dewpider-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/dewpider_redux/front.png",
+          "structural_hash": "18f78e75bfdcf4026694edf600b50bf1622f8203ca6d9e7c47068ca97a4ad296",
+          "decision": "approve"
+        },
+        {
+          "index": "69",
+          "identity": "dodrio-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/dodrio_redux/front.png",
+          "structural_hash": "0bc10bc91499e317475531a4fb4415cb8b8a2f8af1366b826473743038560dec",
+          "decision": "approve"
+        },
+        {
+          "index": "70",
+          "identity": "doduo-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/doduo_redux/front.png",
+          "structural_hash": "5725685018e41d58c98237d6545bc0a46ae954a87889dd91353e7da7a1ab3027",
+          "decision": "approve"
+        },
+        {
+          "index": "71",
+          "identity": "doublade-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/doublade_redux/front.png",
+          "structural_hash": "513c6f336a826951fcb53d68c19c60110f50f9e95760736d6b3d12d346474e3c",
+          "decision": "reject"
+        },
+        {
+          "index": "72",
+          "identity": "dracovish-mega",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/dracovish_mega/front.png",
+          "structural_hash": "672f8c2923c1caf585913b2644420120a508aee1fd04a445566cf487623fedf0",
+          "decision": "approve"
+        },
+        {
+          "index": "73",
+          "identity": "dragapult-mega",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/dragapult_mega/front.png",
+          "structural_hash": "66210d84a5c2aece756ba64f12a404f6f685131e3c96cf0837612e41d1491d70",
+          "decision": "approve"
+        },
+        {
+          "index": "74",
+          "identity": "dragonite-delivery",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/dragonite_delivery/front.png",
+          "structural_hash": "61fe20b8729525c9cd67ec42379a1709ccc05477ebc5479e5aceaf63291719aa",
+          "decision": "reject"
+        },
+        {
+          "index": "75",
+          "identity": "dragonite-mega-y",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/dragonite_mega_y/front.png",
+          "structural_hash": "7eebf4c795ba150658efd53fc873d3736dbdafcbec9cc8b264f91135b8bb98ca",
+          "decision": "approve"
+        },
+        {
+          "index": "76",
+          "identity": "dreadnaut",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/dreadnaut/front.png",
+          "structural_hash": "13bed92a3226183484dd7e1ce362a39f2989e98bb93e532790fa70fba4b91065",
+          "decision": "approve"
+        },
+        {
+          "index": "77",
+          "identity": "dredwood",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/dredwood/front.png",
+          "structural_hash": "5e2973f614a6efcabbdcc6c864222db5563a4e9aaef161e81b85db9bc4aa9fc9",
+          "decision": "approve"
+        },
+        {
+          "index": "78",
+          "identity": "drilbur-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/drilbur_redux/front.png",
+          "structural_hash": "31f1057c69b744a1ad6c75405087a24a446bda146e064c37b5a81c50740c92b4",
+          "decision": "approve"
+        },
+        {
+          "index": "79",
+          "identity": "dududunsparce",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/dududunsparce/front.png",
+          "structural_hash": "dc327712f6f0f5bc61f1533f3ad369f35bf01a54bfccaca63c8d171686f73515",
+          "decision": "approve"
+        },
+        {
+          "index": "80",
+          "identity": "dududunsparce-mega",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/dududunsparce_mega/front.png",
+          "structural_hash": "a8fa97440a620d72307a50514ccea81ced7618208d778ca4ce45cef4738f6e1d",
+          "decision": "approve"
+        },
+        {
+          "index": "81",
+          "identity": "duelumber",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/duelumber/front.png",
+          "structural_hash": "090b66528e54bc1e2d67e97c2bc19a245859c11a87809c7d2eb19d4fbc28cf93",
+          "decision": "approve"
+        },
+        {
+          "index": "82",
+          "identity": "duosion-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/duosion_redux/front.png",
+          "structural_hash": "185f85503c897b651e36686f59ed2c1942d95437e31655a99182dd3180d0afd4",
+          "decision": "approve"
+        },
+        {
+          "index": "83",
+          "identity": "eggvour",
+          "source": "Earthretha",
+          "front_path": "DS_CUSTOM_LIBRARY/packs/Earthretha/Earthretha Fakemon Pack/Graphics/Pokemon/Front/EGGVOUR.png",
+          "structural_hash": "ce09e06ebe5f9f5e7421cfb13ce0ec6e31a05a10691e4c0b545a46b763c480ad",
+          "decision": "approve"
+        },
+        {
+          "index": "84",
+          "identity": "eiscue-noice-face",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/eiscue_noice_face/front.png",
+          "structural_hash": "b4e4d98c28a714495d6e3f3a2fc30e842ba323a6211457881a201a49bf87736f",
+          "decision": "reject"
+        },
+        {
+          "index": "85",
+          "identity": "empoleon-mega",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/empoleon_mega/front.png",
+          "structural_hash": "c18145b5a409b75b022ab594968d08165612008f127af578f8da45404189a5f3",
+          "decision": "approve"
+        },
+        {
+          "index": "86",
+          "identity": "empoleon-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/empoleon_redux/front.png",
+          "structural_hash": "83140ab897355d5e031c28302e29397fbc2d1cd167c3e8763469a9679b3a1542",
+          "decision": "reject"
+        },
+        {
+          "index": "87",
+          "identity": "empoleon-redux-mega",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/empoleon_redux_mega/front.png",
+          "structural_hash": "5eef1b2e20f66aa9da64d29d7e81ac580d8e2bb116f2c796b91cfbe20e00ce72",
+          "decision": "reject"
+        },
+        {
+          "index": "88",
+          "identity": "escarginite",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/escarginite/front.png",
+          "structural_hash": "2877503b5701d98182192a6cbf7647eb2f3b58f79e40115c4e7c080e94e12861",
+          "decision": "approve"
+        },
+        {
+          "index": "89",
+          "identity": "escarginite-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/escarginite_redux/front.png",
+          "structural_hash": "190c6eb1a50eb41f950590d4bef703685b719684dfa7c6d3c289d52d8ad176bf",
+          "decision": "approve"
+        },
+        {
+          "index": "90",
+          "identity": "excadrill-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/excadrill_redux/front.png",
+          "structural_hash": "cbcc58809bec448d280d9f7148a21b77e6c679906facd3f9bb167de27f169669",
+          "decision": "approve"
+        },
+        {
+          "index": "91",
+          "identity": "exeggcute-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/exeggcute_redux/front.png",
+          "structural_hash": "48ba58c26f154d3923916491166683931d3f8a9ec069a8eff66c854307f6c2bf",
+          "decision": "reject"
+        },
+        {
+          "index": "92",
+          "identity": "exeggutor-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/exeggutor_redux/front.png",
+          "structural_hash": "2858c98383d61e4470b3ef1d17f50f788a01bc6a4985ba77c7382c2f14c0b55e",
+          "decision": "reject"
+        },
+        {
+          "index": "93",
+          "identity": "exploud-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/exploud_redux/front.png",
+          "structural_hash": "0cf7e24c680135e80147b48a9583162641a07292b01ba847f601ee254e02835f",
+          "decision": "approve"
+        },
+        {
+          "index": "94",
+          "identity": "feraligatr-mega-x",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/feraligatr_mega_x/front.png",
+          "structural_hash": "6a8f9f844d9003e55c4b583c031eb130febc8c90177d015b8c3cfc57df167c78",
+          "decision": "approve"
+        },
+        {
+          "index": "95",
+          "identity": "feraligatr-mega-y",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/feraligatr_mega_y/front.png",
+          "structural_hash": "8886a845d005706ca50e8cfdc39360029f562a10f951540b23f7a8a5b36d67ec",
+          "decision": "approve"
+        },
+        {
+          "index": "96",
+          "identity": "flairgrance",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/flairgrance/front.png",
+          "structural_hash": "71c4f632f11ea1851c525e0149942f109832b358fac6f9752d4fd0431e306d23",
+          "decision": "approve"
+        },
+        {
+          "index": "97",
+          "identity": "floatzel-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/floatzel_redux/front.png",
+          "structural_hash": "dbb57cdd1bac7171fe8c1903fbe51897afc11fd64f067beddd2271d08c549f25",
+          "decision": "reject"
+        },
+        {
+          "index": "98",
+          "identity": "flygon-1",
+          "source": "Mega_Flygon_Animated_Gen5",
+          "front_path": "DS_CUSTOM_LIBRARY/packs/Mega_Flygon_Animated_Gen5/Mega Flygon/Front/FLYGON_1.png",
+          "structural_hash": "294217d4d2ccb3a0837ad6b25febb8c1da51a6a809bbd21f6d4ce40a084da0eb",
+          "decision": "reject"
+        },
+        {
+          "index": "99",
+          "identity": "flygon-1",
+          "source": "Mega_Flygon",
+          "front_path": "DS_CUSTOM_LIBRARY/packs/Mega_Flygon/mega flygon/Graphics/Pokemon/Front/FLYGON_1.png",
+          "structural_hash": "4906a9ac03e2c1b386d1a841845a2a58a87c6456511bbe099d3a035c883d86d3",
+          "decision": "approve"
+        },
+        {
+          "index": "100",
+          "identity": "flygon-mega",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/flygon_mega/front.png",
+          "structural_hash": "428593b46e7f3415c20cff32d82a320e2071c1f4c9a3604486f01495a8b37a4c",
+          "decision": "approve"
+        },
+        {
+          "index": "101",
+          "identity": "flygon-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/flygon_redux/front.png",
+          "structural_hash": "1f6e9f8e31a787b960de462527ba8ed732924c11657dba29badfaffb2421b294",
+          "decision": "reject"
+        },
+        {
+          "index": "102",
+          "identity": "flygon-redux-b",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/flygon_redux_b/front.png",
+          "structural_hash": "21f136327e1e01a1cbffd66b9d0e6a98c73c8bedf0e97863160464b86fa1d950",
+          "decision": "approve"
+        },
+        {
+          "index": "103",
+          "identity": "flygon-redux-b-mega",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/flygon_redux_b_mega/front.png",
+          "structural_hash": "219025e0ed2655345d5dad7593f9cc4426eb7fd6176692d3c09e8e755f129ced",
+          "decision": "approve"
+        },
+        {
+          "index": "104",
+          "identity": "flygon-redux-mega",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/flygon_redux_mega/front.png",
+          "structural_hash": "dbfe0cda6bd36e42c6d466274ad82977da3cc7b32e0b28e6277ae3f6208c0adc",
+          "decision": "reject"
+        },
+        {
+          "index": "105",
+          "identity": "froslass-mega-y",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/froslass_mega_y/front.png",
+          "structural_hash": "f32bd6eb885120abb9e107fdab13127c89eb8aa6ebdf480559d2dd4c5a6c432c",
+          "decision": "approve"
+        },
+        {
+          "index": "106",
+          "identity": "froslass-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/froslass_redux/front.png",
+          "structural_hash": "503fd106dad8f9b644959414a620129582f279b58817700a64edd424a42b55e3",
+          "decision": "reject"
+        },
+        {
+          "index": "107",
+          "identity": "froslass-redux-mega",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/froslass_redux_mega/front.png",
+          "structural_hash": "df162f10712a7602350e6e9585352c48eed2782a6ebf03889823cc84e0b3e60d",
+          "decision": "reject"
+        },
+        {
+          "index": "108",
+          "identity": "fujiflap",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/fujiflap/front.png",
+          "structural_hash": "23ded53f28ea5103c96ef74575ff49b29906105ec96c3e6b3a88263b14f2b28b",
+          "decision": "approve"
+        },
+        {
+          "index": "109",
+          "identity": "furfrou-dandy-trim",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/furfrou_dandy_trim/front.png",
+          "structural_hash": "ce1354447024aa38653955b23dc2aa39b83e2191b1b7d484b55536d0f8384134",
+          "decision": "approve"
+        },
+        {
+          "index": "110",
+          "identity": "furfrou-debutante-trim",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/furfrou_debutante_trim/front.png",
+          "structural_hash": "e42be5eef24535af6fa958e129997c247dad79bb61ebe4d6f0ae6884b55f46d7",
+          "decision": "approve"
+        },
+        {
+          "index": "111",
+          "identity": "furfrou-diamond-trim",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/furfrou_diamond_trim/front.png",
+          "structural_hash": "3c4b277dcc4ee62623380a780843a12e368905e555d525ab5c04cd0190616fb1",
+          "decision": "approve"
+        },
+        {
+          "index": "112",
+          "identity": "furfrou-heart-trim",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/furfrou_heart_trim/front.png",
+          "structural_hash": "c329384dacbf7b4c76f8e297819697564c8bb3211b8bf68133e0ca628ad43f6f",
+          "decision": "approve"
+        },
+        {
+          "index": "113",
+          "identity": "furfrou-kabuki-trim",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/furfrou_kabuki_trim/front.png",
+          "structural_hash": "2f794f68bbb4e865c9de7c9b839aa0ae52bb6905ff693da30c5af266da9ec9e1",
+          "decision": "approve"
+        },
+        {
+          "index": "114",
+          "identity": "furfrou-la-reine-trim",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/furfrou_la_reine_trim/front.png",
+          "structural_hash": "54062d0d3606a7b637a55dd05cffe520508964c81d26a8c2028b421e4ac9f4cc",
+          "decision": "approve"
+        },
+        {
+          "index": "115",
+          "identity": "furfrou-matron-trim",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/furfrou_matron_trim/front.png",
+          "structural_hash": "ad7e86e8a343300eb0e05899a99bc4023c75a60dd92d0d20fcdca620796de8e8",
+          "decision": "approve"
+        },
+        {
+          "index": "116",
+          "identity": "furfrou-pharaoh-trim",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/furfrou_pharaoh_trim/front.png",
+          "structural_hash": "e9962233e7324df41f9b9c8580445f724b54a5243b5ca0b8b2b95bfc0f4aad46",
+          "decision": "approve"
+        },
+        {
+          "index": "117",
+          "identity": "furfrou-star-trim",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/furfrou_star_trim/front.png",
+          "structural_hash": "535dacfcab7b50d5a8fdcba660f4fc0f374727a59ae10a6e08de09c563ed1dd3",
+          "decision": "approve"
+        },
+        {
+          "index": "118",
+          "identity": "gabite-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/gabite_redux/front.png",
+          "structural_hash": "b0fd84a95329ed55fd666540e4cef75be6b7f98f1eacc700d3c9d3c3b879cbd4",
+          "decision": "approve"
+        },
+        {
+          "index": "119",
+          "identity": "gallade-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/gallade_redux/front.png",
+          "structural_hash": "962a5aad95466efeb161d2dcd1b919468abb8a75e51b1063315a76ae5705c9ed",
+          "decision": "approve"
+        },
+        {
+          "index": "120",
+          "identity": "gallade-redux-mega",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/gallade_redux_mega/front.png",
+          "structural_hash": "e5a9a7a530347d59ea83624090e8f1cd77a5b2c4728c18b224e5165683b2f5d2",
+          "decision": "approve"
+        },
+        {
+          "index": "121",
+          "identity": "garchomp-mega-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/garchomp_mega_redux/front.png",
+          "structural_hash": "b6d93236732e0c2d33861f12ef26152700b60638c81e447d689db3eaf2937d9e",
+          "decision": "approve"
+        },
+        {
+          "index": "122",
+          "identity": "garchomp-mega-z",
+          "source": "PokeDot_Engine_Mega_Intake",
+          "front_path": "DS_CUSTOM_LIBRARY/packs/PokeDot_Engine_Mega_Intake/garchomp-mega-z/front.png",
+          "structural_hash": "44b38c47759aaf9381adf5dcce729a3fa1ed1856b2ea78b616cef9619bb2c88d",
+          "decision": "reject"
+        },
+        {
+          "index": "123",
+          "identity": "garchomp-mega-z",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/garchomp_mega_z/front.png",
+          "structural_hash": "c3e7ab61bf1eb6b7156d03d759932cf9fa6d7f28c41d4b8f9fad2d3359bef268",
+          "decision": "approve"
+        },
+        {
+          "index": "124",
+          "identity": "garchomp-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/garchomp_redux/front.png",
+          "structural_hash": "faa3a55d3e024e537b25c73bc7f6714e800ee21ca5273df587fc84bd2174dd38",
+          "decision": "approve"
+        },
+        {
+          "index": "125",
+          "identity": "gardevoir-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/gardevoir_redux/front.png",
+          "structural_hash": "b119b125bf9be4b8cbc3a2d1e07a6f2c81202ef737d22b404f816e6f1994c342",
+          "decision": "approve"
+        },
+        {
+          "index": "126",
+          "identity": "gardevoir-redux-mega",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/gardevoir_redux_mega/front.png",
+          "structural_hash": "244bed62a6af7aa0759a910d641767352cf39bc68db77968edba30cc04eb2eec",
+          "decision": "approve"
+        },
+        {
+          "index": "127",
+          "identity": "gible-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/gible_redux/front.png",
+          "structural_hash": "af3912c3390ad5ae223e5e41592194a474ade461e083ce69ea9804d6bb9ec9ae",
+          "decision": "approve"
+        },
+        {
+          "index": "128",
+          "identity": "glalie-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/glalie_redux/front.png",
+          "structural_hash": "9d6da95967a9cabea6fac3178a61245f7b93729cee80423db27fdefa08879f9c",
+          "decision": "reject"
+        },
+        {
+          "index": "129",
+          "identity": "glalie-redux-mega",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/glalie_redux_mega/front.png",
+          "structural_hash": "28e929149750a68b27a947262a7c39aeb0b8628be83dd4c2af5672a3591e399b",
+          "decision": "reject"
+        },
+        {
+          "index": "130",
+          "identity": "gligar-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/gligar_redux/front.png",
+          "structural_hash": "d8e99b348125e1653cc635dc74689de1c1d97a1822f02c1a84dd502ef7eab669",
+          "decision": "approve"
+        },
+        {
+          "index": "131",
+          "identity": "gliscor-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/gliscor_redux/front.png",
+          "structural_hash": "38d956465532d0a331932363a4d0518efdfb56173d5b2ef09f1581e05a38970e",
+          "decision": "approve"
+        },
+        {
+          "index": "132",
+          "identity": "gloom-1",
+          "source": "Earthretha",
+          "front_path": "DS_CUSTOM_LIBRARY/packs/Earthretha/Earthretha Fakemon Pack/Graphics/Pokemon/Front/GLOOM_1.png",
+          "structural_hash": "1c28427621e387dec957b88b12d22f384ac763ada5b6ecac92845fa3157cb9c3",
+          "decision": "reject"
+        },
+        {
+          "index": "133",
+          "identity": "golisopod-mega",
+          "source": "DrPrettyman_DS_64x64",
+          "front_path": "DS_CUSTOM_LIBRARY/packs/DrPrettyman_DS_64x64/sprites-processed/front/golisopod-mega.png",
+          "structural_hash": "90d38b36f39bc7569b0f8398e11da2f8a26d44f201e4c9f0dd207c963d9f62fd",
+          "decision": "reject"
+        },
+        {
+          "index": "134",
+          "identity": "golisopod-mega",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/golisopod_mega/front.png",
+          "structural_hash": "cecf8ba4f1c9f3715cff306f32c0bd203c40fcee3e36eb401099b32ad18a87df",
+          "decision": "approve"
+        },
+        {
+          "index": "135",
+          "identity": "goodra-hisuian-mega",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/goodra_hisuian_mega/front.png",
+          "structural_hash": "0108ccbda8a944679b51a223712110da3e36a0677f6549e1d895c5c97323bae1",
+          "decision": "approve"
+        },
+        {
+          "index": "136",
+          "identity": "goodra-mega",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/goodra_mega/front.png",
+          "structural_hash": "ddae11d9e8cdba9d0a387e220da4ba6333e6aeb3064940dbc182d268f76cbf8d",
+          "decision": "approve"
+        },
+        {
+          "index": "137",
+          "identity": "gooschase",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/gooschase/front.png",
+          "structural_hash": "6e78e7e00b3da304d9d19f03a7deb578d78d0c412420fd1cbdf94383dec034af",
+          "decision": "approve"
+        },
+        {
+          "index": "138",
+          "identity": "gothitelle-mega",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/gothitelle_mega/front.png",
+          "structural_hash": "4338c8d647eefb4c8fc99fe7c4d40b6c06170f9521b1ffec2d328c8a588f0918",
+          "decision": "approve"
+        },
+        {
+          "index": "139",
+          "identity": "granbull-mega",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/granbull_mega/front.png",
+          "structural_hash": "f481f0a4cae8b1ec7adec89512036d678fb3436d6d3d5c849d2369d7dd38e9df",
+          "decision": "approve"
+        },
+        {
+          "index": "140",
+          "identity": "granitun",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/granitun/front.png",
+          "structural_hash": "4501bd8a52024dcfb4779988a2a70f580139c745a78ef5947f21aba7012d0506",
+          "decision": "approve"
+        },
+        {
+          "index": "141",
+          "identity": "grotle-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/grotle_redux/front.png",
+          "structural_hash": "3b60d5a21a11e1d31e8030d818d1cb382ab3bc235ec647832be4edff4b787ead",
+          "decision": "reject"
+        },
+        {
+          "index": "142",
+          "identity": "guardozel",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/guardozel/front.png",
+          "structural_hash": "2097be917ab37d8ebfe4931cdfda0f3d9fdcefdbf71d988b434117298183c46c",
+          "decision": "approve"
+        },
+        {
+          "index": "143",
+          "identity": "gyaradeath",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/gyaradeath/front.png",
+          "structural_hash": "2d0690a9ab05923c06992b20f4ef509791412ac93142e1e0ae8e03f9a07a4918",
+          "decision": "approve"
+        },
+        {
+          "index": "144",
+          "identity": "gyarados-mega-y",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/gyarados_mega_y/front.png",
+          "structural_hash": "688edb66eb119ef28451fec0ee4a35b4b1577c186bfc5a43f87bbf8af233fd1a",
+          "decision": "approve"
+        },
+        {
+          "index": "145",
+          "identity": "happiny-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/happiny_redux/front.png",
+          "structural_hash": "7131768b09edeb28e14958fe64e235120306ad6da31757ef74f4e2af1e9ebbb9",
+          "decision": "reject"
+        },
+        {
+          "index": "146",
+          "identity": "hariyama-mega",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/hariyama_mega/front.png",
+          "structural_hash": "ea8e986b5266480a3d96df7070580f462d9545941f73526e58e429134872546c",
+          "decision": "approve"
+        },
+        {
+          "index": "147",
+          "identity": "hariyama-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/hariyama_redux/front.png",
+          "structural_hash": "662bfc5ae8460450831a05b30dbe7a4a990cf7f7026ca1a4466afe293a39e526",
+          "decision": "approve"
+        },
+        {
+          "index": "148",
+          "identity": "haxorus-mega",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/haxorus_mega/front.png",
+          "structural_hash": "a5ebbbe3800ac30caaf1b6470f9f09290f408cffdea725340c5865d800ddb6e6",
+          "decision": "approve"
+        },
+        {
+          "index": "149",
+          "identity": "hitmonchan-mega",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/hitmonchan_mega/front.png",
+          "structural_hash": "c75f55ce327f5ce21bf2ea8ec399589030b746880c47aa7ac07ff21a9478c845",
+          "decision": "approve"
+        },
+        {
+          "index": "150",
+          "identity": "hitmonlee-mega",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/hitmonlee_mega/front.png",
+          "structural_hash": "fa92ab94d675129f19a77453e2e093e6e522972caf47fb565e3222ba59d9bd14",
+          "decision": "approve"
+        },
+        {
+          "index": "151",
+          "identity": "hitmontop-mega",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/hitmontop_mega/front.png",
+          "structural_hash": "4edcb9baa5179a1412ecf89b9e7b9369196946c7c13c5361ef0cdbdcf388f76e",
+          "decision": "approve"
+        },
+        {
+          "index": "152",
+          "identity": "honedge-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/honedge_redux/front.png",
+          "structural_hash": "8aeff88c4f72b86c0ad6e5cacc1064548ce3cd8396cac7f23e80b12d9edc0f1b",
+          "decision": "reject"
+        },
+        {
+          "index": "153",
+          "identity": "hoothoot-1",
+          "source": "Festival_Lumio",
+          "front_path": "DS_CUSTOM_LIBRARY/packs/Festival_Lumio/Lumio/Pokemon/Front/HOOTHOOT_1.png",
+          "structural_hash": "b71ee8e313bdca87a377aa0b84bd03ba9a40d104959a215cff5f0debf6804268",
+          "decision": "approve"
+        },
+        {
+          "index": "154",
+          "identity": "houndoom-mega-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/houndoom_mega_redux/front.png",
+          "structural_hash": "5ffa988fcd700cf8a8a565a4140fdd92bcde10ed91bf3279d04fb49a6a396d8f",
+          "decision": "approve"
+        },
+        {
+          "index": "155",
+          "identity": "houndoom-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/houndoom_redux/front.png",
+          "structural_hash": "a33fc38bd07116fb315ab2e0f1a6ca166b2bd75a0da4042b410b2c70ff7aaf69",
+          "decision": "approve"
+        },
+        {
+          "index": "156",
+          "identity": "houndour-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/houndour_redux/front.png",
+          "structural_hash": "aad22b62cca720f187bb044e2993cd897dbaa0d3abd27a4310501b388ecc06b8",
+          "decision": "approve"
+        },
+        {
+          "index": "157",
+          "identity": "hydreigon-mega",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/hydreigon_mega/front.png",
+          "structural_hash": "e52fd15b4d35cc21e8c87f81f40dae923c00ebafa8c25df0058114930d8dd84f",
+          "decision": "approve"
+        },
+        {
+          "index": "158",
+          "identity": "hydreigon-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/hydreigon_redux/front.png",
+          "structural_hash": "318d61c86e89c945e23a6acb5b32153deb54357a2cd222299d0700b476c87b51",
+          "decision": "reject"
+        },
+        {
+          "index": "159",
+          "identity": "hydreigon-redux-mega",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/hydreigon_redux_mega/front.png",
+          "structural_hash": "d2a5bf6458057a287aecf8cf588ccc0e1de87aa6d128c4242337edb41a439792",
+          "decision": "reject"
+        },
+        {
+          "index": "160",
+          "identity": "incineroar-mega",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/incineroar_mega/front.png",
+          "structural_hash": "adb70e752547a3e2422c6d2c53b0fd404bf03448a78cd16d1f4ea1623b493ea4",
+          "decision": "approve"
+        },
+        {
+          "index": "161",
+          "identity": "infernape-mega",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/infernape_mega/front.png",
+          "structural_hash": "5ba7f836b49a5283164af4da769d573b012b79de7039fad85acd8906f30a331f",
+          "decision": "approve"
+        },
+        {
+          "index": "162",
+          "identity": "infernape-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/infernape_redux/front.png",
+          "structural_hash": "62645fb8439aaa8117beabdab4d0bb5310db25f91f5b01f3bbcbbdb7649c8709",
+          "decision": "reject"
+        },
+        {
+          "index": "163",
+          "identity": "infernape-redux-mega",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/infernape_redux_mega/front.png",
+          "structural_hash": "ca80f1f46027b04858130c3496901b2f09b5e64b0d379c3d2f76b73af5d97ae3",
+          "decision": "reject"
+        },
+        {
+          "index": "164",
+          "identity": "kaiosea",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/kaiosea/front.png",
+          "structural_hash": "2fbb7c44f9b66cd3d4ca92700b265c14d3b68a9924e7479a01e974097ca5170c",
+          "decision": "approve"
+        },
+        {
+          "index": "165",
+          "identity": "kartana-fallen",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/kartana_fallen/front.png",
+          "structural_hash": "acc74d2335b80dfabbd0c4e4f2ccb17fb95f52f21bd94d5039834bdb6f9667d1",
+          "decision": "approve"
+        },
+        {
+          "index": "166",
+          "identity": "kecleong",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/kecleong/front.png",
+          "structural_hash": "9cbdfbc7173425f950bbec64faf5810d0a5e72d8010a5e577719962d2c7332d6",
+          "decision": "reject"
+        },
+        {
+          "index": "167",
+          "identity": "kingambit-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/kingambit_redux/front.png",
+          "structural_hash": "b6c3a09857cf32b37c375142da6cca6d6ab96275f18e67871076d6a3dc7d3e84",
+          "decision": "approve"
+        },
+        {
+          "index": "168",
+          "identity": "kingambit-redux-mega",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/kingambit_redux_mega/front.png",
+          "structural_hash": "79bff83fe8e1d6fb3d5c166a4cdfe5a1529b77bb9df1216d47f6e338ab07a396",
+          "decision": "approve"
+        },
+        {
+          "index": "169",
+          "identity": "kingler-mega",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/kingler_mega/front.png",
+          "structural_hash": "b84bddeab99a464078505413ab63e9ec19d6de9413c1fddf39c389ed4d95f10d",
+          "decision": "approve"
+        },
+        {
+          "index": "170",
+          "identity": "kingler-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/kingler_redux/front.png",
+          "structural_hash": "ee25e3f6fd5f70a1a9b9b4b53ab0d564e64ddc094f9c1113c5ada16fdb17a58a",
+          "decision": "reject"
+        },
+        {
+          "index": "171",
+          "identity": "kingler-redux-mega",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/kingler_redux_mega/front.png",
+          "structural_hash": "2e922984337dc577c46b0552606aa6c93fd3596e6f2c8715fad5a01f9a19e4f8",
+          "decision": "reject"
+        },
+        {
+          "index": "172",
+          "identity": "kirlia-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/kirlia_redux/front.png",
+          "structural_hash": "99b68199c21049bb0b88945e001f154af2d4fd84686301ff0954e75edcea4021",
+          "decision": "approve"
+        },
+        {
+          "index": "173",
+          "identity": "kleavor-mega",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/kleavor_mega/front.png",
+          "structural_hash": "fa55e170093487c622481178867bfd581d874dc5cd4fabd535f7780b6c71b58b",
+          "decision": "approve"
+        },
+        {
+          "index": "174",
+          "identity": "kleavor-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/kleavor_redux/front.png",
+          "structural_hash": "4a846fe9d09be354280ad120de76961add3dcd0f54e87178498e62e1336bbc9c",
+          "decision": "approve"
+        },
+        {
+          "index": "175",
+          "identity": "kleavor-redux-mega",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/kleavor_redux_mega/front.png",
+          "structural_hash": "cdd4663d0e4844bbebdba3e8f4b18013acba04f240b38a8295d0505065dd1bea",
+          "decision": "approve"
+        },
+        {
+          "index": "176",
+          "identity": "klefki-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/klefki_redux/front.png",
+          "structural_hash": "d82eeab3f94995104d0e6638d7c4780ce482ad4f61497917bfc55777f9450487",
+          "decision": "approve"
+        },
+        {
+          "index": "177",
+          "identity": "knaiver-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/knaiver_redux/front.png",
+          "structural_hash": "b65432f74941f0f64d9444de0c516be6cfd098ffdbc082d401339af703ba5fe4",
+          "decision": "approve"
+        },
+        {
+          "index": "178",
+          "identity": "krabby-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/krabby_redux/front.png",
+          "structural_hash": "b20edd3d011d826bbc5e006ae85e855e65fc9d52238adcfd41778372153940a1",
+          "decision": "reject"
+        },
+        {
+          "index": "179",
+          "identity": "krampird",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/krampird/front.png",
+          "structural_hash": "00c19619f47e4d8cbd12bb3b30ee1228d6005fd04e868721dc178d9a13f6e931",
+          "decision": "approve"
+        },
+        {
+          "index": "180",
+          "identity": "krookodile-mega",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/krookodile_mega/front.png",
+          "structural_hash": "689ef6d78699cc772d00496838ef9cf9dbe782c81efee08df4f651b0f38a83d3",
+          "decision": "approve"
+        },
+        {
+          "index": "181",
+          "identity": "lairon-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/lairon_redux/front.png",
+          "structural_hash": "b32238b06f15062239a5adca8fa64b699254e5dcc4027e01ce2a861840f5864e",
+          "decision": "approve"
+        },
+        {
+          "index": "182",
+          "identity": "lampent-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/lampent_redux/front.png",
+          "structural_hash": "520a136f583d731d94679f68eceb294722c1bf699f4410c5d210e2c4a2697ba4",
+          "decision": "approve"
+        },
+        {
+          "index": "183",
+          "identity": "lanturn-mega",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/lanturn_mega/front.png",
+          "structural_hash": "2f294f193237611993b0292ca5f30e47b75fa79f29567c16fe82361982bf4231",
+          "decision": "approve"
+        },
+        {
+          "index": "184",
+          "identity": "lapras-mega-x",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/lapras_mega_x/front.png",
+          "structural_hash": "433db0a5a8c399ae5a4012f9017e3decd581e63c861f89a4ba4198ed9f7c33dc",
+          "decision": "approve"
+        },
+        {
+          "index": "185",
+          "identity": "larvesta-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/larvesta_redux/front.png",
+          "structural_hash": "f50f93f80f36aba890fc9c5d167a6b9e9f5d6777cedc0650a44cb405a8a0889d",
+          "decision": "approve"
+        },
+        {
+          "index": "186",
+          "identity": "larvitar-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/larvitar_redux/front.png",
+          "structural_hash": "b22f605efb522e705c5ad82c6486a096c414e2b0b62d5f993f8a44506822d658",
+          "decision": "approve"
+        },
+        {
+          "index": "187",
+          "identity": "lepastry",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/lepastry/front.png",
+          "structural_hash": "2215dfbeb0f56ef491d5c563efd70a65b32d2848968a9869601ea0ceb4b58f48",
+          "decision": "approve"
+        },
+        {
+          "index": "188",
+          "identity": "litwick-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/litwick_redux/front.png",
+          "structural_hash": "6b22e67b65a7a385120f1990f7520fbcf45a6b0c2e079cb61eb4b0993628ccca",
+          "decision": "approve"
+        },
+        {
+          "index": "189",
+          "identity": "loudred-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/loudred_redux/front.png",
+          "structural_hash": "157e5e5031fec2ecc847dfcfcfca50902205f886f0dc0e1acb2486ec429db677",
+          "decision": "approve"
+        },
+        {
+          "index": "190",
+          "identity": "lucario-mega-z",
+          "source": "DrPrettyman_DS_64x64",
+          "front_path": "DS_CUSTOM_LIBRARY/packs/DrPrettyman_DS_64x64/sprites-processed/front/lucario-mega-z.png",
+          "structural_hash": "b9330bf14ac91f9c6eaf8d55ff448df0b7542afc60a2b97af74eafcc94cf0b4c",
+          "decision": "approve"
+        },
+        {
+          "index": "191",
+          "identity": "lucario-mega-z",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/lucario_mega_z/front.png",
+          "structural_hash": "3e4e41224b500b56bec3042a22246f5b92fc34e6d72e1ada28f0d069c938a64c",
+          "decision": "reject"
+        },
+        {
+          "index": "192",
+          "identity": "luxio-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/luxio_redux/front.png",
+          "structural_hash": "8cff49599ea4cbd2b9dc329091dbf8cadb18f0ae0b38cadb9a89eb8c77ccecf0",
+          "decision": "approve"
+        },
+        {
+          "index": "193",
+          "identity": "luxray-mega",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/luxray_mega/front.png",
+          "structural_hash": "e401174b28887da3bc3a7eaa41397ece5bb3dda9b3de9b614b8147a3805acc0c",
+          "decision": "approve"
+        },
+        {
+          "index": "194",
+          "identity": "luxray-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/luxray_redux/front.png",
+          "structural_hash": "2b642e384eedbc8e0a1ba07644aa444886255acc2fc0da2318cc733e13c1e27f",
+          "decision": "approve"
+        },
+        {
+          "index": "195",
+          "identity": "luxray-redux-mega",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/luxray_redux_mega/front.png",
+          "structural_hash": "33ab56c718466c9ba06f45e63c9757c7878790d1ed04b5a62ca6b0df11db5aa9",
+          "decision": "approve"
+        },
+        {
+          "index": "196",
+          "identity": "luxzero",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/luxzero/front.png",
+          "structural_hash": "3bc233b3bc7e01f21b804380ca2d32c71b9691bef4de4ba10e8e86cd8f50515a",
+          "decision": "approve"
+        },
+        {
+          "index": "197",
+          "identity": "lycanroc-eclipse",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/lycanroc_eclipse/front.png",
+          "structural_hash": "da47dc409c47cab9a414de9e8be597e2966909eb72bf9e0bf36725d8ec449b83",
+          "decision": "approve"
+        },
+        {
+          "index": "198",
+          "identity": "lycanroc-twilight",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/lycanroc_twilight/front.png",
+          "structural_hash": "e161300f87b06be361780f47b8d3dbcba8797d68b36793a09ec453f2a66e7feb",
+          "decision": "approve"
+        },
+        {
+          "index": "199",
+          "identity": "magcargo-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/magcargo_redux/front.png",
+          "structural_hash": "c8d74d256537392630da629ce3051847498091c4fda7cc4da8ad066a3528ccc5",
+          "decision": "approve"
+        },
+        {
+          "index": "200",
+          "identity": "magnezone-mega",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/magnezone_mega/front.png",
+          "structural_hash": "7511166171f462e90875495c3d32c17b1edfca4963e7b5f08eb9be3e7cd3fea4",
+          "decision": "approve"
+        },
+        {
+          "index": "201",
+          "identity": "makuhita-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/makuhita_redux/front.png",
+          "structural_hash": "8bb0ca2a97a90f1b5f1153264faf30c2800db5e80920b4f875a7b24951715165",
+          "decision": "approve"
+        },
+        {
+          "index": "202",
+          "identity": "mamoswine-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/mamoswine_redux/front.png",
+          "structural_hash": "a56bc0a32eee581e065197199b68f3e83cdf876a9a8ccc5b07a71fd3c72e0997",
+          "decision": "approve"
+        },
+        {
+          "index": "203",
+          "identity": "mamoswine-redux-mega",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/mamoswine_redux_mega/front.png",
+          "structural_hash": "66f34ee0ba2ee510a24d1f5f8de09a7be065c8b0b670eba220450cb6d46dfb2a",
+          "decision": "approve"
+        },
+        {
+          "index": "204",
+          "identity": "mawile-mega-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/mawile_mega_redux/front.png",
+          "structural_hash": "d8e3bb4da0b688108118a8a347fc67848599968ddea5b7d086432b33c8b12105",
+          "decision": "approve"
+        },
+        {
+          "index": "205",
+          "identity": "mawile-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/mawile_redux/front.png",
+          "structural_hash": "ead141aa3b44a536c193fbaabe6976ee3236395570fa1b13f7995e777bda6ad8",
+          "decision": "approve"
+        },
+        {
+          "index": "206",
+          "identity": "mawile-redux-b",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/mawile_redux_b/front.png",
+          "structural_hash": "7c5ff63d9bef20cb7b5e1d8c49e2daf3fe0adab76cff3fdc2a16aaab28cad216",
+          "decision": "approve"
+        },
+        {
+          "index": "207",
+          "identity": "mawile-redux-b-mega",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/mawile_redux_b_mega/front.png",
+          "structural_hash": "b2f55d5d296f8c8427f3d42db2422d06290700c00028722c0ffcf4c9d27c8768",
+          "decision": "approve"
+        },
+        {
+          "index": "208",
+          "identity": "mega-barbaracle",
+          "source": "Festival_Misc",
+          "front_path": "DS_CUSTOM_LIBRARY/packs/Festival_Misc/Misc/Fronts/Mega Barbaracle.png",
+          "structural_hash": "95022e077bf94c8ee25635e3db1760fb5208b18ee3ba0f59cfea23e531e0b146",
+          "decision": "maybe"
+        },
+        {
+          "index": "209",
+          "identity": "meowscarada-mega",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/meowscarada_mega/front.png",
+          "structural_hash": "92373ff7b185475ee2f168ec6d979f28de80cdf0f618a05a612f876c0212609e",
+          "decision": "approve"
+        },
+        {
+          "index": "210",
+          "identity": "mesprit-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/mesprit_redux/front.png",
+          "structural_hash": "1ec9ddee5761c1bb7a5b83a849048076c260c779577f0eb0a8667ed1b0d9cd09",
+          "decision": "approve"
+        },
+        {
+          "index": "211",
+          "identity": "mienshao-mega",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/mienshao_mega/front.png",
+          "structural_hash": "f70005d55325b3941b957c74268909e6c1346773d7991e1008c0a3266394ac27",
+          "decision": "approve"
+        },
+        {
+          "index": "212",
+          "identity": "milotic-mega",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/milotic_mega/front.png",
+          "structural_hash": "e03fe77e1b335bf0a45b1565422de35bf09eb19999337b15a55c470a112e6fc4",
+          "decision": "approve"
+        },
+        {
+          "index": "213",
+          "identity": "mimiegg",
+          "source": "Earthretha",
+          "front_path": "DS_CUSTOM_LIBRARY/packs/Earthretha/Earthretha Fakemon Pack/Graphics/Pokemon/Front/MIMIEGG.png",
+          "structural_hash": "159eea1ca3adc052d281ad9fa1593a8733be6876522ebaec8b8d75171d9dcb78",
+          "decision": "approve"
+        },
+        {
+          "index": "214",
+          "identity": "mimikyu-rayquaza",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/mimikyu_rayquaza/front.png",
+          "structural_hash": "b212b7b731041ff7871d5271375542e42236fdc30a1343f0b1b02888b99ea3fb",
+          "decision": "approve"
+        },
+        {
+          "index": "215",
+          "identity": "minccino-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/minccino_redux/front.png",
+          "structural_hash": "489bb49af4f7b3b73154ed67bf8ee9b5a2357a2485c7af65e2be37e5d0661065",
+          "decision": "approve"
+        },
+        {
+          "index": "216",
+          "identity": "minior-core-red",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/minior_core_red/front.png",
+          "structural_hash": "32b765b0c0c9375c56051d12c58e9a6ea217ded256c76145ca8a075290046b1a",
+          "decision": "approve"
+        },
+        {
+          "index": "217",
+          "identity": "moltres-ex",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/moltres_ex/front.png",
+          "structural_hash": "7ea0768f5970af99270e43ea38d418c64827d907ca7c7947db3e162378baecd2",
+          "decision": "approve"
+        },
+        {
+          "index": "218",
+          "identity": "monferno-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/monferno_redux/front.png",
+          "structural_hash": "db2b0c768a615969e3a5221ac80938155eb9587ce56f8a4241f3385148eac567",
+          "decision": "reject"
+        },
+        {
+          "index": "219",
+          "identity": "morpekyll",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/morpekyll/front.png",
+          "structural_hash": "a609f2fdf548e9a6dbb105a6dab8e2e5580328ba247b8647b5201eab2f9b0698",
+          "decision": "approve"
+        },
+        {
+          "index": "220",
+          "identity": "munchlax-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/munchlax_redux/front.png",
+          "structural_hash": "95ee5bbd0e6bb6cdbb2227aeb55afa826cbe6fcb2fafdafbb2683efbe7d94030",
+          "decision": "approve"
+        },
+        {
+          "index": "221",
+          "identity": "noctowl-1",
+          "source": "Festival_Lumio",
+          "front_path": "DS_CUSTOM_LIBRARY/packs/Festival_Lumio/Lumio/Pokemon/Front/NOCTOWL_1.png",
+          "structural_hash": "65eb07c2b968e70f22c91313b1d1c38fc2566aa2217f917bd5e1d83aea2ae380",
+          "decision": "approve"
+        },
+        {
+          "index": "222",
+          "identity": "noibat-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/noibat_redux/front.png",
+          "structural_hash": "5e931f45e60b98985fbe96cd3f39d5ab8e350920f4404d36a94a3ce6fdbd3816",
+          "decision": "approve"
+        },
+        {
+          "index": "223",
+          "identity": "noivern-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/noivern_redux/front.png",
+          "structural_hash": "4f8ef805cb6ed1af515a449bd9f4a3ff39c19e9026357aec791e368ae946632c",
+          "decision": "approve"
+        },
+        {
+          "index": "224",
+          "identity": "oddish-1",
+          "source": "Earthretha",
+          "front_path": "DS_CUSTOM_LIBRARY/packs/Earthretha/Earthretha Fakemon Pack/Graphics/Pokemon/Front/ODDISH_1.png",
+          "structural_hash": "aa3da984453857b606accf95df820e98c6dc8f7830d62e64d0575327a9824abe",
+          "decision": "approve"
+        },
+        {
+          "index": "225",
+          "identity": "orchestot",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/orchestot/front.png",
+          "structural_hash": "165506a18cb6c4ec7f9d3758b37b732d8e813734c34bdcadac26c0876b645871",
+          "decision": "approve"
+        },
+        {
+          "index": "226",
+          "identity": "oricorio-mega",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/oricorio_mega/front.png",
+          "structural_hash": "57fe70b1967e9f85245a6be8f3659550106e0d5c5e37b36026fe73dd655de189",
+          "decision": "approve"
+        },
+        {
+          "index": "227",
+          "identity": "panpour-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/panpour_redux/front.png",
+          "structural_hash": "87ef8b58a9947a2e489d3f27bbf5bf9c2ec3e7c316fe4dcb37631da3c4f9a2a9",
+          "decision": "reject"
+        },
+        {
+          "index": "228",
+          "identity": "pansage-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/pansage_redux/front.png",
+          "structural_hash": "f1bb368d68a864dfd344677fc120888d8acb5c46f6746bcb445c6e3292b6f43a",
+          "decision": "reject"
+        },
+        {
+          "index": "229",
+          "identity": "pansear-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/pansear_redux/front.png",
+          "structural_hash": "ba8bc9447265ff92792684ba149e8763c7e9ca1536705510cb74254af12e3263",
+          "decision": "reject"
+        },
+        {
+          "index": "230",
+          "identity": "pawniard-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/pawniard_redux/front.png",
+          "structural_hash": "08430c51fc199931bbf470cd7257a92129d74db70dfd02000e506a6db2890c00",
+          "decision": "approve"
+        },
+        {
+          "index": "231",
+          "identity": "pentadug",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/pentadug/front.png",
+          "structural_hash": "9abee24ea3b2957fb0d2e11a4d442fcf019db826b620ffbbf65e631c80af554e",
+          "decision": "reject"
+        },
+        {
+          "index": "232",
+          "identity": "pentadug-alolan",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/pentadug_alolan/front.png",
+          "structural_hash": "2abd934b146e099c771514343107cde0a608bb1c92df1279bae6c8692c844ced",
+          "decision": "reject"
+        },
+        {
+          "index": "233",
+          "identity": "pentawug",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/pentawug/front.png",
+          "structural_hash": "70535115fc1a02f83198892343c0ac37e2bb72bba7eca504080df6f3b3219a60",
+          "decision": "reject"
+        },
+        {
+          "index": "234",
+          "identity": "phanfernal",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/phanfernal/front.png",
+          "structural_hash": "5f1f5c3bdda25c133eb74c77379dc9e4f07f791f0f2b73f8988ae8e236d19fd1",
+          "decision": "approve"
+        },
+        {
+          "index": "235",
+          "identity": "phantowl",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/phantowl/front.png",
+          "structural_hash": "c872aa4111e2c2a10398bc000f0567f280c4f5feca308df0ece8306b1caa9264",
+          "decision": "approve"
+        },
+        {
+          "index": "236",
+          "identity": "piloswine-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/piloswine_redux/front.png",
+          "structural_hash": "0779ac4f483e7fa1cc39476318f07f46d990c6488f8effad1c7d4383ba012b25",
+          "decision": "approve"
+        },
+        {
+          "index": "237",
+          "identity": "piplup-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/piplup_redux/front.png",
+          "structural_hash": "9a6d63dfc04c838b63958bc13d0b96f449a086e68b6a0faf77e0edfc36629a0b",
+          "decision": "reject"
+        },
+        {
+          "index": "238",
+          "identity": "polartic",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/polartic/front.png",
+          "structural_hash": "826bd17f84226de8e9de9d41470cab185078c80a0be4630259176f4f1d594f54",
+          "decision": "approve"
+        },
+        {
+          "index": "239",
+          "identity": "polteageist-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/polteageist_redux/front.png",
+          "structural_hash": "97fbe4aff33e7b9cd1df55c58235a0d5fb0417c64aabbcb5f164150ff710565b",
+          "decision": "approve"
+        },
+        {
+          "index": "240",
+          "identity": "primarina-mega",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/primarina_mega/front.png",
+          "structural_hash": "3db7722c5775faa5da95b08961ce7ed2552b87694fa03286c07d673228a48444",
+          "decision": "approve"
+        },
+        {
+          "index": "241",
+          "identity": "prinplup-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/prinplup_redux/front.png",
+          "structural_hash": "7af014df398cd959b7af26ee74be6b0d09c4ba3ad8a5f29e372a853d1680685a",
+          "decision": "reject"
+        },
+        {
+          "index": "242",
+          "identity": "pupitar-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/pupitar_redux/front.png",
+          "structural_hash": "22ac2612b285f84d0ad024840e33c7c5ff4f808a77383f855484e7571e2a329e",
+          "decision": "approve"
+        },
+        {
+          "index": "243",
+          "identity": "quagsire-mega",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/quagsire_mega/front.png",
+          "structural_hash": "265b34869bc9b7d811c0a295576c8790242bbe1743be6d689160ff4125242639",
+          "decision": "approve"
+        },
+        {
+          "index": "244",
+          "identity": "quaquaval-mega",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/quaquaval_mega/front.png",
+          "structural_hash": "a29dc09de462259732e1c0b214f5c8e8434936614e0c4c0063d80bdb1a3a1904",
+          "decision": "approve"
+        },
+        {
+          "index": "245",
+          "identity": "queengambit",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/queengambit/front.png",
+          "structural_hash": "55fa7d3f5c8f2941aaf19739a635205471391207a7ce83cecdeb660ef23ee40d",
+          "decision": "approve"
+        },
+        {
+          "index": "246",
+          "identity": "ralts-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/ralts_redux/front.png",
+          "structural_hash": "821bd170a2f42a55764071adcd1738d9182bf86ed4f371c6bade5c1ee06f332f",
+          "decision": "approve"
+        },
+        {
+          "index": "247",
+          "identity": "rapidash-mega",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/rapidash_mega/front.png",
+          "structural_hash": "a8a050c4f3b4c540e384c9db82baccbd3e11a18ef44960470c6b410c2187c4bf",
+          "decision": "approve"
+        },
+        {
+          "index": "248",
+          "identity": "rapidash-mega-galarian",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/rapidash_mega_galarian/front.png",
+          "structural_hash": "349f0979a4d12af4e19f3dc7a6218cfdee23742ba184e9288d017d7b1d801088",
+          "decision": "approve"
+        },
+        {
+          "index": "249",
+          "identity": "ratfioso",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/ratfioso/front.png",
+          "structural_hash": "93668e6fb7209709a9970d9aea46dc76cde4d23715ece8dde36d3ded6a2d1d1a",
+          "decision": "approve"
+        },
+        {
+          "index": "250",
+          "identity": "raticate-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/raticate_redux/front.png",
+          "structural_hash": "f58c7645716ed7b4c5f7622a127c1f64a52480216fda966425c8809fdf741a0e",
+          "decision": "approve"
+        },
+        {
+          "index": "251",
+          "identity": "ratiking",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/ratiking/front.png",
+          "structural_hash": "0a127a74652591d6012e2dc9344cd2a238b8a4047d848c837014e6896ef2cdee",
+          "decision": "approve"
+        },
+        {
+          "index": "252",
+          "identity": "relicanth-mega",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/relicanth_mega/front.png",
+          "structural_hash": "3585a9b796bcf55e11c47f39b9523efa79d3e56c99ea58bebe9ac08e6c2a8034",
+          "decision": "approve"
+        },
+        {
+          "index": "253",
+          "identity": "reuniclus-mega",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/reuniclus_mega/front.png",
+          "structural_hash": "741c3f5e2f2fd7b733511f05b2c1a29868daa30fa5a9c5a09b8f4ada9704a4f6",
+          "decision": "approve"
+        },
+        {
+          "index": "254",
+          "identity": "reuniclus-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/reuniclus_redux/front.png",
+          "structural_hash": "670cf6ec577f320d3b03711700394cc523494f20bf88efd99494d3e0cf881724",
+          "decision": "approve"
+        },
+        {
+          "index": "255",
+          "identity": "reuniclus-redux-mega",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/reuniclus_redux_mega/front.png",
+          "structural_hash": "51ab1747bfa54cde33957d0117d51e266253cd5c7260572a5f99b6df54899c87",
+          "decision": "approve"
+        },
+        {
+          "index": "256",
+          "identity": "ribombee-mega",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/ribombee_mega/front.png",
+          "structural_hash": "8cdd7044cd4e291399cdf53e13d19304f2148f939d4c0de298471ded8adf9e9a",
+          "decision": "approve"
+        },
+        {
+          "index": "257",
+          "identity": "ribombee-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/ribombee_redux/front.png",
+          "structural_hash": "1e3ceab7992a7539f152bea08d8a9c9b496b0b72af172c11e789c4345479fdfc",
+          "decision": "approve"
+        },
+        {
+          "index": "258",
+          "identity": "ribombee-redux-mega",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/ribombee_redux_mega/front.png",
+          "structural_hash": "926d0d5e8db7c10da728f1ad1252187d49efd4be714efb746366ef56888d405e",
+          "decision": "approve"
+        },
+        {
+          "index": "259",
+          "identity": "roserade-mega",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/roserade_mega/front.png",
+          "structural_hash": "2f394c77e524b382f0df6b2851d10cd467a4f27607a6facddd427e429fc32245",
+          "decision": "approve"
+        },
+        {
+          "index": "260",
+          "identity": "sableye-mega-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/sableye_mega_redux/front.png",
+          "structural_hash": "cd21d49fc74de2068a3558ed61d17cb202a8cfee4b8459192b5e953e9f207dcd",
+          "decision": "approve"
+        },
+        {
+          "index": "261",
+          "identity": "sableye-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/sableye_redux/front.png",
+          "structural_hash": "06047eb61d8d59cf11e603c5ab58ce65123ec15a2ba7fe1aa6c6910a105df2fc",
+          "decision": "approve"
+        },
+        {
+          "index": "262",
+          "identity": "sagaracas",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/sagaracas/front.png",
+          "structural_hash": "0aa97959e6b518674e22c6d91e214ec726ec496c91d29b93c2d9b2e3d236acac",
+          "decision": "approve"
+        },
+        {
+          "index": "263",
+          "identity": "salazarus",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/salazarus/front.png",
+          "structural_hash": "8d281ee0dd32424df9590b1d9f85dc3a72ef8d9afd06cc90b044256cd7b4a7c1",
+          "decision": "approve"
+        },
+        {
+          "index": "264",
+          "identity": "samurott-hisuian-mega",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/samurott_hisuian_mega/front.png",
+          "structural_hash": "e900c6ebeb9c39bc0531a0642d26f7a8da201dc848ebab9fefb05fdf52734bcd",
+          "decision": "approve"
+        },
+        {
+          "index": "265",
+          "identity": "samurott-mega",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/samurott_mega/front.png",
+          "structural_hash": "c92243ac406ff80786b728fec0a90a8a48d67d3bc14a4ed790ffd2a6d03e2e5c",
+          "decision": "approve"
+        },
+        {
+          "index": "266",
+          "identity": "sawk-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/sawk_redux/front.png",
+          "structural_hash": "a6e478a26d96a9dd3d25ba2cc28892cee1a57d09fa5df2a1688dd1f609adbe42",
+          "decision": "reject"
+        },
+        {
+          "index": "267",
+          "identity": "scizor-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/scizor_redux/front.png",
+          "structural_hash": "d023b9bd8d9c03870071b7d84274dab0d09f08ba9c371eb2b5bae50c306d98d9",
+          "decision": "approve"
+        },
+        {
+          "index": "268",
+          "identity": "scizor-redux-mega",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/scizor_redux_mega/front.png",
+          "structural_hash": "2b13ac28d6f4161bddf7080e31e4989f7e6544d88f561d49c73734e39cd15307",
+          "decision": "approve"
+        },
+        {
+          "index": "269",
+          "identity": "scrafster",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/scrafster/front.png",
+          "structural_hash": "0ba1bccdaac1b450730bc844fbf4187ba037aa0eecd140cd9cb769944988bf63",
+          "decision": "approve"
+        },
+        {
+          "index": "270",
+          "identity": "scyther-mega",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/scyther_mega/front.png",
+          "structural_hash": "72557bafce24f90d95b07ee6fc1be05683d3d92bea8d0a62cc4fbfdfa670c571",
+          "decision": "approve"
+        },
+        {
+          "index": "271",
+          "identity": "scyther-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/scyther_redux/front.png",
+          "structural_hash": "4ed1e1c78fb13d90ca6f78ab7b6b7199e2d7d878f70b55d52b4a880be5bfa7f4",
+          "decision": "approve"
+        },
+        {
+          "index": "272",
+          "identity": "scyther-redux-mega",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/scyther_redux_mega/front.png",
+          "structural_hash": "f6aded91cddc84d6390b5de7a599252318b962441302104be133ab06c5f226ae",
+          "decision": "approve"
+        },
+        {
+          "index": "273",
+          "identity": "seel-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/seel_redux/front.png",
+          "structural_hash": "8b6de2c8d766396d6ba0d77e0623cd88d940aee33d0b49b2c53af094cb8e25c7",
+          "decision": "approve"
+        },
+        {
+          "index": "274",
+          "identity": "seerkat",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/seerkat/front.png",
+          "structural_hash": "e0344a521f8760a709d3e7d4914ce33f13a28d823198952061e01779cf5e498c",
+          "decision": "approve"
+        },
+        {
+          "index": "275",
+          "identity": "serperior-mega",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/serperior_mega/front.png",
+          "structural_hash": "c5a7b7563b7d2a5ac598d02ae227f616ebddffc213df8ec5a50a313f6699567e",
+          "decision": "approve"
+        },
+        {
+          "index": "276",
+          "identity": "shedinja-mega",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/shedinja_mega/front.png",
+          "structural_hash": "506772ea0c11265ee9db5d06f645c89b68024ef5cfc47aed9a9e954bc04fe8e6",
+          "decision": "approve"
+        },
+        {
+          "index": "277",
+          "identity": "shellos-east-sea",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/shellos_east_sea/front.png",
+          "structural_hash": "8dc89d43dda3d611dd06cf42c0c3289ac4a45a52aef0bf4ad5ae208490172cd6",
+          "decision": "approve"
+        },
+        {
+          "index": "278",
+          "identity": "shinx-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/shinx_redux/front.png",
+          "structural_hash": "a6ecfd73b21a1931e184ef10454f436a6571c9d35c11322bef7b71bce01ce8af",
+          "decision": "approve"
+        },
+        {
+          "index": "279",
+          "identity": "shuckle-mega",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/shuckle_mega/front.png",
+          "structural_hash": "ce72bd9c00d33c80df0107451e5b33249e4c83a117f1ffc32fb1c47b128cf78e",
+          "decision": "approve"
+        },
+        {
+          "index": "280",
+          "identity": "simipour-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/simipour_redux/front.png",
+          "structural_hash": "0fd76d6c93e6118abebaa8b26f8ae190484d251b5b6b9f870adf17552bca1993",
+          "decision": "reject"
+        },
+        {
+          "index": "281",
+          "identity": "simisage-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/simisage_redux/front.png",
+          "structural_hash": "3f511d377e5b0b3cdda07377a87a3e9607fd7e5c3275c1bffaea1dc73b62209e",
+          "decision": "reject"
+        },
+        {
+          "index": "282",
+          "identity": "simisear-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/simisear_redux/front.png",
+          "structural_hash": "63c0817814ee23aefee197e0c38e702533bf123f6d7e31f56ef563f2d5fec2d3",
+          "decision": "reject"
+        },
+        {
+          "index": "283",
+          "identity": "sinistea-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/sinistea_redux/front.png",
+          "structural_hash": "46ce1a698f8c7c0370dc563fef462db003659fa0133b0b4e9e016bd53848efc2",
+          "decision": "approve"
+        },
+        {
+          "index": "284",
+          "identity": "sithwitch",
+          "source": "Earthretha",
+          "front_path": "DS_CUSTOM_LIBRARY/packs/Earthretha/Earthretha Fakemon Pack/Graphics/Pokemon/Front/SITHWITCH.png",
+          "structural_hash": "18f8cb9ac1a0781f3032db29520a74ccdc43a76b8547f79b813506520fb932a4",
+          "decision": "approve"
+        },
+        {
+          "index": "285",
+          "identity": "skarmory-mega-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/skarmory_mega_redux/front.png",
+          "structural_hash": "760a056a05510dacd9d2c0bff208920b9c4b3a911565ea70e34f07368b0fef2c",
+          "decision": "approve"
+        },
+        {
+          "index": "286",
+          "identity": "skarmory-mega-y",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/skarmory_mega_y/front.png",
+          "structural_hash": "3ddf35bbfb5fee3c93e9f1e4291e4cfc69f574616f7f40c26f06120096bceb3e",
+          "decision": "approve"
+        },
+        {
+          "index": "287",
+          "identity": "skarmory-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/skarmory_redux/front.png",
+          "structural_hash": "a54dbf165210ace49be19696988178dc4806f63a476e46a6504b6a02e41432d2",
+          "decision": "approve"
+        },
+        {
+          "index": "288",
+          "identity": "skeledirge-mega",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/skeledirge_mega/front.png",
+          "structural_hash": "f57b56eb33c396cd6d898d962b16990403b37717e628f6aca848d5facbf4b350",
+          "decision": "approve"
+        },
+        {
+          "index": "289",
+          "identity": "skulberus",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/skulberus/front.png",
+          "structural_hash": "06ca98f2698f5ccf4f23ce4cd87b680fd6a621afbe73c10720d4cdb9a050b6d5",
+          "decision": "approve"
+        },
+        {
+          "index": "290",
+          "identity": "slaking-mega",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/slaking_mega/front.png",
+          "structural_hash": "4249bd12ba465b94fd8d26f1c5d467640b525ba657eaf5ecc7c7b07a7b2b2ff1",
+          "decision": "reject"
+        },
+        {
+          "index": "291",
+          "identity": "slaking-mega-ape-shift",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/slaking_mega_ape_shift/front.png",
+          "structural_hash": "2fb03ad08b8db4a026bef3400a2b594aaa17469f3944971e88a5eac5b8144ee3",
+          "decision": "approve"
+        },
+        {
+          "index": "292",
+          "identity": "slowbro-mega-galarian",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/slowbro_mega_galarian/front.png",
+          "structural_hash": "891be8e5a5c31180fb59285c55ad5510ebdf376780c57712f4ca5eb9366d2f0f",
+          "decision": "approve"
+        },
+        {
+          "index": "293",
+          "identity": "slowking-mega",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/slowking_mega/front.png",
+          "structural_hash": "5fb862878a0cec77715af422534529dd2bdd5019ca40bb265d4187657d449765",
+          "decision": "approve"
+        },
+        {
+          "index": "294",
+          "identity": "slowking-mega-galarian",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/slowking_mega_galarian/front.png",
+          "structural_hash": "ae8005d2b1aada415b2eacbd5cafe38a5e2af143b02f76f380b921cf7aa62a21",
+          "decision": "approve"
+        },
+        {
+          "index": "295",
+          "identity": "slugma-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/slugma_redux/front.png",
+          "structural_hash": "ae963b94362482a818da53083f239d7e9219879a7e5eacd770c9db688eef530f",
+          "decision": "approve"
+        },
+        {
+          "index": "296",
+          "identity": "sneasler-mega",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/sneasler_mega/front.png",
+          "structural_hash": "cb15651536ac7d4af35e9bb365dfeb7826fd11fef00d92d8dce754ac31f54c57",
+          "decision": "approve"
+        },
+        {
+          "index": "297",
+          "identity": "snorlax-primal",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/snorlax_primal/front.png",
+          "structural_hash": "44d2a06d834dd67282c547b1a1ce2b81fb13a22d0f0ae22e7c7634e41c325eef",
+          "decision": "approve"
+        },
+        {
+          "index": "298",
+          "identity": "snorlax-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/snorlax_redux/front.png",
+          "structural_hash": "d03382d05f5859a8ea3e6f3f147ad34b57b61bcd23209c8a856eeafb53d1d364",
+          "decision": "approve"
+        },
+        {
+          "index": "299",
+          "identity": "snorlax-redux-mega",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/snorlax_redux_mega/front.png",
+          "structural_hash": "9e73ea731019649e4eb5464d2539438fddd2d1f5bc0dbc79063be91721e8a429",
+          "decision": "approve"
+        },
+        {
+          "index": "300",
+          "identity": "snorunt-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/snorunt_redux/front.png",
+          "structural_hash": "c14d6cda2daad85c5e9bed39caf53dd143d075c463c26b00df675ab6784ad315",
+          "decision": "reject"
+        },
+        {
+          "index": "301",
+          "identity": "solosis-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/solosis_redux/front.png",
+          "structural_hash": "d8905e671c869591b1ebaf8f9c44c694a98a24fccdf73e2c6720cf95e6d11942",
+          "decision": "approve"
+        },
+        {
+          "index": "302",
+          "identity": "solrock-system",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/solrock_system/front.png",
+          "structural_hash": "1834d08fad3c0b8c4f51d73016fd86f67aefbab441ad2afbe128146be3125a25",
+          "decision": "approve"
+        },
+        {
+          "index": "303",
+          "identity": "sopranice",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/sopranice/front.png",
+          "structural_hash": "157365bd4a41eadc8645dfa740b09700d51a883fab92f8131b8b5de9b8f91e2e",
+          "decision": "approve"
+        },
+        {
+          "index": "304",
+          "identity": "spectrier-cloud",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/spectrier_cloud/front.png",
+          "structural_hash": "e4dafdc2b505f24faefe6dd719748d7948372a8fbe845c9ca8aa7586ad36d75b",
+          "decision": "reject"
+        },
+        {
+          "index": "305",
+          "identity": "spinarak-1",
+          "source": "Festival_Lumio",
+          "front_path": "DS_CUSTOM_LIBRARY/packs/Festival_Lumio/Lumio/Pokemon/Front/SPINARAK_1.png",
+          "structural_hash": "d9f9617a90e23bdc3c686b0e5dd01e6332e16d921cf61c363d510e2281ebe721",
+          "decision": "maybe"
+        },
+        {
+          "index": "306",
+          "identity": "spiritomb-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/spiritomb_redux/front.png",
+          "structural_hash": "f46da65c3d216d8c236a4e9691d630d63f38f41afced4f7e594f82a2bb54f9ca",
+          "decision": "approve"
+        },
+        {
+          "index": "307",
+          "identity": "steenee-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/steenee_redux/front.png",
+          "structural_hash": "3ad95f5252fb662c54e33d6f2cb3e1aa25a56d4de32f378c8f918a2f48b78bd5",
+          "decision": "maybe"
+        },
+        {
+          "index": "308",
+          "identity": "stufful-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/stufful_redux/front.png",
+          "structural_hash": "89d32f8560ddc28453086fd465f697bbf1f86b0530a2179b38f89881ed728d68",
+          "decision": "approve"
+        },
+        {
+          "index": "309",
+          "identity": "swablu-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/swablu_redux/front.png",
+          "structural_hash": "95b0818ac218a67120112c1970899c0f5fa6bb27ac655917ee4dd0bd49e99696",
+          "decision": "approve"
+        },
+        {
+          "index": "310",
+          "identity": "swalot-mega",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/swalot_mega/front.png",
+          "structural_hash": "f22cd355bf7ef0d5c9f697287a4031969dd26673e359bb37a1cc547fc5eac112",
+          "decision": "approve"
+        },
+        {
+          "index": "311",
+          "identity": "swinub-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/swinub_redux/front.png",
+          "structural_hash": "765ae3a26181eb375f18133da052b5a29403fd84cbd803e1492a46cbaa25a3a4",
+          "decision": "approve"
+        },
+        {
+          "index": "312",
+          "identity": "talonflame-mega",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/talonflame_mega/front.png",
+          "structural_hash": "5dcfb3b1b528402b5cf41225b089dc40349743ab1e286f188cca9e2d0560d623",
+          "decision": "approve"
+        },
+        {
+          "index": "313",
+          "identity": "tatsugiri-mega",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/tatsugiri_mega/front.png",
+          "structural_hash": "0318fbc52d1e1c8e811c431d23b58a7b0e7f6d91715e63e965f3be80062becc2",
+          "decision": "approve"
+        },
+        {
+          "index": "314",
+          "identity": "tauros-paldean-aqua-breed",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/tauros_paldean_aqua_breed/front.png",
+          "structural_hash": "38f847c2e604a23ca7157debf7f20b619242da16a10fcf98b67a4027b19f0d1f",
+          "decision": "approve"
+        },
+        {
+          "index": "315",
+          "identity": "tauros-paldean-blaze-breed",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/tauros_paldean_blaze_breed/front.png",
+          "structural_hash": "0da747269f37ced7d4a5ce845dd51c289b615ca2268af4641b6b85f2820cd665",
+          "decision": "approve"
+        },
+        {
+          "index": "316",
+          "identity": "tauros-paldean-combat-breed",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/tauros_paldean_combat_breed/front.png",
+          "structural_hash": "1efc2f75bf0bcd7dcc5d74b3d6fb747667ecb7b5051341e90d48d72483525835",
+          "decision": "approve"
+        },
+        {
+          "index": "317",
+          "identity": "tentagrewl",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/tentagrewl/front.png",
+          "structural_hash": "f344d2e85d7626d819a6b98c69c66a63c608e4ae14d24edc0e842ec86712d1b8",
+          "decision": "approve"
+        },
+        {
+          "index": "318",
+          "identity": "terapagos-stellar",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/terapagos_stellar/front.png",
+          "structural_hash": "1058835edd6c64108638bbced8486681360b1997893e2e0de09389cf40f6832d",
+          "decision": "reject"
+        },
+        {
+          "index": "319",
+          "identity": "throh-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/throh_redux/front.png",
+          "structural_hash": "c1e758b6aab1712b1e2253c393d825d8c4439d12b10c310fe10215047a94d5c9",
+          "decision": "reject"
+        },
+        {
+          "index": "320",
+          "identity": "thunphony",
+          "source": "Earthretha",
+          "front_path": "DS_CUSTOM_LIBRARY/packs/Earthretha/Earthretha Fakemon Pack/Graphics/Pokemon/Front/THUNPHONY.png",
+          "structural_hash": "90902a655b7c1ab2c83d53da53eeb82aed0409fb128ad4f55ca2f87cef800352",
+          "decision": "approve"
+        },
+        {
+          "index": "321",
+          "identity": "tinkatink-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/tinkatink_redux/front.png",
+          "structural_hash": "c0d7e5ae83f6984159487fd7cdc41fade7b78fedfffbcd8d2b7e945297028aff",
+          "decision": "approve"
+        },
+        {
+          "index": "322",
+          "identity": "tinkaton-mega",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/tinkaton_mega/front.png",
+          "structural_hash": "5ff3d20f6d14c56bb342a35b5eadfc310942ab4d7d083aa8ffb3606b91c249e1",
+          "decision": "approve"
+        },
+        {
+          "index": "323",
+          "identity": "tinkaton-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/tinkaton_redux/front.png",
+          "structural_hash": "fd92fb4176ec75aff32f8239241806aa6d09190ba08e9cbff02092cb5e031689",
+          "decision": ""
+        },
+        {
+          "index": "324",
+          "identity": "tinkaton-redux-mega",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/tinkaton_redux_mega/front.png",
+          "structural_hash": "962dfdab794a1634b73b93de3476185b6ba341b9987d2763bd5903bd0174eea5",
+          "decision": "approve"
+        },
+        {
+          "index": "325",
+          "identity": "tinkatuff-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/tinkatuff_redux/front.png",
+          "structural_hash": "30052f75cc9496906e5e27e5c474e2f3b3c2bab1a8c77ab284cc42528b162728",
+          "decision": ""
+        },
+        {
+          "index": "326",
+          "identity": "tortemple",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/tortemple/front.png",
+          "structural_hash": "2cc83823f6f3f7db7a513ca20081305baffcc1e1c0b076d45843bf8ddcb561a0",
+          "decision": "approve"
+        },
+        {
+          "index": "327",
+          "identity": "torterra-mega",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/torterra_mega/front.png",
+          "structural_hash": "4d2eabd4652f2e38328273371ff65a84ce9cadcf01eda55da7e4cb5733bb03dd",
+          "decision": "approve"
+        },
+        {
+          "index": "328",
+          "identity": "torterra-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/torterra_redux/front.png",
+          "structural_hash": "e614c448ef7ee56e5836fb4603db84c56a7b100540b30b5c939916c2d60cd1af",
+          "decision": "reject"
+        },
+        {
+          "index": "329",
+          "identity": "torterra-redux-mega",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/torterra_redux_mega/front.png",
+          "structural_hash": "21387527b9709801bd26a8ea6bf35ccaff73187556e220d3bdb9a39fff14ffd8",
+          "decision": "reject"
+        },
+        {
+          "index": "330",
+          "identity": "toucannon-mega",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/toucannon_mega/front.png",
+          "structural_hash": "11d812232308680da9175394474e91f4cad0b410a94b0e649baf8df5ab00d39e",
+          "decision": "approve"
+        },
+        {
+          "index": "331",
+          "identity": "toxel-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/toxel_redux/front.png",
+          "structural_hash": "a19accf7909e8c034d422b085638dc4848435b4ed12193fdc4bbb47616586f9d",
+          "decision": "approve"
+        },
+        {
+          "index": "332",
+          "identity": "toxtricity-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/toxtricity_redux/front.png",
+          "structural_hash": "51c53ac6645af6881fa1c95ce09661bf3fb4f70e7af3dc8b4f7c8692792de6c9",
+          "decision": "approve"
+        },
+        {
+          "index": "333",
+          "identity": "toxtricity-redux-fuzz",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/toxtricity_redux_fuzz/front.png",
+          "structural_hash": "8726dc127d803ae0115459ec73b757de1842fa2e970a83c90bba4ca83134e3c6",
+          "decision": "approve"
+        },
+        {
+          "index": "334",
+          "identity": "toxtricity-redux-fuzz-mega",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/toxtricity_redux_fuzz_mega/front.png",
+          "structural_hash": "08fb4f708bb2a4bcdc612527121ee3371c1db10dbd2b5faf75e3a8c18adb0ead",
+          "decision": "approve"
+        },
+        {
+          "index": "335",
+          "identity": "toxtricity-redux-mega",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/toxtricity_redux_mega/front.png",
+          "structural_hash": "76c745a59476bd017c002bf0fa36bcdd93b7a3b3af84b36d17cdbba0e69449ef",
+          "decision": "approve"
+        },
+        {
+          "index": "336",
+          "identity": "trapinch-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/trapinch_redux/front.png",
+          "structural_hash": "82fee61e6ec418343ffd1f14a2a153f9acb039a7f935e4e5e8f8366c51e650cf",
+          "decision": "reject"
+        },
+        {
+          "index": "337",
+          "identity": "tsareena-mega",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/tsareena_mega/front.png",
+          "structural_hash": "a01c7c35d6e461bf690e6a5b9131d3dbe0e37c88e06a13a34ebe44bd55d2f7f0",
+          "decision": "maybe"
+        },
+        {
+          "index": "338",
+          "identity": "tsareena-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/tsareena_redux/front.png",
+          "structural_hash": "9e74af152b16d357740743b114fa3abcda64fc104ef90bf89dbb56e20112dc29",
+          "decision": "maybe"
+        },
+        {
+          "index": "339",
+          "identity": "tsareena-redux-mega",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/tsareena_redux_mega/front.png",
+          "structural_hash": "71aec73c898b65f4d1c5f777bc728be7f922e276b25542c351bcc94dd45870e1",
+          "decision": "maybe"
+        },
+        {
+          "index": "340",
+          "identity": "turtwig-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/turtwig_redux/front.png",
+          "structural_hash": "532d1efaa26406ff994a30cd4c118183e5c4a0f9fa9953656b0cabc1d7d7c939",
+          "decision": "reject"
+        },
+        {
+          "index": "341",
+          "identity": "typhlosion-hisuian",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/typhlosion_hisuian/front.png",
+          "structural_hash": "289e34c0999e3c6ce96b3cc1981289a3dd6479253d9401314a2d58df71860337",
+          "decision": "approve"
+        },
+        {
+          "index": "342",
+          "identity": "typhlosion-hisuian-mega",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/typhlosion_hisuian_mega/front.png",
+          "structural_hash": "6cd51e3537bd6a38ca4337f2eb3fa87444f38f018e976550cecb9ea84ba57eb3",
+          "decision": "approve"
+        },
+        {
+          "index": "343",
+          "identity": "typhlosion-mega",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/typhlosion_mega/front.png",
+          "structural_hash": "7a52cbfc805148f56a9f6a62061fa78be23642d705f499591572988c824a5f1f",
+          "decision": "approve"
+        },
+        {
+          "index": "344",
+          "identity": "tyranitar-mega-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/tyranitar_mega_redux/front.png",
+          "structural_hash": "be75bdd216e3eb946595b2fe489b925d39cf1065ed72097b57d81b30a511dca0",
+          "decision": "approve"
+        },
+        {
+          "index": "345",
+          "identity": "tyranitar-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/tyranitar_redux/front.png",
+          "structural_hash": "f65a57e1a62d6e36aae1f065f76b696296f44a27673dedb0ad088814a57d20d4",
+          "decision": "approve"
+        },
+        {
+          "index": "346",
+          "identity": "tyranjoula",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/tyranjoula/front.png",
+          "structural_hash": "d202b061d275519e5e1d9045fdd07080c89e8c88367c6c9eff7212651b287a79",
+          "decision": "approve"
+        },
+        {
+          "index": "347",
+          "identity": "umamoth",
+          "source": "Earthretha",
+          "front_path": "DS_CUSTOM_LIBRARY/packs/Earthretha/Earthretha Fakemon Pack/Graphics/Pokemon/Front/UMAMOTH.png",
+          "structural_hash": "bb757d61a9ce085e9e7e3cf80a9bcdd5bb9515904268b83e830b222ec13517df",
+          "decision": "approve"
+        },
+        {
+          "index": "348",
+          "identity": "unown-revelation",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/unown_revelation/front.png",
+          "structural_hash": "4bcca3e1ace544885940f51f90ed8c1ff585ab63a981c46b30231e2abc58f4ea",
+          "decision": "reject"
+        },
+        {
+          "index": "349",
+          "identity": "ursaluna-mega",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/ursaluna_mega/front.png",
+          "structural_hash": "f733627d84f7214a14119915df9b5f795dabc5b2ca57e90907bea139a716fcea",
+          "decision": "approve"
+        },
+        {
+          "index": "350",
+          "identity": "urshifu-rapid-strike-style",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/urshifu_rapid_strike_style/front.png",
+          "structural_hash": "97e5903cb2bce97c8c2a4590b887f4ded5f50c524fc6753703a950b6371ede7b",
+          "decision": "approve"
+        },
+        {
+          "index": "351",
+          "identity": "uxie-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/uxie_redux/front.png",
+          "structural_hash": "94a5eb5578cc2ce7ee0cb3002eccb0ef517209fb51382648abf36878b52a388d",
+          "decision": "approve"
+        },
+        {
+          "index": "352",
+          "identity": "vanillish-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/vanillish_redux/front.png",
+          "structural_hash": "b65a289a5903551d8d9a1c9463fd855f5a04da3eaea975098095894afd99a900",
+          "decision": "approve"
+        },
+        {
+          "index": "353",
+          "identity": "vanillite-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/vanillite_redux/front.png",
+          "structural_hash": "891dedccda9c96da90d3ff6e534f19b0434001a2db98d48fc604c505d40b77f5",
+          "decision": "approve"
+        },
+        {
+          "index": "354",
+          "identity": "vanilluxe-mega",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/vanilluxe_mega/front.png",
+          "structural_hash": "1a19f4cbdc2a52b6a7844521b290bab43f0f31585382b17f982762e60ef96a68",
+          "decision": "approve"
+        },
+        {
+          "index": "355",
+          "identity": "vanilluxe-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/vanilluxe_redux/front.png",
+          "structural_hash": "d386e98b04f6f40c35cd59750936d992e2545ab9b8478d81926d13131a25daf6",
+          "decision": "approve"
+        },
+        {
+          "index": "356",
+          "identity": "vanilluxe-redux-mega",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/vanilluxe_redux_mega/front.png",
+          "structural_hash": "c7ed038a5a923fbc297173ef7c8b03a03b9db55763b14e62cae04d7d4fe9951a",
+          "decision": "approve"
+        },
+        {
+          "index": "357",
+          "identity": "venonat-1",
+          "source": "Earthretha",
+          "front_path": "DS_CUSTOM_LIBRARY/packs/Earthretha/Earthretha Fakemon Pack/Graphics/Pokemon/Front/VENONAT_1.png",
+          "structural_hash": "3c9e8d78b6b4794ceb89b584956123001424a0123ab7d7edf1af31a540edf269",
+          "decision": "approve"
+        },
+        {
+          "index": "358",
+          "identity": "venusaur-mega-x",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/venusaur_mega_x/front.png",
+          "structural_hash": "daf1962f277eda69d8efa6f0c26c182f7226b38f897d975892618c79d8fbed09",
+          "decision": "approve"
+        },
+        {
+          "index": "359",
+          "identity": "vibrava-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/vibrava_redux/front.png",
+          "structural_hash": "00a82b7c525384fb5df681f6f3d56fa21cc235e5204df026dce0510bcb9db016",
+          "decision": ""
+        },
+        {
+          "index": "360",
+          "identity": "victini-primal",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/victini_primal/front.png",
+          "structural_hash": "9f30f7a8881b7e674122ced9b67099cbddcd86ce38527953b26e82f8b4b0182d",
+          "decision": "approve"
+        },
+        {
+          "index": "361",
+          "identity": "vileplume-1",
+          "source": "Earthretha",
+          "front_path": "DS_CUSTOM_LIBRARY/packs/Earthretha/Earthretha Fakemon Pack/Graphics/Pokemon/Front/VILEPLUME_1.png",
+          "structural_hash": "a6f7997213d136c868c63b56a8730ba3bf2cde545156eecabe4906c382b7f168",
+          "decision": "approve"
+        },
+        {
+          "index": "362",
+          "identity": "volcarona-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/volcarona_redux/front.png",
+          "structural_hash": "c2a3c565933c1ca105ec2754d2842ef86c5d92691411f8db0d2e81d7908801e4",
+          "decision": "approve"
+        },
+        {
+          "index": "363",
+          "identity": "weavile-mega",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/weavile_mega/front.png",
+          "structural_hash": "a0c46897d57769e30d106ecb347984d69d166b3d7ac60c1ae7ce2c7e09ecd401",
+          "decision": "approve"
+        },
+        {
+          "index": "364",
+          "identity": "weavile-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/weavile_redux/front.png",
+          "structural_hash": "e3c3d2d374938accd4883ed6e921c311d2c4f6da5c4da56134e3736cb11dc409",
+          "decision": "reject"
+        },
+        {
+          "index": "365",
+          "identity": "weavile-redux-mega",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/weavile_redux_mega/front.png",
+          "structural_hash": "df25ea1ce8f1e8004fa4916f384273670480e6883cef825a48d78afce96d1128",
+          "decision": "reject"
+        },
+        {
+          "index": "366",
+          "identity": "whismur-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/whismur_redux/front.png",
+          "structural_hash": "b629d8f70321c7a63b0e94eefb02f892b439490dd67d18965706f4b5d5a9f417",
+          "decision": "approve"
+        },
+        {
+          "index": "367",
+          "identity": "wormadam-trash-cloak",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/wormadam_trash_cloak/front.png",
+          "structural_hash": "3d227c8fa03045bca825839945afb72f368662f62b31f3cc750ad781fba1c9d4",
+          "decision": "maybe"
+        },
+        {
+          "index": "368",
+          "identity": "yveltal-mega",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/yveltal_mega/front.png",
+          "structural_hash": "b71113c1df5c261536bbd0342b1d5db9138b3b2650d17942b964760afa0e79ff",
+          "decision": "approve"
+        },
+        {
+          "index": "369",
+          "identity": "zapdos-ex",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/zapdos_ex/front.png",
+          "structural_hash": "871c9d9b388a7fd372d0159e88016e9198b63b11bba81a194f0fc3448060fc25",
+          "decision": "approve"
+        },
+        {
+          "index": "370",
+          "identity": "zapdos-galarian",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/zapdos_galarian/front.png",
+          "structural_hash": "067194c33d4775294f1cf098fbb32563796d1f7f87a0e1aa85a8edb581c99c93",
+          "decision": "approve"
+        },
+        {
+          "index": "371",
+          "identity": "zweilous-redux",
+          "source": "Elite_Redux_Bulk",
+          "front_path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/zweilous_redux/front.png",
+          "structural_hash": "eb65487276e64811fb0585d616d5706d63f35e349086b1dd757feff38d848446",
+          "decision": "reject"
+        }
+      ]
+    },
+    {
+      "name": "final_polished_initial_2026_10_02",
+      "source_filename": "mercury_final_polished_sprite_decisions.csv",
+      "source_file_id": "file_000000008b0081f68304d3618aa48e0b",
+      "rows": [
+        {
+          "index": "0",
+          "identity": "caterpie_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "1",
+          "identity": "beedrill_alternate_form_2",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "2",
+          "identity": "beedrill_alternate_mega_form_3",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "3",
+          "identity": "kakuna_alternate_form_2",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "4",
+          "identity": "weedle_alternate_form_2",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "5",
+          "identity": "ninetales_alternate_form_2",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "6",
+          "identity": "ninetales_alternate_form_3",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "7",
+          "identity": "vulpix_alternate_form_3",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "8",
+          "identity": "paras_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "9",
+          "identity": "parasect_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "10",
+          "identity": "venomoth_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "11",
+          "identity": "venonat_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "12",
+          "identity": "abra_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "13",
+          "identity": "abra_alternate_form_2",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "14",
+          "identity": "alakazam_alternate_form_2",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "15",
+          "identity": "alakazam_mega_alternate_form_3",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "16",
+          "identity": "kadabra_alternate_form_2",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "17",
+          "identity": "victreebel_mega",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "18",
+          "identity": "ponyta_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "19",
+          "identity": "rapidash_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "20",
+          "identity": "slowbro_bluetowel_alternate_forms_form_2",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "21",
+          "identity": "slowbro_bluetowel_alternate_forms_form_4",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "22",
+          "identity": "slowbro_bluetowel_alternate_forms_form_5",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "23",
+          "identity": "slowbro_mega_alt_form_form_3",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "24",
+          "identity": "slowking_bluetowel_alternate_forms_form_2",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "25",
+          "identity": "farfetch_d_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "26",
+          "identity": "sirfetch_d_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "27",
+          "identity": "dodrio_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "28",
+          "identity": "doduo_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "29",
+          "identity": "gengar_alternate_form_2",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "30",
+          "identity": "gengar_alternate_form_3",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "31",
+          "identity": "haunter_alternate_form_2",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "32",
+          "identity": "onix_alternate_form_2",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "33",
+          "identity": "steelix_alternate_form_2",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "34",
+          "identity": "steelix_alternate_mega_form_3",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "35",
+          "identity": "drowzee_alternate_form_2",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "36",
+          "identity": "kingler_alternate_form_2",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "37",
+          "identity": "krabby_alternate_form_2",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "38",
+          "identity": "rhyperior_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "39",
+          "identity": "starmie_mega",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "40",
+          "identity": "gyarados_alternate_form_2",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "41",
+          "identity": "gyarados_mega_alternate_form_3",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "42",
+          "identity": "magikarp_alternate_form_2",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "43",
+          "identity": "espeon_alternate_form_3",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "44",
+          "identity": "jolteon_alternate_form_3",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "45",
+          "identity": "umbreon_alternate_form_3",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "46",
+          "identity": "vaporeon_alternate_form_3",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "47",
+          "identity": "omanyte_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "48",
+          "identity": "omastar_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "49",
+          "identity": "kabuto_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "50",
+          "identity": "kabutops_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "51",
+          "identity": "aerodactyl_alternate_form_2",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "52",
+          "identity": "aerodactyl_alternate_mega_form_3",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "53",
+          "identity": "bayleef_bluetowel_alternate_form_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "54",
+          "identity": "meganium_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "55",
+          "identity": "meganium_mega",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "56",
+          "identity": "quilava_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "57",
+          "identity": "typhlosion_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "58",
+          "identity": "typhlosion_alternate_form_2",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "59",
+          "identity": "croconaw_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "60",
+          "identity": "noctowl_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "61",
+          "identity": "ledian_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "62",
+          "identity": "ledyba_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "63",
+          "identity": "raichu_mega_x",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "64",
+          "identity": "raichu_mega_y",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "65",
+          "identity": "clefable_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "66",
+          "identity": "clefairy_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "67",
+          "identity": "jigglypuff_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "68",
+          "identity": "wigglytuff_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "69",
+          "identity": "xatu_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "70",
+          "identity": "flaaffy_alternate_form_2",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "71",
+          "identity": "sunflora_alternate_form_2",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "72",
+          "identity": "yanma_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "73",
+          "identity": "yanmega_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "74",
+          "identity": "quagsire_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "75",
+          "identity": "wooper_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "76",
+          "identity": "girafarig_bluetowel_alternate_form_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "77",
+          "identity": "dunsparce_bt_alt_forms_draco_form_6",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "78",
+          "identity": "dunsparce_bt_alt_forms_insect_form_4",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "79",
+          "identity": "dunsparce_bt_alt_forms_sky_form_3",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "80",
+          "identity": "dunsparce_bt_alt_forms_spooky_form_5",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "81",
+          "identity": "dunsparce_bt_alt_forms_toxic_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "82",
+          "identity": "gligar_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "83",
+          "identity": "sneasel_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "84",
+          "identity": "sneasel_alternate_form_2",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "85",
+          "identity": "weavile_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "86",
+          "identity": "corsola_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "87",
+          "identity": "skarmory_mega",
+          "decision": "Keep",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "88",
+          "identity": "phanpy_alternate_form_1",
+          "decision": "Keep",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "89",
+          "identity": "hitmonchan_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "90",
+          "identity": "hitmonlee_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "91",
+          "identity": "hitmontop_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "92",
+          "identity": "electabuzz_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "93",
+          "identity": "electivire_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "94",
+          "identity": "magmar_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "95",
+          "identity": "magmortar_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "96",
+          "identity": "larvitar_ice_form_2",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "97",
+          "identity": "pupitar_ice_form_2",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "98",
+          "identity": "tyranitar_ice_form_2",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "99",
+          "identity": "tyranitar_mega_ice_form_3",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "100",
+          "identity": "grovyle_alternate_form_2",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "101",
+          "identity": "sceptile_alternate_form_2",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "102",
+          "identity": "sceptile_alternate_mega_form_3",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "103",
+          "identity": "blaziken_alternate_mega_form_2",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "104",
+          "identity": "blaziken_alternate_mega_form_3",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "105",
+          "identity": "combusken_alternate_form_2",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "106",
+          "identity": "swampert_alternate_mega_form_2",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "107",
+          "identity": "swampert_alternate_mega_form_3",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "108",
+          "identity": "mightyena_alternate_form_1",
+          "decision": "Keep",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "109",
+          "identity": "gardevoir_alternate_form_3",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "110",
+          "identity": "gardevoir_mega_alternate_form_4",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "111",
+          "identity": "kirlia_alternate_form_3",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "112",
+          "identity": "ralts_alternate_form_3",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "113",
+          "identity": "breloom_alternate_form_2",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "114",
+          "identity": "nosepass_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "115",
+          "identity": "sableye_alternate_darkness_form_4",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "116",
+          "identity": "sableye_alternate_darkness_mega_form_5",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "117",
+          "identity": "sableye_alternate_gemstone_form_2",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "118",
+          "identity": "manectric_alternate_form_2",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "119",
+          "identity": "swalot_alternate_form_2",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "120",
+          "identity": "camerupt_alternate_form_3",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "121",
+          "identity": "camerupt_mega_alternate_form_4",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "122",
+          "identity": "numel_alternate_form_3",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "123",
+          "identity": "grumpig_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "124",
+          "identity": "flygon_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "125",
+          "identity": "trapinch_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "126",
+          "identity": "vibrava_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "127",
+          "identity": "baltoy_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "128",
+          "identity": "claydol_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "129",
+          "identity": "cradily_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "130",
+          "identity": "lileep_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "131",
+          "identity": "anorith_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "132",
+          "identity": "armaldo_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "133",
+          "identity": "dusclops_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "134",
+          "identity": "tropius_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "135",
+          "identity": "absol_alternate_form_2",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "136",
+          "identity": "absol_alternate_mega_form_3",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "137",
+          "identity": "bagon_alternate_form_2",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "138",
+          "identity": "salamence_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "139",
+          "identity": "shelgon_alternate_form_2",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "140",
+          "identity": "metagross_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "141",
+          "identity": "torterra_bluetowel_alternate_form_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "142",
+          "identity": "infernape_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "143",
+          "identity": "empoleon_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "144",
+          "identity": "staraptor_mega",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "145",
+          "identity": "luxray_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "146",
+          "identity": "rampardos_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "147",
+          "identity": "bastiodon_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "148",
+          "identity": "pachirisu_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "149",
+          "identity": "buneary_alternate_form_2",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "150",
+          "identity": "lopunny_alternate_form_2",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "151",
+          "identity": "lopunny_alternate_mega_form_3",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "152",
+          "identity": "lopunny_bluetowel_alternate_forms_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "153",
+          "identity": "glameow_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "154",
+          "identity": "purugly_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "155",
+          "identity": "chimecho_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "156",
+          "identity": "chingling_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "157",
+          "identity": "blissey_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "158",
+          "identity": "chansey_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "159",
+          "identity": "gabite_bluetowel_alternate_forms_form_2",
+          "decision": "Keep",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "160",
+          "identity": "garchomp_alternate_form_2",
+          "decision": "Keep",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "161",
+          "identity": "garchomp_alternate_mega_form_3",
+          "decision": "Keep",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "162",
+          "identity": "garchomp_bluetowel_alternate_forms_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "163",
+          "identity": "gible_bluetowel_alternate_forms_form_2",
+          "decision": "Keep",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "164",
+          "identity": "drapion_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "165",
+          "identity": "skorupi_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "166",
+          "identity": "skorupi_alternate_form_2",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "167",
+          "identity": "carnivine_bluetowel_alternate_form_form_1",
+          "decision": "Keep",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "168",
+          "identity": "serperior_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "169",
+          "identity": "emboar_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "170",
+          "identity": "pignite_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "171",
+          "identity": "samurott_bluetowel_alternate_form_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "172",
+          "identity": "samurott_bluetowel_alternate_form_form_2",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "173",
+          "identity": "pidove_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "174",
+          "identity": "tranquill_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "175",
+          "identity": "unfezant_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "176",
+          "identity": "boldore_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "177",
+          "identity": "roggenrola_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "178",
+          "identity": "conkeldurr_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "179",
+          "identity": "gurdurr_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "180",
+          "identity": "timburr_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "181",
+          "identity": "scolipede_mega",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "182",
+          "identity": "lilligant_alternate_form_2",
+          "decision": "Keep",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "183",
+          "identity": "petilil_alternate_form_2",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "184",
+          "identity": "scrafty_mega",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "185",
+          "identity": "cofagrigus_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "186",
+          "identity": "yamask_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "187",
+          "identity": "yamask_alternate_form_2",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "188",
+          "identity": "carracosta_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "189",
+          "identity": "tirtouga_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "190",
+          "identity": "archen_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "191",
+          "identity": "archeops_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "192",
+          "identity": "garbodor_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "193",
+          "identity": "trubbish_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "194",
+          "identity": "duosion_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "195",
+          "identity": "reuniclus_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "196",
+          "identity": "vanillish_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "197",
+          "identity": "vanillite_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "198",
+          "identity": "vanilluxe_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "199",
+          "identity": "ferroseed_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "200",
+          "identity": "ferrothorn_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "201",
+          "identity": "chandelure_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "202",
+          "identity": "lampent_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "203",
+          "identity": "litwick_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "204",
+          "identity": "druddigon_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "205",
+          "identity": "bisharp_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "206",
+          "identity": "pawniard_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "207",
+          "identity": "deino_cybertank_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "208",
+          "identity": "deino_telepathic_form_2",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "209",
+          "identity": "hydreigon_cybertank_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "210",
+          "identity": "hydreigon_telepathic_form_2",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "211",
+          "identity": "zweilous_cybertank_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "212",
+          "identity": "zweilous_telepathic_form_2",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "213",
+          "identity": "chesnaught_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "214",
+          "identity": "delphox_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "215",
+          "identity": "greninja_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "216",
+          "identity": "bunnelby_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "217",
+          "identity": "diggersby_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "218",
+          "identity": "pyroar_mega",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "219",
+          "identity": "meowstic_mega",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "220",
+          "identity": "aromatisse_alternate_form_2",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "221",
+          "identity": "spritzee_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "222",
+          "identity": "spritzee_alternate_form_2",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "223",
+          "identity": "barbaracle_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "224",
+          "identity": "dragalge_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "225",
+          "identity": "skrelp_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "226",
+          "identity": "clauncher_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "227",
+          "identity": "clawitzer_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "228",
+          "identity": "dedenne_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "229",
+          "identity": "goodra_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "230",
+          "identity": "goodra_alternate_form_2",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "231",
+          "identity": "goomy_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "232",
+          "identity": "sliggoo_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "233",
+          "identity": "sliggoo_alternate_form_2",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "234",
+          "identity": "dartrix_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "235",
+          "identity": "decidueye_alternate_form_2",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "236",
+          "identity": "dartrix_alternate_form_2",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "237",
+          "identity": "decidueye_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "238",
+          "identity": "incineroar_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "239",
+          "identity": "primarina_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "240",
+          "identity": "ribombee_bluetowel_alternate_form_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "241",
+          "identity": "ribombee_bluetowel_alternate_form_form_2",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "242",
+          "identity": "dewpider_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "243",
+          "identity": "araquanid_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "244",
+          "identity": "fomantis_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "245",
+          "identity": "lurantis_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "246",
+          "identity": "palossand_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "247",
+          "identity": "sandygast_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "248",
+          "identity": "zeraora_mega",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "249",
+          "identity": "rillaboom_alternate_form_2",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "250",
+          "identity": "thwackey_alternate_form_2",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "251",
+          "identity": "raboot_alternate_form_2",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "252",
+          "identity": "scorbunny_alternate_form_2",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "253",
+          "identity": "cinderace_alternate_form_2",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "254",
+          "identity": "inteleon_alternate_form_2",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "255",
+          "identity": "sobble_alternate_form_2",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "256",
+          "identity": "drizzile_alternate_form_2",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "257",
+          "identity": "barraskewda_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "258",
+          "identity": "arrokuda_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "259",
+          "identity": "scovillain_mega",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "260",
+          "identity": "remoraid_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "261",
+          "identity": "octillery_alternate_form_1",
+          "decision": "Delete",
+          "role": "",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "name": "final_polished_followup_2026_10_02",
+      "source_filename": "mercury_final_polished_sprite_decisions(2).csv",
+      "source_file_id": "file_00000000511c81f68b3267e1677b201c",
+      "rows": [
+        {
+          "index": "0",
+          "identity": "magikarp_alternate_form_2",
+          "decision": "",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "1",
+          "identity": "gyarados_alternate_form_2",
+          "decision": "",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "2",
+          "identity": "merrykarp",
+          "decision": "Keep",
+          "role": "Delta",
+          "note": ""
+        },
+        {
+          "index": "3",
+          "identity": "gyarevalry",
+          "decision": "Keep",
+          "role": "Delta",
+          "note": ""
+        },
+        {
+          "index": "4",
+          "identity": "sunflora_alternate_form_2",
+          "decision": "",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "5",
+          "identity": "swalot_alternate_form_2",
+          "decision": "",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "6",
+          "identity": "thwackey_alternate_form_2",
+          "decision": "",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "7",
+          "identity": "tranquill_alternate_form_1",
+          "decision": "",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "8",
+          "identity": "typhlosion_alternate_form_1",
+          "decision": "",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "9",
+          "identity": "typhlosion_alternate_form_2",
+          "decision": "",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "10",
+          "identity": "vanillish_alternate_form_1",
+          "decision": "",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "11",
+          "identity": "venomoth_alternate_form_1",
+          "decision": "",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "12",
+          "identity": "weavile_alternate_form_1",
+          "decision": "",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "13",
+          "identity": "weedle_alternate_form_2",
+          "decision": "",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "14",
+          "identity": "wigglytuff_alternate_form_1",
+          "decision": "",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "15",
+          "identity": "xatu_alternate_form_1",
+          "decision": "",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "16",
+          "identity": "yanmega_alternate_form_1",
+          "decision": "",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "17",
+          "identity": "zweilous_cybertank_form_1",
+          "decision": "",
+          "role": "",
+          "note": ""
+        },
+        {
+          "index": "18",
+          "identity": "zweilous_telepathic_form_2",
+          "decision": "",
+          "role": "",
+          "note": ""
+        }
+      ]
+    }
+  ]
+}
