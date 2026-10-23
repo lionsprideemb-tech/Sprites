@@ -90,10 +90,11 @@
       "back": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0268_image261.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "confirm",
       "reason": "Earlier GBA ledger rejected this, but later family conversation reported KEEP. Needs an exported decision confirmation.",
       "note": "Previous status: cut; recovered: cut",
-      "evidence": "R0473"
+      "evidence": "R0473",
+      "suggestionReason": "Historical and later records disagree. Confirm your latest preference."
     },
     {
       "id": "compare:absol-mega-z:1",
@@ -110,10 +111,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/DrPrettyman_DS_64x64/sprites-processed/back/absol-mega-z.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "prefer-native",
       "reason": "Two visually distinct designs recorded for the same custom identity; choose artwork without cutting the Pokémon itself.",
       "note": "",
-      "evidence": "exact:832df83876bf; structural:73672c4352a4"
+      "evidence": "exact:832df83876bf; structural:73672c4352a4",
+      "suggestionReason": "Native DS artwork is technically preferred over a mechanical GBA conversion, subject to your design preference."
     },
     {
       "id": "compare:absol-mega-z:2",
@@ -130,10 +132,11 @@
       "back": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/absol_mega_z/back.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "alternate",
       "reason": "Two visually distinct designs recorded for the same custom identity; choose artwork without cutting the Pokémon itself.",
       "note": "",
-      "evidence": "exact:87c2b9e8499a; structural:6dfb52518255"
+      "evidence": "exact:87c2b9e8499a; structural:6dfb52518255",
+      "suggestionReason": "GBA-converted alternate of a preserved native DS option. Compare visual design before selection."
     },
     {
       "id": "fakemon:baobaraffe:f756c00f0c14",
@@ -150,10 +153,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Festival_PrincessPhoenix/PrincessPhoenix/Pokemon/Battlers/Gen 4 Backsprites/BaobaraffeB4.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "VERIFIED_SOURCE_METADATA;BACK_MATCH_RECOVERED"
+      "evidence": "VERIFIED_SOURCE_METADATA;BACK_MATCH_RECOVERED",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:baoby:efb013fde74e",
@@ -170,10 +174,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Festival_PrincessPhoenix/PrincessPhoenix/Pokemon/Battlers/Gen 4 Backsprites/BaobyB4.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "VERIFIED_SOURCE_METADATA;BACK_MATCH_RECOVERED"
+      "evidence": "VERIFIED_SOURCE_METADATA;BACK_MATCH_RECOVERED",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:beelitant:e5c0e29ea74f",
@@ -190,10 +195,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/BEELITANT.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "VERIFIED_SOURCE_METADATA;EXTERNAL_SOURCE_METADATA"
+      "evidence": "VERIFIED_SOURCE_METADATA;EXTERNAL_SOURCE_METADATA",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:granebee:65fc8136a344",
@@ -210,10 +216,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/GRANEBEE.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "VERIFIED_SOURCE_METADATA;EXTERNAL_SOURCE_METADATA"
+      "evidence": "VERIFIED_SOURCE_METADATA;EXTERNAL_SOURCE_METADATA",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:kocomb:5f5be9a1eeeb",
@@ -230,10 +237,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/KOCOMB.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "VERIFIED_SOURCE_METADATA;EXTERNAL_SOURCE_METADATA"
+      "evidence": "VERIFIED_SOURCE_METADATA;EXTERNAL_SOURCE_METADATA",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:kocomb-1:9e0c820d55c7",
@@ -250,10 +258,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/KOCOMB_1.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "VERIFIED_SOURCE_METADATA;EXTERNAL_SOURCE_METADATA"
+      "evidence": "VERIFIED_SOURCE_METADATA;EXTERNAL_SOURCE_METADATA",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:mega-barbaracle:95022e077bf9",
@@ -270,10 +279,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Festival_Misc/Misc/Backs/Mega Barbaracle_back.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "maybe",
-      "evidence": "MERCURY_MASTER;BACK_MATCH_RECOVERED"
+      "evidence": "MERCURY_MASTER;BACK_MATCH_RECOVERED",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:bonfur:babfa656d34a",
@@ -290,10 +300,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Festival_Magiscarf/Magiscarf/Battlers Normal/Back/Bonfur.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "EXTERNAL_SOURCE_METADATA"
+      "evidence": "EXTERNAL_SOURCE_METADATA",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:sizzly:734ae15a066e",
@@ -310,10 +321,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Festival_Magiscarf/Magiscarf/Battlers Normal/Back/Sizzly.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "EXTERNAL_SOURCE_METADATA"
+      "evidence": "EXTERNAL_SOURCE_METADATA",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:tindursa:bcfa0d338db5",
@@ -330,10 +342,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Festival_Magiscarf/Magiscarf/Battlers Normal/Back/Tindursa.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "EXTERNAL_SOURCE_METADATA"
+      "evidence": "EXTERNAL_SOURCE_METADATA",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:cabatfe:2407bc8bb381",
@@ -350,10 +363,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/CABATfE.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "EXTERNAL_SOURCE_METADATA"
+      "evidence": "EXTERNAL_SOURCE_METADATA",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:cabatma:c66870632bd1",
@@ -370,10 +384,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/CABATmA.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "EXTERNAL_SOURCE_METADATA"
+      "evidence": "EXTERNAL_SOURCE_METADATA",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:stalad:b946f6457d5e",
@@ -390,10 +405,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/STALAD.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "EXTERNAL_SOURCE_METADATA"
+      "evidence": "EXTERNAL_SOURCE_METADATA",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:stalass:aa4fd348666c",
@@ -410,10 +426,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/STALASS.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "EXTERNAL_SOURCE_METADATA"
+      "evidence": "EXTERNAL_SOURCE_METADATA",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:chubboink:55fc6abb7f29",
@@ -430,10 +447,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/CHUBBOINK.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "EXTERNAL_SOURCE_METADATA"
+      "evidence": "EXTERNAL_SOURCE_METADATA",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:muchog:b24bffcbde28",
@@ -450,10 +468,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/MUCHOG.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "EXTERNAL_SOURCE_METADATA"
+      "evidence": "EXTERNAL_SOURCE_METADATA",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:contamullet:16a3e2a71ea0",
@@ -470,10 +489,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/CONTAMULLET.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "EXTERNAL_SOURCE_METADATA"
+      "evidence": "EXTERNAL_SOURCE_METADATA",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:crishy:44a629a6e18f",
@@ -490,10 +510,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/CRISHY.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "EXTERNAL_SOURCE_METADATA"
+      "evidence": "EXTERNAL_SOURCE_METADATA",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:cryscross:0ff6059512dc",
@@ -510,10 +531,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Festival_Atsui/Atsui/Pokemon/Back/CRYSCROSS.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "EXTERNAL_SOURCE_METADATA"
+      "evidence": "EXTERNAL_SOURCE_METADATA",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "compare:dampurr:2",
@@ -530,10 +552,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Festival_Magiscarf/Magiscarf/Battlers Normal/Back/Dampurr.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "compare",
       "reason": "Two visually distinct designs recorded for the same custom identity; choose artwork without cutting the Pokémon itself.",
       "note": "",
-      "evidence": "exact:664fb15d6953; structural:8dd554b6d5f7"
+      "evidence": "exact:664fb15d6953; structural:8dd554b6d5f7",
+      "suggestionReason": "Distinct sourced artwork; choose visually rather than automatically."
     },
     {
       "id": "compare:delugar:2",
@@ -550,10 +573,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Festival_Magiscarf/Magiscarf/Battlers Normal/Back/Delugar.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "compare",
       "reason": "Two visually distinct designs recorded for the same custom identity; choose artwork without cutting the Pokémon itself.",
       "note": "",
-      "evidence": "exact:1715beba8098; structural:7ec9a27bbe47"
+      "evidence": "exact:1715beba8098; structural:7ec9a27bbe47",
+      "suggestionReason": "Distinct sourced artwork; choose visually rather than automatically."
     },
     {
       "id": "fakemon:dampybara:10e18aa013bb",
@@ -570,10 +594,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/DAMPYBARA.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "EXTERNAL_SOURCE_METADATA"
+      "evidence": "EXTERNAL_SOURCE_METADATA",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:glovet:78f50bedb06c",
@@ -590,10 +615,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/GLOVET.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "EXTERNAL_SOURCE_METADATA"
+      "evidence": "EXTERNAL_SOURCE_METADATA",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:mortarine:bc81a7504531",
@@ -610,10 +636,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/MORTARINE.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "EXTERNAL_SOURCE_METADATA"
+      "evidence": "EXTERNAL_SOURCE_METADATA",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:doperami:88542955f959",
@@ -630,10 +657,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/DOPERAMI.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "EXTERNAL_SOURCE_METADATA"
+      "evidence": "EXTERNAL_SOURCE_METADATA",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:doperami-female:8e034e45c891",
@@ -650,10 +678,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/DOPERAMI_female.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "EXTERNAL_SOURCE_METADATA;BACK_MATCH_RECOVERED"
+      "evidence": "EXTERNAL_SOURCE_METADATA;BACK_MATCH_RECOVERED",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:dorewee:38024997a200",
@@ -670,10 +699,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/DOREWEE.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "EXTERNAL_SOURCE_METADATA"
+      "evidence": "EXTERNAL_SOURCE_METADATA",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:drashimif:a17da0648570",
@@ -690,10 +720,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Festival_PrincessPhoenix/PrincessPhoenix/Pokemon/Battlers/Gen 4 Backsprites/DrashimiB4.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "VERIFIED_SOURCE_METADATA;BACK_MATCH_RECOVERED"
+      "evidence": "VERIFIED_SOURCE_METADATA;BACK_MATCH_RECOVERED",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:tobishimif:95b3ba19b579",
@@ -710,10 +741,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Festival_PrincessPhoenix/PrincessPhoenix/Pokemon/Battlers/Gen 4 Backsprites/TobishimiB4.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "VERIFIED_SOURCE_METADATA;BACK_MATCH_RECOVERED"
+      "evidence": "VERIFIED_SOURCE_METADATA;BACK_MATCH_RECOVERED",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:tsushimif:b8eaf3dd8bd6",
@@ -730,10 +762,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Festival_PrincessPhoenix/PrincessPhoenix/Pokemon/Battlers/Gen 4 Backsprites/TsushimiB4.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "VERIFIED_SOURCE_METADATA;BACK_MATCH_RECOVERED"
+      "evidence": "VERIFIED_SOURCE_METADATA;BACK_MATCH_RECOVERED",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:dripwirt:d78a662d4daa",
@@ -750,10 +783,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Festival_Magiscarf/Magiscarf/Battlers Normal/Back/Dripwirt.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "EXTERNAL_SOURCE_METADATA"
+      "evidence": "EXTERNAL_SOURCE_METADATA",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:droopig:eb7800cc3026",
@@ -770,10 +804,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Festival_Magiscarf/Magiscarf/Battlers Normal/Back/Droopig.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "EXTERNAL_SOURCE_METADATA"
+      "evidence": "EXTERNAL_SOURCE_METADATA",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:hoolihog:1e9f27498b47",
@@ -790,10 +825,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Festival_Magiscarf/Magiscarf/Battlers Normal/Back/Hoolihog.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "EXTERNAL_SOURCE_METADATA"
+      "evidence": "EXTERNAL_SOURCE_METADATA",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:flampy:c61bb48bed9f",
@@ -810,10 +846,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/FLAMPY.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "VERIFIED_SOURCE_METADATA;EXTERNAL_SOURCE_METADATA"
+      "evidence": "VERIFIED_SOURCE_METADATA;EXTERNAL_SOURCE_METADATA",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:murasalem:4ffc32d7237c",
@@ -830,10 +867,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/MURASALEM.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "VERIFIED_SOURCE_METADATA"
+      "evidence": "VERIFIED_SOURCE_METADATA",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:conflevour:f6f62c907c06",
@@ -850,10 +888,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/CONFLEVOUR.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "EXTERNAL_SOURCE_METADATA"
+      "evidence": "EXTERNAL_SOURCE_METADATA",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:flarepent:99b6d0d1e5e2",
@@ -870,10 +909,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/FLAREPENT.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "EXTERNAL_SOURCE_METADATA"
+      "evidence": "EXTERNAL_SOURCE_METADATA",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "compare:searpent:1",
@@ -890,10 +930,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/SEARPENT.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "compare",
       "reason": "Two visually distinct designs recorded for the same custom identity; choose artwork without cutting the Pokémon itself.",
       "note": "",
-      "evidence": "exact:77735f1d4520; structural:6f7d456842a1"
+      "evidence": "exact:77735f1d4520; structural:6f7d456842a1",
+      "suggestionReason": "Distinct sourced artwork; choose visually rather than automatically."
     },
     {
       "id": "compare:baxcalibur-mega:1",
@@ -910,10 +951,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/DrPrettyman_DS_64x64/sprites-processed/back/baxcalibur-mega.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "prefer-native",
       "reason": "Two visually distinct designs recorded for the same custom identity; choose artwork without cutting the Pokémon itself.",
       "note": "",
-      "evidence": "exact:d8fb2814f781; structural:d4b0d5de080f"
+      "evidence": "exact:d8fb2814f781; structural:d4b0d5de080f",
+      "suggestionReason": "Native DS artwork is technically preferred over a mechanical GBA conversion, subject to your design preference."
     },
     {
       "id": "compare:baxcalibur-mega:2",
@@ -930,10 +972,11 @@
       "back": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/baxcalibur_mega/back.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "alternate",
       "reason": "Two visually distinct designs recorded for the same custom identity; choose artwork without cutting the Pokémon itself.",
       "note": "",
-      "evidence": "exact:f451c7faa789; structural:3592399560d0"
+      "evidence": "exact:f451c7faa789; structural:3592399560d0",
+      "suggestionReason": "GBA-converted alternate of a preserved native DS option. Compare visual design before selection."
     },
     {
       "id": "fakemon:geocko:8e6331f867e2",
@@ -950,10 +993,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/GEOCKO.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "EXTERNAL_SOURCE_METADATA"
+      "evidence": "EXTERNAL_SOURCE_METADATA",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:geolidon:94a24f7d0db2",
@@ -970,10 +1014,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/GEOLIDON.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "EXTERNAL_SOURCE_METADATA"
+      "evidence": "EXTERNAL_SOURCE_METADATA",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:grexclub:64b963b83068",
@@ -990,10 +1035,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/GREXCLUB.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "EXTERNAL_SOURCE_METADATA"
+      "evidence": "EXTERNAL_SOURCE_METADATA",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "compare:garchomp-mega-z:2",
@@ -1010,10 +1056,11 @@
       "back": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/garchomp_mega_z/back.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "compare",
       "reason": "Two visually distinct designs recorded for the same custom identity; choose artwork without cutting the Pokémon itself.",
       "note": "",
-      "evidence": "exact:03baa6f96140; structural:c3e7ab61bf1e"
+      "evidence": "exact:03baa6f96140; structural:c3e7ab61bf1e",
+      "suggestionReason": "Distinct sourced artwork; choose visually rather than automatically."
     },
     {
       "id": "fakemon:furnadon:c340e9ecd835",
@@ -1030,10 +1077,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/FURNADON.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "EXTERNAL_SOURCE_METADATA"
+      "evidence": "EXTERNAL_SOURCE_METADATA",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:furnadon-1:338c6886fc8e",
@@ -1050,10 +1098,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/FURNADON_1.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "EXTERNAL_SOURCE_METADATA"
+      "evidence": "EXTERNAL_SOURCE_METADATA",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:glyptoblock:6dccabde2300",
@@ -1070,10 +1119,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/GLYPTOBLOCK.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "EXTERNAL_SOURCE_METADATA"
+      "evidence": "EXTERNAL_SOURCE_METADATA",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:glyptoblock-1:1782a977e02d",
@@ -1090,10 +1140,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/GLYPTOBLOCK_1.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "EXTERNAL_SOURCE_METADATA"
+      "evidence": "EXTERNAL_SOURCE_METADATA",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:chargoo:c3e27a61f2d0",
@@ -1110,10 +1161,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/CHARGOO.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "EXTERNAL_SOURCE_METADATA"
+      "evidence": "EXTERNAL_SOURCE_METADATA",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:goobolt:21ba232a2ab4",
@@ -1130,10 +1182,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/GOOBOLT.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "EXTERNAL_SOURCE_METADATA"
+      "evidence": "EXTERNAL_SOURCE_METADATA",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:plasmatina:bf181dbbe662",
@@ -1150,10 +1203,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/PLASMATINA.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "WEB_VERIFIED_SOURCE_METADATA;FRONT_BACK_VERIFIED"
+      "evidence": "WEB_VERIFIED_SOURCE_METADATA;FRONT_BACK_VERIFIED",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:hauntray:3bd9b9dce0e1",
@@ -1170,10 +1224,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/HAUNTRAY.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "EXTERNAL_SOURCE_METADATA"
+      "evidence": "EXTERNAL_SOURCE_METADATA",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:phantabys:5ab70f82ad78",
@@ -1190,10 +1245,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/PHANTABYS.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "WEB_VERIFIED_SOURCE_METADATA;FRONT_BACK_VERIFIED"
+      "evidence": "WEB_VERIFIED_SOURCE_METADATA;FRONT_BACK_VERIFIED",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "compare:cobarett:1",
@@ -1210,10 +1266,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Festival_PrincessPhoenix/PrincessPhoenix/Pokemon/Battlers/Gen 4 Backsprites/CobarettB4.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "compare",
       "reason": "Two visually distinct designs recorded for the same custom identity; choose artwork without cutting the Pokémon itself.",
       "note": "",
-      "evidence": "exact:2010eff7c7ee; structural:4a35dccdb495"
+      "evidence": "exact:2010eff7c7ee; structural:4a35dccdb495",
+      "suggestionReason": "Distinct sourced artwork; choose visually rather than automatically."
     },
     {
       "id": "compare:hissiorite:1",
@@ -1230,10 +1287,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Festival_PrincessPhoenix/PrincessPhoenix/Pokemon/Battlers/Gen 4 Backsprites/HissioriteB4.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "compare",
       "reason": "Two visually distinct designs recorded for the same custom identity; choose artwork without cutting the Pokémon itself.",
       "note": "",
-      "evidence": "exact:1197e593f39f; structural:4c89c27889f7"
+      "evidence": "exact:1197e593f39f; structural:4c89c27889f7",
+      "suggestionReason": "Distinct sourced artwork; choose visually rather than automatically."
     },
     {
       "id": "compare:pythonova:1",
@@ -1250,10 +1308,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Festival_PrincessPhoenix/PrincessPhoenix/Pokemon/Battlers/Gen 4 Backsprites/PythonovaB4.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "compare",
       "reason": "Two visually distinct designs recorded for the same custom identity; choose artwork without cutting the Pokémon itself.",
       "note": "",
-      "evidence": "exact:664616b59057; structural:300b610d4192"
+      "evidence": "exact:664616b59057; structural:300b610d4192",
+      "suggestionReason": "Distinct sourced artwork; choose visually rather than automatically."
     },
     {
       "id": "fakemon:hopidey:02fdb2d53e02",
@@ -1270,10 +1329,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/HOPIDEY.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "EXTERNAL_SOURCE_METADATA"
+      "evidence": "EXTERNAL_SOURCE_METADATA",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:raknaleap:171a9b0d4869",
@@ -1290,10 +1350,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/RAKNALEAP.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "WEB_VERIFIED_SOURCE_METADATA;FRONT_BACK_VERIFIED"
+      "evidence": "WEB_VERIFIED_SOURCE_METADATA;FRONT_BACK_VERIFIED",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:impurp:9b7fa21a1c74",
@@ -1310,10 +1371,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Festival_Magiscarf/Magiscarf/Battlers Normal/Back/Impurp.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "EXTERNAL_SOURCE_METADATA"
+      "evidence": "EXTERNAL_SOURCE_METADATA",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:kankersaur:739080c01802",
@@ -1330,10 +1392,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Festival_Magiscarf/Magiscarf/Battlers Normal/Back/Kankersaur.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "WEB_VERIFIED_SOURCE_METADATA;FRONT_BACK_VERIFIED"
+      "evidence": "WEB_VERIFIED_SOURCE_METADATA;FRONT_BACK_VERIFIED",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:kankryst:372c4017c1b1",
@@ -1350,10 +1413,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Festival_Magiscarf/Magiscarf/Battlers Normal/Back/Kankryst.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "EXTERNAL_SOURCE_METADATA"
+      "evidence": "EXTERNAL_SOURCE_METADATA",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:kankwart:2cd4d130ba7f",
@@ -1370,10 +1434,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Festival_Magiscarf/Magiscarf/Battlers Normal/Back/Kankwart.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "EXTERNAL_SOURCE_METADATA"
+      "evidence": "EXTERNAL_SOURCE_METADATA",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:keerin:f5330c4efd31",
@@ -1390,10 +1455,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/KEERIN.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "EXTERNAL_SOURCE_METADATA"
+      "evidence": "EXTERNAL_SOURCE_METADATA",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:lamby:97eb25d1871e",
@@ -1410,10 +1476,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/LAMBY.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "EXTERNAL_SOURCE_METADATA"
+      "evidence": "EXTERNAL_SOURCE_METADATA",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:mourin:ddafbe9e88df",
@@ -1430,10 +1497,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/MOURIN.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "EXTERNAL_SOURCE_METADATA"
+      "evidence": "EXTERNAL_SOURCE_METADATA",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:lediastra:5ac38222b3b5",
@@ -1450,10 +1518,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/LEDIASTRA.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "EXTERNAL_SOURCE_METADATA"
+      "evidence": "EXTERNAL_SOURCE_METADATA",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:germeit:c332b0cdaa8e",
@@ -1470,10 +1539,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/GERMEIT.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "EXTERNAL_SOURCE_METADATA"
+      "evidence": "EXTERNAL_SOURCE_METADATA",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:lilleo:9657de039a39",
@@ -1490,10 +1560,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/LILLEO.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "EXTERNAL_SOURCE_METADATA"
+      "evidence": "EXTERNAL_SOURCE_METADATA",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:brewtrid:a1ecf9a73eef",
@@ -1510,10 +1581,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Festival_Magiscarf/Magiscarf/Battlers Normal/Back/Brewtrid.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "EXTERNAL_SOURCE_METADATA"
+      "evidence": "EXTERNAL_SOURCE_METADATA",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:forbiddron:e2d8e564fce3",
@@ -1530,10 +1602,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Festival_Magiscarf/Magiscarf/Battlers Normal/Back/Forbiddron.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "EXTERNAL_SOURCE_METADATA"
+      "evidence": "EXTERNAL_SOURCE_METADATA",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:lollybog:3c96d8cb29a9",
@@ -1550,10 +1623,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Festival_Magiscarf/Magiscarf/Battlers Normal/Back/Lollybog.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "EXTERNAL_SOURCE_METADATA"
+      "evidence": "EXTERNAL_SOURCE_METADATA",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:lumini:1fdb4fd64ddd",
@@ -1570,10 +1644,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Festival_Magiscarf/Magiscarf/Battlers Normal/Back/Lumini.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "EXTERNAL_SOURCE_METADATA"
+      "evidence": "EXTERNAL_SOURCE_METADATA",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:mantoon:a22b10f0a26a",
@@ -1590,10 +1665,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/MANTOON.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "EXTERNAL_SOURCE_METADATA"
+      "evidence": "EXTERNAL_SOURCE_METADATA",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:stormanta:ce55e462c704",
@@ -1610,10 +1686,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/STORMANTA.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "EXTERNAL_SOURCE_METADATA"
+      "evidence": "EXTERNAL_SOURCE_METADATA",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:firomenisf:5f9fd6b87b07",
@@ -1630,10 +1707,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Festival_PrincessPhoenix/PrincessPhoenix/Pokemon/Battlers/Gen 4 Backsprites/FiromenisB4.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "VERIFIED_SOURCE_METADATA;BACK_MATCH_RECOVERED"
+      "evidence": "VERIFIED_SOURCE_METADATA;BACK_MATCH_RECOVERED",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:merlicunf:9e4f5293e250",
@@ -1650,10 +1728,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Festival_PrincessPhoenix/PrincessPhoenix/Pokemon/Battlers/Gen 4 Backsprites/MerlicunB4.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "VERIFIED_SOURCE_METADATA;BACK_MATCH_RECOVERED"
+      "evidence": "VERIFIED_SOURCE_METADATA;BACK_MATCH_RECOVERED",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:crunchill:e5fb20e303fb",
@@ -1670,10 +1749,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/CRUNCHILL.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "EXTERNAL_SOURCE_METADATA"
+      "evidence": "EXTERNAL_SOURCE_METADATA",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:munchill:1b640ef359e3",
@@ -1690,10 +1770,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/MUNCHILL.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "EXTERNAL_SOURCE_METADATA"
+      "evidence": "EXTERNAL_SOURCE_METADATA",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:enchantowl:c4f31a6f6f3c",
@@ -1710,10 +1791,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Festival_Lumio/Lumio/Pokemon/Back/ENCHANTOWL.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "SOURCE_METADATA;SOURCE_EVOLUTION_GRAPH"
+      "evidence": "SOURCE_METADATA;SOURCE_EVOLUTION_GRAPH",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "compare:noctowl-1:2",
@@ -1730,10 +1812,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Festival_Lumio/Lumio/Pokemon/Back/NOCTOWL_1.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "compare",
       "reason": "Two visually distinct designs recorded for the same custom identity; choose artwork without cutting the Pokémon itself.",
       "note": "",
-      "evidence": "exact:87c68818451d; structural:65eb07c2b968"
+      "evidence": "exact:87c68818451d; structural:65eb07c2b968",
+      "suggestionReason": "Distinct sourced artwork; choose visually rather than automatically."
     },
     {
       "id": "fakemon:pansimi:621636128805",
@@ -1750,10 +1833,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Festival_Misc/Misc/Backs/Pansimi_back.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "SOURCE_METADATA;SOURCE_EVOLUTION_GRAPH;BACK_MATCH_RECOVERED"
+      "evidence": "SOURCE_METADATA;SOURCE_EVOLUTION_GRAPH;BACK_MATCH_RECOVERED",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:glanchog:b9cd1d7e4aa9",
@@ -1770,10 +1854,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/GLANCHOG.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "EXTERNAL_SOURCE_METADATA"
+      "evidence": "EXTERNAL_SOURCE_METADATA",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:peclay:3f8e82e245f7",
@@ -1790,10 +1875,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/PECLAY.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "WEB_VERIFIED_SOURCE_METADATA;FRONT_BACK_VERIFIED"
+      "evidence": "WEB_VERIFIED_SOURCE_METADATA;FRONT_BACK_VERIFIED",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:tektalon:b8476aea5e7a",
@@ -1810,10 +1896,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/TEKTALON.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "EXTERNAL_SOURCE_METADATA"
+      "evidence": "EXTERNAL_SOURCE_METADATA",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:tektalon-1:17952668282a",
@@ -1830,10 +1917,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/TEKTALON_1.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "EXTERNAL_SOURCE_METADATA"
+      "evidence": "EXTERNAL_SOURCE_METADATA",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:croober:ee00fc109ee9",
@@ -1850,10 +1938,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/CROOBER.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "EXTERNAL_SOURCE_METADATA"
+      "evidence": "EXTERNAL_SOURCE_METADATA",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:croober-female:c7f9a1d70229",
@@ -1870,10 +1959,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/CROOBER_female.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "EXTERNAL_SOURCE_METADATA"
+      "evidence": "EXTERNAL_SOURCE_METADATA",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:petidaw:b6ad684c91cc",
@@ -1890,10 +1980,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/PETIDAW.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "WEB_VERIFIED_SOURCE_METADATA;FRONT_BACK_VERIFIED"
+      "evidence": "WEB_VERIFIED_SOURCE_METADATA;FRONT_BACK_VERIFIED",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:ravendler:6787c6756a78",
@@ -1910,10 +2001,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/RAVENDLER.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "WEB_VERIFIED_SOURCE_METADATA;FRONT_BACK_VERIFIED"
+      "evidence": "WEB_VERIFIED_SOURCE_METADATA;FRONT_BACK_VERIFIED",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:gorochu:d978e1cda2a9",
@@ -1930,10 +2022,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Earthretha/Earthretha Fakemon Pack/Graphics/Pokemon/Back/GOROCHU.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "EXTERNAL_SOURCE_METADATA"
+      "evidence": "EXTERNAL_SOURCE_METADATA",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:platerigus:277910002af1",
@@ -1950,10 +2043,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/PLATERIGUS.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "WEB_VERIFIED_SOURCE_METADATA;FRONT_BACK_VERIFIED"
+      "evidence": "WEB_VERIFIED_SOURCE_METADATA;FRONT_BACK_VERIFIED",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:spritzee-1:f9749b90bdb0",
@@ -1970,10 +2064,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/SPRITZEE_1.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "EXTERNAL_SOURCE_METADATA"
+      "evidence": "EXTERNAL_SOURCE_METADATA",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:yamask-2:9ae97cd58dea",
@@ -1990,10 +2085,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/YAMASK_2.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "EXTERNAL_SOURCE_METADATA"
+      "evidence": "EXTERNAL_SOURCE_METADATA",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:rhinplink:d44e960196c9",
@@ -2010,10 +2106,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/RHINPLINK.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "WEB_VERIFIED_SOURCE_METADATA;FRONT_BACK_VERIFIED"
+      "evidence": "WEB_VERIFIED_SOURCE_METADATA;FRONT_BACK_VERIFIED",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:rhintain:70156cdf466d",
@@ -2030,10 +2127,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/RHINTAIN.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "WEB_VERIFIED_SOURCE_METADATA;FRONT_BACK_VERIFIED"
+      "evidence": "WEB_VERIFIED_SOURCE_METADATA;FRONT_BACK_VERIFIED",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:trunkorn:fe4adae9de02",
@@ -2050,10 +2148,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/TRUNKORN.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "EXTERNAL_SOURCE_METADATA"
+      "evidence": "EXTERNAL_SOURCE_METADATA",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "compare:lucario-mega-z:1",
@@ -2070,10 +2169,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/DrPrettyman_DS_64x64/sprites-processed/back/lucario-mega-z.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "prefer-native",
       "reason": "Two visually distinct designs recorded for the same custom identity; choose artwork without cutting the Pokémon itself.",
       "note": "",
-      "evidence": "exact:79a6aced84a0; structural:b9330bf14ac9"
+      "evidence": "exact:79a6aced84a0; structural:b9330bf14ac9",
+      "suggestionReason": "Native DS artwork is technically preferred over a mechanical GBA conversion, subject to your design preference."
     },
     {
       "id": "compare:lucario-mega-z:2",
@@ -2090,10 +2190,11 @@
       "back": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/lucario_mega_z/back.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "alternate",
       "reason": "Two visually distinct designs recorded for the same custom identity; choose artwork without cutting the Pokémon itself.",
       "note": "",
-      "evidence": "exact:0434e148897e; structural:3e4e41224b50"
+      "evidence": "exact:0434e148897e; structural:3e4e41224b50",
+      "suggestionReason": "GBA-converted alternate of a preserved native DS option. Compare visual design before selection."
     },
     {
       "id": "fakemon:negagen:de4424124489",
@@ -2110,10 +2211,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Festival_Magiscarf/Magiscarf/Battlers Normal/Back/Negagen.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "WEB_VERIFIED_SOURCE_METADATA;FRONT_BACK_VERIFIED"
+      "evidence": "WEB_VERIFIED_SOURCE_METADATA;FRONT_BACK_VERIFIED",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:skelleks:8fb265d7817f",
@@ -2130,10 +2232,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Festival_Magiscarf/Magiscarf/Battlers Normal/Back/Skelleks.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "EXTERNAL_SOURCE_METADATA"
+      "evidence": "EXTERNAL_SOURCE_METADATA",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:eruptile:f7dd5e359b3c",
@@ -2150,10 +2253,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/ERUPTILE.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "EXTERNAL_SOURCE_METADATA"
+      "evidence": "EXTERNAL_SOURCE_METADATA",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:skindling:2083b6e89eea",
@@ -2170,10 +2274,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/SKINDLING.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "EXTERNAL_SOURCE_METADATA"
+      "evidence": "EXTERNAL_SOURCE_METADATA",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:skingnite:5ab1d496309b",
@@ -2190,10 +2295,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/SKINGNITE.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "EXTERNAL_SOURCE_METADATA"
+      "evidence": "EXTERNAL_SOURCE_METADATA",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:duntesert:7520cf4d4134",
@@ -2210,10 +2316,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/DUNTESERT.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "EXTERNAL_SOURCE_METADATA"
+      "evidence": "EXTERNAL_SOURCE_METADATA",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:duntesert-1:1f2ad75e064c",
@@ -2230,10 +2337,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/DUNTESERT_1.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "EXTERNAL_SOURCE_METADATA"
+      "evidence": "EXTERNAL_SOURCE_METADATA",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:slidune:05f634850f07",
@@ -2250,10 +2358,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/SLIDUNE.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "EXTERNAL_SOURCE_METADATA"
+      "evidence": "EXTERNAL_SOURCE_METADATA",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:slidune-1:ae8c06d4fc39",
@@ -2270,10 +2379,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/SLIDUNE_1.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "EXTERNAL_SOURCE_METADATA"
+      "evidence": "EXTERNAL_SOURCE_METADATA",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:gelescent:8953de041b16",
@@ -2290,10 +2400,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Festival_Magiscarf/Magiscarf/Battlers Normal/Back/Gelescent.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "EXTERNAL_SOURCE_METADATA"
+      "evidence": "EXTERNAL_SOURCE_METADATA",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:sligment:0e27556d0266",
@@ -2310,10 +2421,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Festival_Magiscarf/Magiscarf/Battlers Normal/Back/Sligment.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "EXTERNAL_SOURCE_METADATA"
+      "evidence": "EXTERNAL_SOURCE_METADATA",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:viscolor:9da3cdc6dca3",
@@ -2330,10 +2442,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Festival_Magiscarf/Magiscarf/Battlers Normal/Back/Viscolor.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "EXTERNAL_SOURCE_METADATA"
+      "evidence": "EXTERNAL_SOURCE_METADATA",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:bombustoad:b46cb17c2758",
@@ -2350,10 +2463,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Festival_Magiscarf/Magiscarf/Battlers Normal/Back/Bombustoad.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "EXTERNAL_SOURCE_METADATA"
+      "evidence": "EXTERNAL_SOURCE_METADATA",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:smoald:5eb9c950effe",
@@ -2370,10 +2484,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Festival_Magiscarf/Magiscarf/Battlers Normal/Back/Smoald.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "EXTERNAL_SOURCE_METADATA"
+      "evidence": "EXTERNAL_SOURCE_METADATA",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:flambafee:3766fc431b37",
@@ -2390,10 +2505,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/FLAMBAFEE.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "EXTERNAL_SOURCE_METADATA"
+      "evidence": "EXTERNAL_SOURCE_METADATA",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:flambafee-female:8ca9160cf40c",
@@ -2410,10 +2526,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/FLAMBAFEE_female.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "EXTERNAL_SOURCE_METADATA"
+      "evidence": "EXTERNAL_SOURCE_METADATA",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:sneepy:5850577d30a5",
@@ -2430,10 +2547,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/SNEEPY.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "EXTERNAL_SOURCE_METADATA"
+      "evidence": "EXTERNAL_SOURCE_METADATA",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:sphertle:e2e9e3cecc8f",
@@ -2450,10 +2568,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/SPHERTLE.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "EXTERNAL_SOURCE_METADATA"
+      "evidence": "EXTERNAL_SOURCE_METADATA",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:wroomtoise:238dfda52b6b",
@@ -2470,10 +2589,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/WROOMTOISE.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "EXTERNAL_SOURCE_METADATA"
+      "evidence": "EXTERNAL_SOURCE_METADATA",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:spinarak-1:d9f9617a90e2",
@@ -2490,10 +2610,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Festival_Lumio/Lumio/Pokemon/Back/SPINARAK_1.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "maybe",
-      "evidence": "SOURCE_METADATA;SOURCE_EVOLUTION_GRAPH"
+      "evidence": "SOURCE_METADATA;SOURCE_EVOLUTION_GRAPH",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:floramona:3295c0630e41",
@@ -2510,10 +2631,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/FLORAMONA.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "EXTERNAL_SOURCE_METADATA"
+      "evidence": "EXTERNAL_SOURCE_METADATA",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:floramona-1:74eaeefaf084",
@@ -2530,10 +2652,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/FLORAMONA_1.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "EXTERNAL_SOURCE_METADATA;BACK_MATCH_RECOVERED"
+      "evidence": "EXTERNAL_SOURCE_METADATA;BACK_MATCH_RECOVERED",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:floramona-6:90a209f96454",
@@ -2550,10 +2673,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/FLORAMONA_6.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "EXTERNAL_SOURCE_METADATA;BACK_MATCH_RECOVERED"
+      "evidence": "EXTERNAL_SOURCE_METADATA;BACK_MATCH_RECOVERED",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:petalnia:741e1053e95d",
@@ -2570,10 +2694,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/PETALNIA.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "WEB_VERIFIED_SOURCE_METADATA;FRONT_BACK_VERIFIED"
+      "evidence": "WEB_VERIFIED_SOURCE_METADATA;FRONT_BACK_VERIFIED",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:sproutsy:e4f905be03cc",
@@ -2590,10 +2715,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/SPROUTSY.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "EXTERNAL_SOURCE_METADATA"
+      "evidence": "EXTERNAL_SOURCE_METADATA",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:anuf:fd3a05d9dedb",
@@ -2610,10 +2736,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Festival_PrincessPhoenix/PrincessPhoenix/Pokemon/Battlers/Gen 4 Backsprites/AnuB4.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "EXTERNAL_SOURCE_METADATA;BACK_MATCH_RECOVERED"
+      "evidence": "EXTERNAL_SOURCE_METADATA;BACK_MATCH_RECOVERED",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:botanine:171567e22353",
@@ -2630,10 +2757,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Festival_Magiscarf/Magiscarf/Battlers Normal/Back/Botanine.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "EXTERNAL_SOURCE_METADATA"
+      "evidence": "EXTERNAL_SOURCE_METADATA",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:castform-4:2ac6980a65e9",
@@ -2650,10 +2778,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/CASTFORM_4.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "EXTERNAL_SOURCE_METADATA"
+      "evidence": "EXTERNAL_SOURCE_METADATA",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:castform-5:3140038d31ab",
@@ -2670,10 +2799,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/CASTFORM_5.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "EXTERNAL_SOURCE_METADATA"
+      "evidence": "EXTERNAL_SOURCE_METADATA",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:castform-6:f6cc7e9f7871",
@@ -2690,10 +2820,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/CASTFORM_6.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "EXTERNAL_SOURCE_METADATA"
+      "evidence": "EXTERNAL_SOURCE_METADATA",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:commant:f4600f93a1d1",
@@ -2710,10 +2841,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/COMMANT.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "EXTERNAL_SOURCE_METADATA"
+      "evidence": "EXTERNAL_SOURCE_METADATA",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:dynabit:21b6eb76c830",
@@ -2730,10 +2862,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Festival_Magiscarf/Magiscarf/Battlers Normal/Back/Dynabit.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "EXTERNAL_SOURCE_METADATA"
+      "evidence": "EXTERNAL_SOURCE_METADATA",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:hayog:c54be050251a",
@@ -2750,10 +2883,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Festival_Scotsman/Scotsman/Hayog_Back.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "EXTERNAL_SOURCE_METADATA"
+      "evidence": "EXTERNAL_SOURCE_METADATA",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:hogouse:5aacd2375ea9",
@@ -2770,10 +2904,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Festival_Scotsman/Scotsman/Hogouse_Back.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "EXTERNAL_SOURCE_METADATA"
+      "evidence": "EXTERNAL_SOURCE_METADATA",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:hogriks:09d5ea97ceeb",
@@ -2790,10 +2925,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Festival_Scotsman/Scotsman/Hogriks_Back.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "EXTERNAL_SOURCE_METADATA"
+      "evidence": "EXTERNAL_SOURCE_METADATA",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:homurant:ea9119efb146",
@@ -2810,10 +2946,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/HOMURANT.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "EXTERNAL_SOURCE_METADATA"
+      "evidence": "EXTERNAL_SOURCE_METADATA",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:howliage:2615136cf0d0",
@@ -2830,10 +2967,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Festival_Magiscarf/Magiscarf/Battlers Normal/Back/Howliage.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "EXTERNAL_SOURCE_METADATA"
+      "evidence": "EXTERNAL_SOURCE_METADATA",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:ariados-1:25da075190b5",
@@ -2850,10 +2988,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Festival_Lumio/Lumio/Pokemon/Back/ARIADOS_1.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "EXTERNAL_SOURCE_METADATA"
+      "evidence": "EXTERNAL_SOURCE_METADATA",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:marelstorm:701ab0bd5780",
@@ -2870,10 +3009,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Festival_Lumio/Lumio/Pokemon/Back/MARELSTORM.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "EXTERNAL_SOURCE_METADATA"
+      "evidence": "EXTERNAL_SOURCE_METADATA",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:buneary-1:13f7b40cc329",
@@ -2890,10 +3030,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/BUNEARY_1.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "EXTERNAL_SOURCE_METADATA"
+      "evidence": "EXTERNAL_SOURCE_METADATA",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:falinks-1:0c48c12e936e",
@@ -2910,10 +3051,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/FALINKS_1.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "EXTERNAL_SOURCE_METADATA"
+      "evidence": "EXTERNAL_SOURCE_METADATA",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:lopunny-1:06d969db7760",
@@ -2930,10 +3072,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/LOPUNNY_1.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "EXTERNAL_SOURCE_METADATA"
+      "evidence": "EXTERNAL_SOURCE_METADATA",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:minamai:a49139765a74",
@@ -2950,10 +3093,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Festival_Lumio/Lumio/Pokemon/Back/MINAMAI.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "EXTERNAL_SOURCE_METADATA"
+      "evidence": "EXTERNAL_SOURCE_METADATA",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:mivota:c778b556225b",
@@ -2970,10 +3114,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Festival_Magiscarf/Magiscarf/Battlers Normal/Back/Mivota.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "EXTERNAL_SOURCE_METADATA"
+      "evidence": "EXTERNAL_SOURCE_METADATA",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:belstatue-2-moon-shard:ca0fced633b1",
@@ -2990,10 +3135,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Earthretha/Earthretha Fakemon Pack/Graphics/Pokemon/Back/BELSTATUE_2 (Moon Shard).png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "SOURCE_METADATA;SOURCE_STANDALONE;BACK_MATCH_RECOVERED"
+      "evidence": "SOURCE_METADATA;SOURCE_STANDALONE;BACK_MATCH_RECOVERED",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:belstatue-1-sun-shard:5728aff6b963",
@@ -3010,10 +3156,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Earthretha/Earthretha Fakemon Pack/Graphics/Pokemon/Back/BELSTATUE_1 (Sun Shard).png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "SOURCE_METADATA;SOURCE_STANDALONE"
+      "evidence": "SOURCE_METADATA;SOURCE_STANDALONE",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:timberry:dcc9beb38290",
@@ -3030,10 +3177,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Festival_Magiscarf/Magiscarf/Battlers Normal/Back/Timberry.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "EXTERNAL_SOURCE_METADATA"
+      "evidence": "EXTERNAL_SOURCE_METADATA",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:traumatisse:c91020460452",
@@ -3050,10 +3198,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/TRAUMATISSE.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "EXTERNAL_SOURCE_METADATA"
+      "evidence": "EXTERNAL_SOURCE_METADATA",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:umbreeze:54c246670fba",
@@ -3070,10 +3219,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Festival_Magiscarf/Magiscarf/Battlers Normal/Back/Umbreeze.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "EXTERNAL_SOURCE_METADATA"
+      "evidence": "EXTERNAL_SOURCE_METADATA",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:webruiser:bea1e82f88b1",
@@ -3090,10 +3240,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Festival_Scotsman/Scotsman/Webruiser_Back.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "EXTERNAL_SOURCE_METADATA"
+      "evidence": "EXTERNAL_SOURCE_METADATA",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:gasarnet:e5d87e7ae431",
@@ -3110,10 +3261,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/GASARNET.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "EXTERNAL_SOURCE_METADATA"
+      "evidence": "EXTERNAL_SOURCE_METADATA",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:inhalis:e5cbf5de8511",
@@ -3130,10 +3282,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/INHALIS.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "EXTERNAL_SOURCE_METADATA"
+      "evidence": "EXTERNAL_SOURCE_METADATA",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:sufferub:ecfb8bab5f98",
@@ -3150,10 +3303,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/SUFFERUB.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "EXTERNAL_SOURCE_METADATA"
+      "evidence": "EXTERNAL_SOURCE_METADATA",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:prankmare:79f0048a5f20",
@@ -3170,10 +3324,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/PRANKMARE.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "WEB_VERIFIED_SOURCE_METADATA;FRONT_BACK_VERIFIED"
+      "evidence": "WEB_VERIFIED_SOURCE_METADATA;FRONT_BACK_VERIFIED",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:timpot:a498e0e7b64a",
@@ -3190,10 +3345,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/TIMPOT.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "EXTERNAL_SOURCE_METADATA"
+      "evidence": "EXTERNAL_SOURCE_METADATA",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:tormine:c3d06e8f1f58",
@@ -3210,10 +3366,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Festival_Lumio/Lumio/Pokemon/Back/TORMINE.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "EXTERNAL_SOURCE_METADATA"
+      "evidence": "EXTERNAL_SOURCE_METADATA",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:basculin-2:1384cfe24e54",
@@ -3230,10 +3387,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/BASCULIN_2.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "EXTERNAL_SOURCE_METADATA"
+      "evidence": "EXTERNAL_SOURCE_METADATA",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:basstile:b9f5105aa1e4",
@@ -3250,10 +3408,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/BASSTILE.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "EXTERNAL_SOURCE_METADATA"
+      "evidence": "EXTERNAL_SOURCE_METADATA",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:basstile-1:42c3f86927c1",
@@ -3270,10 +3429,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/BASSTILE_1.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "EXTERNAL_SOURCE_METADATA"
+      "evidence": "EXTERNAL_SOURCE_METADATA",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:basstile-2:9b5f568609a3",
@@ -3290,10 +3450,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/BASSTILE_2.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "EXTERNAL_SOURCE_METADATA"
+      "evidence": "EXTERNAL_SOURCE_METADATA",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "fakemon:troutle:f721426d8a70",
@@ -3310,10 +3471,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Back/TROUTLE.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "shortlist",
       "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
       "note": "",
-      "evidence": "EXTERNAL_SOURCE_METADATA"
+      "evidence": "EXTERNAL_SOURCE_METADATA",
+      "suggestionReason": "Verified source family/type and paired images. Worth reviewing; art quality and final inclusion remain your choice."
     },
     {
       "id": "compare:golisopod-mega:1",
@@ -3330,10 +3492,11 @@
       "back": "DS_CUSTOM_LIBRARY/packs/DrPrettyman_DS_64x64/sprites-processed/back/golisopod-mega.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "prefer-native",
       "reason": "Two visually distinct designs recorded for the same custom identity; choose artwork without cutting the Pokémon itself.",
       "note": "",
-      "evidence": "exact:d91ed60fb7dd; structural:90d38b36f39b"
+      "evidence": "exact:d91ed60fb7dd; structural:90d38b36f39b",
+      "suggestionReason": "Native DS artwork is technically preferred over a mechanical GBA conversion, subject to your design preference."
     },
     {
       "id": "compare:golisopod-mega:2",
@@ -3350,10 +3513,11 @@
       "back": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/golisopod_mega/back.png",
       "shinyFront": "",
       "shinyBack": "",
-      "suggested": "review",
+      "suggested": "alternate",
       "reason": "Two visually distinct designs recorded for the same custom identity; choose artwork without cutting the Pokémon itself.",
       "note": "",
-      "evidence": "exact:04db1087dc77; structural:cecf8ba4f1c9"
+      "evidence": "exact:04db1087dc77; structural:cecf8ba4f1c9",
+      "suggestionReason": "GBA-converted alternate of a preserved native DS option. Compare visual design before selection."
     }
   ],
   "technicalHolds": [
@@ -4100,5 +4264,6 @@
       "identity": "platinum-redux-swalot",
       "note": "Latest conversation differs from older reject; needs confirmation."
     }
-  ]
+  ],
+  "recommendationPolicy": "Technical shortlist only. Never interpret suggestions as user decisions; never auto-integrate. Native DS art is a tentative preference where the same custom identity has a converted counterpart."
 }
