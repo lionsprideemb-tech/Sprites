@@ -89,7 +89,7 @@ summary{cursor:pointer;font-weight:750}
 <script>
 (function(){
 "use strict";
-var DATA=null, STATE={}, IMPORTED=null, PAGE=0, PER_PAGE=25, VISIBLE_IDS=new Set();
+var DATA=null, STATE={}, IMPORTED=null, RESTORED_UNKNOWN={}, PAGE=0, PER_PAGE=25, VISIBLE_IDS=new Set();
 var STORAGE="mercury-master-review-2026-10-23-v1";
 var $=function(id){return document.getElementById(id)};
 var safe=function(s){return String(s==null?"":s).replace(/[&<>"']/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]})};
@@ -221,7 +221,8 @@ function exportPayload(){
   type1:v.identityVerified&&v.resolvedType1?v.resolvedType1:x.type1,type2:v.identityVerified?v.resolvedType2||"":x.type2,front_path:x.front,back_path:x.back,decision:v.decision||"pending",
   original_source_name:x.originalSourceName||x.name,artist_credit:x.creator||"",source_reference:x.sourceReference||"",identity_flag:x.identityFlag||"",identity_verified:!!v.identityVerified,identity_verified_at:v.identityConfirmedAt||"",name_confidence:x.nameConfidence||"",
   note:v.note||"",updated:v.updated||""}});
- var prior=(IMPORTED&&IMPORTED.entries||[]).filter(function(x){return !currentIds.has(x.id)}).map(function(x){
+ var extras=new Map();(IMPORTED&&IMPORTED.entries||[]).concat(Object.values(RESTORED_UNKNOWN)).forEach(function(x){if(x&&x.id&&!currentIds.has(x.id))extras.set(x.id,x)});
+  var prior=Array.from(extras.values()).map(function(x){
   var state=STATE[x.id]||x;return Object.assign({},x,{decision:state.decision||x.decision,note:state.note||x.note||"",updated:state.updated||x.updated||""});
  });
  return {schema:"mercury-sprite-decisions-v1",exportedAt:new Date().toISOString(),snapshot:DATA.snapshot,
@@ -244,16 +245,26 @@ $("file").onchange=function(ev){
   try{
    var parsed=JSON.parse(String(reader.result)),records=parsed.entries||[];
    if(parsed.schema!=="mercury-sprite-decisions-v1"||!Array.isArray(records))throw Error("Not a Mercury sprite decisions v1 export");
-   var known=new Set(DATA.entries.map(function(x){return x.id})),restored=0,unknown=0,incoming={};
-   records.forEach(function(x){if(!known.has(x.id)){unknown++;return}
-    if(["keep","cut"].includes(x.decision)||x.note){
-     incoming[x.id]={decision:["keep","cut"].includes(x.decision)?x.decision:"",note:String(x.note||""),updated:String(x.updated||""),resolvedName:x.identity_verified?String(x.name||""):"",resolvedFamily:x.identity_verified?String(x.family||""):"",resolvedType1:x.identity_verified?String(x.type1||""):"",resolvedType2:x.identity_verified?String(x.type2||""):"",identityVerified:x.identity_verified===true,identityConfirmedAt:String(x.identity_verified_at||"")};
-     restored++;
+   var known=new Set(DATA.entries.concat(DATA.technicalHolds).map(function(x){return x.id})),incoming={},unknown={},conflicts=0,restored=0;
+   records.forEach(function(x){
+    if(!x||typeof x.id!=="string"||!x.id)return;
+    if(!known.has(x.id)){unknown[x.id]=x;return}
+    var existing=STATE[x.id]||{},patch={};
+    if(["keep","cut"].includes(x.decision))patch.decision=x.decision;
+    if(typeof x.note==="string"&&x.note)patch.note=x.note;
+    if(x.identity_verified===true){
+     patch.resolvedName=String(x.name||"");patch.resolvedFamily=String(x.family||"");
+     patch.resolvedType1=String(x.type1||"");patch.resolvedType2=String(x.type2||"");
+     patch.identityVerified=true;patch.identityConfirmedAt=String(x.identity_verified_at||"");
     }
+    if(!Object.keys(patch).length)return;
+    if(existing.decision&&patch.decision&&existing.decision!==patch.decision)conflicts++;
+    incoming[x.id]=Object.assign({},existing,patch,{updated:String(x.updated||new Date().toISOString())});restored++;
    });
-   if(!confirm("Restore "+restored+" decisions/notes from this file? "+unknown+" unknown IDs will be skipped. This replaces current browser choices."))return;
-   STATE=incoming;store();PAGE=0;render();alert("Restored "+restored+" records. Please export a new backup.");
-  }catch(e){alert("Could not restore file: "+e.message)}
+   if(!confirm("Merge "+restored+" imported records while preserving existing choices absent from this file? "+Object.keys(unknown).length+" non-current IDs will be preserved in the backup. "+(conflicts?conflicts+" explicit conflicts use imported votes.":"No vote conflicts.") ))return;
+   Object.assign(STATE,incoming);Object.assign(RESTORED_UNKNOWN,unknown);store();PAGE=0;render();
+   alert("Merged "+restored+" records. Existing unmentioned choices remain intact. Please export another GitHub backup.");
+   }catch(e){alert("Could not restore file: "+e.message)}
  };
  reader.readAsText(f);ev.target.value="";
 };
