@@ -23,7 +23,9 @@
     "laterRecovered": 94,
     "changed": 27,
     "identityCollisions": 5,
-    "contradictoryIdentityCollisions": 2
+    "contradictoryIdentityCollisions": 2,
+    "explicitlyRestoredPolishedKeeps": 8,
+    "exactDSArtSelectionsPreviouslyDecided": 10
   },
   "rule": "Later recovered GBA decision is recorded as effective; a historical imported KEEP is not a current-pass approval.",
   "changedHistory": [
@@ -17006,9 +17008,9 @@
       "type1": "Ground",
       "type2": "Electric",
       "legacy": "cut",
-      "effective": "cut",
-      "decisionSource": "gba_master_recovery_manifest",
-      "changed": false,
+      "effective": "keep",
+      "decisionSource": "final_polished_user_export",
+      "changed": true,
       "note": "",
       "resolution": "legacy-embedded",
       "front": "",
@@ -17022,7 +17024,8 @@
         "shiny_front": "Graphics/Battlers/231s_1.png",
         "shiny_back": "Graphics/Battlers/231sb_1.png",
         "view_count": "4"
-      }
+      },
+      "prePolishedEffective": "cut"
     },
     {
       "id": "platinum-redux-donphan",
@@ -17538,9 +17541,9 @@
       "type1": "Dark",
       "type2": "Poison",
       "legacy": "cut",
-      "effective": "cut",
-      "decisionSource": "gba_master_recovery_manifest",
-      "changed": false,
+      "effective": "keep",
+      "decisionSource": "final_polished_user_export",
+      "changed": true,
       "note": "",
       "resolution": "legacy-embedded",
       "front": "",
@@ -17554,7 +17557,8 @@
         "shiny_front": "Graphics/Battlers/262s_1.png",
         "shiny_back": "Graphics/Battlers/262sb_1.png",
         "view_count": "4"
-      }
+      },
+      "prePolishedEffective": "cut"
     },
     {
       "id": "platinum-redux-linoone",
@@ -20506,9 +20510,9 @@
       "type1": "Dragon",
       "type2": "Water",
       "legacy": "cut",
-      "effective": "cut",
-      "decisionSource": "gba_master_recovery_manifest",
-      "changed": false,
+      "effective": "keep",
+      "decisionSource": "final_polished_user_export",
+      "changed": true,
       "note": "",
       "resolution": "legacy-embedded",
       "front": "",
@@ -20522,7 +20526,8 @@
         "shiny_front": "Graphics/Battlers/443s_2.png",
         "shiny_back": "Graphics/Battlers/443sb_2.png",
         "view_count": "4"
-      }
+      },
+      "prePolishedEffective": "cut"
     },
     {
       "id": "gabite-bluetowel-alternate-forms-form-2",
@@ -20534,9 +20539,9 @@
       "type1": "Dragon",
       "type2": "Water",
       "legacy": "cut",
-      "effective": "cut",
-      "decisionSource": "gba_master_recovery_manifest",
-      "changed": false,
+      "effective": "keep",
+      "decisionSource": "final_polished_user_export",
+      "changed": true,
       "note": "",
       "resolution": "legacy-embedded",
       "front": "",
@@ -20550,7 +20555,8 @@
         "shiny_front": "Graphics/Battlers/444s_2.png",
         "shiny_back": "Graphics/Battlers/444sb_2.png",
         "view_count": "4"
-      }
+      },
+      "prePolishedEffective": "cut"
     },
     {
       "id": "garchomp-alternate-form-2",
@@ -20562,9 +20568,9 @@
       "type1": "Dragon",
       "type2": "Water",
       "legacy": "cut",
-      "effective": "cut",
-      "decisionSource": "gba_master_recovery_manifest",
-      "changed": false,
+      "effective": "keep",
+      "decisionSource": "final_polished_user_export",
+      "changed": true,
       "note": "",
       "resolution": "legacy-embedded",
       "front": "",
@@ -20578,7 +20584,8 @@
         "shiny_front": "Graphics/Battlers/445s_2.png",
         "shiny_back": "Graphics/Battlers/445sb_2.png",
         "view_count": "4"
-      }
+      },
+      "prePolishedEffective": "cut"
     },
     {
       "id": "garchomp-bluetowel-alternate-forms-form-1",
@@ -20618,9 +20625,9 @@
       "type1": "Dragon",
       "type2": "Water",
       "legacy": "cut",
-      "effective": "cut",
-      "decisionSource": "gba_master_recovery_manifest",
-      "changed": false,
+      "effective": "keep",
+      "decisionSource": "final_polished_user_export",
+      "changed": true,
       "note": "",
       "resolution": "legacy-embedded",
       "front": "",
@@ -20634,7 +20641,8 @@
         "shiny_front": "Graphics/Battlers/445s_3.png",
         "shiny_back": "Graphics/Battlers/445sb_3.png",
         "view_count": "4"
-      }
+      },
+      "prePolishedEffective": "cut"
     },
     {
       "id": "skorupi-alternate-form-1",
@@ -20751,9 +20759,9 @@
       "type1": "Grass",
       "type2": "Fire",
       "legacy": "cut",
-      "effective": "cut",
-      "decisionSource": "gba_master_recovery_manifest",
-      "changed": false,
+      "effective": "keep",
+      "decisionSource": "final_polished_user_export",
+      "changed": true,
       "note": "",
       "resolution": "legacy-embedded",
       "front": "",
@@ -20767,7 +20775,8 @@
         "shiny_front": "Graphics/Battlers/455s_1.png",
         "shiny_back": "Graphics/Battlers/455sb_1.png",
         "view_count": "4"
-      }
+      },
+      "prePolishedEffective": "cut"
     },
     {
       "id": "platinum-redux-finneon",
@@ -21591,9 +21600,9 @@
       "type1": "Grass",
       "type2": "Fighting",
       "legacy": "cut",
-      "effective": "cut",
-      "decisionSource": "gba_master_recovery_manifest",
-      "changed": false,
+      "effective": "keep",
+      "decisionSource": "final_polished_user_export",
+      "changed": true,
       "note": "",
       "resolution": "legacy-embedded",
       "front": "",
@@ -21607,7 +21616,8 @@
         "shiny_front": "Graphics/Battlers/549s_2.png",
         "shiny_back": "Graphics/Battlers/549sb_2.png",
         "view_count": "4"
-      }
+      },
+      "prePolishedEffective": "cut"
     },
     {
       "id": "darmanitan-aura",
@@ -24682,5 +24692,302 @@
       "conflictingDecision": false,
       "action": "Do not merge or override these rows without identifying the semantic/forme difference."
     }
-  ]
+  ],
+  "userExportReconciliation": {
+    "sourceFile": "review/recovered-user-export-decisions-2026-10-23.json",
+    "sourceBlob": "99a8335db6be68412399e17bffc7b234710b60ce",
+    "distinctExactDesignDecisions": 361,
+    "polishedResolvedIdentities": 264,
+    "protectedPolishedKeep": [
+      {
+        "identity": "skarmory-mega",
+        "decision": "keep",
+        "role": "",
+        "note": "",
+        "export": "final_polished_initial_2026_10_02",
+        "file": "mercury_final_polished_sprite_decisions.csv"
+      },
+      {
+        "identity": "phanpy-alternate-form-1",
+        "decision": "keep",
+        "role": "",
+        "note": "",
+        "export": "final_polished_initial_2026_10_02",
+        "file": "mercury_final_polished_sprite_decisions.csv"
+      },
+      {
+        "identity": "mightyena-alternate-form-1",
+        "decision": "keep",
+        "role": "",
+        "note": "",
+        "export": "final_polished_initial_2026_10_02",
+        "file": "mercury_final_polished_sprite_decisions.csv"
+      },
+      {
+        "identity": "gabite-bluetowel-alternate-forms-form-2",
+        "decision": "keep",
+        "role": "",
+        "note": "",
+        "export": "final_polished_initial_2026_10_02",
+        "file": "mercury_final_polished_sprite_decisions.csv"
+      },
+      {
+        "identity": "garchomp-alternate-form-2",
+        "decision": "keep",
+        "role": "",
+        "note": "",
+        "export": "final_polished_initial_2026_10_02",
+        "file": "mercury_final_polished_sprite_decisions.csv"
+      },
+      {
+        "identity": "garchomp-alternate-mega-form-3",
+        "decision": "keep",
+        "role": "",
+        "note": "",
+        "export": "final_polished_initial_2026_10_02",
+        "file": "mercury_final_polished_sprite_decisions.csv"
+      },
+      {
+        "identity": "gible-bluetowel-alternate-forms-form-2",
+        "decision": "keep",
+        "role": "",
+        "note": "",
+        "export": "final_polished_initial_2026_10_02",
+        "file": "mercury_final_polished_sprite_decisions.csv"
+      },
+      {
+        "identity": "carnivine-bluetowel-alternate-form-form-1",
+        "decision": "keep",
+        "role": "",
+        "note": "",
+        "export": "final_polished_initial_2026_10_02",
+        "file": "mercury_final_polished_sprite_decisions.csv"
+      },
+      {
+        "identity": "lilligant-alternate-form-2",
+        "decision": "keep",
+        "role": "",
+        "note": "",
+        "export": "final_polished_initial_2026_10_02",
+        "file": "mercury_final_polished_sprite_decisions.csv"
+      },
+      {
+        "identity": "merrykarp",
+        "decision": "keep",
+        "role": "Delta",
+        "note": "",
+        "export": "final_polished_followup_2026_10_02",
+        "file": "mercury_final_polished_sprite_decisions(2).csv"
+      },
+      {
+        "identity": "gyarevalry",
+        "decision": "keep",
+        "role": "Delta",
+        "note": "",
+        "export": "final_polished_followup_2026_10_02",
+        "file": "mercury_final_polished_sprite_decisions(2).csv"
+      }
+    ],
+    "designReviewAlreadyDecided": [
+      {
+        "key": "absol-mega-z|DrPrettyman_DS_64x64|DS_CUSTOM_LIBRARY/packs/DrPrettyman_DS_64x64/sprites-processed/front/absol-mega-z.png",
+        "identity": "absol-mega-z",
+        "source": "DrPrettyman_DS_64x64",
+        "front": "DS_CUSTOM_LIBRARY/packs/DrPrettyman_DS_64x64/sprites-processed/front/absol-mega-z.png",
+        "decision": "cut",
+        "sourceExport": "ds_sprite_decisions_2026_10_02",
+        "sourceFilename": "mercury_ds_sprite_decisions(2).csv",
+        "reviewId": "compare:absol-mega-z:1",
+        "name": "Absol Mega Z — Design 1",
+        "family": "Absol",
+        "type1": "Dark",
+        "type2": "Ghost"
+      },
+      {
+        "key": "absol-mega-z|Elite_Redux_Bulk|DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/absol_mega_z/front.png",
+        "identity": "absol-mega-z",
+        "source": "Elite_Redux_Bulk",
+        "front": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/absol_mega_z/front.png",
+        "decision": "keep",
+        "sourceExport": "ds_sprite_decisions_2026_10_02",
+        "sourceFilename": "mercury_ds_sprite_decisions(2).csv",
+        "reviewId": "compare:absol-mega-z:2",
+        "name": "Absol Mega Z — Design 2",
+        "family": "Absol",
+        "type1": "Dark",
+        "type2": "Ghost"
+      },
+      {
+        "key": "baxcalibur-mega|DrPrettyman_DS_64x64|DS_CUSTOM_LIBRARY/packs/DrPrettyman_DS_64x64/sprites-processed/front/baxcalibur-mega.png",
+        "identity": "baxcalibur-mega",
+        "source": "DrPrettyman_DS_64x64",
+        "front": "DS_CUSTOM_LIBRARY/packs/DrPrettyman_DS_64x64/sprites-processed/front/baxcalibur-mega.png",
+        "decision": "keep",
+        "sourceExport": "ds_sprite_decisions_2026_10_02",
+        "sourceFilename": "mercury_ds_sprite_decisions(2).csv",
+        "reviewId": "compare:baxcalibur-mega:1",
+        "name": "Baxcalibur Mega — Design 1",
+        "family": "Frigibax → Arctibax → Baxcalibur",
+        "type1": "Dragon",
+        "type2": "Ice"
+      },
+      {
+        "key": "baxcalibur-mega|Elite_Redux_Bulk|DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/baxcalibur_mega/front.png",
+        "identity": "baxcalibur-mega",
+        "source": "Elite_Redux_Bulk",
+        "front": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/baxcalibur_mega/front.png",
+        "decision": "cut",
+        "sourceExport": "ds_sprite_decisions_2026_10_02",
+        "sourceFilename": "mercury_ds_sprite_decisions(2).csv",
+        "reviewId": "compare:baxcalibur-mega:2",
+        "name": "Baxcalibur Mega — Design 2",
+        "family": "Frigibax → Arctibax → Baxcalibur",
+        "type1": "Dragon",
+        "type2": "Ice"
+      },
+      {
+        "key": "garchomp-mega-z|Elite_Redux_Bulk|DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/garchomp_mega_z/front.png",
+        "identity": "garchomp-mega-z",
+        "source": "Elite_Redux_Bulk",
+        "front": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/garchomp_mega_z/front.png",
+        "decision": "keep",
+        "sourceExport": "ds_sprite_decisions_2026_10_02",
+        "sourceFilename": "mercury_ds_sprite_decisions(2).csv",
+        "reviewId": "compare:garchomp-mega-z:2",
+        "name": "Garchomp Mega Z — Design 2",
+        "family": "Gible → Gabite → Garchomp",
+        "type1": "Dragon",
+        "type2": ""
+      },
+      {
+        "key": "noctowl-1|Festival_Lumio|DS_CUSTOM_LIBRARY/packs/Festival_Lumio/Lumio/Pokemon/Front/NOCTOWL_1.png",
+        "identity": "noctowl-1",
+        "source": "Festival_Lumio",
+        "front": "DS_CUSTOM_LIBRARY/packs/Festival_Lumio/Lumio/Pokemon/Front/NOCTOWL_1.png",
+        "decision": "keep",
+        "sourceExport": "ds_sprite_decisions_2026_10_02",
+        "sourceFilename": "mercury_ds_sprite_decisions(2).csv",
+        "reviewId": "compare:noctowl-1:2",
+        "name": "Luminian Noctowl — Design 2",
+        "family": "Noctowl 1 → Enchantowl",
+        "type1": "Psychic",
+        "type2": ""
+      },
+      {
+        "key": "lucario-mega-z|DrPrettyman_DS_64x64|DS_CUSTOM_LIBRARY/packs/DrPrettyman_DS_64x64/sprites-processed/front/lucario-mega-z.png",
+        "identity": "lucario-mega-z",
+        "source": "DrPrettyman_DS_64x64",
+        "front": "DS_CUSTOM_LIBRARY/packs/DrPrettyman_DS_64x64/sprites-processed/front/lucario-mega-z.png",
+        "decision": "keep",
+        "sourceExport": "ds_sprite_decisions_2026_10_02",
+        "sourceFilename": "mercury_ds_sprite_decisions(2).csv",
+        "reviewId": "compare:lucario-mega-z:1",
+        "name": "Lucario Mega Z — Design 1",
+        "family": "Riolu → Lucario",
+        "type1": "Fighting",
+        "type2": "Psychic"
+      },
+      {
+        "key": "lucario-mega-z|Elite_Redux_Bulk|DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/lucario_mega_z/front.png",
+        "identity": "lucario-mega-z",
+        "source": "Elite_Redux_Bulk",
+        "front": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/lucario_mega_z/front.png",
+        "decision": "cut",
+        "sourceExport": "ds_sprite_decisions_2026_10_02",
+        "sourceFilename": "mercury_ds_sprite_decisions(2).csv",
+        "reviewId": "compare:lucario-mega-z:2",
+        "name": "Lucario Mega Z — Design 2",
+        "family": "Riolu → Lucario",
+        "type1": "Fighting",
+        "type2": "Psychic"
+      },
+      {
+        "key": "golisopod-mega|DrPrettyman_DS_64x64|DS_CUSTOM_LIBRARY/packs/DrPrettyman_DS_64x64/sprites-processed/front/golisopod-mega.png",
+        "identity": "golisopod-mega",
+        "source": "DrPrettyman_DS_64x64",
+        "front": "DS_CUSTOM_LIBRARY/packs/DrPrettyman_DS_64x64/sprites-processed/front/golisopod-mega.png",
+        "decision": "cut",
+        "sourceExport": "ds_sprite_decisions_2026_10_02",
+        "sourceFilename": "mercury_ds_sprite_decisions(2).csv",
+        "reviewId": "compare:golisopod-mega:1",
+        "name": "Golisopod Mega — Design 1",
+        "family": "Wimpod → Golisopod",
+        "type1": "Bug",
+        "type2": "Steel"
+      },
+      {
+        "key": "golisopod-mega|Elite_Redux_Bulk|DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/golisopod_mega/front.png",
+        "identity": "golisopod-mega",
+        "source": "Elite_Redux_Bulk",
+        "front": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/golisopod_mega/front.png",
+        "decision": "keep",
+        "sourceExport": "ds_sprite_decisions_2026_10_02",
+        "sourceFilename": "mercury_ds_sprite_decisions(2).csv",
+        "reviewId": "compare:golisopod-mega:2",
+        "name": "Golisopod Mega — Design 2",
+        "family": "Wimpod → Golisopod",
+        "type1": "Bug",
+        "type2": "Steel"
+      }
+    ],
+    "supersededHistoricalRejections": [
+      {
+        "reviewId": "R0370",
+        "id": "phanpy-alternate-form-1",
+        "from": "cut",
+        "to": "keep",
+        "export": "final_polished_initial_2026_10_02"
+      },
+      {
+        "reviewId": "R0402",
+        "id": "mightyena-alternate-form-1",
+        "from": "cut",
+        "to": "keep",
+        "export": "final_polished_initial_2026_10_02"
+      },
+      {
+        "reviewId": "R0640",
+        "id": "gible-bluetowel-alternate-forms-form-2",
+        "from": "cut",
+        "to": "keep",
+        "export": "final_polished_initial_2026_10_02"
+      },
+      {
+        "reviewId": "R0642",
+        "id": "gabite-bluetowel-alternate-forms-form-2",
+        "from": "cut",
+        "to": "keep",
+        "export": "final_polished_initial_2026_10_02"
+      },
+      {
+        "reviewId": "R0645",
+        "id": "garchomp-alternate-form-2",
+        "from": "cut",
+        "to": "keep",
+        "export": "final_polished_initial_2026_10_02"
+      },
+      {
+        "reviewId": "R0647",
+        "id": "garchomp-alternate-mega-form-3",
+        "from": "cut",
+        "to": "keep",
+        "export": "final_polished_initial_2026_10_02"
+      },
+      {
+        "reviewId": "R0656",
+        "id": "carnivine-bluetowel-alternate-form-form-1",
+        "from": "cut",
+        "to": "keep",
+        "export": "final_polished_initial_2026_10_02"
+      },
+      {
+        "reviewId": "R0708",
+        "id": "lilligant-alternate-form-2",
+        "from": "cut",
+        "to": "keep",
+        "export": "final_polished_initial_2026_10_02"
+      }
+    ],
+    "note": "Exact artwork decisions are source+front-path specific. Historical GBA design identity rows remain, with later polished KEEP recorded as effective only for exactly matching identities. User-supplied export originals remain unchanged."
+  }
 }
