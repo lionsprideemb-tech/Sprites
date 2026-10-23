@@ -61,16 +61,17 @@
     "reviewedDesignOptions": 30,
     "distinctCompetingIdentities": 15,
     "leftoverCandidates": 158,
-    "actionable": 166,
-    "blocked": 33,
+    "actionable": 164,
+    "blocked": 35,
     "excludedFromReview": 256,
     "byCategory": {
-      "fakemon": 148,
-      "design-comparison": 17,
-      "decision-conflict": 1
+      "decision-conflict": 1,
+      "design-comparison": 16,
+      "fakemon": 147
     },
     "historicalIdentityCollisions": 5,
-    "contradictoryIdentityCollisions": 2
+    "contradictoryIdentityCollisions": 2,
+    "animationAtlasesHeld": 2
   },
   "warning": "Browser-only historical approvals are not present on GitHub until exported; import them before treating the entire review as final.",
   "entries": [
@@ -1935,26 +1936,6 @@
       "evidence": "EXTERNAL_SOURCE_METADATA"
     },
     {
-      "id": "fakemon:criminalisfront:c6156a0da54f",
-      "identity": "criminalisfront",
-      "name": "Criminalis",
-      "base": "criminalisfront",
-      "family": "Pilfetch → Criminalis",
-      "source": "Festival_Misc",
-      "category": "fakemon",
-      "type1": "Flying",
-      "type2": "",
-      "typeAuthority": "verified source metadata",
-      "front": "DS_CUSTOM_LIBRARY/packs/Festival_Misc/Misc/Fronts/CriminalisFront.png",
-      "back": "DS_CUSTOM_LIBRARY/packs/Festival_Misc/Misc/Backs/CriminalisBack.png",
-      "shinyFront": "",
-      "shinyBack": "",
-      "suggested": "review",
-      "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding.",
-      "note": "",
-      "evidence": "EXTERNAL_SOURCE_METADATA;BACK_MATCH_RECOVERED"
-    },
-    {
       "id": "fakemon:platerigus:277910002af1",
       "identity": "platerigus",
       "name": "Platerigus",
@@ -3235,26 +3216,6 @@
       "evidence": "EXTERNAL_SOURCE_METADATA"
     },
     {
-      "id": "compare:flygon-1:1",
-      "identity": "flygon-1",
-      "name": "Mega Flygon — Design 1",
-      "base": "Mega Flygon",
-      "family": "Trapinch → Vibrava → Flygon → Mega Flygon",
-      "source": "Mega_Flygon_Animated_Gen5",
-      "category": "design-comparison",
-      "type1": "Bug",
-      "type2": "Dragon",
-      "typeAuthority": "verified source metadata",
-      "front": "DS_CUSTOM_LIBRARY/packs/Mega_Flygon_Animated_Gen5/Mega Flygon/Front/FLYGON_1.png",
-      "back": "DS_CUSTOM_LIBRARY/packs/Mega_Flygon_Animated_Gen5/Mega Flygon/Back/FLYGON_1.png",
-      "shinyFront": "",
-      "shinyBack": "",
-      "suggested": "review",
-      "reason": "Two visually distinct designs recorded for the same custom identity; choose artwork without cutting the Pokémon itself.",
-      "note": "",
-      "evidence": "exact:814dd346080a; structural:294217d4d2cc"
-    },
-    {
       "id": "fakemon:basculin-2:1384cfe24e54",
       "identity": "basculin-2",
       "name": "Basculin",
@@ -4078,6 +4039,48 @@
       "back": "DS_CUSTOM_LIBRARY/converted/All_Mercury_GBA_Queue/tsareena_mega/back.png",
       "reason": "The same historical identity has both KEEP and CUT approvals; original distinct review IDs must be preserved.",
       "holdReason": "Conflicting review IDs: R0867=keep; R0868=cut"
+    },
+    {
+      "id": "fakemon:criminalisfront:c6156a0da54f",
+      "identity": "criminalisfront",
+      "name": "Criminalis",
+      "base": "criminalisfront",
+      "family": "Pilfetch → Criminalis",
+      "source": "Festival_Misc",
+      "category": "fakemon",
+      "type1": "Flying",
+      "type2": "",
+      "typeAuthority": "verified source metadata",
+      "front": "DS_CUSTOM_LIBRARY/packs/Festival_Misc/Misc/Fronts/CriminalisFront.png",
+      "back": "DS_CUSTOM_LIBRARY/packs/Festival_Misc/Misc/Backs/CriminalisBack.png",
+      "shinyFront": "",
+      "shinyBack": "",
+      "suggested": "review",
+      "reason": "Verified family/type metadata and paired sprite paths; aesthetic approval outstanding. Source images are animation strips, not single-frame DS front/back sprites.",
+      "note": "",
+      "evidence": "EXTERNAL_SOURCE_METADATA;BACK_MATCH_RECOVERED",
+      "holdReason": "Multi-frame animation strips (5400px front / 6400px back); extract matching single frames before artwork approval"
+    },
+    {
+      "id": "compare:flygon-1:1",
+      "identity": "flygon-1",
+      "name": "Mega Flygon — Design 1",
+      "base": "Mega Flygon",
+      "family": "Trapinch → Vibrava → Flygon → Mega Flygon",
+      "source": "Mega_Flygon_Animated_Gen5",
+      "category": "design-comparison",
+      "type1": "Bug",
+      "type2": "Dragon",
+      "typeAuthority": "verified source metadata",
+      "front": "DS_CUSTOM_LIBRARY/packs/Mega_Flygon_Animated_Gen5/Mega Flygon/Front/FLYGON_1.png",
+      "back": "DS_CUSTOM_LIBRARY/packs/Mega_Flygon_Animated_Gen5/Mega Flygon/Back/FLYGON_1.png",
+      "shinyFront": "",
+      "shinyBack": "",
+      "suggested": "review",
+      "reason": "Two visually distinct designs recorded for the same custom identity; choose artwork without cutting the Pokémon itself. Source images are animation strips, not single-frame DS front/back sprites.",
+      "note": "",
+      "evidence": "exact:814dd346080a; structural:294217d4d2cc",
+      "holdReason": "Multi-frame animation strips (1920px front / 1920px back); extract matching single frames before artwork approval"
     }
   ],
   "reviewHistoryNotes": [
