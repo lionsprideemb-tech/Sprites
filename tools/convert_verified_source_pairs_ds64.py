@@ -121,19 +121,33 @@ def build_one(source: Path, expected: dict, output: Path) -> dict:
                 "palette_changed": False, "pixel_art_scaled": False,
                 "gameIntegrationAllowed": False}
     alphas = set(rgba.getchannel("A").getdata())
-    bounds = rgba.getchannel("A").getbbox()
+    original_bounds = rgba.getchannel("A").getbbox()
     opaque = {p[:3] for p in rgba.getdata() if p[3] == 255}
     detail = {"original": str(source.relative_to(ROOT)), "sha256": sha256(raw),
-              "original_canvas": original_canvas, "bounds": list(bounds) if bounds else None,
+              "original_canvas": original_canvas, "bounds": list(original_bounds) if original_bounds else None,
               "original_opaque_colors": len(opaque), "original_alpha_values": len(alphas),
               "output": None, "output_sha256": None, "status": None, "palette_changed": False,
-              "pixel_art_scaled": False, "gameIntegrationAllowed": False}
-    if not bounds:
+              "pixel_art_scaled": False, "lossless_2x_duplicate_collapse": False,
+              "original_pixels_reconstructible": False, "gameIntegrationAllowed": False}
+    if not original_bounds:
         detail["status"] = "BLOCKED_EMPTY_SOURCE"
         return detail
     if not alphas.issubset({0, 255}):
         detail["status"] = "BLOCKED_PARTIAL_ALPHA"
         return detail
+    # The Reborn/Plates source sheets often use pixel-perfect 2x display
+    # duplication (160/192 canvases). Only invert it when the *entire image*
+    # can be reconstructed byte-for-byte from the smaller pixel grid. This is
+    # exact reversible de-duplication, never conventional resize/interpolation.
+    if ((original_bounds[2] - original_bounds[0] > 64 or original_bounds[3] - original_bounds[1] > 64)
+            and rgba.width % 2 == 0 and rgba.height % 2 == 0):
+        reduced = rgba.resize((rgba.width // 2, rgba.height // 2), Image.Resampling.NEAREST)
+        reconstruct = reduced.resize(rgba.size, Image.Resampling.NEAREST)
+        if reconstruct.tobytes() == rgba.tobytes():
+            rgba = reduced
+            detail["lossless_2x_duplicate_collapse"] = True
+            detail["original_pixels_reconstructible"] = True
+    bounds = rgba.getchannel("A").getbbox()
     w, h = bounds[2]-bounds[0], bounds[3]-bounds[1]
     detail["visible_content_dimensions"] = [w, h]
     if w > 64 or h > 64:
@@ -159,7 +173,9 @@ def build_one(source: Path, expected: dict, output: Path) -> dict:
     detail.update({"output": str(output.relative_to(ROOT)),
                    "output_sha256": sha256(output.read_bytes()),
                    "status": ("PALETTE_QUANTIZED_NEEDS_ART_REVIEW" if detail["palette_changed"]
-                              else "PIXEL_PRESERVED_DS64_CANDIDATE"),
+                              else ("PIXEL_PRESERVED_EXACT_2X_COLLAPSE_DS64_CANDIDATE"
+                                    if detail["lossless_2x_duplicate_collapse"]
+                                    else "PIXEL_PRESERVED_DS64_CANDIDATE")),
                    "output_opaque_colors": resulting, "output_canvas": [64, 64],
                    "placement_offset": [x, y], "origin": "alpha-cropped, bottom-centered"})
     return detail
@@ -210,10 +226,12 @@ def main():
                         pix = i.convert("RGBA")
                         assert set(pix.getchannel("A").getdata()).issubset({0, 255})
                         assert len({p[:3] for p in pix.getdata() if p[3]}) <= 15
+                        if meta.get("lossless_2x_duplicate_collapse"):
+                            assert meta.get("original_pixels_reconstructible") is True
         print("PASS verified", len(rows), "original identities, technical previews and source checksums")
         return
     counts = Counter(meta["status"] for d in result for meta in d["slots"].values())
-    summary = {"schema": "mercury-verified-source-ds64-technical-v1", "target": "64x64 RGBA PNG preview / ≤15 opaque colors / no resampling",
+    summary = {"schema": "mercury-verified-source-ds64-technical-v1", "target": "64x64 RGBA PNG preview / ≤15 opaque colors / only mathematically reversible 2x pixel deduplication",
                "policy": {"notDSROMReady": True, "notNativeGameTileFormat": True,
                           "sourceFilesNeverReplaced": True, "neverAutomaticallyApproved": True,
                           "noNewEvolutionLinks": True, "noFabricatedArt": True},
