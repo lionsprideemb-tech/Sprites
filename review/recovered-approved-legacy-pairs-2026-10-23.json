@@ -1,0 +1,3018 @@
+{
+  "schema": "mercury-recovered-approved-source-pairs-v1",
+  "snapshot": "2026-10-23",
+  "repository": "lionsprideemb-tech/Sprites",
+  "sourceTreeSha": "c59b6753772aef57b72348a32ff4c8c4aeff3068",
+  "sourceHistorySha": "e8e8474cbe127ab274086ea818aa86a821c990b5",
+  "sourceRepairSha": "03c277f17482bd8579613d927cba8ebe254df28d",
+  "count": 74,
+  "frontBackPairs": 74,
+  "completeShinyQuartets": 69,
+  "shinyIncomplete": 5,
+  "linkedPNGFiles": 286,
+  "policy": {
+    "readOnly": true,
+    "preserveExistingVotes": true,
+    "noDeletion": true,
+    "noAutomaticDSConversion": true,
+    "noROMIntegration": true,
+    "notAnApprovalPage": true
+  },
+  "description": "Non-destructive linkage of 74 historically approved alternate-form pairs in original recovered GBA art archives. Five pairs have no known shiny PNGs. These are source previews; they are NOT DS-ready sprite conversions.",
+  "entries": [
+    {
+      "identity": "butterfree-alternate-form-1",
+      "reviewId": "R0010",
+      "name": "Butterfree — Alternate (Form 1)",
+      "family": "#0010 Caterpie → #0011 Metapod → #0012 Butterfree",
+      "type1": "Bug",
+      "type2": "Fairy",
+      "source": "Reborn / Plates of Arceus",
+      "effectiveDecision": "keep",
+      "originalGbaPaths": {
+        "front": "Graphics/Battlers/012_1.png",
+        "back": "Graphics/Battlers/012b_1.png",
+        "shiny_front": "Graphics/Battlers/012s_1.png",
+        "shiny_back": "Graphics/Battlers/012sb_1.png",
+        "view_count": "4"
+      },
+      "previewFormat": "original-GBA-artwork-not-DS-certified",
+      "reviewRequired": false,
+      "artworkIntegrationAllowed": false,
+      "front": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/butterfree-alternate-form-1/front.png",
+        "gitBlobSha": "e14b6b92f811ee6bd2a7d49559e052114e2f7822",
+        "bytes": 19491
+      },
+      "back": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/butterfree-alternate-form-1/back.png",
+        "gitBlobSha": "5361b846853bcebbecc2b125c781b522a4825b12",
+        "bytes": 13163
+      },
+      "shinyFront": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/butterfree-alternate-form-1/shiny_front.png",
+        "gitBlobSha": "ff7d5aeaa9183c88348cd1abe7deff92cad8d523",
+        "bytes": 15725
+      },
+      "shinyBack": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/butterfree-alternate-form-1/shiny_back.png",
+        "gitBlobSha": "5052cf2d684d7310b559b5ee61cf42444a12a62c",
+        "bytes": 9369
+      },
+      "missingShiny": false
+    },
+    {
+      "identity": "poliwag-alternate-form-1",
+      "reviewId": "R0080",
+      "name": "Poliwag — Alternate (Form 1)",
+      "family": "#0060 Poliwag → #0061 Poliwhirl → #0062 Poliwrath → #0186 Politoed",
+      "type1": "Ground",
+      "type2": "",
+      "source": "Reborn / Plates of Arceus",
+      "effectiveDecision": "keep",
+      "originalGbaPaths": {
+        "front": "Graphics/Battlers/060_1.png",
+        "back": "Graphics/Battlers/060b_1.png",
+        "shiny_front": "Graphics/Battlers/060s_1.png",
+        "shiny_back": "Graphics/Battlers/060sb_1.png",
+        "view_count": "4"
+      },
+      "previewFormat": "original-GBA-artwork-not-DS-certified",
+      "reviewRequired": false,
+      "artworkIntegrationAllowed": false,
+      "front": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/poliwag-alternate-form-1/front.png",
+        "gitBlobSha": "f54e9ad174ea09acd8caf468cf2b9d3079b2840b",
+        "bytes": 7974
+      },
+      "back": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/poliwag-alternate-form-1/back.png",
+        "gitBlobSha": "63c006122b9eef03c6a07fe10fbaa05c2dcc46a0",
+        "bytes": 4283
+      },
+      "shinyFront": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/poliwag-alternate-form-1/shiny_front.png",
+        "gitBlobSha": "10e37234ff434182445d4e5d38d98604abf0114b",
+        "bytes": 5879
+      },
+      "shinyBack": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/poliwag-alternate-form-1/shiny_back.png",
+        "gitBlobSha": "a429868ea4811f34ffeca5c2ac835e8de6fd1305",
+        "bytes": 4002
+      },
+      "missingShiny": false
+    },
+    {
+      "identity": "poliwhirl-alternate-form-1",
+      "reviewId": "R0081",
+      "name": "Poliwhirl — Alternate (Form 1)",
+      "family": "#0060 Poliwag → #0061 Poliwhirl → #0062 Poliwrath → #0186 Politoed",
+      "type1": "Ground",
+      "type2": "",
+      "source": "Reborn / Plates of Arceus",
+      "effectiveDecision": "keep",
+      "originalGbaPaths": {
+        "front": "Graphics/Battlers/061_1.png",
+        "back": "Graphics/Battlers/061b_1.png",
+        "shiny_front": "Graphics/Battlers/061s_1.png",
+        "shiny_back": "Graphics/Battlers/061sb_1.png",
+        "view_count": "4"
+      },
+      "previewFormat": "original-GBA-artwork-not-DS-certified",
+      "reviewRequired": false,
+      "artworkIntegrationAllowed": false,
+      "front": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/poliwhirl-alternate-form-1/front.png",
+        "gitBlobSha": "60399e19564ba579de33816276c973f6405440dd",
+        "bytes": 8696
+      },
+      "back": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/poliwhirl-alternate-form-1/back.png",
+        "gitBlobSha": "3047f626bd24ea5a1fdee072f4628ee63b34ddf9",
+        "bytes": 5292
+      },
+      "shinyFront": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/poliwhirl-alternate-form-1/shiny_front.png",
+        "gitBlobSha": "dbfd6694788db0a0e85c8ba259eb5f391ab6f61f",
+        "bytes": 8371
+      },
+      "shinyBack": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/poliwhirl-alternate-form-1/shiny_back.png",
+        "gitBlobSha": "ef88075d469b0768475235e5c9b7672c6437d133",
+        "bytes": 4908
+      },
+      "missingShiny": false
+    },
+    {
+      "identity": "poliwrath-alternate-form-1",
+      "reviewId": "R0082",
+      "name": "Poliwrath — Alternate (Form 1)",
+      "family": "#0060 Poliwag → #0061 Poliwhirl → #0062 Poliwrath → #0186 Politoed",
+      "type1": "Ground",
+      "type2": "Fighting",
+      "source": "Reborn / Plates of Arceus",
+      "effectiveDecision": "keep",
+      "originalGbaPaths": {
+        "front": "Graphics/Battlers/062_1.png",
+        "back": "Graphics/Battlers/062b_1.png",
+        "shiny_front": "Graphics/Battlers/062s_1.png",
+        "shiny_back": "Graphics/Battlers/062sb_1.png",
+        "view_count": "4"
+      },
+      "previewFormat": "original-GBA-artwork-not-DS-certified",
+      "reviewRequired": false,
+      "artworkIntegrationAllowed": false,
+      "front": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/poliwrath-alternate-form-1/front.png",
+        "gitBlobSha": "eb292cdb3410d97393c08810b9e14b727a0ba329",
+        "bytes": 10560
+      },
+      "back": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/poliwrath-alternate-form-1/back.png",
+        "gitBlobSha": "dee37ef9a1dd1927a528be604bcdcce980648c55",
+        "bytes": 5542
+      },
+      "shinyFront": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/poliwrath-alternate-form-1/shiny_front.png",
+        "gitBlobSha": "786ef73ee7c6fce3273fa27684386da41e4b0c4f",
+        "bytes": 10122
+      },
+      "shinyBack": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/poliwrath-alternate-form-1/shiny_back.png",
+        "gitBlobSha": "eb953830ce81b1d548023b6bbd5507030146ded0",
+        "bytes": 5631
+      },
+      "missingShiny": false
+    },
+    {
+      "identity": "politoed-alternate-form-1",
+      "reviewId": "R0084",
+      "name": "Politoed — Alternate (Form 1)",
+      "family": "#0060 Poliwag → #0061 Poliwhirl → #0062 Poliwrath → #0186 Politoed",
+      "type1": "Ground",
+      "type2": "Psychic",
+      "source": "Reborn / Plates of Arceus",
+      "effectiveDecision": "keep",
+      "originalGbaPaths": {
+        "front": "Graphics/Battlers/186_1.png",
+        "back": "Graphics/Battlers/186b_1.png",
+        "shiny_front": "Graphics/Battlers/186s_1.png",
+        "shiny_back": "Graphics/Battlers/186sb_1.png",
+        "view_count": "4"
+      },
+      "previewFormat": "original-GBA-artwork-not-DS-certified",
+      "reviewRequired": false,
+      "artworkIntegrationAllowed": false,
+      "front": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/politoed-alternate-form-1/front.png",
+        "gitBlobSha": "3557a9575049444d944fa200f3ace60c9f8a8ac4",
+        "bytes": 11462
+      },
+      "back": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/politoed-alternate-form-1/back.png",
+        "gitBlobSha": "17977065e3e8a30f27203b8d5d0a6dbea3a4e418",
+        "bytes": 5443
+      },
+      "shinyFront": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/politoed-alternate-form-1/shiny_front.png",
+        "gitBlobSha": "c18d5db1c56aa5de3ae526cfa11096c58506e6c8",
+        "bytes": 8336
+      },
+      "shinyBack": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/politoed-alternate-form-1/shiny_back.png",
+        "gitBlobSha": "1b2b9f49d8938bb73993100abdd6651584ab327b",
+        "bytes": 5383
+      },
+      "missingShiny": false
+    },
+    {
+      "identity": "geodude-bluetowel-alternate-forms-form-2",
+      "reviewId": "R0105",
+      "name": "Geodude — BlueTowel Alternate forms (Form 2)",
+      "family": "#0074 Geodude → #0075 Graveler → #0076 Golem",
+      "type1": "Rock",
+      "type2": "Fire",
+      "source": "Reborn / Plates of Arceus",
+      "effectiveDecision": "keep",
+      "originalGbaPaths": {
+        "front": "Graphics/Battlers/074_2.png",
+        "back": "Graphics/Battlers/074b_2.png",
+        "shiny_front": "Graphics/Battlers/074s_2.png",
+        "shiny_back": "Graphics/Battlers/074sb_2.png",
+        "view_count": "4"
+      },
+      "previewFormat": "original-GBA-artwork-not-DS-certified",
+      "reviewRequired": false,
+      "artworkIntegrationAllowed": false,
+      "front": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/geodude-bluetowel-alternate-forms-form-2/front.png",
+        "gitBlobSha": "23842ac728ca55d76b68a397ac1cff471042906a",
+        "bytes": 8261
+      },
+      "back": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/geodude-bluetowel-alternate-forms-form-2/back.png",
+        "gitBlobSha": "370a9b0c87dfc7fc89fda3a2430d75b1e9aed156",
+        "bytes": 6630
+      },
+      "shinyFront": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/geodude-bluetowel-alternate-forms-form-2/shiny_front.png",
+        "gitBlobSha": "94ee1ddfd75e2438dba02be9c5e9fc526a1d842e",
+        "bytes": 9073
+      },
+      "shinyBack": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/geodude-bluetowel-alternate-forms-form-2/shiny_back.png",
+        "gitBlobSha": "e0b8502e7ef689b42ed1aac98dec3d256364d17e",
+        "bytes": 7141
+      },
+      "missingShiny": false
+    },
+    {
+      "identity": "graveler-bluetowel-alternate-forms-form-2",
+      "reviewId": "R0106",
+      "name": "Graveler — BlueTowel Alternate forms (Form 2)",
+      "family": "#0074 Geodude → #0075 Graveler → #0076 Golem",
+      "type1": "Rock",
+      "type2": "Fire",
+      "source": "Reborn / Plates of Arceus",
+      "effectiveDecision": "keep",
+      "originalGbaPaths": {
+        "front": "Graphics/Battlers/075_2.png",
+        "back": "Graphics/Battlers/075b_2.png",
+        "shiny_front": "Graphics/Battlers/075s_2.png",
+        "shiny_back": "Graphics/Battlers/075sb_2.png",
+        "view_count": "4"
+      },
+      "previewFormat": "original-GBA-artwork-not-DS-certified",
+      "reviewRequired": false,
+      "artworkIntegrationAllowed": false,
+      "front": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/graveler-bluetowel-alternate-forms-form-2/front.png",
+        "gitBlobSha": "fcb431b33a590b0a121d78b3581d501710fd40ba",
+        "bytes": 13229
+      },
+      "back": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/graveler-bluetowel-alternate-forms-form-2/back.png",
+        "gitBlobSha": "aec8872d0df77bcc9cd92a08f48877eac34c7e64",
+        "bytes": 9327
+      },
+      "shinyFront": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/graveler-bluetowel-alternate-forms-form-2/shiny_front.png",
+        "gitBlobSha": "529735efd1e10b5f12a64853be8a696545184ed2",
+        "bytes": 14872
+      },
+      "shinyBack": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/graveler-bluetowel-alternate-forms-form-2/shiny_back.png",
+        "gitBlobSha": "310b30eec1686cb1f44af0bc013f12e2f8c4394e",
+        "bytes": 10655
+      },
+      "missingShiny": false
+    },
+    {
+      "identity": "golem-bluetowel-alternate-forms-form-2",
+      "reviewId": "R0107",
+      "name": "Golem — BlueTowel Alternate forms (Form 2)",
+      "family": "#0074 Geodude → #0075 Graveler → #0076 Golem",
+      "type1": "Rock",
+      "type2": "Fire",
+      "source": "Reborn / Plates of Arceus",
+      "effectiveDecision": "keep",
+      "originalGbaPaths": {
+        "front": "Graphics/Battlers/076_2.png",
+        "back": "Graphics/Battlers/076b_2.png",
+        "shiny_front": "Graphics/Battlers/076s_2.png",
+        "shiny_back": "Graphics/Battlers/076sb_2.png",
+        "view_count": "4"
+      },
+      "previewFormat": "original-GBA-artwork-not-DS-certified",
+      "reviewRequired": false,
+      "artworkIntegrationAllowed": false,
+      "front": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/golem-bluetowel-alternate-forms-form-2/front.png",
+        "gitBlobSha": "615e298bd6c171c2c58a33f22794146b434b35f2",
+        "bytes": 15309
+      },
+      "back": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/golem-bluetowel-alternate-forms-form-2/back.png",
+        "gitBlobSha": "0de3b7f075b70734deebba7fcf38aaefa633d46b",
+        "bytes": 11046
+      },
+      "shinyFront": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/golem-bluetowel-alternate-forms-form-2/shiny_front.png",
+        "gitBlobSha": "b3dc1e208adc3e21d0af8c00b5ea26b3dddf2240",
+        "bytes": 15368
+      },
+      "shinyBack": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/golem-bluetowel-alternate-forms-form-2/shiny_back.png",
+        "gitBlobSha": "3fe895af4db3c3ffc4ad5795ce34508604bfebf5",
+        "bytes": 12245
+      },
+      "missingShiny": false
+    },
+    {
+      "identity": "koffing-bluetowel-alternate-forms-form-2",
+      "reviewId": "R0172",
+      "name": "Koffing — BlueTowel Alternate forms (Form 2)",
+      "family": "#0109 Koffing → #0110 Weezing",
+      "type1": "Poison",
+      "type2": "Steel",
+      "source": "Reborn / Plates of Arceus",
+      "effectiveDecision": "keep",
+      "originalGbaPaths": {
+        "front": "Graphics/Battlers/109_2.png",
+        "back": "Graphics/Battlers/109b_2.png",
+        "shiny_front": "Graphics/Battlers/109s_2.png",
+        "shiny_back": "Graphics/Battlers/109sb_2.png",
+        "view_count": "4"
+      },
+      "previewFormat": "original-GBA-artwork-not-DS-certified",
+      "reviewRequired": false,
+      "artworkIntegrationAllowed": false,
+      "front": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/koffing-bluetowel-alternate-forms-form-2/front.png",
+        "gitBlobSha": "2af5e01dd5404e894461731fad46a5a85526b5f9",
+        "bytes": 10704
+      },
+      "back": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/koffing-bluetowel-alternate-forms-form-2/back.png",
+        "gitBlobSha": "ab00af9c476c2016595e3b2d0841412ac1c9d86f",
+        "bytes": 8472
+      },
+      "shinyFront": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/koffing-bluetowel-alternate-forms-form-2/shiny_front.png",
+        "gitBlobSha": "df54316b82236f22d5bc3bfaba9c1ac2838b1cab",
+        "bytes": 10641
+      },
+      "shinyBack": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/koffing-bluetowel-alternate-forms-form-2/shiny_back.png",
+        "gitBlobSha": "6ff1fe9b0429fc3aaa928cb0ae31658ce3f0788c",
+        "bytes": 8388
+      },
+      "missingShiny": false
+    },
+    {
+      "identity": "weezing-bluetowel-alternate-forms-form-2",
+      "reviewId": "R0174",
+      "name": "Weezing — BlueTowel Alternate forms (Form 2)",
+      "family": "#0109 Koffing → #0110 Weezing",
+      "type1": "Poison",
+      "type2": "Steel",
+      "source": "Reborn / Plates of Arceus",
+      "effectiveDecision": "keep",
+      "originalGbaPaths": {
+        "front": "Graphics/Battlers/110_2.png",
+        "back": "Graphics/Battlers/110b_2.png",
+        "shiny_front": "Graphics/Battlers/110s_2.png",
+        "shiny_back": "Graphics/Battlers/110sb_2.png",
+        "view_count": "4"
+      },
+      "previewFormat": "original-GBA-artwork-not-DS-certified",
+      "reviewRequired": false,
+      "artworkIntegrationAllowed": false,
+      "front": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/weezing-bluetowel-alternate-forms-form-2/front.png",
+        "gitBlobSha": "7679dfaa86e4e2682eaa109ed1b7c0f555a81375",
+        "bytes": 14413
+      },
+      "back": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/weezing-bluetowel-alternate-forms-form-2/back.png",
+        "gitBlobSha": "ead9670b5e58925685aea4c222e364713ff2ce4e",
+        "bytes": 11239
+      },
+      "shinyFront": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/weezing-bluetowel-alternate-forms-form-2/shiny_front.png",
+        "gitBlobSha": "f572e9b0ff79ecc6309ae067fe1f5356aca33121",
+        "bytes": 14379
+      },
+      "shinyBack": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/weezing-bluetowel-alternate-forms-form-2/shiny_back.png",
+        "gitBlobSha": "0ad25859b7f8300c5ffa977ad55478a3cbace78b",
+        "bytes": 11284
+      },
+      "missingShiny": false
+    },
+    {
+      "identity": "staryu-alternate-form-1",
+      "reviewId": "R0190",
+      "name": "Staryu — Alternate (Form 1)",
+      "family": "#0120 Staryu → #0121 Starmie",
+      "type1": "Rock",
+      "type2": "Fire",
+      "source": "Reborn / Plates of Arceus",
+      "effectiveDecision": "keep",
+      "originalGbaPaths": {
+        "front": "Graphics/Battlers/120_1.png",
+        "back": "Graphics/Battlers/120b_1.png",
+        "shiny_front": "Graphics/Battlers/120s_1.png",
+        "shiny_back": "Graphics/Battlers/120sb_1.png",
+        "view_count": "4"
+      },
+      "previewFormat": "original-GBA-artwork-not-DS-certified",
+      "reviewRequired": false,
+      "artworkIntegrationAllowed": false,
+      "front": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/staryu-alternate-form-1/front.png",
+        "gitBlobSha": "00ae0df3f26d0426988dfaa6218ad9db1d0ccde5",
+        "bytes": 6517
+      },
+      "back": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/staryu-alternate-form-1/back.png",
+        "gitBlobSha": "205a0051f0b1ca17695c7e701c9de472ea923355",
+        "bytes": 4309
+      },
+      "shinyFront": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/staryu-alternate-form-1/shiny_front.png",
+        "gitBlobSha": "8fd346fcf88c5d4b83743ec760c5d46b80767e83",
+        "bytes": 8652
+      },
+      "shinyBack": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/staryu-alternate-form-1/shiny_back.png",
+        "gitBlobSha": "d293b82e947f9384210e4ebba0465ac7b4f5cf1c",
+        "bytes": 6486
+      },
+      "missingShiny": false
+    },
+    {
+      "identity": "starmie-alternate-form-1",
+      "reviewId": "R0191",
+      "name": "Starmie — Alternate (Form 1)",
+      "family": "#0120 Staryu → #0121 Starmie",
+      "type1": "Rock",
+      "type2": "Fire",
+      "source": "Reborn / Plates of Arceus",
+      "effectiveDecision": "keep",
+      "originalGbaPaths": {
+        "front": "Graphics/Battlers/121_1.png",
+        "back": "Graphics/Battlers/121b_1.png",
+        "shiny_front": "Graphics/Battlers/121s_1.png",
+        "shiny_back": "Graphics/Battlers/121sb_1.png",
+        "view_count": "4"
+      },
+      "previewFormat": "original-GBA-artwork-not-DS-certified",
+      "reviewRequired": false,
+      "artworkIntegrationAllowed": false,
+      "front": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/starmie-alternate-form-1/front.png",
+        "gitBlobSha": "badf14fce0bd7c0db00d252b50d384dc153becda",
+        "bytes": 7637
+      },
+      "back": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/starmie-alternate-form-1/back.png",
+        "gitBlobSha": "73dfaa089d0763ee9fe6fad66d69ce135a0e92bc",
+        "bytes": 5014
+      },
+      "shinyFront": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/starmie-alternate-form-1/shiny_front.png",
+        "gitBlobSha": "429aa4c2d6fd2591fa13b937dae550ca8fe7d6ec",
+        "bytes": 13195
+      },
+      "shinyBack": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/starmie-alternate-form-1/shiny_back.png",
+        "gitBlobSha": "737f1ad7ee12ef0ae66e2201e794bd4d882ff338",
+        "bytes": 9299
+      },
+      "missingShiny": false
+    },
+    {
+      "identity": "flareon-alternate-form-3",
+      "reviewId": "R0230",
+      "name": "Flareon — Alternate (Form 3)",
+      "family": "#0133 Eevee → #0134 Vaporeon → #0135 Jolteon → #0136 Flareon → #0196 Espeon → #0197 Umbreon → #0470 Leafeon → #0471 Glaceon → #0700 Sylveon",
+      "type1": "Fire",
+      "type2": "Psychic",
+      "source": "Reborn / Plates of Arceus",
+      "effectiveDecision": "keep",
+      "originalGbaPaths": {
+        "front": "Graphics/Battlers/136_3.png",
+        "back": "Graphics/Battlers/136b_3.png",
+        "shiny_front": "Graphics/Battlers/136s_3.png",
+        "shiny_back": "Graphics/Battlers/136sb_3.png",
+        "view_count": "4"
+      },
+      "previewFormat": "original-GBA-artwork-not-DS-certified",
+      "reviewRequired": false,
+      "artworkIntegrationAllowed": false,
+      "front": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/flareon-alternate-form-3/front.png",
+        "gitBlobSha": "bd23d7eb1f81149bb6482a07c72a27b24b2beea3",
+        "bytes": 10069
+      },
+      "back": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/flareon-alternate-form-3/back.png",
+        "gitBlobSha": "7a2372913b831cdd825f7ee3478a20816ce5a6d4",
+        "bytes": 9772
+      },
+      "shinyFront": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/flareon-alternate-form-3/shiny_front.png",
+        "gitBlobSha": "133f86a9a7c6449ad3cf4dfded23abc30b806e44",
+        "bytes": 9589
+      },
+      "shinyBack": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/flareon-alternate-form-3/shiny_back.png",
+        "gitBlobSha": "24260df1f61cd427587f336d73c774e8513dc854",
+        "bytes": 9313
+      },
+      "missingShiny": false
+    },
+    {
+      "identity": "leafeon-alternate-form-3",
+      "reviewId": "R0237",
+      "name": "Leafeon — Alternate (Form 3)",
+      "family": "#0133 Eevee → #0134 Vaporeon → #0135 Jolteon → #0136 Flareon → #0196 Espeon → #0197 Umbreon → #0470 Leafeon → #0471 Glaceon → #0700 Sylveon",
+      "type1": "Grass",
+      "type2": "Dark",
+      "source": "Reborn / Plates of Arceus",
+      "effectiveDecision": "keep",
+      "originalGbaPaths": {
+        "front": "Graphics/Battlers/470_3.png",
+        "back": "Graphics/Battlers/470b_3.png",
+        "shiny_front": "Graphics/Battlers/470s_3.png",
+        "shiny_back": "Graphics/Battlers/470sb_3.png",
+        "view_count": "4"
+      },
+      "previewFormat": "original-GBA-artwork-not-DS-certified",
+      "reviewRequired": false,
+      "artworkIntegrationAllowed": false,
+      "front": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/leafeon-alternate-form-3/front.png",
+        "gitBlobSha": "4b99e10f51ae138d258e2633f4115fb045f9928e",
+        "bytes": 9190
+      },
+      "back": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/leafeon-alternate-form-3/back.png",
+        "gitBlobSha": "2679d73d945917b3c031678009423880e403a23b",
+        "bytes": 7019
+      },
+      "shinyFront": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/leafeon-alternate-form-3/shiny_front.png",
+        "gitBlobSha": "101da2daa13ffb92ab59d296f9d326d6abe4857d",
+        "bytes": 8286
+      },
+      "shinyBack": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/leafeon-alternate-form-3/shiny_back.png",
+        "gitBlobSha": "373f918d3a3cccbccfd5ccbec9a83a5cc8183b4c",
+        "bytes": 6358
+      },
+      "missingShiny": false
+    },
+    {
+      "identity": "glaceon-alternate-form-3",
+      "reviewId": "R0239",
+      "name": "Glaceon — Alternate (Form 3)",
+      "family": "#0133 Eevee → #0134 Vaporeon → #0135 Jolteon → #0136 Flareon → #0196 Espeon → #0197 Umbreon → #0470 Leafeon → #0471 Glaceon → #0700 Sylveon",
+      "type1": "Ice",
+      "type2": "Ground",
+      "source": "Reborn / Plates of Arceus",
+      "effectiveDecision": "keep",
+      "originalGbaPaths": {
+        "front": "Graphics/Battlers/471_3.png",
+        "back": "Graphics/Battlers/471b_3.png",
+        "shiny_front": "Graphics/Battlers/471s_3.png",
+        "shiny_back": "Graphics/Battlers/471sb_3.png",
+        "view_count": "4"
+      },
+      "previewFormat": "original-GBA-artwork-not-DS-certified",
+      "reviewRequired": false,
+      "artworkIntegrationAllowed": false,
+      "front": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/glaceon-alternate-form-3/front.png",
+        "gitBlobSha": "60982fd9a1d424a5ac12632b9c9cf7f6c917d473",
+        "bytes": 7853
+      },
+      "back": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/glaceon-alternate-form-3/back.png",
+        "gitBlobSha": "4eab523492ccc4c089b02d50b0aa7e6e404bb820",
+        "bytes": 6316
+      },
+      "shinyFront": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/glaceon-alternate-form-3/shiny_front.png",
+        "gitBlobSha": "8be766bd77c93299e75b0c6a25024d29da2459c0",
+        "bytes": 7196
+      },
+      "shinyBack": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/glaceon-alternate-form-3/shiny_back.png",
+        "gitBlobSha": "c8c6d9264d945a3e5af92270b5bd7eb7c1317057",
+        "bytes": 5623
+      },
+      "missingShiny": false
+    },
+    {
+      "identity": "dragonite-alternate-form-1",
+      "reviewId": "R0267",
+      "name": "Dragonite — Alternate (Form 1)",
+      "family": "#0147 Dratini → #0148 Dragonair → #0149 Dragonite",
+      "type1": "Dragon",
+      "type2": "Electric",
+      "source": "Reborn / Plates of Arceus",
+      "effectiveDecision": "keep",
+      "originalGbaPaths": {
+        "front": "Graphics/Battlers/149_1.png",
+        "back": "Graphics/Battlers/149b_1.png",
+        "shiny_front": "Graphics/Battlers/149s_1.png",
+        "shiny_back": "Graphics/Battlers/149sb_1.png",
+        "view_count": "4"
+      },
+      "previewFormat": "original-GBA-artwork-not-DS-certified",
+      "reviewRequired": false,
+      "artworkIntegrationAllowed": false,
+      "front": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/dragonite-alternate-form-1/front.png",
+        "gitBlobSha": "1d004bcf82370e6bc639cac990e433cafde9fa05",
+        "bytes": 15868
+      },
+      "back": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/dragonite-alternate-form-1/back.png",
+        "gitBlobSha": "14eeff907f1c33b98abf48ace4e69b5406aadb66",
+        "bytes": 11864
+      },
+      "shinyFront": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/dragonite-alternate-form-1/shiny_front.png",
+        "gitBlobSha": "74e119240413ce1eef226afb77ededb0188b930b",
+        "bytes": 15266
+      },
+      "shinyBack": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/dragonite-alternate-form-1/shiny_back.png",
+        "gitBlobSha": "466aba75f58ce61ed7d522f2337dca1a1d6f9b72",
+        "bytes": 11236
+      },
+      "missingShiny": false
+    },
+    {
+      "identity": "feraligatr-alternate-form-1",
+      "reviewId": "R0283",
+      "name": "Feraligatr — Alternate (Form 1)",
+      "family": "#0158 Totodile → #0159 Croconaw → #0160 Feraligatr",
+      "type1": "Ground",
+      "type2": "Dark",
+      "source": "Reborn / Plates of Arceus",
+      "effectiveDecision": "keep",
+      "originalGbaPaths": {
+        "front": "Graphics/Battlers/160_1.png",
+        "back": "Graphics/Battlers/160b_1.png",
+        "shiny_front": "Graphics/Battlers/160s_1.png",
+        "shiny_back": "Graphics/Battlers/160sb_1.png",
+        "view_count": "4"
+      },
+      "previewFormat": "original-GBA-artwork-not-DS-certified",
+      "reviewRequired": false,
+      "artworkIntegrationAllowed": false,
+      "front": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/feraligatr-alternate-form-1/front.png",
+        "gitBlobSha": "a7cfbe510876ab0ad88c2181ae35344d347f7496",
+        "bytes": 16250
+      },
+      "back": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/feraligatr-alternate-form-1/back.png",
+        "gitBlobSha": "f00a724ec3f1716a82803a35241956cc69d241bc",
+        "bytes": 11074
+      },
+      "shinyFront": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/feraligatr-alternate-form-1/shiny_front.png",
+        "gitBlobSha": "07a86586e186be237ea5f7f3f6db0a59d4782c6b",
+        "bytes": 16224
+      },
+      "shinyBack": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/feraligatr-alternate-form-1/shiny_back.png",
+        "gitBlobSha": "4d9b8e490d8f76e4fb0c32f53e293908acf7627b",
+        "bytes": 10941
+      },
+      "missingShiny": false
+    },
+    {
+      "identity": "hoothoot-alternate-form-1",
+      "reviewId": "R0285",
+      "name": "Hoothoot — Alternate (Form 1)",
+      "family": "#0163 Hoothoot → #0164 Noctowl",
+      "type1": "Water",
+      "type2": "Ghost",
+      "source": "Reborn / Plates of Arceus",
+      "effectiveDecision": "keep",
+      "originalGbaPaths": {
+        "front": "Graphics/Battlers/163_1.png",
+        "back": "Graphics/Battlers/163b_1.png",
+        "shiny_front": "Graphics/Battlers/163s_1.png",
+        "shiny_back": "Graphics/Battlers/163sb_1.png",
+        "view_count": "4"
+      },
+      "previewFormat": "original-GBA-artwork-not-DS-certified",
+      "reviewRequired": false,
+      "artworkIntegrationAllowed": false,
+      "front": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/hoothoot-alternate-form-1/front.png",
+        "gitBlobSha": "3d37cd819230f1181fca04a889c5368b67a08395",
+        "bytes": 6583
+      },
+      "back": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/hoothoot-alternate-form-1/back.png",
+        "gitBlobSha": "6c120b579205ec31f0e811ed702115f8825eda08",
+        "bytes": 4674
+      },
+      "shinyFront": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/hoothoot-alternate-form-1/shiny_front.png",
+        "gitBlobSha": "cc9ed5788a6b500872ad897d299c1b7a7393adea",
+        "bytes": 9870
+      },
+      "shinyBack": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/hoothoot-alternate-form-1/shiny_back.png",
+        "gitBlobSha": "802106583f5daa8df8c493b0f408c5459c62fa28",
+        "bytes": 7393
+      },
+      "missingShiny": false
+    },
+    {
+      "identity": "ampharos-alternate-mega-form-3",
+      "reviewId": "R0299",
+      "name": "Ampharos — Alternate Mega (Form 3)",
+      "family": "#0179 Mareep → #0180 Flaaffy → #0181 Ampharos",
+      "type1": "Electric",
+      "type2": "Dragon",
+      "source": "Reborn / Plates of Arceus",
+      "effectiveDecision": "keep",
+      "originalGbaPaths": {
+        "front": "Graphics/Battlers/181_3.png",
+        "back": "Graphics/Battlers/181b_3.png",
+        "shiny_front": "Graphics/Battlers/181s_3.png",
+        "shiny_back": "Graphics/Battlers/181sb_3.png",
+        "view_count": "4"
+      },
+      "previewFormat": "original-GBA-artwork-not-DS-certified",
+      "reviewRequired": false,
+      "artworkIntegrationAllowed": false,
+      "front": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/ampharos-alternate-mega-form-3/front.png",
+        "gitBlobSha": "bbd98cb9e667381db741704096e35b874cd4cf37",
+        "bytes": 11839
+      },
+      "back": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/ampharos-alternate-mega-form-3/back.png",
+        "gitBlobSha": "d842c10b433bac0b428e7ff2731d66257831115e",
+        "bytes": 11139
+      },
+      "shinyFront": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/ampharos-alternate-mega-form-3/shiny_front.png",
+        "gitBlobSha": "f8a518d3d71fc5cba2659fa38fdc468985c97323",
+        "bytes": 12026
+      },
+      "shinyBack": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/ampharos-alternate-mega-form-3/shiny_back.png",
+        "gitBlobSha": "7e07deaabe9c2c652c48ed8fb72cf68b1f9dccbb",
+        "bytes": 11242
+      },
+      "missingShiny": false
+    },
+    {
+      "identity": "sunflora-alternate-form-1",
+      "reviewId": "R0307",
+      "name": "Sunflora — Alternate (Form 1)",
+      "family": "#0191 Sunkern → #0192 Sunflora",
+      "type1": "Grass",
+      "type2": "Fire",
+      "source": "Reborn / Plates of Arceus",
+      "effectiveDecision": "keep",
+      "originalGbaPaths": {
+        "front": "Graphics/Battlers/192_1.png",
+        "back": "Graphics/Battlers/192b_1.png",
+        "shiny_front": "Graphics/Battlers/192s_1.png",
+        "shiny_back": "Graphics/Battlers/192sb_1.png",
+        "view_count": "4"
+      },
+      "previewFormat": "original-GBA-artwork-not-DS-certified",
+      "reviewRequired": false,
+      "artworkIntegrationAllowed": false,
+      "front": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/sunflora-alternate-form-1/front.png",
+        "gitBlobSha": "914135bac2260f224ad949bd51ef6d87d1420c80",
+        "bytes": 8718
+      },
+      "back": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/sunflora-alternate-form-1/back.png",
+        "gitBlobSha": "a3522d323159223fb35969ff92474e2bceb644b2",
+        "bytes": 9535
+      },
+      "shinyFront": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/sunflora-alternate-form-1/shiny_front.png",
+        "gitBlobSha": "0e88ea8710198ef9dc8621b2c8d0dc5acf9be259",
+        "bytes": 8054
+      },
+      "shinyBack": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/sunflora-alternate-form-1/shiny_back.png",
+        "gitBlobSha": "b7508f4216a306c76c67db5331d59f8c08ebdbc6",
+        "bytes": 8349
+      },
+      "missingShiny": false
+    },
+    {
+      "identity": "misdreavus-alternate-form-2",
+      "reviewId": "R0316",
+      "name": "Misdreavus — Alternate (Form 2)",
+      "family": "#0200 Misdreavus → #0429 Mismagius",
+      "type1": "Ghost",
+      "type2": "Psychic",
+      "source": "Reborn / Plates of Arceus",
+      "effectiveDecision": "keep",
+      "originalGbaPaths": {
+        "front": "Graphics/Battlers/200_2.png",
+        "back": "Graphics/Battlers/200b_2.png",
+        "shiny_front": "Graphics/Battlers/200s_2.png",
+        "shiny_back": "Graphics/Battlers/200sb_2.png",
+        "view_count": "4"
+      },
+      "previewFormat": "original-GBA-artwork-not-DS-certified",
+      "reviewRequired": false,
+      "artworkIntegrationAllowed": false,
+      "front": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/misdreavus-alternate-form-2/front.png",
+        "gitBlobSha": "e9ca2c3546d2fce5c3765230bf0d11aa07cf6dc0",
+        "bytes": 4720
+      },
+      "back": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/misdreavus-alternate-form-2/back.png",
+        "gitBlobSha": "eba6353e25e058fb7a0ec0d0521de12f47bc5b11",
+        "bytes": 8244
+      },
+      "shinyFront": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/misdreavus-alternate-form-2/shiny_front.png",
+        "gitBlobSha": "80c0b4e8d00082efc6413818149ec20399f12a58",
+        "bytes": 7716
+      },
+      "shinyBack": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/misdreavus-alternate-form-2/shiny_back.png",
+        "gitBlobSha": "9bee55f40bff96000bf871a212aa39efd5a84af1",
+        "bytes": 6354
+      },
+      "missingShiny": false
+    },
+    {
+      "identity": "mismagius-alternate-form-2",
+      "reviewId": "R0318",
+      "name": "Mismagius — Alternate (Form 2)",
+      "family": "#0200 Misdreavus → #0429 Mismagius",
+      "type1": "Ghost",
+      "type2": "Psychic",
+      "source": "Reborn / Plates of Arceus",
+      "effectiveDecision": "keep",
+      "originalGbaPaths": {
+        "front": "Graphics/Battlers/429_2.png",
+        "back": "Graphics/Battlers/429b_2.png",
+        "shiny_front": "Graphics/Battlers/429s_2.png",
+        "shiny_back": "Graphics/Battlers/429sb_2.png",
+        "view_count": "4"
+      },
+      "previewFormat": "original-GBA-artwork-not-DS-certified",
+      "reviewRequired": false,
+      "artworkIntegrationAllowed": false,
+      "front": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/mismagius-alternate-form-2/front.png",
+        "gitBlobSha": "67190c48352a9e5e2fc77ea697013da90a8221cf",
+        "bytes": 15021
+      },
+      "back": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/mismagius-alternate-form-2/back.png",
+        "gitBlobSha": "14724ddd20bbd75ba772f4cb2a12267396edec15",
+        "bytes": 9378
+      },
+      "shinyFront": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/mismagius-alternate-form-2/shiny_front.png",
+        "gitBlobSha": "fe5cd11cc7c2a2324f8eda1d4fcae922a2be63eb",
+        "bytes": 15426
+      },
+      "shinyBack": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/mismagius-alternate-form-2/shiny_back.png",
+        "gitBlobSha": "f925dd2c7e0e30913fadb6ec1241503b18fad063",
+        "bytes": 9852
+      },
+      "missingShiny": false
+    },
+    {
+      "identity": "dunsparce-bt-alt-forms-earth-form-2",
+      "reviewId": "R0324",
+      "name": "Dunsparce — BT Alt Forms - Earth (Form 2)",
+      "family": "#0206 Dunsparce → #0982 Dudunsparce",
+      "type1": "Normal",
+      "type2": "Ground",
+      "source": "Reborn / Plates of Arceus",
+      "effectiveDecision": "keep",
+      "originalGbaPaths": {
+        "front": "Graphics/Battlers/206_2.png",
+        "back": "Graphics/Battlers/206b_2.png",
+        "shiny_front": "Graphics/Battlers/206s_2.png",
+        "shiny_back": "Graphics/Battlers/206sb_2.png",
+        "view_count": "4"
+      },
+      "previewFormat": "original-GBA-artwork-not-DS-certified",
+      "reviewRequired": false,
+      "artworkIntegrationAllowed": false,
+      "front": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/dunsparce-bt-alt-forms-earth-form-2/front.png",
+        "gitBlobSha": "f84a0abea03cfab6a37f6595a91e9fb3f5600185",
+        "bytes": 6022
+      },
+      "back": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/dunsparce-bt-alt-forms-earth-form-2/back.png",
+        "gitBlobSha": "b62c8f9c4a87431a1dad630085e08bef81774cf8",
+        "bytes": 4530
+      },
+      "shinyFront": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/dunsparce-bt-alt-forms-earth-form-2/shiny_front.png",
+        "gitBlobSha": "202473cdf413988fb7c4e31c86225a4e0f2c5a8a",
+        "bytes": 6213
+      },
+      "shinyBack": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/dunsparce-bt-alt-forms-earth-form-2/shiny_back.png",
+        "gitBlobSha": "b9c6bde40f0d11d02c1aea878ba0f16a2f6e43f4",
+        "bytes": 4558
+      },
+      "missingShiny": false
+    },
+    {
+      "identity": "gliscor-alternate-form-1",
+      "reviewId": "R0332",
+      "name": "Gliscor — Alternate (Form 1)",
+      "family": "#0207 Gligar → #0472 Gliscor",
+      "type1": "Ground",
+      "type2": "Poison",
+      "source": "Reborn / Plates of Arceus",
+      "effectiveDecision": "keep",
+      "originalGbaPaths": {
+        "front": "Graphics/Battlers/472_1.png",
+        "back": "Graphics/Battlers/472b_1.png",
+        "shiny_front": "Graphics/Battlers/472s_1.png",
+        "shiny_back": "Graphics/Battlers/472sb_1.png",
+        "view_count": "4"
+      },
+      "previewFormat": "original-GBA-artwork-not-DS-certified",
+      "reviewRequired": false,
+      "artworkIntegrationAllowed": false,
+      "front": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/gliscor-alternate-form-1/front.png",
+        "gitBlobSha": "f8486b0cf7b80e5cd3d37f0b0c770afbb50603c3",
+        "bytes": 12972
+      },
+      "back": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/gliscor-alternate-form-1/back.png",
+        "gitBlobSha": "706da7e3b0a62b1f6adede62b0bbb6e4086fe296",
+        "bytes": 9338
+      },
+      "shinyFront": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/gliscor-alternate-form-1/shiny_front.png",
+        "gitBlobSha": "edfbbe89d4d7a9dad4a82a56824f13616f01ab12",
+        "bytes": 16435
+      },
+      "shinyBack": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/gliscor-alternate-form-1/shiny_back.png",
+        "gitBlobSha": "5c72a40e8afdcc2afd725944aaae9e4cbf05001a",
+        "bytes": 8648
+      },
+      "missingShiny": false
+    },
+    {
+      "identity": "snubbull-alternate-form-1",
+      "reviewId": "R0334",
+      "name": "Snubbull — Alternate (Form 1)",
+      "family": "#0209 Snubbull → #0210 Granbull",
+      "type1": "Fairy",
+      "type2": "Dark",
+      "source": "Reborn / Plates of Arceus",
+      "effectiveDecision": "keep",
+      "originalGbaPaths": {
+        "front": "Graphics/Battlers/209_1.png",
+        "back": "Graphics/Battlers/209b_1.png",
+        "shiny_front": "Graphics/Battlers/209s_1.png",
+        "shiny_back": "Graphics/Battlers/209sb_1.png",
+        "view_count": "4"
+      },
+      "previewFormat": "original-GBA-artwork-not-DS-certified",
+      "reviewRequired": false,
+      "artworkIntegrationAllowed": false,
+      "front": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/snubbull-alternate-form-1/front.png",
+        "gitBlobSha": "857646ad6d20ba3a4d7d3b875fa2df9d66f70ba4",
+        "bytes": 5804
+      },
+      "back": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/snubbull-alternate-form-1/back.png",
+        "gitBlobSha": "e18d4d8a4ac71ec50a3d1b665c2d2d2ee1dc1b8a",
+        "bytes": 3927
+      },
+      "shinyFront": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/snubbull-alternate-form-1/shiny_front.png",
+        "gitBlobSha": "3188a45dd3954788c73ae2683344836723c22555",
+        "bytes": 6335
+      },
+      "shinyBack": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/snubbull-alternate-form-1/shiny_back.png",
+        "gitBlobSha": "63b6e02ed740f749c86f77a54aa69019f31a4109",
+        "bytes": 4272
+      },
+      "missingShiny": false
+    },
+    {
+      "identity": "granbull-alternate-form-1",
+      "reviewId": "R0337",
+      "name": "Granbull — Alternate (Form 1)",
+      "family": "#0209 Snubbull → #0210 Granbull",
+      "type1": "Fairy",
+      "type2": "Dark",
+      "source": "Reborn / Plates of Arceus",
+      "effectiveDecision": "keep",
+      "originalGbaPaths": {
+        "front": "Graphics/Battlers/210_1.png",
+        "back": "Graphics/Battlers/210b_1.png",
+        "shiny_front": "Graphics/Battlers/210s_1.png",
+        "shiny_back": "Graphics/Battlers/210sb_1.png",
+        "view_count": "4"
+      },
+      "previewFormat": "original-GBA-artwork-not-DS-certified",
+      "reviewRequired": false,
+      "artworkIntegrationAllowed": false,
+      "front": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/granbull-alternate-form-1/front.png",
+        "gitBlobSha": "d1c51d4f3bd93983f9b4828d798443d786f46fa0",
+        "bytes": 7712
+      },
+      "back": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/granbull-alternate-form-1/back.png",
+        "gitBlobSha": "3471569bb827020e9fabbd50722840ee76109d7b",
+        "bytes": 4566
+      },
+      "shinyFront": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/granbull-alternate-form-1/shiny_front.png",
+        "gitBlobSha": "7b944573101fad4cd6752aadb9520a6c806c41f4",
+        "bytes": 9580
+      },
+      "shinyBack": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/granbull-alternate-form-1/shiny_back.png",
+        "gitBlobSha": "97ec08c06d9495f0cb90153dd2c91213641b07c0",
+        "bytes": 5775
+      },
+      "missingShiny": false
+    },
+    {
+      "identity": "donphan-alternate-form-1",
+      "reviewId": "R0372",
+      "name": "Donphan — Alternate (Form 1)",
+      "family": "#0231 Phanpy → #0232 Donphan",
+      "type1": "Ground",
+      "type2": "Electric",
+      "source": "Reborn / Plates of Arceus",
+      "effectiveDecision": "keep",
+      "originalGbaPaths": {
+        "front": "Graphics/Battlers/232_1.png",
+        "back": "Graphics/Battlers/232b_1.png",
+        "shiny_front": "Graphics/Battlers/232s_1.png",
+        "shiny_back": "Graphics/Battlers/232sb_1.png",
+        "view_count": "4"
+      },
+      "previewFormat": "original-GBA-artwork-not-DS-certified",
+      "reviewRequired": false,
+      "artworkIntegrationAllowed": false,
+      "front": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/donphan-alternate-form-1/front.png",
+        "gitBlobSha": "2560f3696e450a56045b1f40c1381dd43992a0d9",
+        "bytes": 15280
+      },
+      "back": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/donphan-alternate-form-1/back.png",
+        "gitBlobSha": "b09ecf9fd02b95f74f28b8d5ed38659c05de3921",
+        "bytes": 10509
+      },
+      "shinyFront": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/donphan-alternate-form-1/shiny_front.png",
+        "gitBlobSha": "8e6b0b6cf1392c5fa5e3ae3164c13fe871c375e3",
+        "bytes": 15627
+      },
+      "shinyBack": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/donphan-alternate-form-1/shiny_back.png",
+        "gitBlobSha": "5cb59b4d1c188d8fb27a2e4cbd67849aa5be8a9f",
+        "bytes": 11479
+      },
+      "missingShiny": false
+    },
+    {
+      "identity": "larvitar-space-form-4",
+      "reviewId": "R0381",
+      "name": "Larvitar — Space (Form 4)",
+      "family": "#0246 Larvitar → #0247 Pupitar → #0248 Tyranitar",
+      "type1": "Dragon",
+      "type2": "Dragon",
+      "source": "Reborn / Plates of Arceus",
+      "effectiveDecision": "keep",
+      "originalGbaPaths": {
+        "front": "Graphics/Battlers/246_4.png",
+        "back": "Graphics/Battlers/246b_4.png",
+        "shiny_front": "Graphics/Battlers/246s_4.png",
+        "shiny_back": "Graphics/Battlers/246sb_4.png",
+        "view_count": "4"
+      },
+      "previewFormat": "original-GBA-artwork-not-DS-certified",
+      "reviewRequired": false,
+      "artworkIntegrationAllowed": false,
+      "front": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/larvitar-space-form-4/front.png",
+        "gitBlobSha": "02ec057052ae19f5fabb133e97f5f1b3243543a1",
+        "bytes": 6863
+      },
+      "back": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/larvitar-space-form-4/back.png",
+        "gitBlobSha": "a08f7693ca38b01df4c123ba0302294df410be61",
+        "bytes": 5280
+      },
+      "shinyFront": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/larvitar-space-form-4/shiny_front.png",
+        "gitBlobSha": "f54c5e31bf9d2c574004df14ed1d1c34b8de6e18",
+        "bytes": 6435
+      },
+      "shinyBack": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/larvitar-space-form-4/shiny_back.png",
+        "gitBlobSha": "9ff9c1808051d09d806168bc6a0ac8a941173988",
+        "bytes": 3409
+      },
+      "missingShiny": false
+    },
+    {
+      "identity": "pupitar-space-form-4",
+      "reviewId": "R0384",
+      "name": "Pupitar — Space (Form 4)",
+      "family": "#0246 Larvitar → #0247 Pupitar → #0248 Tyranitar",
+      "type1": "Dragon",
+      "type2": "Dragon",
+      "source": "Reborn / Plates of Arceus",
+      "effectiveDecision": "keep",
+      "originalGbaPaths": {
+        "front": "Graphics/Battlers/247_4.png",
+        "back": "Graphics/Battlers/247b_4.png",
+        "shiny_front": "Graphics/Battlers/247s_4.png",
+        "shiny_back": "Graphics/Battlers/247sb_4.png",
+        "view_count": "4"
+      },
+      "previewFormat": "original-GBA-artwork-not-DS-certified",
+      "reviewRequired": false,
+      "artworkIntegrationAllowed": false,
+      "front": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/pupitar-space-form-4/front.png",
+        "gitBlobSha": "24fb5a638470205bdb3717d84306a7db8a60b8b6",
+        "bytes": 7698
+      },
+      "back": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/pupitar-space-form-4/back.png",
+        "gitBlobSha": "63761e6df07d0e830ef8980347bd559079ac3a45",
+        "bytes": 6320
+      },
+      "shinyFront": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/pupitar-space-form-4/shiny_front.png",
+        "gitBlobSha": "e568cdbf7166179b0977e7c27abf9457d5047b49",
+        "bytes": 4894
+      },
+      "shinyBack": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/pupitar-space-form-4/shiny_back.png",
+        "gitBlobSha": "8bd7af47428a804f5a5041bac185e4def8fa1cce",
+        "bytes": 3834
+      },
+      "missingShiny": false
+    },
+    {
+      "identity": "tyranitar-space-form-4",
+      "reviewId": "R0388",
+      "name": "Tyranitar — Space (Form 4)",
+      "family": "#0246 Larvitar → #0247 Pupitar → #0248 Tyranitar",
+      "type1": "Dragon",
+      "type2": "Dragon",
+      "source": "Reborn / Plates of Arceus",
+      "effectiveDecision": "keep",
+      "originalGbaPaths": {
+        "front": "Graphics/Battlers/248_4.png",
+        "back": "Graphics/Battlers/248b_4.png",
+        "shiny_front": "Graphics/Battlers/248s_4.png",
+        "shiny_back": "Graphics/Battlers/248sb_4.png",
+        "view_count": "4"
+      },
+      "previewFormat": "original-GBA-artwork-not-DS-certified",
+      "reviewRequired": false,
+      "artworkIntegrationAllowed": false,
+      "front": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/tyranitar-space-form-4/front.png",
+        "gitBlobSha": "7f66260c45ada4f6530f66f8aa02e1fc5e46fa65",
+        "bytes": 17232
+      },
+      "back": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/tyranitar-space-form-4/back.png",
+        "gitBlobSha": "10c446829a5f281998b1dc8455c192349b807013",
+        "bytes": 10836
+      },
+      "shinyFront": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/tyranitar-space-form-4/shiny_front.png",
+        "gitBlobSha": "595fdc867724520f824409b9e7b9b61a7dbd832b",
+        "bytes": 12118
+      },
+      "shinyBack": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/tyranitar-space-form-4/shiny_back.png",
+        "gitBlobSha": "055daeeb5b4660427d56f21fac98128a211d3f0e",
+        "bytes": 10272
+      },
+      "missingShiny": false
+    },
+    {
+      "identity": "breloom-alternate-form-3",
+      "reviewId": "R0421",
+      "name": "Breloom — Alternate (Form 3)",
+      "family": "#0285 Shroomish → #0286 Breloom",
+      "type1": "Ghost",
+      "type2": "Fighting",
+      "source": "Reborn / Plates of Arceus",
+      "effectiveDecision": "keep",
+      "originalGbaPaths": {
+        "front": "Graphics/Battlers/286_3.png",
+        "back": "Graphics/Battlers/286b_3.png",
+        "shiny_front": "",
+        "shiny_back": "",
+        "view_count": "2"
+      },
+      "previewFormat": "original-GBA-artwork-not-DS-certified",
+      "reviewRequired": false,
+      "artworkIntegrationAllowed": false,
+      "front": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/breloom-alternate-form-3/front.png",
+        "gitBlobSha": "037b02fb419902e179dadee63499792268e54261",
+        "bytes": 9540
+      },
+      "back": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/breloom-alternate-form-3/back.png",
+        "gitBlobSha": "686decd4d167451333976359cac01c592f60dccc",
+        "bytes": 7230
+      },
+      "shinyFront": null,
+      "shinyBack": null,
+      "missingShiny": true
+    },
+    {
+      "identity": "probopass-alternate-form-1",
+      "reviewId": "R0440",
+      "name": "Probopass — Alternate (Form 1)",
+      "family": "#0299 Nosepass → #0476 Probopass",
+      "type1": "Rock",
+      "type2": "Electric",
+      "source": "Reborn / Plates of Arceus",
+      "effectiveDecision": "keep",
+      "originalGbaPaths": {
+        "front": "Graphics/Battlers/476_1.png",
+        "back": "Graphics/Battlers/476b_1.png",
+        "shiny_front": "Graphics/Battlers/476s_1.png",
+        "shiny_back": "Graphics/Battlers/476sb_1.png",
+        "view_count": "4"
+      },
+      "previewFormat": "original-GBA-artwork-not-DS-certified",
+      "reviewRequired": false,
+      "artworkIntegrationAllowed": false,
+      "front": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/probopass-alternate-form-1/front.png",
+        "gitBlobSha": "5c3edeee09bb5f7b1a6163919e672f26f6345152",
+        "bytes": 12195
+      },
+      "back": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/probopass-alternate-form-1/back.png",
+        "gitBlobSha": "646219ec4fdc0987c5dc7869c816e86da322f77d",
+        "bytes": 10908
+      },
+      "shinyFront": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/probopass-alternate-form-1/shiny_front.png",
+        "gitBlobSha": "1369c04700963d833581979a1879b4b6d3d787c9",
+        "bytes": 12790
+      },
+      "shinyBack": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/probopass-alternate-form-1/shiny_back.png",
+        "gitBlobSha": "2151de6e2e52079808f877b3c331146c5e4b787d",
+        "bytes": 8622
+      },
+      "missingShiny": false
+    },
+    {
+      "identity": "altaria-alternate-form-2",
+      "reviewId": "R0504",
+      "name": "Altaria — Alternate (Form 2)",
+      "family": "#0333 Swablu → #0334 Altaria",
+      "type1": "Dragon",
+      "type2": "Fairy",
+      "source": "Reborn / Plates of Arceus",
+      "effectiveDecision": "keep",
+      "originalGbaPaths": {
+        "front": "Graphics/Battlers/334_2.png",
+        "back": "Graphics/Battlers/334b_2.png",
+        "shiny_front": "Graphics/Battlers/334s_2.png",
+        "shiny_back": "Graphics/Battlers/334sb_2.png",
+        "view_count": "4"
+      },
+      "previewFormat": "original-GBA-artwork-not-DS-certified",
+      "reviewRequired": false,
+      "artworkIntegrationAllowed": false,
+      "front": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/altaria-alternate-form-2/front.png",
+        "gitBlobSha": "6ca9ed3749742d75920cdb86fb66056b94b570ee",
+        "bytes": 18338
+      },
+      "back": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/altaria-alternate-form-2/back.png",
+        "gitBlobSha": "eef494042468a4fd5da791db6ba88cbd73891dd0",
+        "bytes": 12083
+      },
+      "shinyFront": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/altaria-alternate-form-2/shiny_front.png",
+        "gitBlobSha": "0879f97ca1225b6dcd5723e67a325f53dc98345d",
+        "bytes": 3045
+      },
+      "shinyBack": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/altaria-alternate-form-2/shiny_back.png",
+        "gitBlobSha": "94798bf746f76c66c04122d979810daf5a2d6e31",
+        "bytes": 2679
+      },
+      "missingShiny": false
+    },
+    {
+      "identity": "altaria-alternate-mega-form-3",
+      "reviewId": "R0505",
+      "name": "Altaria — Alternate Mega (Form 3)",
+      "family": "#0333 Swablu → #0334 Altaria",
+      "type1": "Dragon",
+      "type2": "Fairy",
+      "source": "Reborn / Plates of Arceus",
+      "effectiveDecision": "keep",
+      "originalGbaPaths": {
+        "front": "Graphics/Battlers/334_3.png",
+        "back": "Graphics/Battlers/334b_3.png",
+        "shiny_front": "Graphics/Battlers/334s_3.png",
+        "shiny_back": "Graphics/Battlers/334sb_3.png",
+        "view_count": "4"
+      },
+      "previewFormat": "original-GBA-artwork-not-DS-certified",
+      "reviewRequired": false,
+      "artworkIntegrationAllowed": false,
+      "front": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/altaria-alternate-mega-form-3/front.png",
+        "gitBlobSha": "328a7892007558c105818c000114bd533f8da492",
+        "bytes": 5653
+      },
+      "back": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/altaria-alternate-mega-form-3/back.png",
+        "gitBlobSha": "017f6a2470fdb45525a3a7c1566b2346b62ed65b",
+        "bytes": 3817
+      },
+      "shinyFront": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/altaria-alternate-mega-form-3/shiny_front.png",
+        "gitBlobSha": "af9e435fed30d0fb4876e9174b0e4170b15df42a",
+        "bytes": 5635
+      },
+      "shinyBack": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/altaria-alternate-mega-form-3/shiny_back.png",
+        "gitBlobSha": "48b432ead0662cc4776e9848ccbbbb2fb7ed8d99",
+        "bytes": 3858
+      },
+      "missingShiny": false
+    },
+    {
+      "identity": "dusknoir-alternate-form-1",
+      "reviewId": "R0528",
+      "name": "Dusknoir — Alternate (Form 1)",
+      "family": "#0355 Duskull → #0356 Dusclops → #0477 Dusknoir",
+      "type1": "Ghost",
+      "type2": "Steel",
+      "source": "Reborn / Plates of Arceus",
+      "effectiveDecision": "keep",
+      "originalGbaPaths": {
+        "front": "Graphics/Battlers/477_1.png",
+        "back": "Graphics/Battlers/477b_1.png",
+        "shiny_front": "Graphics/Battlers/477s_1.png",
+        "shiny_back": "Graphics/Battlers/477sb_1.png",
+        "view_count": "4"
+      },
+      "previewFormat": "original-GBA-artwork-not-DS-certified",
+      "reviewRequired": false,
+      "artworkIntegrationAllowed": false,
+      "front": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/dusknoir-alternate-form-1/front.png",
+        "gitBlobSha": "c182bcfb9205d9efc729f1e1e751d4ede09b91de",
+        "bytes": 20136
+      },
+      "back": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/dusknoir-alternate-form-1/back.png",
+        "gitBlobSha": "35334d97fd7282487b6388071f025dd86d7830e9",
+        "bytes": 14047
+      },
+      "shinyFront": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/dusknoir-alternate-form-1/shiny_front.png",
+        "gitBlobSha": "d1765d3704a57217d0b8eb749eb346c4158951eb",
+        "bytes": 19254
+      },
+      "shinyBack": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/dusknoir-alternate-form-1/shiny_back.png",
+        "gitBlobSha": "37592edb5fc187510bb4ac85cdcf653c2a40f346",
+        "bytes": 13789
+      },
+      "missingShiny": false
+    },
+    {
+      "identity": "salamence-alternate-form-2",
+      "reviewId": "R0555",
+      "name": "Salamence — Alternate (Form 2)",
+      "family": "#0371 Bagon → #0372 Shelgon → #0373 Salamence",
+      "type1": "Dragon",
+      "type2": "Ghost",
+      "source": "Reborn / Plates of Arceus",
+      "effectiveDecision": "keep",
+      "originalGbaPaths": {
+        "front": "Graphics/Battlers/373_2.png",
+        "back": "Graphics/Battlers/373b_2.png",
+        "shiny_front": "Graphics/Battlers/373s_2.png",
+        "shiny_back": "Graphics/Battlers/373sb_2.png",
+        "view_count": "4"
+      },
+      "previewFormat": "original-GBA-artwork-not-DS-certified",
+      "reviewRequired": false,
+      "artworkIntegrationAllowed": false,
+      "front": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/salamence-alternate-form-2/front.png",
+        "gitBlobSha": "adcaaa7fc3b4f45b55f20d381b8fa0f1d854d420",
+        "bytes": 18103
+      },
+      "back": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/salamence-alternate-form-2/back.png",
+        "gitBlobSha": "c4c5d295215d0282546eaec1b8602a13ce1a69a5",
+        "bytes": 14209
+      },
+      "shinyFront": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/salamence-alternate-form-2/shiny_front.png",
+        "gitBlobSha": "ded44a5d7d6a6e4c9592f6e85aac3b959f85888f",
+        "bytes": 19162
+      },
+      "shinyBack": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/salamence-alternate-form-2/shiny_back.png",
+        "gitBlobSha": "856575719835062bb768015aa5a832194b4fa3d2",
+        "bytes": 14974
+      },
+      "missingShiny": false
+    },
+    {
+      "identity": "salamence-alternate-mega-form-3",
+      "reviewId": "R0556",
+      "name": "Salamence — Alternate Mega (Form 3)",
+      "family": "#0371 Bagon → #0372 Shelgon → #0373 Salamence",
+      "type1": "Dragon",
+      "type2": "Ghost",
+      "source": "Reborn / Plates of Arceus",
+      "effectiveDecision": "keep",
+      "originalGbaPaths": {
+        "front": "Graphics/Battlers/373_3.png",
+        "back": "Graphics/Battlers/373b_3.png",
+        "shiny_front": "Graphics/Battlers/373s_3.png",
+        "shiny_back": "Graphics/Battlers/373sb_3.png",
+        "view_count": "4"
+      },
+      "previewFormat": "original-GBA-artwork-not-DS-certified",
+      "reviewRequired": false,
+      "artworkIntegrationAllowed": false,
+      "front": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/salamence-alternate-mega-form-3/front.png",
+        "gitBlobSha": "980016ee997f12d684aab668ee2a1ab5ef3bcb90",
+        "bytes": 16675
+      },
+      "back": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/salamence-alternate-mega-form-3/back.png",
+        "gitBlobSha": "81f2fd37bc6eff222c522b86bdee7cb9aeaf2609",
+        "bytes": 15155
+      },
+      "shinyFront": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/salamence-alternate-mega-form-3/shiny_front.png",
+        "gitBlobSha": "e9679aa2feb7b6bbfd1ba14d5b2bcca1eb03ab83",
+        "bytes": 17966
+      },
+      "shinyBack": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/salamence-alternate-mega-form-3/shiny_back.png",
+        "gitBlobSha": "b4b4238ce4b779436ffacac32446ad9d8a4d1be9",
+        "bytes": 15850
+      },
+      "missingShiny": false
+    },
+    {
+      "identity": "metang-alternate-form-2",
+      "reviewId": "R0558",
+      "name": "Metang — Alternate (Form 2)",
+      "family": "#0374 Beldum → #0375 Metang → #0376 Metagross",
+      "type1": "Electric",
+      "type2": "Psychic",
+      "source": "Reborn / Plates of Arceus",
+      "effectiveDecision": "keep",
+      "originalGbaPaths": {
+        "front": "Graphics/Battlers/375_2.png",
+        "back": "Graphics/Battlers/375b_2.png",
+        "shiny_front": "Graphics/Battlers/375s_2.png",
+        "shiny_back": "Graphics/Battlers/375sb_2.png",
+        "view_count": "4"
+      },
+      "previewFormat": "original-GBA-artwork-not-DS-certified",
+      "reviewRequired": false,
+      "artworkIntegrationAllowed": false,
+      "front": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/metang-alternate-form-2/front.png",
+        "gitBlobSha": "493730bebce82806804cf97a8ec1a79db1cea2c8",
+        "bytes": 13417
+      },
+      "back": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/metang-alternate-form-2/back.png",
+        "gitBlobSha": "0a6313fdaf220f69e5d2fc0bb8d1831c88d21483",
+        "bytes": 11137
+      },
+      "shinyFront": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/metang-alternate-form-2/shiny_front.png",
+        "gitBlobSha": "4de65571496848bba83195d80eeaa105e306c4ad",
+        "bytes": 13263
+      },
+      "shinyBack": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/metang-alternate-form-2/shiny_back.png",
+        "gitBlobSha": "d2a08ee72060047ae393513ab4edc8d6ba7766a0",
+        "bytes": 10893
+      },
+      "missingShiny": false
+    },
+    {
+      "identity": "metagross-alternate-form-2",
+      "reviewId": "R0560",
+      "name": "Metagross — Alternate (Form 2)",
+      "family": "#0374 Beldum → #0375 Metang → #0376 Metagross",
+      "type1": "Electric",
+      "type2": "Psychic",
+      "source": "Reborn / Plates of Arceus",
+      "effectiveDecision": "keep",
+      "originalGbaPaths": {
+        "front": "Graphics/Battlers/376_2.png",
+        "back": "Graphics/Battlers/376b_2.png",
+        "shiny_front": "Graphics/Battlers/376s_2.png",
+        "shiny_back": "Graphics/Battlers/376sb_2.png",
+        "view_count": "4"
+      },
+      "previewFormat": "original-GBA-artwork-not-DS-certified",
+      "reviewRequired": false,
+      "artworkIntegrationAllowed": false,
+      "front": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/metagross-alternate-form-2/front.png",
+        "gitBlobSha": "724a1dcc54dee7e9d1c311f3805cde0b66166289",
+        "bytes": 16963
+      },
+      "back": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/metagross-alternate-form-2/back.png",
+        "gitBlobSha": "5064e00887941e8113e58632af7d2fd771252533",
+        "bytes": 12661
+      },
+      "shinyFront": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/metagross-alternate-form-2/shiny_front.png",
+        "gitBlobSha": "67e1daedeed32130e43482c6a533bc4ff488bbe0",
+        "bytes": 16463
+      },
+      "shinyBack": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/metagross-alternate-form-2/shiny_back.png",
+        "gitBlobSha": "8ec7f98762adb4ebff34403dd674dd06bc73d4fe",
+        "bytes": 11865
+      },
+      "missingShiny": false
+    },
+    {
+      "identity": "metagross-alternate-mega-form-3",
+      "reviewId": "R0561",
+      "name": "Metagross — Alternate Mega (Form 3)",
+      "family": "#0374 Beldum → #0375 Metang → #0376 Metagross",
+      "type1": "Electric",
+      "type2": "Ghost",
+      "source": "Reborn / Plates of Arceus",
+      "effectiveDecision": "keep",
+      "originalGbaPaths": {
+        "front": "Graphics/Battlers/376_3.png",
+        "back": "Graphics/Battlers/376b_3.png",
+        "shiny_front": "Graphics/Battlers/376s_3.png",
+        "shiny_back": "Graphics/Battlers/376sb_3.png",
+        "view_count": "4"
+      },
+      "previewFormat": "original-GBA-artwork-not-DS-certified",
+      "reviewRequired": false,
+      "artworkIntegrationAllowed": false,
+      "front": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/metagross-alternate-mega-form-3/front.png",
+        "gitBlobSha": "3c43df2025a173d61d165800d9c32d89412b68cc",
+        "bytes": 22007
+      },
+      "back": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/metagross-alternate-mega-form-3/back.png",
+        "gitBlobSha": "82c9033e19abf4b46bba902bb26ae9364011f466",
+        "bytes": 16534
+      },
+      "shinyFront": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/metagross-alternate-mega-form-3/shiny_front.png",
+        "gitBlobSha": "9b2f92b444c3de516bd4cd0c48758fe87d63002b",
+        "bytes": 20874
+      },
+      "shinyBack": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/metagross-alternate-mega-form-3/shiny_back.png",
+        "gitBlobSha": "ac565dac12d7d0f701c76b3d878f244c99163dde",
+        "bytes": 19513
+      },
+      "missingShiny": false
+    },
+    {
+      "identity": "combee-alternate-form-1",
+      "reviewId": "R0607",
+      "name": "Combee — Alternate (Form 1)",
+      "family": "#0415 Combee → #0416 Vespiquen",
+      "type1": "Bug",
+      "type2": "Psychic",
+      "source": "Reborn / Plates of Arceus",
+      "effectiveDecision": "keep",
+      "originalGbaPaths": {
+        "front": "Graphics/Battlers/415_1.png",
+        "back": "Graphics/Battlers/415b_1.png",
+        "shiny_front": "",
+        "shiny_back": "",
+        "view_count": "2"
+      },
+      "previewFormat": "original-GBA-artwork-not-DS-certified",
+      "reviewRequired": false,
+      "artworkIntegrationAllowed": false,
+      "front": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/combee-alternate-form-1/front.png",
+        "gitBlobSha": "86f2206f561d9bee895a82eef93229d55fc8b389",
+        "bytes": 2253
+      },
+      "back": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/combee-alternate-form-1/back.png",
+        "gitBlobSha": "df446be87693b01af92b14e9f13665c482cbfa75",
+        "bytes": 2586
+      },
+      "shinyFront": null,
+      "shinyBack": null,
+      "missingShiny": true
+    },
+    {
+      "identity": "vespiquen-alternate-form-1",
+      "reviewId": "R0608",
+      "name": "Vespiquen — Alternate (Form 1)",
+      "family": "#0415 Combee → #0416 Vespiquen",
+      "type1": "Bug",
+      "type2": "Psychic",
+      "source": "Reborn / Plates of Arceus",
+      "effectiveDecision": "keep",
+      "originalGbaPaths": {
+        "front": "Graphics/Battlers/416_1.png",
+        "back": "Graphics/Battlers/416b_1.png",
+        "shiny_front": "",
+        "shiny_back": "",
+        "view_count": "2"
+      },
+      "previewFormat": "original-GBA-artwork-not-DS-certified",
+      "reviewRequired": false,
+      "artworkIntegrationAllowed": false,
+      "front": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/vespiquen-alternate-form-1/front.png",
+        "gitBlobSha": "2bf8fe48bb0ba3f4a6046229b79ad9eda721cae7",
+        "bytes": 3666
+      },
+      "back": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/vespiquen-alternate-form-1/back.png",
+        "gitBlobSha": "895f739091f66523dfa209649654b2da80301859",
+        "bytes": 3708
+      },
+      "shinyFront": null,
+      "shinyBack": null,
+      "missingShiny": true
+    },
+    {
+      "identity": "carnivine-alternate-form-2",
+      "reviewId": "R0655",
+      "name": "Carnivine — Alternate (Form 2)",
+      "family": "#0455 Carnivine",
+      "type1": "Steel",
+      "type2": "Dark",
+      "source": "Reborn / Plates of Arceus",
+      "effectiveDecision": "keep",
+      "originalGbaPaths": {
+        "front": "Graphics/Battlers/455_2.png",
+        "back": "Graphics/Battlers/455b_2.png",
+        "shiny_front": "Graphics/Battlers/455s_2.png",
+        "shiny_back": "Graphics/Battlers/455sb_2.png",
+        "view_count": "4"
+      },
+      "previewFormat": "original-GBA-artwork-not-DS-certified",
+      "reviewRequired": false,
+      "artworkIntegrationAllowed": false,
+      "front": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/carnivine-alternate-form-2/front.png",
+        "gitBlobSha": "58bee34bf9e822d1464bd534b3e6b6c7dd2febff",
+        "bytes": 7786
+      },
+      "back": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/carnivine-alternate-form-2/back.png",
+        "gitBlobSha": "13a6c404cc2d4ccaead47078ce54f6ea695711a6",
+        "bytes": 6076
+      },
+      "shinyFront": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/carnivine-alternate-form-2/shiny_front.png",
+        "gitBlobSha": "bb6ff4a739475dacf80acf598ff3727d810a18ec",
+        "bytes": 9536
+      },
+      "shinyBack": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/carnivine-alternate-form-2/shiny_back.png",
+        "gitBlobSha": "3c3514b2d7a0d925439859f015e682767a5380a5",
+        "bytes": 7130
+      },
+      "missingShiny": false
+    },
+    {
+      "identity": "purrloin-alternate-form-1",
+      "reviewId": "R0683",
+      "name": "Purrloin — Alternate (Form 1)",
+      "family": "#0509 Purrloin → #0510 Liepard",
+      "type1": "Ice",
+      "type2": "Dark",
+      "source": "Reborn / Plates of Arceus",
+      "effectiveDecision": "keep",
+      "originalGbaPaths": {
+        "front": "Graphics/Battlers/509_1.png",
+        "back": "Graphics/Battlers/509b_1.png",
+        "shiny_front": "Graphics/Battlers/509s_1.png",
+        "shiny_back": "Graphics/Battlers/509sb_1.png",
+        "view_count": "4"
+      },
+      "previewFormat": "original-GBA-artwork-not-DS-certified",
+      "reviewRequired": false,
+      "artworkIntegrationAllowed": false,
+      "front": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/purrloin-alternate-form-1/front.png",
+        "gitBlobSha": "c88c373d19c05518126d8a2363aebe291c6ff3f5",
+        "bytes": 11447
+      },
+      "back": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/purrloin-alternate-form-1/back.png",
+        "gitBlobSha": "9ee42f277309b755d2258baae407f466b2ee12e8",
+        "bytes": 7417
+      },
+      "shinyFront": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/purrloin-alternate-form-1/shiny_front.png",
+        "gitBlobSha": "71a3c6a90369cb04f4530da5d1013e3c0dde38c4",
+        "bytes": 11029
+      },
+      "shinyBack": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/purrloin-alternate-form-1/shiny_back.png",
+        "gitBlobSha": "c6da29831eaf9fbea131214797d4c2b0a2213122",
+        "bytes": 5107
+      },
+      "missingShiny": false
+    },
+    {
+      "identity": "liepard-alternate-form-1",
+      "reviewId": "R0684",
+      "name": "Liepard — Alternate (Form 1)",
+      "family": "#0509 Purrloin → #0510 Liepard",
+      "type1": "Dark",
+      "type2": "Ice",
+      "source": "Reborn / Plates of Arceus",
+      "effectiveDecision": "keep",
+      "originalGbaPaths": {
+        "front": "Graphics/Battlers/510_1.png",
+        "back": "Graphics/Battlers/510b_1.png",
+        "shiny_front": "Graphics/Battlers/510s_1.png",
+        "shiny_back": "Graphics/Battlers/510sb_1.png",
+        "view_count": "4"
+      },
+      "previewFormat": "original-GBA-artwork-not-DS-certified",
+      "reviewRequired": false,
+      "artworkIntegrationAllowed": false,
+      "front": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/liepard-alternate-form-1/front.png",
+        "gitBlobSha": "4e39eaccba793daaf279dd31f92878c88fb78e19",
+        "bytes": 11532
+      },
+      "back": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/liepard-alternate-form-1/back.png",
+        "gitBlobSha": "2806283dfe76c21f47ae40fa033f4873a21ae738",
+        "bytes": 8931
+      },
+      "shinyFront": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/liepard-alternate-form-1/shiny_front.png",
+        "gitBlobSha": "48837e6777a149f10cd286ee06647b9f12d99210",
+        "bytes": 12198
+      },
+      "shinyBack": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/liepard-alternate-form-1/shiny_back.png",
+        "gitBlobSha": "0095a14bad322e482f56cf61ae21370cfc6f50ae",
+        "bytes": 9508
+      },
+      "missingShiny": false
+    },
+    {
+      "identity": "munna-alternate-form-1",
+      "reviewId": "R0691",
+      "name": "Munna — Alternate (Form 1)",
+      "family": "#0517 Munna → #0518 Musharna",
+      "type1": "Grass",
+      "type2": "",
+      "source": "Reborn / Plates of Arceus",
+      "effectiveDecision": "keep",
+      "originalGbaPaths": {
+        "front": "Graphics/Battlers/517_1.png",
+        "back": "Graphics/Battlers/517b_1.png",
+        "shiny_front": "Graphics/Battlers/517s_1.png",
+        "shiny_back": "Graphics/Battlers/517sb_1.png",
+        "view_count": "4"
+      },
+      "previewFormat": "original-GBA-artwork-not-DS-certified",
+      "reviewRequired": false,
+      "artworkIntegrationAllowed": false,
+      "front": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/munna-alternate-form-1/front.png",
+        "gitBlobSha": "190fe0f0292807d98c0aaa153441c6d6ad2ef58f",
+        "bytes": 7755
+      },
+      "back": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/munna-alternate-form-1/back.png",
+        "gitBlobSha": "2f58407890003b2f1a1c900a42bdc4e40bc2462b",
+        "bytes": 7300
+      },
+      "shinyFront": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/munna-alternate-form-1/shiny_front.png",
+        "gitBlobSha": "859c44fffc9034be2ef66e3dc7ffcfece9e7050c",
+        "bytes": 3606
+      },
+      "shinyBack": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/munna-alternate-form-1/shiny_back.png",
+        "gitBlobSha": "1ff5c1ac9275b218e969f3e5db6a7aceab246071",
+        "bytes": 4636
+      },
+      "missingShiny": false
+    },
+    {
+      "identity": "musharna-alternate-form-1",
+      "reviewId": "R0692",
+      "name": "Musharna — Alternate (Form 1)",
+      "family": "#0517 Munna → #0518 Musharna",
+      "type1": "Grass",
+      "type2": "Fire",
+      "source": "Reborn / Plates of Arceus",
+      "effectiveDecision": "keep",
+      "originalGbaPaths": {
+        "front": "Graphics/Battlers/518_1.png",
+        "back": "Graphics/Battlers/518b_1.png",
+        "shiny_front": "Graphics/Battlers/518s_1.png",
+        "shiny_back": "Graphics/Battlers/518sb_1.png",
+        "view_count": "4"
+      },
+      "previewFormat": "original-GBA-artwork-not-DS-certified",
+      "reviewRequired": false,
+      "artworkIntegrationAllowed": false,
+      "front": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/musharna-alternate-form-1/front.png",
+        "gitBlobSha": "f6155875741848fd47313a5d53f58de8775345df",
+        "bytes": 14751
+      },
+      "back": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/musharna-alternate-form-1/back.png",
+        "gitBlobSha": "455c5aa8bbc735a1a008b0393155761d3c2571bd",
+        "bytes": 14308
+      },
+      "shinyFront": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/musharna-alternate-form-1/shiny_front.png",
+        "gitBlobSha": "22af6778284dcecfd4ce3d0ad3606506802ccb27",
+        "bytes": 7532
+      },
+      "shinyBack": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/musharna-alternate-form-1/shiny_back.png",
+        "gitBlobSha": "914852faac6f1ba9a7aa2e05a7c8f5a7280fafed",
+        "bytes": 7519
+      },
+      "missingShiny": false
+    },
+    {
+      "identity": "petilil-alternate-form-1",
+      "reviewId": "R0705",
+      "name": "Petilil — Alternate (Form 1)",
+      "family": "#0548 Petilil → #0549 Lilligant",
+      "type1": "Grass",
+      "type2": "Fire",
+      "source": "Reborn / Plates of Arceus",
+      "effectiveDecision": "keep",
+      "originalGbaPaths": {
+        "front": "Graphics/Battlers/548_1.png",
+        "back": "Graphics/Battlers/548b_1.png",
+        "shiny_front": "Graphics/Battlers/548s_1.png",
+        "shiny_back": "Graphics/Battlers/548sb_1.png",
+        "view_count": "4"
+      },
+      "previewFormat": "original-GBA-artwork-not-DS-certified",
+      "reviewRequired": false,
+      "artworkIntegrationAllowed": false,
+      "front": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/petilil-alternate-form-1/front.png",
+        "gitBlobSha": "8fe55189fe7c2f54835379cc5cb537988fe0b1f4",
+        "bytes": 4847
+      },
+      "back": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/petilil-alternate-form-1/back.png",
+        "gitBlobSha": "75918772269db2b543f07e1d9866ef28fa8e00b8",
+        "bytes": 4534
+      },
+      "shinyFront": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/petilil-alternate-form-1/shiny_front.png",
+        "gitBlobSha": "6af455ff5b1249d4e8928126a6e8a9b1895c130d",
+        "bytes": 4644
+      },
+      "shinyBack": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/petilil-alternate-form-1/shiny_back.png",
+        "gitBlobSha": "768778205cca85babc3150940ceb34593301b27d",
+        "bytes": 4262
+      },
+      "missingShiny": false
+    },
+    {
+      "identity": "lilligant-alternate-form-1",
+      "reviewId": "R0707",
+      "name": "Lilligant — Alternate (Form 1)",
+      "family": "#0548 Petilil → #0549 Lilligant",
+      "type1": "Grass",
+      "type2": "Fire",
+      "source": "Reborn / Plates of Arceus",
+      "effectiveDecision": "keep",
+      "originalGbaPaths": {
+        "front": "Graphics/Battlers/549_1.png",
+        "back": "Graphics/Battlers/549b_1.png",
+        "shiny_front": "Graphics/Battlers/549s_1.png",
+        "shiny_back": "Graphics/Battlers/549sb_1.png",
+        "view_count": "4"
+      },
+      "previewFormat": "original-GBA-artwork-not-DS-certified",
+      "reviewRequired": false,
+      "artworkIntegrationAllowed": false,
+      "front": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/lilligant-alternate-form-1/front.png",
+        "gitBlobSha": "db1f34dce6f227712abba0d035e5060a660bee61",
+        "bytes": 9421
+      },
+      "back": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/lilligant-alternate-form-1/back.png",
+        "gitBlobSha": "98b1e31b3eaeec6776f251532c1657519f154c1e",
+        "bytes": 8741
+      },
+      "shinyFront": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/lilligant-alternate-form-1/shiny_front.png",
+        "gitBlobSha": "03542090d5e1691747dc00e277ece9d44b692fbe",
+        "bytes": 8925
+      },
+      "shinyBack": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/lilligant-alternate-form-1/shiny_back.png",
+        "gitBlobSha": "c58d82687d7651f58eea32d48e93b308bf065ef1",
+        "bytes": 8092
+      },
+      "missingShiny": false
+    },
+    {
+      "identity": "sandile-alternate-form-1",
+      "reviewId": "R0709",
+      "name": "Sandile — Alternate (Form 1)",
+      "family": "#0551 Sandile → #0552 Krokorok → #0553 Krookodile",
+      "type1": "Water",
+      "type2": "Dark",
+      "source": "Reborn / Plates of Arceus",
+      "effectiveDecision": "keep",
+      "originalGbaPaths": {
+        "front": "Graphics/Battlers/551_1.png",
+        "back": "Graphics/Battlers/551b_1.png",
+        "shiny_front": "Graphics/Battlers/551s_1.png",
+        "shiny_back": "Graphics/Battlers/551sb_1.png",
+        "view_count": "4"
+      },
+      "previewFormat": "original-GBA-artwork-not-DS-certified",
+      "reviewRequired": false,
+      "artworkIntegrationAllowed": false,
+      "front": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/sandile-alternate-form-1/front.png",
+        "gitBlobSha": "8d84728a5d3e9b381a0e9f954acde998dec4041a",
+        "bytes": 4634
+      },
+      "back": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/sandile-alternate-form-1/back.png",
+        "gitBlobSha": "2bfae4a9e58da71aa899d6edd9d4c2ec77ac2fb8",
+        "bytes": 4171
+      },
+      "shinyFront": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/sandile-alternate-form-1/shiny_front.png",
+        "gitBlobSha": "b4f71354618f091203fa4bbc44f53bc188e72b87",
+        "bytes": 4615
+      },
+      "shinyBack": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/sandile-alternate-form-1/shiny_back.png",
+        "gitBlobSha": "cad028140199bf544ab4137fb231cd4c5d12b7da",
+        "bytes": 4123
+      },
+      "missingShiny": false
+    },
+    {
+      "identity": "krokorok-alternate-form-1",
+      "reviewId": "R0710",
+      "name": "Krokorok — Alternate (Form 1)",
+      "family": "#0551 Sandile → #0552 Krokorok → #0553 Krookodile",
+      "type1": "Water",
+      "type2": "Dark",
+      "source": "Reborn / Plates of Arceus",
+      "effectiveDecision": "keep",
+      "originalGbaPaths": {
+        "front": "Graphics/Battlers/552_1.png",
+        "back": "Graphics/Battlers/552b_1.png",
+        "shiny_front": "Graphics/Battlers/552s_1.png",
+        "shiny_back": "Graphics/Battlers/552sb_1.png",
+        "view_count": "4"
+      },
+      "previewFormat": "original-GBA-artwork-not-DS-certified",
+      "reviewRequired": false,
+      "artworkIntegrationAllowed": false,
+      "front": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/krokorok-alternate-form-1/front.png",
+        "gitBlobSha": "60583e910827f9d681a9cd72569b609df843db4b",
+        "bytes": 7335
+      },
+      "back": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/krokorok-alternate-form-1/back.png",
+        "gitBlobSha": "2c3f3e958fb5dc57ae74e30a898ca28e33966ab8",
+        "bytes": 6161
+      },
+      "shinyFront": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/krokorok-alternate-form-1/shiny_front.png",
+        "gitBlobSha": "487508a48c7b032c1956e31cbe91d81e7ac56e69",
+        "bytes": 7303
+      },
+      "shinyBack": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/krokorok-alternate-form-1/shiny_back.png",
+        "gitBlobSha": "6c36812822b235f6377a542f06d132bf28389433",
+        "bytes": 6160
+      },
+      "missingShiny": false
+    },
+    {
+      "identity": "krookodile-alternate-form-1",
+      "reviewId": "R0712",
+      "name": "Krookodile — Alternate (Form 1)",
+      "family": "#0551 Sandile → #0552 Krokorok → #0553 Krookodile",
+      "type1": "Water",
+      "type2": "Dark",
+      "source": "Reborn / Plates of Arceus",
+      "effectiveDecision": "keep",
+      "originalGbaPaths": {
+        "front": "Graphics/Battlers/553_1.png",
+        "back": "Graphics/Battlers/553b_1.png",
+        "shiny_front": "Graphics/Battlers/553s_1.png",
+        "shiny_back": "Graphics/Battlers/553sb_1.png",
+        "view_count": "4"
+      },
+      "previewFormat": "original-GBA-artwork-not-DS-certified",
+      "reviewRequired": false,
+      "artworkIntegrationAllowed": false,
+      "front": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/krookodile-alternate-form-1/front.png",
+        "gitBlobSha": "216b3d441822e916064f07e4bb4bcda014c6bb43",
+        "bytes": 9891
+      },
+      "back": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/krookodile-alternate-form-1/back.png",
+        "gitBlobSha": "113bf4ab5466610a5c450a3bca4336deaef1a67e",
+        "bytes": 6659
+      },
+      "shinyFront": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/krookodile-alternate-form-1/shiny_front.png",
+        "gitBlobSha": "123211838b97c6d3e2bad8c7f6c2dd5a0a8b1a79",
+        "bytes": 10296
+      },
+      "shinyBack": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/krookodile-alternate-form-1/shiny_back.png",
+        "gitBlobSha": "91d3573152dd5c9ac4df7dcd1823909a5f74208e",
+        "bytes": 7020
+      },
+      "missingShiny": false
+    },
+    {
+      "identity": "dwebble-alternate-form-1",
+      "reviewId": "R0717",
+      "name": "Dwebble — Alternate (Form 1)",
+      "family": "#0557 Dwebble → #0558 Crustle",
+      "type1": "Bug",
+      "type2": "Ground",
+      "source": "Reborn / Plates of Arceus",
+      "effectiveDecision": "keep",
+      "originalGbaPaths": {
+        "front": "Graphics/Battlers/557_1.png",
+        "back": "Graphics/Battlers/557b_1.png",
+        "shiny_front": "",
+        "shiny_back": "",
+        "view_count": "2"
+      },
+      "previewFormat": "original-GBA-artwork-not-DS-certified",
+      "reviewRequired": false,
+      "artworkIntegrationAllowed": false,
+      "front": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/dwebble-alternate-form-1/front.png",
+        "gitBlobSha": "5f4294ed3b910dfef87bb4135491a9a96aa0c70c",
+        "bytes": 5583
+      },
+      "back": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/dwebble-alternate-form-1/back.png",
+        "gitBlobSha": "a27caa3c6da04fff13bddd200e9c6e4476a6b178",
+        "bytes": 5501
+      },
+      "shinyFront": null,
+      "shinyBack": null,
+      "missingShiny": true
+    },
+    {
+      "identity": "crustle-alternate-form-1",
+      "reviewId": "R0718",
+      "name": "Crustle — Alternate (Form 1)",
+      "family": "#0557 Dwebble → #0558 Crustle",
+      "type1": "Bug",
+      "type2": "Ground",
+      "source": "Reborn / Plates of Arceus",
+      "effectiveDecision": "keep",
+      "originalGbaPaths": {
+        "front": "Graphics/Battlers/558_1.png",
+        "back": "Graphics/Battlers/558b_1.png",
+        "shiny_front": "",
+        "shiny_back": "",
+        "view_count": "2"
+      },
+      "previewFormat": "original-GBA-artwork-not-DS-certified",
+      "reviewRequired": false,
+      "artworkIntegrationAllowed": false,
+      "front": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/crustle-alternate-form-1/front.png",
+        "gitBlobSha": "520b310c1f881c630e5e892bb2810c87bb48b87c",
+        "bytes": 11694
+      },
+      "back": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/crustle-alternate-form-1/back.png",
+        "gitBlobSha": "e332bb6e47125b75e0acb23c7ad640ce206ff18a",
+        "bytes": 11349
+      },
+      "shinyFront": null,
+      "shinyBack": null,
+      "missingShiny": true
+    },
+    {
+      "identity": "escavalier-alternate-form-1",
+      "reviewId": "R0748",
+      "name": "Escavalier — Alternate (Form 1)",
+      "family": "#0588 Karrablast → #0589 Escavalier → #0616 Shelmet → #0617 Accelgor",
+      "type1": "Bug",
+      "type2": "Fighting",
+      "source": "Reborn / Plates of Arceus",
+      "effectiveDecision": "keep",
+      "originalGbaPaths": {
+        "front": "Graphics/Battlers/589_1.png",
+        "back": "Graphics/Battlers/589b_1.png",
+        "shiny_front": "Graphics/Battlers/589s_1.png",
+        "shiny_back": "Graphics/Battlers/589sb_1.png",
+        "view_count": "4"
+      },
+      "previewFormat": "original-GBA-artwork-not-DS-certified",
+      "reviewRequired": false,
+      "artworkIntegrationAllowed": false,
+      "front": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/escavalier-alternate-form-1/front.png",
+        "gitBlobSha": "459cf0f78607d3d9afb54afc623464a5621291d9",
+        "bytes": 11525
+      },
+      "back": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/escavalier-alternate-form-1/back.png",
+        "gitBlobSha": "e048594ae325c8107df9d296ed45bdcc9a178cb9",
+        "bytes": 9442
+      },
+      "shinyFront": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/escavalier-alternate-form-1/shiny_front.png",
+        "gitBlobSha": "6c94ed1f0eac102f4cd379ba61674ae60a6d50b9",
+        "bytes": 7998
+      },
+      "shinyBack": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/escavalier-alternate-form-1/shiny_back.png",
+        "gitBlobSha": "092f34fc58cfae4e06717095318304f907f4d06c",
+        "bytes": 6915
+      },
+      "missingShiny": false
+    },
+    {
+      "identity": "accelgor-alternate-form-1",
+      "reviewId": "R0749",
+      "name": "Accelgor — Alternate (Form 1)",
+      "family": "#0588 Karrablast → #0589 Escavalier → #0616 Shelmet → #0617 Accelgor",
+      "type1": "Bug",
+      "type2": "Steel",
+      "source": "Reborn / Plates of Arceus",
+      "effectiveDecision": "keep",
+      "originalGbaPaths": {
+        "front": "Graphics/Battlers/617_1.png",
+        "back": "Graphics/Battlers/617b_1.png",
+        "shiny_front": "Graphics/Battlers/617s_1.png",
+        "shiny_back": "Graphics/Battlers/617sb_1.png",
+        "view_count": "4"
+      },
+      "previewFormat": "original-GBA-artwork-not-DS-certified",
+      "reviewRequired": false,
+      "artworkIntegrationAllowed": false,
+      "front": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/accelgor-alternate-form-1/front.png",
+        "gitBlobSha": "ce363028d1864a40d875bd6cf8532d81d3d33398",
+        "bytes": 7309
+      },
+      "back": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/accelgor-alternate-form-1/back.png",
+        "gitBlobSha": "0a2722537a9845eddc162a98e5dfa6c7d16a7a66",
+        "bytes": 7573
+      },
+      "shinyFront": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/accelgor-alternate-form-1/shiny_front.png",
+        "gitBlobSha": "43883023831a36ce1748b25403a45cc96cb4fdde",
+        "bytes": 7359
+      },
+      "shinyBack": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/accelgor-alternate-form-1/shiny_back.png",
+        "gitBlobSha": "222e2a7a3dc518cf08af98ee59520acb914fee0b",
+        "bytes": 7592
+      },
+      "missingShiny": false
+    },
+    {
+      "identity": "cryogonal-alternate-form-1",
+      "reviewId": "R0765",
+      "name": "Cryogonal — Alternate (Form 1)",
+      "family": "#0615 Cryogonal",
+      "type1": "Ice",
+      "type2": "Poison",
+      "source": "Reborn / Plates of Arceus",
+      "effectiveDecision": "keep",
+      "originalGbaPaths": {
+        "front": "Graphics/Battlers/615_1.png",
+        "back": "Graphics/Battlers/615b_1.png",
+        "shiny_front": "Graphics/Battlers/615s_1.png",
+        "shiny_back": "Graphics/Battlers/615sb_1.png",
+        "view_count": "4"
+      },
+      "previewFormat": "original-GBA-artwork-not-DS-certified",
+      "reviewRequired": false,
+      "artworkIntegrationAllowed": false,
+      "front": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/cryogonal-alternate-form-1/front.png",
+        "gitBlobSha": "462d84741786a9866592dec5252ec48c2ce3ea0f",
+        "bytes": 10494
+      },
+      "back": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/cryogonal-alternate-form-1/back.png",
+        "gitBlobSha": "15a9ddc626462c187fff2456d5f59f73cb8b66a7",
+        "bytes": 8846
+      },
+      "shinyFront": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/cryogonal-alternate-form-1/shiny_front.png",
+        "gitBlobSha": "5344f177ec592b1433f355584b08dff6cb1e6d20",
+        "bytes": 10882
+      },
+      "shinyBack": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/cryogonal-alternate-form-1/shiny_back.png",
+        "gitBlobSha": "d0e74f90dbc413968eb61b79964e53b8271debcc",
+        "bytes": 9081
+      },
+      "missingShiny": false
+    },
+    {
+      "identity": "mienfoo-bluetowel-alternate-form-form-1",
+      "reviewId": "R0766",
+      "name": "Mienfoo — BlueTowel Alternate form (Form 1)",
+      "family": "#0619 Mienfoo → #0620 Mienshao",
+      "type1": "Fighting",
+      "type2": "Water",
+      "source": "Reborn / Plates of Arceus",
+      "effectiveDecision": "keep",
+      "originalGbaPaths": {
+        "front": "Graphics/Battlers/619_1.png",
+        "back": "Graphics/Battlers/619b_1.png",
+        "shiny_front": "Graphics/Battlers/619s_1.png",
+        "shiny_back": "Graphics/Battlers/619sb_1.png",
+        "view_count": "4"
+      },
+      "previewFormat": "original-GBA-artwork-not-DS-certified",
+      "reviewRequired": false,
+      "artworkIntegrationAllowed": false,
+      "front": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/mienfoo-bluetowel-alternate-form-form-1/front.png",
+        "gitBlobSha": "e28b8d34f01ad11965832492855fe7ef54b2ee06",
+        "bytes": 8224
+      },
+      "back": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/mienfoo-bluetowel-alternate-form-form-1/back.png",
+        "gitBlobSha": "626b808398b84d8cf608c7544aaf81bd071cf8af",
+        "bytes": 5828
+      },
+      "shinyFront": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/mienfoo-bluetowel-alternate-form-form-1/shiny_front.png",
+        "gitBlobSha": "5dda8338b1e7719ddc09fbf59aaf692c868f7969",
+        "bytes": 7942
+      },
+      "shinyBack": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/mienfoo-bluetowel-alternate-form-form-1/shiny_back.png",
+        "gitBlobSha": "8c0d535eb185a022e54b3ebd244f7c98273315ee",
+        "bytes": 6588
+      },
+      "missingShiny": false
+    },
+    {
+      "identity": "mienshao-bluetowel-alternate-form-form-1",
+      "reviewId": "R0768",
+      "name": "Mienshao — BlueTowel Alternate form (Form 1)",
+      "family": "#0619 Mienfoo → #0620 Mienshao",
+      "type1": "Fighting",
+      "type2": "Water",
+      "source": "Reborn / Plates of Arceus",
+      "effectiveDecision": "keep",
+      "originalGbaPaths": {
+        "front": "Graphics/Battlers/620_1.png",
+        "back": "Graphics/Battlers/620b_1.png",
+        "shiny_front": "Graphics/Battlers/620s_1.png",
+        "shiny_back": "Graphics/Battlers/620sb_1.png",
+        "view_count": "4"
+      },
+      "previewFormat": "original-GBA-artwork-not-DS-certified",
+      "reviewRequired": false,
+      "artworkIntegrationAllowed": false,
+      "front": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/mienshao-bluetowel-alternate-form-form-1/front.png",
+        "gitBlobSha": "61e8a36b5f5262712ff80fe6b6a43b0560f81459",
+        "bytes": 10749
+      },
+      "back": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/mienshao-bluetowel-alternate-form-form-1/back.png",
+        "gitBlobSha": "3c8a03238970e3c9a6b0838c58672cd729035be1",
+        "bytes": 17271
+      },
+      "shinyFront": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/mienshao-bluetowel-alternate-form-form-1/shiny_front.png",
+        "gitBlobSha": "563b6b61250bbd4276544ff523e8d3b434c6b14d",
+        "bytes": 9035
+      },
+      "shinyBack": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/mienshao-bluetowel-alternate-form-form-1/shiny_back.png",
+        "gitBlobSha": "7fce80f79806a3330db91eda96a6b612ba05a104",
+        "bytes": 14812
+      },
+      "missingShiny": false
+    },
+    {
+      "identity": "durant-bluetowel-alternate-form-form-1",
+      "reviewId": "R0778",
+      "name": "Durant — BlueTowel Alternate form (Form 1)",
+      "family": "#0632 Durant",
+      "type1": "Bug",
+      "type2": "Fire",
+      "source": "Reborn / Plates of Arceus",
+      "effectiveDecision": "keep",
+      "originalGbaPaths": {
+        "front": "Graphics/Battlers/632_1.png",
+        "back": "Graphics/Battlers/632b_1.png",
+        "shiny_front": "Graphics/Battlers/632s_1.png",
+        "shiny_back": "Graphics/Battlers/632sb_1.png",
+        "view_count": "4"
+      },
+      "previewFormat": "original-GBA-artwork-not-DS-certified",
+      "reviewRequired": false,
+      "artworkIntegrationAllowed": false,
+      "front": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/durant-bluetowel-alternate-form-form-1/front.png",
+        "gitBlobSha": "11bb1ae9693d657e99171b88ebae1eb325eb24c3",
+        "bytes": 5343
+      },
+      "back": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/durant-bluetowel-alternate-form-form-1/back.png",
+        "gitBlobSha": "c793e7e709d39f03621cf4b08799d00346a86fd2",
+        "bytes": 4657
+      },
+      "shinyFront": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/durant-bluetowel-alternate-form-form-1/shiny_front.png",
+        "gitBlobSha": "35e264f48a04c1258835ceb985695a674754cdbf",
+        "bytes": 5648
+      },
+      "shinyBack": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/durant-bluetowel-alternate-form-form-1/shiny_back.png",
+        "gitBlobSha": "df6a848bd00c410d901f05d0816812ceaf6c3e46",
+        "bytes": 4912
+      },
+      "missingShiny": false
+    },
+    {
+      "identity": "tyrunt-alternate-form-1",
+      "reviewId": "R0817",
+      "name": "Tyrunt — Alternate (Form 1)",
+      "family": "#0696 Tyrunt → #0697 Tyrantrum",
+      "type1": "Dark",
+      "type2": "Dragon",
+      "source": "Reborn / Plates of Arceus",
+      "effectiveDecision": "keep",
+      "originalGbaPaths": {
+        "front": "Graphics/Battlers/696_1.png",
+        "back": "Graphics/Battlers/696b_1.png",
+        "shiny_front": "Graphics/Battlers/696s_1.png",
+        "shiny_back": "Graphics/Battlers/696sb_1.png",
+        "view_count": "4"
+      },
+      "previewFormat": "original-GBA-artwork-not-DS-certified",
+      "reviewRequired": false,
+      "artworkIntegrationAllowed": false,
+      "front": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/tyrunt-alternate-form-1/front.png",
+        "gitBlobSha": "3a0c400dbe38cc286f9b9efffa143c9148aeb1d2",
+        "bytes": 9449
+      },
+      "back": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/tyrunt-alternate-form-1/back.png",
+        "gitBlobSha": "d6685d8aa448ee9703f10c9ce71ac1a8defe2e90",
+        "bytes": 7656
+      },
+      "shinyFront": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/tyrunt-alternate-form-1/shiny_front.png",
+        "gitBlobSha": "5278c284c2f21ceff8bbb6e1b990bbd88d4a7f0f",
+        "bytes": 7005
+      },
+      "shinyBack": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/tyrunt-alternate-form-1/shiny_back.png",
+        "gitBlobSha": "38dbd2cc0d2989cf9d362e1a06909a701f1ee483",
+        "bytes": 5335
+      },
+      "missingShiny": false
+    },
+    {
+      "identity": "tyrantrum-alternate-form-1",
+      "reviewId": "R0818",
+      "name": "Tyrantrum — Alternate (Form 1)",
+      "family": "#0696 Tyrunt → #0697 Tyrantrum",
+      "type1": "Dark",
+      "type2": "Dragon",
+      "source": "Reborn / Plates of Arceus",
+      "effectiveDecision": "keep",
+      "originalGbaPaths": {
+        "front": "Graphics/Battlers/697_1.png",
+        "back": "Graphics/Battlers/697b_1.png",
+        "shiny_front": "Graphics/Battlers/697s_1.png",
+        "shiny_back": "Graphics/Battlers/697sb_1.png",
+        "view_count": "4"
+      },
+      "previewFormat": "original-GBA-artwork-not-DS-certified",
+      "reviewRequired": false,
+      "artworkIntegrationAllowed": false,
+      "front": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/tyrantrum-alternate-form-1/front.png",
+        "gitBlobSha": "03c99a143128d174d8c2104f3e74c6357b7ec8d0",
+        "bytes": 16418
+      },
+      "back": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/tyrantrum-alternate-form-1/back.png",
+        "gitBlobSha": "db95730d6eecf275ba22e5280113ca4a87243e75",
+        "bytes": 15914
+      },
+      "shinyFront": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/tyrantrum-alternate-form-1/shiny_front.png",
+        "gitBlobSha": "c6604488b6c1e458fef90199ee4ab9d714b5257d",
+        "bytes": 12464
+      },
+      "shinyBack": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/tyrantrum-alternate-form-1/shiny_back.png",
+        "gitBlobSha": "ea5bdfb9d373de4217a7309571e7ce96aa5abcc8",
+        "bytes": 11600
+      },
+      "missingShiny": false
+    },
+    {
+      "identity": "noibat-alternate-form-1",
+      "reviewId": "R0831",
+      "name": "Noibat — Alternate (Form 1)",
+      "family": "#0714 Noibat → #0715 Noivern",
+      "type1": "Dragon",
+      "type2": "Dark",
+      "source": "Reborn / Plates of Arceus",
+      "effectiveDecision": "keep",
+      "originalGbaPaths": {
+        "front": "Graphics/Battlers/714_1.png",
+        "back": "Graphics/Battlers/714b_1.png",
+        "shiny_front": "Graphics/Battlers/714s_1.png",
+        "shiny_back": "Graphics/Battlers/714sb_1.png",
+        "view_count": "4"
+      },
+      "previewFormat": "original-GBA-artwork-not-DS-certified",
+      "reviewRequired": false,
+      "artworkIntegrationAllowed": false,
+      "front": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/noibat-alternate-form-1/front.png",
+        "gitBlobSha": "64583ac0694302dec88e4654d76b2f3cf67cc295",
+        "bytes": 10605
+      },
+      "back": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/noibat-alternate-form-1/back.png",
+        "gitBlobSha": "1e9347f93053cdca4698435e4f8eb991c5e15b93",
+        "bytes": 9622
+      },
+      "shinyFront": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/noibat-alternate-form-1/shiny_front.png",
+        "gitBlobSha": "87ea8e5b288107ac2d34ba19565f8cdddc6bf7ec",
+        "bytes": 10886
+      },
+      "shinyBack": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/noibat-alternate-form-1/shiny_back.png",
+        "gitBlobSha": "11a6eca5a8ddb108f58810431e47c9d269efa85b",
+        "bytes": 9715
+      },
+      "missingShiny": false
+    },
+    {
+      "identity": "noivern-alternate-form-1",
+      "reviewId": "R0833",
+      "name": "Noivern — Alternate (Form 1)",
+      "family": "#0714 Noibat → #0715 Noivern",
+      "type1": "Dragon",
+      "type2": "Dark",
+      "source": "Reborn / Plates of Arceus",
+      "effectiveDecision": "keep",
+      "originalGbaPaths": {
+        "front": "Graphics/Battlers/715_1.png",
+        "back": "Graphics/Battlers/715b_1.png",
+        "shiny_front": "Graphics/Battlers/715s_1.png",
+        "shiny_back": "Graphics/Battlers/715sb_1.png",
+        "view_count": "4"
+      },
+      "previewFormat": "original-GBA-artwork-not-DS-certified",
+      "reviewRequired": false,
+      "artworkIntegrationAllowed": false,
+      "front": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/noivern-alternate-form-1/front.png",
+        "gitBlobSha": "702dccf95d3abb15f45f2daddf100533102a8b38",
+        "bytes": 14923
+      },
+      "back": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/noivern-alternate-form-1/back.png",
+        "gitBlobSha": "71e9c3c857b9d312b57e35119e0d4f38b6d319ee",
+        "bytes": 7556
+      },
+      "shinyFront": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/noivern-alternate-form-1/shiny_front.png",
+        "gitBlobSha": "03a15f194ca9567fd81941e9cdd194093472d603",
+        "bytes": 14184
+      },
+      "shinyBack": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/noivern-alternate-form-1/shiny_back.png",
+        "gitBlobSha": "052bcfac38232bd97379de9b94c97d9e1a32ffb8",
+        "bytes": 11594
+      },
+      "missingShiny": false
+    },
+    {
+      "identity": "hakamo-o-alternate-form-1",
+      "reviewId": "R0876",
+      "name": "Hakamo-o — Alternate (Form 1)",
+      "family": "#0782 Jangmo-o → #0783 Hakamo-o → #0784 Kommo-o",
+      "type1": "Dragon",
+      "type2": "Steel",
+      "source": "Reborn / Plates of Arceus",
+      "effectiveDecision": "keep",
+      "originalGbaPaths": {
+        "front": "Graphics/Battlers/783_1.png",
+        "back": "Graphics/Battlers/783b_1.png",
+        "shiny_front": "Graphics/Battlers/783s_1.png",
+        "shiny_back": "Graphics/Battlers/783sb_1.png",
+        "view_count": "4"
+      },
+      "previewFormat": "original-GBA-artwork-not-DS-certified",
+      "reviewRequired": false,
+      "artworkIntegrationAllowed": false,
+      "front": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/hakamo-o-alternate-form-1/front.png",
+        "gitBlobSha": "7a2715ffc673b7aa21069b54e51c1d465c423746",
+        "bytes": 9132
+      },
+      "back": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/hakamo-o-alternate-form-1/back.png",
+        "gitBlobSha": "408f47a090017b88b4c080b7a67cab4ebd9e6ac0",
+        "bytes": 7629
+      },
+      "shinyFront": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/hakamo-o-alternate-form-1/shiny_front.png",
+        "gitBlobSha": "06c239ac7885c5916ba0981ad59cf239122949e2",
+        "bytes": 9609
+      },
+      "shinyBack": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/hakamo-o-alternate-form-1/shiny_back.png",
+        "gitBlobSha": "f3a07c0681ca789aa416392272f24d302f960bcb",
+        "bytes": 7933
+      },
+      "missingShiny": false
+    },
+    {
+      "identity": "kommo-o-alternate-form-1",
+      "reviewId": "R0877",
+      "name": "Kommo-o — Alternate (Form 1)",
+      "family": "#0782 Jangmo-o → #0783 Hakamo-o → #0784 Kommo-o",
+      "type1": "Dragon",
+      "type2": "Steel",
+      "source": "Reborn / Plates of Arceus",
+      "effectiveDecision": "keep",
+      "originalGbaPaths": {
+        "front": "Graphics/Battlers/784_1.png",
+        "back": "Graphics/Battlers/784b_1.png",
+        "shiny_front": "Graphics/Battlers/784s_1.png",
+        "shiny_back": "Graphics/Battlers/784sb_1.png",
+        "view_count": "4"
+      },
+      "previewFormat": "original-GBA-artwork-not-DS-certified",
+      "reviewRequired": false,
+      "artworkIntegrationAllowed": false,
+      "front": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/kommo-o-alternate-form-1/front.png",
+        "gitBlobSha": "6586252f759ab9a6e9204fb0b9f4ffea13bb26a7",
+        "bytes": 24932
+      },
+      "back": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/kommo-o-alternate-form-1/back.png",
+        "gitBlobSha": "702e3d860477276c53b4064889bbdad7f861feac",
+        "bytes": 22196
+      },
+      "shinyFront": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/kommo-o-alternate-form-1/shiny_front.png",
+        "gitBlobSha": "9e631b0a35baaf972c780cfd2cd44ee2ed8c94bb",
+        "bytes": 16876
+      },
+      "shinyBack": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/kommo-o-alternate-form-1/shiny_back.png",
+        "gitBlobSha": "b41296b5956e6bafd8103111830b9b1e1b5c7bed",
+        "bytes": 15484
+      },
+      "missingShiny": false
+    },
+    {
+      "identity": "phanpy-alternate-form-1",
+      "reviewId": "R0370",
+      "name": "Phanpy — Alternate (Form 1)",
+      "family": "#0231 Phanpy → #0232 Donphan",
+      "type1": "Ground",
+      "type2": "Electric",
+      "source": "Reborn / Plates of Arceus",
+      "effectiveDecision": "keep",
+      "originalGbaPaths": {
+        "front": "Graphics/Battlers/231_1.png",
+        "back": "Graphics/Battlers/231b_1.png",
+        "shiny_front": "Graphics/Battlers/231s_1.png",
+        "shiny_back": "Graphics/Battlers/231sb_1.png",
+        "view_count": "4"
+      },
+      "previewFormat": "original-GBA-artwork-not-DS-certified",
+      "reviewRequired": false,
+      "artworkIntegrationAllowed": false,
+      "front": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/phanpy-alternate-form-1/front.png",
+        "gitBlobSha": "8be24b35343271b589b4602a446e6624c2fbeffc",
+        "bytes": 6213
+      },
+      "back": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/phanpy-alternate-form-1/back.png",
+        "gitBlobSha": "c5edbc09e3313e86f56f255fda4c3e33a6570286",
+        "bytes": 5433
+      },
+      "shinyFront": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/phanpy-alternate-form-1/shiny_front.png",
+        "gitBlobSha": "9edfb457110e8fe45348dede1fb5a549bc15f2a0",
+        "bytes": 6057
+      },
+      "shinyBack": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/phanpy-alternate-form-1/shiny_back.png",
+        "gitBlobSha": "8c358ad97dac1cd58b0ccc0bf024c532be3928c0",
+        "bytes": 5292
+      },
+      "missingShiny": false
+    },
+    {
+      "identity": "mightyena-alternate-form-1",
+      "reviewId": "R0402",
+      "name": "Mightyena — Alternate (Form 1)",
+      "family": "#0261 Poochyena → #0262 Mightyena",
+      "type1": "Dark",
+      "type2": "Poison",
+      "source": "Reborn / Plates of Arceus",
+      "effectiveDecision": "keep",
+      "originalGbaPaths": {
+        "front": "Graphics/Battlers/262_1.png",
+        "back": "Graphics/Battlers/262b_1.png",
+        "shiny_front": "Graphics/Battlers/262s_1.png",
+        "shiny_back": "Graphics/Battlers/262sb_1.png",
+        "view_count": "4"
+      },
+      "previewFormat": "original-GBA-artwork-not-DS-certified",
+      "reviewRequired": false,
+      "artworkIntegrationAllowed": false,
+      "front": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/mightyena-alternate-form-1/front.png",
+        "gitBlobSha": "76de3e1f8a7aaf602e043a61f491e4ffd44fa84a",
+        "bytes": 12338
+      },
+      "back": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/mightyena-alternate-form-1/back.png",
+        "gitBlobSha": "9ed5eef2c985de83fa0f4a8d4d7d02121b0ddf43",
+        "bytes": 11221
+      },
+      "shinyFront": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/mightyena-alternate-form-1/shiny_front.png",
+        "gitBlobSha": "2e2a7b1734a0176e4a1471cc9848584d3df1412e",
+        "bytes": 13027
+      },
+      "shinyBack": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/mightyena-alternate-form-1/shiny_back.png",
+        "gitBlobSha": "2ed2cad1fb69511fae6b3a04e0fa33c54477f4eb",
+        "bytes": 11723
+      },
+      "missingShiny": false
+    },
+    {
+      "identity": "gible-bluetowel-alternate-forms-form-2",
+      "reviewId": "R0640",
+      "name": "Gible — BlueTowel Alternate forms (Form 2)",
+      "family": "#0443 Gible → #0444 Gabite → #0445 Garchomp",
+      "type1": "Dragon",
+      "type2": "Water",
+      "source": "Reborn / Plates of Arceus",
+      "effectiveDecision": "keep",
+      "originalGbaPaths": {
+        "front": "Graphics/Battlers/443_2.png",
+        "back": "Graphics/Battlers/443b_2.png",
+        "shiny_front": "Graphics/Battlers/443s_2.png",
+        "shiny_back": "Graphics/Battlers/443sb_2.png",
+        "view_count": "4"
+      },
+      "previewFormat": "original-GBA-artwork-not-DS-certified",
+      "reviewRequired": false,
+      "artworkIntegrationAllowed": false,
+      "front": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/gible-bluetowel-alternate-forms-form-2/front.png",
+        "gitBlobSha": "7d4d93fa6fa415bb66559f87280ec9ee8ca04db3",
+        "bytes": 6174
+      },
+      "back": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/gible-bluetowel-alternate-forms-form-2/back.png",
+        "gitBlobSha": "23b6eefcd8a7b8ff2e435fe7e3ead8af27337ff5",
+        "bytes": 5511
+      },
+      "shinyFront": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/gible-bluetowel-alternate-forms-form-2/shiny_front.png",
+        "gitBlobSha": "0136d73a97e4341b02dbea9b89167289e6e8e280",
+        "bytes": 6475
+      },
+      "shinyBack": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/gible-bluetowel-alternate-forms-form-2/shiny_back.png",
+        "gitBlobSha": "4208ef0afce483a3e9cfdac1643ab1f61e82ac07",
+        "bytes": 5376
+      },
+      "missingShiny": false
+    },
+    {
+      "identity": "gabite-bluetowel-alternate-forms-form-2",
+      "reviewId": "R0642",
+      "name": "Gabite — BlueTowel Alternate forms (Form 2)",
+      "family": "#0443 Gible → #0444 Gabite → #0445 Garchomp",
+      "type1": "Dragon",
+      "type2": "Water",
+      "source": "Reborn / Plates of Arceus",
+      "effectiveDecision": "keep",
+      "originalGbaPaths": {
+        "front": "Graphics/Battlers/444_2.png",
+        "back": "Graphics/Battlers/444b_2.png",
+        "shiny_front": "Graphics/Battlers/444s_2.png",
+        "shiny_back": "Graphics/Battlers/444sb_2.png",
+        "view_count": "4"
+      },
+      "previewFormat": "original-GBA-artwork-not-DS-certified",
+      "reviewRequired": false,
+      "artworkIntegrationAllowed": false,
+      "front": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/gabite-bluetowel-alternate-forms-form-2/front.png",
+        "gitBlobSha": "bcb7ba8eb1262a91514f99ade831c2f15a03f4c9",
+        "bytes": 8543
+      },
+      "back": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/gabite-bluetowel-alternate-forms-form-2/back.png",
+        "gitBlobSha": "c7f2598314e5925ded9667a13be4ecabb36373fe",
+        "bytes": 7955
+      },
+      "shinyFront": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/gabite-bluetowel-alternate-forms-form-2/shiny_front.png",
+        "gitBlobSha": "74067edc44176b330c2c259bb4650e5608065eda",
+        "bytes": 9025
+      },
+      "shinyBack": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/gabite-bluetowel-alternate-forms-form-2/shiny_back.png",
+        "gitBlobSha": "5db07abd3d857a19432fa9272d1fe6cd1d5e6c80",
+        "bytes": 8326
+      },
+      "missingShiny": false
+    },
+    {
+      "identity": "garchomp-alternate-form-2",
+      "reviewId": "R0645",
+      "name": "Garchomp — Alternate (Form 2)",
+      "family": "#0443 Gible → #0444 Gabite → #0445 Garchomp",
+      "type1": "Dragon",
+      "type2": "Water",
+      "source": "Reborn / Plates of Arceus",
+      "effectiveDecision": "keep",
+      "originalGbaPaths": {
+        "front": "Graphics/Battlers/445_2.png",
+        "back": "Graphics/Battlers/445b_2.png",
+        "shiny_front": "Graphics/Battlers/445s_2.png",
+        "shiny_back": "Graphics/Battlers/445sb_2.png",
+        "view_count": "4"
+      },
+      "previewFormat": "original-GBA-artwork-not-DS-certified",
+      "reviewRequired": false,
+      "artworkIntegrationAllowed": false,
+      "front": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/garchomp-alternate-form-2/front.png",
+        "gitBlobSha": "db980218664507fdc1963da154687e30d883ede4",
+        "bytes": 17209
+      },
+      "back": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/garchomp-alternate-form-2/back.png",
+        "gitBlobSha": "55ad6ef8c7bcff5a51f9ffa0324aea1dea0fe449",
+        "bytes": 7294
+      },
+      "shinyFront": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/garchomp-alternate-form-2/shiny_front.png",
+        "gitBlobSha": "741bb6659eb15f769b97e40f93c8a5e9028c5f37",
+        "bytes": 17683
+      },
+      "shinyBack": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/garchomp-alternate-form-2/shiny_back.png",
+        "gitBlobSha": "9e564a1f9e50430b687345aeb395615e0ce1d694",
+        "bytes": 12312
+      },
+      "missingShiny": false
+    },
+    {
+      "identity": "garchomp-alternate-mega-form-3",
+      "reviewId": "R0647",
+      "name": "Garchomp — Alternate Mega (Form 3)",
+      "family": "#0443 Gible → #0444 Gabite → #0445 Garchomp",
+      "type1": "Dragon",
+      "type2": "Water",
+      "source": "Reborn / Plates of Arceus",
+      "effectiveDecision": "keep",
+      "originalGbaPaths": {
+        "front": "Graphics/Battlers/445_3.png",
+        "back": "Graphics/Battlers/445b_3.png",
+        "shiny_front": "Graphics/Battlers/445s_3.png",
+        "shiny_back": "Graphics/Battlers/445sb_3.png",
+        "view_count": "4"
+      },
+      "previewFormat": "original-GBA-artwork-not-DS-certified",
+      "reviewRequired": false,
+      "artworkIntegrationAllowed": false,
+      "front": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/garchomp-alternate-mega-form-3/front.png",
+        "gitBlobSha": "f6789e149a1241d39c0f5149a30965937f593aa1",
+        "bytes": 13019
+      },
+      "back": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/garchomp-alternate-mega-form-3/back.png",
+        "gitBlobSha": "f71eaa5aa5c0a3a2ee380523e599fad99c96b977",
+        "bytes": 9166
+      },
+      "shinyFront": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/garchomp-alternate-mega-form-3/shiny_front.png",
+        "gitBlobSha": "9fc02d7fd8aa52565e33d8657bfd4a7470803601",
+        "bytes": 14752
+      },
+      "shinyBack": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/garchomp-alternate-mega-form-3/shiny_back.png",
+        "gitBlobSha": "f9e71416152cce37798e7635308134ece290ee7b",
+        "bytes": 10335
+      },
+      "missingShiny": false
+    },
+    {
+      "identity": "carnivine-bluetowel-alternate-form-form-1",
+      "reviewId": "R0656",
+      "name": "Carnivine — BlueTowel Alternate form (Form 1)",
+      "family": "#0455 Carnivine",
+      "type1": "Grass",
+      "type2": "Fire",
+      "source": "Reborn / Plates of Arceus",
+      "effectiveDecision": "keep",
+      "originalGbaPaths": {
+        "front": "Graphics/Battlers/455_1.png",
+        "back": "Graphics/Battlers/455b_1.png",
+        "shiny_front": "Graphics/Battlers/455s_1.png",
+        "shiny_back": "Graphics/Battlers/455sb_1.png",
+        "view_count": "4"
+      },
+      "previewFormat": "original-GBA-artwork-not-DS-certified",
+      "reviewRequired": false,
+      "artworkIntegrationAllowed": false,
+      "front": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/carnivine-bluetowel-alternate-form-form-1/front.png",
+        "gitBlobSha": "9627fe41d0590870c5765c7b20230fffdef72315",
+        "bytes": 12218
+      },
+      "back": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/carnivine-bluetowel-alternate-form-form-1/back.png",
+        "gitBlobSha": "676fab004ba167f987fcb465416b5ce313cafd07",
+        "bytes": 13219
+      },
+      "shinyFront": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/carnivine-bluetowel-alternate-form-form-1/shiny_front.png",
+        "gitBlobSha": "8aaf9d765b355ed7d9e1cb8152da526bb44c738a",
+        "bytes": 11886
+      },
+      "shinyBack": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/carnivine-bluetowel-alternate-form-form-1/shiny_back.png",
+        "gitBlobSha": "e582fde82d0c04d2ade4a37d1b146eef632e31ff",
+        "bytes": 9086
+      },
+      "missingShiny": false
+    },
+    {
+      "identity": "lilligant-alternate-form-2",
+      "reviewId": "R0708",
+      "name": "Lilligant — Alternate (Form 2)",
+      "family": "#0548 Petilil → #0549 Lilligant",
+      "type1": "Grass",
+      "type2": "Fighting",
+      "source": "Reborn / Plates of Arceus",
+      "effectiveDecision": "keep",
+      "originalGbaPaths": {
+        "front": "Graphics/Battlers/549_2.png",
+        "back": "Graphics/Battlers/549b_2.png",
+        "shiny_front": "Graphics/Battlers/549s_2.png",
+        "shiny_back": "Graphics/Battlers/549sb_2.png",
+        "view_count": "4"
+      },
+      "previewFormat": "original-GBA-artwork-not-DS-certified",
+      "reviewRequired": false,
+      "artworkIntegrationAllowed": false,
+      "front": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/lilligant-alternate-form-2/front.png",
+        "gitBlobSha": "e66c78562e4d3e9cedad4520db04a7b053906f7f",
+        "bytes": 7956
+      },
+      "back": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/lilligant-alternate-form-2/back.png",
+        "gitBlobSha": "8106ff07a852be811393d96d3a736cd98ccd118c",
+        "bytes": 7867
+      },
+      "shinyFront": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/lilligant-alternate-form-2/shiny_front.png",
+        "gitBlobSha": "8c2d494af5b8be2692b0b1d25d034b82408715ec",
+        "bytes": 7887
+      },
+      "shinyBack": {
+        "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/lilligant-alternate-form-2/shiny_back.png",
+        "gitBlobSha": "d6023e00f2d7b204bd4df343ff1645f237c2069e",
+        "bytes": 7882
+      },
+      "missingShiny": false
+    }
+  ]
+}
