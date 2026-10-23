@@ -1133,7 +1133,7 @@
       "name": "Larvitar — Space (Form 4)",
       "family": "#0246 Larvitar → #0247 Pupitar → #0248 Tyranitar",
       "type1": "Dragon",
-      "type2": "Dragon",
+      "type2": "",
       "source": "Reborn / Plates of Arceus",
       "effectiveDecision": "keep",
       "originalGbaPaths": {
@@ -1174,7 +1174,7 @@
       "name": "Pupitar — Space (Form 4)",
       "family": "#0246 Larvitar → #0247 Pupitar → #0248 Tyranitar",
       "type1": "Dragon",
-      "type2": "Dragon",
+      "type2": "",
       "source": "Reborn / Plates of Arceus",
       "effectiveDecision": "keep",
       "originalGbaPaths": {
@@ -1215,7 +1215,7 @@
       "name": "Tyranitar — Space (Form 4)",
       "family": "#0246 Larvitar → #0247 Pupitar → #0248 Tyranitar",
       "type1": "Dragon",
-      "type2": "Dragon",
+      "type2": "",
       "source": "Reborn / Plates of Arceus",
       "effectiveDecision": "keep",
       "originalGbaPaths": {
@@ -3014,5 +3014,29 @@
       },
       "missingShiny": false
     }
-  ]
+  ],
+  "typeDisplayNormalization": {
+    "scope": "historically duplicated Dragon/Dragon source metadata",
+    "policy": "Same primary and secondary type represents one monotype, not two typings; no source/artwork or user-vote changes.",
+    "records": [
+      {
+        "reviewId": "R0381",
+        "name": "Larvitar — Space (Form 4)",
+        "before": "Dragon / Dragon",
+        "after": "Dragon"
+      },
+      {
+        "reviewId": "R0384",
+        "name": "Pupitar — Space (Form 4)",
+        "before": "Dragon / Dragon",
+        "after": "Dragon"
+      },
+      {
+        "reviewId": "R0388",
+        "name": "Tyranitar — Space (Form 4)",
+        "before": "Dragon / Dragon",
+        "after": "Dragon"
+      }
+    ]
+  }
 }
