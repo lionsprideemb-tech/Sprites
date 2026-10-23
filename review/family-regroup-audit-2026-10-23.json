@@ -1,0 +1,149 @@
+{
+  "schema": "mercury-family-regroup-v1",
+  "date": "2026-10-23",
+  "source": "DS_CUSTOM_LIBRARY/DS_READY_MASTER/fakemon_enriched_metadata.json",
+  "sourceBlob": "10c01c2e86a6098c2f1fc24a97b91d77a5b51257",
+  "corrections": [
+    {
+      "id": "fakemon:spritzee-1:f9749b90bdb0",
+      "name": {
+        "was": "Mikitarian",
+        "now": "Mikitarian Spritzee"
+      },
+      "evidencePath": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Front/SPRITZEE_1.png"
+    },
+    {
+      "id": "fakemon:yamask-2:9ae97cd58dea",
+      "name": {
+        "was": "Mikitarian",
+        "now": "Mikitarian Yamask"
+      },
+      "evidencePath": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Front/YAMASK_2.png"
+    },
+    {
+      "id": "fakemon:spinarak-1:d9f9617a90e2",
+      "family": {
+        "was": "Spinarak 1 → Ariados",
+        "now": "Luminian Spinarak → Luminian Ariados"
+      },
+      "evidencePath": "DS_CUSTOM_LIBRARY/packs/Festival_Lumio/Lumio/Pokemon/Front/SPINARAK_1.png"
+    },
+    {
+      "id": "fakemon:hayog:c54be050251a",
+      "family": {
+        "was": "Standalone — Hayog",
+        "now": "Hayog → Hogouse → Hogriks"
+      },
+      "evidencePath": "DS_CUSTOM_LIBRARY/packs/Festival_Scotsman/Scotsman/Hayog_Front.png"
+    },
+    {
+      "id": "fakemon:hogouse:5aacd2375ea9",
+      "family": {
+        "was": "Standalone — Hogouse",
+        "now": "Hayog → Hogouse → Hogriks"
+      },
+      "evidencePath": "DS_CUSTOM_LIBRARY/packs/Festival_Scotsman/Scotsman/Hogouse_Front.png"
+    },
+    {
+      "id": "fakemon:hogriks:09d5ea97ceeb",
+      "family": {
+        "was": "Standalone — Hogriks",
+        "now": "Hayog → Hogouse → Hogriks"
+      },
+      "evidencePath": "DS_CUSTOM_LIBRARY/packs/Festival_Scotsman/Scotsman/Hogriks_Front.png"
+    },
+    {
+      "id": "fakemon:ariados-1:25da075190b5",
+      "name": {
+        "was": "Luminian",
+        "now": "Luminian Ariados"
+      },
+      "family": {
+        "was": "Standalone — Luminian",
+        "now": "Luminian Spinarak → Luminian Ariados"
+      },
+      "evidencePath": "DS_CUSTOM_LIBRARY/packs/Festival_Lumio/Lumio/Pokemon/Front/ARIADOS_1.png"
+    },
+    {
+      "id": "fakemon:marelstorm:701ab0bd5780",
+      "family": {
+        "was": "Standalone — Marelstorm",
+        "now": "Minamai → Marelstorm"
+      },
+      "evidencePath": "DS_CUSTOM_LIBRARY/packs/Festival_Lumio/Lumio/Pokemon/Front/MARELSTORM.png"
+    },
+    {
+      "id": "fakemon:buneary-1:13f7b40cc329",
+      "name": {
+        "was": "Mikitarian",
+        "now": "Mikitarian Buneary"
+      },
+      "family": {
+        "was": "Standalone — Mikitarian",
+        "now": "Mikitarian Buneary → Mikitarian Lopunny"
+      },
+      "evidencePath": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Front/BUNEARY_1.png"
+    },
+    {
+      "id": "fakemon:falinks-1:0c48c12e936e",
+      "name": {
+        "was": "Mikitarian",
+        "now": "Mikitarian Falinks"
+      },
+      "family": {
+        "was": "Standalone — Mikitarian",
+        "now": "Platerigus → Mikitarian → Traumatisse"
+      },
+      "evidencePath": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Front/FALINKS_1.png"
+    },
+    {
+      "id": "fakemon:lopunny-1:06d969db7760",
+      "name": {
+        "was": "Mikitarian",
+        "now": "Mikitarian Lopunny"
+      },
+      "family": {
+        "was": "Standalone — Mikitarian",
+        "now": "Mikitarian Buneary → Mikitarian Lopunny"
+      },
+      "evidencePath": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Front/LOPUNNY_1.png"
+    },
+    {
+      "id": "fakemon:minamai:a49139765a74",
+      "family": {
+        "was": "Standalone — Minamai",
+        "now": "Minamai → Marelstorm"
+      },
+      "evidencePath": "DS_CUSTOM_LIBRARY/packs/Festival_Lumio/Lumio/Pokemon/Front/MINAMAI.png"
+    },
+    {
+      "id": "fakemon:belstatue-2-moon-shard:ca0fced633b1",
+      "family": {
+        "was": "Standalone — Moon Shard Belstatue",
+        "now": "Belstatue forms"
+      },
+      "evidencePath": "DS_CUSTOM_LIBRARY/packs/Earthretha/Earthretha Fakemon Pack/Graphics/Pokemon/Front/BELSTATUE_2 (Moon Shard).png"
+    },
+    {
+      "id": "fakemon:belstatue-1-sun-shard:5728aff6b963",
+      "family": {
+        "was": "Standalone — Sun Shard Belstatue",
+        "now": "Belstatue forms"
+      },
+      "evidencePath": "DS_CUSTOM_LIBRARY/packs/Earthretha/Earthretha Fakemon Pack/Graphics/Pokemon/Front/BELSTATUE_1 (Sun Shard).png"
+    },
+    {
+      "id": "fakemon:traumatisse:c91020460452",
+      "family": {
+        "was": "Standalone — Traumatisse",
+        "now": "Platerigus → Mikitarian → Traumatisse"
+      },
+      "evidencePath": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Front/TRAUMATISSE.png"
+    }
+  ],
+  "remainingArtworkRows": 154,
+  "remainingRepairHolds": 18,
+  "formerFamilyCount": 75,
+  "newFamilyCount": 69,
+  "evolutionOrderingUpdated": true
+}
