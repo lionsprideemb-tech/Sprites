@@ -1,0 +1,42 @@
+name: Build source-preserving sprite visual comparison previews
+on:
+  push:
+    branches: [main]
+    paths:
+      - "tools/build_visual_rescue_comparisons.py"
+      - ".github/workflows/visual-source-recovery-comparisons.yml"
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: mercury-visual-comparisons-source-20261023
+  cancel-in-progress: false
+jobs:
+  previews:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - run: python3 -m pip install --quiet pillow
+      - name: Generate visual-only NN comparisons and palette delta measurements
+        run: python3 tools/build_visual_rescue_comparisons.py
+      - name: Validate original asset hashes and comparison output integrity
+        run: python3 tools/build_visual_rescue_comparisons.py --check
+      - name: Check old artwork votes and original sprite inventory
+        run: node review/tests/master-review-integrity.cjs
+      - name: Commit only quarantined visual previews and evidence
+        run: |
+          set -euo pipefail
+          git config user.name "Mercury Source Visual Audit"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add DS_CUSTOM_LIBRARY/comparison/DS64_Visual_Triage_2026_10_23/
+          if git diff --cached --quiet; then
+            echo "No changed comparison images."
+            exit 0
+          fi
+          git commit -m "Stage 196 labeled NN visual-only comparisons and 39 palette delta audits"
+          git pull --rebase origin main
+          python3 tools/build_visual_rescue_comparisons.py --check
+          git push origin HEAD:main
