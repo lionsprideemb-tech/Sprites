@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Mercury — Recovered Approved Sprite Pairs</title>
+<style>
+:root{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:#f5f1e8;color:#1c3045}*{box-sizing:border-box}
+body{margin:0}header{background:#fffdfa;border-bottom:1px solid #d4c8b7;padding:17px max(12px,env(safe-area-inset-left));}
+.wrap,main{max-width:980px;margin:auto}h1{font-size:22px;line-height:1.2;margin:0 0 8px}
+.sub{font-size:13px;color:#526578;line-height:1.55}a{color:#19547d}
+nav{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0}nav a{font-weight:bold;padding:9px 12px;border-radius:9px;background:#e2eaf4;text-decoration:none}
+.toolbar{display:flex;gap:8px;flex-wrap:wrap;align-items:center;padding:10px 0}
+input,select,button{font:inherit;padding:10px;border-radius:9px;border:1px solid #bfcbd3;background:white;color:#20364f}
+input{flex:1;min-width:155px}button{cursor:pointer;font-weight:700}button:disabled{opacity:.45}
+main{padding:12px 10px 60px}
+.notice{border:1px solid #d6be8f;background:#fff7de;padding:11px;border-radius:10px;font-size:13px;line-height:1.5}
+#summary{font-size:13px;color:#526578;font-weight:700;padding:10px 1px}
+.family{border:1px solid #d5cbbb;border-radius:12px;background:#fffdfa;margin:12px 0;overflow:hidden}
+.family h2{margin:0;padding:12px;background:#eee5d5;font-size:15px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,290px),1fr));gap:10px;padding:10px}
+.card{border:1px solid #d9dee3;background:white;border-radius:10px;padding:10px}
+.card h3{font-size:15px;margin:0 0 6px}.meta{font-size:12px;line-height:1.5;color:#54687d;margin-bottom:7px}
+.spritegrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}
+.sprite{background:#f5f1e9;border:1px solid #e5ddd2;border-radius:7px;text-align:center;padding:6px;min-width:0}
+.sprite img{width:110px;height:102px;max-width:100%;object-fit:contain;image-rendering:pixelated}
+.sprite small{font-size:10px;font-weight:700;display:block}
+.sprite .missing{font-size:11px;color:#8e4a26;padding:24px 2px}
+.flag{color:#944322;font-size:12px;font-weight:700;margin-top:7px}
+.pagination{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:10px 0}
+.pagination span{font-size:12px;color:#58697a}
+footer{font-size:12px;line-height:1.5;color:#5b6878;padding-top:18px}
+@media(max-width:400px){.sprite img{width:94px;height:91px}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+<h1>Approved artwork — source recovery reference</h1>
+<p class="sub">74 previously approved Reborn / Plates alternate forms. This is a <b>read-only technical gallery</b>, not a second approval page. Existing KEEP/CUT votes are protected, and no Pokémon is added to the ROM here.</p>
+<nav><a href="./master-review.html">← Master Sprite Review</a><a href="./review/recovered-approved-legacy-pairs-2026-10-23.json">Verified source-link manifest</a></nav>
+<div class="toolbar"><input id="q" type="search" placeholder="Search Pokémon, family or type" aria-label="Search recovered sprites">
+<select id="filter" aria-label="Recovery filter"><option value="all">All approved source pairs</option><option value="missing">Missing shiny sprites only</option></select></div>
+</div></header>
+<main>
+<div class="notice"><b>Original GBA-source art, not DS-certified.</b> Front/back pairs have been located. Some shinies are missing; none have been invented. This gallery is for checking recovery completeness, not repeating artwork votes. A later conversion and quality audit is required before game integration.</div>
+<div id="summary">Loading recovered records…</div>
+<div class="pagination"><button id="prev" disabled>Previous families</button><span id="page"></span><button id="next" disabled>Next families</button></div>
+<div id="root" aria-live="polite"></div>
+<div class="pagination"><button id="prev2" disabled>Previous families</button><span id="page2"></span><button id="next2" disabled>Next families</button></div>
+<footer>Pokémon Mercury Redux · Protected historical approvals · No destructive changes · <a href="./master-review.html">Return to canonical reviewer</a></footer>
+</main>
+<script>
+(function(){
+"use strict";
+var DATA=null,PAGE=0,PER_PAGE=12;
+function el(id){return document.getElementById(id)}
+function safe(value){return String(value==null?"":value).replace(/[&<>"']/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]})}
+function src(path){return "./"+String(path).split("/").map(encodeURIComponent).join("/")}
+function art(item,label){var block=document.createElement("div");block.className="sprite";var caption=document.createElement("small");caption.textContent=label;block.appendChild(caption);
+ if(item&&item.path){var image=document.createElement("img");image.alt=label+" artwork";image.loading="lazy";image.decoding="async";image.src=src(item.path);image.onerror=function(){image.remove();var m=document.createElement("div");m.className="missing";m.textContent="Asset failed to load";block.appendChild(m)};block.appendChild(image)}
+ else {var m=document.createElement("div");m.className="missing";m.textContent="Not recovered";block.appendChild(m)}return block}
+function render(){if(!DATA)return;
+ var q=el("q").value.trim().toLowerCase(),f=el("filter").value;
+ var filtered=DATA.entries.filter(function(x){return (f==="all"||x.missingShiny)&&(!q||[x.identity,x.name,x.family,x.type1,x.type2,x.source].join(" ").toLowerCase().includes(q))});
+ var grouped=new Map();filtered.forEach(function(x){if(!grouped.has(x.family))grouped.set(x.family,[]);grouped.get(x.family).push(x)});
+ var keys=Array.from(grouped.keys()).sort(function(a,b){return a.localeCompare(b,undefined,{numeric:true})});
+ var pages=Math.max(1,Math.ceil(keys.length/PER_PAGE));PAGE=Math.min(PAGE,pages-1);
+ el("summary").textContent=filtered.length+" source pairs · "+keys.length+" families · "+DATA.completeShinyQuartets+" complete shiny sets across full recovery · "+DATA.shinyIncomplete+" shiny sets still incomplete";
+ var root=el("root");root.replaceChildren();
+ if(!keys.length){var empty=document.createElement("p");empty.textContent="No matching recovered sprites.";root.appendChild(empty)}
+ keys.slice(PAGE*PER_PAGE,(PAGE+1)*PER_PAGE).forEach(function(key){
+  var family=document.createElement("section");family.className="family";
+  var h=document.createElement("h2");h.textContent=key+" ("+grouped.get(key).length+")";family.appendChild(h);
+  var cards=document.createElement("div");cards.className="cards";
+  grouped.get(key).forEach(function(x){var card=document.createElement("article");card.className="card";
+   var title=document.createElement("h3");title.textContent=x.name;card.appendChild(title);
+   var meta=document.createElement("div");meta.className="meta";meta.textContent=[x.type1,x.type2].filter(Boolean).join(" / ")+" · "+x.source+" · original KEEP "+x.reviewId;card.appendChild(meta);
+   var sprites=document.createElement("div");sprites.className="spritegrid";
+   [["Front",x.front],["Back",x.back],["Shiny front",x.shinyFront],["Shiny back",x.shinyBack]].forEach(function(v){sprites.appendChild(art(v[1],v[0]))});card.appendChild(sprites);
+   if(x.missingShiny){var flag=document.createElement("div");flag.className="flag";flag.textContent="Shiny artwork still missing — repair only, no reapproval";card.appendChild(flag)}
+   cards.appendChild(card)});
+  family.appendChild(cards);root.appendChild(family)});
+ var p="Page "+(PAGE+1)+" / "+pages;el("page").textContent=p;el("page2").textContent=p;
+ ["prev","prev2"].forEach(function(id){el(id).disabled=PAGE===0});
+ ["next","next2"].forEach(function(id){el(id).disabled=PAGE===pages-1});
+}
+["prev","prev2"].forEach(function(id){el(id).onclick=function(){PAGE=Math.max(0,PAGE-1);render();window.scrollTo(0,0)}});
+["next","next2"].forEach(function(id){el(id).onclick=function(){PAGE++;render();window.scrollTo(0,0)}});
+el("q").oninput=function(){PAGE=0;render()};el("filter").onchange=function(){PAGE=0;render()};
+fetch("./review/recovered-approved-legacy-pairs-2026-10-23.json",{cache:"no-store"}).then(function(r){if(!r.ok)throw Error("HTTP "+r.status);return r.json()}).then(function(data){
+ if(data.schema!=="mercury-recovered-approved-source-pairs-v1"||!Array.isArray(data.entries)||data.entries.length!==74)throw Error("Invalid recovery index");
+ DATA=data;render();
+}).catch(function(e){el("summary").textContent="Unable to load the recovery index: "+e.message});
+})();
+</script>
+</body></html>
