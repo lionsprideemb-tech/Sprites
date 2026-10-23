@@ -62,13 +62,15 @@
     "distinctCompetingIdentities": 15,
     "leftoverCandidates": 158,
     "actionable": 166,
-    "blocked": 31,
+    "blocked": 33,
     "excludedFromReview": 256,
     "byCategory": {
       "fakemon": 148,
       "design-comparison": 17,
       "decision-conflict": 1
-    }
+    },
+    "historicalIdentityCollisions": 5,
+    "contradictoryIdentityCollisions": 2
   },
   "warning": "Browser-only historical approvals are not present on GitHub until exported; import them before treating the entire review as final.",
   "entries": [
@@ -4044,6 +4046,38 @@
       "note": "Previous status: keep; recovered: cut",
       "evidence": "R0479",
       "holdReason": "Review requires restored front/back sprite paths"
+    },
+    {
+      "id": "collision:hydreigon-mega",
+      "identity": "hydreigon-mega",
+      "name": "Hydreigon Mega",
+      "base": "Hydreigon",
+      "family": "#0633 Deino → #0634 Zweilous → #0635 Hydreigon",
+      "source": "Conflicting historical approval rows",
+      "category": "legacy-id-collision",
+      "type1": "Dark",
+      "type2": "Dragon",
+      "typeAuthority": "historical reviewed type",
+      "front": "DS_CUSTOM_LIBRARY/converted/All_Mercury_GBA_Queue/hydreigon_mega/front.png",
+      "back": "DS_CUSTOM_LIBRARY/converted/All_Mercury_GBA_Queue/hydreigon_mega/back.png",
+      "reason": "The same historical identity has both KEEP and CUT approvals; original distinct review IDs must be preserved.",
+      "holdReason": "Conflicting review IDs: R0786=keep; R0787=cut"
+    },
+    {
+      "id": "collision:tsareena-mega",
+      "identity": "tsareena-mega",
+      "name": "Tsareena Mega",
+      "base": "Tsareena",
+      "family": "#0761 Bounsweet → #0762 Steenee → #0763 Tsareena",
+      "source": "Conflicting historical approval rows",
+      "category": "legacy-id-collision",
+      "type1": "Grass",
+      "type2": "Fighting",
+      "typeAuthority": "historical reviewed type",
+      "front": "DS_CUSTOM_LIBRARY/converted/All_Mercury_GBA_Queue/tsareena_mega/front.png",
+      "back": "DS_CUSTOM_LIBRARY/converted/All_Mercury_GBA_Queue/tsareena_mega/back.png",
+      "reason": "The same historical identity has both KEEP and CUT approvals; original distinct review IDs must be preserved.",
+      "holdReason": "Conflicting review IDs: R0867=keep; R0868=cut"
     }
   ],
   "reviewHistoryNotes": [
