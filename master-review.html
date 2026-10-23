@@ -328,13 +328,14 @@ $("view").onchange=$("category").onchange=$("shinyOnly").onchange=function(){PAG
 Promise.all([
  fetch("master-review-data.json",{cache:"no-store"}).then(function(x){if(!x.ok)throw Error("Review data HTTP "+x.status);return x.json()}),
  fetch("review/user-iphone-decisions-2026-10-23.json",{cache:"no-store"}).then(function(x){if(!x.ok)throw Error("Uploaded decisions HTTP "+x.status);return x.json()}),
- fetch("review/recovered-approved-legacy-pairs-2026-10-23.json",{cache:"no-store"}).then(function(x){if(!x.ok)throw Error("Recovery manifest HTTP "+x.status);return x.json()})
+ fetch("review/recovered-approved-legacy-pairs-2026-10-23.json",{cache:"no-store"}).then(function(x){if(!x.ok)throw Error("Recovery manifest HTTP "+x.status);return x.json()}).catch(function(e){console.warn("Source recovery unavailable; canonical voting stays online:",e);return null})
 ]).then(function(parts){
  var d=parts[0],backedUp=parts[1],rec=parts[2];
  if(d.schema!=="mercury-master-review-v1"||!Array.isArray(d.entries)||!Array.isArray(d.technicalHolds))throw Error("Invalid review dataset");
  if(backedUp.schema!=="mercury-user-iphone-decisions-v1"||!Array.isArray(backedUp.entries))throw Error("Invalid decision backup");
- if(rec.schema!=="mercury-recovered-approved-source-pairs-v1"||!Array.isArray(rec.entries)||rec.entries.length!==74)throw Error("Bad recovery source manifest");
+ if(rec&&(rec.schema!=="mercury-recovered-approved-source-pairs-v1"||!Array.isArray(rec.entries)||rec.entries.length!==74)){console.warn("Unexpected recovered-source index; original votes remain available.");rec=null}
  DATA=d;IMPORTED=backedUp;RECOVERY=rec;
+ if(!RECOVERY)$("recStat").textContent="Recovery preview temporarily unavailable";
  var archived={};backedUp.entries.forEach(function(x){if(["keep","cut"].includes(x.decision))archived[x.id]={decision:x.decision,note:String(x.note||""),updated:String(x.updated||"")};});
  try{
   var saved=JSON.parse(localStorage.getItem(STORAGE)||"{}");
