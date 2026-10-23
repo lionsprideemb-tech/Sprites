@@ -1,0 +1,260 @@
+{
+  "schema": "mercury-verified-exception-source-pairs-v1",
+  "date": "2026-10-23",
+  "sourceRepository": "lionsprideemb-tech/Sprites",
+  "sourceDatasetBlobBefore": "2973fd697ca911f4c1a9cf8f6bd2760eb5483396",
+  "classification": "Matching original source generation/filename/PNG dimensions; not a manual sprite-quality certification",
+  "matches": [
+    {
+      "id": "compare:rainther:1",
+      "originalIdentity": "rainther",
+      "originalName": "Rainther — Design 1",
+      "source": "Festival_Magiscarf",
+      "status": "source-pack exact filename and generation matching; not DS-certified",
+      "front": {
+        "path": "DS_CUSTOM_LIBRARY/packs/Festival_Magiscarf/Magiscarf/Battlers Normal/Front/Rainther.png",
+        "blobSHA": "7e471fbe59d8498e9823bbd3ec5005ca756e1615",
+        "dimensions": {
+          "width": 100,
+          "height": 100
+        }
+      },
+      "back": {
+        "path": "DS_CUSTOM_LIBRARY/packs/Festival_Magiscarf/Magiscarf/Battlers Normal/Back/Rainther.png",
+        "blobSHA": "87c3ece0feb9a9e72d097b9660f5bba907633737",
+        "dimensions": {
+          "width": 100,
+          "height": 100
+        }
+      },
+      "generation": "normal",
+      "classification": "offer_review",
+      "reviewVoteAlreadyPresent": false,
+      "artChanged": false,
+      "romIntegrated": false
+    },
+    {
+      "id": "compare:rainther:2",
+      "originalIdentity": "rainther",
+      "originalName": "Rainther — Design 2",
+      "source": "Festival_Magiscarf",
+      "status": "source-pack exact filename and generation matching; not DS-certified",
+      "front": {
+        "path": "DS_CUSTOM_LIBRARY/packs/Festival_Magiscarf/Magiscarf/Gen 4 Battlers/Fronts/RAINTHER.png",
+        "blobSHA": "ea41705ef94233f2f0fd100f291a4871c649b06d",
+        "dimensions": {
+          "width": 160,
+          "height": 160
+        }
+      },
+      "back": {
+        "path": "DS_CUSTOM_LIBRARY/packs/Festival_Magiscarf/Magiscarf/Gen 4 Battlers/Backs/RAINTHER.png",
+        "blobSHA": "d795ea9a5601608c207407e8533c941d5824e2c6",
+        "dimensions": {
+          "width": 160,
+          "height": 160
+        }
+      },
+      "generation": "gen4",
+      "classification": "offer_review",
+      "reviewVoteAlreadyPresent": false,
+      "artChanged": false,
+      "romIntegrated": false
+    },
+    {
+      "id": "compare:hissiorite:2",
+      "originalIdentity": "hissiorite",
+      "originalName": "Hissiorite — Design 2",
+      "source": "Fakemon_Festival_Full",
+      "status": "source-pack exact filename and generation matching; not DS-certified",
+      "front": {
+        "path": "DS_CUSTOM_LIBRARY/packs/Fakemon_Festival_Full/Fakemon Festival Pack/PrincessPhoenix/Pokemon/Battlers/Gen 3 Frontsprites/Hissiorite.png",
+        "blobSHA": "916783709e2d5a1939d98fd9d19c1b4c420fbba4",
+        "dimensions": {
+          "width": 64,
+          "height": 64
+        }
+      },
+      "back": {
+        "path": "DS_CUSTOM_LIBRARY/packs/Fakemon_Festival_Full/Fakemon Festival Pack/PrincessPhoenix/Pokemon/Battlers/Gen 3 Backsprites/Backsprites Full/HissioriteB3.png",
+        "blobSHA": "cae132be32842d4d3625ad46fa775a80f472d347",
+        "dimensions": {
+          "width": 64,
+          "height": 64
+        }
+      },
+      "generation": "gen3",
+      "classification": "archive_alternative",
+      "reviewVoteAlreadyPresent": false,
+      "artChanged": false,
+      "romIntegrated": false
+    },
+    {
+      "id": "compare:cobarett:2",
+      "originalIdentity": "cobarett",
+      "originalName": "Cobarett — Design 2",
+      "source": "Fakemon_Festival_Full",
+      "status": "source-pack exact filename and generation matching; not DS-certified",
+      "front": {
+        "path": "DS_CUSTOM_LIBRARY/packs/Fakemon_Festival_Full/Fakemon Festival Pack/PrincessPhoenix/Pokemon/Battlers/Gen 3 Frontsprites/Cobarett.png",
+        "blobSHA": "c78ef89d96fbdd4cb51fd2cb4890ed517a9ef1cd",
+        "dimensions": {
+          "width": 64,
+          "height": 64
+        }
+      },
+      "back": {
+        "path": "DS_CUSTOM_LIBRARY/packs/Fakemon_Festival_Full/Fakemon Festival Pack/PrincessPhoenix/Pokemon/Battlers/Gen 3 Backsprites/Backsprites Full/CobarettB3.png",
+        "blobSHA": "91987aa05fe0f3d57820cdac372dc6ffb59b3cb8",
+        "dimensions": {
+          "width": 64,
+          "height": 64
+        }
+      },
+      "generation": "gen3",
+      "classification": "archive_alternative",
+      "reviewVoteAlreadyPresent": false,
+      "artChanged": false,
+      "romIntegrated": false
+    },
+    {
+      "id": "compare:pythonova:2",
+      "originalIdentity": "pythonova",
+      "originalName": "Pythonova — Design 2",
+      "source": "Fakemon_Festival_Full",
+      "status": "source-pack exact filename and generation matching; not DS-certified",
+      "front": {
+        "path": "DS_CUSTOM_LIBRARY/packs/Fakemon_Festival_Full/Fakemon Festival Pack/PrincessPhoenix/Pokemon/Battlers/Gen 3 Frontsprites/Pythonova.png",
+        "blobSHA": "29936d46bb173408ce2db971fbb969bc875862ca",
+        "dimensions": {
+          "width": 64,
+          "height": 64
+        }
+      },
+      "back": {
+        "path": "DS_CUSTOM_LIBRARY/packs/Fakemon_Festival_Full/Fakemon Festival Pack/PrincessPhoenix/Pokemon/Battlers/Gen 3 Backsprites/Backsprites Full/Pythonova.png",
+        "blobSHA": "0656eeb745aa1e4c8a1fd9ef88218ad8b69b62ef",
+        "dimensions": {
+          "width": 64,
+          "height": 64
+        }
+      },
+      "generation": "gen3",
+      "classification": "archive_alternative",
+      "reviewVoteAlreadyPresent": false,
+      "artChanged": false,
+      "romIntegrated": false
+    },
+    {
+      "id": "compare:pythonovas:1",
+      "originalIdentity": "pythonovas",
+      "originalName": "Pythonovas — Design 1",
+      "source": "Fakemon_Festival_Full",
+      "status": "source-pack exact filename and generation matching; not DS-certified",
+      "front": {
+        "path": "DS_CUSTOM_LIBRARY/packs/Fakemon_Festival_Full/Fakemon Festival Pack/PrincessPhoenix/Pokemon/Battlers/Gen 3 Frontsprites/PythonovaS.png",
+        "blobSHA": "da0fee0a86c13c90ec062abd4183a347a57a8c99",
+        "dimensions": {
+          "width": 64,
+          "height": 64
+        }
+      },
+      "back": {
+        "path": "DS_CUSTOM_LIBRARY/packs/Fakemon_Festival_Full/Fakemon Festival Pack/PrincessPhoenix/Pokemon/Battlers/Gen 3 Backsprites/Backsprites Full/PythonovaS.png",
+        "blobSHA": "9d5c5173546118adf2fb95ca0b2aebbff1b4f196",
+        "dimensions": {
+          "width": 64,
+          "height": 64
+        }
+      },
+      "generation": "gen3",
+      "classification": "shiny_companion",
+      "reviewVoteAlreadyPresent": false,
+      "artChanged": false,
+      "romIntegrated": false
+    },
+    {
+      "id": "compare:pythonovas:2",
+      "originalIdentity": "pythonovas",
+      "originalName": "Pythonovas — Design 2",
+      "source": "Fakemon_Festival_Full",
+      "status": "source-pack exact filename and generation matching; not DS-certified",
+      "front": {
+        "path": "DS_CUSTOM_LIBRARY/packs/Fakemon_Festival_Full/Fakemon Festival Pack/PrincessPhoenix/Pokemon/Battlers/Gen 4-5 Frontsprites/PythonovaS.png",
+        "blobSHA": "d5c39b52c588eeac82ba55abecc68973b172a759",
+        "dimensions": {
+          "width": 96,
+          "height": 96
+        }
+      },
+      "back": {
+        "path": "DS_CUSTOM_LIBRARY/packs/Fakemon_Festival_Full/Fakemon Festival Pack/PrincessPhoenix/Pokemon/Battlers/Gen 4 Backsprites/PythonovaB4S.png",
+        "blobSHA": "2cfe84bd85ccb1930155e47893f21600c2185848",
+        "dimensions": {
+          "width": 96,
+          "height": 96
+        }
+      },
+      "generation": "gen4",
+      "classification": "shiny_companion",
+      "reviewVoteAlreadyPresent": false,
+      "artChanged": false,
+      "romIntegrated": false
+    },
+    {
+      "id": "compare:noctowl-1:1",
+      "originalIdentity": "noctowl-1",
+      "originalName": "Luminian Noctowl — Design 1",
+      "source": "Festival_Atsui",
+      "status": "source-pack exact filename and generation matching; not DS-certified",
+      "front": {
+        "path": "DS_CUSTOM_LIBRARY/packs/Festival_Atsui/Atsui/Pokemon/Front/NOCTOWL_1.png",
+        "blobSHA": "84b844d374abd1ef708c40eb84d38cbc5fdd6b0b",
+        "dimensions": {
+          "width": 96,
+          "height": 96
+        }
+      },
+      "back": {
+        "path": "DS_CUSTOM_LIBRARY/packs/Festival_Atsui/Atsui/Pokemon/Back/NOCTOWL_1.png",
+        "blobSHA": "b9517cee2d16ca662decd2242493e5bc5519530f",
+        "dimensions": {
+          "width": 96,
+          "height": 96
+        }
+      },
+      "generation": "atsui",
+      "classification": "archive_alternative",
+      "reviewVoteAlreadyPresent": false,
+      "artChanged": false,
+      "romIntegrated": false
+    }
+  ],
+  "furrva": {
+    "name": "Furrva",
+    "type": "Bug",
+    "artist": "Mikitari",
+    "permission": "Free to use with credit",
+    "source": "https://pokengine.org/mons/00uc0o89/Furrva",
+    "frontReference": "https://pokengine.b-cdn.net/play/images/mons/fronts/00uc0o89.webp?t=56",
+    "backReference": "https://pokengine.b-cdn.net/play/images/mons/backs/00uc0o89.webp?t=56",
+    "status": "source-hosted original front/back located; not stored locally in GitHub or DS converted",
+    "licensingNote": "Credit Mikitari; no fabricated local sprites"
+  },
+  "policy": {
+    "preserveApprovedVotes": true,
+    "noArtworkDeletion": true,
+    "noROMIntegration": true,
+    "noAutomaticDSCertification": true,
+    "requeueOnlyPendingRainther": true
+  },
+  "counts": {
+    "matchedPairs": 8,
+    "promotedUnvotedArtOptions": 2,
+    "shinyCompanions": 2,
+    "archivedPriorAlternatives": 4,
+    "remainingIdentityWarnings": 5,
+    "actionable": 158,
+    "technicalHolds": 14
+  }
+}
