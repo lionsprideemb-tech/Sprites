@@ -8,6 +8,7 @@ const root=path.resolve(__dirname,"../..");
 const data={
  "master-review-data.json":JSON.parse(fs.readFileSync(path.join(root,"master-review-data.json"),"utf8")),
  "review/user-iphone-decisions-2026-10-23.json":JSON.parse(fs.readFileSync(path.join(root,"review/user-iphone-decisions-2026-10-23.json"),"utf8")),
+ "review/final-artwork-approval-overlay-2026-10-24.json":JSON.parse(fs.readFileSync(path.join(root,"review/final-artwork-approval-overlay-2026-10-24.json"),"utf8")),
  "review/recovered-approved-legacy-pairs-2026-10-23.json":JSON.parse(fs.readFileSync(path.join(root,"review/recovered-approved-legacy-pairs-2026-10-23.json"),"utf8")),
  "DS_CUSTOM_LIBRARY/converted/Verified_Source_DS64_Technical_2026_10_23/technical_quality_manifest.json":
   JSON.parse(fs.readFileSync(path.join(root,"DS_CUSTOM_LIBRARY/converted/Verified_Source_DS64_Technical_2026_10_23/technical_quality_manifest.json"),"utf8")),
@@ -33,9 +34,19 @@ const downloads=[],doc={
  createElement:element,body:element("body")
 };
 const keys=new Map(),localStorage={
+
  getItem(k){return keys.get(k)||null},setItem(k,v){keys.set(k,v)},
  get length(){return keys.size},key(i){return [...keys.keys()][i]}
 };
+// Simulate stale browser choices predating the explicit October 24 decisions.
+keys.set("mercury-master-review-2026-10-23-v1",JSON.stringify({
+ schema:"mercury-sprite-decisions-v1",archived:{},state:{
+  "reconcile:wailmer-alternate-form-1":{decision:"cut",updated:"2026-10-23"},
+  "reconcile:wailord-alternate-form-1":{decision:"cut",updated:"2026-10-23"},
+  "compare:rainther:1":{decision:"keep",updated:"2026-10-23"},
+  "compare:rainther:2":{decision:"cut",updated:"2026-10-23"},
+  "compare:lucario-mega-z:1":{decision:"keep",updated:"2026-10-23"}
+ }}));
 let blob=null;const warnings=[],errors=[];
 const ctx={
  document:doc,localStorage,window:{scrollTo(){}},URL:{createObjectURL(v){blob=v;return "blob:technical-test"},
@@ -49,10 +60,14 @@ async function run(){
  for(let i=0;i<12;i++)await Promise.resolve();
  assert.equal(errors.length,0,errors.join("; "));
  assert.ok(elements.total.textContent.includes("158 actionable"),"active choices failed to load");
- assert.ok(elements.done.textContent.includes("154 decided"),"historical user votes lost");
+ assert.ok(elements.done.textContent.includes("158 decided"),"finalized user votes did not load");
+ assert.ok(elements.done.textContent.includes("0 remain"),"final active decisions still pending");
  assert.ok(elements.identityCount.textContent.includes("5 identity"),"unverified evolution families changed");
  assert.ok(elements.qualityStat.textContent.includes("83 source sets"),"technical report inaccessible");
 
+ elements.view.value="finalized";elements.view.onchange();
+ assert.ok(elements.pages.textContent.includes("4 designs"),"finalized four are not visible together");
+ assert.ok(elements.root.children.length>=2,"finalized family grouping lost");
  elements.view.value="dsquality";elements.view.onchange();
  assert.ok(elements.root.children.length>0,"DS64 comparison groups not rendered");
  assert.equal(elements.bulk.disabled,true,"read-only quality mode could change votes");
@@ -93,9 +108,16 @@ async function run(){
  const map=new Map(obj.entries.map(v=>[v.id,v]));
  const before=data["review/user-iphone-decisions-2026-10-23.json"].entries;
  for(const v of before){assert.equal(map.get(v.id)?.decision,v.decision,"Protected original vote lost: "+v.id)}
- assert.equal(map.get("compare:rainther:1")?.decision,"pending");
- assert.equal(map.get("compare:rainther:2")?.decision,"pending");
+ const expectedFinal={"reconcile:wailmer-alternate-form-1":"keep",
+  "reconcile:wailord-alternate-form-1":"keep","compare:rainther:1":"cut","compare:rainther:2":"keep"};
+ for(const [id,decision] of Object.entries(expectedFinal))assert.equal(map.get(id)?.decision,decision,"Final vote failed to override stale browser cache "+id);
+ const final=data["review/final-artwork-approval-overlay-2026-10-24.json"];
+ assert.equal(obj.finalArtworkApproval.approvedOn,"2026-10-24");
+ assert.equal(obj.finalArtworkApproval.newDecisions,4);
+ assert.equal(obj.finalArtworkApproval.confirmedPriorVotes,4);
+ for(const x of final.confirmedLatestSaved)assert.equal(map.get(x.id)?.decision,x.decision,"reconfirmed archived Mega changed");
+ assert.equal(obj.entries.filter(x=>x.decision==="pending"&&Object.hasOwn(expectedFinal,x.id)).length,0);
  assert.equal(errors.length,0);
- console.log("PASS simulated iPhone viewer: 196 comparison previews, 40 palette reviews, saved quality feedback, hash-bound JSON export and 166 unchanged KEEP/CUT decisions.");
+ console.log("PASS simulated iPhone reviewer: 158/158 final active decisions, stale browser vote repair, 166 immutable saved votes, 4 archived Mega reconfirmations, 196 source comparisons, 40 palette checks and JSON export.");
 }
 run().catch(e=>{console.error(e);process.exitCode=1});
