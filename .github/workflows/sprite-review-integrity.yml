@@ -18,6 +18,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: "22"
+      - name: Validate exact final artwork approvals and protected prior choices
+        run: node review/tests/final-user-artwork-approvals.cjs
       - run: node review/tests/master-review-integrity.cjs
       - name: Simulated iPhone quality inspector and protected JSON export
         run: node review/tests/quality-reviewer-browser-smoke.cjs
