@@ -34,6 +34,8 @@ jobs:
     steps:
       - name: Check out sprite library
         uses: actions/checkout@v4
+      - name: Validate finalized user artwork votes without modifying original approvals
+        run: node review/tests/final-user-artwork-approvals.cjs
       - name: Validate review, ledger and PNG files
         run: python3 tools/validate_master_review.py
       - name: Verify recovered approved source pairs and missing-shiny disclosure
