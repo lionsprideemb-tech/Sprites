@@ -6600,5 +6600,31 @@
     "dsConversionPending": true,
     "changesUserDecisions": false,
     "noROMChanges": true
+  },
+  "finalArtworkApproval": {
+    "file": "review/final-artwork-approval-overlay-2026-10-24.json",
+    "approvedOn": "2026-10-24",
+    "lastUserSource": "Explicit final user artwork selections (2026-10-24); the original 166-vote CSV/JSON is immutable.",
+    "newVotes": 4,
+    "keep": 3,
+    "cut": 1,
+    "priorVoteReconfirmations": 4,
+    "finalizedActionableCount": 158,
+    "remainingActionable": 0,
+    "ids": [
+      "reconcile:wailmer-alternate-form-1",
+      "reconcile:wailord-alternate-form-1",
+      "compare:rainther:1",
+      "compare:rainther:2"
+    ],
+    "reconfirmedArchived": [
+      "compare:lucario-mega-z:1",
+      "compare:lucario-mega-z:2",
+      "compare:golisopod-mega:1",
+      "compare:golisopod-mega:2"
+    ],
+    "note": "Final votes are an append-only overlay, not modifications to the 2026-10-23 original import. The technical holds and five uncertain evolution links remain. Creative art approval is not DS certification or ROM integration.",
+    "nativeDSCertified": false,
+    "ROMIntegrationAllowed": false
   }
 }
