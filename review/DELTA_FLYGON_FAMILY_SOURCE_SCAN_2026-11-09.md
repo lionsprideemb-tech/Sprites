@@ -87,3 +87,25 @@ Authoritative newer roster file: [Flygon plan](flygon-roster-plan-2026-11-09.jso
 - https://www.pokecommunity.com/threads/pok%C3%A9mon-conquer-the-gauntlet.541980/ and https://zhenga8533-archive.github.io/bbvw2-redux-wiki/changes/type_changes/ : existing species retypings, no new unique art.
 
 **Priority next verification:** inspect the *original Orpheus resource archive* for regional `328/329/330` fronts, backs, shinies, icons and evidence of exact origin and palette; if unsuitable, remain on the non-import track and continue original art search. Existing Pokémon Z / Ópalo two-stage pixel pair stays a **candidate only**. No user vote has been changed.
+
+
+## Hoenn Legends fan-game lead and Orpheus archive correction — 2026-11-09
+
+### Pokémon Legends Delta (Delta Rangers)
+- Official site https://pokemon-legends-delta.carrd.co/ and info https://pokemon-legends-delta-info.carrd.co/
+- Actual September 27, 2026 developer **Mega Flygon** reveal: https://www.reddit.com/r/PokemonROMhacks/comments/1wrh2gl/pokemon_legends_delta_mega_flygon_mystifies_the/
+- Confirmed **Mega Flygon** art/gameplay announcement, but not an independent Bug/Ground Delta Flygon or matching Trapinch/Vibrava alternate family. **Do not replace** the existing regular Mega Flygon automatically; do not conflate new Mega with separate Bug/Ground Delta species.
+- 2026 Hoenn historical-era FireRed GBA project; artwork would require explicit permissions and DS-format validation if later chosen. Research lead only.
+
+### Pokémon Legends: Rayquaza (Ryuku historical Hoenn project)
+- Fan community https://www.reddit.com/r/PKMNLegendsRayquaza/
+- Multiple documented distinct regional Pokémon designs: e.g. https://www.reddit.com/r/pokemon/comments/13i2xzy (Ryukuian Blastoise), https://www.reddit.com/r/fakemon/comments/134kikm (Ryukuian Incineroar).
+- No verified custom Flygon family in searched public project posts yet. **No import or inferred approval**.
+
+### IMPORTANT correction to earlier Orpheus download limitation
+- The earlier statement in the follow-up section that the resource archive could not be obtained is **superseded** by a successful isolated read-only GitHub Actions verification on 2026-11-09: https://github.com/lionsprideemb-tech/Sprites/actions/runs/42693726301
+- 501,504,299-byte Orpheus resource archive recovered from the publicly linked MediaFire source (SHA256 `72539b83b55a427c4adcdf2f3e5397cc28371875a720f687ffcf4e2a6d803ef9`); 13,586 archive entries.
+- **33 name-matched PNG files** were found for species 328 Trapinch, 329 Vibrava, 330 Flygon, including `Graphics/Battlers/328_1.png`, `328b_1.png`, `329_1.png`, `329b_1.png`, `330_1.png`, `330b_1.png`, plus `Graphics/Icons/icon328_1.png`, `icon329_1.png`, `icon330_1.png` and standard regular sprite entries. These strongly establish all three regional-form **normal front/back and icon source files** exist.
+- Regional `_1` battler front/back sprites were **160×160 pixels** in the source pack, not native DS 64×64 (with various RGBA color counts: 328 front 16 and back 15; 329 front 25 and back 19; 330 front 35 and back 30). Regional icons `icon*_1.png` measured **128×64** sheets. Images are original source art not yet visually inspected for actual design difference or verified Bug types; do **not** label them DS-ready. Exact regional shiny battler filenames like `328s_1.png` were **not** found among the 33 canonical name matches; standard `328s.png` filenames cannot automatically be attributed to the regional forms.
+- Audit read PNG metadata only without importing any images into Mercury production or changing creative approvals.
+- **Updated recommendation:** visually compare the extracted Orpheus regional-front/back sprites for **all three** in a quarantined preview, verify actual typing and author permission. Only then consider a sprite approval request. The fact the archive was finally accessible makes this **stronger full-family source candidate** than earlier research suggested.
