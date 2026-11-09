@@ -12,7 +12,7 @@ User selected **Route 2** in the ongoing Flygon sprite conversation and explicit
 | Electric alternate Mega | `flygon-redux-b-mega` | **RETIRED from game roster** |
 | Delta Mega | None | NOT PLANNED |
 
-**No new custom Delta Pokémon or art has been registered in the playable Pokédex.** The requested Delta Flygon final evolution has **Bug/Ground** typing; earlier evolution-stage typings are still open to matching the chosen designs. The existing normal Flygon family keeps its original typings.
+**No new custom Delta Pokémon or art has been registered in the playable Pokédex.** The requested Delta Flygon final evolution has **Bug/Ground** typing; Delta Trapinch and Delta Vibrava must each have the **Bug** type, but can be mono-Bug or Bug paired with another existing type; they do not both need to be Bug/Ground. Other type choices remain open until compatible original artwork is selected. The existing normal Flygon family keeps its original typings.
 
 ## Avoiding extra species/form clutter
 The target game roster is **two three-stage lines and one Mega**, not three lines or multiple Delta Megas. The new line would require at most **three additional Delta species/form identities**, pending a collision-free registry implementation. No additional unrelated Flygon or Mega slots should be created.

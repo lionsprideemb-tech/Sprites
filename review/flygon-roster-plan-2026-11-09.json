@@ -34,16 +34,25 @@
         "Delta Vibrava",
         "Delta Flygon"
       ],
-      "lineTheme": "Bug/Ground",
+      "lineTheme": "Bug-typed first two stages evolving into Bug/Ground Delta Flygon",
       "finalEvolutionType1": "Bug",
       "finalEvolutionType2": "Ground",
-      "earlierStageTypes": "Not locked; choose consistently after original matching art is identified. Do not infer them from rejected Redux files.",
+      "earlierStageTypes": "Delta Trapinch and Delta Vibrava must each include Bug as one of their types (either monotype Bug or Bug paired with another existing type). The other type, if any, is open until artwork and biology are selected; they do NOT each have to be Bug/Ground.",
       "newSpeciesOrFormSlots": 3,
       "requiredBeforeIntegration": [
         "Exact source-specific user selection of Delta Trapinch, Delta Vibrava and Delta Flygon designs",
         "Verified front/back/shiny/icon consistency, name, type and evolution family",
         "DS 4bpp and native archive rendering tests",
         "Species/form ID collision audit and reproducible Platinum ROM tests"
+      ],
+      "earlierStageBugTypeRequired": true,
+      "searchCriteria": [
+        "A coherent independently redesigned three-stage family rather than color-only variants",
+        "Delta Trapinch must be Bug-typed",
+        "Delta Vibrava must be Bug-typed",
+        "Delta Flygon must be Bug/Ground",
+        "Find already-made art first; prefer complete, matching front/back/shiny/icon sprite sets",
+        "No auto-approval or importing earlier rejected designs"
       ]
     },
     "deltaMega": {
@@ -113,8 +122,8 @@
   "acceptance": {
     "plannedFamilies": 2,
     "plannedTotalMegaForms": 1,
-    "newBugGroundDeltaMembers": 3,
     "unresolvedDeltaArtworkMembers": 3,
-    "electricLineMembersInRoster": 0
+    "electricLineMembersInRoster": 0,
+    "newDeltaMembers": 3
   }
 }

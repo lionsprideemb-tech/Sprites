@@ -23,8 +23,11 @@ assert.deepEqual(plan.plannedStructure.deltaFamily.species, ["Delta Trapinch", "
 assert.equal(plan.plannedStructure.deltaFamily.finalEvolutionType1, "Bug");
 assert.equal(plan.plannedStructure.deltaFamily.finalEvolutionType2, "Ground");
 assert.equal(plan.plannedStructure.deltaFamily.status, "planned_artwork_unresolved");
+assert.equal(plan.plannedStructure.deltaFamily.earlierStageBugTypeRequired, true);
+assert.ok(plan.plannedStructure.deltaFamily.earlierStageTypes.includes("monotype Bug"));
+assert.ok(plan.plannedStructure.deltaFamily.earlierStageTypes.includes("do NOT each have to be Bug/Ground"));
 assert.deepEqual(plan.acceptance, {
-  plannedFamilies: 2, plannedTotalMegaForms: 1, newBugGroundDeltaMembers: 3,
+  plannedFamilies: 2, plannedTotalMegaForms: 1, newDeltaMembers: 3,
   unresolvedDeltaArtworkMembers: 3, electricLineMembersInRoster: 0
 });
 const old = get("review/recovered-user-export-decisions-2026-10-23.json");
@@ -54,4 +57,4 @@ assert.equal(archived.cutCount, 12);
 const protectedFile = fs.readFileSync(path.join(root, "review/user-iphone-decisions-2026-10-23.json"));
 assert.equal(gitBlob(protectedFile), "61c5e53c6ec81b74d192cd62a4c52c970cea15ce");
 assert.ok(plan.legacyDraftMapOverride.includes("Do not auto-import"));
-console.log("PASS Flygon roster: original family + 1 Mega, 3 unapproved Bug/Ground Delta stages, Electric Redux B + Mega retired from roster, old sprites/votes untouched.");
+console.log("PASS Flygon roster: original family + 1 Mega, 3 unapproved Delta stages (Bug-typed early stages, Bug/Ground Flygon), Electric Redux B + Mega retired from roster, old sprites/votes untouched.");
