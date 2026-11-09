@@ -1,0 +1,120 @@
+{
+  "schema": "mercury-flygon-roster-plan-v1",
+  "decidedOn": "2026-11-09",
+  "source": "Explicit user instruction: choose Route 2, regular Flygon family with existing Mega plus a separate Bug/Ground Delta Flygon family, and erase the Electric/Dragon line from the proposed game roster.",
+  "authority": "Newer roster-scoping decision; does not rewrite historical source-art KEEP/CUT decisions",
+  "scope": "Mercury Redux planned playable custom forms and integration queue, not source-archive deletion",
+  "plannedStructure": {
+    "ordinaryFamily": {
+      "status": "retain",
+      "species": [
+        "Trapinch",
+        "Vibrava",
+        "Flygon"
+      ],
+      "typeTreatment": "unchanged canonical Pokémon typings",
+      "newSpeciesSlots": 0
+    },
+    "ordinaryMega": {
+      "status": "retain_one",
+      "name": "Mega Flygon",
+      "artworkCandidate": {
+        "identity": "flygon-mega",
+        "source": "Elite_Redux_Bulk",
+        "front": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/flygon_mega/front.png",
+        "evidence": "2026-10-23 recovered DS export approve; one implementation slot only"
+      },
+      "alternativeArtworkNote": "Separate Mega_Flygon Design 2 has older historical approval but an unverified matching back sprite, and is not an additional Mega form",
+      "numberOfMegaSlots": 1
+    },
+    "deltaFamily": {
+      "status": "planned_artwork_unresolved",
+      "species": [
+        "Delta Trapinch",
+        "Delta Vibrava",
+        "Delta Flygon"
+      ],
+      "lineTheme": "Bug/Ground",
+      "finalEvolutionType1": "Bug",
+      "finalEvolutionType2": "Ground",
+      "earlierStageTypes": "Not locked; choose consistently after original matching art is identified. Do not infer them from rejected Redux files.",
+      "newSpeciesOrFormSlots": 3,
+      "requiredBeforeIntegration": [
+        "Exact source-specific user selection of Delta Trapinch, Delta Vibrava and Delta Flygon designs",
+        "Verified front/back/shiny/icon consistency, name, type and evolution family",
+        "DS 4bpp and native archive rendering tests",
+        "Species/form ID collision audit and reproducible Platinum ROM tests"
+      ]
+    },
+    "deltaMega": {
+      "status": "not_planned",
+      "numberOfMegaSlots": 0
+    }
+  },
+  "excludedFromPlannedRoster": [
+    {
+      "identity": "flygon-redux-b",
+      "historicDecision": "approve",
+      "currentRosterStatus": "retired_not_for_mercury",
+      "reason": "User abandoned formerly selected Electric/Dragon alternate line",
+      "front": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/flygon_redux_b/front.png",
+      "sourceSpritesPreserved": true
+    },
+    {
+      "identity": "flygon-redux-b-mega",
+      "historicDecision": "approve",
+      "currentRosterStatus": "retired_not_for_mercury",
+      "reason": "Do not retain Electric/Dragon alternate Mega when the alternate line is retired",
+      "front": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/flygon_redux_b_mega/front.png",
+      "sourceSpritesPreserved": true
+    }
+  ],
+  "alreadyRejectedOrUnresolvedArtNeverPromoted": [
+    {
+      "identity": "flygon-redux",
+      "history": "reject"
+    },
+    {
+      "identity": "flygon-redux-mega",
+      "history": "reject"
+    },
+    {
+      "identity": "trapinch-redux",
+      "history": "reject"
+    },
+    {
+      "identity": "vibrava-redux",
+      "history": "undecided"
+    },
+    {
+      "identity": "flygon_alternate_form_1",
+      "history": "Delete"
+    },
+    {
+      "identity": "trapinch_alternate_form_1",
+      "history": "Delete"
+    },
+    {
+      "identity": "vibrava_alternate_form_1",
+      "history": "Delete"
+    }
+  ],
+  "legacyDraftMap": "ER125_REDUX_TO_DELTA_MAP.csv",
+  "legacyDraftMapOverride": "Treat Flygon Redux-to-Delta entries in the old bulk map as superseded for this family. Do not auto-import SPECIES_FLYGON_REDUX, SPECIES_FLYGON_REDUX_MEGA, SPECIES_TRAPINCH_REDUX or SPECIES_VIBRAVA_REDUX.",
+  "protections": {
+    "existingSpriteFilesDeleted": false,
+    "originalHistoricVotesModified": false,
+    "unapprovedArtPromoted": false,
+    "romIntegrationAllowed": false,
+    "dexSpeciesEditsAllowed": false,
+    "regularFlygonFamilyUntouched": true,
+    "canonicalMegaRequiresTechnicalCertification": true
+  },
+  "acceptance": {
+    "plannedFamilies": 2,
+    "plannedTotalMegaForms": 1,
+    "newBugGroundDeltaMembers": 3,
+    "unresolvedDeltaArtworkMembers": 3,
+    "electricLineMembersInRoster": 0
+  }
+}
