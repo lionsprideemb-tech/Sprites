@@ -119,10 +119,20 @@ jobs:
           else
             echo 'No archive downloaded, no pixel art or typing claims can be established'
           fi
+      - name: Experimental 64px DS4bpp source-faithful visual and palette QA (no ROM)
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [ -f orpheus-original-resources.rar ] && [ -d safepng ]; then
+            python3 tools/orpheus_ds64_experiment.py
+          else
+            echo 'BLOCKED: original archive not available; not claiming conversion success'
+            exit 1
+          fi
       - name: Upload research-only metadata artifact
         uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: orpheus-family-archive-audit-unapproved
+          name: orpheus-family-DS64-experimental-unapproved
           path: report/
           retention-days: 14
