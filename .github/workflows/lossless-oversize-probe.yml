@@ -1,0 +1,38 @@
+name: Mercury exact-pixel oversized recovery probe
+on:
+  push:
+    branches:
+      - mercury/lossless-oversize-probe-20261109
+    paths:
+      - "tools/probe_lossless_oversize.py"
+      - ".github/workflows/lossless-oversize-probe.yml"
+  pull_request:
+    paths:
+      - "tools/probe_lossless_oversize.py"
+      - ".github/workflows/lossless-oversize-probe.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install image decoder
+        run: python3 -m pip install --quiet pillow
+      - name: Validate original user choices
+        run: node review/tests/final-user-artwork-approvals.cjs
+      - name: Audit 179 oversized original pixels for exact integer-duplicate collapse
+        run: python3 tools/probe_lossless_oversize.py --out "$RUNNER_TEMP/lossless-overview"
+      - name: Verify every saved candidate and its provenance a second time
+        run: python3 tools/probe_lossless_oversize.py --out "$RUNNER_TEMP/lossless-overview" --verify
+      - name: Preserve diagnostics as non-integrated QA only
+        uses: actions/upload-artifact@v4
+        with:
+          name: mercury-lossless-oversize-probe-not-rom
+          path: ${{ runner.temp }}/lossless-overview/
+          if-no-files-found: error
+          retention-days: 30
