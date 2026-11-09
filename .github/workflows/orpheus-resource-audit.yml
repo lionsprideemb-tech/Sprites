@@ -35,8 +35,6 @@ jobs:
                   href=a["href"]
                   if re.search(r"mediafire.com/.+?\.rar|download\d*\.mediafire.com",href,re.I):
                       links.append(href)
-              for m in re.findall(r"https?://[^\\"' <>]+?\.rar(?:[?][^\\"' <>]*)?",r.text):
-                  links.append(m.replace("&amp;","&"))
               links=list(dict.fromkeys(links))
               print("Direct archive link candidates:",len(links))
               btn=soup.select_one("#downloadButton")
