@@ -74,6 +74,8 @@ def rgb_palette_and_indices(img):
     indices = []
     opaque_ptr = 0
     changed_pixels = 0
+    quantization_changed_pixels = 0
+    bgr555_rounding_changed_pixels = 0
     pixel_abs_err = 0
     for raw in pixels:
         if raw[3] == 0:
@@ -89,6 +91,10 @@ def rgb_palette_and_indices(img):
             lut[native] = len(pal)
             pal.append(ds_rgb)
         indices.append(lut[native])
+        if raw[:3] != selected:
+            quantization_changed_pixels += 1
+        if selected != ds_rgb:
+            bgr555_rounding_changed_pixels += 1
         if raw[:3] != ds_rgb:
             changed_pixels += 1
         pixel_abs_err += sum(abs(raw[i] - ds_rgb[i]) for i in range(3))
@@ -102,6 +108,9 @@ def rgb_palette_and_indices(img):
         "changedOpaquePixelsVsUnrestricted64": changed_pixels,
         "opaquePixelCount": count_opaque,
         "changedOpaquePixelPercent": round(changed_pixels / count_opaque * 100, 2),
+        "quantizationChangedOpaquePixelPercent": round(quantization_changed_pixels / count_opaque * 100, 2),
+        "bgr555RoundingChangedOpaquePixelPercent": round(bgr555_rounding_changed_pixels / count_opaque * 100, 2),
+        "sourceOpaqueColorsLostInReduction": max(0, colors_before - (len(pal) - 1)),
         "averageAbsoluteRGBChannelError": round(pixel_abs_err / (3 * count_opaque), 3),
     }
 
@@ -207,8 +216,9 @@ for stage_i, (num, name, original_type) in enumerate(STAGES):
             f"Color count after resize: {quality['sourceColorsAt64ExcludingAlpha']}",
             f"DS colors (inc transparent): {quality['DSColorsIncludingTransparency']}/16",
             f"Quantize: {'YES' if quality['paletteQuantizationNeeded'] else 'not required'}",
-            f"Palette-changed pixels: {quality['changedOpaquePixelPercent']:.1f}%",
-            f"Avg RGB channel error: {quality['averageAbsoluteRGBChannelError']:.2f}/255",
+            f"Colors merged: {quality['sourceOpaqueColorsLostInReduction']}",
+            f"Quantization pixel changes: {quality['quantizationChangedOpaquePixelPercent']:.1f}%",
+            f"Avg BGR555/RGB diff: {quality['averageAbsoluteRGBChannelError']:.2f}/255",
             "Exact DS 4bpp tile round-trip: PASS",
         ]
         for line_no, txt_line in enumerate(txt):
