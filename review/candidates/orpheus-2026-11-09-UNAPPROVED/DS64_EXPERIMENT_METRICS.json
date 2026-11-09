@@ -1,0 +1,331 @@
+{
+  "schema": "mercury-orpheus-ds64-experimental-v1",
+  "runId": 42702049107,
+  "archiveSha256": "72539b83b55a427c4adcdf2f3e5397cc28371875a720f687ffcf4e2a6d803ef9",
+  "method": "original alpha bbox + nearest 64x64 fit + max 15 RGB opaque colors + BGR555 + DS OBJ 4bpp tile roundtrip",
+  "totalViews": 6,
+  "quantizedViews": 4,
+  "allTileRoundTripsPassed": true,
+  "artworkApproved": false,
+  "romIntegrated": false,
+  "rows": [
+    {
+      "DSColorsIncludingTransparency": 16,
+      "approved": false,
+      "averageAbsoluteRGBChannelError": 2.282,
+      "bgr555RoundingChangedOpaquePixelPercent": 99.95,
+      "binaryPaletteSHA256": "7be125a229e27e5e5b2b0ac5b8b093c3025dbb10c0f74d3b26441858e5696fa9",
+      "binaryTileSHA256": "1e1c40656e4dd8e7854e0c3970566b976926525015cfb8cedca44f91441fd05f",
+      "changedOpaquePixelPercent": 99.95,
+      "changedOpaquePixelsVsUnrestricted64": 2073,
+      "ds64Canvas": [
+        64,
+        64
+      ],
+      "experimentalOnly": true,
+      "fitSize": [
+        59,
+        60
+      ],
+      "opaquePixelCount": 2074,
+      "originalOpaqueCrop": [
+        82,
+        84
+      ],
+      "originalType": "Bug",
+      "paletteBytes": 32,
+      "paletteQuantizationNeeded": false,
+      "quantizationChangedOpaquePixelPercent": 0,
+      "romIntegrated": false,
+      "sourceAlphaValues": [
+        0,
+        255
+      ],
+      "sourceBBox": [
+        38,
+        30,
+        120,
+        114
+      ],
+      "sourceColorsAt64ExcludingAlpha": 15,
+      "sourceDimension": [
+        160,
+        160
+      ],
+      "sourceFile": "safepng/328_1.png",
+      "sourceForm": "Thracean",
+      "sourceOpaqueColorsLostInReduction": 0,
+      "sourceOpaqueRGBColors": 15,
+      "sourceSHA256": "c63a5f3cdfc98ce4acbc618a17f4c3b52c1f8acb95b5804669fcbbdd2cc0bc3b",
+      "species": "Trapinch",
+      "targetFinalTypeIfChosen": "Bug included",
+      "tileBytes": 2048,
+      "view": "front"
+    },
+    {
+      "DSColorsIncludingTransparency": 15,
+      "approved": false,
+      "averageAbsoluteRGBChannelError": 2.662,
+      "bgr555RoundingChangedOpaquePixelPercent": 100,
+      "binaryPaletteSHA256": "883fbbbf83e919b94cf4a7aa4a9f3e9d52ff9b26164d08a89c31d6ac2500d820",
+      "binaryTileSHA256": "526f042cd9af89d82f31b8ce94e667f7d196d66f521e26e0368988df6a45727c",
+      "changedOpaquePixelPercent": 100,
+      "changedOpaquePixelsVsUnrestricted64": 2303,
+      "ds64Canvas": [
+        64,
+        64
+      ],
+      "experimentalOnly": true,
+      "fitSize": [
+        60,
+        55
+      ],
+      "opaquePixelCount": 2303,
+      "originalOpaqueCrop": [
+        118,
+        108
+      ],
+      "originalType": "Bug",
+      "paletteBytes": 32,
+      "paletteQuantizationNeeded": false,
+      "quantizationChangedOpaquePixelPercent": 0,
+      "romIntegrated": false,
+      "sourceAlphaValues": [
+        0,
+        255
+      ],
+      "sourceBBox": [
+        10,
+        52,
+        128,
+        160
+      ],
+      "sourceColorsAt64ExcludingAlpha": 14,
+      "sourceDimension": [
+        160,
+        160
+      ],
+      "sourceFile": "safepng/328b_1.png",
+      "sourceForm": "Thracean",
+      "sourceOpaqueColorsLostInReduction": 0,
+      "sourceOpaqueRGBColors": 14,
+      "sourceSHA256": "c9aacd69ce5a0d5dfa0d56ac01be5336e7aa392026eda6c69e3e98029cf0f749",
+      "species": "Trapinch",
+      "targetFinalTypeIfChosen": "Bug included",
+      "tileBytes": 2048,
+      "view": "back"
+    },
+    {
+      "DSColorsIncludingTransparency": 16,
+      "approved": false,
+      "averageAbsoluteRGBChannelError": 2.932,
+      "bgr555RoundingChangedOpaquePixelPercent": 89.22,
+      "binaryPaletteSHA256": "0fbb481ea78396d9a6c0e59e47b45448fdab7f11f76036782b42e1dc37921ad8",
+      "binaryTileSHA256": "ff32d3a4882934fa4cef5ce03972fc5cbceab8ed8f94d32ac4e5518773995066",
+      "changedOpaquePixelPercent": 89.22,
+      "changedOpaquePixelsVsUnrestricted64": 993,
+      "ds64Canvas": [
+        64,
+        64
+      ],
+      "experimentalOnly": true,
+      "fitSize": [
+        60,
+        43
+      ],
+      "opaquePixelCount": 1113,
+      "originalOpaqueCrop": [
+        136,
+        98
+      ],
+      "originalType": "Bug/Dragon",
+      "paletteBytes": 32,
+      "paletteQuantizationNeeded": true,
+      "quantizationChangedOpaquePixelPercent": 13.84,
+      "romIntegrated": false,
+      "sourceAlphaValues": [
+        0,
+        255
+      ],
+      "sourceBBox": [
+        6,
+        30,
+        142,
+        128
+      ],
+      "sourceColorsAt64ExcludingAlpha": 24,
+      "sourceDimension": [
+        160,
+        160
+      ],
+      "sourceFile": "safepng/329_1.png",
+      "sourceForm": "Thracean",
+      "sourceOpaqueColorsLostInReduction": 9,
+      "sourceOpaqueRGBColors": 24,
+      "sourceSHA256": "5a2d79d6707f35237d8bb7ec32990b9a0c9b799d5ddbf19fe972a8d6c10f7060",
+      "species": "Vibrava",
+      "targetFinalTypeIfChosen": "Bug included",
+      "tileBytes": 2048,
+      "view": "front"
+    },
+    {
+      "DSColorsIncludingTransparency": 15,
+      "approved": false,
+      "averageAbsoluteRGBChannelError": 2.155,
+      "bgr555RoundingChangedOpaquePixelPercent": 100,
+      "binaryPaletteSHA256": "e38bbcaa965897d68c428643d2abea2cd8ff9a2b5ab14437465268c2a59dfc99",
+      "binaryTileSHA256": "6a118aa5f7810ea3476f220f554baf00565cb5d734bf1ec20f6289202ccf6c03",
+      "changedOpaquePixelPercent": 100,
+      "changedOpaquePixelsVsUnrestricted64": 1139,
+      "ds64Canvas": [
+        64,
+        64
+      ],
+      "experimentalOnly": true,
+      "fitSize": [
+        60,
+        45
+      ],
+      "opaquePixelCount": 1139,
+      "originalOpaqueCrop": [
+        156,
+        116
+      ],
+      "originalType": "Bug/Dragon",
+      "paletteBytes": 32,
+      "paletteQuantizationNeeded": true,
+      "quantizationChangedOpaquePixelPercent": 3.34,
+      "romIntegrated": false,
+      "sourceAlphaValues": [
+        0,
+        255
+      ],
+      "sourceBBox": [
+        4,
+        44,
+        160,
+        160
+      ],
+      "sourceColorsAt64ExcludingAlpha": 17,
+      "sourceDimension": [
+        160,
+        160
+      ],
+      "sourceFile": "safepng/329b_1.png",
+      "sourceForm": "Thracean",
+      "sourceOpaqueColorsLostInReduction": 3,
+      "sourceOpaqueRGBColors": 18,
+      "sourceSHA256": "1182bab5ff5feb9efc5afac02e9777d7298fcdba690b09082b6b567540f7c215",
+      "species": "Vibrava",
+      "targetFinalTypeIfChosen": "Bug included",
+      "tileBytes": 2048,
+      "view": "back"
+    },
+    {
+      "DSColorsIncludingTransparency": 16,
+      "approved": false,
+      "averageAbsoluteRGBChannelError": 4.229,
+      "bgr555RoundingChangedOpaquePixelPercent": 89.71,
+      "binaryPaletteSHA256": "fb591ffd914d27c2b0ba43f4a1bc890abaa85631f8137c60bb39bb9f588fe1e3",
+      "binaryTileSHA256": "d478d67525f7f1b264f04be5c04eef7e3df3b2ebfa19d15976317a85ff9aa5a0",
+      "changedOpaquePixelPercent": 89.71,
+      "changedOpaquePixelsVsUnrestricted64": 1595,
+      "ds64Canvas": [
+        64,
+        64
+      ],
+      "experimentalOnly": true,
+      "fitSize": [
+        60,
+        52
+      ],
+      "opaquePixelCount": 1778,
+      "originalOpaqueCrop": [
+        160,
+        140
+      ],
+      "originalType": "Bug/Dragon",
+      "paletteBytes": 32,
+      "paletteQuantizationNeeded": true,
+      "quantizationChangedOpaquePixelPercent": 41.84,
+      "romIntegrated": false,
+      "sourceAlphaValues": [
+        0,
+        255
+      ],
+      "sourceBBox": [
+        0,
+        14,
+        160,
+        154
+      ],
+      "sourceColorsAt64ExcludingAlpha": 34,
+      "sourceDimension": [
+        160,
+        160
+      ],
+      "sourceFile": "safepng/330_1.png",
+      "sourceForm": "Thracean",
+      "sourceOpaqueColorsLostInReduction": 19,
+      "sourceOpaqueRGBColors": 34,
+      "sourceSHA256": "0648e090ab0a869bf452cab5e02d2d7da3bd9454b0b400bfcedb022dd72a321c",
+      "species": "Flygon",
+      "targetFinalTypeIfChosen": "Bug/Ground",
+      "tileBytes": 2048,
+      "view": "front"
+    },
+    {
+      "DSColorsIncludingTransparency": 16,
+      "approved": false,
+      "averageAbsoluteRGBChannelError": 3.76,
+      "bgr555RoundingChangedOpaquePixelPercent": 100,
+      "binaryPaletteSHA256": "49ab2467f3622d02d7f97e1856c10455f719a15b2439edb53726104b56c9db05",
+      "binaryTileSHA256": "4aa050e15453d65a4cbe68ac4c2b6d4e09705a1fc08e374f011d8661677d1358",
+      "changedOpaquePixelPercent": 100,
+      "changedOpaquePixelsVsUnrestricted64": 2199,
+      "ds64Canvas": [
+        64,
+        64
+      ],
+      "experimentalOnly": true,
+      "fitSize": [
+        60,
+        55
+      ],
+      "opaquePixelCount": 2199,
+      "originalOpaqueCrop": [
+        160,
+        146
+      ],
+      "originalType": "Bug/Dragon",
+      "paletteBytes": 32,
+      "paletteQuantizationNeeded": true,
+      "quantizationChangedOpaquePixelPercent": 16.87,
+      "romIntegrated": false,
+      "sourceAlphaValues": [
+        0,
+        255
+      ],
+      "sourceBBox": [
+        0,
+        14,
+        160,
+        160
+      ],
+      "sourceColorsAt64ExcludingAlpha": 29,
+      "sourceDimension": [
+        160,
+        160
+      ],
+      "sourceFile": "safepng/330b_1.png",
+      "sourceForm": "Thracean",
+      "sourceOpaqueColorsLostInReduction": 14,
+      "sourceOpaqueRGBColors": 29,
+      "sourceSHA256": "f9586b2b6504f0a4b2d79bd9597c6c59ea7df1be4e96ca1c2fb284dcaa42aa51",
+      "species": "Flygon",
+      "targetFinalTypeIfChosen": "Bug/Ground",
+      "tileBytes": 2048,
+      "view": "back"
+    }
+  ]
+}
