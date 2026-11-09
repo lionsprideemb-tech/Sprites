@@ -108,6 +108,15 @@ jobs:
               except Exception as e:print("PNG-ERROR",name,str(e))
           Path("report/image-metadata.json").write_text(json.dumps(records,indent=2))
           PY
+      - name: Render and inspect actual regional PNGs against vanilla and probe PBS types
+        if: success()
+        shell: bash
+        run: |
+          if [ -f orpheus-original-resources.rar ] && [ -d safepng ]; then
+            python3 tools/orpheus_visual_audit.py
+          else
+            echo 'No archive downloaded, no pixel art or typing claims can be established'
+          fi
       - name: Upload research-only metadata artifact
         uses: actions/upload-artifact@v4
         if: always()
