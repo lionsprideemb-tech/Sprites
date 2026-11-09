@@ -54,3 +54,36 @@ Searched GitHub source repositories, community fanart/pixel discussions, The Spr
 
 ## Relation to roster record
 Authoritative newer roster file: [Flygon plan](flygon-roster-plan-2026-11-09.json). This research does not change or override it. Approval remains pending for all three Delta stage designs.
+
+
+## Follow-up search: additional original-art leads (2026-11-09)
+
+**Outcome: no verified complete native-DS-ready Bug/Ground final evolution family yet.** The following are newly surfaced research leads only. None is approved, imported, or deemed native DS quality.
+
+### Pokémon Orpheus — possible regional full-family sprite source (requires asset audit)
+- Playable fan project post: https://eeveeexpo.com/threads/3565/
+- Original resource pack page: https://eeveeexpo.com/resources/592/
+- Original resource-pack download redirects to: https://www.mediafire.com/file/aaoqpddspu483jx/Orpheus_Resources.rar/file
+- The game's introductory forum thread displays a regional Trapinch (`328_1.png`); a playtester specifically reports a regional Vibrava in the files/PBS and a Trapinch-to-Flygon evolution bug in the playable build.
+- **Potential upside:** actual regional sprite assets may exist for all three stages in a single documented source pack, a more concrete lead than three-stage illustrations.
+- **Not yet verified:** what regional type(s) they are, whether artwork is distinct rather than recolored, whether the resource pack actually contains front/back/shiny/icon for the family, DS-scale suitability, and precise reuse permissions.
+- Access boundary: resource pack is listed but the media host did not deliver a verifiable inspectable archive in this pass. Do not assert a complete sprite family just from the presence of species/PBS references.
+
+### Pokémon Rejuvenation fan expansion — Aevian Trapinch/Vibrava/Flygon
+- Creator showcase: https://www.rebornevo.com/forums/topic/66361-community-battles-overseer-files-story-expansion-mod-in-development/page/4/
+- Source explicitly identifies **sprites by IronicOmens and concept/art by Halcy** for all three stages.
+- **Actual sprited original-looking matched family reportedly pictured.** However, the designs are designed for **Fire/Fairy**, which is quite incompatible with the desired final **Bug/Ground** physiology. Treat as an example of strong art consistency, **not a matching Bug/Ground recommendation**. Native DS 4bpp compatibility and permission not verified.
+
+### tomat — complete Flygon regional variant drawing set
+- Listing: https://ko-fi.com/s/cd81a98481
+- A complete coherent three-form redesign depicted in a single artwork preview, described as normal/shiny PNG artwork, **not certified battle pixel sprites**. Listing is currently marked **Sold out**.
+- Creature shapes look distinctive rather than recolored; the concept looks more like an insect-dragon line than standard Flygon.
+- **Blocks:** not proven Bug/Ground, no matching pixel battle back/front or 32px icon, no DS assets or reuse permission, and item is unavailable. Do not represent purchasable PNG artwork as reusable DS sprites.
+
+### Additional sources filtered out
+- https://www.smogon.com/forums/threads/regional-evolutions-concluded-for-generation-8.3664213/ : detailed Johtonian **Bug Trapinch** / **Bug/Dragon Vibrava** regional design proposals, but not verified corresponding three-stage native sprite art, and the final typing of the design doesn't establish Bug/Ground.
+- https://www.reddit.com/r/fakemon/comments/yw3msh : another three-stage RSE pixel fan-art line exists but is themed around **Ice** (Trapinch Ice, Vibrava Ice/Flying, Flygon Ice/Dragon), not our requested Bug line; a commenter flagged recolor-like elements in some author's other variations. No approval.
+- https://www.rebornevo.com/forums/topic/21393-spork-episode-8-smoothie-delicias-delicious-dreamland/page/81/ : complete custom shiny-colored Flygon family, **recolors rather than Delta redesigns**, so excluded.
+- https://www.pokecommunity.com/threads/pok%C3%A9mon-conquer-the-gauntlet.541980/ and https://zhenga8533-archive.github.io/bbvw2-redux-wiki/changes/type_changes/ : existing species retypings, no new unique art.
+
+**Priority next verification:** inspect the *original Orpheus resource archive* for regional `328/329/330` fronts, backs, shinies, icons and evidence of exact origin and palette; if unsuitable, remain on the non-import track and continue original art search. Existing Pokémon Z / Ópalo two-stage pixel pair stays a **candidate only**. No user vote has been changed.
