@@ -1,0 +1,115 @@
+name: Orpheus source PNG forensic audit (isolated, no ROM changes)
+on:
+  push:
+    branches: [mercury/orpheus-resource-audit-20261109]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  probe-source-archive:
+    runs-on: ubuntu-latest
+    timeout-minutes: 18
+    steps:
+      - name: Set up image/header and archive tools
+        run: |
+          python3 -m pip -q install requests beautifulsoup4 Pillow
+          if ! command -v 7z >/dev/null; then
+            sudo apt-get update -qq && sudo apt-get install -y -qq p7zip-full
+          fi
+      - name: Fetch original public RAR and inspect *only* metadata for Pokémon 328-330
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p report
+          python3 - <<'PY'
+          import requests,bs4,re,sys,os,time,hashlib
+          url="https://www.mediafire.com/file/aaoqpddspu483jx/Orpheus_Resources.rar/file"
+          s=requests.Session();s.headers["User-Agent"]="Mozilla/5.0 (compatible; MercuryReduxSourceAudit/1.0)"
+          try:
+              r=s.get(url,timeout=45)
+              print("MediaFire landing HTTP",r.status_code,"length",len(r.content))
+              r.raise_for_status()
+              soup=bs4.BeautifulSoup(r.text,"html.parser")
+              links=[]
+              for a in soup.find_all("a",href=True):
+                  href=a["href"]
+                  if re.search(r"mediafire.com/.+?\\.rar|download\\d*\\.mediafire.com",href,re.I):
+                      links.append(href)
+              for m in re.findall(r"https?://[^\\\"' <>]+?\\.rar(?:[?][^\\\"' <>]*)?",r.text):
+                  links.append(m.replace("&amp;","&"))
+              links=list(dict.fromkeys(links))
+              print("Direct archive link candidates:",len(links))
+              if not links:
+                  print("BLOCKED: MediaFire returned no public downloadable RAR link")
+                  open("report/status.txt","w").write("BLOCKED: public MediaFire download link not extractable from HTML\n")
+                  sys.exit(0)
+              dest="orpheus-original-resources.rar"
+              for link in links[:3]:
+                  try:
+                      response=s.get(link,stream=True,timeout=(20,55))
+                      print("Candidate response",response.status_code, response.headers.get("Content-Type"),"declared bytes",response.headers.get("Content-Length"))
+                      if response.status_code!=200:continue
+                      if "html" in response.headers.get("Content-Type","").lower():continue
+                      size=0
+                      h=hashlib.sha256()
+                      with open(dest,"wb") as o:
+                          for chunk in response.iter_content(1024*1024):
+                              if not chunk:continue
+                              size+=len(chunk)
+                              if size>800_000_000:raise ValueError("archive exceeds 800MB cap")
+                              o.write(chunk);h.update(chunk)
+                      with open(dest,"rb") as f:head=f.read(8)
+                      print("Downloaded bytes",size,"header",head.hex(),"sha256",h.hexdigest())
+                      if head.startswith(b"Rar!\\x1a\\x07") and size>50_000_000:
+                          open("report/download.txt","w").write(f"Size: {size}\nSHA256: {h.hexdigest()}\n")
+                          sys.exit(0)
+                  except Exception as e:
+                      print("Candidate failed:",str(e)[:300])
+              open("report/status.txt","w").write("BLOCKED: no valid RAR bytes downloaded\n")
+          except Exception as e:
+              print("BLOCKED:",repr(e))
+              open("report/status.txt","w").write("BLOCKED: unable to retrieve archive from public media host\n")
+          PY
+          if [ ! -f orpheus-original-resources.rar ]; then exit 0; fi
+          7z l -slt orpheus-original-resources.rar > all-rar-paths.txt
+          python3 - <<'PY'
+          from pathlib import Path
+          import re,subprocess,os,json
+          from PIL import Image
+          data=Path("all-rar-paths.txt").read_text(errors="replace")
+          paths=[line[len("Path = "):] for line in data.splitlines() if line.startswith("Path = ")]
+          match=re.compile(r"(?:trapinch|vibrava|flygon|(?<!\\d)32[89](?!\\d)|(?<!\\d)330(?!\\d))",re.I)
+          allhits=[p for p in paths if match.search(p)]
+          print("Archive entry count:",len(paths),"family filename/path hits:",len(allhits))
+          Path("report/all-family-name-matches.txt").write_text("\n".join(allhits)+"\n")
+          png=[p for p in allhits if p.lower().endswith(".png")]
+          Path("report/matching-pngs.txt").write_text("\n".join(png)+"\n")
+          print("Matching PNG paths:",len(png))
+          for p in png[:180]:print("PNG-CANDIDATE",p)
+          if not png:
+              print("NO MATCHING PNG FILES found by canonical species names/numbers")
+              exit()
+          os.makedirs("safepng",exist_ok=True)
+          # Only extract PNGs matched against canonical identities, never run other archive code.
+          process=subprocess.run(["7z","e","-y","-o./safepng","orpheus-original-resources.rar"]+png[:120],capture_output=True,text=True,timeout=90)
+          print("7z extraction return",process.returncode,process.stderr[-800:])
+          records=[]
+          for name in os.listdir("safepng"):
+              path=Path("safepng")/name
+              try:
+                  with Image.open(path) as im:
+                      n=im.convert("RGBA")
+                      unique=len(n.getcolors(256*256*256) or [])
+                      rgba=n.getdata(); alpha={a for *_,a in rgba}
+                      rec=dict(file=name,size=im.size,mode=im.mode,uniqueRGBAcolors=unique,alphaValues=sorted(alpha)[:30],DS64Canvas=im.size==(64,64))
+                      records.append(rec);print("IMAGE",json.dumps(rec))
+              except Exception as e:print("PNG-ERROR",name,str(e))
+          Path("report/image-metadata.json").write_text(json.dumps(records,indent=2))
+          PY
+      - name: Upload research-only metadata artifact
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: orpheus-family-archive-audit-unapproved
+          path: report/
+          retention-days: 14
