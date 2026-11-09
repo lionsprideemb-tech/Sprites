@@ -10,6 +10,8 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 18
     steps:
+      - name: Checkout research script
+        uses: actions/checkout@v4
       - name: Set up image/header and archive tools
         run: |
           python3 -m pip -q install requests beautifulsoup4 Pillow
