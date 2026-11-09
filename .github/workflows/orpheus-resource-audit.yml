@@ -33,12 +33,16 @@ jobs:
               links=[]
               for a in soup.find_all("a",href=True):
                   href=a["href"]
-                  if re.search(r"mediafire.com/.+?\\.rar|download\\d*\\.mediafire.com",href,re.I):
+                  if re.search(r"mediafire.com/.+?\.rar|download\d*\.mediafire.com",href,re.I):
                       links.append(href)
-              for m in re.findall(r"https?://[^\\\"' <>]+?\\.rar(?:[?][^\\\"' <>]*)?",r.text):
+              for m in re.findall(r"https?://[^\\"' <>]+?\.rar(?:[?][^\\"' <>]*)?",r.text):
                   links.append(m.replace("&amp;","&"))
               links=list(dict.fromkeys(links))
               print("Direct archive link candidates:",len(links))
+              btn=soup.select_one("#downloadButton")
+              print("MediaFire downloadButton:",bool(btn),"href?",bool(btn and btn.get("href")))
+              if btn and btn.get("href") and btn.get("href") not in links and btn.get("href","").startswith("http"):
+                  links.insert(0,btn.get("href"))
               if not links:
                   print("BLOCKED: MediaFire returned no public downloadable RAR link")
                   open("report/status.txt","w").write("BLOCKED: public MediaFire download link not extractable from HTML\n")
@@ -60,7 +64,7 @@ jobs:
                               o.write(chunk);h.update(chunk)
                       with open(dest,"rb") as f:head=f.read(8)
                       print("Downloaded bytes",size,"header",head.hex(),"sha256",h.hexdigest())
-                      if head.startswith(b"Rar!\\x1a\\x07") and size>50_000_000:
+                      if head.startswith(b"Rar!\x1a\x07") and size>50_000_000:
                           open("report/download.txt","w").write(f"Size: {size}\nSHA256: {h.hexdigest()}\n")
                           sys.exit(0)
                   except Exception as e:
@@ -78,7 +82,7 @@ jobs:
           from PIL import Image
           data=Path("all-rar-paths.txt").read_text(errors="replace")
           paths=[line[len("Path = "):] for line in data.splitlines() if line.startswith("Path = ")]
-          match=re.compile(r"(?:trapinch|vibrava|flygon|(?<!\\d)32[89](?!\\d)|(?<!\\d)330(?!\\d))",re.I)
+          match=re.compile(r"(?:trapinch|vibrava|flygon|(?<!\d)32[89](?!\d)|(?<!\d)330(?!\d))",re.I)
           allhits=[p for p in paths if match.search(p)]
           print("Archive entry count:",len(paths),"family filename/path hits:",len(allhits))
           Path("report/all-family-name-matches.txt").write_text("\n".join(allhits)+"\n")
