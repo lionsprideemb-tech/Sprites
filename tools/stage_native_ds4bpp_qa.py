@@ -153,7 +153,7 @@ def allowed_by_artwork_choice(design: dict, user_votes: dict, final_votes: dict)
 def self_test() -> None:
     im = Image.new("RGBA", (64, 64), (0, 0, 0, 0))
     px = im.load()
-    for k in range(1, 16):
+    for k in range(1, 14):
         px[(k * 7) % 64, (k * 13) % 64] = (k * 16, k * 9, 255 - k * 15, 255)
     px[7, 7] = (255, 0, 0, 255)
     px[8, 8] = (0, 255, 0, 255)
