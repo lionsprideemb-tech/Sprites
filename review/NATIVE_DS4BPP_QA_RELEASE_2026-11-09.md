@@ -26,3 +26,6 @@
 2. Prioritize authentic recovery or source-faithful repair of oversized, partial-alpha and missing views in family-sized groups; do not silently treat nearest-neighbor comparison previews as approved replacements.
 3. Restrict any later ROM staging to exact-source KEEP identity and verified complete required normal/shiny/icon coverage, with species/form collision checks and full Platinum build/emulator tests.
 4. Keep unresolved evolution edges out of the initial playable release if they cannot be verified. No more routine giant approval sheets are required.
+
+## Follow-up oversized-source shortcut audit (2026-11-09)
+The [isolated higher-factor duplicate-pixel probe](https://github.com/lionsprideemb-tech/Sprites/actions/runs/42682562408) ran successfully against **all 179** still-oversized original views, verifying the exact original source SHA-256 and testing reversible full-image 2×, 3×, 4×, 5×, 6× and 8× pixel duplication with byte-for-byte reconstruction. **No additional views qualified** for 64×64 without changing pixel content. Experimental [PR #2](https://github.com/lionsprideemb-tech/Sprites/pull/2) was closed **without merge**; no approximation was added to the source conversion pipeline. Prioritize authenticated DS-sized source matches or individually reviewed, explicitly approved artistic adaptations, not more bulk blind reductions.
