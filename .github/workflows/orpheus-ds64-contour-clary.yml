@@ -1,0 +1,28 @@
+name: Orpheus Flygon front contour-first native64 cleanup QA
+on:
+  push:
+    branches: [mercury/orpheus-resource-audit-20261109]
+    paths:
+      - tools/orpheus_ds64_contour_clarity.py
+      - .github/workflows/orpheus-ds64-contour-clary.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  contour-clean:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install pillow==11.3.0
+      - name: Verify exact 64px source palette and original silhouette
+        run: python tools/orpheus_ds64_contour_clarity.py
+      - name: Archive unapproved contour comparison
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: orpheus-flygon-contour-clarity-unapproved
+          path: report/flygon_contour/
+          retention-days: 30
