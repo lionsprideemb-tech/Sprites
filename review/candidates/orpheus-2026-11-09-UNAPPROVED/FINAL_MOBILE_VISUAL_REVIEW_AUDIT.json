@@ -1,0 +1,255 @@
+{
+  "schema": "mercury-orpheus-ds64-mobile-final-review-v1",
+  "generatedBySuccessfulRun": 42893757717,
+  "sourceArchiveSha256": "72539b83b55a427c4adcdf2f3e5397cc28371875a720f687ffcf4e2a6d803ef9",
+  "status": "UNAPPROVED_REVIEW_ONLY",
+  "visualIssues": [
+    "Flygon front face/forewing convergence at native 64px",
+    "Vibrava thin antenna and wing-tip at native 64px",
+    "Flygon back small head relative to wing"
+  ],
+  "requiredPixelCorrectionsProven": 0,
+  "appliedPixelEdits": 0,
+  "noArtApproval": true,
+  "noROMIntegration": true,
+  "rows": [
+    {
+      "alphaBoundingBox": [
+        2,
+        2,
+        61,
+        62
+      ],
+      "alphaPixelCount": 2074,
+      "approved": false,
+      "beforeSHA256": "1a9c9c2690485b33f730de2117965378cdea134893d5173b92a6f50c7aab403d",
+      "connectedComponentCount8": 1,
+      "finalSHA256": "61ab693f7b23f836d11c001fa6afa408e4723888fa8c071a977fb93d99999999",
+      "height": 64,
+      "id": "trapinch_front",
+      "mainComponentPixels": 2074,
+      "name": "Trapinch",
+      "optionalManualReviewNotes": [
+        "Eye currently visible in source-preserving contrast colors; no mandatory pixel edit proven"
+      ],
+      "originalRGBAColorDifferencesPercent": 90.89,
+      "outsideMainComponentPixels": 0,
+      "paletteBytes": 32,
+      "paletteOpaqueColorsUsed": 10,
+      "paletteStyle": "Terracotta / sand",
+      "pixelEditsPerformed": 0,
+      "romIntegrated": false,
+      "singlePixelIslands": 0,
+      "sourceCanvas": [
+        160,
+        160
+      ],
+      "sourceOriginalSHA256": "c63a5f3cdfc98ce4acbc618a17f4c3b52c1f8acb95b5804669fcbbdd2cc0bc3b",
+      "tileBytes": 2048,
+      "tinyAdditionalComponentsLE2": 0,
+      "typingSource": "Bug",
+      "unchangedAlphaMask": true,
+      "unchangedTileSHA256": "41ddde1ffb8370d9471996f8a479b0d81bc2617ccfd8ad62bdd3d7c0a49970d9",
+      "view": "front",
+      "width": 64
+    },
+    {
+      "alphaBoundingBox": [
+        2,
+        4,
+        62,
+        59
+      ],
+      "alphaPixelCount": 2303,
+      "approved": false,
+      "beforeSHA256": "7d0379906daee387a71737c1257688424c1e1a065ee195c384ff72845c367bc9",
+      "connectedComponentCount8": 1,
+      "finalSHA256": "31717b5c586f63b6e7ea748e6d2622895ca48df14f99682ac6602d43c3059c81",
+      "height": 64,
+      "id": "trapinch_back",
+      "mainComponentPixels": 2303,
+      "name": "Trapinch",
+      "optionalManualReviewNotes": [
+        "Eye currently visible in source-preserving contrast colors; no mandatory pixel edit proven"
+      ],
+      "originalRGBAColorDifferencesPercent": 98.74,
+      "outsideMainComponentPixels": 0,
+      "paletteBytes": 32,
+      "paletteOpaqueColorsUsed": 9,
+      "paletteStyle": "Terracotta / sand",
+      "pixelEditsPerformed": 0,
+      "romIntegrated": false,
+      "singlePixelIslands": 0,
+      "sourceCanvas": [
+        160,
+        160
+      ],
+      "sourceOriginalSHA256": "c9aacd69ce5a0d5dfa0d56ac01be5336e7aa392026eda6c69e3e98029cf0f749",
+      "tileBytes": 2048,
+      "tinyAdditionalComponentsLE2": 0,
+      "typingSource": "Bug",
+      "unchangedAlphaMask": true,
+      "unchangedTileSHA256": "3680e7f3e378b3b2f316bb4d93e8b5b31bb4d7606c2e9a5b492284636e7e4256",
+      "view": "back",
+      "width": 64
+    },
+    {
+      "alphaBoundingBox": [
+        2,
+        10,
+        62,
+        53
+      ],
+      "alphaPixelCount": 1113,
+      "approved": false,
+      "beforeSHA256": "e39f194ea09caf8eee06cd0a84d2109a1a59bcf9506a209363990bbe17d30f19",
+      "connectedComponentCount8": 1,
+      "finalSHA256": "e9fc926fb7a20dbf57646677b361d64e25bcdee5143b3a60279f33f16a491e42",
+      "height": 64,
+      "id": "vibrava_front",
+      "mainComponentPixels": 1113,
+      "name": "Vibrava",
+      "optionalManualReviewNotes": [
+        "Thin antenna and wing-tip outline: confirm legibility at 1x"
+      ],
+      "originalRGBAColorDifferencesPercent": 100,
+      "outsideMainComponentPixels": 0,
+      "paletteBytes": 32,
+      "paletteOpaqueColorsUsed": 10,
+      "paletteStyle": "Sage / turquoise",
+      "pixelEditsPerformed": 0,
+      "romIntegrated": false,
+      "singlePixelIslands": 0,
+      "sourceCanvas": [
+        160,
+        160
+      ],
+      "sourceOriginalSHA256": "5a2d79d6707f35237d8bb7ec32990b9a0c9b799d5ddbf19fe972a8d6c10f7060",
+      "tileBytes": 2048,
+      "tinyAdditionalComponentsLE2": 0,
+      "typingSource": "Bug / Dragon",
+      "unchangedAlphaMask": true,
+      "unchangedTileSHA256": "e7a9df3cf211d29a683a404ed9f890d0499f7bcd136c07b04d75331951038e00",
+      "view": "front",
+      "width": 64
+    },
+    {
+      "alphaBoundingBox": [
+        2,
+        9,
+        62,
+        54
+      ],
+      "alphaPixelCount": 1139,
+      "approved": false,
+      "beforeSHA256": "76c320b2d34b0322615acdaaba4f1f3f4de2349da6e261f363b1cfd836437a73",
+      "connectedComponentCount8": 1,
+      "finalSHA256": "7dc9b5bcd41c6352933ccbb443a8cd8145335db53ba5c5246f2c7d977547b2ae",
+      "height": 64,
+      "id": "vibrava_back",
+      "mainComponentPixels": 1139,
+      "name": "Vibrava",
+      "optionalManualReviewNotes": [],
+      "originalRGBAColorDifferencesPercent": 100,
+      "outsideMainComponentPixels": 0,
+      "paletteBytes": 32,
+      "paletteOpaqueColorsUsed": 10,
+      "paletteStyle": "Sage / turquoise",
+      "pixelEditsPerformed": 0,
+      "romIntegrated": false,
+      "singlePixelIslands": 0,
+      "sourceCanvas": [
+        160,
+        160
+      ],
+      "sourceOriginalSHA256": "1182bab5ff5feb9efc5afac02e9777d7298fcdba690b09082b6b567540f7c215",
+      "tileBytes": 2048,
+      "tinyAdditionalComponentsLE2": 0,
+      "typingSource": "Bug / Dragon",
+      "unchangedAlphaMask": true,
+      "unchangedTileSHA256": "82703bb5a1425cfcd93b5002406c9bc75e6211d199d97862179a4ab37efc92b7",
+      "view": "back",
+      "width": 64
+    },
+    {
+      "alphaBoundingBox": [
+        2,
+        6,
+        62,
+        58
+      ],
+      "alphaPixelCount": 1778,
+      "approved": false,
+      "beforeSHA256": "7a8e7dfec800de10a83e4a8b603d46b2c67f010feb960965ed95b780b9298855",
+      "connectedComponentCount8": 1,
+      "finalSHA256": "1f90603b0b25d284c0eff7c0342783a158c528af124ef32c3e482b91da554048",
+      "height": 64,
+      "id": "flygon_front",
+      "mainComponentPixels": 1778,
+      "name": "Flygon",
+      "optionalManualReviewNotes": [
+        "Face, antenna and forewing converge at native 64px; user visual review advised"
+      ],
+      "originalRGBAColorDifferencesPercent": 100,
+      "outsideMainComponentPixels": 0,
+      "paletteBytes": 32,
+      "paletteOpaqueColorsUsed": 10,
+      "paletteStyle": "Umber / bronze / teal",
+      "pixelEditsPerformed": 0,
+      "romIntegrated": false,
+      "singlePixelIslands": 0,
+      "sourceCanvas": [
+        160,
+        160
+      ],
+      "sourceOriginalSHA256": "0648e090ab0a869bf452cab5e02d2d7da3bd9454b0b400bfcedb022dd72a321c",
+      "tileBytes": 2048,
+      "tinyAdditionalComponentsLE2": 0,
+      "typingSource": "Bug / Dragon",
+      "unchangedAlphaMask": true,
+      "unchangedTileSHA256": "8c292597c3c501666359d3c0076040349fffb167e0ac24baa87b0f951919eafa",
+      "view": "front",
+      "width": 64
+    },
+    {
+      "alphaBoundingBox": [
+        2,
+        4,
+        62,
+        59
+      ],
+      "alphaPixelCount": 2199,
+      "approved": false,
+      "beforeSHA256": "4a667cd4074910d6e91d48ce5b8e1ec5333ad32b6cb0b3a54f219fb0878d7582",
+      "connectedComponentCount8": 1,
+      "finalSHA256": "f03a2bddf2725451138c5bee557f7ba89b172985014d22c7367ec35ef9c6e1fa",
+      "height": 64,
+      "id": "flygon_back",
+      "mainComponentPixels": 2199,
+      "name": "Flygon",
+      "optionalManualReviewNotes": [
+        "Large wing membranes dominate; inspect head silhouette at 1x"
+      ],
+      "originalRGBAColorDifferencesPercent": 100,
+      "outsideMainComponentPixels": 0,
+      "paletteBytes": 32,
+      "paletteOpaqueColorsUsed": 12,
+      "paletteStyle": "Umber / bronze / teal",
+      "pixelEditsPerformed": 0,
+      "romIntegrated": false,
+      "singlePixelIslands": 0,
+      "sourceCanvas": [
+        160,
+        160
+      ],
+      "sourceOriginalSHA256": "f9586b2b6504f0a4b2d79bd9597c6c59ea7df1be4e96ca1c2fb284dcaa42aa51",
+      "tileBytes": 2048,
+      "tinyAdditionalComponentsLE2": 0,
+      "typingSource": "Bug / Dragon",
+      "unchangedAlphaMask": true,
+      "unchangedTileSHA256": "051c68ee887bd1eb64b2ef8135ac76193da6b52f5c5177604992650c78a0ba09",
+      "view": "back",
+      "width": 64
+    }
+  ]
+}
