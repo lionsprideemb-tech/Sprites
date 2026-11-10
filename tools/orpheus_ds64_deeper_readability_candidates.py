@@ -153,6 +153,7 @@ def add_boundary(a,name,strong):
   for y in range(12,35):
    for x in range(17,53):
     if not any(lo<=x<=hi and low<=y<=high for lo,low,hi,high in regions):continue
+    if 19<=x<=30 and 12<=y<=24:continue # protect eye and face highlights
     k=y*64+x;v=source_idx[k]
     if v not in (10,11):continue
     around=[source_idx[k-1],source_idx[k+1],source_idx[k-64],source_idx[k+64]]
