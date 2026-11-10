@@ -52,3 +52,15 @@ The three source art styles fit one another strongly. However, the final design 
 User reports they **have the artist's permission** and do **not like the current bright green/yellow palette** on the Thracean family. This is a user-provided permission statement, not an independently examined license document. Before public distribution, record the artist's name/attribution and confirm permission covers recoloring/modification, redistribution, and credit requirements as applicable.
 
 **New direction:** Retain the actual Orpheus original insect-family shapes rather than replacing them with recolors of vanilla Pokémon. Prepare **unapproved alternate palettes** that visually communicate a Bug/Ground final Flygon (suggested research themes: dune sandstone and cocoa, rusty clay and moss, umber and desaturated teal). Recolor the family consistently using native 64×64 source-aligned indexed-palette experiments; do not repaint the silhouette or overwrite original PNGs. This user statement is **not a specific color selection or final art approval**. Keep original source, prior DS64 previews, votes, Dex, and ROM untouched.
+
+
+## Color-design clarification — November 10, 2026: evolution-stage individuality
+
+The user clarified that **each stage should have its own visual individuality, like the original Trapinch/Vibrava/Flygon family**. This supersedes any suggestion that the entire new Delta family should be painted uniformly with one repeated palette.
+
+**Working, unapproved art-direction concepts** (not user-selected final colors):
+- **Delta Trapinch**: ground-dwelling warm terracotta / pale sand / earthy brown — distinctly youthful, chunky silhouette.
+- **Delta Vibrava**: intermediate sage/olive with blue-turquoise or dusty translucent wings / light-gold highlights — lighter, more airborne.
+- **Delta Flygon**: mature dark umber, bronze-sand, muted teal wing details — visibly powerful Bug/Ground end stage.
+
+Maintain **individual 15-opaque-color + transparency DS palette budgets per front/back view**, preserving source-authentic Orpheus outlines and details and family resemblance through selective motifs, *not* uniform colors or copied color regions. Different stages may use related but different hues. Do not conflate original palette fidelity optimization with this **new, intentional color redesign**. Create side-by-side previews for each evolution stage before any approval. User has not approved any candidate or final colors. No ROM or Pokédex integration.
