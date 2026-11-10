@@ -224,7 +224,7 @@ for stage,number in (("vibrava",329),("flygon",330)):
     png=O/f"{key}_desert_scarab_80.png"
     tiles=O/f"{key}_desert_scarab_80_4bpp_tiles.bin"
     pal=O/f"{key}_desert_scarab_80_palette.bin"
-    png.save(png,optimize=True);tiles.write_bytes(tiledata);pal.write_bytes(paldata)
+    rgba.save(png,optimize=True);tiles.write_bytes(tiledata);pal.write_bytes(paldata)
     assert len(tiledata)==3200 and len(paldata)==32 and len(set(idx)-{0})<=15
     changedvsbaseline=sum(1 for a,b in zip(baseline.getdata(),rgba.getdata()) if a!=b)
     nopaque=sum(p[3]>0 for p in pixels)
