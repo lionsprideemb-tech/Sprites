@@ -1,0 +1,80 @@
+{
+  "schema": "mercury-orpheus-native80-final-local-indexed-pixel-study-v1",
+  "baselineFrom": "review/candidates/orpheus-2026-11-09-UNAPPROVED/native80-original-colors/",
+  "source": "flygon_front_source_colors80",
+  "baselinePINs": {
+    "png": "9c140719fd0d39b79d80104962232636c7ca678717bc84ab062879f4ec725c0e",
+    "tiles": "b36eb9ed804a680d8fed875b0b2c39884ad07cbd4361eac0b760d27e8cff127d",
+    "palette": "3fbde56011adf0299653199cea2d93b948c6295e54494cabeac7542b2f3423d7",
+    "vibrava_png": "670b7ada44953a294b796835833299ad27a537374d49d69dda16dc9c7da7b65f",
+    "vibrava_tiles": "4111767be24ad2bda36141b8226c6323ca7a3c738190532e337857d3d40bb134",
+    "vibrava_palette": "53dd238265d8909a3db69ee9cb3224eaf8261ac5b3b881f8d3afbbeb6f56c209"
+  },
+  "canvas": [
+    80,
+    80
+  ],
+  "pixelEdits": [
+    {
+      "region": "eye glint",
+      "x": 37,
+      "y": 21,
+      "fromIndex": 7,
+      "toIndex": 9
+    },
+    {
+      "region": "eye pupil",
+      "x": 38,
+      "y": 21,
+      "fromIndex": 7,
+      "toIndex": 1
+    },
+    {
+      "region": "muzzle contour",
+      "x": 33,
+      "y": 27,
+      "fromIndex": 13,
+      "toIndex": 6
+    },
+    {
+      "region": "muzzle contour",
+      "x": 33,
+      "y": 28,
+      "fromIndex": 13,
+      "toIndex": 6
+    },
+    {
+      "region": "forewing junction",
+      "x": 42,
+      "y": 34,
+      "fromIndex": 9,
+      "toIndex": 4
+    },
+    {
+      "region": "forewing junction",
+      "x": 42,
+      "y": 35,
+      "fromIndex": 7,
+      "toIndex": 9
+    }
+  ],
+  "changedPixelCount": 6,
+  "changedOpaquePixelCount": 6,
+  "transparentToOpaque": 0,
+  "opaqueToTransparent": 0,
+  "allEditsInsideOriginalSilhouette": true,
+  "samePaletteBytes": true,
+  "samePaletteSHA256": "3fbde56011adf0299653199cea2d93b948c6295e54494cabeac7542b2f3423d7",
+  "sameVibravaBackFiles": true,
+  "tilesByteCount": 3200,
+  "paletteByteCount": 32,
+  "tileDecodeExactlyMatchesOutputPNG": true,
+  "beforeSourceColorsPNGsha256": "9c140719fd0d39b79d80104962232636c7ca678717bc84ab062879f4ec725c0e",
+  "afterPNGsha256": "e8a987cf43b61bb2a16e669f941830f2b6e195ea37e8113426f64d9e4d6e88f4",
+  "afterTileSHA256": "7b85f7c374354758eb07c986cc9b509f935f409fd3ed79ff10504fb563a5ec45",
+  "noHistoricalVotesEdited": true,
+  "allUnapproved": true,
+  "noROMIntegration": true,
+  "notCertifiedInGame": true,
+  "note": "Six subjective clarity adjustments to pixel indices; requires visual review before selecting candidate."
+}
