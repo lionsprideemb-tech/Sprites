@@ -155,10 +155,17 @@ jobs:
           set -euo pipefail
           test -f report/ds64_readability/orpheus_ds64_eye_wing_contrast_before_after.png
           python3 tools/orpheus_ds64_final_visual_audit.py
+      - name: Read-only native DS64 pixel diagnostic for Vibrava back and Flygon front
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -f report/ds64_readability/flygon_front_contrast64.png
+          test -f report/ds64_readability/vibrava_back_contrast64.png
+          python3 tools/orpheus_ds64_microfix_diagnostic.py
       - name: Upload research-only metadata artifact
         uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: orpheus-family-DS64-final-mobile-review-unapproved
+          name: orpheus-family-DS64-microfix-qa-unapproved
           path: report/
           retention-days: 14
