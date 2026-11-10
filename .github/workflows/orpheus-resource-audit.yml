@@ -187,10 +187,17 @@ jobs:
           set -euo pipefail
           test -f report/ds64_deeper_candidates/ds64_deeper_pixel_candidates.png
           python3 tools/orpheus_ds64_deeper_mobile_qa.py
+      - name: Investigate native Platinum 80x80 vs previous 64x64 Orpheus sprites (no integration)
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -s orpheus-original-resources.rar
+          test -f report/ds64_readability/flygon_front_contrast64.png
+          python3 tools/orpheus_platinum_native80_probe.py
       - name: Upload research-only metadata artifact
         uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: orpheus-family-DS64-deeper-mobile-qa-unapproved
+          name: orpheus-family-DS80-and-DS64-compare-unapproved
           path: report/
           retention-days: 14
