@@ -35,9 +35,9 @@ FIX={
 ],
 "vibrava_back":[
  (46,14,3,[2],"Left antenna curl stem shadow"),
- (47,14,3,[2],"Left antenna curl stem shadow"),
- (53,14,5,[6],"Right antenna curl light-to-mid shading"),
- (54,13,4,[5],"Right antenna curl darker midtone"),
+ (45,14,3,[2],"Left antenna curl stem shadow"),
+ (54,14,5,[6],"Right antenna curl light-to-mid shading"),
+ (54,13,5,[6],"Right antenna curl darker midtone"),
  # pale cyan wing: preserve membrane silhouette while adding light in-wing veins
  (32,43,9,[11],"Wing-root vein anchor"),
  (30,44,10,[11],"Wing vein 1"),
