@@ -186,3 +186,16 @@ print("PIXEL_EDIT_SUMMARY",json.dumps({"viewsChanged":2,"pixelEdits":sum(x["chan
 print("PIXEL_EDIT_IMAGE_START")
 print(base64.b64encode(sheetpath.read_bytes()).decode("ascii"))
 print("PIXEL_EDIT_IMAGE_END")
+
+
+# Export only the newly generated experimental assets (never source artworks)
+# through CI logs for quarantined review-branch publication.
+for filename in [
+ "vibrava_back_manual_microfix64.png","vibrava_back_4bpp_tiles.bin","vibrava_back_bgr555_palette.bin",
+ "flygon_front_manual_microfix64.png","flygon_front_4bpp_tiles.bin","flygon_front_bgr555_palette.bin",
+]:
+ path=OUT/filename
+ assert path.is_file() and path.stat().st_size>0
+ print("PIXEL_FIX_FILE_START "+filename)
+ print(base64.b64encode(path.read_bytes()).decode("ascii"))
+ print("PIXEL_FIX_FILE_END "+filename)
