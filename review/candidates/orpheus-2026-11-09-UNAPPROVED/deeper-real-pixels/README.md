@@ -1,28 +1,32 @@
-# Orpheus Delta Flygon — deeper real DS64 sprite cleanup (UNAPPROVED)
-2026-11-10 | isolated research branch only
+# Mercury Redux / Orpheus Thracean — deeper native DS64 pixel-art readability pass
 
-**[Open the actual before/after mobile comparison](ds64_stronger_two_view_mobile_review.png)**
+**STATUS: experimental working candidates — NOT APPROVED, NOT INTEGRATED.**
 
-This iteration uses the **already committed genuine Orpheus DS64 microfix tiles and PNGs** as the baseline, not AI-generated substitute art. It improves only the **Vibrava back** and **Flygon front** 64×64 indexed graphics with bounded internal color edits.
+[**Open the real 64×64 before-and-after mobile comparison**](orpheus_two_sprite_deeper_mobile_review.png)
 
-| View | New edits vs prior microfix | Result PNG | DS 4bpp tiles | BGR555 palette |
-|---|---:|---|---|---|
-| Vibrava BACK | **24 pixels** | [preview](vibrava_back_stronger64.png) | [2048-byte buffer](vibrava_back_stronger_4bpp_tiles.bin) | [32-byte palette](vibrava_back_stronger_bgr555_palette.bin) |
-| Flygon FRONT | **30 pixels** | [preview](flygon_front_stronger64.png) | [2048-byte buffer](flygon_front_stronger_4bpp_tiles.bin) | [32-byte palette](flygon_front_stronger_bgr555_palette.bin) |
+This work uses the **previously committed, source-verifiable 64×64 Orpheus sprite PNGs and indexed DS OBJ tile buffers** as input. It does not generate substitute illustrations or change the original artwork, and does not merge anything into the production sprite library.
 
-**Intended visual refinements:** Vibrava antenna curl and head/wing transition, plus small eye/face and wing-body separation changes in Flygon. These are **source-derived, true indexed-pixel corrections**: no replacement drawings, no pose or silhouette changes, no new palette colors, and no changes to source Orpheus anatomy. The original individual sage/turquoise and umber/bronze/teal color directions are retained.
+## Actual two-view sprite assets
 
-## Verification
-- [GitHub Actions verified run 42900872568](https://github.com/lionsprideemb-tech/Sprites/actions/runs/42900872568): **SUCCESS**.
-- Candidate index buffers exactly re-pack into Nintendo DS 8×8 tiled 4bpp, **2048 bytes** each; palettes **32 bytes** each, and decoded pixels match exported PNGs.
-- Both original alpha masks and all index-1 outline pixels are identical; original palette bytes are identical.
-- Source tiles pinned by SHA256; candidate edits verified as 24 and 30 pixel changes respectively. Full exact coordinate list: [QA JSON](ds64_stronger_two_view_qa.json).
-- **Unchanged views:** Trapinch front/back, Vibrava front, Flygon back.
-- All original Orpheus source artwork, previous user votes and approvals, main production sprite library and Platinum ROM remain untouched.
-- **No automatic approval** and **no ROM integration**. These are review candidates, not final art or completed in-game DS resources. Shinies, icons, NCGR/NCLR/NARC and emulator testing are not covered.
-- Artist permission was reported by the user; precise reuse/credit terms should be recorded before distribution.
+| Stage | Prior verified experimental source | Proposed revised normal view | Palette + 4bpp tile files | Additional index changes |
+|---|---|---|---|---:|
+| Vibrava BACK | [Previous microfix](../microfix-real-pixels/vibrava_back_manual_microfix64.png) | [64×64 revised PNG](vibrava_back_refined64.png) | [4bpp tiles](vibrava_back_4bpp_tiles.bin) + [BGR555 palette](vibrava_back_bgr555_palette.bin) | **24** |
+| Flygon FRONT | [Previous microfix](../microfix-real-pixels/flygon_front_manual_microfix64.png) | [64×64 revised PNG](flygon_front_refined64.png) | [4bpp tiles](flygon_front_4bpp_tiles.bin) + [BGR555 palette](flygon_front_bgr555_palette.bin) | **30** |
 
-## Visual caveat
-This is a more visible local cleanup than the earlier 5/8-pixel pass, but 64×64 pixel art is inherently blocky at large zoom. The Flygon front face/forewing overlap still contains many original details; completely separating them would require a deliberate redesign or pose-level edit, which is **not authorized** here.
+The new changes emphasize details within the existing source-derived 64px shapes: Vibrava's antenna curvature and eye region, and Flygon's eye/face shading and the separation between body and wing membranes. The individual stage color identities remain **sage/turquoise** and **umber/bronze/teal** respectively. The source original Trapinch, Vibrava and Flygon anatomical poses have not been redrawn.
 
-**Review action:** user can judge this stronger version in the mobile sheet. No KEEP/CUT vote is saved unless they explicitly say so.
+### Technical checks
+
+- CI: [Successful GitHub Actions run #42901153191](https://github.com/lionsprideemb-tech/Sprites/actions/runs/42901153191) (artifact `orpheus-family-DS64-deeper-mobile-qa-unapproved`).
+- **54 real color-index pixel changes** since the previous microfix, restricted to the two specified views. The actual per-coordinate differences are in [readability_qa_manifest.json](readability_qa_manifest.json).
+- Each view remains **64×64**, with exact unchanged exterior sprite silhouette and binary alpha map. Transparent pixels and indexed outline pixels are unchanged.
+- The **original palette data is byte-for-byte identical** to the prior 32-byte, 16-entry BGR555 palette (index 0 reserved transparent), with at most 15 opaque colors displayed.
+- Each revised DS OBJ 4bpp sprite is **2,048 bytes** of 8×8 tiles; exact index decode reconstructs the committed PNG and passes pixel-level roundtrip checks.
+- Unchanged views: **Trapinch front, Trapinch back, Vibrava front, Flygon back.** Historical iPhone votes and any unrelated source artwork are untouched.
+- **No** new source imports, Dex records, shaders, ROM changes, compilation or game-engine NARC integration; **no creative artwork approval** recorded.
+
+### Cautions
+
+This is a **more substantial local pixel-color cleanup**, not a replacement drawn from scratch. 64×64 art necessarily has visible pixel blocks. The original Orpheus Flygon's type is Bug/Dragon; Mercury's intended separate Delta Flygon type is Bug/Ground, which is not yet implemented. No regional shiny sprites or emulator rendering were certified, and artist credits and reuse scope should be recorded before distribution (user states they have permission).
+
+**User design review remains necessary** before these are accepted. The next practical choice is whether this real pixel-art cleanup is visually acceptable at native 1× size, or whether the two views need a larger deliberate DS-scale re-pixeling that changes more than just local indices.

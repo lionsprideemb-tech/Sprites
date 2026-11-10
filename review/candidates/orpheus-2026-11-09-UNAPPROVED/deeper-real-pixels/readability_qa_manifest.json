@@ -1,0 +1,401 @@
+{
+  "schema": "mercury-orpheus-ds64-stronger-working-candidates-v1",
+  "stage": "isolated-design-QA-only",
+  "sourceArchive": "Orpheus_Resources.rar pinned upstream by SHA256",
+  "changesOnly": [
+    "vibrava_back",
+    "flygon_front"
+  ],
+  "totalChangedPixels": 54,
+  "untouchedViews": [
+    "trapinch_front",
+    "trapinch_back",
+    "vibrava_front",
+    "flygon_back"
+  ],
+  "historicApprovalsUntouched": true,
+  "sourceArtworkUntouched": true,
+  "sourceArtistPermissionReportedByUser": true,
+  "artistLicenseTermsIndependentlyVerified": false,
+  "approved": false,
+  "gameIntegration": false,
+  "notes": [
+    "Pixel-aligned actual 64\u00d764 source-anchored PNG and DS OBJ 4bpp tiles, not AI-generated illustration.",
+    "Edits remain color-index-only and preserve outer geometry; detailed readability still needs human review.",
+    "Original source Flygon Bug/Dragon, intended Delta Flygon in Mercury Bug/Ground not registered."
+  ],
+  "results": [
+    {
+      "id": "vibrava_back",
+      "originalSourceSize": "160x160",
+      "revisedCanvas": [
+        64,
+        64
+      ],
+      "changedPixelsVsPrior": 24,
+      "alphaMaskIdentical": true,
+      "outlinePixelsUnchanged": true,
+      "paletteIdentical": true,
+      "DS4bppPixelsBytes": 2048,
+      "BGR555PaletteBytes": 32,
+      "priorPNGSHA256": "af78add81ae0ccdff40b5f177661baa27c43f9ba97a32b5790abc26474e722ac",
+      "refinedPNGSHA256": "ae8421dccca0cc072583d3a0e9ba0e7bfad617d25bfce9f19b61920478c7b84e",
+      "priorTileSHA256": "52b49dbd35a2cd9bcecc45dcd05cd48bdfb91225f11e439d46b986efd8748c19",
+      "refinedTileSHA256": "0e7ed7ea6c96e6884a3195fe4fc0186f69b9e0546e7be0cb75c8e9f949c2c261",
+      "pixelChanges": [
+        {
+          "x": 45,
+          "y": 13,
+          "before": 2,
+          "after": 6
+        },
+        {
+          "x": 47,
+          "y": 14,
+          "before": 2,
+          "after": 3
+        },
+        {
+          "x": 48,
+          "y": 18,
+          "before": 8,
+          "after": 11
+        },
+        {
+          "x": 45,
+          "y": 27,
+          "before": 2,
+          "after": 6
+        },
+        {
+          "x": 51,
+          "y": 27,
+          "before": 6,
+          "after": 5
+        },
+        {
+          "x": 41,
+          "y": 33,
+          "before": 6,
+          "after": 5
+        },
+        {
+          "x": 56,
+          "y": 34,
+          "before": 3,
+          "after": 7
+        },
+        {
+          "x": 57,
+          "y": 34,
+          "before": 3,
+          "after": 11
+        },
+        {
+          "x": 58,
+          "y": 34,
+          "before": 3,
+          "after": 9
+        },
+        {
+          "x": 32,
+          "y": 35,
+          "before": 4,
+          "after": 2
+        },
+        {
+          "x": 33,
+          "y": 35,
+          "before": 4,
+          "after": 2
+        },
+        {
+          "x": 56,
+          "y": 35,
+          "before": 3,
+          "after": 7
+        },
+        {
+          "x": 57,
+          "y": 35,
+          "before": 3,
+          "after": 7
+        },
+        {
+          "x": 58,
+          "y": 35,
+          "before": 3,
+          "after": 8
+        },
+        {
+          "x": 43,
+          "y": 38,
+          "before": 2,
+          "after": 5
+        },
+        {
+          "x": 44,
+          "y": 38,
+          "before": 2,
+          "after": 5
+        },
+        {
+          "x": 45,
+          "y": 38,
+          "before": 2,
+          "after": 5
+        },
+        {
+          "x": 59,
+          "y": 40,
+          "before": 5,
+          "after": 2
+        },
+        {
+          "x": 49,
+          "y": 41,
+          "before": 2,
+          "after": 5
+        },
+        {
+          "x": 40,
+          "y": 42,
+          "before": 9,
+          "after": 8
+        },
+        {
+          "x": 49,
+          "y": 42,
+          "before": 5,
+          "after": 2
+        },
+        {
+          "x": 43,
+          "y": 43,
+          "before": 9,
+          "after": 8
+        },
+        {
+          "x": 50,
+          "y": 43,
+          "before": 2,
+          "after": 5
+        },
+        {
+          "x": 39,
+          "y": 46,
+          "before": 9,
+          "after": 8
+        }
+      ],
+      "sourceArtUnmodified": true,
+      "historicalVotesUnmodified": true,
+      "approved": false,
+      "ROMIntegrated": false
+    },
+    {
+      "id": "flygon_front",
+      "originalSourceSize": "160x160",
+      "revisedCanvas": [
+        64,
+        64
+      ],
+      "changedPixelsVsPrior": 30,
+      "alphaMaskIdentical": true,
+      "outlinePixelsUnchanged": true,
+      "paletteIdentical": true,
+      "DS4bppPixelsBytes": 2048,
+      "BGR555PaletteBytes": 32,
+      "priorPNGSHA256": "f2ebbdc21a3e1425a292d074f947f9e00fa689f9c2d6d85c61a035b161775b56",
+      "refinedPNGSHA256": "1689627e676abd3435124cae7cf8143355d3c2b75a205407734006cfb2a1c000",
+      "priorTileSHA256": "a1b7f2113077496407f9009f3821c413a6c5a4b94edd8275b143671da96119fc",
+      "refinedTileSHA256": "6b0b955d002f13d0ddaaca20c3c84ddeefd97a2ea7fe5ce1c77ad86e3c1639dc",
+      "pixelChanges": [
+        {
+          "x": 22,
+          "y": 14,
+          "before": 12,
+          "after": 15
+        },
+        {
+          "x": 28,
+          "y": 14,
+          "before": 3,
+          "after": 5
+        },
+        {
+          "x": 44,
+          "y": 14,
+          "before": 11,
+          "after": 8
+        },
+        {
+          "x": 50,
+          "y": 14,
+          "before": 11,
+          "after": 8
+        },
+        {
+          "x": 21,
+          "y": 16,
+          "before": 12,
+          "after": 3
+        },
+        {
+          "x": 28,
+          "y": 16,
+          "before": 4,
+          "after": 5
+        },
+        {
+          "x": 29,
+          "y": 16,
+          "before": 5,
+          "after": 3
+        },
+        {
+          "x": 46,
+          "y": 16,
+          "before": 11,
+          "after": 8
+        },
+        {
+          "x": 25,
+          "y": 17,
+          "before": 4,
+          "after": 3
+        },
+        {
+          "x": 47,
+          "y": 17,
+          "before": 11,
+          "after": 8
+        },
+        {
+          "x": 50,
+          "y": 17,
+          "before": 11,
+          "after": 8
+        },
+        {
+          "x": 30,
+          "y": 18,
+          "before": 4,
+          "after": 3
+        },
+        {
+          "x": 29,
+          "y": 21,
+          "before": 4,
+          "after": 3
+        },
+        {
+          "x": 41,
+          "y": 25,
+          "before": 11,
+          "after": 10
+        },
+        {
+          "x": 43,
+          "y": 25,
+          "before": 10,
+          "after": 11
+        },
+        {
+          "x": 19,
+          "y": 26,
+          "before": 11,
+          "after": 8
+        },
+        {
+          "x": 44,
+          "y": 26,
+          "before": 10,
+          "after": 11
+        },
+        {
+          "x": 23,
+          "y": 27,
+          "before": 10,
+          "after": 8
+        },
+        {
+          "x": 42,
+          "y": 27,
+          "before": 11,
+          "after": 10
+        },
+        {
+          "x": 21,
+          "y": 28,
+          "before": 10,
+          "after": 8
+        },
+        {
+          "x": 28,
+          "y": 28,
+          "before": 4,
+          "after": 2
+        },
+        {
+          "x": 30,
+          "y": 28,
+          "before": 11,
+          "after": 8
+        },
+        {
+          "x": 44,
+          "y": 28,
+          "before": 11,
+          "after": 10
+        },
+        {
+          "x": 20,
+          "y": 29,
+          "before": 10,
+          "after": 8
+        },
+        {
+          "x": 21,
+          "y": 30,
+          "before": 2,
+          "after": 4
+        },
+        {
+          "x": 29,
+          "y": 31,
+          "before": 11,
+          "after": 8
+        },
+        {
+          "x": 32,
+          "y": 31,
+          "before": 10,
+          "after": 8
+        },
+        {
+          "x": 15,
+          "y": 32,
+          "before": 2,
+          "after": 4
+        },
+        {
+          "x": 28,
+          "y": 32,
+          "before": 11,
+          "after": 8
+        },
+        {
+          "x": 21,
+          "y": 37,
+          "before": 3,
+          "after": 4
+        }
+      ],
+      "sourceArtUnmodified": true,
+      "historicalVotesUnmodified": true,
+      "approved": false,
+      "ROMIntegrated": false
+    }
+  ]
+}
