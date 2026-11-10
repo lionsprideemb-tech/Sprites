@@ -130,9 +130,15 @@ def image(indices,palette):
     out.putdata([(*to_rgb(palette[k]),255) if k else (0,0,0,0) for k in indices])
     return out
 
-def panel(sheet, im, x, y, sz):
+def panel(sheet, im, x, y, sz, scale="zoom"):
     bg=Image.new("RGBA",(sz,sz),"#edf3f6")
-    bg.alpha_composite(im.convert("RGBA").resize((sz,sz),Image.Resampling.NEAREST))
+    # Distinguish actual native canvas from integer-zoom pixel detail.
+    if scale=="native":
+        rendered=im.convert("RGBA")
+    else:
+        rendered=im.convert("RGBA").resize((im.width*3,im.height*3),Image.Resampling.NEAREST)
+    assert rendered.width<=sz and rendered.height<=sz
+    bg.alpha_composite(rendered,((sz-rendered.width)//2,(sz-rendered.height)//2))
     sheet.paste(bg.convert("RGB"),(x,y))
 
 def font(size):
@@ -212,7 +218,8 @@ for i,(name,kind,orig,before,corrected) in enumerate(comparisons):
                          (558,"Source colors 80px",corrected),
                          (825,"Source colors at 3x",corrected)):
         draw.text((x,y+47),heading,font=font(14),fill="#3c596c")
-        panel(sheet,im,x,y+77,244)
+        panel(sheet,im,x,y+77,244,
+              scale="native" if heading in ("Original 160px","Source colors 80px") else "zoom")
     rec=views[i]
     draw.text((24,y+341),
               f"Alpha preserved; 15 opaque colors max; {rec['changedColorsComparedToPriorNative80']} source pixels recolored vs prior.",
