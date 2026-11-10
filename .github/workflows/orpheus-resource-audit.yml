@@ -181,10 +181,16 @@ jobs:
           test -f report/ds64_manual_microfix/flygon_front_manual_microfix64.png
           test -f report/ds64_manual_microfix/vibrava_back_manual_microfix64.png
           python3 tools/orpheus_ds64_deeper_readability_candidates.py
+      - name: Verify and export deeper two-view actual DS64 edits for mobile review (UNAPPROVED)
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -f report/ds64_deeper_candidates/ds64_deeper_pixel_candidates.png
+          python3 tools/orpheus_ds64_deeper_mobile_qa.py
       - name: Upload research-only metadata artifact
         uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: orpheus-family-DS64-deeper-variants-unapproved
+          name: orpheus-family-DS64-deeper-mobile-qa-unapproved
           path: report/
           retention-days: 14
