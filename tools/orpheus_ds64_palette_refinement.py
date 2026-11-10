@@ -333,3 +333,10 @@ report={
 (OUT/"refinement_metrics.json").write_text(json.dumps(report,indent=2)+"\n")
 print("REFINEMENT_SUMMARY",json.dumps(dict(views=len(rows),selectedImprovements=chosen_count,unapproved=True,gameChanges=False),sort_keys=True))
 print("REFINEMENT_SHEET",sheet_path,"bytes",sheet_path.stat().st_size,"sha256",hashfile(sheet_path))
+
+# Export only the finished comparison PNG to logs so it can be published to the
+# quarantined research branch without committing any original archive resources.
+import base64
+print("REFINEMENT_BASE64_START orpheus_ds64_palette_refinement_before_after.png")
+print(base64.b64encode(sheet_path.read_bytes()).decode("ascii"))
+print("REFINEMENT_BASE64_END orpheus_ds64_palette_refinement_before_after.png")
