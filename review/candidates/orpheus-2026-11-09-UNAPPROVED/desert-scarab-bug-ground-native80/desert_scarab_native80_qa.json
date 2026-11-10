@@ -1,0 +1,411 @@
+{
+  "schema": "mercury-orpheus-bug-ground-desert-scarab-native80-v1",
+  "sourceArchiveSHA256": "72539b83b55a427c4adcdf2f3e5397cc28371875a720f687ffcf4e2a6d803ef9",
+  "target": "Unapproved visual proposal for Bug/Ground evolved forms; no Dex or game-type data changed.",
+  "method": "Real original Orpheus 160px to 80px source-locked RGBA -> semantic 15-color BGR555 palettes -> manual six-pixel Flygon detail map -> conservative interior scute shade edits -> DS OBJ 4bpp tile roundtrip",
+  "allUnapproved": true,
+  "noPlatinumChanges": true,
+  "noHistoricalVoteChanges": true,
+  "noPreviousApprovedDesignChanges": true,
+  "noSourcePNGChanges": true,
+  "noSpritesMainChanges": true,
+  "limitations": [
+    "Color/material mapping is subjective and requires user visual review.",
+    "Scute details are pixel-local shade variations, not new silhouettes or limbs.",
+    "Vibrava back original 160px has some nonuniform 2x2 alpha blocks; no 160->80 lossless claim.",
+    "No shiny, icon, NARC/NCGR/NCLR, animated or ROM/emulator QA is claimed."
+  ],
+  "preview": "orpheus_desert_scarab_four_view_before_after.png",
+  "views": [
+    {
+      "view": "vibrava_front",
+      "sourceSHA256": "5a2d79d6707f35237d8bb7ec32990b9a0c9b799d5ddbf19fe972a8d6c10f7060",
+      "sourceCanvas": [
+        160,
+        160
+      ],
+      "outputCanvas": [
+        80,
+        80
+      ],
+      "stagePalette": [
+        "#000000",
+        "#2D241A",
+        "#49382B",
+        "#664A32",
+        "#906845",
+        "#B58A59",
+        "#D4AB77",
+        "#EDD4AA",
+        "#435239",
+        "#617648",
+        "#829B55",
+        "#AAC27D",
+        "#D4E0A3",
+        "#F2E8CA",
+        "#639447",
+        "#E6F2AD"
+      ],
+      "opaquePaletteEntries": 15,
+      "artworkSilhouettePreserved": true,
+      "outputAlphaExact": true,
+      "originalSourceUntouched": true,
+      "baselineSource": "original Orpheus 2x half",
+      "baselineOpaquePixels": 1433,
+      "changedRGBApixelsVsBaseline": 6400,
+      "eyeAccents": 98,
+      "preservedFlygonFaceEdits": [],
+      "scuteMotifAnchors": [],
+      "scutePixelEdits": [],
+      "scuteChangedPixels": 0,
+      "tileBytes": 3200,
+      "paletteBytes": 32,
+      "tileExactDecode": true,
+      "paletteBGR555": true,
+      "pngSHA256": "6018599ccffc574d629bc179250a9a839916b41147daae67d717d4b87ee60b12",
+      "tileSHA256": "ec2009cd4f4e1ade59e83b378874d9468b00ead01ceb2a8ebc65c01ff79e905c",
+      "paletteSHA256": "27cecb2edb7e2ff4911b1a5ae9d0a4feb047b986569c5c264251092d99ee428a",
+      "png": "vibrava_front_desert_scarab_80.png",
+      "tiles": "vibrava_front_desert_scarab_80_4bpp_tiles.bin",
+      "palette": "vibrava_front_desert_scarab_80_palette.bin",
+      "approved": false,
+      "romIntegrated": false
+    },
+    {
+      "view": "vibrava_back",
+      "sourceSHA256": "1182bab5ff5feb9efc5afac02e9777d7298fcdba690b09082b6b567540f7c215",
+      "sourceCanvas": [
+        160,
+        160
+      ],
+      "outputCanvas": [
+        80,
+        80
+      ],
+      "stagePalette": [
+        "#000000",
+        "#2D241A",
+        "#49382B",
+        "#664A32",
+        "#906845",
+        "#B58A59",
+        "#D4AB77",
+        "#EDD4AA",
+        "#435239",
+        "#617648",
+        "#829B55",
+        "#AAC27D",
+        "#D4E0A3",
+        "#F2E8CA",
+        "#639447",
+        "#E6F2AD"
+      ],
+      "opaquePaletteEntries": 15,
+      "artworkSilhouettePreserved": true,
+      "outputAlphaExact": true,
+      "originalSourceUntouched": true,
+      "baselineSource": "original-color source80",
+      "baselineOpaquePixels": 1930,
+      "changedRGBApixelsVsBaseline": 1930,
+      "eyeAccents": 404,
+      "preservedFlygonFaceEdits": [],
+      "scuteMotifAnchors": [
+        [
+          49,
+          60
+        ]
+      ],
+      "scutePixelEdits": [
+        {
+          "x": 49,
+          "y": 60,
+          "fromIndex": 4,
+          "toIndex": 3,
+          "feature": "scale/scute"
+        },
+        {
+          "x": 50,
+          "y": 60,
+          "fromIndex": 4,
+          "toIndex": 3,
+          "feature": "scale/scute"
+        },
+        {
+          "x": 49,
+          "y": 61,
+          "fromIndex": 4,
+          "toIndex": 5,
+          "feature": "scale/scute"
+        }
+      ],
+      "scuteChangedPixels": 3,
+      "tileBytes": 3200,
+      "paletteBytes": 32,
+      "tileExactDecode": true,
+      "paletteBGR555": true,
+      "pngSHA256": "2afc7ea8f8215d40f15e8ab43dce088c92c54fdfa3a65be40013d1bed28d2e21",
+      "tileSHA256": "9ecd0e96604790f3a3a26a20853d34cbfb96c68c247c9c775f4c5569f7a68ee5",
+      "paletteSHA256": "27cecb2edb7e2ff4911b1a5ae9d0a4feb047b986569c5c264251092d99ee428a",
+      "png": "vibrava_back_desert_scarab_80.png",
+      "tiles": "vibrava_back_desert_scarab_80_4bpp_tiles.bin",
+      "palette": "vibrava_back_desert_scarab_80_palette.bin",
+      "approved": false,
+      "romIntegrated": false
+    },
+    {
+      "view": "flygon_front",
+      "sourceSHA256": "0648e090ab0a869bf452cab5e02d2d7da3bd9454b0b400bfcedb022dd72a321c",
+      "sourceCanvas": [
+        160,
+        160
+      ],
+      "outputCanvas": [
+        80,
+        80
+      ],
+      "stagePalette": [
+        "#000000",
+        "#251C17",
+        "#442F22",
+        "#61422B",
+        "#825939",
+        "#AF7E50",
+        "#D0A16B",
+        "#E9C697",
+        "#394B32",
+        "#587345",
+        "#7D9B53",
+        "#AAC275",
+        "#D1DF9A",
+        "#F3E7CA",
+        "#5F9E45",
+        "#E2F3B0"
+      ],
+      "opaquePaletteEntries": 15,
+      "artworkSilhouettePreserved": true,
+      "outputAlphaExact": true,
+      "originalSourceUntouched": true,
+      "baselineSource": "previous verified 6px polish",
+      "baselineOpaquePixels": 3194,
+      "changedRGBApixelsVsBaseline": 3194,
+      "eyeAccents": 57,
+      "preservedFlygonFaceEdits": [
+        {
+          "feature": "eye glint",
+          "x": 37,
+          "y": 21,
+          "oldIndex": 15,
+          "newIndex": 15
+        },
+        {
+          "feature": "eye pupil",
+          "x": 38,
+          "y": 21,
+          "oldIndex": 15,
+          "newIndex": 1
+        },
+        {
+          "feature": "muzzle contour",
+          "x": 33,
+          "y": 27,
+          "oldIndex": 11,
+          "newIndex": 3
+        },
+        {
+          "feature": "muzzle contour",
+          "x": 33,
+          "y": 28,
+          "oldIndex": 11,
+          "newIndex": 3
+        },
+        {
+          "feature": "forewing joint",
+          "x": 42,
+          "y": 34,
+          "oldIndex": 7,
+          "newIndex": 2
+        },
+        {
+          "feature": "forewing joint",
+          "x": 42,
+          "y": 35,
+          "oldIndex": 13,
+          "newIndex": 13
+        }
+      ],
+      "scuteMotifAnchors": [
+        [
+          19,
+          42
+        ],
+        [
+          31,
+          52
+        ]
+      ],
+      "scutePixelEdits": [
+        {
+          "x": 19,
+          "y": 42,
+          "fromIndex": 5,
+          "toIndex": 4,
+          "feature": "scale/scute"
+        },
+        {
+          "x": 20,
+          "y": 42,
+          "fromIndex": 5,
+          "toIndex": 4,
+          "feature": "scale/scute"
+        },
+        {
+          "x": 19,
+          "y": 43,
+          "fromIndex": 5,
+          "toIndex": 6,
+          "feature": "scale/scute"
+        },
+        {
+          "x": 31,
+          "y": 52,
+          "fromIndex": 4,
+          "toIndex": 3,
+          "feature": "scale/scute"
+        },
+        {
+          "x": 32,
+          "y": 52,
+          "fromIndex": 4,
+          "toIndex": 3,
+          "feature": "scale/scute"
+        },
+        {
+          "x": 31,
+          "y": 53,
+          "fromIndex": 4,
+          "toIndex": 5,
+          "feature": "scale/scute"
+        }
+      ],
+      "scuteChangedPixels": 6,
+      "tileBytes": 3200,
+      "paletteBytes": 32,
+      "tileExactDecode": true,
+      "paletteBGR555": true,
+      "pngSHA256": "d2b61f4d03e8073615f3fa093685903b2c1737abe0aec45af55ccadf5508e452",
+      "tileSHA256": "397f80eb24085f1210f67e4cd4d5fad5ef00e1653963f313c67e916363799d2a",
+      "paletteSHA256": "1bf3ebadd0a226a2528b9fa2a1c42e1fb944f63067a173fd2ee4e8b629338205",
+      "png": "flygon_front_desert_scarab_80.png",
+      "tiles": "flygon_front_desert_scarab_80_4bpp_tiles.bin",
+      "palette": "flygon_front_desert_scarab_80_palette.bin",
+      "approved": false,
+      "romIntegrated": false
+    },
+    {
+      "view": "flygon_back",
+      "sourceSHA256": "f9586b2b6504f0a4b2d79bd9597c6c59ea7df1be4e96ca1c2fb284dcaa42aa51",
+      "sourceCanvas": [
+        160,
+        160
+      ],
+      "outputCanvas": [
+        80,
+        80
+      ],
+      "stagePalette": [
+        "#000000",
+        "#251C17",
+        "#442F22",
+        "#61422B",
+        "#825939",
+        "#AF7E50",
+        "#D0A16B",
+        "#E9C697",
+        "#394B32",
+        "#587345",
+        "#7D9B53",
+        "#AAC275",
+        "#D1DF9A",
+        "#F3E7CA",
+        "#5F9E45",
+        "#E2F3B0"
+      ],
+      "opaquePaletteEntries": 15,
+      "artworkSilhouettePreserved": true,
+      "outputAlphaExact": true,
+      "originalSourceUntouched": true,
+      "baselineSource": "original Orpheus 2x half",
+      "baselineOpaquePixels": 3909,
+      "changedRGBApixelsVsBaseline": 6400,
+      "eyeAccents": 82,
+      "preservedFlygonFaceEdits": [],
+      "scuteMotifAnchors": [
+        [
+          64,
+          49
+        ],
+        [
+          52,
+          59
+        ]
+      ],
+      "scutePixelEdits": [
+        {
+          "x": 64,
+          "y": 49,
+          "fromIndex": 4,
+          "toIndex": 3,
+          "feature": "scale/scute"
+        },
+        {
+          "x": 65,
+          "y": 49,
+          "fromIndex": 4,
+          "toIndex": 3,
+          "feature": "scale/scute"
+        },
+        {
+          "x": 64,
+          "y": 50,
+          "fromIndex": 4,
+          "toIndex": 5,
+          "feature": "scale/scute"
+        },
+        {
+          "x": 52,
+          "y": 59,
+          "fromIndex": 4,
+          "toIndex": 3,
+          "feature": "scale/scute"
+        },
+        {
+          "x": 53,
+          "y": 59,
+          "fromIndex": 4,
+          "toIndex": 3,
+          "feature": "scale/scute"
+        },
+        {
+          "x": 52,
+          "y": 60,
+          "fromIndex": 4,
+          "toIndex": 5,
+          "feature": "scale/scute"
+        }
+      ],
+      "scuteChangedPixels": 6,
+      "tileBytes": 3200,
+      "paletteBytes": 32,
+      "tileExactDecode": true,
+      "paletteBGR555": true,
+      "pngSHA256": "f913dbb797cb88717e1556d7e0a2dcc65a0de5261e1ca536737c06c385b71b93",
+      "tileSHA256": "89db97c775841f22c879401bb2cc6e230679fab63edccbbcc0a49d1493948c6b",
+      "paletteSHA256": "1bf3ebadd0a226a2528b9fa2a1c42e1fb944f63067a173fd2ee4e8b629338205",
+      "png": "flygon_back_desert_scarab_80.png",
+      "tiles": "flygon_back_desert_scarab_80_4bpp_tiles.bin",
+      "palette": "flygon_back_desert_scarab_80_palette.bin",
+      "approved": false,
+      "romIntegrated": false
+    }
+  ]
+}
