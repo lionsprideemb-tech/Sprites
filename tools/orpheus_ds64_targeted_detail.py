@@ -29,7 +29,7 @@ BASELINES = {
     },
 }
 # x, y, expected palette index, target palette index, intentional reason.
-FIXES = {"vibrava_back":[[47,21,5,3,"left antenna stalk contrast"],[47,22,5,3,"left antenna stalk contrast"],[47,23,5,3,"left antenna stalk contrast"],[53,21,5,3,"right antenna stalk contrast"],[53,22,6,4,"right antenna stalk shading"],[43,39,5,3,"wing root shade continuity"],[43,40,5,3,"wing root shade continuity"],[44,40,5,3,"wing root shade continuity"]],"flygon_front":[[23,14,15,2,"eye pupil within existing light highlight"],[24,19,4,3,"muzzle/neck shadow separation"],[25,19,4,3,"muzzle/neck shadow separation"],[25,18,4,3,"muzzle/neck shadow continuity"],[35,27,10,8,"forewing/body edge contrast"],[36,27,10,8,"forewing/body edge contrast"],[36,28,10,8,"forewing/body edge contrast"],[37,28,10,8,"forewing/body edge contrast"]]}
+FIXES = {"vibrava_back":[[47,21,5,3,"left antenna stalk contrast"],[47,22,5,3,"left antenna stalk contrast"],[47,23,5,3,"left antenna stalk contrast"],[53,21,5,3,"right antenna stalk contrast"],[53,22,5,4,"right antenna stalk shading"],[43,39,5,3,"wing root shade continuity"],[43,40,5,3,"wing root shade continuity"],[44,40,5,3,"wing root shade continuity"]],"flygon_front":[[23,14,15,2,"eye pupil within existing light highlight"],[24,19,4,3,"muzzle/neck shadow separation"],[25,19,4,3,"muzzle/neck shadow separation"],[25,18,4,3,"muzzle/neck shadow continuity"],[35,27,10,8,"forewing/body edge contrast"],[36,27,10,8,"forewing/body edge contrast"],[36,28,10,8,"forewing/body edge contrast"],[37,28,10,8,"forewing/body edge contrast"]]}
 def digest(data:bytes)->str:return hashlib.sha256(data).hexdigest()
 def unpack(tile):
     assert len(tile)==2048
