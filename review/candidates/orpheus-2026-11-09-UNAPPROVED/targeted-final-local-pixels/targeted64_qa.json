@@ -1,0 +1,177 @@
+{
+  "schema": "mercury-orpheus-ds64-final-local-detail-v1",
+  "upstream": "pinned stronger real Orpheus indexed tile buffers from isolated research branch",
+  "scope": [
+    "flygon_front",
+    "vibrava_back"
+  ],
+  "sourceArtModified": false,
+  "palettesModified": false,
+  "silhouettesModified": false,
+  "existingVotesModified": false,
+  "romIntegrated": false,
+  "approved": false,
+  "otherViewsUntouched": [
+    "trapinch_front",
+    "trapinch_back",
+    "vibrava_front",
+    "flygon_back"
+  ],
+  "notes": [
+    "These are true DS64 index-pixel edits rather than synthesized replacement art.",
+    "Original art geometry and outlines remain unchanged.",
+    "Visual effectiveness remains subject to user judgment; DS4bpp QA proves format not aesthetics."
+  ],
+  "views": [
+    {
+      "view": "flygon_front",
+      "edits": [
+        {
+          "x": 23,
+          "y": 14,
+          "before": 15,
+          "after": 2,
+          "reason": "eye pupil within existing light highlight"
+        },
+        {
+          "x": 24,
+          "y": 19,
+          "before": 4,
+          "after": 3,
+          "reason": "muzzle/neck shadow separation"
+        },
+        {
+          "x": 25,
+          "y": 19,
+          "before": 4,
+          "after": 3,
+          "reason": "muzzle/neck shadow separation"
+        },
+        {
+          "x": 25,
+          "y": 18,
+          "before": 4,
+          "after": 3,
+          "reason": "muzzle/neck shadow continuity"
+        },
+        {
+          "x": 35,
+          "y": 27,
+          "before": 10,
+          "after": 8,
+          "reason": "forewing/body edge contrast"
+        },
+        {
+          "x": 36,
+          "y": 27,
+          "before": 10,
+          "after": 8,
+          "reason": "forewing/body edge contrast"
+        },
+        {
+          "x": 36,
+          "y": 28,
+          "before": 10,
+          "after": 8,
+          "reason": "forewing/body edge contrast"
+        },
+        {
+          "x": 37,
+          "y": 28,
+          "before": 10,
+          "after": 8,
+          "reason": "forewing/body edge contrast"
+        }
+      ],
+      "count": 8,
+      "sourceTileSHA256": "6b0b955d002f13d0ddaaca20c3c84ddeefd97a2ea7fe5ce1c77ad86e3c1639dc",
+      "revisedTileSHA256": "0d906469534f897c50813673ba3473c54173dc975cdaceb93a371e80f6df6d3d",
+      "sourcePaletteSHA256": "4a6eb782f3db86decea8d0892a3e342fa8451a2932744b89a5d328a838e0efaf",
+      "sourcePNGIdenticalToIndexedInput": true,
+      "sourceAlphaIdentical": true,
+      "outlineIndex1Identical": true,
+      "tileBytes": 2048,
+      "paletteBytes": 32,
+      "uniqueRGBAColors": 11,
+      "opaquePaletteSlotsUsed": 10,
+      "sourceImageChanged": false,
+      "artApproved": false,
+      "romIntegrated": false
+    },
+    {
+      "view": "vibrava_back",
+      "edits": [
+        {
+          "x": 47,
+          "y": 21,
+          "before": 5,
+          "after": 3,
+          "reason": "left antenna stalk contrast"
+        },
+        {
+          "x": 47,
+          "y": 22,
+          "before": 5,
+          "after": 3,
+          "reason": "left antenna stalk contrast"
+        },
+        {
+          "x": 47,
+          "y": 23,
+          "before": 5,
+          "after": 3,
+          "reason": "left antenna stalk contrast"
+        },
+        {
+          "x": 53,
+          "y": 21,
+          "before": 5,
+          "after": 3,
+          "reason": "right antenna stalk contrast"
+        },
+        {
+          "x": 53,
+          "y": 22,
+          "before": 5,
+          "after": 4,
+          "reason": "right antenna stalk shading"
+        },
+        {
+          "x": 43,
+          "y": 39,
+          "before": 5,
+          "after": 3,
+          "reason": "wing root shade continuity"
+        },
+        {
+          "x": 43,
+          "y": 40,
+          "before": 5,
+          "after": 3,
+          "reason": "wing root shade continuity"
+        },
+        {
+          "x": 44,
+          "y": 40,
+          "before": 5,
+          "after": 3,
+          "reason": "wing root shade continuity"
+        }
+      ],
+      "count": 8,
+      "sourceTileSHA256": "0e7ed7ea6c96e6884a3195fe4fc0186f69b9e0546e7be0cb75c8e9f949c2c261",
+      "revisedTileSHA256": "5b58eb559e085e08e2da013c804b265a9ecdb8179b84b76e1bc097d8972b301b",
+      "sourcePaletteSHA256": "02fa57e49ff490c8035368812c872b53b05c0bc1b439438bad307858369c83ce",
+      "sourcePNGIdenticalToIndexedInput": true,
+      "sourceAlphaIdentical": true,
+      "outlineIndex1Identical": true,
+      "tileBytes": 2048,
+      "paletteBytes": 32,
+      "uniqueRGBAColors": 11,
+      "opaquePaletteSlotsUsed": 10,
+      "sourceImageChanged": false,
+      "artApproved": false,
+      "romIntegrated": false
+    }
+  ]
+}
