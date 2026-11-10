@@ -45,3 +45,10 @@ The three source art styles fit one another strongly. However, the final design 
 - [Read-only source-art + PBS visual audit](https://github.com/lionsprideemb-tech/Sprites/actions/runs/42695802925) — **success**; preview PNG and read-only text/JSON were uploaded as an Actions artifact.
 - Separate GitHub branch `mercury/orpheus-resource-audit-20261109` contains display-only PNG previews. **No art approved, no integration, no added species IDs and no mutation to existing sprites**.
 - Recommended next: user considers actual family as **candidate**, confirms preference and Bug/Ground final retype, requests permission where necessary, then DS-quality prototype for verified sources. Do not perform that prototype without clear source identity and appropriate art rights.
+
+
+## User update — November 10, 2026: palette preference and permission
+
+User reports they **have the artist's permission** and do **not like the current bright green/yellow palette** on the Thracean family. This is a user-provided permission statement, not an independently examined license document. Before public distribution, record the artist's name/attribution and confirm permission covers recoloring/modification, redistribution, and credit requirements as applicable.
+
+**New direction:** Retain the actual Orpheus original insect-family shapes rather than replacing them with recolors of vanilla Pokémon. Prepare **unapproved alternate palettes** that visually communicate a Bug/Ground final Flygon (suggested research themes: dune sandstone and cocoa, rusty clay and moss, umber and desaturated teal). Recolor the family consistently using native 64×64 source-aligned indexed-palette experiments; do not repaint the silhouette or overwrite original PNGs. This user statement is **not a specific color selection or final art approval**. Keep original source, prior DS64 previews, votes, Dex, and ROM untouched.
