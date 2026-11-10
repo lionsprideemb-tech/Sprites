@@ -1,0 +1,59 @@
+{
+  "schema": "mercury-desert-scarab-visual-review-v1",
+  "sourceQAsha256": "6f7b5d3a6876b7257b6c014b19702ddcff043572bcd8317604248e7a18b9285a",
+  "all4ImagesAndTilesVerified": true,
+  "native80DisplayAt100PercentPixels": true,
+  "4xNearestNeighborDisplay": true,
+  "noSourceEdits": true,
+  "allUnapproved": true,
+  "noROMIntegration": true,
+  "noHistoricalVoteChanges": true,
+  "composite": "desert_scarab_native80_and_4x_mobile_comparison.png",
+  "compositeSHA256": "e0523476bdd7b2af7fdca5bfd1c78a10b238e989e20eb747087182db587f9468",
+  "views": [
+    {
+      "view": "vibrava_front",
+      "sha256": "4a6e9b274940d375183723ab93896b0085177687ae899542efaa3e3cc04f6419",
+      "native": [
+        80,
+        80
+      ],
+      "zoomFactor": 4,
+      "tileRoundtrip": true,
+      "sourceGeometryPreserved": true
+    },
+    {
+      "view": "vibrava_back",
+      "sha256": "55deac9287cf1f8530026b8bd2e488b25099dfd4ba4b04bae4e79acd5d880559",
+      "native": [
+        80,
+        80
+      ],
+      "zoomFactor": 4,
+      "tileRoundtrip": true,
+      "sourceGeometryPreserved": true
+    },
+    {
+      "view": "flygon_front",
+      "sha256": "b3d3f42e39856bb67cfc40b6ade6492dd7a9c9b10855fcc1ddccd2b357301c64",
+      "native": [
+        80,
+        80
+      ],
+      "zoomFactor": 4,
+      "tileRoundtrip": true,
+      "sourceGeometryPreserved": true
+    },
+    {
+      "view": "flygon_back",
+      "sha256": "b845464018277bf183f30dbec059d5d02941042972f65a3b35d3177dc7952ab9",
+      "native": [
+        80,
+        80
+      ],
+      "zoomFactor": 4,
+      "tileRoundtrip": true,
+      "sourceGeometryPreserved": true
+    }
+  ]
+}
