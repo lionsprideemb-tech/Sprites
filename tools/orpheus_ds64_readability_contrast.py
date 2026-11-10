@@ -21,7 +21,7 @@ PINNED_ARCHIVE="72539b83b55a427c4adcdf2f3e5397cc28371875a720f687ffcf4e2a6d803ef9
 PALETTES={
  "trapinch": ["#19181C","#513027","#854733","#C0754C","#DC9562","#F0C48D","#614A33","#A38653","#D4B47A","#EBD09D","#F6E6BD","#2C5355","#628884","#B1C7B4","#F6EBDA"],
  "vibrava": ["#152227","#2D4435","#506E4A","#739566","#A1B892","#D1DBB8","#264954","#3D7285","#61A6B7","#A3DCE2","#DFF4ED","#785D3F","#AD8B60","#E0C28A","#F4E7C8"],
- "flygon": ["#18191D","#382820","#60412E","#895D40","#B0804E","#DAB173","#225664","#347487","#62A6B2","#A3D5D5","#DDF0E5","#62452E","#9E7440","#D4AC69","#F1DCA9"]
+ "flygon": ["#18191D","#382820","#60412E","#895D40","#B0804E","#DAB173","#225664","#347487","#62A6B2","#A3D5D5","#DDF0E5","#6C4929","#9E7440","#D4AC69","#F1DCA9"]
 }
 SPECIES=[(328,"trapinch","Terracotta & sand"),(329,"vibrava","Sage & turquoise"),(330,"flygon","Umber, bronze & teal")]
 FONT=ImageFont.load_default()
