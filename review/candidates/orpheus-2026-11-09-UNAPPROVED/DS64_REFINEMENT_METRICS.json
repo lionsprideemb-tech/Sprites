@@ -1,0 +1,213 @@
+{
+  "schema": "mercury-orpheus-thracean-ds64-palette-refinement-v1",
+  "sourceArchiveSha256": "72539b83b55a427c4adcdf2f3e5397cc28371875a720f687ffcf4e2a6d803ef9",
+  "baselineRunId": 42875145728,
+  "verificationRunId": 42875394450,
+  "target64Only": true,
+  "originalArtworkModified": false,
+  "silhouettesUnchanged": true,
+  "userArtApprovalsModified": false,
+  "pokedexEdited": false,
+  "romIntegrated": false,
+  "shinyAssetsCertified": false,
+  "completeNormalPairsTested": 2,
+  "paletteRefinementsSelected": 4,
+  "views": [
+    {
+      "alphaMaskUnchanged": true,
+      "approved": false,
+      "baseline": {
+        "changedOpaquePixelPercent": 89.22,
+        "meanAbsoluteRGBChannelError": 2.9317,
+        "meanLumaEdgeDifference": 1.7586,
+        "opaquePixels": 1113,
+        "rmsRGBChannelError": 4.4969
+      },
+      "candidateTrialCount": 12,
+      "chosenStatus": "SELECTED (loss metric improved)",
+      "experiment": true,
+      "improved": true,
+      "improvedMeanAbsoluteRGBError": 0.6586,
+      "improvedMeanLumaEdgeError": 0.6302,
+      "nativePaletteSHA256": "c9c7bf7fbd63eb125a9d27384f910abf44076e660ca3a1c92e106e3d42556849",
+      "nativeTilesBytes": 2048,
+      "nativeTilesSHA256": "7d1ecc52082d113feacb0b81eb4a8b8958a4b70437008ffc2f51e8ebef95042b",
+      "paletteBytes": 32,
+      "refinement": {
+        "changedOpaquePixelPercent": 89.22,
+        "meanAbsoluteRGBChannelError": 2.2731,
+        "meanLumaEdgeDifference": 1.1284,
+        "opaquePixels": 1113,
+        "rmsRGBChannelError": 3.4473
+      },
+      "romIntegrated": false,
+      "selectedConfig": {
+        "chosenOpaqueColors": 15,
+        "edgeStrength": 0,
+        "mode": "perceptual",
+        "originalDSColorDirectMatchCount": 1083,
+        "sourcePaletteEntries": 21,
+        "uniqueDSColors": 16
+      },
+      "sourceFile": "safepng/329_1.png",
+      "sourceSHA256": "5a2d79d6707f35237d8bb7ec32990b9a0c9b799d5ddbf19fe972a8d6c10f7060",
+      "sourceSize": [
+        160,
+        160
+      ],
+      "species": "vibrava",
+      "targetSize": [
+        64,
+        64
+      ],
+      "view": "front"
+    },
+    {
+      "alphaMaskUnchanged": true,
+      "approved": false,
+      "baseline": {
+        "changedOpaquePixelPercent": 100,
+        "meanAbsoluteRGBChannelError": 2.1554,
+        "meanLumaEdgeDifference": 1.0102,
+        "opaquePixels": 1139,
+        "rmsRGBChannelError": 3.1322
+      },
+      "candidateTrialCount": 12,
+      "chosenStatus": "SELECTED (loss metric improved)",
+      "experiment": true,
+      "improved": true,
+      "improvedMeanAbsoluteRGBError": 0.0822,
+      "improvedMeanLumaEdgeError": 0.0385,
+      "nativePaletteSHA256": "46689bda577d37bada6face6b19325700e9d49334e72ead5fefc98c173fa7e91",
+      "nativeTilesBytes": 2048,
+      "nativeTilesSHA256": "951b440fafd1c277d4d8af7bb0c2f95a5db31e67e7b3a5fb287b0bf203f5aed9",
+      "paletteBytes": 32,
+      "refinement": {
+        "changedOpaquePixelPercent": 100,
+        "meanAbsoluteRGBChannelError": 2.0732,
+        "meanLumaEdgeDifference": 0.9717,
+        "opaquePixels": 1139,
+        "rmsRGBChannelError": 2.774
+      },
+      "romIntegrated": false,
+      "selectedConfig": {
+        "chosenOpaqueColors": 15,
+        "edgeStrength": 0,
+        "mode": "balanced",
+        "originalDSColorDirectMatchCount": 1135,
+        "sourcePaletteEntries": 16,
+        "uniqueDSColors": 16
+      },
+      "sourceFile": "safepng/329b_1.png",
+      "sourceSHA256": "1182bab5ff5feb9efc5afac02e9777d7298fcdba690b09082b6b567540f7c215",
+      "sourceSize": [
+        160,
+        160
+      ],
+      "species": "vibrava",
+      "targetSize": [
+        64,
+        64
+      ],
+      "view": "back"
+    },
+    {
+      "alphaMaskUnchanged": true,
+      "approved": false,
+      "baseline": {
+        "changedOpaquePixelPercent": 89.71,
+        "meanAbsoluteRGBChannelError": 4.2285,
+        "meanLumaEdgeDifference": 2.7517,
+        "opaquePixels": 1778,
+        "rmsRGBChannelError": 10.1349
+      },
+      "candidateTrialCount": 12,
+      "chosenStatus": "SELECTED (loss metric improved)",
+      "experiment": true,
+      "improved": true,
+      "improvedMeanAbsoluteRGBError": 1.5742,
+      "improvedMeanLumaEdgeError": 0.9402,
+      "nativePaletteSHA256": "8b202cfcd03e5b0c6b82d4804fd5a7f43cf9180492c9a4aaf70ff55f281394c3",
+      "nativeTilesBytes": 2048,
+      "nativeTilesSHA256": "0751a5da4d85342f7ca85829af78467dcfbd81b3c7c3bc3f5b2771530d2e26b3",
+      "paletteBytes": 32,
+      "refinement": {
+        "changedOpaquePixelPercent": 89.71,
+        "meanAbsoluteRGBChannelError": 2.6543,
+        "meanLumaEdgeDifference": 1.8115,
+        "opaquePixels": 1778,
+        "rmsRGBChannelError": 5.4514
+      },
+      "romIntegrated": false,
+      "selectedConfig": {
+        "chosenOpaqueColors": 15,
+        "edgeStrength": 0,
+        "mode": "balanced",
+        "originalDSColorDirectMatchCount": 1658,
+        "sourcePaletteEntries": 32,
+        "uniqueDSColors": 16
+      },
+      "sourceFile": "safepng/330_1.png",
+      "sourceSHA256": "0648e090ab0a869bf452cab5e02d2d7da3bd9454b0b400bfcedb022dd72a321c",
+      "sourceSize": [
+        160,
+        160
+      ],
+      "species": "flygon",
+      "targetSize": [
+        64,
+        64
+      ],
+      "view": "front"
+    },
+    {
+      "alphaMaskUnchanged": true,
+      "approved": false,
+      "baseline": {
+        "changedOpaquePixelPercent": 100,
+        "meanAbsoluteRGBChannelError": 3.7599,
+        "meanLumaEdgeDifference": 1.7313,
+        "opaquePixels": 2199,
+        "rmsRGBChannelError": 7.8841
+      },
+      "candidateTrialCount": 12,
+      "chosenStatus": "SELECTED (loss metric improved)",
+      "experiment": true,
+      "improved": true,
+      "improvedMeanAbsoluteRGBError": 0.7996,
+      "improvedMeanLumaEdgeError": 0.5211,
+      "nativePaletteSHA256": "844acd04d93889eee4e423d3a03834ebb3b49baa7e4c77c4040e2f4afa9bb183",
+      "nativeTilesBytes": 2048,
+      "nativeTilesSHA256": "92c0a46c1e7dac1d70ac36a1e51e0c0cfdeb8bfb7b6abbb4e8eae7b0055bd89a",
+      "paletteBytes": 32,
+      "refinement": {
+        "changedOpaquePixelPercent": 100,
+        "meanAbsoluteRGBChannelError": 2.9603,
+        "meanLumaEdgeDifference": 1.2102,
+        "opaquePixels": 2199,
+        "rmsRGBChannelError": 5.3292
+      },
+      "romIntegrated": false,
+      "selectedConfig": {
+        "chosenOpaqueColors": 15,
+        "edgeStrength": 0,
+        "mode": "balanced",
+        "originalDSColorDirectMatchCount": 2040,
+        "sourcePaletteEntries": 27,
+        "uniqueDSColors": 16
+      },
+      "sourceFile": "safepng/330b_1.png",
+      "sourceSHA256": "f9586b2b6504f0a4b2d79bd9597c6c59ea7df1be4e96ca1c2fb284dcaa42aa51",
+      "sourceSize": [
+        160,
+        160
+      ],
+      "species": "flygon",
+      "targetSize": [
+        64,
+        64
+      ],
+      "view": "back"
+    }
+  ]
+}
