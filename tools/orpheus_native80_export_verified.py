@@ -62,12 +62,16 @@ for name,num in (("trapinch",328),("vibrava",329),("flygon",330)):
         assert raw80.getchannel("A").tobytes()==png.getchannel("A").tobytes()
         exact,total,alpha=pixel2x_blocks(original)
         assert round(100*exact/total,2)==rec["exact2xPercent"]
-        assert alpha==total,("Original alpha mismatch",name,role)
+        # The Vibrava back has a small number of non-identical original 2x2 alpha blocks.
+        # Report this honestly rather than claiming a fully lossless half-scale.
+        assert alpha==total or (name,role)==("vibrava","back")
         assert len(set(png.getdata()))<=16
         selected.append(dict(view=f"{name}_{role}",png=paths[0].name,tiles=paths[1].name,
             palette=paths[2].name,sourceSHA256=rec["sourceSHA256"],
             source2xExactBlocks=exact,source2xTotalBlocks=total,
             source2xExactPercent=round(100*exact/total,2),
+            source2xAlphaExactBlocks=alpha,
+            source2xAlphaTotalBlocks=total,
             alpha2xBlocksExact=alpha==total,
             pngTilesRoundTrip=True,sourceAlphaPreserved=True,
             pngSHA256=sha(paths[0].read_bytes()),
@@ -83,7 +87,7 @@ output=dict(schema="mercury-orpheus-native80-source-fidelity-export-v1",
     limitations=["The 80px battle engine resource insertion has not been tested in Mercury's ROM.",
     "Stage-specific palettes are unapproved recolor experiments.",
     "Shiny, icon and battle-engine NARC resources are not generated.",
-    "The 99.5%-exact Vibrava back original has a few nonidentical 2x2 RGB blocks; 80px retains the exact source alpha."],
+    "The 99.5%-exact Vibrava back original includes a few nonidentical 2x2 blocks, some in alpha; the 80px preview matches the chosen nearest-sample alpha but is not fully lossless to 160px."],
     views=selected)
 manifest_file=ROOT/"native80_selected_half_qa.json"
 manifest_file.write_text(json.dumps(output,indent=2)+"\n")
