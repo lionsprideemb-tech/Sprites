@@ -1,0 +1,79 @@
+{
+  "schema": "mercury-orpheus-original-color-native80-v1",
+  "sourceArchiveSHA256": "72539b83b55a427c4adcdf2f3e5397cc28371875a720f687ffcf4e2a6d803ef9",
+  "method": "original full canvas 160px nearest 2x to native 80px; 15 BGR555 colors selected from source; transparency and layout locked",
+  "colorSelection": "weighted source color medoids, preserve dark outline and available green/yellow/blue/red accent hue families",
+  "noSourceArtModified": true,
+  "noPreviousCandidateModified": true,
+  "noVotesModified": true,
+  "allUnapproved": true,
+  "noROMIntegration": true,
+  "limitations": [
+    "Palette reduction to 15 colors remains a reviewed approximation of full original 24/34-color artwork.",
+    "Vibrava BACK has nonuniform original 2x blocks, including alpha, so nearest half sampling is not fully lossless.",
+    "No subjective readability approval, no manual anatomy edit, no shiny/icon, no battle-engine archive or emulator test."
+  ],
+  "comparison": "orpheus_native80_original_colors_before_after.png",
+  "views": [
+    {
+      "view": "flygon_front",
+      "source": "safepng/330_1.png",
+      "sourceSHA256": "0648e090ab0a869bf452cab5e02d2d7da3bd9454b0b400bfcedb022dd72a321c",
+      "priorPaletteExperiment": "stage-specific unapproved brown/blue family recolor",
+      "nativeCanvas": [
+        80,
+        80
+      ],
+      "sourcePixel2xPreserved": true,
+      "sourcePaletteOpaqueColors": 32,
+      "sourceDerivedBGR555PaletteEntries": 15,
+      "sourceColorBGR555ExactPixels": 2782,
+      "opaquePixels": 3194,
+      "changedColorsComparedToPriorNative80": 3194,
+      "originalAlphaExact": true,
+      "sourceSilhouetteExact": true,
+      "noManualSourcePixelEdits": true,
+      "tileDecodePixelExact": true,
+      "png": "flygon_front_source_colors80.png",
+      "tiles": "flygon_front_source_colors80_4bpp_tiles.bin",
+      "palette": "flygon_front_source_colors80_palette.bin",
+      "pngSHA256": "9c140719fd0d39b79d80104962232636c7ca678717bc84ab062879f4ec725c0e",
+      "tilesSHA256": "b36eb9ed804a680d8fed875b0b2c39884ad07cbd4361eac0b760d27e8cff127d",
+      "paletteSHA256": "3fbde56011adf0299653199cea2d93b948c6295e54494cabeac7542b2f3423d7",
+      "tileBytes": 3200,
+      "paletteBytes": 32,
+      "approved": false,
+      "integrated": false
+    },
+    {
+      "view": "vibrava_back",
+      "source": "safepng/329b_1.png",
+      "sourceSHA256": "1182bab5ff5feb9efc5afac02e9777d7298fcdba690b09082b6b567540f7c215",
+      "priorPaletteExperiment": "stage-specific unapproved brown/blue family recolor",
+      "nativeCanvas": [
+        80,
+        80
+      ],
+      "sourcePixel2xPreserved": false,
+      "sourcePaletteOpaqueColors": 17,
+      "sourceDerivedBGR555PaletteEntries": 15,
+      "sourceColorBGR555ExactPixels": 1906,
+      "opaquePixels": 1930,
+      "changedColorsComparedToPriorNative80": 1930,
+      "originalAlphaExact": true,
+      "sourceSilhouetteExact": true,
+      "noManualSourcePixelEdits": true,
+      "tileDecodePixelExact": true,
+      "png": "vibrava_back_source_colors80.png",
+      "tiles": "vibrava_back_source_colors80_4bpp_tiles.bin",
+      "palette": "vibrava_back_source_colors80_palette.bin",
+      "pngSHA256": "670b7ada44953a294b796835833299ad27a537374d49d69dda16dc9c7da7b65f",
+      "tilesSHA256": "4111767be24ad2bda36141b8226c6323ca7a3c738190532e337857d3d40bb134",
+      "paletteSHA256": "53dd238265d8909a3db69ee9cb3224eaf8261ac5b3b881f8d3afbbeb6f56c209",
+      "tileBytes": 3200,
+      "paletteBytes": 32,
+      "approved": false,
+      "integrated": false
+    }
+  ]
+}
