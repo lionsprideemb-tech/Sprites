@@ -33,7 +33,7 @@ KNOWN_SOURCES = {
  "329_1.png":"5a2d79d6707f35237d8bb7ec32990b9a0c9b799d5ddbf19fe972a8d6c10f7060",
  "329b_1.png":"1182bab5ff5feb9efc5afac02e9777d7298fcdba690b09082b6b567540f7c215",
  "330_1.png":"0648e090ab0a869bf452cab5e02d2d7da3bd9454b0b400bfcedb022dd72a321c",
- "330b_1.png":"f9586b2b6504f0a4b2d79bd9597c6c59ea7df1be4e96ca1c2fb284dcaa51",
+ "330b_1.png":"f9586b2b6504f0a4b2d79bd9597c6c59ea7df1be4e96ca1c2fb284dcaa42aa51",
 }
 # Eye/face and forewing crop windows are broad visual regions, not certified eye coordinates.
 ROIS={
