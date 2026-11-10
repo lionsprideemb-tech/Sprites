@@ -162,10 +162,15 @@ jobs:
           test -f report/ds64_readability/flygon_front_contrast64.png
           test -f report/ds64_readability/vibrava_back_contrast64.png
           python3 tools/orpheus_ds64_microfix_diagnostic.py
+      - name: Exact 64px source-pixel microfix QA for Vibrava back and Flygon front (no approvals)
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 tools/orpheus_ds64_exact_pixel_microfix.py
       - name: Upload research-only metadata artifact
         uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: orpheus-family-DS64-microfix-qa-unapproved
+          name: orpheus-family-DS64-real-pixel-microfix-unapproved
           path: report/
           retention-days: 14
