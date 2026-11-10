@@ -149,10 +149,16 @@ jobs:
           set -euo pipefail
           test -f report/ds64_individual_recolors/orpheus_thracean_individual_delta_recolors.png
           python3 tools/orpheus_ds64_readability_contrast.py
+      - name: Final native 64px visual audit and phone-ready comparison (UNAPPROVED)
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -f report/ds64_readability/orpheus_ds64_eye_wing_contrast_before_after.png
+          python3 tools/orpheus_ds64_final_visual_audit.py
       - name: Upload research-only metadata artifact
         uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: orpheus-family-DS64-eye-wing-contrast-unapproved
+          name: orpheus-family-DS64-final-mobile-review-unapproved
           path: report/
           retention-days: 14
