@@ -201,7 +201,6 @@ for si,(num,slug,title,typing,label) in enumerate(STAGES):
   panel(sheet,current,514,y+151,64)
   addtext(d,(20,y+203),f"{role.upper()} • {records[si*2+vi]['paletteOpaqueColorsUsed']}/15 colors",F14)
   addtext(d,(442,y+203),"native 64px inset",F14,"#667686")
- addtext(d,(22,title_y+GAPH+2*ROW-35),"Choose only after viewing at 1× and checking the detail area.",F14,"#5a6d79")
 d.rectangle((0,H-24,W,H),fill="#e7ecf0")
 addtext(d,(15,H-22),"Source/votes preserved • No KEEP/CUT recorded • No ROM changes",F14,"#843b3b")
 sheet_path=OUT/"orpheus_delta_family_mobile_review.png"
