@@ -4,7 +4,7 @@ on:
     branches: [mercury/orpheus-resource-audit-20261109]
   workflow_dispatch:
 permissions:
-  contents: read
+  contents: write
 jobs:
   probe-source-archive:
     runs-on: ubuntu-latest
@@ -200,6 +200,31 @@ jobs:
           set -euo pipefail
           test -s report/orpheus_native_platinum80/native80_qa.json
           python3 tools/orpheus_native80_export_verified.py
+      - name: Rebuild original GREEN/YELLOW Flygon front and Vibrava back at native Platinum 80px
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -s orpheus-original-resources.rar
+          test -f report/orpheus_native_platinum80/flygon_front_half_80.png
+          test -f report/orpheus_native_platinum80/vibrava_back_half_80.png
+          python3 tools/orpheus_native80_original_palette.py
+          test -f report/orpheus_native80_original_colors/original_colors_qa.json
+      - name: Publish isolated unapproved original-color candidate assets and QA
+        shell: bash
+        run: |
+          set -euo pipefail
+          target=review/candidates/orpheus-2026-11-09-UNAPPROVED/native80-original-colors
+          mkdir -p "$target"
+          cp -a report/orpheus_native80_original_colors/. "$target/"
+          git config user.name "mercury-sprite-qa[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- "$target"
+          if git diff --cached --quiet; then
+            echo "No pixel asset changes to publish"
+          else
+            git commit -m "Publish original-color native80 Orpheus two-view candidates, comparison and tile QA (unapproved)"
+            git push origin HEAD:mercury/orpheus-resource-audit-20261109
+          fi
       - name: Upload research-only metadata artifact
         uses: actions/upload-artifact@v4
         if: always()
