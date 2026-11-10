@@ -1,0 +1,30 @@
+name: Orpheus DS64 stronger pixel candidates from verified tiles (no ROM)
+on:
+  push:
+    branches:
+      - mercury/orpheus-resource-audit-20261109
+    paths:
+      - tools/orpheus_ds64_stronger_export_qa.py
+      - .github/workflows/orpheus-ds64-stronger-qa.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  stronger-candidates:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install pillow==11.3.0
+      - name: Generate deeper two-view source pixel variants from pinned committed tiles
+        run: python tools/orpheus_ds64_deeper_readability_candidates.py
+      - name: Verify exact 4bpp pixel deltas and export unapproved phone review
+        run: python tools/orpheus_ds64_stronger_export_qa.py
+      - name: Save research-only output
+        uses: actions/upload-artifact@v4
+        with:
+          name: orpheus-ds64-stronger-2-view-unapproved
+          path: report/ds64_deeper_candidates/
+          retention-days: 30
