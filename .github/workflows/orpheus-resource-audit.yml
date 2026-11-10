@@ -167,10 +167,17 @@ jobs:
         run: |
           set -euo pipefail
           python3 tools/orpheus_ds64_exact_pixel_microfix.py
+      - name: Read-only detailed 64px anatomy pixel grid for manual correction planning
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -f report/ds64_manual_microfix/flygon_front_manual_microfix64.png
+          test -f report/ds64_manual_microfix/vibrava_back_manual_microfix64.png
+          python3 tools/orpheus_ds64_anatomy_inspector.py
       - name: Upload research-only metadata artifact
         uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: orpheus-family-DS64-real-pixel-microfix-unapproved
+          name: orpheus-family-DS64-anatomy-inspection-unapproved
           path: report/
           retention-days: 14
