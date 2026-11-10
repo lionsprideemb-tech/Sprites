@@ -225,6 +225,33 @@ jobs:
             git commit -m "Publish original-color native80 Orpheus two-view candidates, comparison and tile QA (unapproved)"
             git push origin HEAD:mercury/orpheus-resource-audit-20261109
           fi
+      - name: Build isolated desert-scarab Bug/Ground Vibrava and Flygon DS80 study
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -s orpheus-original-resources.rar
+          test -f safepng/329_1.png
+          test -f safepng/329b_1.png
+          test -f safepng/330_1.png
+          test -f safepng/330b_1.png
+          test -f review/candidates/orpheus-2026-11-09-UNAPPROVED/native80-final-pixel-polish/flygon_front_original_colors80_final_micro_polish.png
+          python3 tools/orpheus_bug_ground_scarab_native80.py
+      - name: Publish real DS 4bpp desert-scarab assets, preview and QA (no approval)
+        shell: bash
+        run: |
+          set -euo pipefail
+          target=review/candidates/orpheus-2026-11-09-UNAPPROVED/desert-scarab-bug-ground-native80
+          mkdir -p "$target"
+          cp -a report/orpheus_bug_ground_scarab_native80/. "$target/"
+          git config user.name "mercury-sprite-qa[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- "$target"
+          if git diff --cached --quiet; then
+            echo "No new experimental pixel changes"
+          else
+            git commit -m "Publish real Orpheus desert-scarab Bug/Ground DS80 four-view assets and verified QA (unapproved)"
+            git push origin HEAD:mercury/orpheus-resource-audit-20261109
+          fi
       - name: Upload research-only metadata artifact
         uses: actions/upload-artifact@v4
         if: always()
