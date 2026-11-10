@@ -143,10 +143,16 @@ jobs:
           test -f report/ds64_experiment/orpheus_ds64_quality_sheet.png
           test -f report/ds64_refinement/orpheus_ds64_palette_refinement_before_after.png
           python3 tools/orpheus_ds64_individual_recolors.py
+      - name: Orpheus fine DS64 eye and wing contrast QA (unapproved)
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -f report/ds64_individual_recolors/orpheus_thracean_individual_delta_recolors.png
+          python3 tools/orpheus_ds64_readability_contrast.py
       - name: Upload research-only metadata artifact
         uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: orpheus-family-DS64-individual-colors-unapproved
+          name: orpheus-family-DS64-eye-wing-contrast-unapproved
           path: report/
           retention-days: 14
