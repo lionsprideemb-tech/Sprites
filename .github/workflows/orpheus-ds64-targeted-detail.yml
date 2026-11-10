@@ -1,0 +1,29 @@
+name: Mercury Orpheus final targeted DS64 detail QA (unapproved)
+on:
+  push:
+    branches:
+      - mercury/orpheus-resource-audit-20261109
+    paths:
+      - tools/orpheus_ds64_targeted_detail.py
+      - .github/workflows/orpheus-ds64-targeted-detail.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  isolated-detail:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install pixel-only QA dependency
+        run: python -m pip install pillow==11.3.0
+      - name: Apply 16 exact-local index edits and validate native DS tiles
+        run: python tools/orpheus_ds64_targeted_detail.py
+      - name: Upload unapproved source-indexed comparison
+        uses: actions/upload-artifact@v4
+        with:
+          name: orpheus-2-view-targeted64-unapproved
+          path: report/targeted64/
+          retention-days: 30
