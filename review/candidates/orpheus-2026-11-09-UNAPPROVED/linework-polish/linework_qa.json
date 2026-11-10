@@ -1,0 +1,502 @@
+{
+  "schema": "mercury-orpheus-native-pixel-linework-v1",
+  "selectedForApproval": false,
+  "romIntegrated": false,
+  "sourceDesignsModified": false,
+  "silhouettesChanged": false,
+  "stagePalettesChanged": false,
+  "historicalVotesChanged": false,
+  "otherFourViewsUnchanged": [
+    "trapinch_front",
+    "trapinch_back",
+    "vibrava_front",
+    "flygon_back"
+  ],
+  "limitations": [
+    "Clearer linework is an experimental visual judgment, not a guarantee of approval.",
+    "The Orpheus composition has dense head/wing anatomy at 64px, so an artist may need to rethink internal shapes if still unclear."
+  ],
+  "views": [
+    {
+      "view": "flygon_front",
+      "changedPixels": 18,
+      "changeLog": [
+        {
+          "x": 24,
+          "y": 14,
+          "old": 15,
+          "new": 2,
+          "reason": "second dark eye/pupil pixel"
+        },
+        {
+          "x": 24,
+          "y": 16,
+          "old": 5,
+          "new": 4,
+          "reason": "eye rim shading"
+        },
+        {
+          "x": 24,
+          "y": 17,
+          "old": 5,
+          "new": 4,
+          "reason": "eye rim shading"
+        },
+        {
+          "x": 26,
+          "y": 19,
+          "old": 4,
+          "new": 3,
+          "reason": "dark muzzle shading"
+        },
+        {
+          "x": 34,
+          "y": 24,
+          "old": 10,
+          "new": 8,
+          "reason": "continuous forewing/body dividing edge"
+        },
+        {
+          "x": 34,
+          "y": 25,
+          "old": 10,
+          "new": 8,
+          "reason": "continuous forewing/body dividing edge"
+        },
+        {
+          "x": 35,
+          "y": 26,
+          "old": 5,
+          "new": 8,
+          "reason": "continuous forewing/body dividing edge"
+        },
+        {
+          "x": 35,
+          "y": 28,
+          "old": 11,
+          "new": 8,
+          "reason": "continuous forewing/body dividing edge"
+        },
+        {
+          "x": 37,
+          "y": 29,
+          "old": 10,
+          "new": 9,
+          "reason": "continuous forewing/body dividing edge"
+        },
+        {
+          "x": 38,
+          "y": 30,
+          "old": 10,
+          "new": 9,
+          "reason": "continuous forewing/body dividing edge"
+        },
+        {
+          "x": 20,
+          "y": 16,
+          "old": 5,
+          "new": 4,
+          "reason": "consolidate face/neck midtone"
+        },
+        {
+          "x": 20,
+          "y": 18,
+          "old": 5,
+          "new": 4,
+          "reason": "consolidate face/neck midtone"
+        },
+        {
+          "x": 24,
+          "y": 18,
+          "old": 5,
+          "new": 4,
+          "reason": "consolidate face/neck midtone"
+        },
+        {
+          "x": 27,
+          "y": 18,
+          "old": 5,
+          "new": 4,
+          "reason": "consolidate face/neck midtone"
+        },
+        {
+          "x": 31,
+          "y": 18,
+          "old": 5,
+          "new": 4,
+          "reason": "consolidate face/neck midtone"
+        },
+        {
+          "x": 22,
+          "y": 19,
+          "old": 5,
+          "new": 4,
+          "reason": "consolidate face/neck midtone"
+        },
+        {
+          "x": 28,
+          "y": 19,
+          "old": 5,
+          "new": 4,
+          "reason": "consolidate face/neck midtone"
+        },
+        {
+          "x": 29,
+          "y": 19,
+          "old": 5,
+          "new": 4,
+          "reason": "consolidate face/neck midtone"
+        }
+      ],
+      "skippedChanges": [],
+      "sourceTileSHA256": "0d906469534f897c50813673ba3473c54173dc975cdaceb93a371e80f6df6d3d",
+      "newTileSHA256": "72c4a618daa039603c547535cba3de0aa1d2a0492884942ed9064ed9b02a6fb8",
+      "unchangedPaletteSHA256": "4a6eb782f3db86decea8d0892a3e342fa8451a2932744b89a5d328a838e0efaf",
+      "nativePixels": [
+        64,
+        64
+      ],
+      "exactAlphaAndOutlinePreserved": true,
+      "paletteEntryCount": 16,
+      "opaquePaletteColorsUsed": 11,
+      "tileBytes": 2048,
+      "paletteBytes": 32,
+      "approved": false,
+      "romIntegrated": false,
+      "sourceArtworkModified": false
+    },
+    {
+      "view": "vibrava_back",
+      "changedPixels": 41,
+      "changeLog": [
+        {
+          "x": 46,
+          "y": 14,
+          "old": 2,
+          "new": 3,
+          "reason": "clarify antenna stalk/curl"
+        },
+        {
+          "x": 45,
+          "y": 14,
+          "old": 2,
+          "new": 3,
+          "reason": "clarify antenna stalk/curl"
+        },
+        {
+          "x": 54,
+          "y": 13,
+          "old": 6,
+          "new": 5,
+          "reason": "clarify antenna stalk/curl"
+        },
+        {
+          "x": 54,
+          "y": 14,
+          "old": 6,
+          "new": 5,
+          "reason": "clarify antenna stalk/curl"
+        },
+        {
+          "x": 35,
+          "y": 42,
+          "old": 11,
+          "new": 10,
+          "reason": "continuous membrane vein"
+        },
+        {
+          "x": 34,
+          "y": 42,
+          "old": 11,
+          "new": 10,
+          "reason": "continuous membrane vein"
+        },
+        {
+          "x": 33,
+          "y": 43,
+          "old": 11,
+          "new": 10,
+          "reason": "continuous membrane vein"
+        },
+        {
+          "x": 32,
+          "y": 43,
+          "old": 11,
+          "new": 10,
+          "reason": "continuous membrane vein"
+        },
+        {
+          "x": 31,
+          "y": 43,
+          "old": 11,
+          "new": 10,
+          "reason": "continuous membrane vein"
+        },
+        {
+          "x": 30,
+          "y": 44,
+          "old": 11,
+          "new": 10,
+          "reason": "continuous membrane vein"
+        },
+        {
+          "x": 29,
+          "y": 44,
+          "old": 11,
+          "new": 10,
+          "reason": "continuous membrane vein"
+        },
+        {
+          "x": 28,
+          "y": 45,
+          "old": 11,
+          "new": 10,
+          "reason": "continuous membrane vein"
+        },
+        {
+          "x": 27,
+          "y": 45,
+          "old": 11,
+          "new": 10,
+          "reason": "continuous membrane vein"
+        },
+        {
+          "x": 26,
+          "y": 45,
+          "old": 11,
+          "new": 10,
+          "reason": "continuous membrane vein"
+        },
+        {
+          "x": 25,
+          "y": 46,
+          "old": 11,
+          "new": 10,
+          "reason": "continuous membrane vein"
+        },
+        {
+          "x": 24,
+          "y": 46,
+          "old": 11,
+          "new": 10,
+          "reason": "continuous membrane vein"
+        },
+        {
+          "x": 23,
+          "y": 46,
+          "old": 11,
+          "new": 10,
+          "reason": "continuous membrane vein"
+        },
+        {
+          "x": 22,
+          "y": 47,
+          "old": 11,
+          "new": 10,
+          "reason": "continuous membrane vein"
+        },
+        {
+          "x": 21,
+          "y": 47,
+          "old": 11,
+          "new": 10,
+          "reason": "continuous membrane vein"
+        },
+        {
+          "x": 20,
+          "y": 47,
+          "old": 11,
+          "new": 10,
+          "reason": "continuous membrane vein"
+        },
+        {
+          "x": 19,
+          "y": 48,
+          "old": 11,
+          "new": 10,
+          "reason": "continuous membrane vein"
+        },
+        {
+          "x": 18,
+          "y": 48,
+          "old": 11,
+          "new": 10,
+          "reason": "continuous membrane vein"
+        },
+        {
+          "x": 17,
+          "y": 49,
+          "old": 11,
+          "new": 10,
+          "reason": "continuous membrane vein"
+        },
+        {
+          "x": 16,
+          "y": 49,
+          "old": 11,
+          "new": 10,
+          "reason": "continuous membrane vein"
+        },
+        {
+          "x": 15,
+          "y": 49,
+          "old": 11,
+          "new": 10,
+          "reason": "continuous membrane vein"
+        },
+        {
+          "x": 14,
+          "y": 50,
+          "old": 11,
+          "new": 10,
+          "reason": "continuous membrane vein"
+        },
+        {
+          "x": 13,
+          "y": 50,
+          "old": 11,
+          "new": 10,
+          "reason": "continuous membrane vein"
+        },
+        {
+          "x": 33,
+          "y": 47,
+          "old": 11,
+          "new": 10,
+          "reason": "continuous membrane vein"
+        },
+        {
+          "x": 32,
+          "y": 48,
+          "old": 11,
+          "new": 10,
+          "reason": "continuous membrane vein"
+        },
+        {
+          "x": 31,
+          "y": 48,
+          "old": 11,
+          "new": 10,
+          "reason": "continuous membrane vein"
+        },
+        {
+          "x": 30,
+          "y": 49,
+          "old": 11,
+          "new": 10,
+          "reason": "continuous membrane vein"
+        },
+        {
+          "x": 29,
+          "y": 49,
+          "old": 11,
+          "new": 10,
+          "reason": "continuous membrane vein"
+        },
+        {
+          "x": 28,
+          "y": 50,
+          "old": 11,
+          "new": 10,
+          "reason": "continuous membrane vein"
+        },
+        {
+          "x": 27,
+          "y": 50,
+          "old": 11,
+          "new": 10,
+          "reason": "continuous membrane vein"
+        },
+        {
+          "x": 26,
+          "y": 51,
+          "old": 11,
+          "new": 10,
+          "reason": "continuous membrane vein"
+        },
+        {
+          "x": 25,
+          "y": 51,
+          "old": 11,
+          "new": 10,
+          "reason": "continuous membrane vein"
+        },
+        {
+          "x": 24,
+          "y": 52,
+          "old": 11,
+          "new": 10,
+          "reason": "continuous membrane vein"
+        },
+        {
+          "x": 23,
+          "y": 52,
+          "old": 11,
+          "new": 10,
+          "reason": "continuous membrane vein"
+        },
+        {
+          "x": 34,
+          "y": 42,
+          "old": 10,
+          "new": 9,
+          "reason": "ground wing vein at body"
+        },
+        {
+          "x": 35,
+          "y": 43,
+          "old": 11,
+          "new": 9,
+          "reason": "ground wing vein at body"
+        },
+        {
+          "x": 33,
+          "y": 44,
+          "old": 11,
+          "new": 9,
+          "reason": "ground wing vein at body"
+        },
+        {
+          "x": 34,
+          "y": 46,
+          "old": 11,
+          "new": 9,
+          "reason": "ground wing vein at body"
+        }
+      ],
+      "skippedChanges": [
+        {
+          "x": 34,
+          "y": 47,
+          "previous": 8,
+          "requested": 10,
+          "reason": "wing vein segment",
+          "guard": "outside wing membrane"
+        },
+        {
+          "x": 44,
+          "y": 41,
+          "previous": 2,
+          "requested": 3,
+          "reason": "body-wing root shadow",
+          "guard": "material class protected"
+        }
+      ],
+      "sourceTileSHA256": "5b58eb559e085e08e2da013c804b265a9ecdb8179b84b76e1bc097d8972b301b",
+      "newTileSHA256": "f2e04270b13e6e97eae4e4488dce2e1cab7ec2576ff238ea8d0f2d6d93da01b9",
+      "unchangedPaletteSHA256": "02fa57e49ff490c8035368812c872b53b05c0bc1b439438bad307858369c83ce",
+      "nativePixels": [
+        64,
+        64
+      ],
+      "exactAlphaAndOutlinePreserved": true,
+      "paletteEntryCount": 16,
+      "opaquePaletteColorsUsed": 11,
+      "tileBytes": 2048,
+      "paletteBytes": 32,
+      "approved": false,
+      "romIntegrated": false,
+      "sourceArtworkModified": false
+    }
+  ]
+}
