@@ -52,18 +52,70 @@
       "originalSourceUntouched": true,
       "baselineSource": "original Orpheus 2x half",
       "baselineOpaquePixels": 1433,
-      "changedRGBApixelsVsBaseline": 6400,
-      "eyeAccents": 98,
+      "changedRGBApixelsVsBaseline": 1433,
+      "eyeAccents": 14,
       "preservedFlygonFaceEdits": [],
-      "scuteMotifAnchors": [],
-      "scutePixelEdits": [],
-      "scuteChangedPixels": 0,
+      "scuteMotifAnchors": [
+        [
+          28,
+          47
+        ],
+        [
+          33,
+          47
+        ]
+      ],
+      "scutePixelEdits": [
+        {
+          "x": 28,
+          "y": 47,
+          "fromIndex": 6,
+          "toIndex": 5,
+          "feature": "scale/scute"
+        },
+        {
+          "x": 29,
+          "y": 47,
+          "fromIndex": 6,
+          "toIndex": 5,
+          "feature": "scale/scute"
+        },
+        {
+          "x": 28,
+          "y": 48,
+          "fromIndex": 6,
+          "toIndex": 7,
+          "feature": "scale/scute"
+        },
+        {
+          "x": 33,
+          "y": 47,
+          "fromIndex": 6,
+          "toIndex": 5,
+          "feature": "scale/scute"
+        },
+        {
+          "x": 34,
+          "y": 47,
+          "fromIndex": 6,
+          "toIndex": 5,
+          "feature": "scale/scute"
+        },
+        {
+          "x": 33,
+          "y": 48,
+          "fromIndex": 3,
+          "toIndex": 4,
+          "feature": "scale/scute"
+        }
+      ],
+      "scuteChangedPixels": 6,
       "tileBytes": 3200,
       "paletteBytes": 32,
       "tileExactDecode": true,
       "paletteBGR555": true,
-      "pngSHA256": "6018599ccffc574d629bc179250a9a839916b41147daae67d717d4b87ee60b12",
-      "tileSHA256": "ec2009cd4f4e1ade59e83b378874d9468b00ead01ceb2a8ebc65c01ff79e905c",
+      "pngSHA256": "4a6e9b274940d375183723ab93896b0085177687ae899542efaa3e3cc04f6419",
+      "tileSHA256": "a6599e7837746683f8753c651cc19df3d5a1a5e8ec1f2b183df895f1468944f9",
       "paletteSHA256": "27cecb2edb7e2ff4911b1a5ae9d0a4feb047b986569c5c264251092d99ee428a",
       "png": "vibrava_front_desert_scarab_80.png",
       "tiles": "vibrava_front_desert_scarab_80_4bpp_tiles.bin",
@@ -107,15 +159,40 @@
       "baselineSource": "original-color source80",
       "baselineOpaquePixels": 1930,
       "changedRGBApixelsVsBaseline": 1930,
-      "eyeAccents": 404,
+      "eyeAccents": 31,
       "preservedFlygonFaceEdits": [],
       "scuteMotifAnchors": [
+        [
+          58,
+          55
+        ],
         [
           49,
           60
         ]
       ],
       "scutePixelEdits": [
+        {
+          "x": 58,
+          "y": 55,
+          "fromIndex": 6,
+          "toIndex": 5,
+          "feature": "scale/scute"
+        },
+        {
+          "x": 59,
+          "y": 55,
+          "fromIndex": 6,
+          "toIndex": 5,
+          "feature": "scale/scute"
+        },
+        {
+          "x": 58,
+          "y": 56,
+          "fromIndex": 6,
+          "toIndex": 7,
+          "feature": "scale/scute"
+        },
         {
           "x": 49,
           "y": 60,
@@ -138,13 +215,13 @@
           "feature": "scale/scute"
         }
       ],
-      "scuteChangedPixels": 3,
+      "scuteChangedPixels": 6,
       "tileBytes": 3200,
       "paletteBytes": 32,
       "tileExactDecode": true,
       "paletteBGR555": true,
-      "pngSHA256": "2afc7ea8f8215d40f15e8ab43dce088c92c54fdfa3a65be40013d1bed28d2e21",
-      "tileSHA256": "9ecd0e96604790f3a3a26a20853d34cbfb96c68c247c9c775f4c5569f7a68ee5",
+      "pngSHA256": "55deac9287cf1f8530026b8bd2e488b25099dfd4ba4b04bae4e79acd5d880559",
+      "tileSHA256": "6451721c5e391125a65170a8b92764593703aed3d8c8724a677d7950ebce687b",
       "paletteSHA256": "27cecb2edb7e2ff4911b1a5ae9d0a4feb047b986569c5c264251092d99ee428a",
       "png": "vibrava_back_desert_scarab_80.png",
       "tiles": "vibrava_back_desert_scarab_80_4bpp_tiles.bin",
@@ -188,7 +265,7 @@
       "baselineSource": "previous verified 6px polish",
       "baselineOpaquePixels": 3194,
       "changedRGBApixelsVsBaseline": 3194,
-      "eyeAccents": 57,
+      "eyeAccents": 42,
       "preservedFlygonFaceEdits": [
         {
           "feature": "eye glint",
@@ -292,8 +369,8 @@
       "paletteBytes": 32,
       "tileExactDecode": true,
       "paletteBGR555": true,
-      "pngSHA256": "d2b61f4d03e8073615f3fa093685903b2c1737abe0aec45af55ccadf5508e452",
-      "tileSHA256": "397f80eb24085f1210f67e4cd4d5fad5ef00e1653963f313c67e916363799d2a",
+      "pngSHA256": "b3d3f42e39856bb67cfc40b6ade6492dd7a9c9b10855fcc1ddccd2b357301c64",
+      "tileSHA256": "da1b43d919eca861fbb36b3122d650fb3cc508328fa35b6a518e0e5ab3461d12",
       "paletteSHA256": "1bf3ebadd0a226a2528b9fa2a1c42e1fb944f63067a173fd2ee4e8b629338205",
       "png": "flygon_front_desert_scarab_80.png",
       "tiles": "flygon_front_desert_scarab_80_4bpp_tiles.bin",
@@ -336,8 +413,8 @@
       "originalSourceUntouched": true,
       "baselineSource": "original Orpheus 2x half",
       "baselineOpaquePixels": 3909,
-      "changedRGBApixelsVsBaseline": 6400,
-      "eyeAccents": 82,
+      "changedRGBApixelsVsBaseline": 3909,
+      "eyeAccents": 38,
       "preservedFlygonFaceEdits": [],
       "scuteMotifAnchors": [
         [
@@ -398,8 +475,8 @@
       "paletteBytes": 32,
       "tileExactDecode": true,
       "paletteBGR555": true,
-      "pngSHA256": "f913dbb797cb88717e1556d7e0a2dcc65a0de5261e1ca536737c06c385b71b93",
-      "tileSHA256": "89db97c775841f22c879401bb2cc6e230679fab63edccbbcc0a49d1493948c6b",
+      "pngSHA256": "b845464018277bf183f30dbec059d5d02941042972f65a3b35d3177dc7952ab9",
+      "tileSHA256": "3a4c60ec44e6e30d9b5cfa0a723bfda321c3321c41213c60d11436bd62c8e40d",
       "paletteSHA256": "1bf3ebadd0a226a2528b9fa2a1c42e1fb944f63067a173fd2ee4e8b629338205",
       "png": "flygon_back_desert_scarab_80.png",
       "tiles": "flygon_back_desert_scarab_80_4bpp_tiles.bin",
