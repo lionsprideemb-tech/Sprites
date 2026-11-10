@@ -1,0 +1,160 @@
+{
+  "schema": "mercury-orpheus-real-pixel-microfix-v1",
+  "runId": 42898004221,
+  "sourceSha256": "72539b83b55a427c4adcdf2f3e5397cc28371875a720f687ffcf4e2a6d803ef9",
+  "stage": "unapproved isolated QA",
+  "changedViews": 2,
+  "changedPixels": 13,
+  "originalsModified": false,
+  "otherViewsModified": false,
+  "approved": false,
+  "romIntegrated": false,
+  "rows": [
+    {
+      "alphaMaskIdentical": true,
+      "approved": false,
+      "changedCoords": [
+        {
+          "after": 2,
+          "before": 5,
+          "reason": "antenna-to-head color seam",
+          "support": 3,
+          "x": 45,
+          "y": 15
+        },
+        {
+          "after": 2,
+          "before": 4,
+          "reason": "wing-root body outlier",
+          "support": 4,
+          "x": 34,
+          "y": 36
+        },
+        {
+          "after": 2,
+          "before": 4,
+          "reason": "wing-root diagonal outlier",
+          "support": 4,
+          "x": 35,
+          "y": 37
+        },
+        {
+          "after": 2,
+          "before": 3,
+          "reason": "underside shade speckle",
+          "support": 3,
+          "x": 41,
+          "y": 39
+        },
+        {
+          "after": 2,
+          "before": 3,
+          "reason": "underside shade speckle",
+          "support": 4,
+          "x": 48,
+          "y": 41
+        }
+      ],
+      "changedPixels": 5,
+      "editedTileSHA256": "52b49dbd35a2cd9bcecc45dcd05cd48bdfb91225f11e439d46b986efd8748c19",
+      "height": 64,
+      "id": "vibrava_back",
+      "opaqueColorsUsed": 10,
+      "originalSourceArtUnchanged": true,
+      "originalTileSHA256": "82703bb5a1425cfcd93b5002406c9bc75e6211d199d97862179a4ab37efc92b7",
+      "paletteBytes": 32,
+      "paletteColorsIncludingTransparency": 16,
+      "paletteSHA256Unchanged": true,
+      "pixelIndicesChanged": 5,
+      "pngSHA256": "af78add81ae0ccdff40b5f177661baa27c43f9ba97a32b5790abc26474e722ac",
+      "romIntegrated": false,
+      "tileBytes": 2048,
+      "width": 64
+    },
+    {
+      "alphaMaskIdentical": true,
+      "approved": false,
+      "changedCoords": [
+        {
+          "after": 5,
+          "before": 3,
+          "reason": "head and crest color break",
+          "support": 4,
+          "x": 27,
+          "y": 15
+        },
+        {
+          "after": 3,
+          "before": 2,
+          "reason": "face-to-neck single-pixel outlier",
+          "support": 4,
+          "x": 30,
+          "y": 20
+        },
+        {
+          "after": 10,
+          "before": 5,
+          "reason": "face and forewing crossing",
+          "support": 4,
+          "x": 23,
+          "y": 25
+        },
+        {
+          "after": 10,
+          "before": 5,
+          "reason": "forewing/body junction outlier",
+          "support": 4,
+          "x": 37,
+          "y": 24
+        },
+        {
+          "after": 10,
+          "before": 5,
+          "reason": "inner wing/body crossing",
+          "support": 4,
+          "x": 33,
+          "y": 37
+        },
+        {
+          "after": 11,
+          "before": 5,
+          "reason": "wing membrane noise",
+          "support": 4,
+          "x": 43,
+          "y": 15
+        },
+        {
+          "after": 11,
+          "before": 5,
+          "reason": "inner wing membrane noise",
+          "support": 4,
+          "x": 41,
+          "y": 19
+        },
+        {
+          "after": 11,
+          "before": 5,
+          "reason": "wing membrane noise",
+          "support": 4,
+          "x": 51,
+          "y": 24
+        }
+      ],
+      "changedPixels": 8,
+      "editedTileSHA256": "a1b7f2113077496407f9009f3821c413a6c5a4b94edd8275b143671da96119fc",
+      "height": 64,
+      "id": "flygon_front",
+      "opaqueColorsUsed": 10,
+      "originalSourceArtUnchanged": true,
+      "originalTileSHA256": "8c292597c3c501666359d3c0076040349fffb167e0ac24baa87b0f951919eafa",
+      "paletteBytes": 32,
+      "paletteColorsIncludingTransparency": 16,
+      "paletteSHA256Unchanged": true,
+      "pixelIndicesChanged": 8,
+      "pngSHA256": "f2ebbdc21a3e1425a292d074f947f9e00fa689f9c2d6d85c61a035b161775b56",
+      "romIntegrated": false,
+      "tileBytes": 2048,
+      "width": 64
+    }
+  ]
+}
