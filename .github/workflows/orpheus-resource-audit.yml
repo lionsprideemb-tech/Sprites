@@ -194,6 +194,12 @@ jobs:
           test -s orpheus-original-resources.rar
           test -f report/ds64_readability/flygon_front_contrast64.png
           python3 tools/orpheus_platinum_native80_probe.py
+      - name: Verify and export native80 source-fidelity half-scale candidates (no ROM)
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -s report/orpheus_native_platinum80/native80_qa.json
+          python3 tools/orpheus_native80_export_verified.py
       - name: Upload research-only metadata artifact
         uses: actions/upload-artifact@v4
         if: always()
