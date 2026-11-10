@@ -32,3 +32,10 @@ All 4 Vibrava/Flygon front/back experimental 64×64 silhouettes are **pixel-for-
 
 **Suggested next test:** review 64×64 visual details and isolate any remaining wing/face pixel clarity defects for careful manual art-source-aware cleanup. No artwork approval should be inferred from improved error scores.
 
+
+
+## New design direction — November 10, 2026
+
+The user reports obtaining **artist permission** and states the existing **green/yellow Orpheus color scheme is not preferred**. Record that as permission reported by the user, not a verified blanket license; credit and edit/distribution scope should be documented before release.
+
+**Next isolated experiment:** make several coordinated alternative *Bug/Ground-oriented* palettes for Trapinch/Vibrava/Flygon using the same original distinct designs and transparent 64×64 silhouettes. Palette direction examples to compare: sandstone + dark cocoa, clay/rust + muted moss, and umber + teal-blue accents. These are **suggestions only**; the user has not selected a palette. Preserve the original art and all source/QA files. No sprite approval, shiny certification, or ROM integration implied.
