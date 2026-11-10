@@ -108,10 +108,10 @@ def mask_eye(x,y,name,role,color,cls):
     # Eye is kept insect-green rather than being rendered as brown body armor.
     # The masks are narrow: preserve source black linework and white glints.
     boxes={
-        "flygon_front":(31,17,42,26),
-        "flygon_back":(58,17,80,44),
-        "vibrava_front":(18,17,42,46),
-        "vibrava_back":(54,22,80,63),
+        "flygon_front":(34,18,42,26),
+        "flygon_back":(67,37,80,45),
+        "vibrava_front":(32,39,41,47),
+        "vibrava_back":(69,47,80,63),
     }
     x0,y0,x1,y1=boxes[name+"_"+role]
     if not (x0<=x<x1 and y0<=y<y1):return None
@@ -144,8 +144,16 @@ def decorate_scutes(idx,stage,role):
             if not (idx[y*80+x] in (4,5,6) and idx[y*80+x+1] in (4,5,6)):continue
             candidates.append((x,y))
     # Order by distance from borders, and spatial spacing; do not fill every flat pixel.
-    chosen=[]
-    for x,y in candidates:
+    # Vibrava FRONT has a very thin thorax: use two source-checked 2px plate
+    # marks at actual solid body interior rather than inventing an outline.
+    if stage=="vibrava" and role=="front":
+        chosen=[(28,47),(33,47)]
+        for xx,yy in chosen:
+            assert all(idx[(yy+dy)*80+xx+dx] in mask
+                       for dx,dy in ((0,0),(1,0),(0,1)))
+    else:
+        chosen=[]
+    for x,y in ([] if stage=="vibrava" and role=="front" else candidates):
         if any(abs(x-xx)<9 and abs(y-yy)<8 for xx,yy in chosen):continue
         chosen.append((x,y))
         if len(chosen)>=max_motifs:break
@@ -226,7 +234,7 @@ for stage,number in (("vibrava",329),("flygon",330)):
     pal=O/f"{key}_desert_scarab_80_palette.bin"
     rgba.save(png,optimize=True);tiles.write_bytes(tiledata);pal.write_bytes(paldata)
     assert len(tiledata)==3200 and len(paldata)==32 and len(set(idx)-{0})<=15
-    changedvsbaseline=sum(1 for a,b in zip(baseline.getdata(),rgba.getdata()) if a!=b)
+    changedvsbaseline=sum(1 for a,b in zip(baseline.getdata(),rgba.getdata()) if a[3] and a[:3]!=b[:3])
     nopaque=sum(p[3]>0 for p in pixels)
     record={
         "view":key,"sourceSHA256":SRC_SHAS[key],
