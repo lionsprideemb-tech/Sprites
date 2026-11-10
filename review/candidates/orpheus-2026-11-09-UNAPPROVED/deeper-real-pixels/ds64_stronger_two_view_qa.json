@@ -1,0 +1,366 @@
+{
+  "schema": "mercury-orpheus-real-ds64-stronger-review-v1",
+  "baseline": "previous verified microfix tiles committed on isolated branch",
+  "candidateType": "stronger experimental palette-index detail cleanup",
+  "noSourceEdits": true,
+  "noHistoricalVoteChanges": true,
+  "noProductionIntegration": true,
+  "otherFourViewsUntouched": true,
+  "allUnapproved": true,
+  "records": [
+    {
+      "view": "vibrava_back",
+      "changedPixels": 24,
+      "coords": [
+        {
+          "x": 45,
+          "y": 13,
+          "before": 2,
+          "after": 6
+        },
+        {
+          "x": 47,
+          "y": 14,
+          "before": 2,
+          "after": 3
+        },
+        {
+          "x": 48,
+          "y": 18,
+          "before": 8,
+          "after": 11
+        },
+        {
+          "x": 45,
+          "y": 27,
+          "before": 2,
+          "after": 6
+        },
+        {
+          "x": 51,
+          "y": 27,
+          "before": 6,
+          "after": 5
+        },
+        {
+          "x": 41,
+          "y": 33,
+          "before": 6,
+          "after": 5
+        },
+        {
+          "x": 56,
+          "y": 34,
+          "before": 3,
+          "after": 7
+        },
+        {
+          "x": 57,
+          "y": 34,
+          "before": 3,
+          "after": 11
+        },
+        {
+          "x": 58,
+          "y": 34,
+          "before": 3,
+          "after": 9
+        },
+        {
+          "x": 32,
+          "y": 35,
+          "before": 4,
+          "after": 2
+        },
+        {
+          "x": 33,
+          "y": 35,
+          "before": 4,
+          "after": 2
+        },
+        {
+          "x": 56,
+          "y": 35,
+          "before": 3,
+          "after": 7
+        },
+        {
+          "x": 57,
+          "y": 35,
+          "before": 3,
+          "after": 7
+        },
+        {
+          "x": 58,
+          "y": 35,
+          "before": 3,
+          "after": 8
+        },
+        {
+          "x": 43,
+          "y": 38,
+          "before": 2,
+          "after": 5
+        },
+        {
+          "x": 44,
+          "y": 38,
+          "before": 2,
+          "after": 5
+        },
+        {
+          "x": 45,
+          "y": 38,
+          "before": 2,
+          "after": 5
+        },
+        {
+          "x": 59,
+          "y": 40,
+          "before": 5,
+          "after": 2
+        },
+        {
+          "x": 49,
+          "y": 41,
+          "before": 2,
+          "after": 5
+        },
+        {
+          "x": 40,
+          "y": 42,
+          "before": 9,
+          "after": 8
+        },
+        {
+          "x": 49,
+          "y": 42,
+          "before": 5,
+          "after": 2
+        },
+        {
+          "x": 43,
+          "y": 43,
+          "before": 9,
+          "after": 8
+        },
+        {
+          "x": 50,
+          "y": 43,
+          "before": 2,
+          "after": 5
+        },
+        {
+          "x": 39,
+          "y": 46,
+          "before": 9,
+          "after": 8
+        }
+      ],
+      "originalTileSHA256": "52b49dbd35a2cd9bcecc45dcd05cd48bdfb91225f11e439d46b986efd8748c19",
+      "candidateTileSHA256": "0e7ed7ea6c96e6884a3195fe4fc0186f69b9e0546e7be0cb75c8e9f949c2c261",
+      "paletteSHA256": "02fa57e49ff490c8035368812c872b53b05c0bc1b439438bad307858369c83ce",
+      "alphaIdentical": true,
+      "outlineIndex1Identical": true,
+      "tileBytes": 2048,
+      "paletteBytes": 32,
+      "approved": false,
+      "romIntegrated": false
+    },
+    {
+      "view": "flygon_front",
+      "changedPixels": 30,
+      "coords": [
+        {
+          "x": 22,
+          "y": 14,
+          "before": 12,
+          "after": 15
+        },
+        {
+          "x": 28,
+          "y": 14,
+          "before": 3,
+          "after": 5
+        },
+        {
+          "x": 44,
+          "y": 14,
+          "before": 11,
+          "after": 8
+        },
+        {
+          "x": 50,
+          "y": 14,
+          "before": 11,
+          "after": 8
+        },
+        {
+          "x": 21,
+          "y": 16,
+          "before": 12,
+          "after": 3
+        },
+        {
+          "x": 28,
+          "y": 16,
+          "before": 4,
+          "after": 5
+        },
+        {
+          "x": 29,
+          "y": 16,
+          "before": 5,
+          "after": 3
+        },
+        {
+          "x": 46,
+          "y": 16,
+          "before": 11,
+          "after": 8
+        },
+        {
+          "x": 25,
+          "y": 17,
+          "before": 4,
+          "after": 3
+        },
+        {
+          "x": 47,
+          "y": 17,
+          "before": 11,
+          "after": 8
+        },
+        {
+          "x": 50,
+          "y": 17,
+          "before": 11,
+          "after": 8
+        },
+        {
+          "x": 30,
+          "y": 18,
+          "before": 4,
+          "after": 3
+        },
+        {
+          "x": 29,
+          "y": 21,
+          "before": 4,
+          "after": 3
+        },
+        {
+          "x": 41,
+          "y": 25,
+          "before": 11,
+          "after": 10
+        },
+        {
+          "x": 43,
+          "y": 25,
+          "before": 10,
+          "after": 11
+        },
+        {
+          "x": 19,
+          "y": 26,
+          "before": 11,
+          "after": 8
+        },
+        {
+          "x": 44,
+          "y": 26,
+          "before": 10,
+          "after": 11
+        },
+        {
+          "x": 23,
+          "y": 27,
+          "before": 10,
+          "after": 8
+        },
+        {
+          "x": 42,
+          "y": 27,
+          "before": 11,
+          "after": 10
+        },
+        {
+          "x": 21,
+          "y": 28,
+          "before": 10,
+          "after": 8
+        },
+        {
+          "x": 28,
+          "y": 28,
+          "before": 4,
+          "after": 2
+        },
+        {
+          "x": 30,
+          "y": 28,
+          "before": 11,
+          "after": 8
+        },
+        {
+          "x": 44,
+          "y": 28,
+          "before": 11,
+          "after": 10
+        },
+        {
+          "x": 20,
+          "y": 29,
+          "before": 10,
+          "after": 8
+        },
+        {
+          "x": 21,
+          "y": 30,
+          "before": 2,
+          "after": 4
+        },
+        {
+          "x": 29,
+          "y": 31,
+          "before": 11,
+          "after": 8
+        },
+        {
+          "x": 32,
+          "y": 31,
+          "before": 10,
+          "after": 8
+        },
+        {
+          "x": 15,
+          "y": 32,
+          "before": 2,
+          "after": 4
+        },
+        {
+          "x": 28,
+          "y": 32,
+          "before": 11,
+          "after": 8
+        },
+        {
+          "x": 21,
+          "y": 37,
+          "before": 3,
+          "after": 4
+        }
+      ],
+      "originalTileSHA256": "a1b7f2113077496407f9009f3821c413a6c5a4b94edd8275b143671da96119fc",
+      "candidateTileSHA256": "6b0b955d002f13d0ddaaca20c3c84ddeefd97a2ea7fe5ce1c77ad86e3c1639dc",
+      "paletteSHA256": "4a6eb782f3db86decea8d0892a3e342fa8451a2932744b89a5d328a838e0efaf",
+      "alphaIdentical": true,
+      "outlineIndex1Identical": true,
+      "tileBytes": 2048,
+      "paletteBytes": 32,
+      "approved": false,
+      "romIntegrated": false
+    }
+  ]
+}
