@@ -1,0 +1,688 @@
+{
+  "schema": "mercury-orpheus-ds64-readability-v1",
+  "run_id": 42888921831,
+  "source_archive_sha": "72539b83b55a427c4adcdf2f3e5397cc28371875a720f687ffcf4e2a6d803ef9",
+  "unapproved": true,
+  "rom_integrated": false,
+  "all_six_passed": true,
+  "views": [
+    {
+      "ROMIntegrated": false,
+      "afterSHA256": "61ab693f7b23f836d11c001fa6afa408e4723888fa8c071a977fb93d99999999",
+      "approved": false,
+      "baselineEdges": {
+        "accent_body": {
+          "edgeCount": 0,
+          "meanLumaSeparation": null
+        },
+        "eye_proxy": {
+          "edgeCount": 0,
+          "meanLumaSeparation": null
+        },
+        "outline_body": {
+          "edgeCount": 66,
+          "meanLumaSeparation": 78.305
+        },
+        "wing_body": {
+          "edgeCount": 66,
+          "meanLumaSeparation": 84.611
+        },
+        "wing_internal": {
+          "edgeCount": 188,
+          "meanLumaSeparation": 45.048
+        }
+      },
+      "beforeSHA256": "1a9c9c2690485b33f730de2117965378cdea134893d5173b92a6f50c7aab403d",
+      "lumaSeparationDelta": {
+        "accent_body": null,
+        "eye_proxy": null,
+        "outline_body": 12.061,
+        "wing_body": 9.785,
+        "wing_internal": 6.005
+      },
+      "name": "trapinch",
+      "opaquePixelCount": 2074,
+      "opaquePixelsWithDifferentColor": 1885,
+      "paletteBytes": 32,
+      "paletteDirection": "Terracotta & sand",
+      "paletteEntryChanges": 13,
+      "paletteSlotsMax": 15,
+      "paletteSlotsUsed": 10,
+      "pixelIndicesChanged": 0,
+      "refinedBGR555PaletteWords": [
+        0,
+        3171,
+        5322,
+        6448,
+        9687,
+        12891,
+        18205,
+        6444,
+        10772,
+        16090,
+        20285,
+        24478,
+        10565,
+        16940,
+        23318,
+        28606
+      ],
+      "refinedEdges": {
+        "accent_body": {
+          "edgeCount": 0,
+          "meanLumaSeparation": null
+        },
+        "eye_proxy": {
+          "edgeCount": 0,
+          "meanLumaSeparation": null
+        },
+        "outline_body": {
+          "edgeCount": 66,
+          "meanLumaSeparation": 90.366
+        },
+        "wing_body": {
+          "edgeCount": 66,
+          "meanLumaSeparation": 94.396
+        },
+        "wing_internal": {
+          "edgeCount": 188,
+          "meanLumaSeparation": 51.053
+        }
+      },
+      "sourceBGR555PaletteWords": [
+        0,
+        4228,
+        5322,
+        7505,
+        8630,
+        12890,
+        17149,
+        7501,
+        10772,
+        15033,
+        18204,
+        23422,
+        11623,
+        14827,
+        21204,
+        27550
+      ],
+      "sourceCanvas": [
+        160,
+        160
+      ],
+      "sourceGeometryIdentical": true,
+      "sourceSHA256": "c63a5f3cdfc98ce4acbc618a17f4c3b52c1f8acb95b5804669fcbbdd2cc0bc3b",
+      "tileBytes": 2048,
+      "tileSHA256": "41ddde1ffb8370d9471996f8a479b0d81bc2617ccfd8ad62bdd3d7c0a49970d9",
+      "transparentMaskIdentical": true,
+      "verifiedOutputTileSHA256": "41ddde1ffb8370d9471996f8a479b0d81bc2617ccfd8ad62bdd3d7c0a49970d9",
+      "view": "front"
+    },
+    {
+      "ROMIntegrated": false,
+      "afterSHA256": "31717b5c586f63b6e7ea748e6d2622895ca48df14f99682ac6602d43c3059c81",
+      "approved": false,
+      "baselineEdges": {
+        "accent_body": {
+          "edgeCount": 0,
+          "meanLumaSeparation": null
+        },
+        "eye_proxy": {
+          "edgeCount": 0,
+          "meanLumaSeparation": null
+        },
+        "outline_body": {
+          "edgeCount": 328,
+          "meanLumaSeparation": 78.642
+        },
+        "wing_body": {
+          "edgeCount": 72,
+          "meanLumaSeparation": 85.781
+        },
+        "wing_internal": {
+          "edgeCount": 84,
+          "meanLumaSeparation": 24.072
+        }
+      },
+      "beforeSHA256": "7d0379906daee387a71737c1257688424c1e1a065ee195c384ff72845c367bc9",
+      "lumaSeparationDelta": {
+        "accent_body": null,
+        "eye_proxy": null,
+        "outline_body": 11.293,
+        "wing_body": 11.98,
+        "wing_internal": 1.506
+      },
+      "name": "trapinch",
+      "opaquePixelCount": 2303,
+      "opaquePixelsWithDifferentColor": 2274,
+      "paletteBytes": 32,
+      "paletteDirection": "Terracotta & sand",
+      "paletteEntryChanges": 13,
+      "paletteSlotsMax": 15,
+      "paletteSlotsUsed": 9,
+      "pixelIndicesChanged": 0,
+      "refinedBGR555PaletteWords": [
+        0,
+        3171,
+        5322,
+        6448,
+        9687,
+        12891,
+        18205,
+        6444,
+        10772,
+        16090,
+        20285,
+        24478,
+        10565,
+        16940,
+        23318,
+        28606
+      ],
+      "refinedEdges": {
+        "accent_body": {
+          "edgeCount": 0,
+          "meanLumaSeparation": null
+        },
+        "eye_proxy": {
+          "edgeCount": 0,
+          "meanLumaSeparation": null
+        },
+        "outline_body": {
+          "edgeCount": 328,
+          "meanLumaSeparation": 89.935
+        },
+        "wing_body": {
+          "edgeCount": 72,
+          "meanLumaSeparation": 97.761
+        },
+        "wing_internal": {
+          "edgeCount": 84,
+          "meanLumaSeparation": 25.578
+        }
+      },
+      "sourceBGR555PaletteWords": [
+        0,
+        4228,
+        5322,
+        7505,
+        8630,
+        12890,
+        17149,
+        7501,
+        10772,
+        15033,
+        18204,
+        23422,
+        11623,
+        14827,
+        21204,
+        27550
+      ],
+      "sourceCanvas": [
+        160,
+        160
+      ],
+      "sourceGeometryIdentical": true,
+      "sourceSHA256": "c9aacd69ce5a0d5dfa0d56ac01be5336e7aa392026eda6c69e3e98029cf0f749",
+      "tileBytes": 2048,
+      "tileSHA256": "3680e7f3e378b3b2f316bb4d93e8b5b31bb4d7606c2e9a5b492284636e7e4256",
+      "transparentMaskIdentical": true,
+      "verifiedOutputTileSHA256": "3680e7f3e378b3b2f316bb4d93e8b5b31bb4d7606c2e9a5b492284636e7e4256",
+      "view": "back"
+    },
+    {
+      "ROMIntegrated": false,
+      "afterSHA256": "e9fc926fb7a20dbf57646677b361d64e25bcdee5143b3a60279f33f16a491e42",
+      "approved": false,
+      "baselineEdges": {
+        "accent_body": {
+          "edgeCount": 0,
+          "meanLumaSeparation": null
+        },
+        "eye_proxy": {
+          "edgeCount": 0,
+          "meanLumaSeparation": null
+        },
+        "outline_body": {
+          "edgeCount": 126,
+          "meanLumaSeparation": 80.379
+        },
+        "wing_body": {
+          "edgeCount": 69,
+          "meanLumaSeparation": 58.889
+        },
+        "wing_internal": {
+          "edgeCount": 312,
+          "meanLumaSeparation": 78.361
+        }
+      },
+      "beforeSHA256": "e39f194ea09caf8eee06cd0a84d2109a1a59bcf9506a209363990bbe17d30f19",
+      "lumaSeparationDelta": {
+        "accent_body": null,
+        "eye_proxy": null,
+        "outline_body": 8.088,
+        "wing_body": 3.198,
+        "wing_internal": 7.721
+      },
+      "name": "vibrava",
+      "opaquePixelCount": 1113,
+      "opaquePixelsWithDifferentColor": 1113,
+      "paletteBytes": 32,
+      "paletteDirection": "Sage & turquoise",
+      "paletteEntryChanges": 15,
+      "paletteSlotsMax": 15,
+      "paletteSlotsUsed": 10,
+      "pixelIndicesChanged": 0,
+      "refinedBGR555PaletteWords": [
+        0,
+        5251,
+        6405,
+        9642,
+        12878,
+        19156,
+        23417,
+        10533,
+        16839,
+        23180,
+        28532,
+        30683,
+        8559,
+        12853,
+        18203,
+        25502
+      ],
+      "refinedEdges": {
+        "accent_body": {
+          "edgeCount": 0,
+          "meanLumaSeparation": null
+        },
+        "eye_proxy": {
+          "edgeCount": 0,
+          "meanLumaSeparation": null
+        },
+        "outline_body": {
+          "edgeCount": 126,
+          "meanLumaSeparation": 88.467
+        },
+        "wing_body": {
+          "edgeCount": 69,
+          "meanLumaSeparation": 62.087
+        },
+        "wing_internal": {
+          "edgeCount": 312,
+          "meanLumaSeparation": 86.082
+        }
+      },
+      "sourceBGR555PaletteWords": [
+        0,
+        5283,
+        7462,
+        10666,
+        12846,
+        17074,
+        21303,
+        11590,
+        16841,
+        22158,
+        26386,
+        29625,
+        9648,
+        12852,
+        18170,
+        23421
+      ],
+      "sourceCanvas": [
+        160,
+        160
+      ],
+      "sourceGeometryIdentical": true,
+      "sourceSHA256": "5a2d79d6707f35237d8bb7ec32990b9a0c9b799d5ddbf19fe972a8d6c10f7060",
+      "tileBytes": 2048,
+      "tileSHA256": "e7a9df3cf211d29a683a404ed9f890d0499f7bcd136c07b04d75331951038e00",
+      "transparentMaskIdentical": true,
+      "verifiedOutputTileSHA256": "e7a9df3cf211d29a683a404ed9f890d0499f7bcd136c07b04d75331951038e00",
+      "view": "front"
+    },
+    {
+      "ROMIntegrated": false,
+      "afterSHA256": "7dc9b5bcd41c6352933ccbb443a8cd8145335db53ba5c5246f2c7d977547b2ae",
+      "approved": false,
+      "baselineEdges": {
+        "accent_body": {
+          "edgeCount": 0,
+          "meanLumaSeparation": null
+        },
+        "eye_proxy": {
+          "edgeCount": 0,
+          "meanLumaSeparation": null
+        },
+        "outline_body": {
+          "edgeCount": 99,
+          "meanLumaSeparation": 77.097
+        },
+        "wing_body": {
+          "edgeCount": 106,
+          "meanLumaSeparation": 61.821
+        },
+        "wing_internal": {
+          "edgeCount": 99,
+          "meanLumaSeparation": 117.892
+        }
+      },
+      "beforeSHA256": "76c320b2d34b0322615acdaaba4f1f3f4de2349da6e261f363b1cfd836437a73",
+      "lumaSeparationDelta": {
+        "accent_body": null,
+        "eye_proxy": null,
+        "outline_body": 6.825,
+        "wing_body": 6.703,
+        "wing_internal": 12.473
+      },
+      "name": "vibrava",
+      "opaquePixelCount": 1139,
+      "opaquePixelsWithDifferentColor": 1139,
+      "paletteBytes": 32,
+      "paletteDirection": "Sage & turquoise",
+      "paletteEntryChanges": 15,
+      "paletteSlotsMax": 15,
+      "paletteSlotsUsed": 10,
+      "pixelIndicesChanged": 0,
+      "refinedBGR555PaletteWords": [
+        0,
+        5251,
+        6405,
+        9642,
+        12878,
+        19156,
+        23417,
+        10533,
+        16839,
+        23180,
+        28532,
+        30683,
+        8559,
+        12853,
+        18203,
+        25502
+      ],
+      "refinedEdges": {
+        "accent_body": {
+          "edgeCount": 0,
+          "meanLumaSeparation": null
+        },
+        "eye_proxy": {
+          "edgeCount": 0,
+          "meanLumaSeparation": null
+        },
+        "outline_body": {
+          "edgeCount": 99,
+          "meanLumaSeparation": 83.922
+        },
+        "wing_body": {
+          "edgeCount": 106,
+          "meanLumaSeparation": 68.524
+        },
+        "wing_internal": {
+          "edgeCount": 99,
+          "meanLumaSeparation": 130.365
+        }
+      },
+      "sourceBGR555PaletteWords": [
+        0,
+        5283,
+        7462,
+        10666,
+        12846,
+        17074,
+        21303,
+        11590,
+        16841,
+        22158,
+        26386,
+        29625,
+        9648,
+        12852,
+        18170,
+        23421
+      ],
+      "sourceCanvas": [
+        160,
+        160
+      ],
+      "sourceGeometryIdentical": true,
+      "sourceSHA256": "1182bab5ff5feb9efc5afac02e9777d7298fcdba690b09082b6b567540f7c215",
+      "tileBytes": 2048,
+      "tileSHA256": "82703bb5a1425cfcd93b5002406c9bc75e6211d199d97862179a4ab37efc92b7",
+      "transparentMaskIdentical": true,
+      "verifiedOutputTileSHA256": "82703bb5a1425cfcd93b5002406c9bc75e6211d199d97862179a4ab37efc92b7",
+      "view": "back"
+    },
+    {
+      "ROMIntegrated": false,
+      "afterSHA256": "1f90603b0b25d284c0eff7c0342783a158c528af124ef32c3e482b91da554048",
+      "approved": false,
+      "baselineEdges": {
+        "accent_body": {
+          "edgeCount": 38,
+          "meanLumaSeparation": 42.264
+        },
+        "eye_proxy": {
+          "edgeCount": 38,
+          "meanLumaSeparation": 42.264
+        },
+        "outline_body": {
+          "edgeCount": 204,
+          "meanLumaSeparation": 57.715
+        },
+        "wing_body": {
+          "edgeCount": 438,
+          "meanLumaSeparation": 78.456
+        },
+        "wing_internal": {
+          "edgeCount": 249,
+          "meanLumaSeparation": 76.923
+        }
+      },
+      "beforeSHA256": "7a8e7dfec800de10a83e4a8b603d46b2c67f010feb960965ed95b780b9298855",
+      "lumaSeparationDelta": {
+        "accent_body": 10.756,
+        "eye_proxy": 10.756,
+        "outline_body": -0.955,
+        "wing_body": 19.696,
+        "wing_internal": 21.517
+      },
+      "name": "flygon",
+      "opaquePixelCount": 1778,
+      "opaquePixelsWithDifferentColor": 1778,
+      "paletteBytes": 32,
+      "paletteDirection": "Umber, bronze & teal",
+      "paletteEntryChanges": 15,
+      "paletteSlotsMax": 15,
+      "paletteSlotsUsed": 10,
+      "pixelIndicesChanged": 0,
+      "refinedBGR555PaletteWords": [
+        0,
+        4195,
+        4263,
+        6412,
+        8561,
+        9749,
+        15067,
+        12612,
+        16838,
+        23180,
+        27476,
+        29627,
+        5421,
+        8659,
+        14010,
+        22397
+      ],
+      "refinedEdges": {
+        "accent_body": {
+          "edgeCount": 38,
+          "meanLumaSeparation": 53.02
+        },
+        "eye_proxy": {
+          "edgeCount": 38,
+          "meanLumaSeparation": 53.02
+        },
+        "outline_body": {
+          "edgeCount": 204,
+          "meanLumaSeparation": 56.76
+        },
+        "wing_body": {
+          "edgeCount": 438,
+          "meanLumaSeparation": 98.152
+        },
+        "wing_internal": {
+          "edgeCount": 249,
+          "meanLumaSeparation": 98.44
+        }
+      },
+      "sourceBGR555PaletteWords": [
+        0,
+        3172,
+        5320,
+        6444,
+        8560,
+        10739,
+        12920,
+        11589,
+        16840,
+        21100,
+        24273,
+        26455,
+        6477,
+        8658,
+        12952,
+        21340
+      ],
+      "sourceCanvas": [
+        160,
+        160
+      ],
+      "sourceGeometryIdentical": true,
+      "sourceSHA256": "0648e090ab0a869bf452cab5e02d2d7da3bd9454b0b400bfcedb022dd72a321c",
+      "tileBytes": 2048,
+      "tileSHA256": "8c292597c3c501666359d3c0076040349fffb167e0ac24baa87b0f951919eafa",
+      "transparentMaskIdentical": true,
+      "verifiedOutputTileSHA256": "8c292597c3c501666359d3c0076040349fffb167e0ac24baa87b0f951919eafa",
+      "view": "front"
+    },
+    {
+      "ROMIntegrated": false,
+      "afterSHA256": "f03a2bddf2725451138c5bee557f7ba89b172985014d22c7367ec35ef9c6e1fa",
+      "approved": false,
+      "baselineEdges": {
+        "accent_body": {
+          "edgeCount": 16,
+          "meanLumaSeparation": 88.639
+        },
+        "eye_proxy": {
+          "edgeCount": 16,
+          "meanLumaSeparation": 88.639
+        },
+        "outline_body": {
+          "edgeCount": 98,
+          "meanLumaSeparation": 60.677
+        },
+        "wing_body": {
+          "edgeCount": 630,
+          "meanLumaSeparation": 62.792
+        },
+        "wing_internal": {
+          "edgeCount": 332,
+          "meanLumaSeparation": 79.344
+        }
+      },
+      "beforeSHA256": "4a667cd4074910d6e91d48ce5b8e1ec5333ad32b6cb0b3a54f219fb0878d7582",
+      "lumaSeparationDelta": {
+        "accent_body": 7.036,
+        "eye_proxy": 7.036,
+        "outline_body": -0.104,
+        "wing_body": 17.153,
+        "wing_internal": 22.081
+      },
+      "name": "flygon",
+      "opaquePixelCount": 2199,
+      "opaquePixelsWithDifferentColor": 2199,
+      "paletteBytes": 32,
+      "paletteDirection": "Umber, bronze & teal",
+      "paletteEntryChanges": 15,
+      "paletteSlotsMax": 15,
+      "paletteSlotsUsed": 12,
+      "pixelIndicesChanged": 0,
+      "refinedBGR555PaletteWords": [
+        0,
+        4195,
+        4263,
+        6412,
+        8561,
+        9749,
+        15067,
+        12612,
+        16838,
+        23180,
+        27476,
+        29627,
+        5421,
+        8659,
+        14010,
+        22397
+      ],
+      "refinedEdges": {
+        "accent_body": {
+          "edgeCount": 16,
+          "meanLumaSeparation": 95.675
+        },
+        "eye_proxy": {
+          "edgeCount": 16,
+          "meanLumaSeparation": 95.675
+        },
+        "outline_body": {
+          "edgeCount": 98,
+          "meanLumaSeparation": 60.573
+        },
+        "wing_body": {
+          "edgeCount": 630,
+          "meanLumaSeparation": 79.945
+        },
+        "wing_internal": {
+          "edgeCount": 332,
+          "meanLumaSeparation": 101.425
+        }
+      },
+      "sourceBGR555PaletteWords": [
+        0,
+        3172,
+        5320,
+        6444,
+        8560,
+        10739,
+        12920,
+        11589,
+        16840,
+        21100,
+        24273,
+        26455,
+        6477,
+        8658,
+        12952,
+        21340
+      ],
+      "sourceCanvas": [
+        160,
+        160
+      ],
+      "sourceGeometryIdentical": true,
+      "sourceSHA256": "f9586b2b6504f0a4b2d79bd9597c6c59ea7df1be4e96ca1c2fb284dcaa42aa51",
+      "tileBytes": 2048,
+      "tileSHA256": "051c68ee887bd1eb64b2ef8135ac76193da6b52f5c5177604992650c78a0ba09",
+      "transparentMaskIdentical": true,
+      "verifiedOutputTileSHA256": "051c68ee887bd1eb64b2ef8135ac76193da6b52f5c5177604992650c78a0ba09",
+      "view": "back"
+    }
+  ]
+}
