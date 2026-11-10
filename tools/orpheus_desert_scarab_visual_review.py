@@ -41,7 +41,7 @@ def font(sz,bold=False):
     for p in (paths if bold else paths[::-1]):
         if Path(p).exists():return ImageFont.truetype(p,sz)
     return ImageFont.load_default()
-W=740;H=1740
+W=740;H=1835
 sheet=Image.new("RGB",(W,H),"#f5f7f9")
 d=ImageDraw.Draw(sheet)
 d.text((22,17),"Mercury Redux / Desert Scarab",font=font(24,True),fill="#253746")
@@ -59,27 +59,23 @@ for i,name in enumerate(ORDER):
     assert unpack.tobytes()==im.tobytes()
     assert len(set(decode(t.read_bytes()))-{0})<=15
     assert len(pal.read_bytes())==32
-    y=111+i*398
-    d.rounded_rectangle((12,y,728,y+385),radius=12,fill="white",outline="#cad4dc",width=2)
+    y=111+i*420
+    d.rounded_rectangle((12,y,728,y+409),radius=12,fill="white",outline="#cad4dc",width=2)
     d.text((25,y+12),name.replace("_"," ").title(),font=font(21,True),fill="#263b46")
     d.text((27,y+47),"Native 80×80",font=font(16),fill="#526678")
     d.text((313,y+47),"4× zoom · unchanged pixels",font=font(16),fill="#526678")
     # Native image is rendered physically at 80px; enlarged is nearest-neighbor x4.
-    d.rounded_rectangle((28,y+82,236,y+340),radius=9,fill="#eaf0f2")
-    sheet.paste(im,(93,y+163),im)
-    d.rounded_rectangle((313,y+82,690,y+351),radius=9,fill="#eaf0f2")
+    d.rounded_rectangle((28,y+83,236,y+352),radius=9,fill="#eaf0f2")
+    sheet.paste(im,(93,y+178),im)
+    d.rounded_rectangle((313,y+73,690,y+399),radius=9,fill="#eaf0f2")
     scaled=im.resize((320,320),Image.Resampling.NEAREST)
-    # preserve alpha on composite
-    # position allowed within the 320px pane: enlarged panel needs 320px height.
-    # panel is expanded to be 330 tall before compositing.
-    d.rounded_rectangle((313,y+70,690,y+361),radius=9,fill="#eaf0f2")
     bg=Image.new("RGBA",(320,320),"#eaf0f2")
     bg.alpha_composite(scaled)
-    sheet.paste(bg.convert("RGB"),(342,y+58))
-    d.text((28,y+355),"DS OBJ 4bpp  ·  15 colors + transparency",font=font(13),fill="#576a76")
+    sheet.paste(bg.convert("RGB"),(342,y+76))
+    d.text((28,y+383),"DS OBJ 4bpp  ·  15 colors + transparency",font=font(13),fill="#576a76")
     summary.append({"view":name,"sha256":r["pngSHA256"],"native":[80,80],
                     "zoomFactor":4,"tileRoundtrip":True,"sourceGeometryPreserved":r["artworkSilhouettePreserved"]})
-d.text((22,1717),"Source: Sprites / Orpheus isolated branch  ·  Pixels & previous approvals unchanged",font=font(12),fill="#5d6b78")
+d.text((22,1811),"Source: Sprites / Orpheus isolated branch  ·  Pixels & previous approvals unchanged",font=font(12),fill="#5d6b78")
 out=OUT/"desert_scarab_native80_and_4x_mobile_comparison.png"
 sheet.save(out,optimize=True)
 report={"schema":"mercury-desert-scarab-visual-review-v1",
