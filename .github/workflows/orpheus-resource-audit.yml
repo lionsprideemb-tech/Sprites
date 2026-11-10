@@ -129,10 +129,17 @@ jobs:
             echo 'BLOCKED: original archive not available; not claiming conversion success'
             exit 1
           fi
+      - name: Source-faithful Flygon and Vibrava palette refinement QA (unapproved)
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -s orpheus-original-resources.rar
+          test -f report/ds64_experiment/orpheus_ds64_quality_sheet.png
+          python3 tools/orpheus_ds64_palette_refinement.py
       - name: Upload research-only metadata artifact
         uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: orpheus-family-DS64-experimental-unapproved
+          name: orpheus-family-DS64-refinement-unapproved
           path: report/
           retention-days: 14
