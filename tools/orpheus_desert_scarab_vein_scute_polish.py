@@ -175,7 +175,7 @@ for i,key in enumerate(ORDER):
     draw_sprite(sheet,before,30,y+75,4)
     draw_sprite(sheet,after,379,y+75,4)
     label_text(d,723,y+91,"Native",15)
-    draw_sprite(sheet,746,y+130,1)
+    draw_sprite(sheet,after,746,y+130,1)
     label_text(d,717,y+225,f"{len(WING[key])} vein pixels",12)
     label_text(d,717,y+245,f"{len(SCUTE[key])} scute pixels",12)
     label_text(d,26,y+407,"Palette, alpha and sprite geometry unchanged  ·  Genuine 4bpp",13,"#566A78")
