@@ -21,7 +21,8 @@
   "caveats": [
     "2x nearest downsampling may be lossy when original 2x blocks differ; per-stage exact counts included.",
     "Recolor uses stage battle color palette, but is a visual draft not a selected icon.",
-    "Icon animation sequence and actual upstream icon NARC processing unverified."
+    "Icon animation sequence and actual upstream icon NARC processing unverified.",
+    "Icons in Platinum use a shared 256-color JASC-PAL; these experimental individual stage palettes are not yet mapped to the real shared game icon palette."
   ],
   "comparison": "all_three_icon32_technical_comparison.png",
   "comparisonSHA256": "eb937813967fdbceb19cb96a1f714d76cbbdb6ff1d3a70a62701cccec0654eb0",
@@ -54,6 +55,16 @@
       "alphaPreservedAfterNearestDownsample": true,
       "png": "trapinch/desert_scarab_ICON32x2_PROPOSAL.png",
       "indexedPNG": "trapinch/desert_scarab_ICON32x2_indexed.png",
+      "upstreamIconSourceCanvas": [
+        32,
+        64
+      ],
+      "upstreamTwoFramesVertical": true,
+      "upstreamIndexedPNG": "trapinch/desert_scarab_ICON_STACKED_32x64_INDEXED4.png",
+      "upstreamIndexedPNGSHA256": "780265cee46960609d6ab236b541134b693580b2db7c36587af06d65ecfed48b",
+      "upstreamStackedTileBytes": 1024,
+      "upstreamStackedTiles": "trapinch/desert_scarab_ICON_STACKED_32x64_TILES4.bin",
+      "upstreamStackedTilesRoundtrip": true,
       "sourceDownsample": "trapinch/original_2xsample_64x32.png",
       "tiles": "trapinch/desert_scarab_ICON32x2_4bpp_tiles.bin",
       "palette": "trapinch/desert_scarab_ICON32x2_palette.bin",
@@ -92,6 +103,16 @@
       "alphaPreservedAfterNearestDownsample": true,
       "png": "vibrava/desert_scarab_ICON32x2_PROPOSAL.png",
       "indexedPNG": "vibrava/desert_scarab_ICON32x2_indexed.png",
+      "upstreamIconSourceCanvas": [
+        32,
+        64
+      ],
+      "upstreamTwoFramesVertical": true,
+      "upstreamIndexedPNG": "vibrava/desert_scarab_ICON_STACKED_32x64_INDEXED4.png",
+      "upstreamIndexedPNGSHA256": "77febfbbc0a0cc8e5f0fec71a95b030965bbad41a6d3caf0f22d47c79a37c792",
+      "upstreamStackedTileBytes": 1024,
+      "upstreamStackedTiles": "vibrava/desert_scarab_ICON_STACKED_32x64_TILES4.bin",
+      "upstreamStackedTilesRoundtrip": true,
       "sourceDownsample": "vibrava/original_2xsample_64x32.png",
       "tiles": "vibrava/desert_scarab_ICON32x2_4bpp_tiles.bin",
       "palette": "vibrava/desert_scarab_ICON32x2_palette.bin",
@@ -130,6 +151,16 @@
       "alphaPreservedAfterNearestDownsample": true,
       "png": "flygon/desert_scarab_ICON32x2_PROPOSAL.png",
       "indexedPNG": "flygon/desert_scarab_ICON32x2_indexed.png",
+      "upstreamIconSourceCanvas": [
+        32,
+        64
+      ],
+      "upstreamTwoFramesVertical": true,
+      "upstreamIndexedPNG": "flygon/desert_scarab_ICON_STACKED_32x64_INDEXED4.png",
+      "upstreamIndexedPNGSHA256": "7d869b84d1fb158415afa3f0ec4a2657941340160eae9586b35ca83b8c39132f",
+      "upstreamStackedTileBytes": 1024,
+      "upstreamStackedTiles": "flygon/desert_scarab_ICON_STACKED_32x64_TILES4.bin",
+      "upstreamStackedTilesRoundtrip": true,
       "sourceDownsample": "flygon/original_2xsample_64x32.png",
       "tiles": "flygon/desert_scarab_ICON32x2_4bpp_tiles.bin",
       "palette": "flygon/desert_scarab_ICON32x2_palette.bin",
