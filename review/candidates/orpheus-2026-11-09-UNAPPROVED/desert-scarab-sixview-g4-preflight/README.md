@@ -8,4 +8,4 @@ Missing custom shiny views, game icons, artist attribution terms, user artwork a
 
 ## Real Platinum NitroGFX encoding probe
 
-Generated six NCGR and six NCLR **standalone files** using the upstream pret/pokeplatinum NitroGFX encoder with the exact native build flags. Each was decoded back to its full 160x80 indexed pixel source with **0 index differences**. This verifies the file-encoding stage only: no approved art, shiny views, converted icon archive, correct form/species NARC index integration or game runtime proof. See [nitrogfx QA](nitrogfx_qa.json).
+Generated six NCGR and six NCLR **standalone files** using the upstream pret/pokeplatinum NitroGFX encoder with the exact native build flags. Each was decoded back to its full 160x80 indexed pixel source with **0 index differences**. This verifies the file-encoding stage only: no approved art, shiny views, converted icon archive, correct form/species NARC index integration or game runtime proof. Six separate UNAPPROVED shiny color proposals are also encoded and roundtrip-verified; they are not final game-ready shinies. See [nitrogfx QA](nitrogfx_qa.json).

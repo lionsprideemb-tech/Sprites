@@ -144,5 +144,93 @@
       "approved": false,
       "romIntegrated": false
     }
-  ]
+  ],
+  "sixTechnicallyEncodedButUnapprovedShinyColorProposals": [
+    {
+      "view": "trapinch_front",
+      "fromUnapprovedColorProposal": true,
+      "sourceShinySHA256": "53680a5b4733d070cc9e405d48555da5a55ab89ecd54f31e80999fe63c0fa26a",
+      "NCGR": "ntr-encoded/shiny-proposal/trapinch/front_shiny_PROPOSAL.NCGR",
+      "NCLR": "ntr-encoded/shiny-proposal/trapinch/front_shiny_PROPOSAL.NCLR",
+      "encodedNCGRSHA256": "2ad062022e3297db99d4508eb176b03fc8ed78b6a8b1b81721d2a8f07adb3bb5",
+      "encodedNCLRSHA256": "57010c1baa2ea7a16d05ef7cd110ae69f90295943d201dba22576d8577b154d7",
+      "ncgrBytes": 6448,
+      "nclrBytes": 72,
+      "zeroPixelIndexDifferences": true,
+      "approved": false,
+      "gameIntegrated": false
+    },
+    {
+      "view": "trapinch_back",
+      "fromUnapprovedColorProposal": true,
+      "sourceShinySHA256": "a82bc152b0ca5c9baffc96dfd40ad95c9c057407e4bead4d2b4569c9f8d6254f",
+      "NCGR": "ntr-encoded/shiny-proposal/trapinch/back_shiny_PROPOSAL.NCGR",
+      "NCLR": "ntr-encoded/shiny-proposal/trapinch/back_shiny_PROPOSAL.NCLR",
+      "encodedNCGRSHA256": "c75ea20382fa26d2f977eddc77b28dd5995fc158f164725d7b0d1224d87e2021",
+      "encodedNCLRSHA256": "57010c1baa2ea7a16d05ef7cd110ae69f90295943d201dba22576d8577b154d7",
+      "ncgrBytes": 6448,
+      "nclrBytes": 72,
+      "zeroPixelIndexDifferences": true,
+      "approved": false,
+      "gameIntegrated": false
+    },
+    {
+      "view": "vibrava_front",
+      "fromUnapprovedColorProposal": true,
+      "sourceShinySHA256": "02affb3fdfcb7ccd4cedb068a42ea24fc6d2de4ea49bd2d2a3d01d0431ef6735",
+      "NCGR": "ntr-encoded/shiny-proposal/vibrava/front_shiny_PROPOSAL.NCGR",
+      "NCLR": "ntr-encoded/shiny-proposal/vibrava/front_shiny_PROPOSAL.NCLR",
+      "encodedNCGRSHA256": "74a2b29d58aaa3474d39b40e0878360aeab67da23073316bedf9e5b34d557af8",
+      "encodedNCLRSHA256": "f677dbc69b8527c5a2b097a886f275c70b0b1ed2b64019ee22847b39f6f17715",
+      "ncgrBytes": 6448,
+      "nclrBytes": 72,
+      "zeroPixelIndexDifferences": true,
+      "approved": false,
+      "gameIntegrated": false
+    },
+    {
+      "view": "vibrava_back",
+      "fromUnapprovedColorProposal": true,
+      "sourceShinySHA256": "02b83ee8b4c117d3a2c7eb50719846917a335a441b186886be227d76b998be5a",
+      "NCGR": "ntr-encoded/shiny-proposal/vibrava/back_shiny_PROPOSAL.NCGR",
+      "NCLR": "ntr-encoded/shiny-proposal/vibrava/back_shiny_PROPOSAL.NCLR",
+      "encodedNCGRSHA256": "f8b039d448478866f9cd68975e4630a3ec5c2ffe58c5e0b0e86d3d06b22afc31",
+      "encodedNCLRSHA256": "f677dbc69b8527c5a2b097a886f275c70b0b1ed2b64019ee22847b39f6f17715",
+      "ncgrBytes": 6448,
+      "nclrBytes": 72,
+      "zeroPixelIndexDifferences": true,
+      "approved": false,
+      "gameIntegrated": false
+    },
+    {
+      "view": "flygon_front",
+      "fromUnapprovedColorProposal": true,
+      "sourceShinySHA256": "04c098c6d0273d3a810808377819dafb859a51c6f352843c3ca8b029b289940a",
+      "NCGR": "ntr-encoded/shiny-proposal/flygon/front_shiny_PROPOSAL.NCGR",
+      "NCLR": "ntr-encoded/shiny-proposal/flygon/front_shiny_PROPOSAL.NCLR",
+      "encodedNCGRSHA256": "0f822dbe21af60ed712a317ec7f4700471ae91e089333e8b78600b69df0b76c7",
+      "encodedNCLRSHA256": "19c2205adc5473b42a8d349ac931d890b99b8dee595d74e1441e01e76bba53b1",
+      "ncgrBytes": 6448,
+      "nclrBytes": 72,
+      "zeroPixelIndexDifferences": true,
+      "approved": false,
+      "gameIntegrated": false
+    },
+    {
+      "view": "flygon_back",
+      "fromUnapprovedColorProposal": true,
+      "sourceShinySHA256": "7fa7d59a08d5b63eb97889a6931ad4107b3c73e267a8fdeb2891fa5006bf2db8",
+      "NCGR": "ntr-encoded/shiny-proposal/flygon/back_shiny_PROPOSAL.NCGR",
+      "NCLR": "ntr-encoded/shiny-proposal/flygon/back_shiny_PROPOSAL.NCLR",
+      "encodedNCGRSHA256": "eef9a0cc1a284c8012d1239f104db970f8d631d75d38c7eaeea724c5704b3631",
+      "encodedNCLRSHA256": "19c2205adc5473b42a8d349ac931d890b99b8dee595d74e1441e01e76bba53b1",
+      "ncgrBytes": 6448,
+      "nclrBytes": 72,
+      "zeroPixelIndexDifferences": true,
+      "approved": false,
+      "gameIntegrated": false
+    }
+  ],
+  "shinyProposalRoundTripsPixelExact": true,
+  "shinyProposalNoUserApproval": true
 }
