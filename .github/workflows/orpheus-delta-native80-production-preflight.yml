@@ -25,10 +25,24 @@ jobs:
           set -euo pipefail
           python tools/orpheus_delta_native80_production_preflight.py
           test -s report/orpheus_delta_native80_preflight/preflight_qa.json
-      - name: Install C image libraries required by pret NitroGFX
+      - name: Build libpng source from GitHub (avoid unavailable Ubuntu apt mirrors)
         run: |
-          sudo apt-get update -qq
-          sudo apt-get install -y -qq pkg-config libpng-dev zlib1g-dev
+          set -euo pipefail
+          # The GitHub runner's Ubuntu apt mirrors currently fail DNS.
+          # zlib development library ships with the base image; build libpng
+          # from its public source instead of skipping the real NitroGFX test.
+          pkg-config --modversion zlib
+          git clone --quiet --depth 1 https://github.com/pnggroup/libpng.git /tmp/mercury-libpng-source
+          cmake -S /tmp/mercury-libpng-source -B /tmp/mercury-libpng-build \
+            -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/tmp/mercury-libpng -DPNG_TESTS=OFF
+          cmake --build /tmp/mercury-libpng-build --parallel 2
+          cmake --install /tmp/mercury-libpng-build
+          pc=$(find /tmp/mercury-libpng -type f -name libpng.pc -print -quit)
+          test -n "$pc"
+          echo "PKG_CONFIG_PATH=$(dirname "$pc"):${PKG_CONFIG_PATH:-}" >> "$GITHUB_ENV"
+          lib=$(find /tmp/mercury-libpng -type f -name 'libpng16.so*' -printf '%h\n' | head -n 1)
+          test -n "$lib"
+          echo "LD_LIBRARY_PATH=$lib:${LD_LIBRARY_PATH:-}" >> "$GITHUB_ENV"
       - name: Optional upstream NTR NitroGFX encoder roundtrip (if probe committed)
         run: |
           set -euo pipefail
