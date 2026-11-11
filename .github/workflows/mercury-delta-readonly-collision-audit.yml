@@ -1,0 +1,82 @@
+name: Mercury Delta Flygon read-only crossrepo form ID palette evolution audit
+on:
+  push:
+    branches: [mercury/orpheus-resource-audit-20261109]
+    paths:
+      - tools/mercury_delta_readonly_id_palette_evolution_audit.py
+      - .github/workflows/mercury-delta-readonly-collision-audit.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: mercury-delta-crossrepo-audit
+  cancel-in-progress: false
+jobs:
+  crossrepo-audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check pinned readonly source main heads
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$(git ls-remote https://github.com/lionsprideemb-tech/Sprites.git refs/heads/main | cut -f1)" = "f15c4671bf7afb15450fc7801bde17aefcdc4f7e"
+          test "$(git ls-remote https://github.com/lionsprideemb-tech/Mercury-redux-dex.git refs/heads/main | cut -f1)" = "faa7cb4016d8030fb4661b49114352d79cac7944"
+          test "$(git ls-remote https://github.com/lionsprideemb-tech/platinum-modern-ds.git refs/heads/main | cut -f1)" = "5525e961a1fb98c62bd53bc4a27b0276a39f6719"
+          test "$(git ls-remote https://github.com/pret/pokeplatinum.git refs/heads/main | cut -f1)" = "62bdaacdca6c56a6a396f3e9911e2f922b79bba8"
+      - name: Clone main sources as shallow SPARSE read-only snapshots (no credential writes)
+        shell: bash
+        run: |
+          set -euo pipefail
+          git clone -q --depth 1 --filter=blob:none --sparse https://github.com/lionsprideemb-tech/Mercury-redux-dex.git /tmp/mercury-dex-audit
+          git -C /tmp/mercury-dex-audit sparse-checkout set data/pokedex docs
+          git clone -q --depth 1 --filter=blob:none --sparse https://github.com/lionsprideemb-tech/platinum-modern-ds.git /tmp/mercury-pt-audit
+          git -C /tmp/mercury-pt-audit sparse-checkout set data tools platinum-overlay/generated platinum-overlay/src engine-overlay docs
+          git clone -q --depth 1 --filter=blob:none --sparse https://github.com/pret/pokeplatinum.git /tmp/mercury-upstream-audit
+          git -C /tmp/mercury-upstream-audit sparse-checkout set res/pokemon src include/struct_defs
+          test "$(git -C /tmp/mercury-dex-audit rev-parse HEAD)" = faa7cb4016d8030fb4661b49114352d79cac7944
+          test "$(git -C /tmp/mercury-pt-audit rev-parse HEAD)" = 5525e961a1fb98c62bd53bc4a27b0276a39f6719
+          test "$(git -C /tmp/mercury-upstream-audit rev-parse HEAD)" = 62bdaacdca6c56a6a396f3e9911e2f922b79bba8
+      - name: Read, verify and compare all 17 Dex shards, indexed palette meta, real engine form routes and original 166 votes
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 tools/mercury_delta_readonly_id_palette_evolution_audit.py \
+            --dex /tmp/mercury-dex-audit \
+            --platinum /tmp/mercury-pt-audit \
+            --upstream /tmp/mercury-upstream-audit \
+            --sprites . \
+            --output report/mercury_delta_readonly_gate
+          test -s report/mercury_delta_readonly_gate/delta_form_id_icon_palette_evolution_readonly_QA.json
+          python3 - <<'PY'
+          import json
+          d=json.load(open("report/mercury_delta_readonly_gate/delta_form_id_icon_palette_evolution_readonly_QA.json"))
+          assert d["historicalVotes"]["count"]==166
+          assert d["speciesRegistry"]["canonicalUniqueCount"]==1025
+          assert d["dex"]["shardsRead"]==17
+          assert len(d["blockers"])==6 and d["noRomChanges"]
+          print("READONLY_AUDIT_QA_OK",d["dex"]["matchingCount"],d["iconBank3"]["usedIconPaletteIndexCounts"])
+          PY
+      - name: Publish only isolated audit evidence; never production or artwork
+        shell: bash
+        run: |
+          set -euo pipefail
+          dest=review/candidates/orpheus-2026-11-09-UNAPPROVED/delta-collision-audit-2026-11-11
+          mkdir -p "$dest"
+          cp report/mercury_delta_readonly_gate/delta_form_id_icon_palette_evolution_readonly_QA.json "$dest/"
+          git config user.name "mercury-sprite-qa[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- "$dest"
+          if ! git diff --cached --quiet; then
+            git commit -m "Publish pinned read-only Delta species/form palette and evolution crossrepo QA (unapproved)"
+            git fetch -q origin mercury/orpheus-resource-audit-20261109
+            git rebase FETCH_HEAD
+            git push origin HEAD:mercury/orpheus-resource-audit-20261109
+          fi
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: mercury-delta-readonly-collision-audit-qa
+          path: report/mercury_delta_readonly_gate/
+          retention-days: 30
