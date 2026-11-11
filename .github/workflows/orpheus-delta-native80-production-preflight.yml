@@ -6,6 +6,7 @@ on:
       - tools/orpheus_delta_native80_production_preflight.py
       - tools/orpheus_delta_nitrogfx_probe.py
       - tools/orpheus_delta_shared_palette_icon_qa.py
+      - tools/orpheus_delta_reserved_palette_study.py
       - .github/workflows/orpheus-delta-native80-production-preflight.yml
   workflow_dispatch:
 permissions:
