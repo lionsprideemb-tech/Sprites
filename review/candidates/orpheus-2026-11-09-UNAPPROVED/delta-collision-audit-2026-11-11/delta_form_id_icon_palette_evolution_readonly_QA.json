@@ -2,7 +2,7 @@
   "schema": "mercury-delta-flygon-readonly-crossrepo-collision-audit-v1",
   "auditScope": "Actual checked-out public GitHub repository files; no game modifications or ID assignment",
   "sources": {
-    "SpritesResearchHead": "749e58924b52a77b9f10944927c0e6a892150325",
+    "SpritesResearchHead": "3636e5d14fd7756e2cbb70bae2d20740c4dc04a3",
     "MercuryReduxDexMain": "faa7cb4016d8030fb4661b49114352d79cac7944",
     "PlatinumModernDSMain": "5525e961a1fb98c62bd53bc4a27b0276a39f6719",
     "pretPokeplatinumMain": "62bdaacdca6c56a6a396f3e9911e2f922b79bba8"
@@ -76,24 +76,111 @@
     "effectiveNumericIDClashes": [
       {
         "id": 1581,
-        "keys": [
-          "R0077",
-          "R0078"
-        ]
+        "records": [
+          {
+            "source": "effective-current-dex",
+            "constant": "SPECIES_ARCANINE_MEGA_REDUX",
+            "id": 1581,
+            "name": "Arcanine M",
+            "types": [
+              "Fire",
+              "Grass"
+            ],
+            "evolutions": [],
+            "planned": false,
+            "displayName": "Arcanine Mega",
+            "nationalDex": null,
+            "key": "R0077"
+          },
+          {
+            "source": "effective-current-dex",
+            "constant": "SPECIES_ARCANINE_MEGA_REDUX",
+            "id": 1581,
+            "name": "Arcanine M",
+            "types": [
+              "Fire",
+              "Grass"
+            ],
+            "evolutions": [],
+            "planned": false,
+            "displayName": "Arcanine Mega",
+            "nationalDex": null,
+            "key": "R0078"
+          }
+        ],
+        "classification": "ambiguous reused site-data ID; NOT proven a native engine collision"
       },
       {
         "id": 1751,
-        "keys": [
-          "R0901",
-          "R0902"
-        ]
+        "records": [
+          {
+            "source": "effective-current-dex",
+            "constant": "SPECIES_TOXTRICITY_MEGA",
+            "id": 1751,
+            "name": "Toxtricity M",
+            "types": [
+              "Electric",
+              "Poison"
+            ],
+            "evolutions": [],
+            "planned": false,
+            "displayName": "Toxtricity Mega",
+            "nationalDex": null,
+            "key": "R0901"
+          },
+          {
+            "source": "effective-current-dex",
+            "constant": "SPECIES_TOXTRICITY_MEGA",
+            "id": 1751,
+            "name": "Toxtricity M",
+            "types": [
+              "Electric",
+              "Poison"
+            ],
+            "evolutions": [],
+            "planned": false,
+            "displayName": "Toxtricity Mega",
+            "nationalDex": null,
+            "key": "R0902"
+          }
+        ],
+        "classification": "ambiguous reused site-data ID; NOT proven a native engine collision"
       },
       {
         "id": 1761,
-        "keys": [
-          "R0737",
-          "R0738"
-        ]
+        "records": [
+          {
+            "source": "effective-current-dex",
+            "constant": "SPECIES_REUNICLUS_REDUX_MEGA",
+            "id": 1761,
+            "name": "Reuniclus M",
+            "types": [
+              "Fire",
+              "Water"
+            ],
+            "evolutions": [],
+            "planned": false,
+            "displayName": "Reuniclus Mega",
+            "nationalDex": null,
+            "key": "R0737"
+          },
+          {
+            "source": "effective-current-dex",
+            "constant": "SPECIES_REUNICLUS_REDUX_MEGA",
+            "id": 1761,
+            "name": "Reuniclus M",
+            "types": [
+              "Fire",
+              "Water"
+            ],
+            "evolutions": [],
+            "planned": false,
+            "displayName": "Reuniclus Mega",
+            "nationalDex": null,
+            "key": "R0738"
+          }
+        ],
+        "classification": "ambiguous reused site-data ID; NOT proven a native engine collision"
       }
     ],
     "effectiveLiveFlygonRecords": [
@@ -864,7 +951,7 @@
     {
       "id": "ID-02",
       "severity": "blocked",
-      "reason": "The 1599-row live Dex is larger than the 1025 base registry; the older Electric Redux B Flygon IDs remain in Dex data even though newer roster rules retire them. 1028+ numbers are NOT certified free",
+      "reason": "The 1599-row live Dex is larger than the 1025 base registry; the older Electric Redux B Flygon IDs remain in Dex data despite newer roster retirement. Also, numeric site IDs 1581/1751/1761 are reused by multiple active records (may be intentional forms); none are certified engine-native allocations. 1028+ numbers are NOT proven free",
       "gate": "reconcile all custom entries and retired roster identities against final game species/form IDs before assigning any Delta IDs"
     },
     {
