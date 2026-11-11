@@ -1,0 +1,644 @@
+{
+  "schema": "mercury-delta-flygon-readonly-crossrepo-collision-audit-v1",
+  "auditScope": "Actual checked-out public GitHub repository files; no game modifications or ID assignment",
+  "sources": {
+    "SpritesResearchHead": "e8858e044b24425f5888617fe06ce893198a5757",
+    "MercuryReduxDexMain": "faa7cb4016d8030fb4661b49114352d79cac7944",
+    "PlatinumModernDSMain": "5525e961a1fb98c62bd53bc4a27b0276a39f6719",
+    "pretPokeplatinumMain": "62bdaacdca6c56a6a396f3e9911e2f922b79bba8"
+  },
+  "allUnapproved": true,
+  "noRomChanges": true,
+  "noDexChanges": true,
+  "noHistoricalVoteChanges": true,
+  "noIDAssigned": true,
+  "noPaletteAllocated": true,
+  "historicalVotes": {
+    "source": "review/user-iphone-decisions-2026-10-23.json",
+    "blobSHA": "61c5e53c6ec81b74d192cd62a4c52c970cea15ce",
+    "count": 166,
+    "keep": 154,
+    "cut": 12,
+    "finalApprovalOverlayBlobSHA": "89f328b4471f1531520305e54f63efdbc6251a50",
+    "rosterPlanBlobSHA": "e2c29dcbb27c5354f00a594a9ffbb466cc962e85"
+  },
+  "speciesRegistry": {
+    "file": "platinum-modern-ds/data/canonical_species_1025.txt",
+    "sha256": "050f21134ba288bfd7b0d17751bb6b25548ec3acae74b867fde7bccbea7cb435",
+    "canonicalUniqueCount": 1025,
+    "occupiedBaseSpeciesIDRange": [
+      1,
+      1025
+    ],
+    "vanillaTrapinchVibravaFlygon": [
+      {
+        "species": "SPECIES_TRAPINCH",
+        "speciesID": 328
+      },
+      {
+        "species": "SPECIES_VIBRAVA",
+        "speciesID": 329
+      },
+      {
+        "species": "SPECIES_FLYGON",
+        "speciesID": 330
+      }
+    ],
+    "sentinels": {
+      "SPECIES_NONE": 0,
+      "SPECIES_EGG": 1026,
+      "SPECIES_BAD_EGG": 1027
+    },
+    "deltaConstantsInCanonical": [],
+    "deltaLikeReferencesInPlatinumProduction": [],
+    "noCollisionFreeDeltaIDAllocated": true,
+    "doNotAssumeNextIntegerUnallocatedByCustomMercuryRuntime": true
+  },
+  "dex": {
+    "indexSha256": "faa3a6ce72ce73bf972f94675765f5abbda84e6dea496c38b1aee228d01886fb",
+    "meta": {
+      "entries": 1599,
+      "rosterCount": 1599,
+      "approvedRosterCount": 1599,
+      "sourceBoundCount": 1481,
+      "retiredCount": 4,
+      "statusModel": "approved-roster-with-implementation-state"
+    },
+    "shardsRead": 17,
+    "overlayDocumentsRead": 12,
+    "rawShardPokemonRows": 1603,
+    "rawPlusOverlayRecordCount": 3438,
+    "matchingFlygonFamilyRecords": [
+      {
+        "source": "shard_03.json.gz.b64",
+        "constant": "SPECIES_TRAPINCH",
+        "id": 328,
+        "name": "Trapinch",
+        "types": [
+          "Ground"
+        ],
+        "evolutions": [
+          {
+            "method": "Level",
+            "param": "35",
+            "target": "SPECIES_VIBRAVA"
+          }
+        ],
+        "planned": false,
+        "displayName": "Trapinch",
+        "nationalDex": 328,
+        "key": "SPECIES_TRAPINCH"
+      },
+      {
+        "source": "shard_03.json.gz.b64",
+        "constant": "SPECIES_VIBRAVA",
+        "id": 329,
+        "name": "Vibrava",
+        "types": [
+          "Ground",
+          "Dragon"
+        ],
+        "evolutions": [
+          {
+            "method": "Level",
+            "param": "45",
+            "target": "SPECIES_FLYGON"
+          }
+        ],
+        "planned": false,
+        "displayName": "Vibrava",
+        "nationalDex": 329,
+        "key": "SPECIES_VIBRAVA"
+      },
+      {
+        "source": "shard_03.json.gz.b64",
+        "constant": "SPECIES_FLYGON",
+        "id": 330,
+        "name": "Flygon",
+        "types": [
+          "Ground",
+          "Dragon"
+        ],
+        "evolutions": [],
+        "planned": false,
+        "displayName": "Flygon",
+        "nationalDex": 330,
+        "key": "SPECIES_FLYGON"
+      },
+      {
+        "source": "shard_12.json.gz.b64",
+        "constant": "SPECIES_TRAPINCH_REDUX",
+        "id": 1816,
+        "name": "Trapinch Rdx",
+        "types": [
+          "Ice",
+          "Bug"
+        ],
+        "evolutions": [
+          {
+            "method": "Level",
+            "param": "18",
+            "target": "SPECIES_VIBRAVA_REDUX"
+          }
+        ],
+        "planned": false,
+        "displayName": "Trapinch Redux",
+        "nationalDex": null,
+        "key": "R0489"
+      },
+      {
+        "source": "shard_12.json.gz.b64",
+        "constant": "SPECIES_VIBRAVA_REDUX",
+        "id": 1817,
+        "name": "Vibrava Rdx",
+        "types": [
+          "Ice",
+          "Bug"
+        ],
+        "evolutions": [
+          {
+            "method": "Level",
+            "param": "36",
+            "target": "SPECIES_FLYGON_REDUX"
+          }
+        ],
+        "planned": false,
+        "displayName": "Vibrava Redux",
+        "nationalDex": null,
+        "key": "R0491"
+      },
+      {
+        "source": "shard_12.json.gz.b64",
+        "constant": "SPECIES_FLYGON_REDUX",
+        "id": 1638,
+        "name": "Flygon Rdx",
+        "types": [
+          "Ice",
+          "Bug"
+        ],
+        "evolutions": [],
+        "planned": false,
+        "displayName": "Flygon Redux",
+        "nationalDex": null,
+        "key": "R0493"
+      },
+      {
+        "source": "shard_12.json.gz.b64",
+        "constant": "SPECIES_FLYGON_REDUX_B",
+        "id": 2081,
+        "name": "Flygon-RB",
+        "types": [
+          "Electric",
+          "Dragon"
+        ],
+        "evolutions": [],
+        "planned": false,
+        "displayName": "Flygon Redux B",
+        "nationalDex": null,
+        "key": "R0494"
+      },
+      {
+        "source": "shard_12.json.gz.b64",
+        "constant": "SPECIES_FLYGON_MEGA",
+        "id": 1692,
+        "name": "Flygon M",
+        "types": [
+          "Ground",
+          "Bug"
+        ],
+        "evolutions": [],
+        "planned": false,
+        "displayName": "Flygon Mega",
+        "nationalDex": null,
+        "key": "R0495"
+      },
+      {
+        "source": "shard_12.json.gz.b64",
+        "constant": "SPECIES_FLYGON_REDUX_B_MEGA",
+        "id": 2082,
+        "name": "Flygon-RB-M",
+        "types": [
+          "Electric",
+          "Dragon"
+        ],
+        "evolutions": [],
+        "planned": false,
+        "displayName": "Flygon Redux B Mega",
+        "nationalDex": null,
+        "key": "R0496"
+      },
+      {
+        "source": "shard_12.json.gz.b64",
+        "constant": "SPECIES_FLYGON_REDUX_MEGA",
+        "id": 1632,
+        "name": "Flygon Rdx M",
+        "types": [
+          "Ice",
+          "Bug"
+        ],
+        "evolutions": [],
+        "planned": false,
+        "displayName": "Flygon Redux Mega",
+        "nationalDex": null,
+        "key": "R0497"
+      },
+      {
+        "source": "shard_12.json.gz.b64",
+        "constant": "SPECIES_FLYGON_PLATINUM",
+        "id": 1888,
+        "name": "Flygon",
+        "types": [
+          "Bug",
+          "Dragon"
+        ],
+        "evolutions": [],
+        "planned": false,
+        "displayName": "Platinum Redux Flygon",
+        "nationalDex": null,
+        "key": "R0498"
+      },
+      {
+        "source": "source_overlay_02.json.gz.b64:patches",
+        "key": "SPECIES_TRAPINCH"
+      },
+      {
+        "source": "source_overlay_02.json.gz.b64:patches",
+        "key": "SPECIES_VIBRAVA"
+      },
+      {
+        "source": "source_overlay_02.json.gz.b64:patches",
+        "key": "SPECIES_FLYGON"
+      }
+    ],
+    "explicitDeltaIdentityMatches": [],
+    "matchingCount": 14,
+    "deltaNameMatchCount": 0,
+    "note": "Raw shards and overlay patches/additions inspected; R8 app merges these records. Matching legacy Redux names do not create or approve new game engine species IDs.",
+    "shards": [
+      {
+        "file": "shard_00.json.gz.b64",
+        "pokemonRows": 100,
+        "sha256": "4da3922139e3b36ec223499e9b1a9243c7dbf5df30fb65a489dca5ab46c61060"
+      },
+      {
+        "file": "shard_01.json.gz.b64",
+        "pokemonRows": 100,
+        "sha256": "d0dc945ba88e391e4748a03b5fc8043a4b731ab6e77b6343d28ac8444482896b"
+      },
+      {
+        "file": "shard_02.json.gz.b64",
+        "pokemonRows": 100,
+        "sha256": "f42501fcc1894ed5c7f8b447ec377b1fa69d47015cdba6ddc7466e41c47d9550"
+      },
+      {
+        "file": "shard_03.json.gz.b64",
+        "pokemonRows": 100,
+        "sha256": "c0188602c6b5f96738c64db110482bc37c590978cab96f91c7cf627e0887ac0b"
+      },
+      {
+        "file": "shard_04.json.gz.b64",
+        "pokemonRows": 100,
+        "sha256": "32e5b7f6dfc757c2b553a8841850f9bfd2b23a63c581609d58ccfd89e7aa9652"
+      },
+      {
+        "file": "shard_05.json.gz.b64",
+        "pokemonRows": 100,
+        "sha256": "4b2af0f15403167115b32add43a5f23d20e30a61864f8a4be39ed537e07a67e3"
+      },
+      {
+        "file": "shard_06.json.gz.b64",
+        "pokemonRows": 100,
+        "sha256": "72b55517296f431db75ddd0028abdbe04227453e549a0003628768a6e791e675"
+      },
+      {
+        "file": "shard_07.json.gz.b64",
+        "pokemonRows": 100,
+        "sha256": "d2de872d1b783b8f865484ef88d9bcc310f2e118beea0ddc2b8414a98af9c2e8"
+      },
+      {
+        "file": "shard_08.json.gz.b64",
+        "pokemonRows": 100,
+        "sha256": "b49d88da73bae6959480e7fe491b0de1bedbb3ca19ec64128ed619c2bf4ea892"
+      },
+      {
+        "file": "shard_09.json.gz.b64",
+        "pokemonRows": 100,
+        "sha256": "a6e173e9b09a038cbe57fdaa729354977b69b2bd0728a01f14d406d7a7b59a0d"
+      },
+      {
+        "file": "shard_10.json.gz.b64",
+        "pokemonRows": 100,
+        "sha256": "6b33d624fedb75a7f535b7eb290ca53cb0e611fd54bb481f94441baf9cafb838"
+      },
+      {
+        "file": "shard_11.json.gz.b64",
+        "pokemonRows": 100,
+        "sha256": "27cfa781f5679b57e9b099101ca077a3588c36f24ebe2f6fd7d0d2f0d344b833"
+      },
+      {
+        "file": "shard_12.json.gz.b64",
+        "pokemonRows": 100,
+        "sha256": "5c77526143510aafae396c1e2e7dc2c9d570b3fb656de8fed504f57bd6c5aef4"
+      },
+      {
+        "file": "shard_13.json.gz.b64",
+        "pokemonRows": 100,
+        "sha256": "aed8b2294e452122e2b8b51d44e10426ad6d76fbd23b40e5546223edab0ce6f3"
+      },
+      {
+        "file": "shard_14.json.gz.b64",
+        "pokemonRows": 100,
+        "sha256": "3a05af0f0bdca308baa16c2c28269089a7b25f497024fe159bf7508031e2c873"
+      },
+      {
+        "file": "shard_15.json.gz.b64",
+        "pokemonRows": 100,
+        "sha256": "c9378885d53a003f18759270e4ae4f27606c3f87aec70da3338ffb31ebcd3abc"
+      },
+      {
+        "file": "shard_16.json.gz.b64",
+        "pokemonRows": 3,
+        "sha256": "252a4d097e9bc85e929e8958da2885831d688c4cb5aa7ad2bb66ddb7b3b7a23f"
+      }
+    ],
+    "overlayDocuments": [
+      {
+        "file": "source_overlay_00.json.gz.b64",
+        "sha256": "ae8e1efe7ec48d00467122b275c0b4e4fa20741b33205230672425c38e4575e2",
+        "topLevelKeys": [
+          "patches",
+          "removeKeys"
+        ],
+        "patchCount": 160,
+        "additions": 0,
+        "removeKeysCount": 4
+      },
+      {
+        "file": "source_overlay_01.json.gz.b64",
+        "sha256": "e7247c5f2627b692815f25d386c54f3f60431f19e732f73ee0bdadb1747e6bd0",
+        "topLevelKeys": [
+          "patches",
+          "removeKeys"
+        ],
+        "patchCount": 160,
+        "additions": 0,
+        "removeKeysCount": 0
+      },
+      {
+        "file": "source_overlay_02.json.gz.b64",
+        "sha256": "a4f529f7cf9a08e4ab6e8864d3764e4aeec2d7bd056a29c41dcebe34bacbf0b9",
+        "topLevelKeys": [
+          "patches",
+          "removeKeys"
+        ],
+        "patchCount": 160,
+        "additions": 0,
+        "removeKeysCount": 0
+      },
+      {
+        "file": "source_overlay_03.json.gz.b64",
+        "sha256": "ba9677a57f05c1f4e87f89777063bc1c2d7c633a1be0753c82eeb86b5b072551",
+        "topLevelKeys": [
+          "patches",
+          "removeKeys"
+        ],
+        "patchCount": 160,
+        "additions": 0,
+        "removeKeysCount": 0
+      },
+      {
+        "file": "source_overlay_04.json.gz.b64",
+        "sha256": "9917dc47662398f015a0b82904458f0baba86f9ddf1979f9e863e08488196701",
+        "topLevelKeys": [
+          "patches",
+          "removeKeys"
+        ],
+        "patchCount": 160,
+        "additions": 0,
+        "removeKeysCount": 0
+      },
+      {
+        "file": "source_overlay_05.json.gz.b64",
+        "sha256": "87bf853c2b4c79d38141563017511e7d6cdd615548e7c04cd63f25f22bf95732",
+        "topLevelKeys": [
+          "patches",
+          "removeKeys"
+        ],
+        "patchCount": 159,
+        "additions": 0,
+        "removeKeysCount": 0
+      },
+      {
+        "file": "source_overlay_06.json.gz.b64",
+        "sha256": "ede928a9c8f88a423abb84b0ab0a03286fbb15316b7abd5da15d7c32923f681c",
+        "topLevelKeys": [
+          "patches",
+          "removeKeys"
+        ],
+        "patchCount": 160,
+        "additions": 0,
+        "removeKeysCount": 0
+      },
+      {
+        "file": "source_overlay_07.json.gz.b64",
+        "sha256": "2eeff19b585b09b7f8b7e81278e1c2f765a383de870b06bd8b642e22d9784012",
+        "topLevelKeys": [
+          "patches",
+          "removeKeys"
+        ],
+        "patchCount": 160,
+        "additions": 0,
+        "removeKeysCount": 0
+      },
+      {
+        "file": "source_overlay_08.json.gz.b64",
+        "sha256": "30a427fb1cd2b00e0531a5e6cf5611a73dbfa6f2084d9bc00a5161361364b210",
+        "topLevelKeys": [
+          "patches",
+          "removeKeys"
+        ],
+        "patchCount": 160,
+        "additions": 0,
+        "removeKeysCount": 0
+      },
+      {
+        "file": "source_overlay_09.json.gz.b64",
+        "sha256": "f553c67636769dfc14a52d14e1d1cc50f30cf756dc435c0f14545dc0b8d31cc0",
+        "topLevelKeys": [
+          "patches",
+          "removeKeys"
+        ],
+        "patchCount": 160,
+        "additions": 0,
+        "removeKeysCount": 0
+      },
+      {
+        "file": "completion_overlay_r8.json.gz.b64",
+        "sha256": "623607bfdfbd663c1d8df53642d97f49b55830f04f82d42ac8f701c209648363",
+        "topLevelKeys": [
+          "version",
+          "notes",
+          "abilityDefinitions",
+          "patches",
+          "additions",
+          "removeKeys"
+        ],
+        "patchCount": 118,
+        "additions": 0,
+        "removeKeysCount": 0
+      },
+      {
+        "file": "sprite_completion_r8.json.gz.b64",
+        "sha256": "9d15a101604352d3851168ab6415be45435c4bae6a826a4072596b1906a4ca80",
+        "topLevelKeys": [
+          "meta",
+          "patches"
+        ],
+        "patchCount": 118,
+        "additions": 0,
+        "removeKeysCount": 0
+      }
+    ]
+  },
+  "iconBank3": {
+    "sourcePaletteSHA256": "028f1b846fd660fac729a37853fcd78d5c0e5ad37e72fecadb908913752cc569",
+    "sourceGlobalPaletteEntries": 256,
+    "usedIconPaletteIndexCounts": {
+      "0": 265,
+      "1": 120,
+      "2": 155
+    },
+    "sourceMetaBank3Uses": [],
+    "sourceMetaBank3UseCount": 0,
+    "numberOfParsedSpeciesAndFormPaletteBindings": 540,
+    "bank3Entries48to63AllZeroInSource": true,
+    "trialOnlyPaletteChangesEntries49to63": true,
+    "experimentalNCLRNotInstalled": true,
+    "threeIconNativeRoundtripPixelDifferences": 0,
+    "routingIssues": [
+      "PokeIconSpriteIndex handles selected explicit alternate-form species only; Delta Trapinch/Vibrava/Flygon have no cases, so form ID alone resolves to ordinary icon",
+      "BoxPokemon_IconFormOffset switches on selected species only; Delta forms of the Flygon family have no case",
+      "PokeIconPaletteIndex also switches only on specific forms, otherwise uses existing species indexed palette; Delta form bank 3 cannot be selected by artwork alone",
+      "PC boxes use normal 2+iconPalette and selected 6+iconPalette slots; party uses 3+iconPalette. A bank3 selection yields party slot 6, requiring complete VRAM palette collision testing with existing UI sprites",
+      "Even if palette-bank3 metadata is unused upstream, the 256-color file and indexed assets must be inserted and runtime-tested before selection"
+    ],
+    "evidence": {
+      "upstreamPokemonIcon": "src/pokemon_icon.c",
+      "upstreamPokemonIconSHA256": "2cce1cc299e8e66d0aac26cf9a0070f7eebb113952a799016527b172afea0710",
+      "upstreamPC": "src/applications/pc_boxes/icon_helper.c",
+      "upstreamParty": "src/applications/party_menu/sprites.c",
+      "sharedPalette": "res/pokemon/.shared/pl_poke_icon.pal",
+      "trialReport": "review/candidates/orpheus-2026-11-09-UNAPPROVED/desert-scarab-sixview-g4-preflight/reserved_icon_bank3_qa.json"
+    }
+  },
+  "evolutions": {
+    "canonicalSource": [
+      {
+        "stage": "trapinch",
+        "source": "res/pokemon/trapinch/data.json",
+        "types": [
+          "TYPE_GROUND",
+          "TYPE_GROUND"
+        ],
+        "evolutions": [
+          [
+            "EVO_LEVEL",
+            35,
+            "SPECIES_VIBRAVA"
+          ]
+        ],
+        "iconPalette": 1,
+        "sha256": "22fafb7fba347f0ada271c06d8147834cd5cb7b053e32246313f896606877807"
+      },
+      {
+        "stage": "vibrava",
+        "source": "res/pokemon/vibrava/data.json",
+        "types": [
+          "TYPE_GROUND",
+          "TYPE_DRAGON"
+        ],
+        "evolutions": [
+          [
+            "EVO_LEVEL",
+            45,
+            "SPECIES_FLYGON"
+          ]
+        ],
+        "iconPalette": 1,
+        "sha256": "247bcdf45d1457ac91e1d68911c957bd79115f41395161ef5f7a0c60281df910"
+      },
+      {
+        "stage": "flygon",
+        "source": "res/pokemon/flygon/data.json",
+        "types": [
+          "TYPE_GROUND",
+          "TYPE_DRAGON"
+        ],
+        "evolutions": [],
+        "iconPalette": 1,
+        "sha256": "f35d69cc0bab6c79cce5ec897092f50f35685b7ffe356db91b8df1ef9720c00c"
+      }
+    ],
+    "plannedDeltaEdges": [
+      [
+        "Delta Trapinch",
+        "Delta Vibrava"
+      ],
+      [
+        "Delta Vibrava",
+        "Delta Flygon"
+      ]
+    ],
+    "plannedDeltaFinalTyping": [
+      "TYPE_BUG",
+      "TYPE_GROUND"
+    ],
+    "initialDeltaStageTyping": {
+      "Delta Trapinch": "Bug required; secondary not explicitly approved",
+      "Delta Vibrava": "Bug required; secondary not explicitly approved"
+    },
+    "approvedDeltaEvolutionMethodsAndLevels": null,
+    "separateSpeciesVsAlternateFormStorageArchitecture": "UNDECIDED",
+    "noDeltaEvolutionDataInPlatinum": true,
+    "sourceOrpheusEvolutionDataWarning": "Do not use earlier source PBS Trapinch->Flygon or Vibrava->Lycanroc erroneous evolution records.",
+    "normalEvolutionChainPreserved": true
+  },
+  "blockers": [
+    {
+      "id": "ID-01",
+      "severity": "blocked",
+      "reason": "1025 canonical base species and 1026/1027 sentinels occupy current canonical ID namespace; no independent three-ID collision-free allocation or committed Delta form mapping",
+      "gate": "full planned 1599-row roster to game species/form-ID map + runtime code implementation"
+    },
+    {
+      "id": "ID-02",
+      "severity": "blocked",
+      "reason": "The Dex approved roster is larger than the base 1025 registry, so hypothetical 1028+ integers are not proven free",
+      "gate": "reconcile all proposed Mercury custom entries, forms, and Megas against namespace/engine IDs"
+    },
+    {
+      "id": "FORM-03",
+      "severity": "blocked",
+      "reason": "5-bit persistent form value and hard-coded icon/form routing; Delta Flygon line not registered",
+      "gate": "choose separate species or valid 1-based form scheme, then test full save/battle/party/box behaviour"
+    },
+    {
+      "id": "ICON-04",
+      "severity": "blocked",
+      "reason": "Bank 3 is zero-filled in source, but trial NCLR has not been installed and icon/color routing is absent; party and PC palette slot usage needs runtime collision proof",
+      "gate": "shared icon-bank allocation and multiple UI VRAM loading tests"
+    },
+    {
+      "id": "EVO-05",
+      "severity": "blocked",
+      "reason": "Normal evolution levels 35/45 do not establish Delta methods/levels; Delta stage dual types are not finalized",
+      "gate": "user-approved Delta methods, first-two-stage types and collision-free directed graph"
+    },
+    {
+      "id": "ART-06",
+      "severity": "blocked",
+      "reason": "Normal views, shiny choices and icon recolors are technically tested but unapproved; battle two-frame sources are static placeholders",
+      "gate": "user artwork approval, valid animation assets, rights provenance and ROM runtime checks"
+    }
+  ]
+}
