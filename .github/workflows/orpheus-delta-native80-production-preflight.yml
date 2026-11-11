@@ -25,6 +25,10 @@ jobs:
           set -euo pipefail
           python tools/orpheus_delta_native80_production_preflight.py
           test -s report/orpheus_delta_native80_preflight/preflight_qa.json
+      - name: Install C image libraries required by pret NitroGFX
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq pkg-config libpng-dev zlib1g-dev
       - name: Optional upstream NTR NitroGFX encoder roundtrip (if probe committed)
         run: |
           set -euo pipefail
