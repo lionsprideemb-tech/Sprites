@@ -1,0 +1,526 @@
+{
+  "schema": "mercury-orpheus-desert-scarab-wing-scale-final-polish-v1",
+  "baselineQAsha256": "6f7b5d3a6876b7257b6c014b19702ddcff043572bcd8317604248e7a18b9285a",
+  "baselineCommit": "f62646d0c667269f9b110a83ee4996b257e24713",
+  "canvas": [
+    80,
+    80
+  ],
+  "output": "unapproved experimental battle sprites",
+  "natureOfWork": "explicit pinned nontransparent pixel-index edits to preserve anatomy",
+  "totalChangedPixels": 52,
+  "totalWingPixels": 44,
+  "totalScutePixels": 8,
+  "allTransparentAndSilhouettesPreserved": true,
+  "stagePalettesUnchanged": true,
+  "noSourceChanges": true,
+  "noHistoricalVoteChanges": true,
+  "noProductionChanges": true,
+  "allUnapproved": true,
+  "noPlatinumIntegration": true,
+  "noROMBuildOrEmulatorTest": true,
+  "limitations": [
+    "Judgment of improved readability is subjective; review both native and enlarged sizes.",
+    "No shinies, icons, or NARC/NCGR/NCLR ROM assets have been created or integrated."
+  ],
+  "mobileComparison": "desert_scarab_veins_scutes_before_after_mobile.png",
+  "mobileComparisonSHA256": "7e3e8f86b312a11e18cbece4e8fc751b250b0c60bee0abe0082d9604342ed1ef",
+  "views": [
+    {
+      "view": "vibrava_front",
+      "sourcePNG": "vibrava_front_desert_scarab_80.png",
+      "sourceSHA256": "4a6e9b274940d375183723ab93896b0085177687ae899542efaa3e3cc04f6419",
+      "sourceTileSHA256": "a6599e7837746683f8753c651cc19df3d5a1a5e8ec1f2b183df895f1468944f9",
+      "sourcePaletteSHA256": "27cecb2edb7e2ff4911b1a5ae9d0a4feb047b986569c5c264251092d99ee428a",
+      "normalFrontBackOnly": true,
+      "canvas": [
+        80,
+        80
+      ],
+      "paletteEntries": 16,
+      "colorPaletteBytesIdentical": true,
+      "alphaMaskIdentical": true,
+      "sourceSilhouetteIdentical": true,
+      "transparentPixelsTouched": 0,
+      "changedPixelCount": 9,
+      "wingPixelEdits": 7,
+      "scutePixelEdits": 2,
+      "edits": [
+        {
+          "kind": "wing-vein",
+          "x": 52,
+          "y": 36,
+          "fromIndex": 12,
+          "toIndex": 10
+        },
+        {
+          "kind": "wing-vein",
+          "x": 53,
+          "y": 35,
+          "fromIndex": 12,
+          "toIndex": 11
+        },
+        {
+          "kind": "wing-vein",
+          "x": 54,
+          "y": 34,
+          "fromIndex": 12,
+          "toIndex": 11
+        },
+        {
+          "kind": "wing-vein",
+          "x": 55,
+          "y": 33,
+          "fromIndex": 12,
+          "toIndex": 11
+        },
+        {
+          "kind": "wing-vein",
+          "x": 56,
+          "y": 32,
+          "fromIndex": 12,
+          "toIndex": 11
+        },
+        {
+          "kind": "wing-vein",
+          "x": 57,
+          "y": 31,
+          "fromIndex": 12,
+          "toIndex": 11
+        },
+        {
+          "kind": "wing-vein",
+          "x": 58,
+          "y": 30,
+          "fromIndex": 12,
+          "toIndex": 11
+        },
+        {
+          "kind": "body-scute",
+          "x": 29,
+          "y": 48,
+          "fromIndex": 6,
+          "toIndex": 5
+        },
+        {
+          "kind": "body-scute",
+          "x": 34,
+          "y": 48,
+          "fromIndex": 3,
+          "toIndex": 4
+        }
+      ],
+      "png": "vibrava_front_desert_scarab_vein_scale80.png",
+      "tiles": "vibrava_front_desert_scarab_vein_scale80_4bpp_tiles.bin",
+      "palette": "vibrava_front_desert_scarab_vein_scale80_palette.bin",
+      "pngSHA256": "02e1cb75fe7ae1eeb14565b7a15dc86d538bbc5ee3e26888a47e559fefe0c39a",
+      "tileSHA256": "603fc59207fe29ecc5f49696472374dae773be258f662b480736887e20eda34d",
+      "paletteSHA256": "27cecb2edb7e2ff4911b1a5ae9d0a4feb047b986569c5c264251092d99ee428a",
+      "tileBytes": 3200,
+      "paletteBytes": 32,
+      "decodeToPNGExact": true,
+      "approved": false,
+      "romIntegrated": false
+    },
+    {
+      "view": "vibrava_back",
+      "sourcePNG": "vibrava_back_desert_scarab_80.png",
+      "sourceSHA256": "55deac9287cf1f8530026b8bd2e488b25099dfd4ba4b04bae4e79acd5d880559",
+      "sourceTileSHA256": "6451721c5e391125a65170a8b92764593703aed3d8c8724a677d7950ebce687b",
+      "sourcePaletteSHA256": "27cecb2edb7e2ff4911b1a5ae9d0a4feb047b986569c5c264251092d99ee428a",
+      "normalFrontBackOnly": true,
+      "canvas": [
+        80,
+        80
+      ],
+      "paletteEntries": 16,
+      "colorPaletteBytesIdentical": true,
+      "alphaMaskIdentical": true,
+      "sourceSilhouetteIdentical": true,
+      "transparentPixelsTouched": 0,
+      "changedPixelCount": 11,
+      "wingPixelEdits": 9,
+      "scutePixelEdits": 2,
+      "edits": [
+        {
+          "kind": "wing-vein",
+          "x": 44,
+          "y": 64,
+          "fromIndex": 12,
+          "toIndex": 10
+        },
+        {
+          "kind": "wing-vein",
+          "x": 42,
+          "y": 65,
+          "fromIndex": 12,
+          "toIndex": 11
+        },
+        {
+          "kind": "wing-vein",
+          "x": 40,
+          "y": 66,
+          "fromIndex": 12,
+          "toIndex": 11
+        },
+        {
+          "kind": "wing-vein",
+          "x": 38,
+          "y": 67,
+          "fromIndex": 12,
+          "toIndex": 11
+        },
+        {
+          "kind": "wing-vein",
+          "x": 36,
+          "y": 68,
+          "fromIndex": 12,
+          "toIndex": 11
+        },
+        {
+          "kind": "wing-vein",
+          "x": 34,
+          "y": 69,
+          "fromIndex": 12,
+          "toIndex": 11
+        },
+        {
+          "kind": "wing-vein",
+          "x": 32,
+          "y": 70,
+          "fromIndex": 12,
+          "toIndex": 11
+        },
+        {
+          "kind": "wing-vein",
+          "x": 30,
+          "y": 71,
+          "fromIndex": 12,
+          "toIndex": 11
+        },
+        {
+          "kind": "wing-vein",
+          "x": 28,
+          "y": 72,
+          "fromIndex": 12,
+          "toIndex": 11
+        },
+        {
+          "kind": "body-scute",
+          "x": 60,
+          "y": 56,
+          "fromIndex": 6,
+          "toIndex": 5
+        },
+        {
+          "kind": "body-scute",
+          "x": 51,
+          "y": 60,
+          "fromIndex": 4,
+          "toIndex": 5
+        }
+      ],
+      "png": "vibrava_back_desert_scarab_vein_scale80.png",
+      "tiles": "vibrava_back_desert_scarab_vein_scale80_4bpp_tiles.bin",
+      "palette": "vibrava_back_desert_scarab_vein_scale80_palette.bin",
+      "pngSHA256": "f78335001a8af4e0651e802cc175d62416f14f82c34789b077ad84d6ec1fce09",
+      "tileSHA256": "8fc7f0aff0982407d1b56e14bae9dbb03a099fcd222738b6cda1294b6a94882d",
+      "paletteSHA256": "27cecb2edb7e2ff4911b1a5ae9d0a4feb047b986569c5c264251092d99ee428a",
+      "tileBytes": 3200,
+      "paletteBytes": 32,
+      "decodeToPNGExact": true,
+      "approved": false,
+      "romIntegrated": false
+    },
+    {
+      "view": "flygon_front",
+      "sourcePNG": "flygon_front_desert_scarab_80.png",
+      "sourceSHA256": "b3d3f42e39856bb67cfc40b6ade6492dd7a9c9b10855fcc1ddccd2b357301c64",
+      "sourceTileSHA256": "da1b43d919eca861fbb36b3122d650fb3cc508328fa35b6a518e0e5ab3461d12",
+      "sourcePaletteSHA256": "1bf3ebadd0a226a2528b9fa2a1c42e1fb944f63067a173fd2ee4e8b629338205",
+      "normalFrontBackOnly": true,
+      "canvas": [
+        80,
+        80
+      ],
+      "paletteEntries": 16,
+      "colorPaletteBytesIdentical": true,
+      "alphaMaskIdentical": true,
+      "sourceSilhouetteIdentical": true,
+      "transparentPixelsTouched": 0,
+      "changedPixelCount": 16,
+      "wingPixelEdits": 14,
+      "scutePixelEdits": 2,
+      "edits": [
+        {
+          "kind": "wing-vein",
+          "x": 55,
+          "y": 34,
+          "fromIndex": 12,
+          "toIndex": 10
+        },
+        {
+          "kind": "wing-vein",
+          "x": 56,
+          "y": 33,
+          "fromIndex": 12,
+          "toIndex": 11
+        },
+        {
+          "kind": "wing-vein",
+          "x": 57,
+          "y": 32,
+          "fromIndex": 12,
+          "toIndex": 11
+        },
+        {
+          "kind": "wing-vein",
+          "x": 58,
+          "y": 31,
+          "fromIndex": 12,
+          "toIndex": 11
+        },
+        {
+          "kind": "wing-vein",
+          "x": 59,
+          "y": 30,
+          "fromIndex": 12,
+          "toIndex": 11
+        },
+        {
+          "kind": "wing-vein",
+          "x": 60,
+          "y": 29,
+          "fromIndex": 12,
+          "toIndex": 11
+        },
+        {
+          "kind": "wing-vein",
+          "x": 61,
+          "y": 28,
+          "fromIndex": 12,
+          "toIndex": 11
+        },
+        {
+          "kind": "wing-vein",
+          "x": 62,
+          "y": 27,
+          "fromIndex": 12,
+          "toIndex": 11
+        },
+        {
+          "kind": "wing-vein",
+          "x": 63,
+          "y": 26,
+          "fromIndex": 12,
+          "toIndex": 11
+        },
+        {
+          "kind": "wing-vein",
+          "x": 15,
+          "y": 29,
+          "fromIndex": 12,
+          "toIndex": 10
+        },
+        {
+          "kind": "wing-vein",
+          "x": 14,
+          "y": 28,
+          "fromIndex": 12,
+          "toIndex": 11
+        },
+        {
+          "kind": "wing-vein",
+          "x": 13,
+          "y": 27,
+          "fromIndex": 12,
+          "toIndex": 11
+        },
+        {
+          "kind": "wing-vein",
+          "x": 12,
+          "y": 26,
+          "fromIndex": 12,
+          "toIndex": 11
+        },
+        {
+          "kind": "wing-vein",
+          "x": 11,
+          "y": 25,
+          "fromIndex": 12,
+          "toIndex": 11
+        },
+        {
+          "kind": "body-scute",
+          "x": 21,
+          "y": 43,
+          "fromIndex": 5,
+          "toIndex": 4
+        },
+        {
+          "kind": "body-scute",
+          "x": 33,
+          "y": 53,
+          "fromIndex": 3,
+          "toIndex": 4
+        }
+      ],
+      "png": "flygon_front_desert_scarab_vein_scale80.png",
+      "tiles": "flygon_front_desert_scarab_vein_scale80_4bpp_tiles.bin",
+      "palette": "flygon_front_desert_scarab_vein_scale80_palette.bin",
+      "pngSHA256": "537ffd559aed81e58ee21d49c3c23f37d7edd549c32c80b55f3d32fb7a256e64",
+      "tileSHA256": "d41c782e8001dd52a6a8d2d8de6c694ea92cc66be07f85b161c6fd9ba1ccc404",
+      "paletteSHA256": "1bf3ebadd0a226a2528b9fa2a1c42e1fb944f63067a173fd2ee4e8b629338205",
+      "tileBytes": 3200,
+      "paletteBytes": 32,
+      "decodeToPNGExact": true,
+      "approved": false,
+      "romIntegrated": false
+    },
+    {
+      "view": "flygon_back",
+      "sourcePNG": "flygon_back_desert_scarab_80.png",
+      "sourceSHA256": "b845464018277bf183f30dbec059d5d02941042972f65a3b35d3177dc7952ab9",
+      "sourceTileSHA256": "3a4c60ec44e6e30d9b5cfa0a723bfda321c3321c41213c60d11436bd62c8e40d",
+      "sourcePaletteSHA256": "1bf3ebadd0a226a2528b9fa2a1c42e1fb944f63067a173fd2ee4e8b629338205",
+      "normalFrontBackOnly": true,
+      "canvas": [
+        80,
+        80
+      ],
+      "paletteEntries": 16,
+      "colorPaletteBytesIdentical": true,
+      "alphaMaskIdentical": true,
+      "sourceSilhouetteIdentical": true,
+      "transparentPixelsTouched": 0,
+      "changedPixelCount": 16,
+      "wingPixelEdits": 14,
+      "scutePixelEdits": 2,
+      "edits": [
+        {
+          "kind": "wing-vein",
+          "x": 50,
+          "y": 38,
+          "fromIndex": 12,
+          "toIndex": 10
+        },
+        {
+          "kind": "wing-vein",
+          "x": 51,
+          "y": 37,
+          "fromIndex": 12,
+          "toIndex": 11
+        },
+        {
+          "kind": "wing-vein",
+          "x": 52,
+          "y": 36,
+          "fromIndex": 12,
+          "toIndex": 11
+        },
+        {
+          "kind": "wing-vein",
+          "x": 53,
+          "y": 35,
+          "fromIndex": 12,
+          "toIndex": 11
+        },
+        {
+          "kind": "wing-vein",
+          "x": 54,
+          "y": 34,
+          "fromIndex": 12,
+          "toIndex": 11
+        },
+        {
+          "kind": "wing-vein",
+          "x": 55,
+          "y": 33,
+          "fromIndex": 12,
+          "toIndex": 11
+        },
+        {
+          "kind": "wing-vein",
+          "x": 56,
+          "y": 32,
+          "fromIndex": 12,
+          "toIndex": 11
+        },
+        {
+          "kind": "wing-vein",
+          "x": 57,
+          "y": 31,
+          "fromIndex": 12,
+          "toIndex": 11
+        },
+        {
+          "kind": "wing-vein",
+          "x": 22,
+          "y": 41,
+          "fromIndex": 12,
+          "toIndex": 10
+        },
+        {
+          "kind": "wing-vein",
+          "x": 21,
+          "y": 40,
+          "fromIndex": 12,
+          "toIndex": 11
+        },
+        {
+          "kind": "wing-vein",
+          "x": 20,
+          "y": 39,
+          "fromIndex": 12,
+          "toIndex": 11
+        },
+        {
+          "kind": "wing-vein",
+          "x": 19,
+          "y": 38,
+          "fromIndex": 12,
+          "toIndex": 11
+        },
+        {
+          "kind": "wing-vein",
+          "x": 18,
+          "y": 37,
+          "fromIndex": 12,
+          "toIndex": 11
+        },
+        {
+          "kind": "wing-vein",
+          "x": 17,
+          "y": 36,
+          "fromIndex": 12,
+          "toIndex": 11
+        },
+        {
+          "kind": "body-scute",
+          "x": 66,
+          "y": 50,
+          "fromIndex": 4,
+          "toIndex": 5
+        },
+        {
+          "kind": "body-scute",
+          "x": 54,
+          "y": 60,
+          "fromIndex": 4,
+          "toIndex": 3
+        }
+      ],
+      "png": "flygon_back_desert_scarab_vein_scale80.png",
+      "tiles": "flygon_back_desert_scarab_vein_scale80_4bpp_tiles.bin",
+      "palette": "flygon_back_desert_scarab_vein_scale80_palette.bin",
+      "pngSHA256": "c2653b25f5babf92ede4a4cc35eceb54aab82536dc8d25b5724d6512690061b7",
+      "tileSHA256": "988bb43033e3a14357892349a46ad9151e913f725e1f7b678baf6b6a8b4d4c1a",
+      "paletteSHA256": "1bf3ebadd0a226a2528b9fa2a1c42e1fb944f63067a173fd2ee4e8b629338205",
+      "tileBytes": 3200,
+      "paletteBytes": 32,
+      "decodeToPNGExact": true,
+      "approved": false,
+      "romIntegrated": false
+    }
+  ]
+}
