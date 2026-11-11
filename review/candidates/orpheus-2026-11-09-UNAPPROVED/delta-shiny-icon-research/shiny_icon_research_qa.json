@@ -98,7 +98,38 @@
         128,
         64
       ],
-      "exact32x32Cells": [
+      "sourceFrameAssumption": "two 64x64 source frames; verify game semantics separately",
+      "sourceFrames64x64": [
+        {
+          "frame": 0,
+          "file": "original-icon-source/trapinch/original_frame_00_64x64.png",
+          "sha256": "49d78583f3398c95987dd0036481882e3cd29c06536fc53b406c9df3c28cd87c",
+          "opaqueBounds": [
+            14,
+            28,
+            50,
+            62
+          ],
+          "occupiedWidth": 36,
+          "occupiedHeight": 34,
+          "lossless32CropPossible": false
+        },
+        {
+          "frame": 1,
+          "file": "original-icon-source/trapinch/original_frame_01_64x64.png",
+          "sha256": "7af6651bd77550d6d333501f9ff6640a40229de704ae2010e3d6273f8e74372d",
+          "opaqueBounds": [
+            14,
+            30,
+            50,
+            62
+          ],
+          "occupiedWidth": 36,
+          "occupiedHeight": 32,
+          "lossless32CropPossible": false
+        }
+      ],
+      "exact32x32RawTileCellsNotIndependentIcons": [
         {
           "cell": 0,
           "image": "original-icon-source/trapinch/original_cell_00.png",
@@ -251,7 +282,38 @@
         128,
         64
       ],
-      "exact32x32Cells": [
+      "sourceFrameAssumption": "two 64x64 source frames; verify game semantics separately",
+      "sourceFrames64x64": [
+        {
+          "frame": 0,
+          "file": "original-icon-source/vibrava/original_frame_00_64x64.png",
+          "sha256": "d17693ba0e5a4b9129db83921809e651ff8786a84ebce6ec19d0bbfca4095f78",
+          "opaqueBounds": [
+            8,
+            22,
+            52,
+            56
+          ],
+          "occupiedWidth": 44,
+          "occupiedHeight": 34,
+          "lossless32CropPossible": false
+        },
+        {
+          "frame": 1,
+          "file": "original-icon-source/vibrava/original_frame_01_64x64.png",
+          "sha256": "26d425e30e54f886bb459f28675a014a22f77c7d7bdb0e46c0ad06d5260ad760",
+          "opaqueBounds": [
+            8,
+            24,
+            54,
+            56
+          ],
+          "occupiedWidth": 46,
+          "occupiedHeight": 32,
+          "lossless32CropPossible": false
+        }
+      ],
+      "exact32x32RawTileCellsNotIndependentIcons": [
         {
           "cell": 0,
           "image": "original-icon-source/vibrava/original_cell_00.png",
@@ -409,7 +471,38 @@
         128,
         64
       ],
-      "exact32x32Cells": [
+      "sourceFrameAssumption": "two 64x64 source frames; verify game semantics separately",
+      "sourceFrames64x64": [
+        {
+          "frame": 0,
+          "file": "original-icon-source/flygon/original_frame_00_64x64.png",
+          "sha256": "984314d562d21417bdbda6f56652bf79b2c1804ee19176c8097a08555d1cf54c",
+          "opaqueBounds": [
+            8,
+            18,
+            52,
+            60
+          ],
+          "occupiedWidth": 44,
+          "occupiedHeight": 42,
+          "lossless32CropPossible": false
+        },
+        {
+          "frame": 1,
+          "file": "original-icon-source/flygon/original_frame_01_64x64.png",
+          "sha256": "78386938fee83c73420257c8a870cfea2747bc128d3dad26b56b2c39505e4c73",
+          "opaqueBounds": [
+            8,
+            18,
+            50,
+            62
+          ],
+          "occupiedWidth": 42,
+          "occupiedHeight": 44,
+          "lossless32CropPossible": false
+        }
+      ],
+      "exact32x32RawTileCellsNotIndependentIcons": [
         {
           "cell": 0,
           "image": "original-icon-source/flygon/original_cell_00.png",
