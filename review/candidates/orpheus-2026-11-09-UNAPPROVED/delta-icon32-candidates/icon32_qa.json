@@ -1,0 +1,144 @@
+{
+  "schema": "mercury-orpheus-delta-source-icon32-technical-study-v1",
+  "sourceArchive": "Original Orpheus regional icons, exact research branch source snapshots",
+  "inputSheetsOriginal": [
+    128,
+    64
+  ],
+  "derivedFrames": [
+    32,
+    32
+  ],
+  "derivedSheet": [
+    64,
+    32
+  ],
+  "notApproved": true,
+  "noPlatinumChange": true,
+  "notProductionIconArchive": true,
+  "notGameAnimatedOrTested": true,
+  "originalPixelsSourceLocked": true,
+  "caveats": [
+    "2x nearest downsampling may be lossy when original 2x blocks differ; per-stage exact counts included.",
+    "Recolor uses stage battle color palette, but is a visual draft not a selected icon.",
+    "Icon animation sequence and actual upstream icon NARC processing unverified."
+  ],
+  "comparison": "all_three_icon32_technical_comparison.png",
+  "comparisonSHA256": "eb937813967fdbceb19cb96a1f714d76cbbdb6ff1d3a70a62701cccec0654eb0",
+  "results": [
+    {
+      "stage": "trapinch",
+      "originalSource": "review/candidates/orpheus-2026-11-09-UNAPPROVED/delta-shiny-icon-research/original-icon-source/trapinch/icon_original_128x64.png",
+      "originalSHA256": "27c964e9f7558f9332179e3b356ed1e19e5a41de28f739dee2c21d88f8b27a4f",
+      "sourceCanvas": [
+        128,
+        64
+      ],
+      "assumedAnimationFrames": 2,
+      "sourceFrameEach": [
+        64,
+        64
+      ],
+      "targetIconFrameEach": [
+        32,
+        32
+      ],
+      "original2xExactBlockCount": 2048,
+      "original2xAlphaExactBlockCount": 2048,
+      "original2xBlockTotal": 2048,
+      "originalDownscaleIsLossless": true,
+      "retone": "provisional stage-aware hue and shade remap",
+      "sourcePaletteSHA256": "ba3432e44657f4d957a5f18a0791ac865294deb630b8b557bf235dd500661e8b",
+      "same16BGR555EntriesAsBattleFront": true,
+      "indexedPixelRoundtrip": true,
+      "alphaPreservedAfterNearestDownsample": true,
+      "png": "trapinch/desert_scarab_ICON32x2_PROPOSAL.png",
+      "indexedPNG": "trapinch/desert_scarab_ICON32x2_indexed.png",
+      "sourceDownsample": "trapinch/original_2xsample_64x32.png",
+      "tiles": "trapinch/desert_scarab_ICON32x2_4bpp_tiles.bin",
+      "palette": "trapinch/desert_scarab_ICON32x2_palette.bin",
+      "pngSHA256": "809cbfcc4e4d4465be6fa2f864b0e0c899ee70a7271aac46790301fcb25d1e01",
+      "tilesSHA256": "8ebdd4b917d14d1987d25c26c0595ae2c38b2670a8be1bcf52b516e00c17857f",
+      "tileBytes": 1024,
+      "paletteBytes": 32,
+      "approved": false,
+      "romIntegrated": false
+    },
+    {
+      "stage": "vibrava",
+      "originalSource": "review/candidates/orpheus-2026-11-09-UNAPPROVED/delta-shiny-icon-research/original-icon-source/vibrava/icon_original_128x64.png",
+      "originalSHA256": "ba3d9dec952b5465e420f161ae8a5bb9a277157ee5098f0b858d60e7f995fa56",
+      "sourceCanvas": [
+        128,
+        64
+      ],
+      "assumedAnimationFrames": 2,
+      "sourceFrameEach": [
+        64,
+        64
+      ],
+      "targetIconFrameEach": [
+        32,
+        32
+      ],
+      "original2xExactBlockCount": 2048,
+      "original2xAlphaExactBlockCount": 2048,
+      "original2xBlockTotal": 2048,
+      "originalDownscaleIsLossless": true,
+      "retone": "provisional stage-aware hue and shade remap",
+      "sourcePaletteSHA256": "27cecb2edb7e2ff4911b1a5ae9d0a4feb047b986569c5c264251092d99ee428a",
+      "same16BGR555EntriesAsBattleFront": true,
+      "indexedPixelRoundtrip": true,
+      "alphaPreservedAfterNearestDownsample": true,
+      "png": "vibrava/desert_scarab_ICON32x2_PROPOSAL.png",
+      "indexedPNG": "vibrava/desert_scarab_ICON32x2_indexed.png",
+      "sourceDownsample": "vibrava/original_2xsample_64x32.png",
+      "tiles": "vibrava/desert_scarab_ICON32x2_4bpp_tiles.bin",
+      "palette": "vibrava/desert_scarab_ICON32x2_palette.bin",
+      "pngSHA256": "ed9c41102ce7d485b52337d8855ffa59f7a67978d73342c0bc3f0dbe362396b4",
+      "tilesSHA256": "921d7d7d8ac155d4e39d72e08225c6dd7337c14a619b45e5b6ad1ef8852d5bc6",
+      "tileBytes": 1024,
+      "paletteBytes": 32,
+      "approved": false,
+      "romIntegrated": false
+    },
+    {
+      "stage": "flygon",
+      "originalSource": "review/candidates/orpheus-2026-11-09-UNAPPROVED/delta-shiny-icon-research/original-icon-source/flygon/icon_original_128x64.png",
+      "originalSHA256": "555c79e8756ced7efaecea043f3fe6fbda83a59bd5124e91489d02d7d01d06f1",
+      "sourceCanvas": [
+        128,
+        64
+      ],
+      "assumedAnimationFrames": 2,
+      "sourceFrameEach": [
+        64,
+        64
+      ],
+      "targetIconFrameEach": [
+        32,
+        32
+      ],
+      "original2xExactBlockCount": 2048,
+      "original2xAlphaExactBlockCount": 2048,
+      "original2xBlockTotal": 2048,
+      "originalDownscaleIsLossless": true,
+      "retone": "provisional stage-aware hue and shade remap",
+      "sourcePaletteSHA256": "1bf3ebadd0a226a2528b9fa2a1c42e1fb944f63067a173fd2ee4e8b629338205",
+      "same16BGR555EntriesAsBattleFront": true,
+      "indexedPixelRoundtrip": true,
+      "alphaPreservedAfterNearestDownsample": true,
+      "png": "flygon/desert_scarab_ICON32x2_PROPOSAL.png",
+      "indexedPNG": "flygon/desert_scarab_ICON32x2_indexed.png",
+      "sourceDownsample": "flygon/original_2xsample_64x32.png",
+      "tiles": "flygon/desert_scarab_ICON32x2_4bpp_tiles.bin",
+      "palette": "flygon/desert_scarab_ICON32x2_palette.bin",
+      "pngSHA256": "acdab3680bab071378d4d1d47c39e9baafa4c1b5b3001ba39c23ae49cdacd193",
+      "tilesSHA256": "41c938a4a1550894f58502052b6da3a48f814aec9d2b7f9e4525e70659ba2e9c",
+      "tileBytes": 1024,
+      "paletteBytes": 32,
+      "approved": false,
+      "romIntegrated": false
+    }
+  ]
+}
