@@ -37,12 +37,10 @@ jobs:
             -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/tmp/mercury-libpng -DPNG_TESTS=OFF
           cmake --build /tmp/mercury-libpng-build --parallel 2
           cmake --install /tmp/mercury-libpng-build
-          pc=$(find /tmp/mercury-libpng -type f -name libpng.pc -print -quit)
-          test -n "$pc"
-          echo "PKG_CONFIG_PATH=$(dirname "$pc"):${PKG_CONFIG_PATH:-}" >> "$GITHUB_ENV"
-          lib=$(find /tmp/mercury-libpng -type f -name 'libpng*.so*' -printf '%h\n' | head -n 1)
-          test -n "$lib"
-          echo "LD_LIBRARY_PATH=$lib:${LD_LIBRARY_PATH:-}" >> "$GITHUB_ENV"
+          test -f /tmp/mercury-libpng/lib/pkgconfig/libpng.pc
+          test -f /tmp/mercury-libpng/include/png.h
+          echo "PKG_CONFIG_PATH=/tmp/mercury-libpng/lib/pkgconfig:${PKG_CONFIG_PATH:-}" >> "$GITHUB_ENV"
+          echo "LD_LIBRARY_PATH=/tmp/mercury-libpng/lib:${LD_LIBRARY_PATH:-}" >> "$GITHUB_ENV"
       - name: Optional upstream NTR NitroGFX encoder roundtrip (if probe committed)
         run: |
           set -euo pipefail
