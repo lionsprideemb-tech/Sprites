@@ -1,0 +1,287 @@
+{
+  "schema": "mercury-delta-orpheus-shared-icon-bank-pret-platinum-preflight-v1",
+  "source": "Unmodified upstream pret/pokeplatinum shared 256-color icon palette",
+  "upstreamPalPath": "res/pokemon/.shared/pl_poke_icon.pal",
+  "sharedPaletteSHA256": "028f1b846fd660fac729a37853fcd78d5c0e5ad37e72fecadb908913752cc569",
+  "sharedPaletteEntryCount": 256,
+  "populated16ColorBanks": [
+    0,
+    1,
+    2
+  ],
+  "allReservedBanksUntouched": true,
+  "originalSourceIcon32Views": 6,
+  "gameCanvas": [
+    32,
+    64
+  ],
+  "nativeEncoderFlags": [
+    "-clobbersize",
+    "-version101"
+  ],
+  "nativeDecoderPixelDifferencesAll": 0,
+  "sourceAlphaMasksAllPreserved": true,
+  "unapproved": true,
+  "notFormRegistered": true,
+  "noROMModifications": true,
+  "noNARCInjected": true,
+  "gameRuntimeNotTested": true,
+  "warnings": [
+    "Visual choice based on CIE Lab color error, not an accepted artwork approval.",
+    "A bank must be explicitly assigned in Delta form metadata; current vanilla species mappings are not modified.",
+    "Platinum's shared icon palette remains intact. Other Pok\u00e9mon assets retain their own original palette indices.",
+    "Actual new form/ID collision-safe registration and NARC archive assembly are not complete."
+  ],
+  "preview": "shared-icon-palette/all_three_shared_palette_choices_mobile.png",
+  "stageResults": [
+    {
+      "stage": "trapinch",
+      "sourceIndexed32x64SHA256": "780265cee46960609d6ab236b541134b693580b2db7c36587af06d65ecfed48b",
+      "sourceRawTileSHA256": "179e8c7c13b6b7fa226a1380272c98698f83305415d6aca307e7b99fb63df410",
+      "sourceAlphaPixelCount": 390,
+      "sharedSourcePaletteSHA256": "028f1b846fd660fac729a37853fcd78d5c0e5ad37e72fecadb908913752cc569",
+      "sharedSourcePaletteLength": 256,
+      "sharedPalettePreservedExact": true,
+      "availableNonzeroPaletteBanks": 3,
+      "candidateBankChoices": [
+        {
+          "bank": 0,
+          "paletteIndexInGame": 0,
+          "rmsLabDeltaE76": 20.0644,
+          "maxUniqueColorDeltaE76": 23.7386,
+          "usedNontransparentColors": 5,
+          "sourceUsedColors": 7,
+          "sourceColorToBankIndex": {
+            "2": 15,
+            "4": 6,
+            "5": 6,
+            "6": 11,
+            "8": 1,
+            "10": 11,
+            "15": 3
+          }
+        },
+        {
+          "bank": 1,
+          "paletteIndexInGame": 1,
+          "rmsLabDeltaE76": 23.7949,
+          "maxUniqueColorDeltaE76": 30.9232,
+          "usedNontransparentColors": 5,
+          "sourceUsedColors": 7,
+          "sourceColorToBankIndex": {
+            "2": 15,
+            "4": 9,
+            "5": 9,
+            "6": 9,
+            "8": 14,
+            "10": 11,
+            "15": 3
+          }
+        },
+        {
+          "bank": 2,
+          "paletteIndexInGame": 2,
+          "rmsLabDeltaE76": 13.3238,
+          "maxUniqueColorDeltaE76": 14.7535,
+          "usedNontransparentColors": 4,
+          "sourceUsedColors": 7,
+          "sourceColorToBankIndex": {
+            "2": 15,
+            "4": 6,
+            "5": 6,
+            "6": 7,
+            "8": 6,
+            "10": 7,
+            "15": 3
+          }
+        }
+      ],
+      "recommendedBank": 2,
+      "recommendedPaletteIndexMetadata": 2,
+      "recommendationIsArtworkApproval": false,
+      "paletteBankIsNotNewOrAllocated": true,
+      "indexPixelDifferenceAfterRealEncoderDecoder": 0,
+      "alphaMaskPreserved": true,
+      "4bppTileBytes": 1024,
+      "encodedNCGRBytes": 1072,
+      "ncgrSHA256": "f637bd7dc20555fde49532ed85d6b722f84a660f70ad1ac0c6547840b7a0cd1e",
+      "indexedSourceSHA256": "fe507eea405f37ee0fc879abe00749ebd220a9bd5396d8c50aacc04ed5d8e0f0",
+      "decodedPNG_SHA256": "b4e3736d646811ae4d170abe91c10586af4827883d0b1a2c52dfd6073a95140b",
+      "unapprovedInputPNG": "review/candidates/orpheus-2026-11-09-UNAPPROVED/delta-icon32-candidates/trapinch/desert_scarab_ICON_STACKED_32x64_INDEXED4.png",
+      "paletteCompatibleSourcePNG": "trapinch/trapinch_shared_bank2_32x64_unapproved.png",
+      "tileFile": "trapinch/trapinch_shared_bank2_raw4bpp_tiles.bin",
+      "nativeNCGR": "trapinch/trapinch_shared_bank2.NCGR",
+      "nativeNitroGfxDecode": "trapinch/trapinch_shared_bank2_decoded.png",
+      "approved": false,
+      "integrated": false
+    },
+    {
+      "stage": "vibrava",
+      "sourceIndexed32x64SHA256": "77febfbbc0a0cc8e5f0fec71a95b030965bbad41a6d3caf0f22d47c79a37c792",
+      "sourceRawTileSHA256": "6f54166bb4871b7e7d8f11e431af0420d208d662e5a21a0ad268703a9c6f9f42",
+      "sourceAlphaPixelCount": 441,
+      "sharedSourcePaletteSHA256": "028f1b846fd660fac729a37853fcd78d5c0e5ad37e72fecadb908913752cc569",
+      "sharedSourcePaletteLength": 256,
+      "sharedPalettePreservedExact": true,
+      "availableNonzeroPaletteBanks": 3,
+      "candidateBankChoices": [
+        {
+          "bank": 0,
+          "paletteIndexInGame": 0,
+          "rmsLabDeltaE76": 23.1195,
+          "maxUniqueColorDeltaE76": 31.2892,
+          "usedNontransparentColors": 5,
+          "sourceUsedColors": 7,
+          "sourceColorToBankIndex": {
+            "2": 15,
+            "3": 14,
+            "5": 4,
+            "7": 11,
+            "10": 4,
+            "11": 4,
+            "12": 2
+          }
+        },
+        {
+          "bank": 1,
+          "paletteIndexInGame": 1,
+          "rmsLabDeltaE76": 14.709,
+          "maxUniqueColorDeltaE76": 20.2899,
+          "usedNontransparentColors": 5,
+          "sourceUsedColors": 7,
+          "sourceColorToBankIndex": {
+            "2": 15,
+            "3": 14,
+            "5": 9,
+            "7": 11,
+            "10": 4,
+            "11": 4,
+            "12": 11
+          }
+        },
+        {
+          "bank": 2,
+          "paletteIndexInGame": 2,
+          "rmsLabDeltaE76": 18.0018,
+          "maxUniqueColorDeltaE76": 34.7376,
+          "usedNontransparentColors": 4,
+          "sourceUsedColors": 7,
+          "sourceColorToBankIndex": {
+            "2": 15,
+            "3": 14,
+            "5": 6,
+            "7": 7,
+            "10": 7,
+            "11": 7,
+            "12": 7
+          }
+        }
+      ],
+      "recommendedBank": 1,
+      "recommendedPaletteIndexMetadata": 1,
+      "recommendationIsArtworkApproval": false,
+      "paletteBankIsNotNewOrAllocated": true,
+      "indexPixelDifferenceAfterRealEncoderDecoder": 0,
+      "alphaMaskPreserved": true,
+      "4bppTileBytes": 1024,
+      "encodedNCGRBytes": 1072,
+      "ncgrSHA256": "0f14ce2522c67d6846c6b0562b038fbda2d3eef651917900345be0aaf41e5483",
+      "indexedSourceSHA256": "ea94e6e84cdda5a2ad7be0fa67e1a565834098fd34c5a96ceb1e2e906a26879b",
+      "decodedPNG_SHA256": "361de8645a27506f95c59539c24074dcac37a2f2f2b650e4c045ff9f48b57760",
+      "unapprovedInputPNG": "review/candidates/orpheus-2026-11-09-UNAPPROVED/delta-icon32-candidates/vibrava/desert_scarab_ICON_STACKED_32x64_INDEXED4.png",
+      "paletteCompatibleSourcePNG": "vibrava/vibrava_shared_bank1_32x64_unapproved.png",
+      "tileFile": "vibrava/vibrava_shared_bank1_raw4bpp_tiles.bin",
+      "nativeNCGR": "vibrava/vibrava_shared_bank1.NCGR",
+      "nativeNitroGfxDecode": "vibrava/vibrava_shared_bank1_decoded.png",
+      "approved": false,
+      "integrated": false
+    },
+    {
+      "stage": "flygon",
+      "sourceIndexed32x64SHA256": "7d869b84d1fb158415afa3f0ec4a2657941340160eae9586b35ca83b8c39132f",
+      "sourceRawTileSHA256": "8ac459c895d9f6e11a340113260e187189cf1b8254581547de5b10384f9d41db",
+      "sourceAlphaPixelCount": 601,
+      "sharedSourcePaletteSHA256": "028f1b846fd660fac729a37853fcd78d5c0e5ad37e72fecadb908913752cc569",
+      "sharedSourcePaletteLength": 256,
+      "sharedPalettePreservedExact": true,
+      "availableNonzeroPaletteBanks": 3,
+      "candidateBankChoices": [
+        {
+          "bank": 0,
+          "paletteIndexInGame": 0,
+          "rmsLabDeltaE76": 24.46,
+          "maxUniqueColorDeltaE76": 36.3699,
+          "usedNontransparentColors": 5,
+          "sourceUsedColors": 9,
+          "sourceColorToBankIndex": {
+            "2": 15,
+            "3": 14,
+            "4": 14,
+            "5": 1,
+            "7": 11,
+            "9": 1,
+            "11": 4,
+            "12": 4,
+            "14": 4
+          }
+        },
+        {
+          "bank": 1,
+          "paletteIndexInGame": 1,
+          "rmsLabDeltaE76": 19.6819,
+          "maxUniqueColorDeltaE76": 25.6792,
+          "usedNontransparentColors": 5,
+          "sourceUsedColors": 9,
+          "sourceColorToBankIndex": {
+            "2": 15,
+            "3": 14,
+            "4": 14,
+            "5": 9,
+            "7": 9,
+            "9": 4,
+            "11": 4,
+            "12": 11,
+            "14": 4
+          }
+        },
+        {
+          "bank": 2,
+          "paletteIndexInGame": 2,
+          "rmsLabDeltaE76": 19.1814,
+          "maxUniqueColorDeltaE76": 41.2607,
+          "usedNontransparentColors": 5,
+          "sourceUsedColors": 9,
+          "sourceColorToBankIndex": {
+            "2": 15,
+            "3": 14,
+            "4": 6,
+            "5": 6,
+            "7": 7,
+            "9": 14,
+            "11": 7,
+            "12": 7,
+            "14": 8
+          }
+        }
+      ],
+      "recommendedBank": 2,
+      "recommendedPaletteIndexMetadata": 2,
+      "recommendationIsArtworkApproval": false,
+      "paletteBankIsNotNewOrAllocated": true,
+      "indexPixelDifferenceAfterRealEncoderDecoder": 0,
+      "alphaMaskPreserved": true,
+      "4bppTileBytes": 1024,
+      "encodedNCGRBytes": 1072,
+      "ncgrSHA256": "8f43fe7676a2702f149f7226166a89540f2c4fe6aa353d506798e62ba02811e1",
+      "indexedSourceSHA256": "8b59a2bc4e7ead7ab51db1cd07de0c7179750f5ab65e3ca2a72385aed55bdb40",
+      "decodedPNG_SHA256": "3e408060f6e0637a4a4526bf8d9573239b0ad579cffa43e6fb561125080bf2d9",
+      "unapprovedInputPNG": "review/candidates/orpheus-2026-11-09-UNAPPROVED/delta-icon32-candidates/flygon/desert_scarab_ICON_STACKED_32x64_INDEXED4.png",
+      "paletteCompatibleSourcePNG": "flygon/flygon_shared_bank2_32x64_unapproved.png",
+      "tileFile": "flygon/flygon_shared_bank2_raw4bpp_tiles.bin",
+      "nativeNCGR": "flygon/flygon_shared_bank2.NCGR",
+      "nativeNitroGfxDecode": "flygon/flygon_shared_bank2_decoded.png",
+      "approved": false,
+      "integrated": false
+    }
+  ]
+}
