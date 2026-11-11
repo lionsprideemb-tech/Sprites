@@ -1,0 +1,211 @@
+{
+  "schema": "mercury-sprite-completion-exception-audit-v1",
+  "auditedLocalDate": "2026-11-10",
+  "timezone": "America/Chicago",
+  "status": "audit_only_no_approvals_or_integration",
+  "repositories": {
+    "sprites": {
+      "repo": "lionsprideemb-tech/Sprites",
+      "defaultBranch": "main",
+      "mainHead": "f15c4671bf7afb15450fc7801bde17aefcdc4f7e",
+      "isolatedBranch": "mercury/orpheus-resource-audit-20261109",
+      "fourViewPolishCommit": "c4ef60fc37c843ce782bfde26abf0106ad6b08cf"
+    },
+    "dex": {
+      "repo": "lionsprideemb-tech/Mercury-redux-dex",
+      "mainHead": "faa7cb4016d8"
+    },
+    "platinum": {
+      "repo": "lionsprideemb-tech/platinum-modern-ds",
+      "mainHead": "5525e961a1fb"
+    }
+  },
+  "protectedSources": {
+    "originalIphoneVotes": {
+      "path": "review/user-iphone-decisions-2026-10-23.json",
+      "gitBlobSHA": "61c5e53c6ec81b74d192cd62a4c52c970cea15ce",
+      "count": 166,
+      "keep": 154,
+      "cut": 12
+    },
+    "originalHistoricalLedger": {
+      "path": "audit/2026-10-23/historical-decisions.json",
+      "gitBlobSHA": "e8e8474cbe127ab274086ea818aa86a821c990b5",
+      "rows": 1043
+    },
+    "approvedFinalOverlay": {
+      "path": "review/final-artwork-approval-overlay-2026-10-24.json",
+      "gitBlobSHA": "89f328b4471f1531520305e54f63efdbc6251a50",
+      "newChoices": 4,
+      "currentActionableDecisionsDone": 158,
+      "currentActionableTotal": 158
+    },
+    "flygonPlan": {
+      "path": "review/flygon-roster-plan-2026-11-09.json",
+      "gitBlobSHA": "e2c29dcbb27c5354f00a594a9ffbb466cc962e85"
+    }
+  },
+  "deltaFlygon": {
+    "family": "Delta Trapinch → Delta Vibrava → Delta Flygon",
+    "requirement": "Trapinch has Bug; Vibrava has Bug; Flygon Bug/Ground",
+    "classicLineProtected": true,
+    "regularMegaFlygonOnlyOne": true,
+    "deltaMegaPlanned": false,
+    "retiredElectricReduxBAndMega": true,
+    "originalOrpheusSourceNormalFrontBack": 6,
+    "native80OriginalColorFourBppNormals": 6,
+    "recommendedNewDesertScarabNormalFrontBack": [
+      "vibrava_front",
+      "vibrava_back",
+      "flygon_front",
+      "flygon_back"
+    ],
+    "recommendationsAreNotVotes": true,
+    "approvedNewDesertScarabViews": 0,
+    "remainingDesertScarabStage": "Trapinch FRONT and BACK, requires new palette treatment and preview, not an inferred KEEP",
+    "unverifiedNewDeltaShinyViews": 6,
+    "rawOrpheusRegionalIconSheets": 3,
+    "certifiedNativeDSDeltaIcons": 0,
+    "productionGraphicsCertified": 0,
+    "originalArtSourceNote": "Artist permission reported by user; written redistribution/recolor attribution terms not independently verified",
+    "invalidOriginalOrpheusEvolutionGraph": "Trapinch unexpectedly evolves straight to Flygon, Vibrava incorrectly links to Lycanroc; do not import",
+    "localRefinementQA": "review/candidates/orpheus-2026-11-09-UNAPPROVED/desert-scarab-vein-scute-polish-native80/veins_scutes_exact_QA.json",
+    "polishVerifiedOriginalPalette": true,
+    "polish4bppTileRoundTrip": true,
+    "polishFourViewPixelEdits": 60,
+    "polishUnapproved": true,
+    "recommendedForApprovalOnly": true,
+    "sourceNotInProduction": true
+  },
+  "curation": {
+    "lastVerifiedCurrentActionableArtDecisions": 158,
+    "lastVerifiedActionablePending": 0,
+    "preexistingTechnicalHolds": 14,
+    "unresolvedEvolutionIdentityWarnings": 5,
+    "unresolvedEvolutionNames": [
+      "Hayog",
+      "Hogouse",
+      "Hogriks",
+      "Minamai",
+      "Marelstorm"
+    ],
+    "noChangeToWailmerWailordRaintherOrMegaVotes": true,
+    "legacyMasterRemainsCanonical": "https://lionsprideemb-tech.github.io/Sprites/master-review.html"
+  },
+  "restricted83SetTechnicalInventory": {
+    "notice": "Restricted 83-artwork-source technical QA set, not all Pokémon, all Megas, or all sprite library files",
+    "sourceDesigns": 83,
+    "expectedFrontBackShinySlots": 332,
+    "recoveredSource64PreviewSlots": 108,
+    "sourceColorPreservedViews": 68,
+    "quantizedVisualReviewViews": 40,
+    "oversizedNoLossless64Fit": 179,
+    "partialAlphaBlocked": 17,
+    "missingOriginalSourceViews": 28,
+    "missingSourceShinySlots": 28,
+    "missingOriginalSourcePairCount": 14,
+    "historicallyApprovedMissingShinyPairs": 5,
+    "originallyUndecodableMunnaMusharnaViewsRecovered": 4,
+    "currentlyUndecodableSourceViews": 0,
+    "completeNormalPairsTechnicalPreview": 27,
+    "complete4ViewSetsTechnicalPreview": 17,
+    "native64FourBppEncodingApprovedSourceOnlyViews": 58,
+    "native64FourBppCompleteNormalPairs": 10,
+    "native64FourBppComplete4ViewSets": 8,
+    "voteUnverifiedViewsExcludedFromNativeQA": 10,
+    "noNativeArchiveNARC_NCGR_NCLR_orEmulatorCertification": true
+  },
+  "workQueue": [
+    {
+      "priority": 0,
+      "task": "Preserve creative-vote and ROM boundary; keep four Desert Scarab views recommended, not approved",
+      "type": "guard",
+      "userApprovalNeeded": false
+    },
+    {
+      "priority": 1,
+      "task": "Match the two existing native80 Trapinch source-locked normal views to Desert Scarab family palette and scute style; show all six normal views before asking for approval",
+      "type": "orphan_family_art",
+      "userApprovalNeededForFinalSelection": true
+    },
+    {
+      "priority": 2,
+      "task": "Obtain explicit user decision on the 3-stage Delta family normal designs (6 views). Do not use historical Electric Redux B votes",
+      "type": "design_decision",
+      "userApprovalNeeded": true
+    },
+    {
+      "priority": 3,
+      "task": "Recover/create with permission and separately review six region-specific shiny normal/battle views, then derive/verify three icons from original icon sheets for game palette/grid",
+      "type": "source_completion",
+      "userApprovalNeededForNewArt": true
+    },
+    {
+      "priority": 4,
+      "task": "Process 40 quantized views across 19 designs as exception-only visual review; preserve original-art vote data",
+      "type": "visual_quality_hold",
+      "userApprovalNeededForVisualAcceptability": true
+    },
+    {
+      "priority": 5,
+      "task": "Recover or individually repair 179 oversized views across 55 source designs and 17 partial-alpha slots across 7 designs; no blind reduction",
+      "type": "technical_recovery",
+      "userApprovalNeededForArtAdaptations": true
+    },
+    {
+      "priority": 6,
+      "task": "Recover 28 missing shiny slots in 14 source designs, beginning with five historically approved pairs: Breloom, Combee, Vespiquen, Dwebble and Crustle",
+      "type": "missing_source",
+      "userApprovalNeededForNewArt": true
+    },
+    {
+      "priority": 7,
+      "task": "Resolve five evolution-link exceptions by authoritative sources or retain them without evolution edges",
+      "type": "identity_gate",
+      "userApprovalNeededForSpeculativeLinks": true
+    },
+    {
+      "priority": 8,
+      "task": "Repair/verify GitHub Pages deploy: latest main branch build succeeded but deploy stalled at syncing_files and timed out",
+      "type": "review_delivery",
+      "userApprovalNeeded": false
+    },
+    {
+      "priority": 9,
+      "task": "Only after approved full-coverage sets: package compatible native game archives, check IDs/form collisions and test build/emulator; separate explicit ROM integration gate",
+      "type": "future_integration",
+      "userApprovalNeeded": true
+    }
+  ],
+  "cichecks": {
+    "spritesMasterIntegrity": {
+      "run": 42876959018,
+      "result": "success"
+    },
+    "spritesLastMainPages": {
+      "run": 42876956939,
+      "build": "success",
+      "deployment": "failure",
+      "reason": "syncing_files timeout"
+    },
+    "spritesDesertScarabFourView": {
+      "run": 42943009302,
+      "result": "success"
+    },
+    "dexLatestPages": {
+      "run": 42689487548,
+      "result": "success"
+    },
+    "platinumLatestRepositoryGuard": {
+      "run": 42689493823,
+      "result": "success"
+    }
+  },
+  "frozen": {
+    "previousArtworkFiles": true,
+    "priorVoteLedgers": true,
+    "mainReviewer": true,
+    "dexData": true,
+    "platinumGameAssets": true
+  }
+}
