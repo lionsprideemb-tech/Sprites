@@ -178,7 +178,7 @@ with tempfile.TemporaryDirectory(prefix="mercury-upstream-nitrogfx-") as work:
     assert bank3Report["originalSourcePaletteNeverModified"]
     assert bank3Report["existingPaletteBank0to2ByteIdentical"]
     assert bank3Report["reservedBanks4to15ByteIdentical"]
-    assert not bank3Report["paletteSlot3MustBeVerifiedUnusedBeforeAnyActualAllocation"] is False
+    assert bank3Report["paletteSlot3MustBeVerifiedUnusedBeforeAnyActualAllocation"] is True
     report={
       "schema":"mercury-orpheus-pret-platinum-nitrogfx-technical-probe-v1",
       "sourceQAsha256":sha(QAPATH),
