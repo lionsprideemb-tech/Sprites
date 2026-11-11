@@ -143,9 +143,28 @@ for stage,number in (("trapinch",328),("vibrava",329),("flygon",330)):
        "sourceRect":[x,y,32,32],"opaquePixels":count,
        "alphaBounds":list(bbox) if bbox else None,"sha256":sha(file)}
   summary.append(rec);cells.append(cell)
+ # Interpret actual artwork in each 64x64 frame, rather than mistaking
+ # the eight 32x32 raw tile crops for eight playable icons.
+ frame64=[]
+ for frame_number in range(2):
+  left=64*frame_number
+  frame=original.crop((left,0,left+64,64))
+  frame_path=dest/f"original_frame_{frame_number:02}_64x64.png"
+  frame.save(frame_path,optimize=True)
+  bbox=frame.getchannel("A").getbbox()
+  if bbox:
+   width=bbox[2]-bbox[0];height=bbox[3]-bbox[1]
+   fits32=width<=32 and height<=32
+  else:
+   width=0;height=0;fits32=True
+  frame64.append({"frame":frame_number,"file":str(frame_path.relative_to(OUT)),
+       "sha256":sha(frame_path),"opaqueBounds":list(bbox) if bbox else None,
+       "occupiedWidth":width,"occupiedHeight":height,
+       "lossless32CropPossible":fits32})
  icons.append({"stage":stage,"originalSheet":str((dest/"icon_original_128x64.png").relative_to(OUT)),
                "sourceSHA256":sha(icon),"sourceDimensions":[128,64],
-               "exact32x32Cells":summary,
+               "sourceFrameAssumption":"two 64x64 source frames; verify game semantics separately",
+               "sourceFrames64x64":frame64,"exact32x32RawTileCellsNotIndependentIcons":summary,
                "chosenGameIconFrame":None,
                "iconAnimationFramesCertified":False,
                "DSIconPaletteCertified":False})
@@ -154,19 +173,19 @@ for icon in icons:
  p=OUT/icon["originalSheet"]
  expected=Image.open(p).convert("RGBA")
  im=Image.new("RGBA",(128,64))
- for e in icon["exact32x32Cells"]:
+ for e in icon["exact32x32RawTileCellsNotIndependentIcons"]:
   x,y,_,_=e["sourceRect"]
   cell=Image.open(OUT/e["image"]).convert("RGBA")
   im.paste(cell,(x,y))  # preserves source RGB bytes even under zero alpha
  assert im.tobytes()==expected.tobytes(),icon["stage"]
 icon_sheet=Image.new("RGB",(920,580),"#F7F8FA");draw=ImageDraw.Draw(icon_sheet)
 draw.text((20,12),"ORPHEUS ORIGINAL REGIONAL ICON SOURCE FRAME INVENTORY",font=font(19,True),fill="#2B3E4F")
-draw.text((20,43),"128x64 source sheet => eight 32x32 exact crops; animation/layout NOT certified",font=font(14),fill="#A64B3B")
+draw.text((20,43),"Each 128x64 sheet contains two 64x64 image frames; raw 32px chunks below are NOT icons",font=font(14),fill="#A64B3B")
 for j,r in enumerate(icons):
  y=77+j*162
  draw.rounded_rectangle((14,y,903,y+148),radius=12,fill="white",outline="#CDD7DC")
  draw.text((28,y+6),r["stage"].upper(),font=font(17,True),fill="#344A58")
- for cell in r["exact32x32Cells"]:
+ for cell in r["exact32x32RawTileCellsNotIndependentIcons"]:
   i=cell["cell"]
   x=168+i*85
   src=Image.open(OUT/cell["image"]).convert("RGBA")
@@ -194,5 +213,5 @@ report={"schema":"mercury-orpheus-shiny-icon-source-research-v1",
  "See [exact QA](shiny_icon_research_qa.json). All source content and votes remain untouched.\n")
 print("ORPHEUS_SHINY_ICON_RESEARCH_QA",json.dumps({
     "shinyProposals":len(rows),"originalIconSheets":len(icons),
-    "iconFrameCrops":sum(len(x["exact32x32Cells"]) for x in icons),
+    "iconFrameCrops":sum(len(x["exact32x32RawTileCellsNotIndependentIcons"]) for x in icons),
     "allSourceExact":True,"allUnapproved":True,"romIntegrated":False}))
