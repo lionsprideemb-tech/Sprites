@@ -1,0 +1,187 @@
+{
+  "schema": "mercury-orpheus-experimental-reserved-icon-bank3-v1",
+  "originalSharedPaletteSHA256": "028f1b846fd660fac729a37853fcd78d5c0e5ad37e72fecadb908913752cc569",
+  "originalSourcePaletteNeverModified": true,
+  "existingPaletteBank0to2ByteIdentical": true,
+  "reservedBanks4to15ByteIdentical": true,
+  "onlyEditedSharedPaletteEntries": [
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63
+  ],
+  "editedEntryCount": 15,
+  "candidate15Colors": [
+    [
+      74,
+      49,
+      41
+    ],
+    [
+      74,
+      58,
+      41
+    ],
+    [
+      99,
+      74,
+      49
+    ],
+    [
+      132,
+      90,
+      58
+    ],
+    [
+      90,
+      115,
+      66
+    ],
+    [
+      140,
+      115,
+      74
+    ],
+    [
+      173,
+      107,
+      74
+    ],
+    [
+      173,
+      123,
+      82
+    ],
+    [
+      181,
+      140,
+      90
+    ],
+    [
+      214,
+      140,
+      90
+    ],
+    [
+      173,
+      197,
+      123
+    ],
+    [
+      230,
+      206,
+      165
+    ],
+    [
+      206,
+      222,
+      156
+    ],
+    [
+      214,
+      222,
+      165
+    ],
+    [
+      247,
+      230,
+      214
+    ]
+  ],
+  "paletteSlot3MustBeVerifiedUnusedBeforeAnyActualAllocation": true,
+  "customPaletteIsNotInstalled": true,
+  "approvalIsPending": true,
+  "gameBuildNotChanged": true,
+  "gameNARCNotModified": true,
+  "engineIconIndex3RuntimeSupportNotTested": true,
+  "original8x2SourcePixelsAndSilhouetteUntouched": true,
+  "method": "15 stage-balanced source icon palette-color medoids, CIELAB weighted error, one reserved bank only",
+  "nativeEncoder": "pret/pokeplatinum/tools/nitrogfx -clobbersize -version101",
+  "realNCGRCount": 3,
+  "allDecodeIndexDifferences": 0,
+  "preview": "reserved-bank3-proposal/three_stage_existing_vs_bank3_visual_study.png",
+  "candidatePalette": "reserved-bank3-proposal/PROPOSED_shared_icon_256color_palette_BANK3_ONLY.pal",
+  "candidateNCLR": "reserved-bank3-proposal/PROPOSED_shared_icon_palette_BANK3_ONLY.NCLR",
+  "stageResults": [
+    {
+      "stage": "trapinch",
+      "source32pxTrialSHA256": "780265cee46960609d6ab236b541134b693580b2db7c36587af06d65ecfed48b",
+      "sharedPaletteBank": 3,
+      "paletteAllocatedInGame": false,
+      "sourceIconIndexTransparencyPreserved": true,
+      "originalSharedPaletteBank0to2Exact": true,
+      "originalReservedBanks4to15Exact": true,
+      "existingGamePalettesUnmodified": true,
+      "perStageBestExistingBank": 2,
+      "existingBestRmsDeltaE76": 13.3238,
+      "proposedBank3RmsDeltaE76": 1.1003,
+      "rmsDeltaE76Improvement": 12.2235,
+      "raw4bppTileBytes": 1024,
+      "nativeNCGRBytes": 1072,
+      "decodedPaletteIndicesDifferenceCount": 0,
+      "PNG": "trapinch/trapinch_reservedbank3_indexed4_unapproved.png",
+      "rawTiles": "trapinch/trapinch_reservedbank3_raw4bpp.bin",
+      "NCGR": "trapinch/trapinch_reservedbank3.NCGR",
+      "NCGRsha256": "447e58ced765fd9fa6601699d6bbebbde86a16f79b1a92bff345c6792fbcd29e",
+      "notApproved": true,
+      "notIntegrated": true
+    },
+    {
+      "stage": "vibrava",
+      "source32pxTrialSHA256": "77febfbbc0a0cc8e5f0fec71a95b030965bbad41a6d3caf0f22d47c79a37c792",
+      "sharedPaletteBank": 3,
+      "paletteAllocatedInGame": false,
+      "sourceIconIndexTransparencyPreserved": true,
+      "originalSharedPaletteBank0to2Exact": true,
+      "originalReservedBanks4to15Exact": true,
+      "existingGamePalettesUnmodified": true,
+      "perStageBestExistingBank": 1,
+      "existingBestRmsDeltaE76": 14.709,
+      "proposedBank3RmsDeltaE76": 1.479,
+      "rmsDeltaE76Improvement": 13.23,
+      "raw4bppTileBytes": 1024,
+      "nativeNCGRBytes": 1072,
+      "decodedPaletteIndicesDifferenceCount": 0,
+      "PNG": "vibrava/vibrava_reservedbank3_indexed4_unapproved.png",
+      "rawTiles": "vibrava/vibrava_reservedbank3_raw4bpp.bin",
+      "NCGR": "vibrava/vibrava_reservedbank3.NCGR",
+      "NCGRsha256": "832cb75e333eb1c3961edad871782bee2cddcee3b004a51d07eea80cfd5fe9f2",
+      "notApproved": true,
+      "notIntegrated": true
+    },
+    {
+      "stage": "flygon",
+      "source32pxTrialSHA256": "7d869b84d1fb158415afa3f0ec4a2657941340160eae9586b35ca83b8c39132f",
+      "sharedPaletteBank": 3,
+      "paletteAllocatedInGame": false,
+      "sourceIconIndexTransparencyPreserved": true,
+      "originalSharedPaletteBank0to2Exact": true,
+      "originalReservedBanks4to15Exact": true,
+      "existingGamePalettesUnmodified": true,
+      "perStageBestExistingBank": 2,
+      "existingBestRmsDeltaE76": 19.1814,
+      "proposedBank3RmsDeltaE76": 3.2168,
+      "rmsDeltaE76Improvement": 15.9646,
+      "raw4bppTileBytes": 1024,
+      "nativeNCGRBytes": 1072,
+      "decodedPaletteIndicesDifferenceCount": 0,
+      "PNG": "flygon/flygon_reservedbank3_indexed4_unapproved.png",
+      "rawTiles": "flygon/flygon_reservedbank3_raw4bpp.bin",
+      "NCGR": "flygon/flygon_reservedbank3.NCGR",
+      "NCGRsha256": "3fc195d03001fea38b5e4e8eba77fc9cdbb4423dd41e823cf7f59eb1277948ed",
+      "notApproved": true,
+      "notIntegrated": true
+    }
+  ]
+}
