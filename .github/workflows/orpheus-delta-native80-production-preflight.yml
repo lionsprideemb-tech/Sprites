@@ -40,7 +40,7 @@ jobs:
           pc=$(find /tmp/mercury-libpng -type f -name libpng.pc -print -quit)
           test -n "$pc"
           echo "PKG_CONFIG_PATH=$(dirname "$pc"):${PKG_CONFIG_PATH:-}" >> "$GITHUB_ENV"
-          lib=$(find /tmp/mercury-libpng -type f -name 'libpng16.so*' -printf '%h\n' | head -n 1)
+          lib=$(find /tmp/mercury-libpng -type f -name 'libpng*.so*' -printf '%h\n' | head -n 1)
           test -n "$lib"
           echo "LD_LIBRARY_PATH=$lib:${LD_LIBRARY_PATH:-}" >> "$GITHUB_ENV"
       - name: Optional upstream NTR NitroGFX encoder roundtrip (if probe committed)
