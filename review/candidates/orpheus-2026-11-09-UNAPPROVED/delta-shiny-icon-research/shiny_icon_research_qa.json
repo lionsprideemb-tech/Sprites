@@ -1,0 +1,572 @@
+{
+  "schema": "mercury-orpheus-shiny-icon-source-research-v1",
+  "archiveSHA256": "72539b83b55a427c4adcdf2f3e5397cc28371875a720f687ffcf4e2a6d803ef9",
+  "normalSixViewSHA256": "2fb06ff078294c91cfad3493ad538541a7adb289ab74628107245534b245add6",
+  "shinyColorProposals": [
+    {
+      "view": "trapinch_front",
+      "normalSHA256": "ce16c5be903db8da4fe8108d691c7a762c662ed5fe51a36403d1e2d7a61d9193",
+      "shiny": "shinies/trapinch/front_shiny_PROPOSAL_80.png",
+      "tile": "shinies/trapinch/front_shiny_PROPOSAL_80_4bpp_tiles.bin",
+      "palette": "shinies/trapinch/front_shiny_PROPOSAL_80_palette.bin",
+      "shinySHA256": "53680a5b4733d070cc9e405d48555da5a55ab89ecd54f31e80999fe63c0fa26a",
+      "tileSHA256": "fa24b8aa7b26d18f12e13288d74887f60b0e4b727fd14b223a91f42f5b5130e4",
+      "paletteSHA256": "d94d98b69db0bdb54e259e37fcd2480d68e0a99c984e1a96daa4e6b3ad0b394b",
+      "normalIndicesPreservedExactly": true,
+      "alphaPreserved": true,
+      "4bppRoundTrip": true,
+      "userApproved": false
+    },
+    {
+      "view": "trapinch_back",
+      "normalSHA256": "49550acbcfdf243dece84a8d6dcdde20df6326d9c5f03bbf909b4c507b0c2776",
+      "shiny": "shinies/trapinch/back_shiny_PROPOSAL_80.png",
+      "tile": "shinies/trapinch/back_shiny_PROPOSAL_80_4bpp_tiles.bin",
+      "palette": "shinies/trapinch/back_shiny_PROPOSAL_80_palette.bin",
+      "shinySHA256": "a82bc152b0ca5c9baffc96dfd40ad95c9c057407e4bead4d2b4569c9f8d6254f",
+      "tileSHA256": "9094ddda1d0aaa610f8e6a4050bbeab9dbae48df7c0f8da62701a33e573113a0",
+      "paletteSHA256": "d94d98b69db0bdb54e259e37fcd2480d68e0a99c984e1a96daa4e6b3ad0b394b",
+      "normalIndicesPreservedExactly": true,
+      "alphaPreserved": true,
+      "4bppRoundTrip": true,
+      "userApproved": false
+    },
+    {
+      "view": "vibrava_front",
+      "normalSHA256": "02e1cb75fe7ae1eeb14565b7a15dc86d538bbc5ee3e26888a47e559fefe0c39a",
+      "shiny": "shinies/vibrava/front_shiny_PROPOSAL_80.png",
+      "tile": "shinies/vibrava/front_shiny_PROPOSAL_80_4bpp_tiles.bin",
+      "palette": "shinies/vibrava/front_shiny_PROPOSAL_80_palette.bin",
+      "shinySHA256": "02affb3fdfcb7ccd4cedb068a42ea24fc6d2de4ea49bd2d2a3d01d0431ef6735",
+      "tileSHA256": "603fc59207fe29ecc5f49696472374dae773be258f662b480736887e20eda34d",
+      "paletteSHA256": "242a2990206f4c681fc692bfa310b4c553f12d19b2f9153db871f8a9b7fff904",
+      "normalIndicesPreservedExactly": true,
+      "alphaPreserved": true,
+      "4bppRoundTrip": true,
+      "userApproved": false
+    },
+    {
+      "view": "vibrava_back",
+      "normalSHA256": "b0693dd262429facf371e890fac6792533acd9f4ccdef34c5212f99eeea3ec07",
+      "shiny": "shinies/vibrava/back_shiny_PROPOSAL_80.png",
+      "tile": "shinies/vibrava/back_shiny_PROPOSAL_80_4bpp_tiles.bin",
+      "palette": "shinies/vibrava/back_shiny_PROPOSAL_80_palette.bin",
+      "shinySHA256": "02b83ee8b4c117d3a2c7eb50719846917a335a441b186886be227d76b998be5a",
+      "tileSHA256": "5ddc0ba7c4ce42e4c306536de9f5ac0b7553f8c10740c61e0e9e0cc7330ba39d",
+      "paletteSHA256": "242a2990206f4c681fc692bfa310b4c553f12d19b2f9153db871f8a9b7fff904",
+      "normalIndicesPreservedExactly": true,
+      "alphaPreserved": true,
+      "4bppRoundTrip": true,
+      "userApproved": false
+    },
+    {
+      "view": "flygon_front",
+      "normalSHA256": "537ffd559aed81e58ee21d49c3c23f37d7edd549c32c80b55f3d32fb7a256e64",
+      "shiny": "shinies/flygon/front_shiny_PROPOSAL_80.png",
+      "tile": "shinies/flygon/front_shiny_PROPOSAL_80_4bpp_tiles.bin",
+      "palette": "shinies/flygon/front_shiny_PROPOSAL_80_palette.bin",
+      "shinySHA256": "04c098c6d0273d3a810808377819dafb859a51c6f352843c3ca8b029b289940a",
+      "tileSHA256": "d41c782e8001dd52a6a8d2d8de6c694ea92cc66be07f85b161c6fd9ba1ccc404",
+      "paletteSHA256": "788d4f040f806179a4113d9749dc97ccf7d9883df15a347e786d37ec43088283",
+      "normalIndicesPreservedExactly": true,
+      "alphaPreserved": true,
+      "4bppRoundTrip": true,
+      "userApproved": false
+    },
+    {
+      "view": "flygon_back",
+      "normalSHA256": "c2653b25f5babf92ede4a4cc35eceb54aab82536dc8d25b5724d6512690061b7",
+      "shiny": "shinies/flygon/back_shiny_PROPOSAL_80.png",
+      "tile": "shinies/flygon/back_shiny_PROPOSAL_80_4bpp_tiles.bin",
+      "palette": "shinies/flygon/back_shiny_PROPOSAL_80_palette.bin",
+      "shinySHA256": "7fa7d59a08d5b63eb97889a6931ad4107b3c73e267a8fdeb2891fa5006bf2db8",
+      "tileSHA256": "988bb43033e3a14357892349a46ad9151e913f725e1f7b678baf6b6a8b4d4c1a",
+      "paletteSHA256": "788d4f040f806179a4113d9749dc97ccf7d9883df15a347e786d37ec43088283",
+      "normalIndicesPreservedExactly": true,
+      "alphaPreserved": true,
+      "4bppRoundTrip": true,
+      "userApproved": false
+    }
+  ],
+  "proposalPreview": "six_shiny_vs_normal_unapproved.png",
+  "originalIconInventory": [
+    {
+      "stage": "trapinch",
+      "originalSheet": "original-icon-source/trapinch/icon_original_128x64.png",
+      "sourceSHA256": "2f42a7a13161f973cf02735d4dfbf7476f3ce52f7a57592c0f4b1933f5404835",
+      "sourceDimensions": [
+        128,
+        64
+      ],
+      "exact32x32Cells": [
+        {
+          "cell": 0,
+          "image": "original-icon-source/trapinch/original_cell_00.png",
+          "sourceRect": [
+            0,
+            0,
+            32,
+            32
+          ],
+          "opaquePixels": 44,
+          "alphaBounds": [
+            18,
+            28,
+            32,
+            32
+          ],
+          "sha256": "ab242b26817d1bdac915703d1b3ee5897c93499e0aa2393e501b53ad474970aa"
+        },
+        {
+          "cell": 1,
+          "image": "original-icon-source/trapinch/original_cell_01.png",
+          "sourceRect": [
+            32,
+            0,
+            32,
+            32
+          ],
+          "opaquePixels": 12,
+          "alphaBounds": [
+            0,
+            30,
+            8,
+            32
+          ],
+          "sha256": "9c258558f57acec23bc0a7ec52c0314b5800d829e193e7769f290a076ea3c7f6"
+        },
+        {
+          "cell": 2,
+          "image": "original-icon-source/trapinch/original_cell_02.png",
+          "sourceRect": [
+            64,
+            0,
+            32,
+            32
+          ],
+          "opaquePixels": 16,
+          "alphaBounds": [
+            22,
+            30,
+            30,
+            32
+          ],
+          "sha256": "eda4ed1b29069ea95dbc4d0799f3206a4cda6dd3144e77905ab056998d2ca536"
+        },
+        {
+          "cell": 3,
+          "image": "original-icon-source/trapinch/original_cell_03.png",
+          "sourceRect": [
+            96,
+            0,
+            32,
+            32
+          ],
+          "opaquePixels": 0,
+          "alphaBounds": null,
+          "sha256": "129440e20be89c01e6ddabbd8ec845ed495e890e3cd77a91dbab210f8b855cfc"
+        },
+        {
+          "cell": 4,
+          "image": "original-icon-source/trapinch/original_cell_04.png",
+          "sourceRect": [
+            0,
+            32,
+            32,
+            32
+          ],
+          "opaquePixels": 380,
+          "alphaBounds": [
+            14,
+            0,
+            32,
+            28
+          ],
+          "sha256": "ca7f04c83de0e1871e7510856a26b2c9f561fb212cd5ee59eeffbfa5a826d772"
+        },
+        {
+          "cell": 5,
+          "image": "original-icon-source/trapinch/original_cell_05.png",
+          "sourceRect": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "opaquePixels": 352,
+          "alphaBounds": [
+            0,
+            0,
+            18,
+            30
+          ],
+          "sha256": "d8e47df5100a346e744a1823214ddb3cd93d3afcd28368a55947d72990cee952"
+        },
+        {
+          "cell": 6,
+          "image": "original-icon-source/trapinch/original_cell_06.png",
+          "sourceRect": [
+            64,
+            32,
+            32,
+            32
+          ],
+          "opaquePixels": 412,
+          "alphaBounds": [
+            14,
+            0,
+            32,
+            28
+          ],
+          "sha256": "534bd1430dd2c287f1bcbda8b3854f512cb7466901dec9c3d91e6f62cf94cefb"
+        },
+        {
+          "cell": 7,
+          "image": "original-icon-source/trapinch/original_cell_07.png",
+          "sourceRect": [
+            96,
+            32,
+            32,
+            32
+          ],
+          "opaquePixels": 344,
+          "alphaBounds": [
+            0,
+            0,
+            18,
+            30
+          ],
+          "sha256": "707effd92a5f06eb31dc5019c2885b8e9fe6be8b8a9c96d9e945abea9caf1487"
+        }
+      ],
+      "chosenGameIconFrame": null,
+      "iconAnimationFramesCertified": false,
+      "DSIconPaletteCertified": false
+    },
+    {
+      "stage": "vibrava",
+      "originalSheet": "original-icon-source/vibrava/icon_original_128x64.png",
+      "sourceSHA256": "09baedc0ff55bf5fb76d22a7dff271abddcd04a892d9775a4ebc448f1ee6e87c",
+      "sourceDimensions": [
+        128,
+        64
+      ],
+      "exact32x32Cells": [
+        {
+          "cell": 0,
+          "image": "original-icon-source/vibrava/original_cell_00.png",
+          "sourceRect": [
+            0,
+            0,
+            32,
+            32
+          ],
+          "opaquePixels": 32,
+          "alphaBounds": [
+            26,
+            26,
+            32,
+            32
+          ],
+          "sha256": "48ba04578494e8b676c497db46047145af378f209b18655ba34c15e40d4a4d11"
+        },
+        {
+          "cell": 1,
+          "image": "original-icon-source/vibrava/original_cell_01.png",
+          "sourceRect": [
+            32,
+            0,
+            32,
+            32
+          ],
+          "opaquePixels": 172,
+          "alphaBounds": [
+            0,
+            22,
+            20,
+            32
+          ],
+          "sha256": "e59c749b9a9eaaf04accd56ed2c5d2aa681a2cf9e8f50da637aca8886a5a3a42"
+        },
+        {
+          "cell": 2,
+          "image": "original-icon-source/vibrava/original_cell_02.png",
+          "sourceRect": [
+            64,
+            0,
+            32,
+            32
+          ],
+          "opaquePixels": 24,
+          "alphaBounds": [
+            26,
+            26,
+            32,
+            32
+          ],
+          "sha256": "fd707f2da65ba1981126d05f91b7b51ccbdc8ffc8163022171844949e6e58360"
+        },
+        {
+          "cell": 3,
+          "image": "original-icon-source/vibrava/original_cell_03.png",
+          "sourceRect": [
+            96,
+            0,
+            32,
+            32
+          ],
+          "opaquePixels": 128,
+          "alphaBounds": [
+            0,
+            24,
+            20,
+            32
+          ],
+          "sha256": "39d961f041bf53e629dc08e9cf80fb6c6175dddc5e91f28470b8240c72b449b0"
+        },
+        {
+          "cell": 4,
+          "image": "original-icon-source/vibrava/original_cell_04.png",
+          "sourceRect": [
+            0,
+            32,
+            32,
+            32
+          ],
+          "opaquePixels": 368,
+          "alphaBounds": [
+            8,
+            0,
+            32,
+            22
+          ],
+          "sha256": "7c5b76020cf7aa61085418c2cc2716ac9bba582e0b58e1a973b4148f96f30b10"
+        },
+        {
+          "cell": 5,
+          "image": "original-icon-source/vibrava/original_cell_05.png",
+          "sourceRect": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "opaquePixels": 308,
+          "alphaBounds": [
+            0,
+            0,
+            18,
+            24
+          ],
+          "sha256": "137459ae60065d57ce5ae5608f32a5457456c25be16cb0b3b05cd70f7b65d33a"
+        },
+        {
+          "cell": 6,
+          "image": "original-icon-source/vibrava/original_cell_06.png",
+          "sourceRect": [
+            64,
+            32,
+            32,
+            32
+          ],
+          "opaquePixels": 376,
+          "alphaBounds": [
+            8,
+            0,
+            32,
+            24
+          ],
+          "sha256": "4022db821efa757e3802dc0f28a7fc316bbb922a1942ca1b3f31046e750b622c"
+        },
+        {
+          "cell": 7,
+          "image": "original-icon-source/vibrava/original_cell_07.png",
+          "sourceRect": [
+            96,
+            32,
+            32,
+            32
+          ],
+          "opaquePixels": 356,
+          "alphaBounds": [
+            0,
+            0,
+            22,
+            24
+          ],
+          "sha256": "32d93df125c50755886bc31f884e48d0ffead5cc88cf2084cd40033ac93f5bfb"
+        }
+      ],
+      "chosenGameIconFrame": null,
+      "iconAnimationFramesCertified": false,
+      "DSIconPaletteCertified": false
+    },
+    {
+      "stage": "flygon",
+      "originalSheet": "original-icon-source/flygon/icon_original_128x64.png",
+      "sourceSHA256": "4062505a53fde44eaf68756baf89c38c1ef987fd3c837bd7628f8231d81bd492",
+      "sourceDimensions": [
+        128,
+        64
+      ],
+      "exact32x32Cells": [
+        {
+          "cell": 0,
+          "image": "original-icon-source/flygon/original_cell_00.png",
+          "sourceRect": [
+            0,
+            0,
+            32,
+            32
+          ],
+          "opaquePixels": 288,
+          "alphaBounds": [
+            8,
+            18,
+            32,
+            32
+          ],
+          "sha256": "2a0c99debde2f1996cb1669a48824c2bb060da49dfbc10624c1b8f29e2f97631"
+        },
+        {
+          "cell": 1,
+          "image": "original-icon-source/flygon/original_cell_01.png",
+          "sourceRect": [
+            32,
+            0,
+            32,
+            32
+          ],
+          "opaquePixels": 172,
+          "alphaBounds": [
+            0,
+            18,
+            20,
+            32
+          ],
+          "sha256": "7bfd9c53ee0c0b053c5ef17c2fef771b8e29f257ca4cf839442fc93344ad84c0"
+        },
+        {
+          "cell": 2,
+          "image": "original-icon-source/flygon/original_cell_02.png",
+          "sourceRect": [
+            64,
+            0,
+            32,
+            32
+          ],
+          "opaquePixels": 228,
+          "alphaBounds": [
+            8,
+            18,
+            32,
+            32
+          ],
+          "sha256": "dfedcccbc404aabb7f62c2aaa9d71d2ed571792f179f2799bae55650842c4a22"
+        },
+        {
+          "cell": 3,
+          "image": "original-icon-source/flygon/original_cell_03.png",
+          "sourceRect": [
+            96,
+            0,
+            32,
+            32
+          ],
+          "opaquePixels": 144,
+          "alphaBounds": [
+            0,
+            20,
+            18,
+            32
+          ],
+          "sha256": "929e50f40283ee7ae9a3ab2a67b6dfdd8c07b467111bdb620d02bee0f3ebe8c7"
+        },
+        {
+          "cell": 4,
+          "image": "original-icon-source/flygon/original_cell_04.png",
+          "sourceRect": [
+            0,
+            32,
+            32,
+            32
+          ],
+          "opaquePixels": 416,
+          "alphaBounds": [
+            8,
+            0,
+            32,
+            28
+          ],
+          "sha256": "5a2631ec5c4f8c18e5b84e3fc8d29aa661d9bacc87ee4d0b9d04ac5562a429fe"
+        },
+        {
+          "cell": 5,
+          "image": "original-icon-source/flygon/original_cell_05.png",
+          "sourceRect": [
+            32,
+            32,
+            32,
+            32
+          ],
+          "opaquePixels": 340,
+          "alphaBounds": [
+            0,
+            0,
+            20,
+            24
+          ],
+          "sha256": "d63319ca0e593a3057920a06e123e65e547cf012bd64bb5080ce9bdf06f2f833"
+        },
+        {
+          "cell": 6,
+          "image": "original-icon-source/flygon/original_cell_06.png",
+          "sourceRect": [
+            64,
+            32,
+            32,
+            32
+          ],
+          "opaquePixels": 464,
+          "alphaBounds": [
+            8,
+            0,
+            32,
+            30
+          ],
+          "sha256": "b97a2d89aec1c7368c57ac51a862e9e46c8516cbbe077448d8f11d7a854ccbc1"
+        },
+        {
+          "cell": 7,
+          "image": "original-icon-source/flygon/original_cell_07.png",
+          "sourceRect": [
+            96,
+            32,
+            32,
+            32
+          ],
+          "opaquePixels": 352,
+          "alphaBounds": [
+            0,
+            0,
+            18,
+            26
+          ],
+          "sha256": "d1426602cd82dcf306b1190635723cf43efccff575b053be03a1ebd915225fc1"
+        }
+      ],
+      "chosenGameIconFrame": null,
+      "iconAnimationFramesCertified": false,
+      "DSIconPaletteCertified": false
+    }
+  ],
+  "iconPreview": "orpheus_source_icon_32px_frame_inventory.png",
+  "normalSpriteFilesUntouched": true,
+  "historicalVotesUntouched": true,
+  "allUnapproved": true,
+  "noPlatinumIntegration": true,
+  "shinyDesignsNotYetApproved": true,
+  "iconSelectionNotYetApproved": true,
+  "noNitroIconArchive": true,
+  "noROMEmulatorTest": true
+}
