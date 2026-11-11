@@ -174,9 +174,9 @@ for name in ORDER:
  reopened=Image.open(strip)
  assert reopened.size==(160,80) and reopened.mode=="P" and list(reopened.getdata())==rows
  # Stage specific JASC palette consumed by pokeplatinum nitrogfx.
- jasc="JASC-PAL\n0100\n16\n"+"\n".join(" ".join(map(str,rgb(word))) for word in words)+"\n"
+ jasc="JASC-PAL\r\n0100\r\n16\r\n"+"\r\n".join(" ".join(map(str,rgb(word))) for word in words)+"\r\n"
  jascpath=outroot/(face+"_normal.pal")
- jascpath.write_text(jasc)
+ jascpath.write_bytes(jasc.encode("ascii"))
  # Fixed research key for deterministic game-like encrypted NCGR probe.
  # No ID allocation / ROM binding accompanies this package.
  keyfile=outroot/(face+"_twoframe_STATIC_160x80.png.key")
