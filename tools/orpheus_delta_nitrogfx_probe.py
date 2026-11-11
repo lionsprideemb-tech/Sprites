@@ -7,7 +7,7 @@ species binding or ROM insertion.
 """
 from pathlib import Path
 from PIL import Image
-import hashlib, json, os, re, shutil, subprocess, tempfile
+import hashlib, json, os, re, shutil, subprocess, tempfile, struct
 
 ROOT=Path("report/orpheus_delta_native80_preflight")
 DATA=ROOT/"family"
@@ -93,6 +93,74 @@ with tempfile.TemporaryDirectory(prefix="mercury-upstream-nitrogfx-") as work:
           "twoFramesAreIdenticalStaticPlaceholders":True,
           "approved":False,"romIntegrated":False})
         print("NTR_SOURCE_ROUNDTRIP_PASS",key,ncgr.stat().st_size,nclr.stat().st_size)
+    # Six source-locked optional shiny palettes: technical certification only.
+    shinyRoot=Path("review/candidates/orpheus-2026-11-09-UNAPPROVED/delta-shiny-icon-research")
+    shinyManifest=json.loads((shinyRoot/"shiny_icon_research_qa.json").read_text())
+    assert shinyManifest["allUnapproved"] and shinyManifest["noPlatinumIntegration"]
+    assert len(shinyManifest["shinyColorProposals"])==6
+    proposals=[]
+    def indexed80_from_tiled(data):
+        assert len(data)==3200
+        idx=[0]*6400;k=0
+        for by in range(0,80,8):
+            for bx in range(0,80,8):
+                for y in range(8):
+                    for x in range(0,8,2):
+                        value=data[k];k+=1
+                        idx[(by+y)*80+bx+x]=value&15
+                        idx[(by+y)*80+bx+x+1]=value>>4
+        return idx
+    for row in shinyManifest["shinyColorProposals"]:
+        key=row["view"]
+        stage,face=key.split("_")
+        pngSource=shinyRoot/row["shiny"]
+        tileSource=shinyRoot/row["tile"]
+        palSource=shinyRoot/row["palette"]
+        for src,expected in ((pngSource,row["shinySHA256"]),
+                             (tileSource,row["tileSHA256"]),
+                             (palSource,row["paletteSHA256"])):
+            assert sha(src)==expected,(key,src)
+        tiledIndex=indexed80_from_tiled(tileSource.read_bytes())
+        colorWords=struct.unpack("<16H",palSource.read_bytes())
+        assert len(colorWords)==16
+        # Make exact 4-bit indexed 160x80 horizontally repeated still frames.
+        stripIndex=[v for y in range(80) for v in (
+                    tiledIndex[y*80:(y+1)*80]*2)]
+        assert len(stripIndex)==12800
+        outdir=ROOT/"ntr-encoded"/"shiny-proposal"/stage
+        outdir.mkdir(parents=True,exist_ok=True)
+        pngStrip=outdir/f"{face}_STATIC_shiny_PROPOSAL_160x80.png"
+        palStrip=outdir/f"{face}_shiny_PROPOSAL.pal"
+        spr=Image.new("P",(160,80))
+        spr.putdata(stripIndex)
+        def rgb(word):
+            return tuple(round(((word>>(5*i))&31)*255/31) for i in range(3))
+        spr.putpalette([v for word in colorWords for v in rgb(word)]+[0]*720)
+        spr.info["transparency"]=0
+        spr.save(pngStrip,optimize=True,bits=4)
+        (outdir/f"{face}_STATIC_shiny_PROPOSAL_160x80.png.key").write_bytes(
+            struct.pack("<I",0x52A04286))
+        palStrip.write_bytes(("JASC-PAL\r\n0100\r\n16\r\n"+
+            "\r\n".join(" ".join(str(c) for c in rgb(word)) for word in colorWords)
+            +"\r\n").encode("ascii"))
+        ncgr=outdir/f"{face}_shiny_PROPOSAL.NCGR"
+        nclr=outdir/f"{face}_shiny_PROPOSAL.NCLR"
+        decoded=outdir/f"{face}_shiny_decoded.png"
+        run([nitro,pngStrip,ncgr,"-encodefronttoback","-scan"],timeout=80)
+        run([nitro,palStrip,nclr,"-bitdepth","8","-nopad","-comp","10"],timeout=80)
+        run([nitro,ncgr,decoded,"-palette",nclr,"-encodefronttoback","-object"],timeout=80)
+        resultIm=Image.open(decoded)
+        assert resultIm.size==(160,80) and resultIm.mode=="P"
+        diff=sum(a!=b for a,b in zip(resultIm.getdata(),stripIndex))
+        assert diff==0,(key,diff)
+        proposals.append({"view":key,"fromUnapprovedColorProposal":True,
+            "sourceShinySHA256":sha(pngSource),
+            "NCGR":str(ncgr.relative_to(ROOT)),"NCLR":str(nclr.relative_to(ROOT)),
+            "encodedNCGRSHA256":sha(ncgr),"encodedNCLRSHA256":sha(nclr),
+            "ncgrBytes":ncgr.stat().st_size,"nclrBytes":nclr.stat().st_size,
+            "zeroPixelIndexDifferences":True,
+            "approved":False,"gameIntegrated":False})
+        print("NITROGFX_SHINY_PROPOSAL_EXACT",key,sha(ncgr)[:12])
     report={
       "schema":"mercury-orpheus-pret-platinum-nitrogfx-technical-probe-v1",
       "sourceQAsha256":sha(QAPATH),
@@ -111,7 +179,10 @@ with tempfile.TemporaryDirectory(prefix="mercury-upstream-nitrogfx-") as work:
         "Palette indices successfully roundtrip through the upstream source encoder and decoder.",
         "160x80 strip duplicates each static 80x80 frame; real battle animation is not authored.",
         "Packaging/insertion requires approval, correct species/form member mapping, shinies/icons, runtime testing."],
-      "files":output
+      "files":output,
+      "sixTechnicallyEncodedButUnapprovedShinyColorProposals":proposals,
+      "shinyProposalRoundTripsPixelExact":True,
+      "shinyProposalNoUserApproval":True
     }
     reportpath=ROOT/"nitrogfx_qa.json"
     reportpath.write_text(json.dumps(report,indent=2)+"\n")
@@ -122,7 +193,8 @@ with tempfile.TemporaryDirectory(prefix="mercury-upstream-nitrogfx-") as work:
       "Each was decoded back to its full 160x80 indexed pixel source with **0 index differences**. "
       "This verifies the file-encoding stage only: no approved art, shiny views, "
       "converted icon archive, correct form/species NARC index integration or game runtime proof. "
-      "See [nitrogfx QA](nitrogfx_qa.json).\n")
+      "Six separate UNAPPROVED shiny color proposals are also encoded and roundtrip-verified; "
+      "they are not final game-ready shinies. See [nitrogfx QA](nitrogfx_qa.json).\n")
     print("MERCURY_NITROGFX_SIXVIEW_PASS",json.dumps({
-      "views":len(output),"upstreamSHA":revision,"ncgrNclr":12,"roundtripMismatches":0,
+      "views":len(output),"shinyProposals":len(proposals),"upstreamSHA":revision,"ncgrNclr":24,"roundtripMismatches":0,
       "allUnapproved":True,"romIntegrated":False}))
