@@ -202,24 +202,24 @@ for name in ORDER:
  print("G4_SPRITE_PREFLIGHT",json.dumps({"view":name,"tile":len(pack(idx)),
      "twoFrame":[160,80],"alpha":True,"sha256":sha(pngpath)}))
 # Six-view readable side-by-side with native 80px and 3x source locked zoom.
-W=1150;H=1430
+W=1150;H=1640
 sheet=Image.new("RGB",(W,H),"#F7F8F9");d=ImageDraw.Draw(sheet)
 d.text((20,14),"MERCURY REDUX  /  DESERT SCARAB FAMILY  /  NATIVE PLATINUM 80px",font=font(22,True),fill="#2A3844")
 d.text((20,45),"Trapinch terracotta finished; Vibrava/Flygon exact existing art retained. UNAPPROVED / NOT IN ROM",font=font(14),fill="#AD4935")
 for i,name in enumerate(ORDER):
- y=85+i*220
- d.rounded_rectangle((12,y,W-14,y+208),radius=12,fill="#FFFFFF",outline="#CBD4DC",width=2)
+ y=85+i*255
+ d.rounded_rectangle((12,y,W-14,y+242),radius=12,fill="#FFFFFF",outline="#CBD4DC",width=2)
  orig,im,preview=renders[name]
  d.text((26,y+10),name.replace("_"," ").upper(),font=font(20,True),fill="#304454")
  d.text((26,y+44),"Before" if name.startswith("trapinch") else "Same locked colors",font=font(12),fill="#536675")
- d.text((376,y+44),"Final 80px ×3",font=font(13),fill="#536675")
+ d.text((376,y+44),"Finished 80px ×2",font=font(13),fill="#536675")
  d.text((733,y+44),"Actual 80px",font=font(13),fill="#536675")
  d.text((950,y+44),"64px (lossy only)",font=font(12),fill="#87463F")
- paste_bg(sheet,orig,25,y+56,2)
- paste_bg(sheet,im,390,y+43,2)
- paste_bg(sheet,im,760,y+73,1)
- paste_bg(sheet,preview,982,y+81,1)
- d.text((20,y+185),"Source silhouette exact  •  80px battle frame  •  4bpp  •  STATIC second-frame placeholder",font=font(12),fill="#647582")
+ paste_bg(sheet,orig,25,y+61,2)
+ paste_bg(sheet,im,390,y+61,2)
+ paste_bg(sheet,im,760,y+89,1)
+ paste_bg(sheet,preview,982,y+97,1)
+ d.text((20,y+223),"Source silhouette exact  •  80px battle frame  •  4bpp  •  STATIC second-frame placeholder",font=font(12),fill="#647582")
 out=O/"desert_scarab_six_normal_native80_mobile.png"
 sheet.save(out,optimize=True)
 manifest={"schema":"mercury-orpheus-sixview-pt-battle-source-preflight-v1",
