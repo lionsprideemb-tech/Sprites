@@ -31,7 +31,7 @@ with tempfile.TemporaryDirectory(prefix="mercury-upstream-nitrogfx-") as work:
     run(["git","clone","-q","--depth","1","--filter=blob:none","--sparse",
          "https://github.com/pret/pokeplatinum.git",refroot],timeout=240)
     run(["git","sparse-checkout","set","tools/nitrogfx","include/constants",
-         "tools/scripts"],cwd=refroot,timeout=180)
+         "tools/scripts","res/pokemon/.shared"],cwd=refroot,timeout=180)
     revision=run(["git","rev-parse","HEAD"],cwd=refroot).stdout.strip()
     const=(refroot/"include/constants/graphics.h").read_text()
     script=(refroot/"tools/scripts/make_pl_pokegra.py").read_text()
@@ -161,6 +161,14 @@ with tempfile.TemporaryDirectory(prefix="mercury-upstream-nitrogfx-") as work:
             "zeroPixelIndexDifferences":True,
             "approved":False,"gameIntegrated":False})
         print("NITROGFX_SHINY_PROPOSAL_EXACT",key,sha(ncgr)[:12])
+    # Icon study: map real three-stage 32px art to EXISTING global 256-color
+    # palette banks and test using actual make_pl_poke_icon.py flags.
+    run(["python3","tools/orpheus_delta_shared_palette_icon_qa.py",
+         "--upstream",refroot,"--nitrogfx",nitro],timeout=150)
+    iconReport=json.loads((ROOT/"shared_icon_palette_qa.json").read_text())
+    assert len(iconReport["stageResults"])==3
+    assert iconReport["nativeDecoderPixelDifferencesAll"]==0
+    assert iconReport["allReservedBanksUntouched"] and iconReport["unapproved"]
     report={
       "schema":"mercury-orpheus-pret-platinum-nitrogfx-technical-probe-v1",
       "sourceQAsha256":sha(QAPATH),
@@ -182,7 +190,11 @@ with tempfile.TemporaryDirectory(prefix="mercury-upstream-nitrogfx-") as work:
       "files":output,
       "sixTechnicallyEncodedButUnapprovedShinyColorProposals":proposals,
       "shinyProposalRoundTripsPixelExact":True,
-      "shinyProposalNoUserApproval":True
+      "shinyProposalNoUserApproval":True,
+      "sharedIconPaletteReport":"shared_icon_palette_qa.json",
+      "sharedIconNCGRCount":len(iconReport["stageResults"]),
+      "sharedIconNitroGfxIndexPixelDifferences":iconReport["nativeDecoderPixelDifferencesAll"],
+      "sharedIconArtworkUnapproved":True
     }
     reportpath=ROOT/"nitrogfx_qa.json"
     reportpath.write_text(json.dumps(report,indent=2)+"\n")
