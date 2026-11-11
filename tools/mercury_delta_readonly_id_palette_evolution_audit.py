@@ -160,7 +160,7 @@ assert "if (species > NATIONAL_DEX_COUNT)" in icon
 assert "return IconTilesIndex(species);" in icon
 assert "return sPokemonIconPaletteIndex[species];" in icon
 assert "case SPECIES_TRAPINCH" not in icon and "case SPECIES_VIBRAVA" not in icon and "case SPECIES_FLYGON" not in icon
-assert "2 + monIcon->plttIndex" in box and "6 + monIcon->plttIndex" in box
+assert "2 + monIcon->plttIndex" in box and "(isSelected ? 6 : 2) + monIcon->plttIndex" in box
 assert "SPECIES_ICON_PLTT_SLOT 3" in party
 up=a.upstream/"res/pokemon"
 palette_records=[]
