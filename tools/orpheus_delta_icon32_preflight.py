@@ -110,6 +110,22 @@ for st in ("trapinch","vibrava","flygon"):
  nin=out/"desert_scarab_ICON32x2_indexed.png"
  indexed.save(nin,optimize=True,bits=4)
  assert list(Image.open(nin).getdata())==idx
+ # Original pret/pokeplatinum icons are 32x64 indexed 4bpp: frame0 atop
+ # frame1, NOT the horizontal 64x32 source layout used by Orpheus.
+ vertical=[idx[y*64+x] for y in range(32) for x in range(32)]+[
+     idx[y*64+32+x] for y in range(32) for x in range(32)]
+ assert len(vertical)==2048 and len(pack(vertical,32,64))==1024
+ assert unpack(pack(vertical,32,64),32,64)==vertical
+ target=Image.new("P",(32,64))
+ target.putdata(vertical)
+ target.putpalette(table)
+ target.info["transparency"]=0
+ verticalPNG=out/"desert_scarab_ICON_STACKED_32x64_INDEXED4.png"
+ target.save(verticalPNG,optimize=True,bits=4)
+ assert Image.open(verticalPNG).size==(32,64)
+ assert list(Image.open(verticalPNG).getdata())==vertical
+ verticalTILES=out/"desert_scarab_ICON_STACKED_32x64_TILES4.bin"
+ verticalTILES.write_bytes(pack(vertical,32,64))
  # These are *candidate* icons; restyling by pixels cannot be silently approved.
  info={"stage":st,"originalSource":str(src),"originalSHA256":sha(src),
     "sourceCanvas":[128,64],"assumedAnimationFrames":2,
@@ -120,6 +136,12 @@ for st in ("trapinch","vibrava","flygon"):
     "sourcePaletteSHA256":sha(pal),"same16BGR555EntriesAsBattleFront":True,
     "indexedPixelRoundtrip":True,"alphaPreservedAfterNearestDownsample":True,
     "png":str(outimg.relative_to(OUT)),"indexedPNG":str(nin.relative_to(OUT)),
+    "upstreamIconSourceCanvas":[32,64],"upstreamTwoFramesVertical":True,
+    "upstreamIndexedPNG":str(verticalPNG.relative_to(OUT)),
+    "upstreamIndexedPNGSHA256":sha(verticalPNG),
+    "upstreamStackedTileBytes":verticalTILES.stat().st_size,
+    "upstreamStackedTiles":str(verticalTILES.relative_to(OUT)),
+    "upstreamStackedTilesRoundtrip":True,
     "sourceDownsample":str(origpath.relative_to(OUT)),
     "tiles":str(tilefile.relative_to(OUT)),"palette":str(palfile.relative_to(OUT)),
     "pngSHA256":sha(outimg),"tilesSHA256":sha(tilefile),
@@ -158,7 +180,8 @@ qa={"schema":"mercury-orpheus-delta-source-icon32-technical-study-v1",
    "notGameAnimatedOrTested":True,"originalPixelsSourceLocked":True,
    "caveats":["2x nearest downsampling may be lossy when original 2x blocks differ; per-stage exact counts included.",
               "Recolor uses stage battle color palette, but is a visual draft not a selected icon.",
-              "Icon animation sequence and actual upstream icon NARC processing unverified."],
+              "Icon animation sequence and actual upstream icon NARC processing unverified.",
+              "Icons in Platinum use a shared 256-color JASC-PAL; these experimental individual stage palettes are not yet mapped to the real shared game icon palette."],
    "comparison":preview.name,"comparisonSHA256":sha(preview),"results":records}
 (OUT/"icon32_qa.json").write_text(json.dumps(qa,indent=2)+"\n")
 (OUT/"README.md").write_text(
@@ -167,7 +190,9 @@ qa={"schema":"mercury-orpheus-delta-source-icon32-technical-study-v1",
  "two 32px frames for each three-stage custom Delta species, using the exact stage battle palette, "
  "with indexed graphics and raw tiled 4bpp exports. Original Orpheus source icon sheets are 128x64 "
  "and are sampled to 64x32 for this candidate; exact 2x reversibility is reported per stage. "
- "**Not user-approved, not an implemented Platinum icon archive**, and no runtime animation tests. "
+ "Upstream 32x64 vertical two-frame 4-bit indexed PNGs and matching tiled bytes are also prepared. "
+ "The real Platinum menu uses a shared 256-color icon palette, so these individual stage palette trials "
+ "are not yet game-palette compatible. **Not user-approved, not an implemented Platinum icon archive**, and no runtime animation tests. "
  "See [per-stage exact QA](icon32_qa.json).\n")
 print("ORPHEUS_ICON32_TECHNICAL_QA",json.dumps({"stages":3,"frames":6,
   "allTileRoundTrip":True,"noNewArtApproved":True,"noROM":True}))
