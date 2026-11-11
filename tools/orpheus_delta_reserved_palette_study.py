@@ -8,7 +8,7 @@ bank3 yet: run collision and runtime tests AFTER explicit visual approval.
 Genuine upstream NitroGFX icon encoding/decoding and visual QA.
 """
 from __future__ import annotations
-import argparse, collections, hashlib, json, math, subprocess
+import argparse, collections, hashlib, json, math, subprocess, struct
 from pathlib import Path
 from PIL import Image, ImageDraw, ImageFont
 PA=argparse.ArgumentParser()
