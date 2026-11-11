@@ -39,6 +39,8 @@ with tempfile.TemporaryDirectory(prefix="mercury-upstream-nitrogfx-") as work:
     assert re.search(r"#define MON_SPRITE_FRAME_HEIGHT_TILES\s+10\b",const)
     assert "'-encodefronttoback'" in script and "'-scan'" in script
     assert "pl_pokegra.narc" in script
+    # GitHub runner images vary: fail specifically if package install step was skipped.
+    run(["pkg-config","--exists","libpng","zlib"],timeout=25)
     run(["make","-j2"],cwd=refroot/"tools/nitrogfx",timeout=150)
     nitro=refroot/"tools/nitrogfx/nitrogfx"
     assert nitro.is_file()
