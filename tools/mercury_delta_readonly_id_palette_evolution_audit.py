@@ -160,7 +160,16 @@ ids=collections.defaultdict(list)
 for entry in active:
     if isinstance(entry.get("id"),int):
         ids[entry["id"]].append(entry.get("key"))
-numeric_clashes=[{"id":k,"keys":v} for k,v in sorted(ids.items()) if len(v)>1]
+# A reused numeric ID in this website is not necessarily an engine
+# collision; it could be shared by forms. Preserve names for manual scoping.
+numeric_clashes=[]
+for number,keys in sorted(ids.items()):
+    if len(keys)<2:continue
+    rows=[r for r in active if isinstance(r.get("id"),int) and r["id"]==number]
+    numeric_clashes.append({
+        "id":number,
+        "records":[summary_record(r,"effective-current-dex") for r in rows],
+        "classification":"ambiguous reused site-data ID; NOT proven a native engine collision"})
 legacy_excluded=("SPECIES_FLYGON_REDUX_B","SPECIES_FLYGON_REDUX_B_MEGA")
 legacy_active=[r for r in active_family if r.get("constant") in legacy_excluded]
 delta=re.compile(r"\b(?:delta[\s_\-]*(?:trapinch|vibrava|flygon)|(?:trapinch|vibrava|flygon)[\s_\-]*delta)\b",re.I)
@@ -275,7 +284,7 @@ R["evolutions"]={"canonicalSource":normal,
  "normalEvolutionChainPreserved":True}
 R["blockers"]=[
  {"id":"ID-01","severity":"blocked","reason":"1025 canonical base species and 1026/1027 sentinels occupy current canonical ID namespace; no independent three-ID collision-free allocation or committed Delta form mapping","gate":"full planned 1599-row roster to game species/form-ID map + runtime code implementation"},
- {"id":"ID-02","severity":"blocked","reason":"The 1599-row live Dex is larger than the 1025 base registry; the older Electric Redux B Flygon IDs remain in Dex data even though newer roster rules retire them. 1028+ numbers are NOT certified free","gate":"reconcile all custom entries and retired roster identities against final game species/form IDs before assigning any Delta IDs"},
+ {"id":"ID-02","severity":"blocked","reason":"The 1599-row live Dex is larger than the 1025 base registry; the older Electric Redux B Flygon IDs remain in Dex data despite newer roster retirement. Also, numeric site IDs 1581/1751/1761 are reused by multiple active records (may be intentional forms); none are certified engine-native allocations. 1028+ numbers are NOT proven free","gate":"reconcile all custom entries and retired roster identities against final game species/form IDs before assigning any Delta IDs"},
  {"id":"FORM-03","severity":"blocked","reason":"5-bit persistent form value and hard-coded icon/form routing; Delta Flygon line not registered","gate":"choose separate species or valid 1-based form scheme, then test full save/battle/party/box behaviour"},
  {"id":"ICON-04","severity":"blocked","reason":"Bank 3 is zero-filled in source, but trial NCLR has not been installed and icon/color routing is absent; party and PC palette slot usage needs runtime collision proof","gate":"shared icon-bank allocation and multiple UI VRAM loading tests"},
  {"id":"EVO-05","severity":"blocked","reason":"Normal evolution levels 35/45 do not establish Delta methods/levels; Delta stage dual types are not finalized","gate":"user-approved Delta methods, first-two-stage types and collision-free directed graph"},
