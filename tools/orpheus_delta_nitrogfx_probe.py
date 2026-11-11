@@ -169,6 +169,16 @@ with tempfile.TemporaryDirectory(prefix="mercury-upstream-nitrogfx-") as work:
     assert len(iconReport["stageResults"])==3
     assert iconReport["nativeDecoderPixelDifferencesAll"]==0
     assert iconReport["allReservedBanksUntouched"] and iconReport["unapproved"]
+    # Source-faithful alternative: use only *currently zero* palette bank 3
+    # in a separate trial file, without modifying or registering that bank.
+    run(["python3","tools/orpheus_delta_reserved_palette_study.py",
+         "--upstream",refroot,"--nitrogfx",nitro],timeout=150)
+    bank3Report=json.loads((ROOT/"reserved_icon_bank3_qa.json").read_text())
+    assert bank3Report["allDecodeIndexDifferences"]==0
+    assert bank3Report["originalSourcePaletteNeverModified"]
+    assert bank3Report["existingPaletteBank0to2ByteIdentical"]
+    assert bank3Report["reservedBanks4to15ByteIdentical"]
+    assert not bank3Report["paletteSlot3MustBeVerifiedUnusedBeforeAnyActualAllocation"] is False
     report={
       "schema":"mercury-orpheus-pret-platinum-nitrogfx-technical-probe-v1",
       "sourceQAsha256":sha(QAPATH),
@@ -194,7 +204,11 @@ with tempfile.TemporaryDirectory(prefix="mercury-upstream-nitrogfx-") as work:
       "sharedIconPaletteReport":"shared_icon_palette_qa.json",
       "sharedIconNCGRCount":len(iconReport["stageResults"]),
       "sharedIconNitroGfxIndexPixelDifferences":iconReport["nativeDecoderPixelDifferencesAll"],
-      "sharedIconArtworkUnapproved":True
+      "sharedIconArtworkUnapproved":True,
+      "reservedBank3AlternativeReport":"reserved_icon_bank3_qa.json",
+      "reservedBank3IsNotAllocatedInGame":True,
+      "reservedBank3RealIconNCGRCount":len(bank3Report["stageResults"]),
+      "allHistoricalPalettesUnchanged":True
     }
     reportpath=ROOT/"nitrogfx_qa.json"
     reportpath.write_text(json.dumps(report,indent=2)+"\n")
