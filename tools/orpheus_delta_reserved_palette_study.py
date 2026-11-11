@@ -63,8 +63,16 @@ for st in stages:
  # Equal total weight for all stages despite different pixel counts.
  for c,n in counts.items():weights[c]+=n/total
  data[st]={"indexed":indexed,"rgba":rgba,"trial":im.convert("RGBA"),"counts":counts}
-keys=sorted(weights)
-assert len(keys)>15,len(keys)
+# Include battle palettes as legal source-faithful candidate shades, even if a
+# particular tiny icon currently omits them. Avoid inventing any new RGB color.
+pool=set(weights)
+for stage in stages:
+ battle=Path("review/candidates/orpheus-2026-11-09-UNAPPROVED/desert-scarab-sixview-g4-preflight/family")/stage/"front_80_bgr555.pal.bin"
+ words=struct.unpack("<16H",battle.read_bytes())
+ for w in words[1:]:
+  pool.add(tuple(round(((w>>(5*k))&31)*255/31) for k in range(3)))
+keys=sorted(pool)
+assert len(keys)>=15,len(keys)
 labs={c:lab(c) for c in keys}
 cost={(a,b):d2(labs[a],labs[b]) for a in keys for b in keys}
 def obj(selected):
@@ -97,7 +105,7 @@ assert len(newbank)==16
 experiment=colors[:48]+newbank+colors[64:]
 assert len(experiment)==256 and experiment[:48]==colors[:48] and experiment[64:]==colors[64:]
 assert experiment[48]==colors[48]==(0,0,0)
-assert all(experiment[i]!=colors[i] for i in range(49,64)) is False or True
+assert all(experiment[i]!=colors[i] for i in range(49,64))
 # **Never write back to the upstream shared palette file.**
 pal=OUT/"PROPOSED_shared_icon_256color_palette_BANK3_ONLY.pal"
 pal.write_bytes(("JASC-PAL\r\n0100\r\n256\r\n"+
