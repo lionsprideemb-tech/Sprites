@@ -157,7 +157,7 @@ for icon in icons:
  for e in icon["exact32x32Cells"]:
   x,y,_,_=e["sourceRect"]
   cell=Image.open(OUT/e["image"]).convert("RGBA")
-  im.alpha_composite(cell,(x,y))
+  im.paste(cell,(x,y))  # preserves source RGB bytes even under zero alpha
  assert im.tobytes()==expected.tobytes(),icon["stage"]
 icon_sheet=Image.new("RGB",(920,580),"#F7F8FA");draw=ImageDraw.Draw(icon_sheet)
 draw.text((20,12),"ORPHEUS ORIGINAL REGIONAL ICON SOURCE FRAME INVENTORY",font=font(19,True),fill="#2B3E4F")
