@@ -156,9 +156,9 @@ for st in ("trapinch","vibrava","flygon"):
     # Exact command from upstream's make_pl_poke_icon.py
     run(ARGS.nitrogfx,pngPath,ncgr,"-clobbersize","-version101")
     assert ncgr.read_bytes()[:4]==b"RGCN",ncgr.read_bytes()[:8]
-    # Decoder reads the selected subpalette; -palindex is one-based.
+    # Decoder -width is in 8px tiles: 4 tiles = 32 pixels; -palindex is one-based.
     run(ARGS.nitrogfx,ncgr,decimg,"-palette",NCLR,
-        "-palindex",str(bank+1),"-width","32","-object")
+        "-palindex",str(bank+1),"-width","4","-object")
     decoded=Image.open(decimg)
     assert decoded.size==(32,64) and decoded.mode=="P",(st,decoded.size,decoded.mode)
     difference=sum(x!=y for x,y in zip(array,decoded.getdata()))
