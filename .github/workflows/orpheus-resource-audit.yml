@@ -252,6 +252,29 @@ jobs:
             git commit -m "Publish real Orpheus desert-scarab Bug/Ground DS80 four-view assets and verified QA (unapproved)"
             git push origin HEAD:mercury/orpheus-resource-audit-20261109
           fi
+      - name: Check original Orpheus icon frames and propose six nonapproved shinies
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -f safepng/icon328_1.png
+          test -f safepng/icon329_1.png
+          test -f safepng/icon330_1.png
+          test -f review/candidates/orpheus-2026-11-09-UNAPPROVED/desert-scarab-sixview-g4-preflight/preflight_qa.json
+          python3 tools/orpheus_delta_shiny_icon_preflight.py
+      - name: Publish isolated shiny color proposals and exact 32px original icon crops
+        shell: bash
+        run: |
+          set -euo pipefail
+          target=review/candidates/orpheus-2026-11-09-UNAPPROVED/delta-shiny-icon-research
+          mkdir -p "$target"
+          cp -a report/orpheus_delta_shiny_icon_preflight/. "$target/"
+          git config user.name "mercury-sprite-qa[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- "$target"
+          if ! git diff --cached --quiet; then
+            git commit -m "Publish only unapproved six shiny schemes and exact Orpheus icon frame QA"
+            git push origin HEAD:mercury/orpheus-resource-audit-20261109
+          fi
       - name: Upload research-only metadata artifact
         uses: actions/upload-artifact@v4
         if: always()
