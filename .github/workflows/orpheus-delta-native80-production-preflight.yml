@@ -1,0 +1,52 @@
+name: Mercury Orpheus Delta native Platinum battle production preflight (unapproved)
+on:
+  push:
+    branches: [mercury/orpheus-resource-audit-20261109]
+    paths:
+      - tools/orpheus_delta_native80_production_preflight.py
+      - tools/orpheus_delta_nitrogfx_probe.py
+      - .github/workflows/orpheus-delta-native80-production-preflight.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  static-twoframe-source-qa:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Setup indexed PNG tools
+        run: python -m pip install pillow==11.3.0
+      - name: Generate genuine 80px Trapinch and six-view source-locked G4 static two-frame inputs
+        run: |
+          set -euo pipefail
+          python tools/orpheus_delta_native80_production_preflight.py
+          test -s report/orpheus_delta_native80_preflight/preflight_qa.json
+      - name: Optional upstream NTR NitroGFX encoder roundtrip (if probe committed)
+        run: |
+          set -euo pipefail
+          if test -f tools/orpheus_delta_nitrogfx_probe.py; then
+            python tools/orpheus_delta_nitrogfx_probe.py
+          fi
+      - name: Publish only isolated unapproved candidate package and QA
+        run: |
+          set -euo pipefail
+          dest=review/candidates/orpheus-2026-11-09-UNAPPROVED/desert-scarab-sixview-g4-preflight
+          mkdir -p "$dest"
+          cp -a report/orpheus_delta_native80_preflight/. "$dest/"
+          git config user.name "mercury-sprite-qa[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- "$dest"
+          if ! git diff --cached --quiet; then
+            git commit -m "Publish six-view Desert Scarab native 80px & static G4 twoframe preflight; all unapproved"
+            git push origin HEAD:mercury/orpheus-resource-audit-20261109
+          fi
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: mercury-desert-scarab-g4-preflight-not-rom
+          path: report/orpheus_delta_native80_preflight/
+          retention-days: 30
