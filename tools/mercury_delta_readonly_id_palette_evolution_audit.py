@@ -111,12 +111,17 @@ index=jsonfile(idxpath);folder=idxpath.parent
 shards=index["shards"];overlays=index["overlays"]
 allrows=[]
 shardcounts=[]
+shard_entries=[]
 for source in shards:
     doc=gzjson(folder/source)
     rows=doc.get("pokemon") if isinstance(doc,dict) else doc
     assert isinstance(rows,list),(source,type(rows))
     allrows += [(source,entry) for entry in rows if isinstance(entry,dict)]
+    shard_entries.extend(dict(entry) for entry in rows if isinstance(entry,dict))
     shardcounts.append({"file":source,"pokemonRows":len(rows),"sha256":sha(folder/source)})
+# The deployed app.js loads the 17 shards, then applies each listed overlay
+# patches/additions/removals in order.
+active=shard_entries[:]
 overlay_docs=[]
 for source in overlays:
     data=gzjson(folder/source)
@@ -126,10 +131,38 @@ for source in overlays:
          "additions":len(data.get("additions",[])) if isinstance(data,dict) else 0,
          "removeKeysCount":len(data.get("removeKeys",[])) if isinstance(data,dict) else 0})
     if isinstance(data,dict):
+        by_key={item.get("key"):item for item in active if item.get("key")}
+        for item in data.get("patches",[]):
+            if item.get("key") in by_key:
+                by_key[item["key"]].update(item.get("set") or {})
+        for item in data.get("additions",[]):
+            if item.get("key") and item["key"] not in by_key:
+                new={**item,**(item.get("set") or {})}
+                new.pop("set",None)
+                active.append(new)
+                by_key[new["key"]]=new
+        removed=set(data.get("removeKeys",[]))
+        if removed:active=[item for item in active if item.get("key") not in removed]
         for k in ("patches","additions","updates","records","pokemon","entries"):
             for ent in data.get(k,[]) if isinstance(data.get(k,[]),list) else []:
                 if isinstance(ent,dict):allrows.append((source+":"+k,ent))
+# Replica of the runtime overlay reducer; check 1599 ACTUAL site entries.
+assert len(active)==index["meta"]["entries"],(len(active),index["meta"]["entries"])
+active_keys=[r.get("key") for r in active]
+assert len(active_keys)==len(set(active_keys))
 target=re.compile(r"(?:trapinch|vibrava|flygon)",re.I)
+active_family=[]
+for entry in active:
+    identity=" ".join(str(entry.get(k,"")) for k in ("key","id","species","constant","name","displayName","form","formId","form_id"))
+    if target.search(identity):
+        active_family.append(summary_record(entry,"effective-current-dex"))
+ids=collections.defaultdict(list)
+for entry in active:
+    if isinstance(entry.get("id"),int):
+        ids[entry["id"]].append(entry.get("key"))
+numeric_clashes=[{"id":k,"keys":v} for k,v in sorted(ids.items()) if len(v)>1]
+legacy_excluded=("SPECIES_FLYGON_REDUX_B","SPECIES_FLYGON_REDUX_B_MEGA")
+legacy_active=[r for r in active_family if r.get("constant") in legacy_excluded]
 delta=re.compile(r"\b(?:delta[\s_\-]*(?:trapinch|vibrava|flygon)|(?:trapinch|vibrava|flygon)[\s_\-]*delta)\b",re.I)
 matching=[]
 deltaMatches=[]
@@ -144,10 +177,18 @@ R["dex"]={
   "shardsRead":len(shards),"overlayDocumentsRead":len(overlays),
   "rawShardPokemonRows":sum(x["pokemonRows"] for x in shardcounts),
   "rawPlusOverlayRecordCount":len(allrows),
+  "runtimeReducer":"app.js applySourceOverlay: .set patches, new additions, then removeKeys for each overlay",
+  "effectiveActiveRows":len(active),"activeKeyUnique":True,
+  "maxEffectiveDexNumericID":max(ids) if ids else None,
+  "effectiveNumericIDCount":len(ids),
+  "effectiveNumericIDClashes":numeric_clashes[:40],
+  "effectiveLiveFlygonRecords":active_family,
+  "excludedElectricReduxBStillInLiveDex":legacy_active,
+  "excludedElectricReduxBCount":len(legacy_active),
   "matchingFlygonFamilyRecords":matching[:80],
   "explicitDeltaIdentityMatches":deltaMatches[:50],
   "matchingCount":len(matching),"deltaNameMatchCount":len(deltaMatches),
-  "note":"Raw shards and overlay patches/additions inspected; R8 app merges these records. Matching legacy Redux names do not create or approve new game engine species IDs.",
+  "note":"Replicated current app.js sequential overlay reducer to obtain effective 1599-row roster. Historic Redux entries still visible here are Dex-side numeric IDs, NOT safe assigned native game species IDs; latest roster scope retires Electric Redux B.",
   "shards":shardcounts,"overlayDocuments":overlay_docs
 }
 # 4. Real upstream icon routing: verify exact hardcoding, not merely palette art.
@@ -234,7 +275,7 @@ R["evolutions"]={"canonicalSource":normal,
  "normalEvolutionChainPreserved":True}
 R["blockers"]=[
  {"id":"ID-01","severity":"blocked","reason":"1025 canonical base species and 1026/1027 sentinels occupy current canonical ID namespace; no independent three-ID collision-free allocation or committed Delta form mapping","gate":"full planned 1599-row roster to game species/form-ID map + runtime code implementation"},
- {"id":"ID-02","severity":"blocked","reason":"The Dex approved roster is larger than the base 1025 registry, so hypothetical 1028+ integers are not proven free","gate":"reconcile all proposed Mercury custom entries, forms, and Megas against namespace/engine IDs"},
+ {"id":"ID-02","severity":"blocked","reason":"The 1599-row live Dex is larger than the 1025 base registry; the older Electric Redux B Flygon IDs remain in Dex data even though newer roster rules retire them. 1028+ numbers are NOT certified free","gate":"reconcile all custom entries and retired roster identities against final game species/form IDs before assigning any Delta IDs"},
  {"id":"FORM-03","severity":"blocked","reason":"5-bit persistent form value and hard-coded icon/form routing; Delta Flygon line not registered","gate":"choose separate species or valid 1-based form scheme, then test full save/battle/party/box behaviour"},
  {"id":"ICON-04","severity":"blocked","reason":"Bank 3 is zero-filled in source, but trial NCLR has not been installed and icon/color routing is absent; party and PC palette slot usage needs runtime collision proof","gate":"shared icon-bank allocation and multiple UI VRAM loading tests"},
  {"id":"EVO-05","severity":"blocked","reason":"Normal evolution levels 35/45 do not establish Delta methods/levels; Delta stage dual types are not finalized","gate":"user-approved Delta methods, first-two-stage types and collision-free directed graph"},
@@ -246,6 +287,8 @@ assert len(R["blockers"])==6 and not R["noRomChanges"] is False
 print("MERCURY_READONLY_DELTA_COLLISION_AUDIT",
       json.dumps({"canonical":1025,"dexRaw":R["dex"]["rawShardPokemonRows"],
        "dexFlygonMatches":R["dex"]["matchingCount"],
+       "effectiveDexRows":R["dex"]["effectiveActiveRows"],
+       "excludedReduxBStillVisible":len(legacy_active),
        "deltaMatches":R["dex"]["deltaNameMatchCount"],
        "bank3UsedInUpstreamMetadata":len(bank3metas),
        "paletteBankCounts":R["iconBank3"]["usedIconPaletteIndexCounts"],
