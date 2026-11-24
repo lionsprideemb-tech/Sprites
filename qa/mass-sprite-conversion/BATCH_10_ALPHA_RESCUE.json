@@ -1,0 +1,347 @@
+{
+  "schema": "mercury-mass-rescue-batch-v1",
+  "batch": "10_ALPHA_RESCUE",
+  "sourceRef": "f15c4671bf7afb15450fc7801bde17aefcdc4f7e",
+  "ledgerBlob": "8bbddab412f1cbf24aab4e844287de0fa4ae135d",
+  "iconPaletteBlob": "65deabb632f60fe5518b161da7d1b1c978a69faf",
+  "reports": [
+    {
+      "artworkKey": "dunsparce-bt-alt-forms-earth-form-2|gitblob:f84a0abea03cfab6a37f6595a91e9fb3f5600185",
+      "identity": "dunsparce-bt-alt-forms-earth-form-2",
+      "source": "Reborn / Plates of Arceus",
+      "decision": "keep",
+      "views": {
+        "front": {
+          "canvas": [
+            160,
+            160
+          ],
+          "bounds": [
+            26,
+            36,
+            118,
+            124
+          ],
+          "collapsedSize": [
+            46,
+            44
+          ],
+          "factor": 2,
+          "partialAlpha": 12,
+          "opaqueRGB": 18,
+          "opaque555": 18,
+          "status": "PARTIAL_ALPHA_HOLD",
+          "sourceSha256": "550fb125133fcfa78c91f347ebac3cc09d5bdc05f052df6a1dcac075b19057a7",
+          "gitBlob": "f84a0abea03cfab6a37f6595a91e9fb3f5600185",
+          "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/dunsparce-bt-alt-forms-earth-form-2/front.png"
+        },
+        "back": {
+          "canvas": [
+            192,
+            192
+          ],
+          "bounds": [
+            36,
+            62,
+            140,
+            124
+          ],
+          "collapsedSize": [
+            52,
+            31
+          ],
+          "factor": 2,
+          "partialAlpha": 0,
+          "opaqueRGB": 15,
+          "opaque555": 15,
+          "status": "PIXEL_CANDIDATE",
+          "offset": [
+            14,
+            25
+          ],
+          "frameSha256": "e17fc93a2fb7d62afff6b3cc62baafef494116c7371666dae57ed4aeb007a3e9",
+          "sourceSha256": "71699f0d8027f350b651105ebc6e573911a265a2a585722299dc16e9e046d269",
+          "gitBlob": "b62c8f9c4a87431a1dad630085e08bef81774cf8",
+          "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/dunsparce-bt-alt-forms-earth-form-2/back.png"
+        },
+        "shiny_back": {
+          "canvas": [
+            192,
+            192
+          ],
+          "bounds": [
+            36,
+            62,
+            140,
+            124
+          ],
+          "collapsedSize": [
+            52,
+            31
+          ],
+          "factor": 2,
+          "partialAlpha": 0,
+          "opaqueRGB": 15,
+          "opaque555": 15,
+          "status": "PIXEL_CANDIDATE",
+          "offset": [
+            14,
+            25
+          ],
+          "frameSha256": "7d4b3c12a62fbc7b4451b91f9617b35b850e20abe1075844f6a3511f449bedc9",
+          "sourceSha256": "adf26d41ba053de395109d03abedb89c637caa9ce9cdc363a05fea5c74010a82",
+          "gitBlob": "b9c6bde40f0d11d02c1aea878ba0f16a2f6e43f4",
+          "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/dunsparce-bt-alt-forms-earth-form-2/shiny_back.png"
+        },
+        "shiny_front": {
+          "canvas": [
+            160,
+            160
+          ],
+          "bounds": [
+            26,
+            36,
+            118,
+            124
+          ],
+          "collapsedSize": [
+            46,
+            44
+          ],
+          "factor": 2,
+          "partialAlpha": 12,
+          "opaqueRGB": 21,
+          "opaque555": 21,
+          "status": "PARTIAL_ALPHA_HOLD",
+          "sourceSha256": "7426de21542de035b2d07065808bd611d19e0801bfefb1e49848360d2035aef2",
+          "gitBlob": "202473cdf413988fb7c4e31c86225a4e0f2c5a8a",
+          "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/dunsparce-bt-alt-forms-earth-form-2/shiny_front.png"
+        }
+      },
+      "archive": null,
+      "icon": null,
+      "status": "HOLD",
+      "production": false,
+      "gameIntegrationAllowed": false
+    },
+    {
+      "artworkKey": "dusknoir-alternate-form-1|gitblob:c182bcfb9205d9efc729f1e1e751d4ede09b91de",
+      "identity": "dusknoir-alternate-form-1",
+      "source": "Reborn / Plates of Arceus",
+      "decision": "keep",
+      "views": {
+        "front": {
+          "canvas": [
+            160,
+            160
+          ],
+          "bounds": [
+            2,
+            0,
+            158,
+            160
+          ],
+          "collapsedSize": [
+            78,
+            80
+          ],
+          "factor": 2,
+          "partialAlpha": 44,
+          "opaqueRGB": 92,
+          "opaque555": 42,
+          "status": "PARTIAL_ALPHA_HOLD",
+          "sourceSha256": "5ea5d84face41d5f13c83f83ddcc6eb38c024f76338d75837a7d0089488e4bcb",
+          "gitBlob": "c182bcfb9205d9efc729f1e1e751d4ede09b91de",
+          "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/dusknoir-alternate-form-1/front.png"
+        },
+        "shiny_front": {
+          "canvas": [
+            160,
+            160
+          ],
+          "bounds": [
+            2,
+            0,
+            158,
+            160
+          ],
+          "collapsedSize": [
+            78,
+            80
+          ],
+          "factor": 2,
+          "partialAlpha": 32,
+          "opaqueRGB": 66,
+          "opaque555": 33,
+          "status": "PARTIAL_ALPHA_HOLD",
+          "sourceSha256": "8520d7301ba1a9f8f4823ce49b3d716c66b7c3dcee9ef0c27c152b0dcdcd1ed5",
+          "gitBlob": "d1765d3704a57217d0b8eb749eb346c4158951eb",
+          "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/dusknoir-alternate-form-1/shiny_front.png"
+        },
+        "shiny_back": {
+          "canvas": [
+            192,
+            192
+          ],
+          "bounds": [
+            4,
+            12,
+            162,
+            164
+          ],
+          "collapsedSize": [
+            79,
+            76
+          ],
+          "factor": 2,
+          "partialAlpha": 28,
+          "opaqueRGB": 47,
+          "opaque555": 21,
+          "status": "PARTIAL_ALPHA_HOLD",
+          "sourceSha256": "06e254fc93d0abc5efaa93a390cea1ed0b191e537b624178317e1ae8a824420c",
+          "gitBlob": "37592edb5fc187510bb4ac85cdcf653c2a40f346",
+          "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/dusknoir-alternate-form-1/shiny_back.png"
+        },
+        "back": {
+          "canvas": [
+            192,
+            192
+          ],
+          "bounds": [
+            4,
+            12,
+            162,
+            164
+          ],
+          "collapsedSize": [
+            79,
+            76
+          ],
+          "factor": 2,
+          "partialAlpha": 40,
+          "opaqueRGB": 57,
+          "opaque555": 28,
+          "status": "PARTIAL_ALPHA_HOLD",
+          "sourceSha256": "885a42029399a014d51c9b0b629c1d32f9ce3e8817442db1c31b83a27c5b34a9",
+          "gitBlob": "35334d97fd7282487b6388071f025dd86d7830e9",
+          "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/dusknoir-alternate-form-1/back.png"
+        }
+      },
+      "archive": null,
+      "icon": null,
+      "status": "HOLD",
+      "production": false,
+      "gameIntegrationAllowed": false
+    },
+    {
+      "artworkKey": "metagross-alternate-mega-form-3|gitblob:3c43df2025a173d61d165800d9c32d89412b68cc",
+      "identity": "metagross-alternate-mega-form-3",
+      "source": "Reborn / Plates of Arceus",
+      "decision": "keep",
+      "views": {
+        "back": {
+          "canvas": [
+            192,
+            192
+          ],
+          "bounds": [
+            10,
+            16,
+            190,
+            178
+          ],
+          "collapsedSize": [
+            90,
+            81
+          ],
+          "factor": 2,
+          "partialAlpha": 2268,
+          "opaqueRGB": 13,
+          "opaque555": 13,
+          "status": "PARTIAL_ALPHA_HOLD",
+          "sourceSha256": "bd536e26ab77e27a1172aaa47402441763016f2bc0669d9d8e92bb92b32a4dce",
+          "gitBlob": "82c9033e19abf4b46bba902bb26ae9364011f466",
+          "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/metagross-alternate-mega-form-3/back.png"
+        },
+        "shiny_front": {
+          "canvas": [
+            192,
+            192
+          ],
+          "bounds": [
+            4,
+            18,
+            190,
+            178
+          ],
+          "collapsedSize": [
+            186,
+            160
+          ],
+          "factor": 1,
+          "partialAlpha": 2264,
+          "opaqueRGB": 18,
+          "opaque555": 18,
+          "status": "PARTIAL_ALPHA_HOLD",
+          "sourceSha256": "763db0cae70b43b865f1e5e26b5e2d19b1911bf616e84b5657846ec47a99752a",
+          "gitBlob": "9b2f92b444c3de516bd4cd0c48758fe87d63002b",
+          "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/metagross-alternate-mega-form-3/shiny_front.png"
+        },
+        "front": {
+          "canvas": [
+            192,
+            192
+          ],
+          "bounds": [
+            4,
+            18,
+            190,
+            178
+          ],
+          "collapsedSize": [
+            186,
+            160
+          ],
+          "factor": 1,
+          "partialAlpha": 2264,
+          "opaqueRGB": 20,
+          "opaque555": 19,
+          "status": "PARTIAL_ALPHA_HOLD",
+          "sourceSha256": "2e73e0555fae6082938de2188de211ee1af48df1ba55e3a7d45c993bfdbbd9b8",
+          "gitBlob": "3c43df2025a173d61d165800d9c32d89412b68cc",
+          "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/metagross-alternate-mega-form-3/front.png"
+        },
+        "shiny_back": {
+          "canvas": [
+            192,
+            192
+          ],
+          "bounds": [
+            10,
+            16,
+            190,
+            178
+          ],
+          "collapsedSize": [
+            90,
+            81
+          ],
+          "factor": 2,
+          "partialAlpha": 2268,
+          "opaqueRGB": 14,
+          "opaque555": 14,
+          "status": "PARTIAL_ALPHA_HOLD",
+          "sourceSha256": "6a3b67d62445c0be4be3265e499ca06b164bb613110e5408c68699bb24ebbd62",
+          "gitBlob": "ac565dac12d7d0f701c76b3d878f244c99163dde",
+          "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/metagross-alternate-mega-form-3/shiny_back.png"
+        }
+      },
+      "archive": null,
+      "icon": null,
+      "status": "HOLD",
+      "production": false,
+      "gameIntegrationAllowed": false
+    }
+  ],
+  "gameIntegrationAllowed": false
+}
