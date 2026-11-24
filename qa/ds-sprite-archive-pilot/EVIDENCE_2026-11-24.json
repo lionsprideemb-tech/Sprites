@@ -1,0 +1,781 @@
+{
+  "schema": "mercury-ds-sprite-archive-pilot-evidence-v1",
+  "date": "2026-11-24",
+  "scope": "Offline QA only. No production or emulator certification.",
+  "reconciliationCommit": "92ea5300f0ae0459a55491ef5504662e950eb414",
+  "reconciliationBlob": "32c3a688aab9739db43f107b782005496ddc6462",
+  "pinned": {
+    "sprites_main": "f15c4671bf7afb15450fc7801bde17aefcdc4f7e",
+    "dex_main": "faa7cb4016d8030fb4661b49114352d79cac7944",
+    "platinum_main": "5525e961a1fb98c62bd53bc4a27b0276a39f6719",
+    "delta_symbolic_branch": "qa/delta-custom-registry-prototype-20261112",
+    "delta_symbolic_head": "c9203849bdc81ee9b5a0f3feab58adb40eba7d04"
+  },
+  "protected": {
+    "acceptedRows": 711,
+    "iphoneVotes": 166,
+    "keep": 154,
+    "cut": 12,
+    "iphoneBlob": "61c5e53c6ec81b74d192cd62a4c52c970cea15ce",
+    "overlayBlob": "89f328b4471f1531520305e54f63efdbc6251a50",
+    "delta": {
+      "artworkStatus": "UNAPPROVED",
+      "retiredLegacyCandidates": [
+        {
+          "identity": "vibrava-redux",
+          "key": "vibrava-redux|pixelsha256:0eff61268b7c30c1bb16d6f8c56d4f3de7bb32acedbde6f6b062d9df78f249ba"
+        }
+      ],
+      "symbolicPrototypeTests": 42,
+      "nativeSaveEmulatorVerified": false,
+      "productionIDsAllocated": 0
+    }
+  },
+  "artifact": {
+    "nativeHead": "f3e26a87a369f2f3a81aa0e605a79dae3bba7281",
+    "run": 42681825471,
+    "id": 13702981647,
+    "sha256": "e5e93e75c931d071eebacd7fb1576c7f191831bd88a12299eb35cfb23a5b9caf",
+    "verifiedRawViews": 58,
+    "verifiedFileHashes": 174,
+    "verifiedDecodedPreviews": 58,
+    "sourceManifestMatches": 32,
+    "masterEvidenceMatches": 32
+  },
+  "engine": {
+    "upstream": "pret/pokeplatinum",
+    "commit": "c248fb3f8cc9934ded800e489567c5c0eeee92eb",
+    "files": [
+      "src/pokemon_sprite.c",
+      "src/pokemon_icon.c",
+      "res/pokemon/meson.build",
+      "tools/scripts/make_pl_pokegra.py",
+      "tools/scripts/make_pl_otherpoke.py",
+      "tools/scripts/make_pl_poke_icon.py",
+      "tools/nitrogfx/gfx.c",
+      "tools/nitrogfx/util.c",
+      "res/pokemon/.shared/pl_poke_icon.pal"
+    ],
+    "requirements": "160x80 two-frame scanned encrypted 4bpp NCGR, two 16-color normal/shiny palettes with shared pixel indices across faces, native alternate-form routing and icon shared palette required. Native build scripts request 8-bit NCLR header and comp 10 for battle palette; icon palette header is 4-bit."
+  },
+  "pilot": [
+    {
+      "acceptedArtwork": {
+        "key": "granbull-alternate-form-1|gitblob:d1c51d4f3bd93983f9b4828d798443d786f46fa0",
+        "identity": "granbull-alternate-form-1",
+        "name": "Granbull — Alternate (Form 1)",
+        "source": "Reborn / Plates of Arceus",
+        "decision": "keep",
+        "authority": "historical_GBA_effective",
+        "front_pixel_hash": null,
+        "front_git_blob": "d1c51d4f3bd93983f9b4828d798443d786f46fa0",
+        "views": {
+          "front": {
+            "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/granbull-alternate-form-1/front.png",
+            "git_blob_sha": "d1c51d4f3bd93983f9b4828d798443d786f46fa0"
+          },
+          "back": {
+            "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/granbull-alternate-form-1/back.png",
+            "git_blob_sha": "3471569bb827020e9fabbd50722840ee76109d7b"
+          },
+          "shinyFront": {
+            "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/granbull-alternate-form-1/shiny_front.png",
+            "git_blob_sha": "7b944573101fad4cd6752aadb9520a6c806c41f4"
+          },
+          "shinyBack": {
+            "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/granbull-alternate-form-1/shiny_back.png",
+            "git_blob_sha": "97ec08c06d9495f0cb90153dd2c91213641b07c0"
+          }
+        },
+        "sources": [
+          "historical_GBA_effective"
+        ],
+        "source_count": 1,
+        "notes": [
+          "verified_legacy_recovery"
+        ],
+        "ds64": {
+          "source_manifest_key": "granbull-alternate-form-1",
+          "source_slots": {
+            "front": "PIXEL_PRESERVED_EXACT_2X_COLLAPSE_DS64_CANDIDATE",
+            "back": "PIXEL_PRESERVED_EXACT_2X_COLLAPSE_DS64_CANDIDATE",
+            "shiny_front": "PIXEL_PRESERVED_EXACT_2X_COLLAPSE_DS64_CANDIDATE",
+            "shiny_back": "PIXEL_PRESERVED_EXACT_2X_COLLAPSE_DS64_CANDIDATE"
+          }
+        },
+        "native4bpp": {
+          "run": 42681775419,
+          "normal_pair": true,
+          "full_quartet": true,
+          "raw_obj_palette_only": true
+        },
+        "generatedIconCandidate": null,
+        "productionIconBindingVerified": false,
+        "integrationAllowed": false
+      },
+      "sourceTechnicalViews": [
+        {
+          "identity": "granbull-alternate-form-1",
+          "slot": "front",
+          "source": "DS_CUSTOM_LIBRARY/converted/Verified_Source_DS64_Technical_2026_10_23/granbull-alternate-form-1/front.png",
+          "sha256": "72fea88eba58f0c99d6d006ef7720206438185ea0e72b8895928a5b90a960d06"
+        },
+        {
+          "identity": "granbull-alternate-form-1",
+          "slot": "back",
+          "source": "DS_CUSTOM_LIBRARY/converted/Verified_Source_DS64_Technical_2026_10_23/granbull-alternate-form-1/back.png",
+          "sha256": "0df399d7af66cc51a141b8ff6ce1d7e69ba243132c8ce888066584225ad3df7b"
+        },
+        {
+          "identity": "granbull-alternate-form-1",
+          "slot": "shiny_front",
+          "source": "DS_CUSTOM_LIBRARY/converted/Verified_Source_DS64_Technical_2026_10_23/granbull-alternate-form-1/shiny_front.png",
+          "sha256": "73df6c04d39c32b4de6fb7372af44371dfe26dd6b07c936ea2def4fe52df2c95"
+        },
+        {
+          "identity": "granbull-alternate-form-1",
+          "slot": "shiny_back",
+          "source": "DS_CUSTOM_LIBRARY/converted/Verified_Source_DS64_Technical_2026_10_23/granbull-alternate-form-1/shiny_back.png",
+          "sha256": "d916e261bab9103b20c2c237f949c53588d9dc2949c7d3500a7ea2cf8b152ffd"
+        }
+      ],
+      "pairedOpaqueColors": 13,
+      "normalShinyAlphaMismatch": 0,
+      "offlineStatus": "STATIC_ARCHIVE_PASS",
+      "archiveSha256": "c2c1250a8812921caca267ee5f6981c398290949a82e78c818d7308331a2e804",
+      "verifiedFramePixels": 51200,
+      "productionIconIndex": null,
+      "productionPaletteBank": null,
+      "productionSpeciesId": null,
+      "productionFormId": null
+    },
+    {
+      "acceptedArtwork": {
+        "key": "larvitar-space-form-4|gitblob:02ec057052ae19f5fabb133e97f5f1b3243543a1",
+        "identity": "larvitar-space-form-4",
+        "name": "Larvitar — Space (Form 4)",
+        "source": "Reborn / Plates of Arceus",
+        "decision": "keep",
+        "authority": "historical_GBA_effective",
+        "front_pixel_hash": null,
+        "front_git_blob": "02ec057052ae19f5fabb133e97f5f1b3243543a1",
+        "views": {
+          "front": {
+            "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/larvitar-space-form-4/front.png",
+            "git_blob_sha": "02ec057052ae19f5fabb133e97f5f1b3243543a1"
+          },
+          "back": {
+            "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/larvitar-space-form-4/back.png",
+            "git_blob_sha": "a08f7693ca38b01df4c123ba0302294df410be61"
+          },
+          "shinyFront": {
+            "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/larvitar-space-form-4/shiny_front.png",
+            "git_blob_sha": "f54c5e31bf9d2c574004df14ed1d1c34b8de6e18"
+          },
+          "shinyBack": {
+            "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/larvitar-space-form-4/shiny_back.png",
+            "git_blob_sha": "9ff9c1808051d09d806168bc6a0ac8a941173988"
+          }
+        },
+        "sources": [
+          "historical_GBA_effective"
+        ],
+        "source_count": 1,
+        "notes": [
+          "verified_legacy_recovery"
+        ],
+        "ds64": {
+          "source_manifest_key": "larvitar-space-form-4",
+          "source_slots": {
+            "front": "PIXEL_PRESERVED_EXACT_2X_COLLAPSE_DS64_CANDIDATE",
+            "back": "PIXEL_PRESERVED_EXACT_2X_COLLAPSE_DS64_CANDIDATE",
+            "shiny_front": "PIXEL_PRESERVED_EXACT_2X_COLLAPSE_DS64_CANDIDATE",
+            "shiny_back": "PIXEL_PRESERVED_EXACT_2X_COLLAPSE_DS64_CANDIDATE"
+          }
+        },
+        "native4bpp": {
+          "run": 42681775419,
+          "normal_pair": true,
+          "full_quartet": true,
+          "raw_obj_palette_only": true
+        },
+        "generatedIconCandidate": null,
+        "productionIconBindingVerified": false,
+        "integrationAllowed": false
+      },
+      "sourceTechnicalViews": [
+        {
+          "identity": "larvitar-space-form-4",
+          "slot": "front",
+          "source": "DS_CUSTOM_LIBRARY/converted/Verified_Source_DS64_Technical_2026_10_23/larvitar-space-form-4/front.png",
+          "sha256": "be43db68ad1b3d3637d19a8d7748e68c65114740ba5d7532d3512937bf25e8bf"
+        },
+        {
+          "identity": "larvitar-space-form-4",
+          "slot": "back",
+          "source": "DS_CUSTOM_LIBRARY/converted/Verified_Source_DS64_Technical_2026_10_23/larvitar-space-form-4/back.png",
+          "sha256": "3abab45b1b2630de54a4e52f959c105578a0a88ebf88607013a1c006a2043a71"
+        },
+        {
+          "identity": "larvitar-space-form-4",
+          "slot": "shiny_front",
+          "source": "DS_CUSTOM_LIBRARY/converted/Verified_Source_DS64_Technical_2026_10_23/larvitar-space-form-4/shiny_front.png",
+          "sha256": "c7dde4e31e76162dece490a134a0a6a31b066ef263bc1941685dfe56ee475910"
+        },
+        {
+          "identity": "larvitar-space-form-4",
+          "slot": "shiny_back",
+          "source": "DS_CUSTOM_LIBRARY/converted/Verified_Source_DS64_Technical_2026_10_23/larvitar-space-form-4/shiny_back.png",
+          "sha256": "127a4846bc024777faae708eb781cd5811b383c04837d2e0419007881c8a4982"
+        }
+      ],
+      "pairedOpaqueColors": 15,
+      "normalShinyAlphaMismatch": 0,
+      "offlineStatus": "STATIC_ARCHIVE_PASS",
+      "archiveSha256": "32d134177db8c1ac1c5c8101e6104088d7e341a9be0341b4d3c807a3ea883450",
+      "verifiedFramePixels": 51200,
+      "productionIconIndex": null,
+      "productionPaletteBank": null,
+      "productionSpeciesId": null,
+      "productionFormId": null
+    },
+    {
+      "acceptedArtwork": {
+        "key": "leafeon-alternate-form-3|gitblob:4b99e10f51ae138d258e2633f4115fb045f9928e",
+        "identity": "leafeon-alternate-form-3",
+        "name": "Leafeon — Alternate (Form 3)",
+        "source": "Reborn / Plates of Arceus",
+        "decision": "keep",
+        "authority": "historical_GBA_effective",
+        "front_pixel_hash": null,
+        "front_git_blob": "4b99e10f51ae138d258e2633f4115fb045f9928e",
+        "views": {
+          "front": {
+            "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/leafeon-alternate-form-3/front.png",
+            "git_blob_sha": "4b99e10f51ae138d258e2633f4115fb045f9928e"
+          },
+          "back": {
+            "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/leafeon-alternate-form-3/back.png",
+            "git_blob_sha": "2679d73d945917b3c031678009423880e403a23b"
+          },
+          "shinyFront": {
+            "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/leafeon-alternate-form-3/shiny_front.png",
+            "git_blob_sha": "101da2daa13ffb92ab59d296f9d326d6abe4857d"
+          },
+          "shinyBack": {
+            "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/leafeon-alternate-form-3/shiny_back.png",
+            "git_blob_sha": "373f918d3a3cccbccfd5ccbec9a83a5cc8183b4c"
+          }
+        },
+        "sources": [
+          "historical_GBA_effective"
+        ],
+        "source_count": 1,
+        "notes": [
+          "verified_legacy_recovery"
+        ],
+        "ds64": {
+          "source_manifest_key": "leafeon-alternate-form-3",
+          "source_slots": {
+            "front": "PIXEL_PRESERVED_EXACT_2X_COLLAPSE_DS64_CANDIDATE",
+            "back": "PIXEL_PRESERVED_EXACT_2X_COLLAPSE_DS64_CANDIDATE",
+            "shiny_front": "PIXEL_PRESERVED_EXACT_2X_COLLAPSE_DS64_CANDIDATE",
+            "shiny_back": "PIXEL_PRESERVED_EXACT_2X_COLLAPSE_DS64_CANDIDATE"
+          }
+        },
+        "native4bpp": {
+          "run": 42681775419,
+          "normal_pair": true,
+          "full_quartet": true,
+          "raw_obj_palette_only": true
+        },
+        "generatedIconCandidate": null,
+        "productionIconBindingVerified": false,
+        "integrationAllowed": false
+      },
+      "sourceTechnicalViews": [
+        {
+          "identity": "leafeon-alternate-form-3",
+          "slot": "front",
+          "source": "DS_CUSTOM_LIBRARY/converted/Verified_Source_DS64_Technical_2026_10_23/leafeon-alternate-form-3/front.png",
+          "sha256": "19274b2af996deffef1701eae5afc158c227d6a4e722b552906e65cb18ecdf4c"
+        },
+        {
+          "identity": "leafeon-alternate-form-3",
+          "slot": "back",
+          "source": "DS_CUSTOM_LIBRARY/converted/Verified_Source_DS64_Technical_2026_10_23/leafeon-alternate-form-3/back.png",
+          "sha256": "238c5651a073c10c3d7aa773c8bfd6579c9d2e52025867c23809d496856a2243"
+        },
+        {
+          "identity": "leafeon-alternate-form-3",
+          "slot": "shiny_front",
+          "source": "DS_CUSTOM_LIBRARY/converted/Verified_Source_DS64_Technical_2026_10_23/leafeon-alternate-form-3/shiny_front.png",
+          "sha256": "00e61b09a5d3b5ee2504b497c46042ad29145f8f8bcf2ee2fbe9ada9f141def3"
+        },
+        {
+          "identity": "leafeon-alternate-form-3",
+          "slot": "shiny_back",
+          "source": "DS_CUSTOM_LIBRARY/converted/Verified_Source_DS64_Technical_2026_10_23/leafeon-alternate-form-3/shiny_back.png",
+          "sha256": "8dc8717515f0f333f0ce85e823c71fe15316559195f2a66e7574efbbbacbfd27"
+        }
+      ],
+      "pairedOpaqueColors": 15,
+      "normalShinyAlphaMismatch": 0,
+      "offlineStatus": "STATIC_ARCHIVE_PASS",
+      "archiveSha256": "d5f56ee393fcb8ba149c6026d0d714b8a5ce664cd4078d506819c8626719e05c",
+      "verifiedFramePixels": 51200,
+      "productionIconIndex": null,
+      "productionPaletteBank": null,
+      "productionSpeciesId": null,
+      "productionFormId": null
+    },
+    {
+      "acceptedArtwork": {
+        "key": "musharna-alternate-form-1|gitblob:f6155875741848fd47313a5d53f58de8775345df",
+        "identity": "musharna-alternate-form-1",
+        "name": "Musharna — Alternate (Form 1)",
+        "source": "Reborn / Plates of Arceus",
+        "decision": "keep",
+        "authority": "historical_GBA_effective",
+        "front_pixel_hash": null,
+        "front_git_blob": "f6155875741848fd47313a5d53f58de8775345df",
+        "views": {
+          "front": {
+            "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/musharna-alternate-form-1/front.png",
+            "git_blob_sha": "f6155875741848fd47313a5d53f58de8775345df"
+          },
+          "back": {
+            "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/musharna-alternate-form-1/back.png",
+            "git_blob_sha": "455c5aa8bbc735a1a008b0393155761d3c2571bd"
+          },
+          "shinyFront": {
+            "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/musharna-alternate-form-1/shiny_front.png",
+            "git_blob_sha": "22af6778284dcecfd4ce3d0ad3606506802ccb27"
+          },
+          "shinyBack": {
+            "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/musharna-alternate-form-1/shiny_back.png",
+            "git_blob_sha": "914852faac6f1ba9a7aa2e05a7c8f5a7280fafed"
+          }
+        },
+        "sources": [
+          "historical_GBA_effective"
+        ],
+        "source_count": 1,
+        "notes": [
+          "verified_legacy_recovery"
+        ],
+        "native4bpp": {
+          "run": 42681775419,
+          "normal_pair": true,
+          "full_quartet": true,
+          "raw_obj_palette_only": true
+        },
+        "generatedIconCandidate": null,
+        "productionIconBindingVerified": false,
+        "integrationAllowed": false
+      },
+      "sourceTechnicalViews": [
+        {
+          "identity": "musharna-alternate-form-1",
+          "slot": "front",
+          "source": "DS_CUSTOM_LIBRARY/converted/Verified_Source_DS64_Technical_2026_10_23/musharna-alternate-form-1/front.png",
+          "sha256": "bb7fa48c1131024731709cd80af30365e99edf7704ada7c766f796a475cce3eb"
+        },
+        {
+          "identity": "musharna-alternate-form-1",
+          "slot": "back",
+          "source": "DS_CUSTOM_LIBRARY/converted/Verified_Source_DS64_Technical_2026_10_23/musharna-alternate-form-1/back.png",
+          "sha256": "363e403e10a84c147963079da961821970c99970dca658708cdccda4cffe1278"
+        },
+        {
+          "identity": "musharna-alternate-form-1",
+          "slot": "shiny_front",
+          "source": "DS_CUSTOM_LIBRARY/converted/Verified_Source_DS64_Technical_2026_10_23/musharna-alternate-form-1/shiny_front.png",
+          "sha256": "7bc50bc1dba7435f7d0d6256a8a196cbcd1dae940c6880ef19414f4e26f667cb"
+        },
+        {
+          "identity": "musharna-alternate-form-1",
+          "slot": "shiny_back",
+          "source": "DS_CUSTOM_LIBRARY/converted/Verified_Source_DS64_Technical_2026_10_23/musharna-alternate-form-1/shiny_back.png",
+          "sha256": "4062cf1195bbf48900185c75e31a818baf8500d6679da32eebe42b7b5be5dbf5"
+        }
+      ],
+      "pairedOpaqueColors": 16,
+      "normalShinyAlphaMismatch": 0,
+      "offlineStatus": "HOLD",
+      "archiveSha256": null,
+      "verifiedFramePixels": 0,
+      "productionIconIndex": null,
+      "productionPaletteBank": null,
+      "productionSpeciesId": null,
+      "productionFormId": null
+    },
+    {
+      "acceptedArtwork": {
+        "key": "petilil-alternate-form-1|gitblob:8fe55189fe7c2f54835379cc5cb537988fe0b1f4",
+        "identity": "petilil-alternate-form-1",
+        "name": "Petilil — Alternate (Form 1)",
+        "source": "Reborn / Plates of Arceus",
+        "decision": "keep",
+        "authority": "historical_GBA_effective",
+        "front_pixel_hash": null,
+        "front_git_blob": "8fe55189fe7c2f54835379cc5cb537988fe0b1f4",
+        "views": {
+          "front": {
+            "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/petilil-alternate-form-1/front.png",
+            "git_blob_sha": "8fe55189fe7c2f54835379cc5cb537988fe0b1f4"
+          },
+          "back": {
+            "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/petilil-alternate-form-1/back.png",
+            "git_blob_sha": "75918772269db2b543f07e1d9866ef28fa8e00b8"
+          },
+          "shinyFront": {
+            "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/petilil-alternate-form-1/shiny_front.png",
+            "git_blob_sha": "6af455ff5b1249d4e8928126a6e8a9b1895c130d"
+          },
+          "shinyBack": {
+            "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/petilil-alternate-form-1/shiny_back.png",
+            "git_blob_sha": "768778205cca85babc3150940ceb34593301b27d"
+          }
+        },
+        "sources": [
+          "historical_GBA_effective"
+        ],
+        "source_count": 1,
+        "notes": [
+          "verified_legacy_recovery"
+        ],
+        "ds64": {
+          "source_manifest_key": "petilil-alternate-form-1",
+          "source_slots": {
+            "front": "PIXEL_PRESERVED_EXACT_2X_COLLAPSE_DS64_CANDIDATE",
+            "back": "PIXEL_PRESERVED_EXACT_2X_COLLAPSE_DS64_CANDIDATE",
+            "shiny_front": "PIXEL_PRESERVED_EXACT_2X_COLLAPSE_DS64_CANDIDATE",
+            "shiny_back": "PIXEL_PRESERVED_EXACT_2X_COLLAPSE_DS64_CANDIDATE"
+          }
+        },
+        "native4bpp": {
+          "run": 42681775419,
+          "normal_pair": true,
+          "full_quartet": true,
+          "raw_obj_palette_only": true
+        },
+        "generatedIconCandidate": null,
+        "productionIconBindingVerified": false,
+        "integrationAllowed": false
+      },
+      "sourceTechnicalViews": [
+        {
+          "identity": "petilil-alternate-form-1",
+          "slot": "front",
+          "source": "DS_CUSTOM_LIBRARY/converted/Verified_Source_DS64_Technical_2026_10_23/petilil-alternate-form-1/front.png",
+          "sha256": "c97139414b0530be7935015e3bab8c00bdddef4003099dc12f74cf3548a8eba2"
+        },
+        {
+          "identity": "petilil-alternate-form-1",
+          "slot": "back",
+          "source": "DS_CUSTOM_LIBRARY/converted/Verified_Source_DS64_Technical_2026_10_23/petilil-alternate-form-1/back.png",
+          "sha256": "f16c9cff397d9d7ea2bf17c2d891a1459fe2bbf2728ff82c835fe4e41f5a976f"
+        },
+        {
+          "identity": "petilil-alternate-form-1",
+          "slot": "shiny_front",
+          "source": "DS_CUSTOM_LIBRARY/converted/Verified_Source_DS64_Technical_2026_10_23/petilil-alternate-form-1/shiny_front.png",
+          "sha256": "97e8ee4dfc50fb762da338722fef90e7875e6d736ef8a8637dc9775ead24d5d5"
+        },
+        {
+          "identity": "petilil-alternate-form-1",
+          "slot": "shiny_back",
+          "source": "DS_CUSTOM_LIBRARY/converted/Verified_Source_DS64_Technical_2026_10_23/petilil-alternate-form-1/shiny_back.png",
+          "sha256": "fd665b5b12ba0f0a268d44cdcd4988929a889c48e3705561e7c864eb7484bc8e"
+        }
+      ],
+      "pairedOpaqueColors": 15,
+      "normalShinyAlphaMismatch": 0,
+      "offlineStatus": "STATIC_ARCHIVE_PASS",
+      "archiveSha256": "1be168467f99ca8a45843c73b66926bfe39c595ccfd01f57378a047bf727f731",
+      "verifiedFramePixels": 51200,
+      "productionIconIndex": null,
+      "productionPaletteBank": null,
+      "productionSpeciesId": null,
+      "productionFormId": null
+    },
+    {
+      "acceptedArtwork": {
+        "key": "pupitar-space-form-4|gitblob:24fb5a638470205bdb3717d84306a7db8a60b8b6",
+        "identity": "pupitar-space-form-4",
+        "name": "Pupitar — Space (Form 4)",
+        "source": "Reborn / Plates of Arceus",
+        "decision": "keep",
+        "authority": "historical_GBA_effective",
+        "front_pixel_hash": null,
+        "front_git_blob": "24fb5a638470205bdb3717d84306a7db8a60b8b6",
+        "views": {
+          "front": {
+            "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/pupitar-space-form-4/front.png",
+            "git_blob_sha": "24fb5a638470205bdb3717d84306a7db8a60b8b6"
+          },
+          "back": {
+            "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/pupitar-space-form-4/back.png",
+            "git_blob_sha": "63761e6df07d0e830ef8980347bd559079ac3a45"
+          },
+          "shinyFront": {
+            "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/pupitar-space-form-4/shiny_front.png",
+            "git_blob_sha": "e568cdbf7166179b0977e7c27abf9457d5047b49"
+          },
+          "shinyBack": {
+            "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/pupitar-space-form-4/shiny_back.png",
+            "git_blob_sha": "8bd7af47428a804f5a5041bac185e4def8fa1cce"
+          }
+        },
+        "sources": [
+          "historical_GBA_effective"
+        ],
+        "source_count": 1,
+        "notes": [
+          "verified_legacy_recovery"
+        ],
+        "ds64": {
+          "source_manifest_key": "pupitar-space-form-4",
+          "source_slots": {
+            "front": "PIXEL_PRESERVED_EXACT_2X_COLLAPSE_DS64_CANDIDATE",
+            "back": "PIXEL_PRESERVED_EXACT_2X_COLLAPSE_DS64_CANDIDATE",
+            "shiny_front": "PIXEL_PRESERVED_EXACT_2X_COLLAPSE_DS64_CANDIDATE",
+            "shiny_back": "PIXEL_PRESERVED_EXACT_2X_COLLAPSE_DS64_CANDIDATE"
+          }
+        },
+        "native4bpp": {
+          "run": 42681775419,
+          "normal_pair": true,
+          "full_quartet": true,
+          "raw_obj_palette_only": true
+        },
+        "generatedIconCandidate": null,
+        "productionIconBindingVerified": false,
+        "integrationAllowed": false
+      },
+      "sourceTechnicalViews": [
+        {
+          "identity": "pupitar-space-form-4",
+          "slot": "front",
+          "source": "DS_CUSTOM_LIBRARY/converted/Verified_Source_DS64_Technical_2026_10_23/pupitar-space-form-4/front.png",
+          "sha256": "92bf41feec1dabf7b619d2b8c784eefaf85bd2ade63b056d801cb1e15e56b3ab"
+        },
+        {
+          "identity": "pupitar-space-form-4",
+          "slot": "back",
+          "source": "DS_CUSTOM_LIBRARY/converted/Verified_Source_DS64_Technical_2026_10_23/pupitar-space-form-4/back.png",
+          "sha256": "2f90a3219595e33495e1c98c01f20234edad7da0e17fcc8d012e79f5b4192cd9"
+        },
+        {
+          "identity": "pupitar-space-form-4",
+          "slot": "shiny_front",
+          "source": "DS_CUSTOM_LIBRARY/converted/Verified_Source_DS64_Technical_2026_10_23/pupitar-space-form-4/shiny_front.png",
+          "sha256": "f9f2aa069e6f8667cb310e801eadacd9c49057b6f00aea465d3823f786443d35"
+        },
+        {
+          "identity": "pupitar-space-form-4",
+          "slot": "shiny_back",
+          "source": "DS_CUSTOM_LIBRARY/converted/Verified_Source_DS64_Technical_2026_10_23/pupitar-space-form-4/shiny_back.png",
+          "sha256": "068d73b4296b189bdddce1b78776cbfe11595111ef38b883fd757ab988823b6a"
+        }
+      ],
+      "pairedOpaqueColors": 17,
+      "normalShinyAlphaMismatch": 0,
+      "offlineStatus": "HOLD",
+      "archiveSha256": null,
+      "verifiedFramePixels": 0,
+      "productionIconIndex": null,
+      "productionPaletteBank": null,
+      "productionSpeciesId": null,
+      "productionFormId": null
+    },
+    {
+      "acceptedArtwork": {
+        "key": "purrloin-alternate-form-1|gitblob:c88c373d19c05518126d8a2363aebe291c6ff3f5",
+        "identity": "purrloin-alternate-form-1",
+        "name": "Purrloin — Alternate (Form 1)",
+        "source": "Reborn / Plates of Arceus",
+        "decision": "keep",
+        "authority": "historical_GBA_effective",
+        "front_pixel_hash": null,
+        "front_git_blob": "c88c373d19c05518126d8a2363aebe291c6ff3f5",
+        "views": {
+          "front": {
+            "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/purrloin-alternate-form-1/front.png",
+            "git_blob_sha": "c88c373d19c05518126d8a2363aebe291c6ff3f5"
+          },
+          "back": {
+            "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/purrloin-alternate-form-1/back.png",
+            "git_blob_sha": "9ee42f277309b755d2258baae407f466b2ee12e8"
+          },
+          "shinyFront": {
+            "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/purrloin-alternate-form-1/shiny_front.png",
+            "git_blob_sha": "71a3c6a90369cb04f4530da5d1013e3c0dde38c4"
+          },
+          "shinyBack": {
+            "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/purrloin-alternate-form-1/shiny_back.png",
+            "git_blob_sha": "c6da29831eaf9fbea131214797d4c2b0a2213122"
+          }
+        },
+        "sources": [
+          "historical_GBA_effective"
+        ],
+        "source_count": 1,
+        "notes": [
+          "verified_legacy_recovery"
+        ],
+        "ds64": {
+          "source_manifest_key": "purrloin-alternate-form-1",
+          "source_slots": {
+            "front": "PIXEL_PRESERVED_EXACT_2X_COLLAPSE_DS64_CANDIDATE",
+            "back": "PIXEL_PRESERVED_EXACT_2X_COLLAPSE_DS64_CANDIDATE",
+            "shiny_front": "PIXEL_PRESERVED_EXACT_2X_COLLAPSE_DS64_CANDIDATE",
+            "shiny_back": "PIXEL_PRESERVED_EXACT_2X_COLLAPSE_DS64_CANDIDATE"
+          }
+        },
+        "native4bpp": {
+          "run": 42681775419,
+          "normal_pair": true,
+          "full_quartet": true,
+          "raw_obj_palette_only": true
+        },
+        "generatedIconCandidate": null,
+        "productionIconBindingVerified": false,
+        "integrationAllowed": false
+      },
+      "sourceTechnicalViews": [
+        {
+          "identity": "purrloin-alternate-form-1",
+          "slot": "front",
+          "source": "DS_CUSTOM_LIBRARY/converted/Verified_Source_DS64_Technical_2026_10_23/purrloin-alternate-form-1/front.png",
+          "sha256": "e154164bf0481d4504972f3d13453671fe31db46637a2d62ab78a893b8278ff5"
+        },
+        {
+          "identity": "purrloin-alternate-form-1",
+          "slot": "back",
+          "source": "DS_CUSTOM_LIBRARY/converted/Verified_Source_DS64_Technical_2026_10_23/purrloin-alternate-form-1/back.png",
+          "sha256": "73e89f499a027242e24df17b1f9ba4fce2c13e3bba7be9b1e989c3d55f21491b"
+        },
+        {
+          "identity": "purrloin-alternate-form-1",
+          "slot": "shiny_front",
+          "source": "DS_CUSTOM_LIBRARY/converted/Verified_Source_DS64_Technical_2026_10_23/purrloin-alternate-form-1/shiny_front.png",
+          "sha256": "5520999f90e7a2449624512e77273cde3bf9a47a2131f858e52241134584feae"
+        },
+        {
+          "identity": "purrloin-alternate-form-1",
+          "slot": "shiny_back",
+          "source": "DS_CUSTOM_LIBRARY/converted/Verified_Source_DS64_Technical_2026_10_23/purrloin-alternate-form-1/shiny_back.png",
+          "sha256": "c8aafc33668935c2bc861fc54d173ace88c0a439820cfab18bfec7d5dad2381a"
+        }
+      ],
+      "pairedOpaqueColors": 74,
+      "normalShinyAlphaMismatch": 171,
+      "offlineStatus": "HOLD",
+      "archiveSha256": null,
+      "verifiedFramePixels": 0,
+      "productionIconIndex": null,
+      "productionPaletteBank": null,
+      "productionSpeciesId": null,
+      "productionFormId": null
+    },
+    {
+      "acceptedArtwork": {
+        "key": "sandile-alternate-form-1|gitblob:8d84728a5d3e9b381a0e9f954acde998dec4041a",
+        "identity": "sandile-alternate-form-1",
+        "name": "Sandile — Alternate (Form 1)",
+        "source": "Reborn / Plates of Arceus",
+        "decision": "keep",
+        "authority": "historical_GBA_effective",
+        "front_pixel_hash": null,
+        "front_git_blob": "8d84728a5d3e9b381a0e9f954acde998dec4041a",
+        "views": {
+          "front": {
+            "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/sandile-alternate-form-1/front.png",
+            "git_blob_sha": "8d84728a5d3e9b381a0e9f954acde998dec4041a"
+          },
+          "back": {
+            "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/sandile-alternate-form-1/back.png",
+            "git_blob_sha": "2bfae4a9e58da71aa899d6edd9d4c2ec77ac2fb8"
+          },
+          "shinyFront": {
+            "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/sandile-alternate-form-1/shiny_front.png",
+            "git_blob_sha": "b4f71354618f091203fa4bbc44f53bc188e72b87"
+          },
+          "shinyBack": {
+            "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/sandile-alternate-form-1/shiny_back.png",
+            "git_blob_sha": "cad028140199bf544ab4137fb231cd4c5d12b7da"
+          }
+        },
+        "sources": [
+          "historical_GBA_effective"
+        ],
+        "source_count": 1,
+        "notes": [
+          "verified_legacy_recovery"
+        ],
+        "ds64": {
+          "source_manifest_key": "sandile-alternate-form-1",
+          "source_slots": {
+            "front": "PIXEL_PRESERVED_EXACT_2X_COLLAPSE_DS64_CANDIDATE",
+            "back": "PIXEL_PRESERVED_EXACT_2X_COLLAPSE_DS64_CANDIDATE",
+            "shiny_front": "PIXEL_PRESERVED_EXACT_2X_COLLAPSE_DS64_CANDIDATE",
+            "shiny_back": "PIXEL_PRESERVED_EXACT_2X_COLLAPSE_DS64_CANDIDATE"
+          }
+        },
+        "native4bpp": {
+          "run": 42681775419,
+          "normal_pair": true,
+          "full_quartet": true,
+          "raw_obj_palette_only": true
+        },
+        "generatedIconCandidate": null,
+        "productionIconBindingVerified": false,
+        "integrationAllowed": false
+      },
+      "sourceTechnicalViews": [
+        {
+          "identity": "sandile-alternate-form-1",
+          "slot": "front",
+          "source": "DS_CUSTOM_LIBRARY/converted/Verified_Source_DS64_Technical_2026_10_23/sandile-alternate-form-1/front.png",
+          "sha256": "80f422a24c6014a95644c40c069784fb0267567836599fc71c7c88b24028b7fb"
+        },
+        {
+          "identity": "sandile-alternate-form-1",
+          "slot": "back",
+          "source": "DS_CUSTOM_LIBRARY/converted/Verified_Source_DS64_Technical_2026_10_23/sandile-alternate-form-1/back.png",
+          "sha256": "f1d0a1eebf9c7d6cd851f2f435f0712bfbe395252f3e47dd237b7f5042a832c4"
+        },
+        {
+          "identity": "sandile-alternate-form-1",
+          "slot": "shiny_front",
+          "source": "DS_CUSTOM_LIBRARY/converted/Verified_Source_DS64_Technical_2026_10_23/sandile-alternate-form-1/shiny_front.png",
+          "sha256": "099c69d1cfc4f3010ebfba21577ab17da89e7ea1081e86fa27b3c53130f14b55"
+        },
+        {
+          "identity": "sandile-alternate-form-1",
+          "slot": "shiny_back",
+          "source": "DS_CUSTOM_LIBRARY/converted/Verified_Source_DS64_Technical_2026_10_23/sandile-alternate-form-1/shiny_back.png",
+          "sha256": "b83f22cde2dc192a651724a9999a67298a20529a8bcf647bc1bb306804659e20"
+        }
+      ],
+      "pairedOpaqueColors": 16,
+      "normalShinyAlphaMismatch": 0,
+      "offlineStatus": "HOLD",
+      "archiveSha256": null,
+      "verifiedFramePixels": 0,
+      "productionIconIndex": null,
+      "productionPaletteBank": null,
+      "productionSpeciesId": null,
+      "productionFormId": null
+    }
+  ],
+  "tests": {
+    "environment": "Local Python/Pillow, recovered artifact, no GitHub Actions rerun",
+    "passed": "ZIP digest and CRC, all 174 manifest hashes, all 58 raw/decoded pixel comparisons, 32 pilot source hashes matched to pinned technical manifest, exact eight historical KEEP rows; four archive build/extract/header checks, independent loader-style decrypt, 204800 frame pixels (including padding and repeated static frames) compared against recovered RGB555 pixel data, 4 malformed magic rejection tests.",
+    "limitations": "No complete engine checkout (DNS inaccessible), no actual nitrogfx/nitroarc execution or independent Nitro SDK parser, no native compiler/emulator, no actual source PNG rehash in local container, no approved icon files for these 8 in reconciliation evidence. Full 711 count checked from recovered ledger, not re-audited.",
+    "qaDesignChoices": "Center each original 64x64 frame inside an 80x80 transparent frame, duplicate static image as second frame, deterministic paired normal/shiny RGB555 indices, seed 0x4321, local NARC order back/front/normal/shiny; no runtime registration. These decisions are QA fixtures only."
+  },
+  "gameIntegrationAllowed": false
+}
