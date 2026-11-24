@@ -1,0 +1,542 @@
+{
+  "schema": "mercury-sprite-usability-dry-run-v1",
+  "parent": "11e8019e3f3c7c9f65258ff39947c5cd415b163a",
+  "registryBlob": "ef32f2ae2fbb2d11121c5a9ceec659b3aec7588b",
+  "readinessBlob": "686fd93d34bb39055c0d6cbbf3bcdc5566fcd51a",
+  "coreSourceBlob": "cf8d3fb42c695ff64fb0ed98382830ddd9807f73",
+  "selfTests": 7,
+  "policy": "Non-destructive suitability gate. No new persisted converted sprites; offline dry-run archives discarded. Holds excluded from any integration; do not erase original approval.",
+  "protected": {
+    "canonical": 1025,
+    "historicalAdditions": 574,
+    "artworks": 711,
+    "votes": 166,
+    "archives": 216,
+    "placementRecords": 641,
+    "originalQueue": 468
+  },
+  "results": [
+    {
+      "key": "grotom-fill|pixelsha256:031d32676406313b6bc86dd063add1bb758c31385a7ac01f321ac597b4386aae",
+      "id": "R0977",
+      "cohort": "historical_queue",
+      "decision": "keep",
+      "views": {
+        "front": {
+          "path": "DS_CUSTOM_LIBRARY/converted/All_Mercury_GBA_Queue/grotom_fill/front.png",
+          "gitBlob": "c272ecfa5918485ec8be63887c76889647568ca0",
+          "canvas": [
+            64,
+            64
+          ],
+          "bounds": [
+            2,
+            27,
+            61,
+            64
+          ],
+          "collapsedSize": [
+            59,
+            37
+          ],
+          "factor": 1,
+          "partialAlpha": 0,
+          "opaqueRGB": 15,
+          "opaque555": 15,
+          "status": "PIXEL_CANDIDATE",
+          "offset": [
+            10,
+            22
+          ],
+          "frameSha256": "4290d33d2cd77fe56d0b014adc251459932111dae9cd3bb9695179eabd18c812"
+        },
+        "shinyFront": {
+          "path": "DS_CUSTOM_LIBRARY/converted/All_Mercury_GBA_Queue/grotom_fill/front-shiny.png",
+          "gitBlob": "a3435f528ba5cf0da398875be89376fe2b1ae2be",
+          "canvas": [
+            64,
+            64
+          ],
+          "bounds": [
+            2,
+            27,
+            61,
+            64
+          ],
+          "collapsedSize": [
+            59,
+            37
+          ],
+          "factor": 1,
+          "partialAlpha": 0,
+          "opaqueRGB": 15,
+          "opaque555": 15,
+          "status": "PIXEL_CANDIDATE",
+          "offset": [
+            10,
+            22
+          ],
+          "frameSha256": "b406cf9be7639cc6174c7b3ff7dd232dfd2146a1abaf85c5e9689cd975f788ff"
+        },
+        "back": {
+          "path": "DS_CUSTOM_LIBRARY/converted/All_Mercury_GBA_Queue/grotom_fill/back.png",
+          "gitBlob": "5dbc27e22d168c942178b607675ba979803299c6",
+          "canvas": [
+            64,
+            64
+          ],
+          "bounds": [
+            0,
+            19,
+            64,
+            64
+          ],
+          "collapsedSize": [
+            64,
+            45
+          ],
+          "factor": 1,
+          "partialAlpha": 0,
+          "opaqueRGB": 15,
+          "opaque555": 15,
+          "status": "PIXEL_CANDIDATE",
+          "offset": [
+            8,
+            18
+          ],
+          "frameSha256": "c2f7c98df3d4b137a9f98fec136a8fef28abddde8e2078d3bf033e40db970fd1"
+        },
+        "shinyBack": {
+          "path": "DS_CUSTOM_LIBRARY/converted/All_Mercury_GBA_Queue/grotom_fill/back-shiny.png",
+          "gitBlob": "fcd800b5b64a75fc1556ac561874223e5d82d4f4",
+          "canvas": [
+            64,
+            64
+          ],
+          "bounds": [
+            0,
+            19,
+            64,
+            64
+          ],
+          "collapsedSize": [
+            64,
+            45
+          ],
+          "factor": 1,
+          "partialAlpha": 0,
+          "opaqueRGB": 15,
+          "opaque555": 15,
+          "status": "PIXEL_CANDIDATE",
+          "offset": [
+            8,
+            18
+          ],
+          "frameSha256": "482717851b61b1c7549818cdf2afff1d4cc4945a4acb000b56c869ff882425ef"
+        }
+      },
+      "status": "OFFLINE_DRY_RUN_PASS",
+      "dryRun": {
+        "mode": "shared_species_palette",
+        "members": 4,
+        "archiveSha256": "d34a743fc69e2a79894685f653254cd09ece311832cc1d5d76d68b14767ceee0",
+        "archiveGitBlob": "b94eb37a582171d96b83c7e51677d34538bc8b6b",
+        "routes": {
+          "back": {
+            "character": 2,
+            "palette": 0,
+            "characterSha256": "e8a53dc843467b99ac3c30ea34293d53d390109a65cc142a6f0c5d0b612d074d",
+            "paletteSha256": "8c81b2f727990285bed86bac90c28de0f08d8b7d932d6c01e0116c76ecf95ccc",
+            "expectedFrameSha256": "c2f7c98df3d4b137a9f98fec136a8fef28abddde8e2078d3bf033e40db970fd1"
+          },
+          "shiny_back": {
+            "character": 2,
+            "palette": 1,
+            "characterSha256": "e8a53dc843467b99ac3c30ea34293d53d390109a65cc142a6f0c5d0b612d074d",
+            "paletteSha256": "51fce9134c2bd5765687a540b36afdc69fb3eab17f0b56e076291da9182087d1",
+            "expectedFrameSha256": "482717851b61b1c7549818cdf2afff1d4cc4945a4acb000b56c869ff882425ef"
+          },
+          "front": {
+            "character": 3,
+            "palette": 0,
+            "characterSha256": "4e8d9387f545b8e58948f452a244701fb1e41b6cb10e5f1b03c1b8affcf4f44c",
+            "paletteSha256": "8c81b2f727990285bed86bac90c28de0f08d8b7d932d6c01e0116c76ecf95ccc",
+            "expectedFrameSha256": "4290d33d2cd77fe56d0b014adc251459932111dae9cd3bb9695179eabd18c812"
+          },
+          "shiny_front": {
+            "character": 3,
+            "palette": 1,
+            "characterSha256": "4e8d9387f545b8e58948f452a244701fb1e41b6cb10e5f1b03c1b8affcf4f44c",
+            "paletteSha256": "51fce9134c2bd5765687a540b36afdc69fb3eab17f0b56e076291da9182087d1",
+            "expectedFrameSha256": "b406cf9be7639cc6174c7b3ff7dd232dfd2146a1abaf85c5e9689cd975f788ff"
+          }
+        },
+        "unionPairedColors": 15,
+        "facePairedColors": {
+          "back": 15,
+          "front": 15
+        },
+        "alphaMismatch": {
+          "back": 0,
+          "front": 0
+        },
+        "verifiedViews": 4,
+        "framePixels": 51200,
+        "negativeRoutes": 12,
+        "production": false,
+        "icon": null,
+        "nativeIds": null
+      },
+      "productionAllowed": false,
+      "archivePersisted": false
+    },
+    {
+      "key": "grotom-glass|pixelsha256:bf1fde61b0919daec72603185a475cef85804691e65ecaf1fd4adaff41d3c295",
+      "id": "R0978",
+      "cohort": "historical_queue",
+      "decision": "keep",
+      "views": {
+        "front": {
+          "path": "DS_CUSTOM_LIBRARY/converted/All_Mercury_GBA_Queue/grotom_glass/front.png",
+          "gitBlob": "9d4b28365beb6ee0b8516ec8eecd20ab033b4d46",
+          "canvas": [
+            64,
+            64
+          ],
+          "bounds": [
+            1,
+            12,
+            63,
+            64
+          ],
+          "collapsedSize": [
+            62,
+            52
+          ],
+          "factor": 1,
+          "partialAlpha": 0,
+          "opaqueRGB": 11,
+          "opaque555": 11,
+          "status": "PIXEL_CANDIDATE",
+          "offset": [
+            9,
+            14
+          ],
+          "frameSha256": "4e1ba1368abe05c8725b81020d334e9a896ec4f2206fe62003c2cd3109c6d80a"
+        },
+        "shinyFront": {
+          "path": "DS_CUSTOM_LIBRARY/converted/All_Mercury_GBA_Queue/grotom_glass/front-shiny.png",
+          "gitBlob": "4d2716fc0e9ef73b6058d7a4489a4a357c3f2499",
+          "canvas": [
+            64,
+            64
+          ],
+          "bounds": [
+            1,
+            12,
+            63,
+            64
+          ],
+          "collapsedSize": [
+            62,
+            52
+          ],
+          "factor": 1,
+          "partialAlpha": 0,
+          "opaqueRGB": 11,
+          "opaque555": 11,
+          "status": "PIXEL_CANDIDATE",
+          "offset": [
+            9,
+            14
+          ],
+          "frameSha256": "bdf94d4b506f7657fdd54d706f442bfe0ce5f4a04deded129e96993157385337"
+        },
+        "shinyBack": {
+          "path": "DS_CUSTOM_LIBRARY/converted/All_Mercury_GBA_Queue/grotom_glass/back-shiny.png",
+          "gitBlob": "fe4001edecce5268b7a5055c87a490b1457816e5",
+          "canvas": [
+            64,
+            64
+          ],
+          "bounds": [
+            0,
+            6,
+            64,
+            64
+          ],
+          "collapsedSize": [
+            64,
+            58
+          ],
+          "factor": 1,
+          "partialAlpha": 0,
+          "opaqueRGB": 10,
+          "opaque555": 10,
+          "status": "PIXEL_CANDIDATE",
+          "offset": [
+            8,
+            11
+          ],
+          "frameSha256": "01328a163f3bbafb9edbed5c394240f38e98efee0af09e1e86641ca4d6a2da2a"
+        },
+        "back": {
+          "path": "DS_CUSTOM_LIBRARY/converted/All_Mercury_GBA_Queue/grotom_glass/back.png",
+          "gitBlob": "00937b23cc913c23ab4d7237d0a041697f5b4fb7",
+          "canvas": [
+            64,
+            64
+          ],
+          "bounds": [
+            0,
+            6,
+            64,
+            64
+          ],
+          "collapsedSize": [
+            64,
+            58
+          ],
+          "factor": 1,
+          "partialAlpha": 0,
+          "opaqueRGB": 10,
+          "opaque555": 10,
+          "status": "PIXEL_CANDIDATE",
+          "offset": [
+            8,
+            11
+          ],
+          "frameSha256": "c65daf95c130538efbef91b87f70ab5a8c58ecee127bf9852a66774ef2add34c"
+        }
+      },
+      "status": "OFFLINE_DRY_RUN_PASS",
+      "dryRun": {
+        "mode": "shared_species_palette",
+        "members": 4,
+        "archiveSha256": "7bfa25016931fdd1baeb143356881d227412bb5aca6fe4cce290ca0dae66b197",
+        "archiveGitBlob": "9ccda96dac51ef5bc941b8840a5cccc9671e9adc",
+        "routes": {
+          "back": {
+            "character": 2,
+            "palette": 0,
+            "characterSha256": "18554e7b9a93ed07b25153e24ed936f2aa3b2096da295a745fe504ecca8471e3",
+            "paletteSha256": "c7192367494609adff7c9f5a1a352211ec22a50e9b1221c682e35ba93d8af226",
+            "expectedFrameSha256": "c65daf95c130538efbef91b87f70ab5a8c58ecee127bf9852a66774ef2add34c"
+          },
+          "shiny_back": {
+            "character": 2,
+            "palette": 1,
+            "characterSha256": "18554e7b9a93ed07b25153e24ed936f2aa3b2096da295a745fe504ecca8471e3",
+            "paletteSha256": "0c1c9623dfcdd4f6555e4e842cd96f013c5155c76f5807ee915877da3dad4d70",
+            "expectedFrameSha256": "01328a163f3bbafb9edbed5c394240f38e98efee0af09e1e86641ca4d6a2da2a"
+          },
+          "front": {
+            "character": 3,
+            "palette": 0,
+            "characterSha256": "99eada3173687463bda1b9f7f77f5515be761f6dfda4c3d6e808ec3545a457c3",
+            "paletteSha256": "c7192367494609adff7c9f5a1a352211ec22a50e9b1221c682e35ba93d8af226",
+            "expectedFrameSha256": "4e1ba1368abe05c8725b81020d334e9a896ec4f2206fe62003c2cd3109c6d80a"
+          },
+          "shiny_front": {
+            "character": 3,
+            "palette": 1,
+            "characterSha256": "99eada3173687463bda1b9f7f77f5515be761f6dfda4c3d6e808ec3545a457c3",
+            "paletteSha256": "0c1c9623dfcdd4f6555e4e842cd96f013c5155c76f5807ee915877da3dad4d70",
+            "expectedFrameSha256": "bdf94d4b506f7657fdd54d706f442bfe0ce5f4a04deded129e96993157385337"
+          }
+        },
+        "unionPairedColors": 11,
+        "facePairedColors": {
+          "back": 10,
+          "front": 11
+        },
+        "alphaMismatch": {
+          "back": 0,
+          "front": 0
+        },
+        "verifiedViews": 4,
+        "framePixels": 51200,
+        "negativeRoutes": 12,
+        "production": false,
+        "icon": null,
+        "nativeIds": null
+      },
+      "productionAllowed": false,
+      "archivePersisted": false
+    },
+    {
+      "key": "grotom-kick|pixelsha256:4f8d31330eb8fdc18872c1daf032fb742f658622a1a558cfe60caea2eec5e658",
+      "id": "R0979",
+      "cohort": "historical_queue",
+      "decision": "keep",
+      "views": {
+        "front": {
+          "path": "DS_CUSTOM_LIBRARY/converted/All_Mercury_GBA_Queue/grotom_kick/front.png",
+          "gitBlob": "cde7bf7e35726bd35e16cb12837edcad352f4b94",
+          "canvas": [
+            64,
+            64
+          ],
+          "bounds": [
+            6,
+            23,
+            57,
+            64
+          ],
+          "collapsedSize": [
+            51,
+            41
+          ],
+          "factor": 1,
+          "partialAlpha": 0,
+          "opaqueRGB": 15,
+          "opaque555": 15,
+          "status": "PIXEL_CANDIDATE",
+          "offset": [
+            14,
+            20
+          ],
+          "frameSha256": "35fdaedb4164ba6c6546a83b56ebdbf9dca18e32d6bd74ca6ccff52b0cb8a895"
+        },
+        "back": {
+          "path": "DS_CUSTOM_LIBRARY/converted/All_Mercury_GBA_Queue/grotom_kick/back.png",
+          "gitBlob": "3a11c2f72159947b4e3f85b26ab1ea98bbbbd561",
+          "canvas": [
+            64,
+            64
+          ],
+          "bounds": [
+            0,
+            23,
+            64,
+            64
+          ],
+          "collapsedSize": [
+            64,
+            41
+          ],
+          "factor": 1,
+          "partialAlpha": 0,
+          "opaqueRGB": 15,
+          "opaque555": 15,
+          "status": "PIXEL_CANDIDATE",
+          "offset": [
+            8,
+            20
+          ],
+          "frameSha256": "8763f005a0af3e1faf49338282ee5881b8f25e2f59fb3d2b0517bf8911b0fb95"
+        },
+        "shinyBack": {
+          "path": "DS_CUSTOM_LIBRARY/converted/All_Mercury_GBA_Queue/grotom_kick/back-shiny.png",
+          "gitBlob": "b4733508a9593502a79aafd64b0118a078035a05",
+          "canvas": [
+            64,
+            64
+          ],
+          "bounds": [
+            0,
+            23,
+            64,
+            64
+          ],
+          "collapsedSize": [
+            64,
+            41
+          ],
+          "factor": 1,
+          "partialAlpha": 0,
+          "opaqueRGB": 15,
+          "opaque555": 15,
+          "status": "PIXEL_CANDIDATE",
+          "offset": [
+            8,
+            20
+          ],
+          "frameSha256": "95a059d3cb9e5e662cedb88ba55c1508e6f245749cbad89240a685f76e67aaed"
+        },
+        "shinyFront": {
+          "path": "DS_CUSTOM_LIBRARY/converted/All_Mercury_GBA_Queue/grotom_kick/front-shiny.png",
+          "gitBlob": "104366532f83ce094cf1e58f772c923f3303cc4f",
+          "canvas": [
+            64,
+            64
+          ],
+          "bounds": [
+            6,
+            23,
+            57,
+            64
+          ],
+          "collapsedSize": [
+            51,
+            41
+          ],
+          "factor": 1,
+          "partialAlpha": 0,
+          "opaqueRGB": 15,
+          "opaque555": 15,
+          "status": "PIXEL_CANDIDATE",
+          "offset": [
+            14,
+            20
+          ],
+          "frameSha256": "8c632563ded912410983baab6eb60d28a183a4380a2e89f5f25dda400ecb95dc"
+        }
+      },
+      "status": "OFFLINE_DRY_RUN_PASS",
+      "dryRun": {
+        "mode": "shared_species_palette",
+        "members": 4,
+        "archiveSha256": "6ac45b7ef97466f9215595a16835ced56445b6468b8811f98ed53b1e07d03aea",
+        "archiveGitBlob": "fdbab085bbef53ce26d5826dd9ca9fd6256a9732",
+        "routes": {
+          "back": {
+            "character": 2,
+            "palette": 0,
+            "characterSha256": "267d74c6be29229f0c2dc34e21cb6eac095d74a4734ccb8b3e2e956c3c66d166",
+            "paletteSha256": "c721f40679d12c534719b6c7c72873d7df5b47b73ff98afc97b5f47f8d1c6558",
+            "expectedFrameSha256": "8763f005a0af3e1faf49338282ee5881b8f25e2f59fb3d2b0517bf8911b0fb95"
+          },
+          "shiny_back": {
+            "character": 2,
+            "palette": 1,
+            "characterSha256": "267d74c6be29229f0c2dc34e21cb6eac095d74a4734ccb8b3e2e956c3c66d166",
+            "paletteSha256": "ff47173a250fd89d0f44700deaa8148ff1e88b2d009e06b20648dd8c788f5931",
+            "expectedFrameSha256": "95a059d3cb9e5e662cedb88ba55c1508e6f245749cbad89240a685f76e67aaed"
+          },
+          "front": {
+            "character": 3,
+            "palette": 0,
+            "characterSha256": "b125a2cb8ced24aee8299bb3d4b8b3acf458a4087953b8e6063ab01865bf9cee",
+            "paletteSha256": "c721f40679d12c534719b6c7c72873d7df5b47b73ff98afc97b5f47f8d1c6558",
+            "expectedFrameSha256": "35fdaedb4164ba6c6546a83b56ebdbf9dca18e32d6bd74ca6ccff52b0cb8a895"
+          },
+          "shiny_front": {
+            "character": 3,
+            "palette": 1,
+            "characterSha256": "b125a2cb8ced24aee8299bb3d4b8b3acf458a4087953b8e6063ab01865bf9cee",
+            "paletteSha256": "ff47173a250fd89d0f44700deaa8148ff1e88b2d009e06b20648dd8c788f5931",
+            "expectedFrameSha256": "8c632563ded912410983baab6eb60d28a183a4380a2e89f5f25dda400ecb95dc"
+          }
+        },
+        "unionPairedColors": 15,
+        "facePairedColors": {
+          "back": 15,
+          "front": 15
+        },
+        "alphaMismatch": {
+          "back": 0,
+          "front": 0
+        },
+        "verifiedViews": 4,
+        "framePixels": 51200,
+        "negativeRoutes": 12,
+        "production": false,
+        "icon": null,
+        "nativeIds": null
+      },
+      "productionAllowed": false,
+      "archivePersisted": false
+    }
+  ]
+}
