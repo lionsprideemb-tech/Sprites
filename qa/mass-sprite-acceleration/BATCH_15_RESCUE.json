@@ -1,0 +1,357 @@
+{
+  "schema": "mercury-mass-rescue-batch-v1",
+  "batch": "15_RESCUE",
+  "sourceRef": "f15c4671bf7afb15450fc7801bde17aefcdc4f7e",
+  "ledgerBlob": "74451323e460804f9cb7e12c37ba3fce3fd921a9",
+  "iconPaletteBlob": "65deabb632f60fe5518b161da7d1b1c978a69faf",
+  "reports": [
+    {
+      "artworkKey": "altaria-alternate-form-2|gitblob:6ca9ed3749742d75920cdb86fb66056b94b570ee",
+      "identity": "altaria-alternate-form-2",
+      "source": "Reborn / Plates of Arceus",
+      "decision": "keep",
+      "views": {
+        "front": {
+          "canvas": [
+            160,
+            160
+          ],
+          "bounds": [
+            0,
+            14,
+            160,
+            136
+          ],
+          "collapsedSize": [
+            80,
+            61
+          ],
+          "factor": 2,
+          "partialAlpha": 0,
+          "opaqueRGB": 18,
+          "opaque555": 18,
+          "status": "PALETTE_HOLD",
+          "sourceSha256": "5348feb3aefb33907727596f9b75ff5ef8220ad70f660daaa6a9b3a04b65139d",
+          "gitBlob": "6ca9ed3749742d75920cdb86fb66056b94b570ee",
+          "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/altaria-alternate-form-2/front.png"
+        },
+        "back": {
+          "canvas": [
+            192,
+            192
+          ],
+          "bounds": [
+            34,
+            32,
+            154,
+            168
+          ],
+          "collapsedSize": [
+            60,
+            68
+          ],
+          "factor": 2,
+          "partialAlpha": 0,
+          "opaqueRGB": 16,
+          "opaque555": 16,
+          "status": "PALETTE_HOLD",
+          "sourceSha256": "0994fea34f2a9dd7c9d919e3fdf11564478f421bdb6735fdb49530c3b58ba2ba",
+          "gitBlob": "eef494042468a4fd5da791db6ba88cbd73891dd0",
+          "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/altaria-alternate-form-2/back.png"
+        },
+        "shiny_front": {
+          "canvas": [
+            160,
+            160
+          ],
+          "bounds": [
+            0,
+            14,
+            160,
+            136
+          ],
+          "collapsedSize": [
+            80,
+            61
+          ],
+          "factor": 2,
+          "partialAlpha": 0,
+          "opaqueRGB": 18,
+          "opaque555": 18,
+          "status": "PALETTE_HOLD",
+          "sourceSha256": "2bb1c99d2f27cd927b6bf8ec20fe502072bfc1942d2c143a4b5575f75e969b2b",
+          "gitBlob": "0879f97ca1225b6dcd5723e67a325f53dc98345d",
+          "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/altaria-alternate-form-2/shiny_front.png"
+        },
+        "shiny_back": {
+          "canvas": [
+            192,
+            192
+          ],
+          "bounds": [
+            34,
+            32,
+            154,
+            168
+          ],
+          "collapsedSize": [
+            60,
+            68
+          ],
+          "factor": 2,
+          "partialAlpha": 0,
+          "opaqueRGB": 16,
+          "opaque555": 16,
+          "status": "PALETTE_HOLD",
+          "sourceSha256": "0b9a093003f54bd39d69195359411ac9b5700ca6f2dcd1516e85f8b257f7c9d3",
+          "gitBlob": "94798bf746f76c66c04122d979810daf5a2d6e31",
+          "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/altaria-alternate-form-2/shiny_back.png"
+        }
+      },
+      "archive": null,
+      "icon": null,
+      "status": "HOLD",
+      "production": false,
+      "gameIntegrationAllowed": false
+    },
+    {
+      "artworkKey": "lilligant-alternate-form-1|gitblob:db1f34dce6f227712abba0d035e5060a660bee61",
+      "identity": "lilligant-alternate-form-1",
+      "source": "Reborn / Plates of Arceus",
+      "decision": "keep",
+      "views": {
+        "front": {
+          "canvas": [
+            192,
+            192
+          ],
+          "bounds": [
+            42,
+            30,
+            146,
+            162
+          ],
+          "collapsedSize": [
+            52,
+            66
+          ],
+          "factor": 2,
+          "partialAlpha": 0,
+          "opaqueRGB": 17,
+          "opaque555": 17,
+          "status": "PALETTE_HOLD",
+          "sourceSha256": "62420d879bcf93e598a1ba6f71f055c8c5eb7e998c7ee58f799f7cf1a1b8dfed",
+          "gitBlob": "db1f34dce6f227712abba0d035e5060a660bee61",
+          "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/lilligant-alternate-form-1/front.png"
+        },
+        "back": {
+          "canvas": [
+            192,
+            192
+          ],
+          "bounds": [
+            40,
+            26,
+            148,
+            160
+          ],
+          "collapsedSize": [
+            54,
+            67
+          ],
+          "factor": 2,
+          "partialAlpha": 0,
+          "opaqueRGB": 14,
+          "opaque555": 14,
+          "status": "PIXEL_CANDIDATE",
+          "offset": [
+            13,
+            7
+          ],
+          "frameSha256": "58960863880ace16b46b2833b4a06518a1391caacb267d2d3133746252f48670",
+          "sourceSha256": "918a98270d02c79149647f41b1e6b53c148e649d1fb16a37ce8a8c553543471d",
+          "gitBlob": "98b1e31b3eaeec6776f251532c1657519f154c1e",
+          "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/lilligant-alternate-form-1/back.png"
+        },
+        "shiny_front": {
+          "canvas": [
+            192,
+            192
+          ],
+          "bounds": [
+            42,
+            30,
+            146,
+            162
+          ],
+          "collapsedSize": [
+            52,
+            66
+          ],
+          "factor": 2,
+          "partialAlpha": 0,
+          "opaqueRGB": 17,
+          "opaque555": 17,
+          "status": "PALETTE_HOLD",
+          "sourceSha256": "7ee5edd684b6ecb78a9ac224743d79b760789c72fec315a6a792c0e9217528e5",
+          "gitBlob": "03542090d5e1691747dc00e277ece9d44b692fbe",
+          "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/lilligant-alternate-form-1/shiny_front.png"
+        },
+        "shiny_back": {
+          "canvas": [
+            192,
+            192
+          ],
+          "bounds": [
+            40,
+            26,
+            148,
+            160
+          ],
+          "collapsedSize": [
+            54,
+            67
+          ],
+          "factor": 2,
+          "partialAlpha": 0,
+          "opaqueRGB": 14,
+          "opaque555": 14,
+          "status": "PIXEL_CANDIDATE",
+          "offset": [
+            13,
+            7
+          ],
+          "frameSha256": "3419ac7fedd8d8f92fb83fce96420eea76b82d927e54643701aaf188264594c3",
+          "sourceSha256": "2da2b9437ba928789fd4456847c5689105c0ccf57705892c3feff2a481adfb56",
+          "gitBlob": "c58d82687d7651f58eea32d48e93b308bf065ef1",
+          "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/lilligant-alternate-form-1/shiny_back.png"
+        }
+      },
+      "archive": null,
+      "icon": null,
+      "status": "HOLD",
+      "production": false,
+      "gameIntegrationAllowed": false
+    },
+    {
+      "artworkKey": "phanpy-alternate-form-1|gitblob:8be24b35343271b589b4602a446e6624c2fbeffc",
+      "identity": "phanpy-alternate-form-1",
+      "source": "Reborn / Plates of Arceus",
+      "decision": "keep",
+      "views": {
+        "front": {
+          "canvas": [
+            160,
+            160
+          ],
+          "bounds": [
+            48,
+            46,
+            112,
+            114
+          ],
+          "collapsedSize": [
+            64,
+            68
+          ],
+          "factor": 1,
+          "partialAlpha": 0,
+          "opaqueRGB": 17,
+          "opaque555": 17,
+          "status": "PALETTE_HOLD",
+          "sourceSha256": "55ca7d154b4eff17ee27002eb9c9dd8a422fca3ca67b9a7b142827f0a171539d",
+          "gitBlob": "8be24b35343271b589b4602a446e6624c2fbeffc",
+          "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/phanpy-alternate-form-1/front.png"
+        },
+        "back": {
+          "canvas": [
+            192,
+            192
+          ],
+          "bounds": [
+            58,
+            66,
+            138,
+            130
+          ],
+          "collapsedSize": [
+            80,
+            64
+          ],
+          "factor": 1,
+          "partialAlpha": 0,
+          "opaqueRGB": 14,
+          "opaque555": 14,
+          "status": "PIXEL_CANDIDATE",
+          "offset": [
+            0,
+            8
+          ],
+          "frameSha256": "61be69c3eb466624e86010dcf0c4585b41d3c1121c49f3ad18371546f1a10670",
+          "sourceSha256": "543527bfbe53802e61e34a1a0ce3027745f535249f0063c0ba8d0bc2620bdc5c",
+          "gitBlob": "c5edbc09e3313e86f56f255fda4c3e33a6570286",
+          "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/phanpy-alternate-form-1/back.png"
+        },
+        "shiny_front": {
+          "canvas": [
+            160,
+            160
+          ],
+          "bounds": [
+            48,
+            46,
+            112,
+            114
+          ],
+          "collapsedSize": [
+            64,
+            68
+          ],
+          "factor": 1,
+          "partialAlpha": 0,
+          "opaqueRGB": 17,
+          "opaque555": 17,
+          "status": "PALETTE_HOLD",
+          "sourceSha256": "789f7c546191dc330e2751b48a3fafd0ce35717213f9086d1b7b7052f00cea1e",
+          "gitBlob": "9edfb457110e8fe45348dede1fb5a549bc15f2a0",
+          "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/phanpy-alternate-form-1/shiny_front.png"
+        },
+        "shiny_back": {
+          "canvas": [
+            192,
+            192
+          ],
+          "bounds": [
+            58,
+            66,
+            138,
+            130
+          ],
+          "collapsedSize": [
+            80,
+            64
+          ],
+          "factor": 1,
+          "partialAlpha": 0,
+          "opaqueRGB": 14,
+          "opaque555": 14,
+          "status": "PIXEL_CANDIDATE",
+          "offset": [
+            0,
+            8
+          ],
+          "frameSha256": "b38a847a0882c387a13000b234af683a831fa9f73584ef56626b2d4fc6c28dc0",
+          "sourceSha256": "672e0a905f210a1a3ba95c24bcc6fc643f475e4d318556bf118ccf8399e8b4eb",
+          "gitBlob": "8c358ad97dac1cd58b0ccc0bf024c532be3928c0",
+          "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/phanpy-alternate-form-1/shiny_back.png"
+        }
+      },
+      "archive": null,
+      "icon": null,
+      "status": "HOLD",
+      "production": false,
+      "gameIntegrationAllowed": false
+    }
+  ],
+  "gameIntegrationAllowed": false
+}
