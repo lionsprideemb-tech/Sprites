@@ -1,0 +1,168 @@
+{
+  "schema": "mercury-compact-checkpoint-v1",
+  "baseline": "dedb6ae74bd31849555f502763578d669da40dc1",
+  "ledgerBlob": "f69f8d33c788cd17fd33950c6694faae36581a98",
+  "priorLedgerBlob": "1ef52926f1c72c92cb486474c25a1511c2e5b00f",
+  "runnerBlob": "917240025ab58fee9b636172cb3dd5ab2a8a5d97",
+  "driverBlob": "2a795e644fc2e165c4ad9728cab8130ecc9bd530",
+  "branch": "qa/final-sprite-acceleration-20261124",
+  "protected": {
+    "acceptedRows": 711,
+    "iphoneVotes": 166,
+    "keep": 154,
+    "cut": 12,
+    "iphoneBlob": "61c5e53c6ec81b74d192cd62a4c52c970cea15ce",
+    "overlayBlob": "89f328b4471f1531520305e54f63efdbc6251a50",
+    "delta": {
+      "artworkStatus": "UNAPPROVED",
+      "retiredLegacyCandidates": [
+        {
+          "identity": "vibrava-redux",
+          "key": "vibrava-redux|pixelsha256:0eff61268b7c30c1bb16d6f8c56d4f3de7bb32acedbde6f6b062d9df78f249ba"
+        }
+      ],
+      "symbolicPrototypeTests": 42,
+      "nativeSaveEmulatorVerified": false,
+      "productionIDsAllocated": 0
+    }
+  },
+  "metrics": {
+    "accepted": 711,
+    "completeSourceLinks": 596,
+    "incompleteSourceLinks": 115,
+    "priorArchivePasses": 148,
+    "newArchivePasses": 24,
+    "cumulativeOfflineArchivePasses": 172,
+    "cumulativeOfflineViews": 688,
+    "cumulativeFramePixels": 8806400,
+    "classification": {
+      "OFFLINE_ARCHIVE_PASS": 172,
+      "EXACT_PIXEL_HOLD": 45,
+      "INCOMPLETE_SOURCE_LINK": 115,
+      "PRIOR_MANIFEST_HOLD": 40,
+      "AWAITING_PIXEL_ANALYSIS": 268,
+      "RECOVERED_LINK_AWAITING_PIXEL_ANALYSIS": 71
+    },
+    "sourceRecovery": {
+      "originalIncomplete": 249,
+      "status": {
+        "NO_EXACT_SHINY_PAIR": 42,
+        "EXACT_SOURCE_PATH_PAIR_RECOVERED": 134,
+        "PARTIAL_SOURCE_LINK": 73
+      },
+      "bySource": {
+        "packs/Mikitari": {
+          "EXACT_SOURCE_PATH_PAIR_RECOVERED": 94
+        },
+        "packs/Earthretha": {
+          "NO_EXACT_SHINY_PAIR": 6,
+          "PARTIAL_SOURCE_LINK": 1,
+          "EXACT_SOURCE_PATH_PAIR_RECOVERED": 7
+        },
+        "packs/Festival_PrincessPhoenix": {
+          "NO_EXACT_SHINY_PAIR": 11
+        },
+        "packs/Festival_Magiscarf": {
+          "EXACT_SOURCE_PATH_PAIR_RECOVERED": 26,
+          "NO_EXACT_SHINY_PAIR": 2,
+          "PARTIAL_SOURCE_LINK": 2
+        },
+        "packs/Festival_Lumio": {
+          "NO_EXACT_SHINY_PAIR": 5,
+          "EXACT_SOURCE_PATH_PAIR_RECOVERED": 3
+        },
+        "packs/DrPrettyman_DS_64x64": {
+          "EXACT_SOURCE_PATH_PAIR_RECOVERED": 2
+        },
+        "packs/Festival_Scotsman": {
+          "NO_EXACT_SHINY_PAIR": 4
+        },
+        "packs/Festival_Misc": {
+          "EXACT_SOURCE_PATH_PAIR_RECOVERED": 1
+        },
+        "packs/Mega_Flygon": {
+          "EXACT_SOURCE_PATH_PAIR_RECOVERED": 1
+        },
+        "recovered/Reborn_Plates_Legacy": {
+          "NO_EXACT_SHINY_PAIR": 5
+        },
+        "hack-packs/Platinum_Redux_Embedded_Sprites": {
+          "NO_EXACT_SHINY_PAIR": 9,
+          "PARTIAL_SOURCE_LINK": 70
+        }
+      },
+      "sourceIconRows": 119,
+      "alternateShinyRows": 28
+    },
+    "generatedIconCandidates": 382,
+    "priorAndNewGeneratedIconPixelChecks": 61,
+    "sourceOriginalIconPixelChecks": 6,
+    "approvedIconBindings": 0,
+    "productionRoutes": 0,
+    "sourceOriginalIconPixelChecksNewRelease": 6
+  },
+  "stats": {
+    "tested": 36,
+    "passes": 24,
+    "newHolds": 8,
+    "priorHoldsRetested": 4,
+    "priorHoldsRescued": 0,
+    "sourceViews": 144,
+    "framePixels": 1228800,
+    "negativeRoutes": 288
+  },
+  "bundle": {
+    "path": "qa/final-sprite-acceleration/MERCURY_FINAL_ACCELERATION_QA_ARCHIVES.zip",
+    "gitBlob": "c068e06b7a23b9dbf4fa9c9c2314df86d2c48ed2",
+    "sha256": "374f2f434bab41f81a808b812eb2d2c4f35a7449730603975f47c16597f9d4bc",
+    "size": 341572,
+    "archiveEntries": 24,
+    "verifiedEntries": 25
+  },
+  "sourceProbeBlob": "f892166fff59ba1abb0ceb353293a47ef63ad1c7",
+  "batchBlobs": [
+    {
+      "path": "qa/final-sprite-acceleration/BATCH_01.json",
+      "blob": "b07cd77862b5fe5af31639fc7a801dcf594647cf"
+    },
+    {
+      "path": "qa/final-sprite-acceleration/BATCH_02.json",
+      "blob": "74783cbb41c4bb06fe13f8ef9076b888e0751932"
+    },
+    {
+      "path": "qa/final-sprite-acceleration/BATCH_03_QUEUE.json",
+      "blob": "f7800fad86a0bbde5ca5ad42ae0e1a7cff2e94e0"
+    },
+    {
+      "path": "qa/final-sprite-acceleration/BATCH_04_QUEUE.json",
+      "blob": "e77fa6f7c06d0da316b3d611c6dc3cfb9117c2d7"
+    },
+    {
+      "path": "qa/final-sprite-acceleration/BATCH_05_QUEUE.json",
+      "blob": "32283f8d86732f9d221c87208acf433b7570e2c8"
+    },
+    {
+      "path": "qa/final-sprite-acceleration/BATCH_06_QUEUE.json",
+      "blob": "3b9614576c6aded2d1be607eb240baf44e73a0d7"
+    },
+    {
+      "path": "qa/final-sprite-acceleration/BATCH_07_QUEUE.json",
+      "blob": "7a97b5d2bc39af24891aab89fdc0affe73843301"
+    },
+    {
+      "path": "qa/final-sprite-acceleration/BATCH_08_QUEUE.json",
+      "blob": "313dc90d57d1b9dcbf0e10940399f8e4834cd3e2"
+    },
+    {
+      "path": "qa/final-sprite-acceleration/BATCH_09_HOLD_RETEST.json",
+      "blob": "d158f5be399859b5e10ec27390687b11063d7563"
+    }
+  ],
+  "nextQueueOffsets": {
+    "AWAITING_PIXEL_ANALYSIS": 0,
+    "RECOVERED_LINK_AWAITING_PIXEL_ANALYSIS": 0
+  },
+  "gameIntegrationAllowed": false,
+  "nativeCompiler": false,
+  "nativeEmulator": false
+}
