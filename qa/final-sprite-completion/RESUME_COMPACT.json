@@ -1,8 +1,8 @@
 {
   "schema": "mercury-compact-resume-v1",
-  "verifiedCheckpointCommit": "003b5db8a67e38bd0f8ab49082a36eb1521f75fe",
+  "verifiedCheckpointCommit": "56720751a42125bf4fe2b249663d2136a9986f8a",
   "checkpointPath": "qa/final-sprite-completion/CHECKPOINT.json",
-  "checkpointBlob": "34de2a3c59518f76a835556e69d193b6e1eb623f",
+  "checkpointBlob": "51a198250f72212a5faf2d4e399928626899c301",
   "gateBlob": "94b3a58b8d51d4c579001c6ffc1914d1b5a10c10",
   "ledgerBlob": "686fd93d34bb39055c0d6cbbf3bcdc5566fcd51a",
   "runnerBlob": "917240025ab58fee9b636172cb3dd5ab2a8a5d97",
@@ -17,19 +17,19 @@
     "originalQueue": 468
   },
   "summary": {
-    "tested": 72,
-    "newArchivePasses": 66,
-    "newHistoricalPasses": 60,
+    "tested": 102,
+    "newArchivePasses": 90,
+    "newHistoricalPasses": 84,
     "newSupplementalPasses": 6,
-    "cumulativeArchivePasses": 282,
-    "verifiedViews": 264,
-    "framePixels": 3379200,
-    "negativeRoutes": 792,
-    "sharedPalette": 60,
-    "viewSpecific": 6,
+    "cumulativeArchivePasses": 306,
+    "verifiedViews": 360,
+    "framePixels": 4608000,
+    "negativeRoutes": 1080,
+    "sharedPalette": 82,
+    "viewSpecific": 8,
     "counts": {
-      "OFFLINE_ARCHIVE_PASS": 190,
-      "AWAITING_PIXEL_ANALYSIS": 145,
+      "OFFLINE_ARCHIVE_PASS": 214,
+      "AWAITING_PIXEL_ANALYSIS": 121,
       "EXACT_PIXEL_HOLD": 18,
       "PRIOR_MANIFEST_HOLD": 33,
       "INCOMPLETE_SOURCE_LINK": 82
@@ -49,13 +49,13 @@
   },
   "next": {
     "cohort": "AWAITING_PIXEL_ANALYSIS",
-    "offset": 57,
-    "firstName": "Machamp Mega Redux",
-    "eligible": 143,
+    "offset": 81,
+    "firstName": "Nidoking Mega",
+    "eligible": 119,
     "batchSize": 3,
-    "nextLabel": "25_HISTORICAL",
-    "nextExactHoldOffset": 6
+    "nextLabel": "35_HISTORICAL",
+    "nextExactHoldOffset": 12
   },
   "policy": "Offline QA only; no production IDs, main changes, ROM changes, invented artwork or approvals. Preserve Delta Flygon unapproved. Check latest branch head and reconcile any batches after checkpoint before resuming.",
-  "archiveStorage": "First 33 new archives in existing ZIP; all 66 in pinned batch JSON manifest with SHA-256 and Git digests."
+  "archiveStorage": "First 33 new archives in existing ZIP; all 90 in pinned batch JSON manifest with SHA-256 and Git digests."
 }
