@@ -1,8 +1,8 @@
 {
   "schema": "mercury-compact-resume-v1",
-  "verifiedCheckpointCommit": "c719ee72afab1c69c4694c0031b8666f05e5bfe9",
+  "verifiedCheckpointCommit": "003b5db8a67e38bd0f8ab49082a36eb1521f75fe",
   "checkpointPath": "qa/final-sprite-completion/CHECKPOINT.json",
-  "checkpointBlob": "222f26339e766b5fef8eb82f4f8adbb8f914a25e",
+  "checkpointBlob": "34de2a3c59518f76a835556e69d193b6e1eb623f",
   "gateBlob": "94b3a58b8d51d4c579001c6ffc1914d1b5a10c10",
   "ledgerBlob": "686fd93d34bb39055c0d6cbbf3bcdc5566fcd51a",
   "runnerBlob": "917240025ab58fee9b636172cb3dd5ab2a8a5d97",
@@ -17,19 +17,19 @@
     "originalQueue": 468
   },
   "summary": {
-    "tested": 48,
-    "newArchivePasses": 45,
-    "newHistoricalPasses": 39,
+    "tested": 72,
+    "newArchivePasses": 66,
+    "newHistoricalPasses": 60,
     "newSupplementalPasses": 6,
-    "cumulativeArchivePasses": 261,
-    "verifiedViews": 180,
-    "framePixels": 2304000,
-    "negativeRoutes": 540,
-    "sharedPalette": 41,
-    "viewSpecific": 4,
+    "cumulativeArchivePasses": 282,
+    "verifiedViews": 264,
+    "framePixels": 3379200,
+    "negativeRoutes": 792,
+    "sharedPalette": 60,
+    "viewSpecific": 6,
     "counts": {
-      "OFFLINE_ARCHIVE_PASS": 169,
-      "AWAITING_PIXEL_ANALYSIS": 166,
+      "OFFLINE_ARCHIVE_PASS": 190,
+      "AWAITING_PIXEL_ANALYSIS": 145,
       "EXACT_PIXEL_HOLD": 18,
       "PRIOR_MANIFEST_HOLD": 33,
       "INCOMPLETE_SOURCE_LINK": 82
@@ -49,12 +49,13 @@
   },
   "next": {
     "cohort": "AWAITING_PIXEL_ANALYSIS",
-    "offset": 36,
-    "firstName": "Kleavor Redux",
-    "eligible": 164,
+    "offset": 57,
+    "firstName": "Machamp Mega Redux",
+    "eligible": 143,
     "batchSize": 3,
-    "nextLabel": "17_HISTORICAL"
+    "nextLabel": "25_HISTORICAL",
+    "nextExactHoldOffset": 6
   },
   "policy": "Offline QA only; no production IDs, main changes, ROM changes, invented artwork or approvals. Preserve Delta Flygon unapproved. Check latest branch head and reconcile any batches after checkpoint before resuming.",
-  "archiveStorage": "First 33 new archives in existing ZIP; all 45 in pinned batch JSON manifest with SHA-256 and Git digests."
+  "archiveStorage": "First 33 new archives in existing ZIP; all 66 in pinned batch JSON manifest with SHA-256 and Git digests."
 }
