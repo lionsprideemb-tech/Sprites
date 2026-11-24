@@ -1,5 +1,5 @@
 (async (tools,selection,label)=>{
-const repo="lionsprideemb-tech/Sprites",ref="7a7666f10fda7e3075d3810b6ca307d25e89cb1c",branch="qa/embedded-artwork-recovery-20261124-20261124",runnerBlob="917240025ab58fee9b636172cb3dd5ab2a8a5d97",ledgerBlob="14a78a143065715f3b81c3248f5ba6ac1b6e9ef8";
+const repo="lionsprideemb-tech/Sprites",ref="7a7666f10fda7e3075d3810b6ca307d25e89cb1c",branch="qa/embedded-artwork-recovery-20261124",runnerBlob="917240025ab58fee9b636172cb3dd5ab2a8a5d97",ledgerBlob="14a78a143065715f3b81c3248f5ba6ac1b6e9ef8";
 if(!/^[0-9]{2}_[A-Z_]+$/.test(label)||selection.length<1||selection.length>4)throw Error("INVALID_BATCH");
 const get=async sha=>(await tools.mcp__GitHub__fetch_blob({repository_full_name:repo,blob_sha:sha})).result.content;
 const core=eval(await get(runnerBlob))().core;const l=JSON.parse(await get(ledgerBlob));if(l.rows.length!==711||new Set(l.rows.map(r=>r.artworkKey)).size!==711||l.protected.iphoneVotes!==166||l.protected.delta.artworkStatus!=="UNAPPROVED")throw Error("PROTECTED_LEDGER_MISMATCH");
