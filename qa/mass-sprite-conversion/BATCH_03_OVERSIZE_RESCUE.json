@@ -1,0 +1,377 @@
+{
+  "schema": "mercury-mass-rescue-batch-v1",
+  "batch": "03_OVERSIZE_RESCUE",
+  "sourceRef": "f15c4671bf7afb15450fc7801bde17aefcdc4f7e",
+  "ledgerBlob": "8bbddab412f1cbf24aab4e844287de0fa4ae135d",
+  "iconPaletteBlob": "65deabb632f60fe5518b161da7d1b1c978a69faf",
+  "reports": [
+    {
+      "artworkKey": "accelgor-alternate-form-1|gitblob:ce363028d1864a40d875bd6cf8532d81d3d33398",
+      "identity": "accelgor-alternate-form-1",
+      "source": "Reborn / Plates of Arceus",
+      "decision": "keep",
+      "views": {
+        "front": {
+          "canvas": [
+            192,
+            192
+          ],
+          "bounds": [
+            38,
+            22,
+            176,
+            146
+          ],
+          "collapsedSize": [
+            69,
+            62
+          ],
+          "factor": 2,
+          "partialAlpha": 0,
+          "opaqueRGB": 15,
+          "opaque555": 15,
+          "status": "PIXEL_CANDIDATE",
+          "offset": [
+            5,
+            9
+          ],
+          "frameSha256": "dba87f39afb2d955bade41e4f6e59112bca88e25cb44177b91b30bebd1de453f",
+          "sourceSha256": "4cd87503d73976829806b6c4e4645efa85c6e525cf1552fc3500ec6240785b55",
+          "gitBlob": "ce363028d1864a40d875bd6cf8532d81d3d33398",
+          "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/accelgor-alternate-form-1/front.png"
+        },
+        "shiny_front": {
+          "canvas": [
+            192,
+            192
+          ],
+          "bounds": [
+            38,
+            22,
+            176,
+            146
+          ],
+          "collapsedSize": [
+            69,
+            62
+          ],
+          "factor": 2,
+          "partialAlpha": 0,
+          "opaqueRGB": 15,
+          "opaque555": 15,
+          "status": "PIXEL_CANDIDATE",
+          "offset": [
+            5,
+            9
+          ],
+          "frameSha256": "f3f8696473f6f12adbba3d04e3d46eea65808bd71f3f42d55baa597e92bde3f9",
+          "sourceSha256": "29de1eb16100d907ecba42564191776f97488c8f71764fdddad100ad919984d7",
+          "gitBlob": "43883023831a36ce1748b25403a45cc96cb4fdde",
+          "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/accelgor-alternate-form-1/shiny_front.png"
+        },
+        "back": {
+          "canvas": [
+            192,
+            192
+          ],
+          "bounds": [
+            8,
+            24,
+            142,
+            154
+          ],
+          "collapsedSize": [
+            67,
+            65
+          ],
+          "factor": 2,
+          "partialAlpha": 0,
+          "opaqueRGB": 16,
+          "opaque555": 15,
+          "status": "PIXEL_CANDIDATE",
+          "offset": [
+            6,
+            8
+          ],
+          "frameSha256": "aa3b7696c2d5b10316459cf3e6c0647e6553f51557c50dfd14ba4bf31115e7a3",
+          "sourceSha256": "5c09e87e6140c9140689e872cc309549074122dcc6053b69f9854a550cf39d6d",
+          "gitBlob": "0a2722537a9845eddc162a98e5dfa6c7d16a7a66",
+          "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/accelgor-alternate-form-1/back.png"
+        },
+        "shiny_back": {
+          "canvas": [
+            192,
+            192
+          ],
+          "bounds": [
+            8,
+            24,
+            142,
+            154
+          ],
+          "collapsedSize": [
+            67,
+            65
+          ],
+          "factor": 2,
+          "partialAlpha": 0,
+          "opaqueRGB": 16,
+          "opaque555": 16,
+          "status": "PALETTE_HOLD",
+          "sourceSha256": "56d87ced6fa672cacea9110f84d01d8ebf0897384560b9e6a3b9d4d32f2d75d6",
+          "gitBlob": "222e2a7a3dc518cf08af98ee59520acb914fee0b",
+          "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/accelgor-alternate-form-1/shiny_back.png"
+        }
+      },
+      "archive": null,
+      "icon": null,
+      "status": "HOLD",
+      "production": false,
+      "gameIntegrationAllowed": false
+    },
+    {
+      "artworkKey": "misdreavus-alternate-form-2|gitblob:e9ca2c3546d2fce5c3765230bf0d11aa07cf6dc0",
+      "identity": "misdreavus-alternate-form-2",
+      "source": "Reborn / Plates of Arceus",
+      "decision": "keep",
+      "views": {
+        "front": {
+          "canvas": [
+            160,
+            160
+          ],
+          "bounds": [
+            44,
+            60,
+            118,
+            136
+          ],
+          "collapsedSize": [
+            74,
+            76
+          ],
+          "factor": 1,
+          "partialAlpha": 0,
+          "opaqueRGB": 14,
+          "opaque555": 14,
+          "status": "PIXEL_CANDIDATE",
+          "offset": [
+            3,
+            2
+          ],
+          "frameSha256": "2e30062c74cdb913f56982363252a42bf30c61fb42d25a2ffcbb055843f9586a",
+          "sourceSha256": "3f14d51cdff4d62d854c357e2a3b7ee8868c452002e3b7773ceb1c0462e9d050",
+          "gitBlob": "e9ca2c3546d2fce5c3765230bf0d11aa07cf6dc0",
+          "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/misdreavus-alternate-form-2/front.png"
+        },
+        "shiny_back": {
+          "canvas": [
+            192,
+            192
+          ],
+          "bounds": [
+            50,
+            50,
+            132,
+            136
+          ],
+          "collapsedSize": [
+            41,
+            43
+          ],
+          "factor": 2,
+          "partialAlpha": 0,
+          "opaqueRGB": 11,
+          "opaque555": 11,
+          "status": "PIXEL_CANDIDATE",
+          "offset": [
+            19,
+            19
+          ],
+          "frameSha256": "2cd5088bca35bc2d9ebc994c3d3e0cdbc87cf1d210e40c470ad8a88f1d3960cb",
+          "sourceSha256": "abbba7488a5b49838ca2bda9a0a89cf136c955d2c7470441bd160a154d4c0e5c",
+          "gitBlob": "9bee55f40bff96000bf871a212aa39efd5a84af1",
+          "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/misdreavus-alternate-form-2/shiny_back.png"
+        },
+        "back": {
+          "canvas": [
+            192,
+            192
+          ],
+          "bounds": [
+            70,
+            54,
+            132,
+            144
+          ],
+          "collapsedSize": [
+            31,
+            45
+          ],
+          "factor": 2,
+          "partialAlpha": 0,
+          "opaqueRGB": 16,
+          "opaque555": 16,
+          "status": "PALETTE_HOLD",
+          "sourceSha256": "9086685e52f04f1762dcf67e8013abababaf90aaf59e36b456df6ede4e6f6429",
+          "gitBlob": "eba6353e25e058fb7a0ec0d0521de12f47bc5b11",
+          "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/misdreavus-alternate-form-2/back.png"
+        },
+        "shiny_front": {
+          "canvas": [
+            160,
+            160
+          ],
+          "bounds": [
+            42,
+            38,
+            118,
+            124
+          ],
+          "collapsedSize": [
+            38,
+            43
+          ],
+          "factor": 2,
+          "partialAlpha": 0,
+          "opaqueRGB": 12,
+          "opaque555": 12,
+          "status": "PIXEL_CANDIDATE",
+          "offset": [
+            21,
+            19
+          ],
+          "frameSha256": "4deec49d119bc66b52b76d226251eb937c872e1599427eeb3431dd4e199fb046",
+          "sourceSha256": "14727323a7b00ef529c82ec928e1a292a2647750f2372292b7636d7e4b9ee92f",
+          "gitBlob": "80c0b4e8d00082efc6413818149ec20399f12a58",
+          "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/misdreavus-alternate-form-2/shiny_front.png"
+        }
+      },
+      "archive": null,
+      "icon": null,
+      "status": "HOLD",
+      "production": false,
+      "gameIntegrationAllowed": false
+    },
+    {
+      "artworkKey": "flareon-alternate-form-3|gitblob:bd23d7eb1f81149bb6482a07c72a27b24b2beea3",
+      "identity": "flareon-alternate-form-3",
+      "source": "Reborn / Plates of Arceus",
+      "decision": "keep",
+      "views": {
+        "front": {
+          "canvas": [
+            192,
+            192
+          ],
+          "bounds": [
+            42,
+            30,
+            144,
+            156
+          ],
+          "collapsedSize": [
+            51,
+            63
+          ],
+          "factor": 2,
+          "partialAlpha": 0,
+          "opaqueRGB": 17,
+          "opaque555": 17,
+          "status": "PALETTE_HOLD",
+          "sourceSha256": "95b0df7c193461f853a2e918c248c738b60dfa5f28612f47814ef44314865b61",
+          "gitBlob": "bd23d7eb1f81149bb6482a07c72a27b24b2beea3",
+          "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/flareon-alternate-form-3/front.png"
+        },
+        "back": {
+          "canvas": [
+            192,
+            192
+          ],
+          "bounds": [
+            20,
+            50,
+            162,
+            168
+          ],
+          "collapsedSize": [
+            71,
+            59
+          ],
+          "factor": 2,
+          "partialAlpha": 0,
+          "opaqueRGB": 13,
+          "opaque555": 13,
+          "status": "PIXEL_CANDIDATE",
+          "offset": [
+            4,
+            11
+          ],
+          "frameSha256": "2f6243684bc9b0bc6c8bc330e293e046659a8d5b39ca69e76481369ad807fd8f",
+          "sourceSha256": "59a4bf1a6a0ce008f29cba9e8f36a530c70620cf63e431e3aea62e91ff7f94bb",
+          "gitBlob": "7a2372913b831cdd825f7ee3478a20816ce5a6d4",
+          "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/flareon-alternate-form-3/back.png"
+        },
+        "shiny_front": {
+          "canvas": [
+            192,
+            192
+          ],
+          "bounds": [
+            42,
+            30,
+            144,
+            156
+          ],
+          "collapsedSize": [
+            51,
+            63
+          ],
+          "factor": 2,
+          "partialAlpha": 0,
+          "opaqueRGB": 17,
+          "opaque555": 17,
+          "status": "PALETTE_HOLD",
+          "sourceSha256": "a11582eb7e9c19830d57332ba37ab8c511cd01ca7c66207f34be0b887d308325",
+          "gitBlob": "133f86a9a7c6449ad3cf4dfded23abc30b806e44",
+          "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/flareon-alternate-form-3/shiny_front.png"
+        },
+        "shiny_back": {
+          "canvas": [
+            192,
+            192
+          ],
+          "bounds": [
+            20,
+            50,
+            162,
+            168
+          ],
+          "collapsedSize": [
+            71,
+            59
+          ],
+          "factor": 2,
+          "partialAlpha": 0,
+          "opaqueRGB": 13,
+          "opaque555": 13,
+          "status": "PIXEL_CANDIDATE",
+          "offset": [
+            4,
+            11
+          ],
+          "frameSha256": "fc9c99dca2c640a4d2177a571d38c94477eb175b7d7d2d6011f19334bd290bed",
+          "sourceSha256": "d5fdc75dfdbd607010772bc4d117553e69bdc751897176249e04c23cd1952620",
+          "gitBlob": "24260df1f61cd427587f336d73c774e8513dc854",
+          "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/flareon-alternate-form-3/shiny_back.png"
+        }
+      },
+      "archive": null,
+      "icon": null,
+      "status": "HOLD",
+      "production": false,
+      "gameIntegrationAllowed": false
+    }
+  ],
+  "gameIntegrationAllowed": false
+}
