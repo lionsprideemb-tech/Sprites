@@ -1,0 +1,542 @@
+{
+  "schema": "mercury-sprite-usability-dry-run-v1",
+  "parent": "11e8019e3f3c7c9f65258ff39947c5cd415b163a",
+  "registryBlob": "ef32f2ae2fbb2d11121c5a9ceec659b3aec7588b",
+  "readinessBlob": "686fd93d34bb39055c0d6cbbf3bcdc5566fcd51a",
+  "coreSourceBlob": "cf8d3fb42c695ff64fb0ed98382830ddd9807f73",
+  "selfTests": 7,
+  "policy": "Non-destructive suitability gate. No new persisted converted sprites; offline dry-run archives discarded. Holds excluded from any integration; do not erase original approval.",
+  "protected": {
+    "canonical": 1025,
+    "historicalAdditions": 574,
+    "artworks": 711,
+    "votes": 166,
+    "archives": 216,
+    "placementRecords": 641,
+    "originalQueue": 468
+  },
+  "results": [
+    {
+      "key": "infernape-mega|pixelsha256:805a21225628ed48eda3ef291283af5d3c0dd7c13387fadaff0f5aaadd486c6b",
+      "id": "R0577",
+      "cohort": "supplemental",
+      "decision": "approve",
+      "views": {
+        "front": {
+          "path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/infernape_mega/front.png",
+          "gitBlob": "60049cf2940ed4f248361882b6eed8374655fe69",
+          "canvas": [
+            64,
+            64
+          ],
+          "bounds": [
+            0,
+            2,
+            63,
+            64
+          ],
+          "collapsedSize": [
+            63,
+            62
+          ],
+          "factor": 1,
+          "partialAlpha": 0,
+          "opaqueRGB": 15,
+          "opaque555": 15,
+          "status": "PIXEL_CANDIDATE",
+          "offset": [
+            8,
+            9
+          ],
+          "frameSha256": "16487436faebde219f0fd06266d4b69900cdd7bfa0f288982974842a89b74c9b"
+        },
+        "back": {
+          "path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/infernape_mega/back.png",
+          "gitBlob": "f767df4ad16582f80738759078be732c5d02dc0b",
+          "canvas": [
+            64,
+            64
+          ],
+          "bounds": [
+            0,
+            1,
+            64,
+            64
+          ],
+          "collapsedSize": [
+            64,
+            63
+          ],
+          "factor": 1,
+          "partialAlpha": 0,
+          "opaqueRGB": 15,
+          "opaque555": 15,
+          "status": "PIXEL_CANDIDATE",
+          "offset": [
+            8,
+            9
+          ],
+          "frameSha256": "caf4912652a7821f796ff7fbc5a3247946e2c9d5dca51ec3da12f845f0317d49"
+        },
+        "shinyBack": {
+          "path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/infernape_mega/back-shiny.png",
+          "gitBlob": "90f7c43ed2243745de363746d52b23cd5d40447f",
+          "canvas": [
+            64,
+            64
+          ],
+          "bounds": [
+            0,
+            1,
+            64,
+            64
+          ],
+          "collapsedSize": [
+            64,
+            63
+          ],
+          "factor": 1,
+          "partialAlpha": 0,
+          "opaqueRGB": 15,
+          "opaque555": 15,
+          "status": "PIXEL_CANDIDATE",
+          "offset": [
+            8,
+            9
+          ],
+          "frameSha256": "338c3c69a75858ec46f645ebd2f2d36304eaefaa97812ef5b328319b60af8f4e"
+        },
+        "shinyFront": {
+          "path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/infernape_mega/front-shiny.png",
+          "gitBlob": "3e6544ef4022cd3a40ec539cdb63deab55a6541f",
+          "canvas": [
+            64,
+            64
+          ],
+          "bounds": [
+            0,
+            2,
+            63,
+            64
+          ],
+          "collapsedSize": [
+            63,
+            62
+          ],
+          "factor": 1,
+          "partialAlpha": 0,
+          "opaqueRGB": 15,
+          "opaque555": 15,
+          "status": "PIXEL_CANDIDATE",
+          "offset": [
+            8,
+            9
+          ],
+          "frameSha256": "c9a2715febade8ec57f003f892144c9b30bdc0c821404b2663e751c1f61deb5c"
+        }
+      },
+      "status": "OFFLINE_DRY_RUN_PASS",
+      "dryRun": {
+        "mode": "shared_species_palette",
+        "members": 4,
+        "archiveSha256": "022869304a0de20fcf3e3c7289c16d20ff1beab3955394b4e1fb1fd9bb829623",
+        "archiveGitBlob": "a7208e8f9c0e53005da1e7e9b1a33cff5b1406d0",
+        "routes": {
+          "back": {
+            "character": 2,
+            "palette": 0,
+            "characterSha256": "4743c0b5cb1c7c2d3c81c0f6173332950af9215b5dddcb109a19e3a1b14a3331",
+            "paletteSha256": "8cc066303ca4b0f4d7e272177395536d8c6aa5405b2a84ae2f5b07c666453f5b",
+            "expectedFrameSha256": "caf4912652a7821f796ff7fbc5a3247946e2c9d5dca51ec3da12f845f0317d49"
+          },
+          "shiny_back": {
+            "character": 2,
+            "palette": 1,
+            "characterSha256": "4743c0b5cb1c7c2d3c81c0f6173332950af9215b5dddcb109a19e3a1b14a3331",
+            "paletteSha256": "9ccc51709093b584946f75b1c75e1837410078bab62d569a7d70f0289be68b9e",
+            "expectedFrameSha256": "338c3c69a75858ec46f645ebd2f2d36304eaefaa97812ef5b328319b60af8f4e"
+          },
+          "front": {
+            "character": 3,
+            "palette": 0,
+            "characterSha256": "8b0ad5c35681f1cbb7887137476fb882b4ee3083948e8eda67752a4187ee554e",
+            "paletteSha256": "8cc066303ca4b0f4d7e272177395536d8c6aa5405b2a84ae2f5b07c666453f5b",
+            "expectedFrameSha256": "16487436faebde219f0fd06266d4b69900cdd7bfa0f288982974842a89b74c9b"
+          },
+          "shiny_front": {
+            "character": 3,
+            "palette": 1,
+            "characterSha256": "8b0ad5c35681f1cbb7887137476fb882b4ee3083948e8eda67752a4187ee554e",
+            "paletteSha256": "9ccc51709093b584946f75b1c75e1837410078bab62d569a7d70f0289be68b9e",
+            "expectedFrameSha256": "c9a2715febade8ec57f003f892144c9b30bdc0c821404b2663e751c1f61deb5c"
+          }
+        },
+        "unionPairedColors": 15,
+        "facePairedColors": {
+          "back": 15,
+          "front": 15
+        },
+        "alphaMismatch": {
+          "back": 0,
+          "front": 0
+        },
+        "verifiedViews": 4,
+        "framePixels": 51200,
+        "negativeRoutes": 12,
+        "production": false,
+        "icon": null,
+        "nativeIds": null
+      },
+      "productionAllowed": false,
+      "archivePersisted": false
+    },
+    {
+      "key": "mamoswine-redux-mega|pixelsha256:b240e92407ead269bfc5e44b1225fbe987b3fe3fef11e6d5db9afbc0f19c724a",
+      "id": "R0356",
+      "cohort": "supplemental",
+      "decision": "approve",
+      "views": {
+        "front": {
+          "path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/mamoswine_redux_mega/front.png",
+          "gitBlob": "871f3e848af49e29aa34ac768616a000b8888a63",
+          "canvas": [
+            64,
+            64
+          ],
+          "bounds": [
+            0,
+            0,
+            64,
+            64
+          ],
+          "collapsedSize": [
+            64,
+            64
+          ],
+          "factor": 1,
+          "partialAlpha": 0,
+          "opaqueRGB": 13,
+          "opaque555": 13,
+          "status": "PIXEL_CANDIDATE",
+          "offset": [
+            8,
+            8
+          ],
+          "frameSha256": "cc5d3bcfc4e7d539479adec71ae325dbf8ae801d7ddaa5533fd6351c856c941c"
+        },
+        "back": {
+          "path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/mamoswine_redux_mega/back.png",
+          "gitBlob": "93543f69862b74baba26dc4ae3aa5ae1d5ae748d",
+          "canvas": [
+            64,
+            64
+          ],
+          "bounds": [
+            0,
+            11,
+            64,
+            64
+          ],
+          "collapsedSize": [
+            64,
+            53
+          ],
+          "factor": 1,
+          "partialAlpha": 0,
+          "opaqueRGB": 13,
+          "opaque555": 13,
+          "status": "PIXEL_CANDIDATE",
+          "offset": [
+            8,
+            14
+          ],
+          "frameSha256": "79cafea334222607e032437b5628ddecb18ce055e38158cc8adaa001b812ca65"
+        },
+        "shinyBack": {
+          "path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/mamoswine_redux_mega/back-shiny.png",
+          "gitBlob": "04669171a03095992a63209f110909bd145bcc50",
+          "canvas": [
+            64,
+            64
+          ],
+          "bounds": [
+            0,
+            11,
+            64,
+            64
+          ],
+          "collapsedSize": [
+            64,
+            53
+          ],
+          "factor": 1,
+          "partialAlpha": 0,
+          "opaqueRGB": 13,
+          "opaque555": 13,
+          "status": "PIXEL_CANDIDATE",
+          "offset": [
+            8,
+            14
+          ],
+          "frameSha256": "9523b68fed4a87d72cc72bda976aa7341df747f480b14a56e03aaa3683317f34"
+        },
+        "shinyFront": {
+          "path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/mamoswine_redux_mega/front-shiny.png",
+          "gitBlob": "82d058c998d3d3734f63ca1c516f2dd8f58bc706",
+          "canvas": [
+            64,
+            64
+          ],
+          "bounds": [
+            0,
+            0,
+            64,
+            64
+          ],
+          "collapsedSize": [
+            64,
+            64
+          ],
+          "factor": 1,
+          "partialAlpha": 0,
+          "opaqueRGB": 13,
+          "opaque555": 13,
+          "status": "PIXEL_CANDIDATE",
+          "offset": [
+            8,
+            8
+          ],
+          "frameSha256": "b53f41723451dd6d4e940edd921ed031b2227176c2ee893699ad4581d235a604"
+        }
+      },
+      "status": "OFFLINE_DRY_RUN_PASS",
+      "dryRun": {
+        "mode": "shared_species_palette",
+        "members": 4,
+        "archiveSha256": "950d0c3ce0d4ab9942cfaeea7e00eb73c3e16f3d2385dde88a2953f510c58220",
+        "archiveGitBlob": "8a59a6435ad63c2307d17daad59ed99bb27a40d2",
+        "routes": {
+          "back": {
+            "character": 2,
+            "palette": 0,
+            "characterSha256": "1f32e48f4bd98d278b697bb521a299a02783086c0c0bd754e439e7421a608375",
+            "paletteSha256": "847487f11f4664ce1258374aef26d4aaa5208b72422e8005739f15fd511b41a6",
+            "expectedFrameSha256": "79cafea334222607e032437b5628ddecb18ce055e38158cc8adaa001b812ca65"
+          },
+          "shiny_back": {
+            "character": 2,
+            "palette": 1,
+            "characterSha256": "1f32e48f4bd98d278b697bb521a299a02783086c0c0bd754e439e7421a608375",
+            "paletteSha256": "8b5007df21c45dfe3076e76fbe49518257ff7747d39d44f2d546f4e066c725e9",
+            "expectedFrameSha256": "9523b68fed4a87d72cc72bda976aa7341df747f480b14a56e03aaa3683317f34"
+          },
+          "front": {
+            "character": 3,
+            "palette": 0,
+            "characterSha256": "0ca0fa04cf5ffe5bd513bd283fd57b3ff3a91e9c5bd9f88dfb9435b736a0f648",
+            "paletteSha256": "847487f11f4664ce1258374aef26d4aaa5208b72422e8005739f15fd511b41a6",
+            "expectedFrameSha256": "cc5d3bcfc4e7d539479adec71ae325dbf8ae801d7ddaa5533fd6351c856c941c"
+          },
+          "shiny_front": {
+            "character": 3,
+            "palette": 1,
+            "characterSha256": "0ca0fa04cf5ffe5bd513bd283fd57b3ff3a91e9c5bd9f88dfb9435b736a0f648",
+            "paletteSha256": "8b5007df21c45dfe3076e76fbe49518257ff7747d39d44f2d546f4e066c725e9",
+            "expectedFrameSha256": "b53f41723451dd6d4e940edd921ed031b2227176c2ee893699ad4581d235a604"
+          }
+        },
+        "unionPairedColors": 13,
+        "facePairedColors": {
+          "back": 13,
+          "front": 13
+        },
+        "alphaMismatch": {
+          "back": 0,
+          "front": 0
+        },
+        "verifiedViews": 4,
+        "framePixels": 51200,
+        "negativeRoutes": 12,
+        "production": false,
+        "icon": null,
+        "nativeIds": null
+      },
+      "productionAllowed": false,
+      "archivePersisted": false
+    },
+    {
+      "key": "reuniclus-redux-mega|pixelsha256:9543e0396e9bf0560c68d000747669863d511d24eac15fd39784d395f2442403",
+      "id": "R0738",
+      "cohort": "supplemental",
+      "decision": "approve",
+      "views": {
+        "back": {
+          "path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/reuniclus_redux_mega/back.png",
+          "gitBlob": "ec2ea8ee73d895853142e51c29eedd9864e57cc2",
+          "canvas": [
+            64,
+            64
+          ],
+          "bounds": [
+            0,
+            0,
+            64,
+            64
+          ],
+          "collapsedSize": [
+            64,
+            64
+          ],
+          "factor": 1,
+          "partialAlpha": 0,
+          "opaqueRGB": 12,
+          "opaque555": 12,
+          "status": "PIXEL_CANDIDATE",
+          "offset": [
+            8,
+            8
+          ],
+          "frameSha256": "9530cb0bd636ec7d8a6a077d05139e5a604f68f3bdf9b1e05acbe492dcae8944"
+        },
+        "front": {
+          "path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/reuniclus_redux_mega/front.png",
+          "gitBlob": "4091481d5052850b84ca6f8b9df33a6270accb31",
+          "canvas": [
+            64,
+            64
+          ],
+          "bounds": [
+            0,
+            0,
+            64,
+            64
+          ],
+          "collapsedSize": [
+            64,
+            64
+          ],
+          "factor": 1,
+          "partialAlpha": 0,
+          "opaqueRGB": 12,
+          "opaque555": 12,
+          "status": "PIXEL_CANDIDATE",
+          "offset": [
+            8,
+            8
+          ],
+          "frameSha256": "b6738cd9943115a0680e0abe8fdd31c712f9a8593c4fd8aa0dd940533d97fd2f"
+        },
+        "shinyBack": {
+          "path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/reuniclus_redux_mega/back-shiny.png",
+          "gitBlob": "8777491312d3bf21198e616dc16e7441f6525ada",
+          "canvas": [
+            64,
+            64
+          ],
+          "bounds": [
+            0,
+            0,
+            64,
+            64
+          ],
+          "collapsedSize": [
+            64,
+            64
+          ],
+          "factor": 1,
+          "partialAlpha": 0,
+          "opaqueRGB": 12,
+          "opaque555": 12,
+          "status": "PIXEL_CANDIDATE",
+          "offset": [
+            8,
+            8
+          ],
+          "frameSha256": "447a0ce34853da1652b4d979c84ae9b64ca5582cc8b4b42842d71fd12869f30b"
+        },
+        "shinyFront": {
+          "path": "DS_CUSTOM_LIBRARY/converted/Elite_Redux_Bulk/reuniclus_redux_mega/front-shiny.png",
+          "gitBlob": "79fdd2d8c521d37a64a5f7c2e522a38de3acd7fb",
+          "canvas": [
+            64,
+            64
+          ],
+          "bounds": [
+            0,
+            0,
+            64,
+            64
+          ],
+          "collapsedSize": [
+            64,
+            64
+          ],
+          "factor": 1,
+          "partialAlpha": 0,
+          "opaqueRGB": 12,
+          "opaque555": 12,
+          "status": "PIXEL_CANDIDATE",
+          "offset": [
+            8,
+            8
+          ],
+          "frameSha256": "8ac69ff435f1365139768b5830851d67b37a61385c94842268a5664ab65704ba"
+        }
+      },
+      "status": "OFFLINE_DRY_RUN_PASS",
+      "dryRun": {
+        "mode": "shared_species_palette",
+        "members": 4,
+        "archiveSha256": "cfe377b8a9c3eeb6af844935233298de8f9ed64808d05da63bb414b934d40294",
+        "archiveGitBlob": "2d0906a9530cd0efe710bed626e8dea9dfbd3dc8",
+        "routes": {
+          "back": {
+            "character": 2,
+            "palette": 0,
+            "characterSha256": "6e97b69a76e88a01ba462eed322a3f8c1b9a23c2652acc911189c5feb7ddef30",
+            "paletteSha256": "8a61ff0246f855ce3d84df907507627d4bab48db07ab0098f77039d5426ae7ce",
+            "expectedFrameSha256": "9530cb0bd636ec7d8a6a077d05139e5a604f68f3bdf9b1e05acbe492dcae8944"
+          },
+          "shiny_back": {
+            "character": 2,
+            "palette": 1,
+            "characterSha256": "6e97b69a76e88a01ba462eed322a3f8c1b9a23c2652acc911189c5feb7ddef30",
+            "paletteSha256": "ee40639f5721281816ac3534e4d1ff91a2eb8dc8d2460ac0545adf80fdbbe1b4",
+            "expectedFrameSha256": "447a0ce34853da1652b4d979c84ae9b64ca5582cc8b4b42842d71fd12869f30b"
+          },
+          "front": {
+            "character": 3,
+            "palette": 0,
+            "characterSha256": "173f74ebde65312cae33cdabde7a030c0b234d14d990cb766a88a718af3acfc8",
+            "paletteSha256": "8a61ff0246f855ce3d84df907507627d4bab48db07ab0098f77039d5426ae7ce",
+            "expectedFrameSha256": "b6738cd9943115a0680e0abe8fdd31c712f9a8593c4fd8aa0dd940533d97fd2f"
+          },
+          "shiny_front": {
+            "character": 3,
+            "palette": 1,
+            "characterSha256": "173f74ebde65312cae33cdabde7a030c0b234d14d990cb766a88a718af3acfc8",
+            "paletteSha256": "ee40639f5721281816ac3534e4d1ff91a2eb8dc8d2460ac0545adf80fdbbe1b4",
+            "expectedFrameSha256": "8ac69ff435f1365139768b5830851d67b37a61385c94842268a5664ab65704ba"
+          }
+        },
+        "unionPairedColors": 13,
+        "facePairedColors": {
+          "back": 12,
+          "front": 12
+        },
+        "alphaMismatch": {
+          "back": 0,
+          "front": 0
+        },
+        "verifiedViews": 4,
+        "framePixels": 51200,
+        "negativeRoutes": 12,
+        "production": false,
+        "icon": null,
+        "nativeIds": null
+      },
+      "productionAllowed": false,
+      "archivePersisted": false
+    }
+  ]
+}
