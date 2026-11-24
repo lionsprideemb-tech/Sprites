@@ -1,0 +1,16 @@
+# Final Roster Consolidation & Exact Artwork Binding — 2026-11-24
+
+Parent: 5888b8cf68e7fdaf7cd1fc0d5c00991530f98ebf. Registry: 6715f35fc91e7d524ac39d8fbb05499640ff09f0. Workload: 6434756c842642b08afb0055ad1029ed730ce1c0.
+
+## Actual pixel evidence
+All 31 historical donor quartets (22 unlinked, 3 mapping-held, 6 duplicate Mega identities) matched the original review-card visible pixels in all four views: 124 positive checks, 24 negative duplicate-family cross-checks. All nine existing accepted artwork sets separately matched all four views: 36 positive checks. Of 36 direct decoded-canvas comparisons, 22 were identical, and four of nine complete quartets were identical in all four canvases. The other matches reproduce visible review-card pixels without asserting raw-canvas equality. No art was modified or converted.
+
+## Roster consolidation
+Six placement overlaps linked to existing historical review IDs, not new species slots. Nine distinct existing accepted artworks have new historical crosswalks, three with preserved archive passes, six requiring technical validation. Another 22 donor packages match historical cards but have not been bound to the existing 711-artwork ledger; no automatic expansion. The 164 named placement records form 154 display-name groups, including eight repeated-name groups and one canonical-name overlap; these are not definitive unique playable slots. Twelve protected form routes remain non-additive. Five evolution warning records have recorded Mercury placement intent but original source edges remain unverified. Flygon alternative scope is not promoted; Delta artwork remains unapproved.
+
+Five explicit historical type overrides preserved; 45 other rows have concordant source and original review-card typings, 11 disagree. Concordance does not authorize replacing historical Mercury types. Individual Gyarados and Torkoal replacement routes identified from accepted artwork identity and family labels, without extending to an entire family. Five contradictory replacement labels remain unresolved. Original August named 102 Platinum and final 28 custom selection authorities not recovered from the searched historical conversations and library; later September workbook and October placement evidence preserved.
+
+## Workload and safeguards
+The original 468-set queue is untouched (130 passing, 338 not passing); separate nine-record supplemental historical crosswalk has three archive passes already included in the 216 protected archives and six needing technical validation. Neither the supplement nor the 22 recovered donor packages authorizes new conversions. All 1,025 canonical, 574 historical additions, 711 artwork keys, 166 votes, 216 archives, 641 placement records and original 468-set queue preserved. Final unique playable roster still not locked. No production IDs, new conversions, main or ROM changes.
+
+Evidence: consolidated JSON ef32f2ae2fbb2d11121c5a9ceec659b3aec7588b; original-card binding index fdda26bb68a044a9cc69a6f2970ca4f19add42c8. The batch files preserve source hashes, per-view comparison results, and reconstruction maps. The comparator and batch runners are QA only, not production graphics tools.
