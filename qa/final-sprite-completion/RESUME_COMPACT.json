@@ -1,8 +1,8 @@
 {
   "schema": "mercury-compact-resume-v1",
-  "verifiedCheckpointCommit": "3c5524a386550617d2e25088affbeefb8953333d",
+  "verifiedCheckpointCommit": "62be245782fe232cb6422979a3ba5a1bbe01c877",
   "checkpointPath": "qa/final-sprite-completion/CHECKPOINT.json",
-  "checkpointBlob": "2fac040a81a7baa0abed0a7a20d49d83e1797ac5",
+  "checkpointBlob": "53be9dad70376f2d61c9f5039d5c80fb173ecce1",
   "gateBlob": "94b3a58b8d51d4c579001c6ffc1914d1b5a10c10",
   "ledgerBlob": "686fd93d34bb39055c0d6cbbf3bcdc5566fcd51a",
   "runnerBlob": "917240025ab58fee9b636172cb3dd5ab2a8a5d97",
@@ -17,19 +17,19 @@
     "originalQueue": 468
   },
   "summary": {
-    "tested": 138,
-    "newArchivePasses": 120,
-    "newHistoricalPasses": 114,
+    "tested": 171,
+    "newArchivePasses": 150,
+    "newHistoricalPasses": 144,
     "newSupplementalPasses": 6,
-    "cumulativeArchivePasses": 336,
-    "verifiedViews": 480,
-    "framePixels": 6144000,
-    "negativeRoutes": 1440,
-    "sharedPalette": 109,
-    "viewSpecific": 11,
+    "cumulativeArchivePasses": 366,
+    "verifiedViews": 600,
+    "framePixels": 7680000,
+    "negativeRoutes": 1800,
+    "sharedPalette": 135,
+    "viewSpecific": 15,
     "counts": {
-      "OFFLINE_ARCHIVE_PASS": 244,
-      "AWAITING_PIXEL_ANALYSIS": 91,
+      "OFFLINE_ARCHIVE_PASS": 274,
+      "AWAITING_PIXEL_ANALYSIS": 61,
       "EXACT_PIXEL_HOLD": 18,
       "PRIOR_MANIFEST_HOLD": 33,
       "INCOMPLETE_SOURCE_LINK": 82
@@ -49,14 +49,14 @@
   },
   "next": {
     "cohort": "AWAITING_PIXEL_ANALYSIS",
-    "offset": 111,
-    "firstName": "Ribombee Redux Mega",
-    "eligible": 89,
+    "offset": 141,
+    "firstName": "Slowbro Mega Galarian",
+    "eligible": 59,
     "batchSize": 3,
-    "nextLabel": "47_HISTORICAL",
+    "nextLabel": "58_HISTORICAL",
     "nextExactHoldOffset": 18,
-    "nextPriorManifestHoldOffset": 0
+    "nextPriorManifestHoldOffset": 3
   },
   "policy": "Offline QA only; no production IDs, main changes, ROM changes, invented artwork or approvals. Preserve Delta Flygon unapproved. Check latest branch head and reconcile any batches after checkpoint before resuming.",
-  "archiveStorage": "First 33 new archives in existing ZIP; all 120 in pinned batch JSON manifest with SHA-256 and Git digests."
+  "archiveStorage": "First 33 new archives in existing ZIP; all 150 in pinned batch JSON manifest with SHA-256 and Git digests."
 }
