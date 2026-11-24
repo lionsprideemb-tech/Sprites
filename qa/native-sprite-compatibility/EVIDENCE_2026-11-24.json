@@ -1,0 +1,437 @@
+{
+  "schema": "mercury-native-sprite-compatibility-icon-routing-qa-v1",
+  "date": "2026-11-24",
+  "baseline": "0d9e7ad862aa14baafbb91dcfc023c39354dc704",
+  "pinned": {
+    "sprites_main": "f15c4671bf7afb15450fc7801bde17aefcdc4f7e",
+    "dex_main": "faa7cb4016d8030fb4661b49114352d79cac7944",
+    "platinum_main": "5525e961a1fb98c62bd53bc4a27b0276a39f6719",
+    "delta_symbolic_branch": "qa/delta-custom-registry-prototype-20261112",
+    "delta_symbolic_head": "c9203849bdc81ee9b5a0f3feab58adb40eba7d04"
+  },
+  "protected": {
+    "acceptedRows": 711,
+    "iphoneVotes": 166,
+    "keep": 154,
+    "cut": 12,
+    "iphoneBlob": "61c5e53c6ec81b74d192cd62a4c52c970cea15ce",
+    "overlayBlob": "89f328b4471f1531520305e54f63efdbc6251a50",
+    "delta": {
+      "artworkStatus": "UNAPPROVED",
+      "retiredLegacyCandidates": [
+        {
+          "identity": "vibrava-redux",
+          "key": "vibrava-redux|pixelsha256:0eff61268b7c30c1bb16d6f8c56d4f3de7bb32acedbde6f6b062d9df78f249ba"
+        }
+      ],
+      "symbolicPrototypeTests": 42,
+      "nativeSaveEmulatorVerified": false,
+      "productionIDsAllocated": 0
+    }
+  },
+  "originalArtifact": {
+    "nativeHead": "f3e26a87a369f2f3a81aa0e605a79dae3bba7281",
+    "run": 42681825471,
+    "id": 13702981647,
+    "sha256": "e5e93e75c931d071eebacd7fb1576c7f191831bd88a12299eb35cfb23a5b9caf",
+    "verifiedRawViews": 58,
+    "verifiedFileHashes": 174,
+    "verifiedDecodedPreviews": 58,
+    "sourceManifestMatches": 32,
+    "masterEvidenceMatches": 32
+  },
+  "tests": {
+    "previousArchivesReproducedByteForByte": 4,
+    "previousArchivesIndependentCHostViews": 16,
+    "previousArchiveFramePixels": 204800,
+    "newArchives": 8,
+    "newViews": 32,
+    "newFramePixels": 409600,
+    "newNegativeTests": 120,
+    "iconSyntheticColorBankChecks": 3,
+    "iconSyntheticRoutePasses": 1,
+    "iconNegativeTests": 7,
+    "nativeNitrogfxNitroarcExecuted": false,
+    "emulatorExecuted": false
+  },
+  "package": {
+    "name": "Mercury_Native_Sprite_Compatibility_QA.zip",
+    "sha256": "7f56d65b6f7cc0982050e717efe433f47635209004e4c49d66785c82a7634613",
+    "delivery": "Chat attachment only; no ZIP or artwork uploaded to GitHub.",
+    "files": {
+      "compatibility.py": "56011d38f83ef1f39739e023fee5112598b71519d698334a59eeb5402b750710",
+      "verify_archive.c": "fb5f40e6e42fad3e3d6f5a3ffb1377ea8638a0da740ad1b389d99d107643f851",
+      "icon_gate.py": "7a466b3cceb5b641e6b98e56cf14e4e48f664160223f40137d7aecdc4ccff960",
+      "compatibility/compatibility-evidence.json": "87e81ae144bde1022a722ecae0656b2de41c9b7b456f33777508228b9497ee16",
+      "compatibility/symbolic-routes.json": "51ce71719f3a7f480bdd9be041f56ce51340153ab4e5a219e3f63bbd1ce23ccf"
+    }
+  },
+  "designs": [
+    {
+      "identity": "granbull-alternate-form-1",
+      "exactArtworkKey": "granbull-alternate-form-1|gitblob:d1c51d4f3bd93983f9b4828d798443d786f46fa0",
+      "decision": "keep",
+      "members": 4,
+      "backPairs": 6,
+      "frontPairs": 13,
+      "backAlpha": 0,
+      "frontAlpha": 0,
+      "archiveSha256": "7a5cb4fb48352882e4f93b5ea33a0f4eeccaaa82be08ee59cb80967043278e31",
+      "mode": "shared_species_palette",
+      "localQAOnly": true,
+      "icon": null,
+      "productionSpeciesId": null,
+      "productionFormId": null,
+      "paletteBank": null,
+      "sourceViews": [
+        {
+          "identity": "granbull-alternate-form-1",
+          "slot": "front",
+          "source": "DS_CUSTOM_LIBRARY/converted/Verified_Source_DS64_Technical_2026_10_23/granbull-alternate-form-1/front.png",
+          "sha256": "72fea88eba58f0c99d6d006ef7720206438185ea0e72b8895928a5b90a960d06"
+        },
+        {
+          "identity": "granbull-alternate-form-1",
+          "slot": "back",
+          "source": "DS_CUSTOM_LIBRARY/converted/Verified_Source_DS64_Technical_2026_10_23/granbull-alternate-form-1/back.png",
+          "sha256": "0df399d7af66cc51a141b8ff6ce1d7e69ba243132c8ce888066584225ad3df7b"
+        },
+        {
+          "identity": "granbull-alternate-form-1",
+          "slot": "shiny_front",
+          "source": "DS_CUSTOM_LIBRARY/converted/Verified_Source_DS64_Technical_2026_10_23/granbull-alternate-form-1/shiny_front.png",
+          "sha256": "73df6c04d39c32b4de6fb7372af44371dfe26dd6b07c936ea2def4fe52df2c95"
+        },
+        {
+          "identity": "granbull-alternate-form-1",
+          "slot": "shiny_back",
+          "source": "DS_CUSTOM_LIBRARY/converted/Verified_Source_DS64_Technical_2026_10_23/granbull-alternate-form-1/shiny_back.png",
+          "sha256": "d916e261bab9103b20c2c237f949c53588d9dc2949c7d3500a7ea2cf8b152ffd"
+        }
+      ]
+    },
+    {
+      "identity": "larvitar-space-form-4",
+      "exactArtworkKey": "larvitar-space-form-4|gitblob:02ec057052ae19f5fabb133e97f5f1b3243543a1",
+      "decision": "keep",
+      "members": 4,
+      "backPairs": 13,
+      "frontPairs": 13,
+      "backAlpha": 0,
+      "frontAlpha": 0,
+      "archiveSha256": "8c6dab4334dcfa7f284dfbe1982f00637f239c153762c939f0a43c869ec41e38",
+      "mode": "shared_species_palette",
+      "localQAOnly": true,
+      "icon": null,
+      "productionSpeciesId": null,
+      "productionFormId": null,
+      "paletteBank": null,
+      "sourceViews": [
+        {
+          "identity": "larvitar-space-form-4",
+          "slot": "front",
+          "source": "DS_CUSTOM_LIBRARY/converted/Verified_Source_DS64_Technical_2026_10_23/larvitar-space-form-4/front.png",
+          "sha256": "be43db68ad1b3d3637d19a8d7748e68c65114740ba5d7532d3512937bf25e8bf"
+        },
+        {
+          "identity": "larvitar-space-form-4",
+          "slot": "back",
+          "source": "DS_CUSTOM_LIBRARY/converted/Verified_Source_DS64_Technical_2026_10_23/larvitar-space-form-4/back.png",
+          "sha256": "3abab45b1b2630de54a4e52f959c105578a0a88ebf88607013a1c006a2043a71"
+        },
+        {
+          "identity": "larvitar-space-form-4",
+          "slot": "shiny_front",
+          "source": "DS_CUSTOM_LIBRARY/converted/Verified_Source_DS64_Technical_2026_10_23/larvitar-space-form-4/shiny_front.png",
+          "sha256": "c7dde4e31e76162dece490a134a0a6a31b066ef263bc1941685dfe56ee475910"
+        },
+        {
+          "identity": "larvitar-space-form-4",
+          "slot": "shiny_back",
+          "source": "DS_CUSTOM_LIBRARY/converted/Verified_Source_DS64_Technical_2026_10_23/larvitar-space-form-4/shiny_back.png",
+          "sha256": "127a4846bc024777faae708eb781cd5811b383c04837d2e0419007881c8a4982"
+        }
+      ]
+    },
+    {
+      "identity": "leafeon-alternate-form-3",
+      "exactArtworkKey": "leafeon-alternate-form-3|gitblob:4b99e10f51ae138d258e2633f4115fb045f9928e",
+      "decision": "keep",
+      "members": 4,
+      "backPairs": 14,
+      "frontPairs": 14,
+      "backAlpha": 0,
+      "frontAlpha": 0,
+      "archiveSha256": "4ee52ff117a1a8928e926ab0b4d94d1d25d989258d009fc8a86d0827ba81c814",
+      "mode": "shared_species_palette",
+      "localQAOnly": true,
+      "icon": null,
+      "productionSpeciesId": null,
+      "productionFormId": null,
+      "paletteBank": null,
+      "sourceViews": [
+        {
+          "identity": "leafeon-alternate-form-3",
+          "slot": "front",
+          "source": "DS_CUSTOM_LIBRARY/converted/Verified_Source_DS64_Technical_2026_10_23/leafeon-alternate-form-3/front.png",
+          "sha256": "19274b2af996deffef1701eae5afc158c227d6a4e722b552906e65cb18ecdf4c"
+        },
+        {
+          "identity": "leafeon-alternate-form-3",
+          "slot": "back",
+          "source": "DS_CUSTOM_LIBRARY/converted/Verified_Source_DS64_Technical_2026_10_23/leafeon-alternate-form-3/back.png",
+          "sha256": "238c5651a073c10c3d7aa773c8bfd6579c9d2e52025867c23809d496856a2243"
+        },
+        {
+          "identity": "leafeon-alternate-form-3",
+          "slot": "shiny_front",
+          "source": "DS_CUSTOM_LIBRARY/converted/Verified_Source_DS64_Technical_2026_10_23/leafeon-alternate-form-3/shiny_front.png",
+          "sha256": "00e61b09a5d3b5ee2504b497c46042ad29145f8f8bcf2ee2fbe9ada9f141def3"
+        },
+        {
+          "identity": "leafeon-alternate-form-3",
+          "slot": "shiny_back",
+          "source": "DS_CUSTOM_LIBRARY/converted/Verified_Source_DS64_Technical_2026_10_23/leafeon-alternate-form-3/shiny_back.png",
+          "sha256": "8dc8717515f0f333f0ce85e823c71fe15316559195f2a66e7574efbbbacbfd27"
+        }
+      ]
+    },
+    {
+      "identity": "musharna-alternate-form-1",
+      "exactArtworkKey": "musharna-alternate-form-1|gitblob:f6155875741848fd47313a5d53f58de8775345df",
+      "decision": "keep",
+      "members": 6,
+      "backPairs": 14,
+      "frontPairs": 14,
+      "backAlpha": 0,
+      "frontAlpha": 0,
+      "archiveSha256": "96762450896ae30d59e54c6ef870596a831cff5e6555e2bf70a96a9e173af68e",
+      "mode": "per_face_shared_shiny_palette",
+      "localQAOnly": true,
+      "icon": null,
+      "productionSpeciesId": null,
+      "productionFormId": null,
+      "paletteBank": null,
+      "sourceViews": [
+        {
+          "identity": "musharna-alternate-form-1",
+          "slot": "front",
+          "source": "DS_CUSTOM_LIBRARY/converted/Verified_Source_DS64_Technical_2026_10_23/musharna-alternate-form-1/front.png",
+          "sha256": "bb7fa48c1131024731709cd80af30365e99edf7704ada7c766f796a475cce3eb"
+        },
+        {
+          "identity": "musharna-alternate-form-1",
+          "slot": "back",
+          "source": "DS_CUSTOM_LIBRARY/converted/Verified_Source_DS64_Technical_2026_10_23/musharna-alternate-form-1/back.png",
+          "sha256": "363e403e10a84c147963079da961821970c99970dca658708cdccda4cffe1278"
+        },
+        {
+          "identity": "musharna-alternate-form-1",
+          "slot": "shiny_front",
+          "source": "DS_CUSTOM_LIBRARY/converted/Verified_Source_DS64_Technical_2026_10_23/musharna-alternate-form-1/shiny_front.png",
+          "sha256": "7bc50bc1dba7435f7d0d6256a8a196cbcd1dae940c6880ef19414f4e26f667cb"
+        },
+        {
+          "identity": "musharna-alternate-form-1",
+          "slot": "shiny_back",
+          "source": "DS_CUSTOM_LIBRARY/converted/Verified_Source_DS64_Technical_2026_10_23/musharna-alternate-form-1/shiny_back.png",
+          "sha256": "4062cf1195bbf48900185c75e31a818baf8500d6679da32eebe42b7b5be5dbf5"
+        }
+      ]
+    },
+    {
+      "identity": "petilil-alternate-form-1",
+      "exactArtworkKey": "petilil-alternate-form-1|gitblob:8fe55189fe7c2f54835379cc5cb537988fe0b1f4",
+      "decision": "keep",
+      "members": 4,
+      "backPairs": 12,
+      "frontPairs": 15,
+      "backAlpha": 0,
+      "frontAlpha": 0,
+      "archiveSha256": "d12e5901b8c7f4fd48c6619f6715ca8e46d6fc5cef0e6eae8a52ba9e96f5e68d",
+      "mode": "shared_species_palette",
+      "localQAOnly": true,
+      "icon": null,
+      "productionSpeciesId": null,
+      "productionFormId": null,
+      "paletteBank": null,
+      "sourceViews": [
+        {
+          "identity": "petilil-alternate-form-1",
+          "slot": "front",
+          "source": "DS_CUSTOM_LIBRARY/converted/Verified_Source_DS64_Technical_2026_10_23/petilil-alternate-form-1/front.png",
+          "sha256": "c97139414b0530be7935015e3bab8c00bdddef4003099dc12f74cf3548a8eba2"
+        },
+        {
+          "identity": "petilil-alternate-form-1",
+          "slot": "back",
+          "source": "DS_CUSTOM_LIBRARY/converted/Verified_Source_DS64_Technical_2026_10_23/petilil-alternate-form-1/back.png",
+          "sha256": "f16c9cff397d9d7ea2bf17c2d891a1459fe2bbf2728ff82c835fe4e41f5a976f"
+        },
+        {
+          "identity": "petilil-alternate-form-1",
+          "slot": "shiny_front",
+          "source": "DS_CUSTOM_LIBRARY/converted/Verified_Source_DS64_Technical_2026_10_23/petilil-alternate-form-1/shiny_front.png",
+          "sha256": "97e8ee4dfc50fb762da338722fef90e7875e6d736ef8a8637dc9775ead24d5d5"
+        },
+        {
+          "identity": "petilil-alternate-form-1",
+          "slot": "shiny_back",
+          "source": "DS_CUSTOM_LIBRARY/converted/Verified_Source_DS64_Technical_2026_10_23/petilil-alternate-form-1/shiny_back.png",
+          "sha256": "fd665b5b12ba0f0a268d44cdcd4988929a889c48e3705561e7c864eb7484bc8e"
+        }
+      ]
+    },
+    {
+      "identity": "pupitar-space-form-4",
+      "exactArtworkKey": "pupitar-space-form-4|gitblob:24fb5a638470205bdb3717d84306a7db8a60b8b6",
+      "decision": "keep",
+      "members": 6,
+      "backPairs": 10,
+      "frontPairs": 15,
+      "backAlpha": 0,
+      "frontAlpha": 0,
+      "archiveSha256": "5ab47889e03ce2769e1412fcfb04c7e83fc96afbc149b715a7cc19d231a1e7af",
+      "mode": "per_face_shared_shiny_palette",
+      "localQAOnly": true,
+      "icon": null,
+      "productionSpeciesId": null,
+      "productionFormId": null,
+      "paletteBank": null,
+      "sourceViews": [
+        {
+          "identity": "pupitar-space-form-4",
+          "slot": "front",
+          "source": "DS_CUSTOM_LIBRARY/converted/Verified_Source_DS64_Technical_2026_10_23/pupitar-space-form-4/front.png",
+          "sha256": "92bf41feec1dabf7b619d2b8c784eefaf85bd2ade63b056d801cb1e15e56b3ab"
+        },
+        {
+          "identity": "pupitar-space-form-4",
+          "slot": "back",
+          "source": "DS_CUSTOM_LIBRARY/converted/Verified_Source_DS64_Technical_2026_10_23/pupitar-space-form-4/back.png",
+          "sha256": "2f90a3219595e33495e1c98c01f20234edad7da0e17fcc8d012e79f5b4192cd9"
+        },
+        {
+          "identity": "pupitar-space-form-4",
+          "slot": "shiny_front",
+          "source": "DS_CUSTOM_LIBRARY/converted/Verified_Source_DS64_Technical_2026_10_23/pupitar-space-form-4/shiny_front.png",
+          "sha256": "f9f2aa069e6f8667cb310e801eadacd9c49057b6f00aea465d3823f786443d35"
+        },
+        {
+          "identity": "pupitar-space-form-4",
+          "slot": "shiny_back",
+          "source": "DS_CUSTOM_LIBRARY/converted/Verified_Source_DS64_Technical_2026_10_23/pupitar-space-form-4/shiny_back.png",
+          "sha256": "068d73b4296b189bdddce1b78776cbfe11595111ef38b883fd757ab988823b6a"
+        }
+      ]
+    },
+    {
+      "identity": "purrloin-alternate-form-1",
+      "exactArtworkKey": "purrloin-alternate-form-1|gitblob:c88c373d19c05518126d8a2363aebe291c6ff3f5",
+      "decision": "keep",
+      "members": 8,
+      "backPairs": 7,
+      "frontPairs": 69,
+      "backAlpha": 5,
+      "frontAlpha": 166,
+      "archiveSha256": "abfc1a5d91d82e10313e02c3d28181ccf1e79bb1c17475ddc1d843b0573a5744",
+      "mode": "per_view_character_palette",
+      "localQAOnly": true,
+      "icon": null,
+      "productionSpeciesId": null,
+      "productionFormId": null,
+      "paletteBank": null,
+      "sourceViews": [
+        {
+          "identity": "purrloin-alternate-form-1",
+          "slot": "front",
+          "source": "DS_CUSTOM_LIBRARY/converted/Verified_Source_DS64_Technical_2026_10_23/purrloin-alternate-form-1/front.png",
+          "sha256": "e154164bf0481d4504972f3d13453671fe31db46637a2d62ab78a893b8278ff5"
+        },
+        {
+          "identity": "purrloin-alternate-form-1",
+          "slot": "back",
+          "source": "DS_CUSTOM_LIBRARY/converted/Verified_Source_DS64_Technical_2026_10_23/purrloin-alternate-form-1/back.png",
+          "sha256": "73e89f499a027242e24df17b1f9ba4fce2c13e3bba7be9b1e989c3d55f21491b"
+        },
+        {
+          "identity": "purrloin-alternate-form-1",
+          "slot": "shiny_front",
+          "source": "DS_CUSTOM_LIBRARY/converted/Verified_Source_DS64_Technical_2026_10_23/purrloin-alternate-form-1/shiny_front.png",
+          "sha256": "5520999f90e7a2449624512e77273cde3bf9a47a2131f858e52241134584feae"
+        },
+        {
+          "identity": "purrloin-alternate-form-1",
+          "slot": "shiny_back",
+          "source": "DS_CUSTOM_LIBRARY/converted/Verified_Source_DS64_Technical_2026_10_23/purrloin-alternate-form-1/shiny_back.png",
+          "sha256": "c8aafc33668935c2bc861fc54d173ace88c0a439820cfab18bfec7d5dad2381a"
+        }
+      ]
+    },
+    {
+      "identity": "sandile-alternate-form-1",
+      "exactArtworkKey": "sandile-alternate-form-1|gitblob:8d84728a5d3e9b381a0e9f954acde998dec4041a",
+      "decision": "keep",
+      "members": 6,
+      "backPairs": 12,
+      "frontPairs": 13,
+      "backAlpha": 0,
+      "frontAlpha": 0,
+      "archiveSha256": "cfabf3ddae2199d2507a2e1c53b73319232ffa3ff867ae4c46e473dc3359b0c5",
+      "mode": "per_face_shared_shiny_palette",
+      "localQAOnly": true,
+      "icon": null,
+      "productionSpeciesId": null,
+      "productionFormId": null,
+      "paletteBank": null,
+      "sourceViews": [
+        {
+          "identity": "sandile-alternate-form-1",
+          "slot": "front",
+          "source": "DS_CUSTOM_LIBRARY/converted/Verified_Source_DS64_Technical_2026_10_23/sandile-alternate-form-1/front.png",
+          "sha256": "80f422a24c6014a95644c40c069784fb0267567836599fc71c7c88b24028b7fb"
+        },
+        {
+          "identity": "sandile-alternate-form-1",
+          "slot": "back",
+          "source": "DS_CUSTOM_LIBRARY/converted/Verified_Source_DS64_Technical_2026_10_23/sandile-alternate-form-1/back.png",
+          "sha256": "f1d0a1eebf9c7d6cd851f2f435f0712bfbe395252f3e47dd237b7f5042a832c4"
+        },
+        {
+          "identity": "sandile-alternate-form-1",
+          "slot": "shiny_front",
+          "source": "DS_CUSTOM_LIBRARY/converted/Verified_Source_DS64_Technical_2026_10_23/sandile-alternate-form-1/shiny_front.png",
+          "sha256": "099c69d1cfc4f3010ebfba21577ab17da89e7ea1081e86fa27b3c53130f14b55"
+        },
+        {
+          "identity": "sandile-alternate-form-1",
+          "slot": "shiny_back",
+          "source": "DS_CUSTOM_LIBRARY/converted/Verified_Source_DS64_Technical_2026_10_23/sandile-alternate-form-1/shiny_back.png",
+          "sha256": "b83f22cde2dc192a651724a9999a67298a20529a8bcf647bc1bb306804659e20"
+        }
+      ]
+    }
+  ],
+  "engine": {
+    "pretCommit": "c248fb3f8cc9934ded800e489567c5c0eeee92eb",
+    "sourceBlobs": {
+      "src/pokemon.c": "2700366a181d78c2c6543f3846bc9e94165086e0",
+      "src/pokemon_sprite.c": "dadef37d83558aa04fff8e2e66b6708c6872e31a",
+      "src/pokemon_icon.c": "e6eb5d350c505c63550823b502fb91e18d3c8187",
+      "res/pokemon/form_registry.json": "e39acadcf56c30d848374ffc155f0279fca07c99",
+      "res/pokemon/.shared/pl_poke_icon.pal": "65deabb632f60fe5518b161da7d1b1c978a69faf",
+      "tools/nitrogfx/meson.build": "2fdcaa32607250f9269796ba4f8b7895fdbbb57a"
+    },
+    "requirements": "BuildPokemonSpriteTemplate default character uses species*6+face+gender; palette uses species*6+4+shiny. Custom forms need explicit character and palette selection by exact identity, face and shiny, plus alternate DP consumers. Pokemon_SanitizeFormId and icon routes require native adaptation; separate texture/palette lifetime and save-safe routing remain untested.",
+    "iconPalette": "256 source colors, banks 0–2 each 16 nonzero RGB entries, banks 3–15 zero-filled. Existing icon bank availability is not authorization to allocate VRAM or modify shared NCLR. Source palettes use /8 downconversion; synthetic eligibility gate only.",
+    "iconProvenance": "Eight reconciliation rows have null generatedIconCandidate and false productionIconBindingVerified. Recovered approved pairs and legacy retrieval ledgers have no icon fields for these entries. No exact approved icon recovered; actual icon colors/indices cannot be verified. No substitute or generated icons."
+  },
+  "limitations": [
+    "Network DNS failure for full upstream checkout; native nitrogfx/nitroarc, SDK and emulator not available.",
+    "Independent compiled host C parser checks locally generated NARC/NCGR/NCLR and recovered RGB555 data, not native ROM behavior or original RGB888 preservation.",
+    "32 original file content refetch not completed in this pass; original source linkage and hash identity inherited from exact previous QA and verified reconciliation ledger.",
+    "Static repeated frames and padding retained as QA-only decisions; no animation approval.",
+    "Local symbolic registry blocks duplicates, unknown/unapproved identity, wrong face/state and all production/icon requests; actual species/form, native archive indices, UI routing and save serialization remain unimplemented."
+  ],
+  "gameIntegrationAllowed": false
+}
