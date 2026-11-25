@@ -48,8 +48,8 @@
     "sourceQuartetsRecovered": 0
   },
   "next": {
-    "cohort": "OFFLINE_DS_AWAIT_USER_WHEEL",
-    "firstName": "Await exact official py-desmume 0.0.9 CPython 3.13 Linux x86_64 wheel or single-wheel ZIP. Verify SHA-256 and execute isolated emulator initialization, then plan remaining dependency closure. R32 paused.",
+    "cohort": "OFFLINE_DS_COMPILER_ACQUISITION",
+    "firstName": "Emulator restored and synthetic DS execution verified; acquire verified GNU ARM compiler and binutils plus pinned Meson and Metroskrew dependencies through authorized iPhone transfer. No CI; R32 paused.",
     "offset": 346,
     "eligible": 0,
     "priorManifestRemainingUntested": 0,
@@ -1349,7 +1349,7 @@
     ]
   },
   "offlineDS": {
-    "status": "BLOCKED_DEPENDENCY_INGRESS",
+    "status": "EMULATOR_RECOVERED_COMPILER_PENDING",
     "evidenceCommit": "3c15f4ed7abb21ecb4fed850891681d70cf32ff7",
     "release31Preserved": "4a7084027ddf74cf73569271cb028fdaac1e6cfe",
     "evidence": {
@@ -1385,6 +1385,20 @@
       "emulatorVerified": false,
       "meson": "1.12.0",
       "metroskrew": "0.1.3",
+      "productionAllowed": false
+    },
+    "emulatorRecovery": {
+      "status": "VERIFIED_LOCAL_EXECUTION",
+      "evidenceCommit": "f067455f0a07809894ca785b3796040e51313c79",
+      "evidenceBlob": "eb3cda04979be15259f0efb3ae9e2bebb3f1f6e1",
+      "probeBlob": "095ca08eaed6dbf1bb24e006d9651a4b0f3bb24b",
+      "wheelSha256": "4fcb17e824dd5ab2f1baa3fdd930dd9af6f7176b8c9d7dc9bd329d45df1ac5bd",
+      "frames": 120,
+      "memoryMarkerVerified": true,
+      "screenshotVerified": true,
+      "actualBinariesRecovered": 1,
+      "fullNativeBuild": false,
+      "gameplayVerified": false,
       "productionAllowed": false
     }
   }
