@@ -1,0 +1,30 @@
+{
+  "schema": "mercury-r13-adapter-host-acceptance-v1",
+  "baseline": "34b8578ce12b8561c14dc6cf337a2f48a8021ff7",
+  "moduleBlob": "1314133d85ad0e6e80b61c99a55121d067db9c61",
+  "testBlob": "f5cf4293284936d41269b7b8065313e0ffefd8c0",
+  "bankBlob": "cb72d80d6b1d6acafef0529d4c16431cfa8e8fcd",
+  "bridgeBlob": "227f921a7694f0d9d4362cd5bd18209ce1f20e83",
+  "result": {
+    "positive": 72,
+    "negative": 11,
+    "allAssets": 66,
+    "bankCount": 29,
+    "maxCustomSlotsWithThreeReserved": 13,
+    "simulatedFullInventoryTileBytes": 67584,
+    "corruptAssetRejected": 1
+  },
+  "assumptions": {
+    "standardObjPaletteSlots": 16,
+    "exampleReservedSlots": [
+      0,
+      1,
+      2
+    ],
+    "tileBudget": 32768,
+    "objectBudget": 30,
+    "actualScreenReservationsVerified": false
+  },
+  "nativeRuntime": false,
+  "productionAllowed": false
+}
