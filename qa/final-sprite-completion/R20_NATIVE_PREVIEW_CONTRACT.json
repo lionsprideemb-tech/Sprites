@@ -1,0 +1,66 @@
+{
+  "schema": "mercury-r20-native-preview-and-gx-contract-v1",
+  "baseline": "6cf254f7cf63e2b5c62566767a5b57f95130819d",
+  "upstreamRef": "c248fb3f8cc9934ded800e489567c5c0eeee92eb",
+  "sources": {
+    "pokemonSprite": "dadef37d83558aa04fff8e2e66b6708c6872e31a",
+    "pokemonSpriteHeader": "fd62f144bd3efb988c14d19def407add29803ba6",
+    "graphicsConstants": "162b9c6ec66ae8e4d091be504245775b0bc89400",
+    "pcMain": "3d5d958211d73e173a382d1fe2cd1f61c8dffa15",
+    "pcScroll": "0e6fbaf5e0c2b171d3adebe63a8e8bbc9789ea98",
+    "pcPreview": "831dfdfc1a6809608f7dc95da2a905bf477b7964",
+    "sdkRef": "eaae40f199c0a8827947afbc33227b6ba2f9d45c",
+    "gx3": "dbeb808b800f6120e4c858d0eaab8ffb839823c8",
+    "gxLoad3d": "09bb27ecb8579a81cca93e6480980957378695b17",
+    "gxBanks": "8e6ed5f29a0d6b6dccb0caed6725bd834fa7b164"
+  },
+  "preview": {
+    "defaultTexture": {
+      "base": 0,
+      "bytes": 32768
+    },
+    "defaultPalette": {
+      "base": 0,
+      "bytes": 128
+    },
+    "cpuPaletteBufferBytes": 192,
+    "conservativeProtectedPaletteBytes": 192,
+    "notes": "Manager setters can alter bases/sizes. No complete call graph proof that no other caller or resource uses remaining VRAM. PC preview creation at (44,84,0), transfer through PokemonSpriteManager_UpdateCharAndPltt. Frame task resets G3X and matrix stack, sets software sprite camera, draws manager then swaps Z buffers. BG0 priority 1, original icons are OBJ; same BG0 layer cannot necessarily reproduce OBJ priority relationship. Native geometry/alpha/UI layer compatibility unverified."
+  },
+  "gx": {
+    "format": 3,
+    "transparentIndex0": 1,
+    "textureAddressUnit": 8,
+    "paletteAddressUnit": 16,
+    "dmaAlignment": 4,
+    "notes": "GX_LoadTex/Pltt region checks and DMA; async palette transfer requires lifetime and synchronization proof. Texture bank A and palette F/G; no native free range authorized."
+  },
+  "scroll": {
+    "displacement": 184,
+    "updates": 30,
+    "fxShift": 12,
+    "delta": "trunc(direction*184*4096/30)",
+    "finalSnap": true,
+    "notes": "Source publishes offset before increment; column preparation is separate task and not simulated."
+  },
+  "independent": {
+    "sourceBlob": "5469fbcad17251d16e404f4364a41950e6d1cd25",
+    "sourceSha256": "907b87b856070a818b3e66ac59d829f94bc090036a38e3f872be97a90aefdebf",
+    "hostOutput": "31744 scroll cases; 8 bounds cases PASS",
+    "armCommand": "clang --target=arm-none-eabi -mcpu=arm946e-s -marm -ffreestanding -std=c11 -Wall -Wextra -Werror -O2 -c r20_bounds.c -o r20_arm9.o",
+    "armObjectSha256": "6ecbe8f4a3e5b9979c0d97dcb0c546b595d1b882b21ce66c2652deafcbb00fdc",
+    "armObject": "ELF32 LSB ARM EABI5 relocatable; two global functions",
+    "armExecuted": false,
+    "environment": "clang and gcc present; qemu-arm, qemu-system-arm, arm-none-eabi-gcc, melonDS absent; unicorn, capstone, elftools unavailable."
+  },
+  "leaseSource": "0cff6355aa3797d57af754e7eba778bca0710303",
+  "leaseTests": "ba25e41095660e709d8765f149c166db85f0fc37",
+  "mainPins": {
+    "Sprites": "f15c4671bf7afb15450fc7801bde17aefcdc4f7e",
+    "Mercury-redux-dex": "faa7cb4016d8030fb4661b49114352d79cac7944",
+    "platinum-modern-ds": "5525e961a1fb98c62bd53bc4a27b0276a39f6719"
+  },
+  "nativeFullBuild": false,
+  "emulatorVerified": false,
+  "productionAllowed": false
+}
