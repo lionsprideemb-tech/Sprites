@@ -1,0 +1,1064 @@
+{
+  "baseline": "d870ff3cba5781c5bf885ec2d3cd1966cc5484e8",
+  "results": [
+    {
+      "artworkKey": "fogging|pixelsha256:a45738b6d42b5b389de4a9664b298193cb83d8b25405379c0f40f9eb0e3a4410",
+      "archiveSha256": "47884f24bdf913690671a19aaa0694cbfe2f1ff94e9913f6cb45541db5ec89dd",
+      "archiveGitBlob": "dee49683972ce09329ec8e8da917f80020f1263e",
+      "entry": "archives/fogging-47884f24bdf9.narc",
+      "byteOffset": 64,
+      "byteLength": 13124,
+      "members": 4,
+      "routes": {
+        "back": {
+          "character": 2,
+          "palette": 0,
+          "characterSha256": "9d3fd985acff7f28b637c0e70235fc9398998b8f30a56e7254ecea193618313b",
+          "paletteSha256": "0a15f0965842f83cb844687b45c2a443d1c26c54c1787c1a4899657a1bae1672",
+          "expectedFrameSha256": "a35fccd94ccbd158ee8741ccbac8172221945328feec4d8db5d249188fc08349"
+        },
+        "shiny_back": {
+          "character": 2,
+          "palette": 1,
+          "characterSha256": "9d3fd985acff7f28b637c0e70235fc9398998b8f30a56e7254ecea193618313b",
+          "paletteSha256": "8e0bc9b304da4616cb6aa584cade97c90025b8ff3ad6ab72525da8cbf1f5dcda",
+          "expectedFrameSha256": "077c09cef937bff83d18e3cdbc810249f8343bfe47069e6ff820d21b39999358"
+        },
+        "front": {
+          "character": 3,
+          "palette": 0,
+          "characterSha256": "e22904de8919446417a1cf173932fe50192d924381f30520f1fe7f1edf43f06f",
+          "paletteSha256": "0a15f0965842f83cb844687b45c2a443d1c26c54c1787c1a4899657a1bae1672",
+          "expectedFrameSha256": "18c95ac87952394cd4c4f5f07e1065b789af4cd036e439ab8e72bf82ace45658"
+        },
+        "shiny_front": {
+          "character": 3,
+          "palette": 1,
+          "characterSha256": "e22904de8919446417a1cf173932fe50192d924381f30520f1fe7f1edf43f06f",
+          "paletteSha256": "8e0bc9b304da4616cb6aa584cade97c90025b8ff3ad6ab72525da8cbf1f5dcda",
+          "expectedFrameSha256": "a22d65281228d3de9db3c98f13a8775cfae5f23448a7f09a6575b653d3a8a136"
+        }
+      },
+      "zipPath": "qa/final-sprite-acceleration/MERCURY_FINAL_ACCELERATION_QA_ARCHIVES.zip",
+      "zipBlob": "c068e06b7a23b9dbf4fa9c9c2314df86d2c48ed2",
+      "zipRef": "c3c8eab8c07fb9bb57778e3c4c7967af880c4688",
+      "mode": "shared_species_palette",
+      "batchBlob": "b07cd77862b5fe5af31639fc7a801dcf594647cf"
+    },
+    {
+      "artworkKey": "froslass-mega-y|pixelsha256:53296a5a84234ed2c558fc4abba70553a1eb11a76453f22537465287f42bb549",
+      "archiveSha256": "bd744a34bb7ce2ff339f1176a1797675b64736fe47685d1498955f7dc9eaf0a6",
+      "archiveGitBlob": "b1f7ab8adbe40977b08f1b7aea477096beb13074",
+      "entry": "archives/froslass-mega-y-bd744a34bb7c.narc",
+      "byteOffset": 13260,
+      "byteLength": 13124,
+      "members": 4,
+      "routes": {
+        "back": {
+          "character": 2,
+          "palette": 0,
+          "characterSha256": "7e725f6e66bb58ed5949daaaf7e466d3093c53b443bea6b66ba8538d8f2dcf7b",
+          "paletteSha256": "8d5a4ce75c3445ba03a65e2dc623936410681e12d993ce4e65c84b26894bf073",
+          "expectedFrameSha256": "774e34767f24652787f6dda5ea4778e185bb8cb656d0f00da88c4820b02960de"
+        },
+        "shiny_back": {
+          "character": 2,
+          "palette": 1,
+          "characterSha256": "7e725f6e66bb58ed5949daaaf7e466d3093c53b443bea6b66ba8538d8f2dcf7b",
+          "paletteSha256": "0d37344ba0905cb576bff74d93530940634fa45ae2f298a87cf5be7a755564bd",
+          "expectedFrameSha256": "fa0e54bd77b9942afb2ad2ea4495ae64182c4a12ba1f9ce6e5f739a43c5c1f34"
+        },
+        "front": {
+          "character": 3,
+          "palette": 0,
+          "characterSha256": "53230881daa8b6730ab2b12c96b045941dbfb5222b58b74c0350c952bc117a79",
+          "paletteSha256": "8d5a4ce75c3445ba03a65e2dc623936410681e12d993ce4e65c84b26894bf073",
+          "expectedFrameSha256": "438e1c0c645fdf1269d09acdbdcaf091a573ca823067625a3f50a9a230a13c2c"
+        },
+        "shiny_front": {
+          "character": 3,
+          "palette": 1,
+          "characterSha256": "53230881daa8b6730ab2b12c96b045941dbfb5222b58b74c0350c952bc117a79",
+          "paletteSha256": "0d37344ba0905cb576bff74d93530940634fa45ae2f298a87cf5be7a755564bd",
+          "expectedFrameSha256": "aad59f1902ab815db6bbc1c391bb1e607e05d54d70086cfbd334276862b8b6fb"
+        }
+      },
+      "zipPath": "qa/final-sprite-acceleration/MERCURY_FINAL_ACCELERATION_QA_ARCHIVES.zip",
+      "zipBlob": "c068e06b7a23b9dbf4fa9c9c2314df86d2c48ed2",
+      "zipRef": "c3c8eab8c07fb9bb57778e3c4c7967af880c4688",
+      "mode": "shared_species_palette",
+      "batchBlob": "b07cd77862b5fe5af31639fc7a801dcf594647cf"
+    },
+    {
+      "artworkKey": "frostuccino|pixelsha256:3bddeddb84d1c2a5723f6a83b63e98008ec84d8c8042d91db6343eec3a7ed5b6",
+      "archiveSha256": "ff418d2fdb31859d0f8616f60f95c7c460d973f5512dfa2567ed602abfd26dc1",
+      "archiveGitBlob": "c17db5797a64e1c6a0d23be72a2ed10260aa9fd7",
+      "entry": "archives/frostuccino-ff418d2fdb31.narc",
+      "byteOffset": 26452,
+      "byteLength": 13124,
+      "members": 4,
+      "routes": {
+        "back": {
+          "character": 2,
+          "palette": 0,
+          "characterSha256": "5a1051a1560106313d6f43a399089d635a9ced4c51209bad32eae407e3aa3e9d",
+          "paletteSha256": "f990aa22348462bc8494389d2ccb3d0b3708634c177c5d489e425fec91ef7ff3",
+          "expectedFrameSha256": "b51f86be389c0cc9958d4db71cc4d3c149619320153adccd0f74480ec0430439"
+        },
+        "shiny_back": {
+          "character": 2,
+          "palette": 1,
+          "characterSha256": "5a1051a1560106313d6f43a399089d635a9ced4c51209bad32eae407e3aa3e9d",
+          "paletteSha256": "84324fd94d45de13da6d85421e41d6d3c51a7f18677f1e9f0c915859b9d04de6",
+          "expectedFrameSha256": "1903f5f2946a51668c1c649be02fcc6d6ba060b12887ac2c0660afaf7a04c745"
+        },
+        "front": {
+          "character": 3,
+          "palette": 0,
+          "characterSha256": "a2afeb7333ffa16af666c9a5fbbddda7f3c74062c5153011d76620797d26b1ba",
+          "paletteSha256": "f990aa22348462bc8494389d2ccb3d0b3708634c177c5d489e425fec91ef7ff3",
+          "expectedFrameSha256": "dce47c0d75e2ef7f9af6bcce552ebee4dc5964848919354e0e7fe11ec304c455"
+        },
+        "shiny_front": {
+          "character": 3,
+          "palette": 1,
+          "characterSha256": "a2afeb7333ffa16af666c9a5fbbddda7f3c74062c5153011d76620797d26b1ba",
+          "paletteSha256": "84324fd94d45de13da6d85421e41d6d3c51a7f18677f1e9f0c915859b9d04de6",
+          "expectedFrameSha256": "c0032a8d6abe87cb27b68a3eaf85c48ea806ca081932e50dd1116258e3ee5a1d"
+        }
+      },
+      "zipPath": "qa/final-sprite-acceleration/MERCURY_FINAL_ACCELERATION_QA_ARCHIVES.zip",
+      "zipBlob": "c068e06b7a23b9dbf4fa9c9c2314df86d2c48ed2",
+      "zipRef": "c3c8eab8c07fb9bb57778e3c4c7967af880c4688",
+      "mode": "shared_species_palette",
+      "batchBlob": "74783cbb41c4bb06fe13f8ef9076b888e0751932"
+    },
+    {
+      "artworkKey": "frostula|pixelsha256:b91182ac2c692744a38c7b2d925a9672c6a82c22083338fd6439a6e8f83d6bad",
+      "archiveSha256": "9366c87525e2fff1783d6af8fe09f15ef625b2094744cb06492b1f06c82844dc",
+      "archiveGitBlob": "bc4746cc5b1d8b9044e8444e7139667586521309",
+      "entry": "archives/frostula-9366c87525e2.narc",
+      "byteOffset": 39641,
+      "byteLength": 13124,
+      "members": 4,
+      "routes": {
+        "back": {
+          "character": 2,
+          "palette": 0,
+          "characterSha256": "bf632b023a9fde77b0f0cd2e7a0563d8162b8cfbc5d51b6349777cf42d57d16c",
+          "paletteSha256": "ded9efaf64bf7184c6d90e21e774737a9a3b5e68827cd803e6cb2c62feb28577",
+          "expectedFrameSha256": "51f3023a33e551fd6563b3730f723b953f48b560faa4a984ebeb4b5046f54ed4"
+        },
+        "shiny_back": {
+          "character": 2,
+          "palette": 1,
+          "characterSha256": "bf632b023a9fde77b0f0cd2e7a0563d8162b8cfbc5d51b6349777cf42d57d16c",
+          "paletteSha256": "3ddfd1cb5d84a60fadf5ef62884c5f8bd5221ffac9e3e211ad033373407daedb",
+          "expectedFrameSha256": "21c2c0edc256171b396e427282eb0867f9c96ed9fd409388b2a4486fb1d69772"
+        },
+        "front": {
+          "character": 3,
+          "palette": 0,
+          "characterSha256": "06b8940ded5f4d34ecd6dfe3a41fd0a5b8220e351148404bf8cd01a4e6bde427",
+          "paletteSha256": "ded9efaf64bf7184c6d90e21e774737a9a3b5e68827cd803e6cb2c62feb28577",
+          "expectedFrameSha256": "a4afd7c202e86e619813f16bd9b189ea2d1df2f0d974f749b8cd485a4ba7e215"
+        },
+        "shiny_front": {
+          "character": 3,
+          "palette": 1,
+          "characterSha256": "06b8940ded5f4d34ecd6dfe3a41fd0a5b8220e351148404bf8cd01a4e6bde427",
+          "paletteSha256": "3ddfd1cb5d84a60fadf5ef62884c5f8bd5221ffac9e3e211ad033373407daedb",
+          "expectedFrameSha256": "facaa070a9efa51591718f87a2732c6822d224ddde1ff9400a18f859b1d4f2c1"
+        }
+      },
+      "zipPath": "qa/final-sprite-acceleration/MERCURY_FINAL_ACCELERATION_QA_ARCHIVES.zip",
+      "zipBlob": "c068e06b7a23b9dbf4fa9c9c2314df86d2c48ed2",
+      "zipRef": "c3c8eab8c07fb9bb57778e3c4c7967af880c4688",
+      "mode": "shared_species_palette",
+      "batchBlob": "74783cbb41c4bb06fe13f8ef9076b888e0751932"
+    },
+    {
+      "artworkKey": "furnadon-1|pixelsha256:2d37d0a7894ed9d9d24ca3920559909d62775daf45d6b343c9a9576bace7dadc",
+      "archiveSha256": "b35d531742bf76b053d4667dba5b6ad03992fe798b2859fdffe5380f4fc4b387",
+      "archiveGitBlob": "436d2d163a392c3d5d3cd120b3ffd5f5e5c32be8",
+      "entry": "archives/furnadon-1-b35d531742bf.narc",
+      "byteOffset": 52832,
+      "byteLength": 19740,
+      "members": 7,
+      "routes": {
+        "back": {
+          "character": 2,
+          "palette": 0,
+          "characterSha256": "aa756eb8823db263d912aca79b61f25d54a09127a4c7479218790013272efcca",
+          "paletteSha256": "a0d2caf54eb36d4a13d5e6462080398b5739ef9f3b63a11c9b6a65817abccd9e",
+          "expectedFrameSha256": "beffa8c93059c3f8a0f3c800e836c227838da654c9f817bc27b8496703c68829"
+        },
+        "shiny_back": {
+          "character": 2,
+          "palette": 1,
+          "characterSha256": "aa756eb8823db263d912aca79b61f25d54a09127a4c7479218790013272efcca",
+          "paletteSha256": "4dce487a553854200f0f88ff20f14d95af6d2ce2c5ecec2d2d91266f75ad172e",
+          "expectedFrameSha256": "d070249ee45604b3ab42b7a24076fb73299e0e4ae649b2d031290d6ba7b55679"
+        },
+        "front": {
+          "character": 3,
+          "palette": 4,
+          "characterSha256": "7b0df8de3e2d646afbdbd16fcbdcc4282fc060403ab66a7db40bbf3f1e06b5aa",
+          "paletteSha256": "9f842c259bb37531e55656cbdee3a2feb943c2020d43be34cdc03f116e3d1501",
+          "expectedFrameSha256": "86835fecad54df2cc38f68299fe2b41977df81173e6ea5ed8b01ecf8d4605b60"
+        },
+        "shiny_front": {
+          "character": 5,
+          "palette": 6,
+          "characterSha256": "bfd01911e4dc09732f8fe6efc75284e64bd7ad8a4f924521112ee4ba243d7408",
+          "paletteSha256": "e139ae8e58072d7d38bd160b5d5d9d03a67d9c9af36eb294fb4473092f4f162a",
+          "expectedFrameSha256": "7d5cff537a67263527fe1c262dd5bd2da50c8afd363fc422614212f3f86a90a0"
+        }
+      },
+      "zipPath": "qa/final-sprite-acceleration/MERCURY_FINAL_ACCELERATION_QA_ARCHIVES.zip",
+      "zipBlob": "c068e06b7a23b9dbf4fa9c9c2314df86d2c48ed2",
+      "zipRef": "c3c8eab8c07fb9bb57778e3c4c7967af880c4688",
+      "mode": "view_specific",
+      "batchBlob": "74783cbb41c4bb06fe13f8ef9076b888e0751932"
+    },
+    {
+      "artworkKey": "fujiflap|pixelsha256:18f54de84ca690675b59b3a5996ed485eca082c9b1cbc8827e328ff9ad171b21",
+      "archiveSha256": "9a4e2cc23096684724b1ae61db03188a3fe8946567e7f563b0c9ea175ad2faa8",
+      "archiveGitBlob": "d1e10152f56727472069848fe6c352e94c32d7c1",
+      "entry": "archives/fujiflap-9a4e2cc23096.narc",
+      "byteOffset": 72637,
+      "byteLength": 13124,
+      "members": 4,
+      "routes": {
+        "back": {
+          "character": 2,
+          "palette": 0,
+          "characterSha256": "65aea25b8ecce7d53c1f6c55e4cb787c3843d65d4bd9f8714b2073a554c5c4d5",
+          "paletteSha256": "e7e164d628f6b81d78a9764506b172fc49cbf60b087096cca8a3b9e97e54de40",
+          "expectedFrameSha256": "02359c235f6bcca06d8958767dc092975f55d86edd89adfd96da1513272ea124"
+        },
+        "shiny_back": {
+          "character": 2,
+          "palette": 1,
+          "characterSha256": "65aea25b8ecce7d53c1f6c55e4cb787c3843d65d4bd9f8714b2073a554c5c4d5",
+          "paletteSha256": "ae21e650026e8f946efabcfcafa8c8ecb9f2421bc616e875b10b709ee03168cc",
+          "expectedFrameSha256": "149bbd847b6c14e29f60f153e1d8683add8673289bebfb91fad81131f354dcf7"
+        },
+        "front": {
+          "character": 3,
+          "palette": 0,
+          "characterSha256": "c9bcea27f8d6c7b2aa09f6f32566be1b7917a19a7ed8681991c5c279d39f655a",
+          "paletteSha256": "e7e164d628f6b81d78a9764506b172fc49cbf60b087096cca8a3b9e97e54de40",
+          "expectedFrameSha256": "f9807e4ada9929e7a53e2b0fb9ee27d6025306e08da0eb2aecb42bc2cbf7df28"
+        },
+        "shiny_front": {
+          "character": 3,
+          "palette": 1,
+          "characterSha256": "c9bcea27f8d6c7b2aa09f6f32566be1b7917a19a7ed8681991c5c279d39f655a",
+          "paletteSha256": "ae21e650026e8f946efabcfcafa8c8ecb9f2421bc616e875b10b709ee03168cc",
+          "expectedFrameSha256": "669074c041a4189eeb20c40e299b8ca4f1ab994012a46afaae3ff4dfc6fc141a"
+        }
+      },
+      "zipPath": "qa/final-sprite-acceleration/MERCURY_FINAL_ACCELERATION_QA_ARCHIVES.zip",
+      "zipBlob": "c068e06b7a23b9dbf4fa9c9c2314df86d2c48ed2",
+      "zipRef": "c3c8eab8c07fb9bb57778e3c4c7967af880c4688",
+      "mode": "shared_species_palette",
+      "batchBlob": "f7800fad86a0bbde5ca5ad42ae0e1a7cff2e94e0"
+    },
+    {
+      "artworkKey": "furfrou-dandy-trim|pixelsha256:5ec30115a70135c05dd0c123df848c90c501dbc2f73c0f39dc6fdba2f6e49f78",
+      "archiveSha256": "702cbba31084579b22581e785d0167e95639195cd8037aca79245b917fc6ebce",
+      "archiveGitBlob": "deccfcc832b4b0a47e423aa23eff1ba5e4470b80",
+      "entry": "archives/furfrou-dandy-trim-702cbba31084.narc",
+      "byteOffset": 85836,
+      "byteLength": 13124,
+      "members": 4,
+      "routes": {
+        "back": {
+          "character": 2,
+          "palette": 0,
+          "characterSha256": "91104c8d90133eddf5b028334895d229d9346fd8bc11d3b9844d1f9c624b2cea",
+          "paletteSha256": "9e1c9ee3a954a3adfa93e0d8654a34a70514f1f6cdd9b7d3d8b524637d7c8edb",
+          "expectedFrameSha256": "e3c592dff7affdb010b02735ce5b4b940b5cae0061847623fb49dc11fe20472d"
+        },
+        "shiny_back": {
+          "character": 2,
+          "palette": 1,
+          "characterSha256": "91104c8d90133eddf5b028334895d229d9346fd8bc11d3b9844d1f9c624b2cea",
+          "paletteSha256": "23bc2c7be775d01fba2b377882bca50e5f7e66a27a1323cc175613a98eca0218",
+          "expectedFrameSha256": "866b45eb69e6222c31740c4d6170551641c21430531b4028139cd9577b74ee00"
+        },
+        "front": {
+          "character": 3,
+          "palette": 0,
+          "characterSha256": "ad6b3daa4808cb4e2d010272769e9ff1404d7ae7064f57550e7fb13eb92db428",
+          "paletteSha256": "9e1c9ee3a954a3adfa93e0d8654a34a70514f1f6cdd9b7d3d8b524637d7c8edb",
+          "expectedFrameSha256": "3f581b4d90eec4fdc994681b6ec3146f0f9fe2324eac07d82ca431c0fb65d3a8"
+        },
+        "shiny_front": {
+          "character": 3,
+          "palette": 1,
+          "characterSha256": "ad6b3daa4808cb4e2d010272769e9ff1404d7ae7064f57550e7fb13eb92db428",
+          "paletteSha256": "23bc2c7be775d01fba2b377882bca50e5f7e66a27a1323cc175613a98eca0218",
+          "expectedFrameSha256": "705a94fa57f38622d4bc7eed22f31d99667d380e32079681dda25a2a63134ac7"
+        }
+      },
+      "zipPath": "qa/final-sprite-acceleration/MERCURY_FINAL_ACCELERATION_QA_ARCHIVES.zip",
+      "zipBlob": "c068e06b7a23b9dbf4fa9c9c2314df86d2c48ed2",
+      "zipRef": "c3c8eab8c07fb9bb57778e3c4c7967af880c4688",
+      "mode": "shared_species_palette",
+      "batchBlob": "f7800fad86a0bbde5ca5ad42ae0e1a7cff2e94e0"
+    },
+    {
+      "artworkKey": "gelescent|pixelsha256:bcdfe0be80c4e822e767d1d57167db67154b1700b259f3c24d24aa959b380ac0",
+      "archiveSha256": "bffeeb3e0b92532d092ec1242d0f426aea5b35026fc3c4085fc2244f7ac09275",
+      "archiveGitBlob": "5b694a4f96705ae7afc7c0528ff9ef123469c2ae",
+      "entry": "archives/gelescent-bffeeb3e0b92.narc",
+      "byteOffset": 99026,
+      "byteLength": 13124,
+      "members": 4,
+      "routes": {
+        "back": {
+          "character": 2,
+          "palette": 0,
+          "characterSha256": "51b3a8c01e8f96851217b77cfc34d73f74b31c98137b0ea21d89dfa97c3499ad",
+          "paletteSha256": "0f933a6a6114a7ec01b336f6e37e1cafc03ed3b944074632eb92bd3ea57b2cff",
+          "expectedFrameSha256": "174a7937b86e533971ac3d91d4854dd599d6f0c8534e7ed3601368b701d04669"
+        },
+        "shiny_back": {
+          "character": 2,
+          "palette": 1,
+          "characterSha256": "51b3a8c01e8f96851217b77cfc34d73f74b31c98137b0ea21d89dfa97c3499ad",
+          "paletteSha256": "db14f3916e808b202cd7f7ef366d5155b790ac7af82722a3650d2c2e85344da5",
+          "expectedFrameSha256": "6d015698926048362ec80ebb622a26566933499ef1d9c2aeba9f5258925a1af5"
+        },
+        "front": {
+          "character": 3,
+          "palette": 0,
+          "characterSha256": "b261d221457a070d93131f7673e81920e1a38ba09abc8718269547010f7223ce",
+          "paletteSha256": "0f933a6a6114a7ec01b336f6e37e1cafc03ed3b944074632eb92bd3ea57b2cff",
+          "expectedFrameSha256": "5cdf7723a9b4fb542f29faab126aec3079ece57ff179daad35671793fb624175"
+        },
+        "shiny_front": {
+          "character": 3,
+          "palette": 1,
+          "characterSha256": "b261d221457a070d93131f7673e81920e1a38ba09abc8718269547010f7223ce",
+          "paletteSha256": "db14f3916e808b202cd7f7ef366d5155b790ac7af82722a3650d2c2e85344da5",
+          "expectedFrameSha256": "f7ba5df59f7e1d0d43a87a449e7a619a9cee55bffa9c475f53d284975b30b5a5"
+        }
+      },
+      "zipPath": "qa/final-sprite-acceleration/MERCURY_FINAL_ACCELERATION_QA_ARCHIVES.zip",
+      "zipBlob": "c068e06b7a23b9dbf4fa9c9c2314df86d2c48ed2",
+      "zipRef": "c3c8eab8c07fb9bb57778e3c4c7967af880c4688",
+      "mode": "shared_species_palette",
+      "batchBlob": "f7800fad86a0bbde5ca5ad42ae0e1a7cff2e94e0"
+    },
+    {
+      "artworkKey": "geocko|pixelsha256:89a588bba7c63d043af1b37441ad3af97e322414b3579b760862c59803b42611",
+      "archiveSha256": "b4ff9d87e79c48781466a4a28da370b49819d489abe42faa7134e5674f529f8b",
+      "archiveGitBlob": "7f76e1d3b6919849775a9a1a8b657f254eb88824",
+      "entry": "archives/geocko-b4ff9d87e79c.narc",
+      "byteOffset": 112213,
+      "byteLength": 13124,
+      "members": 4,
+      "routes": {
+        "back": {
+          "character": 2,
+          "palette": 0,
+          "characterSha256": "b2bd85614c91b7ed260ebef710df9fbec13a36417e51212488d7a5a9bfd58af9",
+          "paletteSha256": "b7b8f12f22060ffee45cdf6ddc49d8cff261a238c566b68669d06cdc48cda61a",
+          "expectedFrameSha256": "a9e3feaed9478363e732ff6dc3bf4f6403884abbafa280216f51d664043dd59f"
+        },
+        "shiny_back": {
+          "character": 2,
+          "palette": 1,
+          "characterSha256": "b2bd85614c91b7ed260ebef710df9fbec13a36417e51212488d7a5a9bfd58af9",
+          "paletteSha256": "3c6dd63ac6cb52557497a79e0d447ba9b82e7c41f85b2fc8fd0f6caf9b75c2cc",
+          "expectedFrameSha256": "421897ba53fd1795ca8cb52af9e46dcab16fc530d0ca1524c8f85e98c7ec60b6"
+        },
+        "front": {
+          "character": 3,
+          "palette": 0,
+          "characterSha256": "ef2f12625e2e3625ad10f3c72eb8dd3df7b4c42775f4a9a4c09e834f6fc3cd19",
+          "paletteSha256": "b7b8f12f22060ffee45cdf6ddc49d8cff261a238c566b68669d06cdc48cda61a",
+          "expectedFrameSha256": "2af3ce9ce268ef7288e4c084715c8c1d2d4168b1ab41bf2726cac29cd26df046"
+        },
+        "shiny_front": {
+          "character": 3,
+          "palette": 1,
+          "characterSha256": "ef2f12625e2e3625ad10f3c72eb8dd3df7b4c42775f4a9a4c09e834f6fc3cd19",
+          "paletteSha256": "3c6dd63ac6cb52557497a79e0d447ba9b82e7c41f85b2fc8fd0f6caf9b75c2cc",
+          "expectedFrameSha256": "72d55d7c594818e11cdc79801e04485ed8bd0fe6c5facd87b1d72f2c0d62a816"
+        }
+      },
+      "zipPath": "qa/final-sprite-acceleration/MERCURY_FINAL_ACCELERATION_QA_ARCHIVES.zip",
+      "zipBlob": "c068e06b7a23b9dbf4fa9c9c2314df86d2c48ed2",
+      "zipRef": "c3c8eab8c07fb9bb57778e3c4c7967af880c4688",
+      "mode": "shared_species_palette",
+      "batchBlob": "f7800fad86a0bbde5ca5ad42ae0e1a7cff2e94e0"
+    },
+    {
+      "artworkKey": "furfrou-debutante-trim|pixelsha256:e825a63a7989eab2cee74a28fd56173f4754002f8a3f60443b0bd87540df60f4",
+      "archiveSha256": "84876750bfd4cb609d3d5d49ae31a9d3aa4c13443efabb988f0f4d4cef2efec2",
+      "archiveGitBlob": "f82dfc9bc8604796af5c9c5874fff78b1c75c4f9",
+      "entry": "archives/furfrou-debutante-trim-84876750bfd4.narc",
+      "byteOffset": 125416,
+      "byteLength": 13124,
+      "members": 4,
+      "routes": {
+        "back": {
+          "character": 2,
+          "palette": 0,
+          "characterSha256": "489736719f5a5ad4ad54127727eefa0b7552f0508e2f5e3810ecdc431382d2dd",
+          "paletteSha256": "0c9b1737ce375b559a4aa31e531c5a790801b55de288a0c90483fd91e3f622e8",
+          "expectedFrameSha256": "77a450e95b331d13d5877e6298f192c4877fb4f6234a51454ddee7d1e95d0690"
+        },
+        "shiny_back": {
+          "character": 2,
+          "palette": 1,
+          "characterSha256": "489736719f5a5ad4ad54127727eefa0b7552f0508e2f5e3810ecdc431382d2dd",
+          "paletteSha256": "b16fd930c38b7b520107589c40aa0a2b2eade3b1e62121d1573dda8362ee097d",
+          "expectedFrameSha256": "3a281e213f76d40a45f75dd90c115684b1f4839e5594b3747e44a5aace64db20"
+        },
+        "front": {
+          "character": 3,
+          "palette": 0,
+          "characterSha256": "b81b9f29065cb59cd8cab63bcd08312a09f4e44aa7d48614ebc4caf2f8ebd017",
+          "paletteSha256": "0c9b1737ce375b559a4aa31e531c5a790801b55de288a0c90483fd91e3f622e8",
+          "expectedFrameSha256": "abb0b669fd751225da10e6052a89db99d5cef47d2b63d80d53903576de4b1d2e"
+        },
+        "shiny_front": {
+          "character": 3,
+          "palette": 1,
+          "characterSha256": "b81b9f29065cb59cd8cab63bcd08312a09f4e44aa7d48614ebc4caf2f8ebd017",
+          "paletteSha256": "b16fd930c38b7b520107589c40aa0a2b2eade3b1e62121d1573dda8362ee097d",
+          "expectedFrameSha256": "1ac6a86121751dbd6c28ca1623fd163caefef7517183e4f04c731828ded22ab2"
+        }
+      },
+      "zipPath": "qa/final-sprite-acceleration/MERCURY_FINAL_ACCELERATION_QA_ARCHIVES.zip",
+      "zipBlob": "c068e06b7a23b9dbf4fa9c9c2314df86d2c48ed2",
+      "zipRef": "c3c8eab8c07fb9bb57778e3c4c7967af880c4688",
+      "mode": "shared_species_palette",
+      "batchBlob": "e77fa6f7c06d0da316b3d611c6dc3cfb9117c2d7"
+    },
+    {
+      "artworkKey": "furfrou-diamond-trim|pixelsha256:3870e5b7ff6980fca1f92431383a33eb2fbb42112bdadee8f9778f5c8b822aa9",
+      "archiveSha256": "5f19123a458b17891674911cbaa033e0fb1c02f3e55bf9fa204fb1cbcf11a2b4",
+      "archiveGitBlob": "6fa535008998c17e1a373bacfe0241626b9b3940",
+      "entry": "archives/furfrou-diamond-trim-5f19123a458b.narc",
+      "byteOffset": 138617,
+      "byteLength": 13284,
+      "members": 6,
+      "routes": {
+        "back": {
+          "character": 2,
+          "palette": 0,
+          "characterSha256": "12db5b72b8ae5920b623eb759bc9dcd8a1dfbde8d16be79767f3735386f36186",
+          "paletteSha256": "8a46fc9101c1441711fd4b1560e158ad043c1b3006d10b1fca23c6a634597abb",
+          "expectedFrameSha256": "f9b0c5f80a60fa91d96c4fdb287edfb3221e4c581dd76b159d2a95790105b158"
+        },
+        "shiny_back": {
+          "character": 2,
+          "palette": 1,
+          "characterSha256": "12db5b72b8ae5920b623eb759bc9dcd8a1dfbde8d16be79767f3735386f36186",
+          "paletteSha256": "0806d89e809cf95b7abb64bc1872cfc891c4f4d77d2a2ee96def507328a30695",
+          "expectedFrameSha256": "98151b794877fa6530f9bbe595f80475258801e22b5bb452f05f711a8c6b2b78"
+        },
+        "front": {
+          "character": 5,
+          "palette": 3,
+          "characterSha256": "dbdf5b43e8186b324fcd3c22821fec63dae6a51d43f1dc3b2a55104900c279db",
+          "paletteSha256": "c299b30566fe63d302d01aa2467e25117e9d6aa2345216910b1e054776d6fbb2",
+          "expectedFrameSha256": "3c8fc8c157c08564375ed76f53994186f8a879610b6b082cd2dac40b9a124a58"
+        },
+        "shiny_front": {
+          "character": 5,
+          "palette": 4,
+          "characterSha256": "dbdf5b43e8186b324fcd3c22821fec63dae6a51d43f1dc3b2a55104900c279db",
+          "paletteSha256": "04682333e29c8558038106d5b3f6935590c0a648ccc45ed206bbc234afef5c47",
+          "expectedFrameSha256": "be6cf9d332c5b0e4523d06088fa49f776d5ee6854dc2a5c008aa0f1a631132fb"
+        }
+      },
+      "zipPath": "qa/final-sprite-acceleration/MERCURY_FINAL_ACCELERATION_QA_ARCHIVES.zip",
+      "zipBlob": "c068e06b7a23b9dbf4fa9c9c2314df86d2c48ed2",
+      "zipRef": "c3c8eab8c07fb9bb57778e3c4c7967af880c4688",
+      "mode": "view_specific",
+      "batchBlob": "e77fa6f7c06d0da316b3d611c6dc3cfb9117c2d7"
+    },
+    {
+      "artworkKey": "furfrou-heart-trim|pixelsha256:9012ccaa12999b877256d9244ebfb5e92beedc556b372b4439179c525ded6318",
+      "archiveSha256": "d383b8f28c3a99d4bee58e226785e4b829684d565bc567b3d37955a6c87af920",
+      "archiveGitBlob": "edfaa2f43bf64c4af3e17281395bdad2d9f94678",
+      "entry": "archives/furfrou-heart-trim-d383b8f28c3a.narc",
+      "byteOffset": 151976,
+      "byteLength": 13284,
+      "members": 6,
+      "routes": {
+        "back": {
+          "character": 2,
+          "palette": 0,
+          "characterSha256": "ba2eca2922a9243dcb928be6a4de338b24d4012d9e30b010759d52948d41ef38",
+          "paletteSha256": "bd7c1c3d188a3a7812438ca67c7f64ecf419d6bf83d28e0be971f5273dd0f576",
+          "expectedFrameSha256": "3fff54cdbb69ed43ecd9892c2ac67fe36f4eb7adeda7b177ddc156c02d27eb46"
+        },
+        "shiny_back": {
+          "character": 2,
+          "palette": 1,
+          "characterSha256": "ba2eca2922a9243dcb928be6a4de338b24d4012d9e30b010759d52948d41ef38",
+          "paletteSha256": "38fdc6790e0624d0c9af62ba6b017e4885f79cd9bb9fc41efa3569e85ce658e9",
+          "expectedFrameSha256": "33693c102801ccff820c1835e6180296fa5faf1b36e2ed1d186c2b3fb21d8a28"
+        },
+        "front": {
+          "character": 5,
+          "palette": 3,
+          "characterSha256": "33e63d449c69d61ca42edb9672a0a16f3ae6703fa26a4f8bb54fdb129fb99878",
+          "paletteSha256": "887c0ec119f416da6c5a832070221a7da035752b1bb8c7d01a02c6476e45ea78",
+          "expectedFrameSha256": "56ca15a0df17aedd5e940deff48de44e8821372fadb3ce2caf5e5bda71398714"
+        },
+        "shiny_front": {
+          "character": 5,
+          "palette": 4,
+          "characterSha256": "33e63d449c69d61ca42edb9672a0a16f3ae6703fa26a4f8bb54fdb129fb99878",
+          "paletteSha256": "d89eea067c7abe1c6388a9c0d2d687ef20a2e2a16e3ad90221fbf8a330de46fd",
+          "expectedFrameSha256": "5ab68ad636bb7a05a5c1d25264ffaa38f15305c17d0aa97ebc99cd725049f118"
+        }
+      },
+      "zipPath": "qa/final-sprite-acceleration/MERCURY_FINAL_ACCELERATION_QA_ARCHIVES.zip",
+      "zipBlob": "c068e06b7a23b9dbf4fa9c9c2314df86d2c48ed2",
+      "zipRef": "c3c8eab8c07fb9bb57778e3c4c7967af880c4688",
+      "mode": "view_specific",
+      "batchBlob": "32283f8d86732f9d221c87208acf433b7570e2c8"
+    },
+    {
+      "artworkKey": "furfrou-kabuki-trim|pixelsha256:83643f7aa0f9e0914164b4ef5e5c68006b3fd82b257304642ed34de96c0d6fba",
+      "archiveSha256": "bef4a9881c996ea68b430e587aa1b8757b13cff3127cddf05d24050ae1c08de1",
+      "archiveGitBlob": "073de305afffec5a127311d2f20fe8953691a06d",
+      "entry": "archives/furfrou-kabuki-trim-bef4a9881c99.narc",
+      "byteOffset": 165336,
+      "byteLength": 13284,
+      "members": 6,
+      "routes": {
+        "back": {
+          "character": 2,
+          "palette": 0,
+          "characterSha256": "7dbc472f5cb99059985fe2258dbe3ff0065fe9af3a06be032c051237ebce488e",
+          "paletteSha256": "4cd1175b1a45e4e89a751ce70414a3a62943ec74f02aabc5bafda71d2801b6e0",
+          "expectedFrameSha256": "9b7d137401bdbb79776f30513d2afb293591e018f3d9f153bbe0d0f7d1fae675"
+        },
+        "shiny_back": {
+          "character": 2,
+          "palette": 1,
+          "characterSha256": "7dbc472f5cb99059985fe2258dbe3ff0065fe9af3a06be032c051237ebce488e",
+          "paletteSha256": "c60737fce11794e4de79eb092f3ef5b318c614298a26b282af1b3b25d788577e",
+          "expectedFrameSha256": "7bd4c7145074423fc81bdf174d53454363df0f6cc4570c680c9bb62a4150508d"
+        },
+        "front": {
+          "character": 5,
+          "palette": 3,
+          "characterSha256": "d427099e77ab058c3b898f5b977cf4e4cb847aca0dd3275c8ca67b53697b4267",
+          "paletteSha256": "56d1ad84fa7c78b4f62750c4496f4323d881f4f5dbec185d786126d1c0f86cf7",
+          "expectedFrameSha256": "c4c42c07f728a8473bcf08ba3ae4613613cd39ba500407e4a350f248f335a03a"
+        },
+        "shiny_front": {
+          "character": 5,
+          "palette": 4,
+          "characterSha256": "d427099e77ab058c3b898f5b977cf4e4cb847aca0dd3275c8ca67b53697b4267",
+          "paletteSha256": "856427b65c0d43da1327399b7e2ffc2bb70e67dd7a322c6554595b23df55278b",
+          "expectedFrameSha256": "bbc0dba765137a44ff9a5998ee13447e76e6018b7d15dc68aaa6390747d0eee7"
+        }
+      },
+      "zipPath": "qa/final-sprite-acceleration/MERCURY_FINAL_ACCELERATION_QA_ARCHIVES.zip",
+      "zipBlob": "c068e06b7a23b9dbf4fa9c9c2314df86d2c48ed2",
+      "zipRef": "c3c8eab8c07fb9bb57778e3c4c7967af880c4688",
+      "mode": "view_specific",
+      "batchBlob": "32283f8d86732f9d221c87208acf433b7570e2c8"
+    },
+    {
+      "artworkKey": "glovet|pixelsha256:9468ca8d6d40268c464fed7c01a26e0a0c64b82d3ef178249ba480564af95d07",
+      "archiveSha256": "7b6951f9eb757d7c8e23561ee759a9ae4e17bff8396189300f367fa14c3c41e9",
+      "archiveGitBlob": "b83a21968a39433220c97340af61631a74aa7523",
+      "entry": "archives/glovet-7b6951f9eb75.narc",
+      "byteOffset": 178683,
+      "byteLength": 13124,
+      "members": 4,
+      "routes": {
+        "back": {
+          "character": 2,
+          "palette": 0,
+          "characterSha256": "5087cb28ce3533b50aac1d504b37db57af5294d04247f35ded92549a13ddac58",
+          "paletteSha256": "f9b6ff4181d6a560a6af78903e2a6b2e80c572ee1594f83d7ca0dcb5730e7d41",
+          "expectedFrameSha256": "a28793bedd87285d622b2aba3b214101c3864d16f3acbf9fb4056caa6d25c050"
+        },
+        "shiny_back": {
+          "character": 2,
+          "palette": 1,
+          "characterSha256": "5087cb28ce3533b50aac1d504b37db57af5294d04247f35ded92549a13ddac58",
+          "paletteSha256": "1a6f1414be99cd16a812c002c99e23ad31bdde1ffb64aade4e2bd25775245b47",
+          "expectedFrameSha256": "b9219dcb9608cb9a5a33f593f59f5b9620f69a396d788db021edc6cd8c6839a7"
+        },
+        "front": {
+          "character": 3,
+          "palette": 0,
+          "characterSha256": "72b8cf54640908ce44da476f476b9c7e1f954b5ff556939132138e02a6d3b006",
+          "paletteSha256": "f9b6ff4181d6a560a6af78903e2a6b2e80c572ee1594f83d7ca0dcb5730e7d41",
+          "expectedFrameSha256": "f3be23bf5f74ef729b9dad3d6f4ace5754e7bdb6f2bec6ebe3a7da6d4d10f69a"
+        },
+        "shiny_front": {
+          "character": 3,
+          "palette": 1,
+          "characterSha256": "72b8cf54640908ce44da476f476b9c7e1f954b5ff556939132138e02a6d3b006",
+          "paletteSha256": "1a6f1414be99cd16a812c002c99e23ad31bdde1ffb64aade4e2bd25775245b47",
+          "expectedFrameSha256": "3e588fee628f699919deaa9a86a80725f67b2956a3c7c7a8af815f99db86dd78"
+        }
+      },
+      "zipPath": "qa/final-sprite-acceleration/MERCURY_FINAL_ACCELERATION_QA_ARCHIVES.zip",
+      "zipBlob": "c068e06b7a23b9dbf4fa9c9c2314df86d2c48ed2",
+      "zipRef": "c3c8eab8c07fb9bb57778e3c4c7967af880c4688",
+      "mode": "shared_species_palette",
+      "batchBlob": "32283f8d86732f9d221c87208acf433b7570e2c8"
+    },
+    {
+      "artworkKey": "furfrou-la-reine-trim|pixelsha256:687f65921f42193ede7321c9f18c4a88c690da473615396b5e5712fcf6f33066",
+      "archiveSha256": "289f553601194913d3f2ea2470afbb710884fb48b6663927709ba1cb725ae772",
+      "archiveGitBlob": "ca746c3818f9107c168b5e1bd34d3d6aef4ec470",
+      "entry": "archives/furfrou-la-reine-trim-289f55360119.narc",
+      "byteOffset": 191885,
+      "byteLength": 13284,
+      "members": 6,
+      "routes": {
+        "back": {
+          "character": 2,
+          "palette": 0,
+          "characterSha256": "30c46161062901b415693df2daed7f53d4f0d9389d59fb5d82fc27735701d593",
+          "paletteSha256": "e2cab84d2f74bf3d7ccbbe7572087c8392d3a723be629de5cdafd40568935e17",
+          "expectedFrameSha256": "862bc7ac03777a039ffc48fcdd548f6750d03402ed5f3d2cde34603c3f6b3054"
+        },
+        "shiny_back": {
+          "character": 2,
+          "palette": 1,
+          "characterSha256": "30c46161062901b415693df2daed7f53d4f0d9389d59fb5d82fc27735701d593",
+          "paletteSha256": "2f042b20601e49aa49c4926575e17dcedaa126d816652266556db91a1d593bc9",
+          "expectedFrameSha256": "9ab6744f3b241716c2252c56c0a7217baeb94a01477b57295920cbe5361f69ae"
+        },
+        "front": {
+          "character": 5,
+          "palette": 3,
+          "characterSha256": "56e66369239782d959908ebf51b65517080070e57659db5b977e9c962b1557c4",
+          "paletteSha256": "1b4af46bd6bde11a3860960ca91e2835d7201b3de5b99df784cb97f42a93fb62",
+          "expectedFrameSha256": "485630fb11632e55d6db56c87ac860f8ff56e53ed7c7d6f9cccce760b2290623"
+        },
+        "shiny_front": {
+          "character": 5,
+          "palette": 4,
+          "characterSha256": "56e66369239782d959908ebf51b65517080070e57659db5b977e9c962b1557c4",
+          "paletteSha256": "e3270e7bf9687192ef3a7d0a279550ed046a77db1a010a7c4b33121628b442c5",
+          "expectedFrameSha256": "ab0d9a522bf320fbe1aa9061da66263b520f39b5a98ee1a227ac1e2930c42529"
+        }
+      },
+      "zipPath": "qa/final-sprite-acceleration/MERCURY_FINAL_ACCELERATION_QA_ARCHIVES.zip",
+      "zipBlob": "c068e06b7a23b9dbf4fa9c9c2314df86d2c48ed2",
+      "zipRef": "c3c8eab8c07fb9bb57778e3c4c7967af880c4688",
+      "mode": "view_specific",
+      "batchBlob": "3b9614576c6aded2d1be607eb240baf44e73a0d7"
+    },
+    {
+      "artworkKey": "furfrou-matron-trim|pixelsha256:0d3e46b2f34ee0a34d30af98b43744ca8545464751144eb2118b154f7b9fa8c7",
+      "archiveSha256": "dc6f5861720a53b7a38240b46fa30939fb9adcb4a2ba06e5dd2ac7d5db62e81d",
+      "archiveGitBlob": "2bee322dbe0678dbd441765ed02e8f98c4d6f315",
+      "entry": "archives/furfrou-matron-trim-dc6f5861720a.narc",
+      "byteOffset": 205245,
+      "byteLength": 13284,
+      "members": 6,
+      "routes": {
+        "back": {
+          "character": 2,
+          "palette": 0,
+          "characterSha256": "0f8317659fc309bb980eb637eba238627838b1e66440b80ec4c6e32214cbbf7d",
+          "paletteSha256": "e8e0169469ca9aca5589633cdc604f1c7cf7b1a542dafb6ac9816773f82c2dca",
+          "expectedFrameSha256": "54848bef1e80b8321f163ccb886ffc242400e0f8afcd7c224e25ef6078e05f88"
+        },
+        "shiny_back": {
+          "character": 2,
+          "palette": 1,
+          "characterSha256": "0f8317659fc309bb980eb637eba238627838b1e66440b80ec4c6e32214cbbf7d",
+          "paletteSha256": "34cccb289e4f5335bacfd705fce8cddb456f3dcfe9f050e6b8502bc214749195",
+          "expectedFrameSha256": "b0a367c9f3cd1a4987b8642b41e16d4df6b822ea40a2d6d7004fd6da1d93d27a"
+        },
+        "front": {
+          "character": 5,
+          "palette": 3,
+          "characterSha256": "ddd025853b68a4f840ebe913c5c8fb1174af654120772cc9c41c774fa7957c8c",
+          "paletteSha256": "05531c92977926dd0a8a784b926ae413b1ba0d0cf6320a54f2cfc9b5480662bc",
+          "expectedFrameSha256": "a3e8f922be142448c323e0ffa1e4e6b28e127a3b964e521d8a80e998f6c26508"
+        },
+        "shiny_front": {
+          "character": 5,
+          "palette": 4,
+          "characterSha256": "ddd025853b68a4f840ebe913c5c8fb1174af654120772cc9c41c774fa7957c8c",
+          "paletteSha256": "0a48148942c96c490d27b0b547e38f6c0c33bd71a672e8f0e6faaea979009b21",
+          "expectedFrameSha256": "ba0ed20903067ba6711493b1cfe57cdbc8fc24951199e07b6aa69c790cc57c02"
+        }
+      },
+      "zipPath": "qa/final-sprite-acceleration/MERCURY_FINAL_ACCELERATION_QA_ARCHIVES.zip",
+      "zipBlob": "c068e06b7a23b9dbf4fa9c9c2314df86d2c48ed2",
+      "zipRef": "c3c8eab8c07fb9bb57778e3c4c7967af880c4688",
+      "mode": "view_specific",
+      "batchBlob": "3b9614576c6aded2d1be607eb240baf44e73a0d7"
+    },
+    {
+      "artworkKey": "glyptoblock-1|pixelsha256:234f51d2677cba49a8df2e157814c857d1e400561cb412227a7263ce8b097058",
+      "archiveSha256": "bd873c35c5a0f49219f5fad8ded176c0e40e16e806289ddf4fdb6295280cc851",
+      "archiveGitBlob": "7445a2206750e69f0e41861660d16daa55f09a46",
+      "entry": "archives/glyptoblock-1-bd873c35c5a0.narc",
+      "byteOffset": 218599,
+      "byteLength": 13124,
+      "members": 4,
+      "routes": {
+        "back": {
+          "character": 2,
+          "palette": 0,
+          "characterSha256": "96155642149a714c88cfc3c2050c8c9f10a03156fe8c7d0b9e5602226217ea33",
+          "paletteSha256": "bcb1f695ec9c177e219ef6679011d60d3dce09e640d7c75fa98082aa7b9628c0",
+          "expectedFrameSha256": "5969d10010a95d842a62d84e9acce4442cc0e3825cec0e4d98e224dd750ae649"
+        },
+        "shiny_back": {
+          "character": 2,
+          "palette": 1,
+          "characterSha256": "96155642149a714c88cfc3c2050c8c9f10a03156fe8c7d0b9e5602226217ea33",
+          "paletteSha256": "16997a7a944891b0f50a48140e89b47db92dacb540028a61719c073e5371b725",
+          "expectedFrameSha256": "9e08b00596c67aff206058deec9940bd191250f78d0c86b11fc5a72530c31f07"
+        },
+        "front": {
+          "character": 3,
+          "palette": 0,
+          "characterSha256": "28ad3f2fde66db38d8e40b23f6322d68fdd08a65a5223568be01b6794f1c8f62",
+          "paletteSha256": "bcb1f695ec9c177e219ef6679011d60d3dce09e640d7c75fa98082aa7b9628c0",
+          "expectedFrameSha256": "77f93bbbd6891be226668fd602eef6be8cfe764ca2b600482db54b476192d87c"
+        },
+        "shiny_front": {
+          "character": 3,
+          "palette": 1,
+          "characterSha256": "28ad3f2fde66db38d8e40b23f6322d68fdd08a65a5223568be01b6794f1c8f62",
+          "paletteSha256": "16997a7a944891b0f50a48140e89b47db92dacb540028a61719c073e5371b725",
+          "expectedFrameSha256": "7a9d70bba4163067c56816fe3744c4f270e2252e9a1bd535b9051235cc3c9aaa"
+        }
+      },
+      "zipPath": "qa/final-sprite-acceleration/MERCURY_FINAL_ACCELERATION_QA_ARCHIVES.zip",
+      "zipBlob": "c068e06b7a23b9dbf4fa9c9c2314df86d2c48ed2",
+      "zipRef": "c3c8eab8c07fb9bb57778e3c4c7967af880c4688",
+      "mode": "shared_species_palette",
+      "batchBlob": "3b9614576c6aded2d1be607eb240baf44e73a0d7"
+    },
+    {
+      "artworkKey": "furfrou-pharaoh-trim|pixelsha256:14b550959723e3c030707812677ad3cb52571c3f89f524581e676f282e92792a",
+      "archiveSha256": "c1107bc7fd1a5674796cc85b9df71bf7ced4ca0fe0ae081a3c05ccea97136317",
+      "archiveGitBlob": "979bb2961714a54a50513306e86b6b46cec4a7a4",
+      "entry": "archives/furfrou-pharaoh-trim-c1107bc7fd1a.narc",
+      "byteOffset": 231800,
+      "byteLength": 13284,
+      "members": 6,
+      "routes": {
+        "back": {
+          "character": 2,
+          "palette": 0,
+          "characterSha256": "13a9cc3c22dd2f8c7d8f6aafe5805db548287901e7bf32be6ad2d6971f02a444",
+          "paletteSha256": "05f2cacbeb3dc2cd1a1749629b192b5f4a81c51ae7eddcd1f6698a6056cd33af",
+          "expectedFrameSha256": "cd7aa191b0aa25c70bf38c93d44974aa7cfc7589fe9f0ebfabf54bf434258c66"
+        },
+        "shiny_back": {
+          "character": 2,
+          "palette": 1,
+          "characterSha256": "13a9cc3c22dd2f8c7d8f6aafe5805db548287901e7bf32be6ad2d6971f02a444",
+          "paletteSha256": "75e613e859759ad1bde5c9cd638a97d9bf9439d06815c1b2ca205fdad0441615",
+          "expectedFrameSha256": "b2149e4fd4fa1340bd5fb0618757f265413b2621c35c6bd38b4e655bf2dc2ee5"
+        },
+        "front": {
+          "character": 5,
+          "palette": 3,
+          "characterSha256": "5c78e432106b63374bb3345b483e56e59b6fcb80e03bb5e36a54d8c1e255e780",
+          "paletteSha256": "2d193ef9aaf5fd6a2b1199873362c56c78ffd941ebe502ea7cfebdacf80af3b0",
+          "expectedFrameSha256": "6a6a9dfa7e97c593d18f310539abeb46eb4aa35c026c83f7c3b605d03e2e54d3"
+        },
+        "shiny_front": {
+          "character": 5,
+          "palette": 4,
+          "characterSha256": "5c78e432106b63374bb3345b483e56e59b6fcb80e03bb5e36a54d8c1e255e780",
+          "paletteSha256": "20295b6181949ead1d6b71ee87f345d02793d7d07ef34cfe8c794b74f455b636",
+          "expectedFrameSha256": "3307b566a832eca49c7f2acb49e8796947aa398da5593d8c08cf9238cdfc6361"
+        }
+      },
+      "zipPath": "qa/final-sprite-acceleration/MERCURY_FINAL_ACCELERATION_QA_ARCHIVES.zip",
+      "zipBlob": "c068e06b7a23b9dbf4fa9c9c2314df86d2c48ed2",
+      "zipRef": "c3c8eab8c07fb9bb57778e3c4c7967af880c4688",
+      "mode": "view_specific",
+      "batchBlob": "7a97b5d2bc39af24891aab89fdc0affe73843301"
+    },
+    {
+      "artworkKey": "furfrou-star-trim|pixelsha256:d7479686e4714f1dd51c31837c67dd31295af0a82425e71e12fbb02cd27229f0",
+      "archiveSha256": "76a6af0fb94cd741d095ce6035717493039e2d99c06c0466c74bdd2653e8a399",
+      "archiveGitBlob": "bb51877ae28eb296675eeb0ae7b6bc42ccdff009",
+      "entry": "archives/furfrou-star-trim-76a6af0fb94c.narc",
+      "byteOffset": 245158,
+      "byteLength": 13124,
+      "members": 4,
+      "routes": {
+        "back": {
+          "character": 2,
+          "palette": 0,
+          "characterSha256": "7bf7df980ab9e2c14296307ebc7e47ec1c7ce9f8518244bd3ad8a061098a74a3",
+          "paletteSha256": "0dfb281929c5ceb0d30704573a2b726e27e10da58f0a2744e817a366b62e3914",
+          "expectedFrameSha256": "bf8b8c0c469f6d93327021f7458cfc59a02cb50c5bc30421f3725f2e970e93ff"
+        },
+        "shiny_back": {
+          "character": 2,
+          "palette": 1,
+          "characterSha256": "7bf7df980ab9e2c14296307ebc7e47ec1c7ce9f8518244bd3ad8a061098a74a3",
+          "paletteSha256": "8ef8118c7a03a154c2f45ced176a270ea7723224a51ba585c3d672650348dcca",
+          "expectedFrameSha256": "7e113c38dfd75d99c5f81f742cd37cb5530dba45ecacadb453c7391dedf1422d"
+        },
+        "front": {
+          "character": 3,
+          "palette": 0,
+          "characterSha256": "768ea2a47bc725080e6346815c3a33b30e771b6188cdaf643ebe6e12977c24c9",
+          "paletteSha256": "0dfb281929c5ceb0d30704573a2b726e27e10da58f0a2744e817a366b62e3914",
+          "expectedFrameSha256": "01824001cde2ba4d85bcee13ffea2813c8db65d64d0ecc1ffddd4008338fa4c8"
+        },
+        "shiny_front": {
+          "character": 3,
+          "palette": 1,
+          "characterSha256": "768ea2a47bc725080e6346815c3a33b30e771b6188cdaf643ebe6e12977c24c9",
+          "paletteSha256": "8ef8118c7a03a154c2f45ced176a270ea7723224a51ba585c3d672650348dcca",
+          "expectedFrameSha256": "1f04ad9b089a65a25f2e777d2bd7ccc5430e42fddc64e93425515aa324a280ab"
+        }
+      },
+      "zipPath": "qa/final-sprite-acceleration/MERCURY_FINAL_ACCELERATION_QA_ARCHIVES.zip",
+      "zipBlob": "c068e06b7a23b9dbf4fa9c9c2314df86d2c48ed2",
+      "zipRef": "c3c8eab8c07fb9bb57778e3c4c7967af880c4688",
+      "mode": "shared_species_palette",
+      "batchBlob": "7a97b5d2bc39af24891aab89fdc0affe73843301"
+    },
+    {
+      "artworkKey": "goobolt|pixelsha256:152c3c9b8c4e803a0d3b04fa17730ec75eaa32716e2092d3047737af7c65b081",
+      "archiveSha256": "ac419ed15608abababf3f88961ec8e223b723007118b757af7bc4b253a6330be",
+      "archiveGitBlob": "fa5932227d6846a4b0e678f198f12e3bcfb192e2",
+      "entry": "archives/goobolt-ac419ed15608.narc",
+      "byteOffset": 258346,
+      "byteLength": 13124,
+      "members": 4,
+      "routes": {
+        "back": {
+          "character": 2,
+          "palette": 0,
+          "characterSha256": "9efe868e5c17dec9513835fc7dea0125e011881b37c678fdee3fe9813d5f6757",
+          "paletteSha256": "346ad509d713e24830110c16d80e5dc5409b9a0310ae0a1f4375d509ec364b33",
+          "expectedFrameSha256": "56e165632da1d36ab8857995fe73ec8949ac059a2eb438415a5f9a73d7f30932"
+        },
+        "shiny_back": {
+          "character": 2,
+          "palette": 1,
+          "characterSha256": "9efe868e5c17dec9513835fc7dea0125e011881b37c678fdee3fe9813d5f6757",
+          "paletteSha256": "93aff1d2dc8e0df8abc8ead1399a053a158422a65e9a26cb171e84672f75cc2b",
+          "expectedFrameSha256": "22ba07457ad82ac2e969ea6a3672cb999eccb61a9f9501430ab513cecc4eaa98"
+        },
+        "front": {
+          "character": 3,
+          "palette": 0,
+          "characterSha256": "22bd8f67bfedf505a7ab3f11bf368f71973d59a0ef2dee9ee189465b38e3b543",
+          "paletteSha256": "346ad509d713e24830110c16d80e5dc5409b9a0310ae0a1f4375d509ec364b33",
+          "expectedFrameSha256": "0a5f9a2169551a4023d25fab01adf845239e635ac9ffc3f2482d3431faa6bdc4"
+        },
+        "shiny_front": {
+          "character": 3,
+          "palette": 1,
+          "characterSha256": "22bd8f67bfedf505a7ab3f11bf368f71973d59a0ef2dee9ee189465b38e3b543",
+          "paletteSha256": "93aff1d2dc8e0df8abc8ead1399a053a158422a65e9a26cb171e84672f75cc2b",
+          "expectedFrameSha256": "5f7109749fb52e95b440cc9f5e9cf8b769611a459b3eed47b6b716676bfda5fc"
+        }
+      },
+      "zipPath": "qa/final-sprite-acceleration/MERCURY_FINAL_ACCELERATION_QA_ARCHIVES.zip",
+      "zipBlob": "c068e06b7a23b9dbf4fa9c9c2314df86d2c48ed2",
+      "zipRef": "c3c8eab8c07fb9bb57778e3c4c7967af880c4688",
+      "mode": "shared_species_palette",
+      "batchBlob": "7a97b5d2bc39af24891aab89fdc0affe73843301"
+    },
+    {
+      "artworkKey": "gabite-bluetowel-alternate-forms-form-2|gitblob:4375a9c1c8ecdf63dc013934afc954b6ee58b2c1",
+      "archiveSha256": "45ce12ffc7b588a5d127ef76e63366058eaf5f2e2c17ade99597c6e140dc0555",
+      "archiveGitBlob": "2e282645947708aff013bcce1cd67576bd9ad948",
+      "entry": "archives/gabite-bluetowel-alternate-forms-form-2-45ce12ffc7b5.narc",
+      "byteOffset": 271566,
+      "byteLength": 19740,
+      "members": 7,
+      "routes": {
+        "back": {
+          "character": 2,
+          "palette": 0,
+          "characterSha256": "5683f80cda5754dcf866c1417ad930a1bbf52533b255d5b7098640fa04e05b6d",
+          "paletteSha256": "536cc0883f2cdc02c4bd21112a85ad0f6fafc09326d378069a7529023e46793c",
+          "expectedFrameSha256": "1d6c2633a992f2896894174d5d2555276495915cbd89489cd16fd9574e8d0e98"
+        },
+        "shiny_back": {
+          "character": 2,
+          "palette": 1,
+          "characterSha256": "5683f80cda5754dcf866c1417ad930a1bbf52533b255d5b7098640fa04e05b6d",
+          "paletteSha256": "a80f20ab9902c1b83424288ef31bea42e8201beabfd76b1eb24d07fbf8bbae12",
+          "expectedFrameSha256": "7a9927d8ac58c075a36961b5996e1dd560158f9a03c3ef901c0e5912fc9357ee"
+        },
+        "front": {
+          "character": 3,
+          "palette": 4,
+          "characterSha256": "0ce1140fb23756810c1542b27325d1495386f2da9016ae905b148ec2de4a4d14",
+          "paletteSha256": "36c2881188566278870b22507af3e81cc70017c7664d4629d9941abcc178e93b",
+          "expectedFrameSha256": "5d68eb025fba6776af3e7cc1215a94d93a0be83c6cf93c7dec531f84bc087d1f"
+        },
+        "shiny_front": {
+          "character": 5,
+          "palette": 6,
+          "characterSha256": "20943eecc653b33e7f612411f727d07f8e3c1172b1a562ad3dd0339a4c10e20b",
+          "paletteSha256": "11a8edc762cda0769ce82cca5b61676d554bda7d54bef860e439ba221e059174",
+          "expectedFrameSha256": "d3d25e1c6161a330258f86b61168da3494146febcf2f59dc5d58291e8b6fd483"
+        }
+      },
+      "zipPath": "qa/final-sprite-acceleration/MERCURY_FINAL_ACCELERATION_QA_ARCHIVES.zip",
+      "zipBlob": "c068e06b7a23b9dbf4fa9c9c2314df86d2c48ed2",
+      "zipRef": "c3c8eab8c07fb9bb57778e3c4c7967af880c4688",
+      "mode": "view_specific",
+      "batchBlob": "313dc90d57d1b9dcbf0e10940399f8e4834cd3e2"
+    },
+    {
+      "artworkKey": "gabite-redux|pixelsha256:4c2f09a124e3ba6c9d116a7ce9dee4a0346ff4db38309ad08c5ca2acec196d96",
+      "archiveSha256": "5b4a5a8f528ea98ca4ba87cdaa39d3e3f618647edf41c9adf58917d9e995ebc2",
+      "archiveGitBlob": "14a09f53af2ce8ec755615ac50a3e2fd1e077562",
+      "entry": "archives/gabite-redux-5b4a5a8f528e.narc",
+      "byteOffset": 291375,
+      "byteLength": 13124,
+      "members": 4,
+      "routes": {
+        "back": {
+          "character": 2,
+          "palette": 0,
+          "characterSha256": "d97698babe15927113b4c0cdabc536ee1debd7386401961ef5dd7c66d9faad68",
+          "paletteSha256": "6ec8e493bfcaecdf42ffcfe3b9dc61975dd69ccfb168d0d564fe564652c6a29f",
+          "expectedFrameSha256": "3ce4bed453b6d3c9b4c347106f6a272b6c3fb2f0c72c98f1d0e95c9171632803"
+        },
+        "shiny_back": {
+          "character": 2,
+          "palette": 1,
+          "characterSha256": "d97698babe15927113b4c0cdabc536ee1debd7386401961ef5dd7c66d9faad68",
+          "paletteSha256": "2affc4c72ace0eec9b8c2581042ec1a4ce92c35443a8af9d8b03fb3dc8205a5c",
+          "expectedFrameSha256": "3491de39cf08234b7dbd1714cdb5f1657a119369878adc5fed5d4b323d82a7ff"
+        },
+        "front": {
+          "character": 3,
+          "palette": 0,
+          "characterSha256": "2be7f9cc899fe9cf32645cc47274bfd9d04772b8ef4f08f21776ab4fe09c252a",
+          "paletteSha256": "6ec8e493bfcaecdf42ffcfe3b9dc61975dd69ccfb168d0d564fe564652c6a29f",
+          "expectedFrameSha256": "168439b21137e1778073875629585d32fd748800ebbc6cb49921bb607405e1ed"
+        },
+        "shiny_front": {
+          "character": 3,
+          "palette": 1,
+          "characterSha256": "2be7f9cc899fe9cf32645cc47274bfd9d04772b8ef4f08f21776ab4fe09c252a",
+          "paletteSha256": "2affc4c72ace0eec9b8c2581042ec1a4ce92c35443a8af9d8b03fb3dc8205a5c",
+          "expectedFrameSha256": "b306f2812be2a733067f818c4b9b9774586e522b9a1ccdf9f0ca9d67ebc8dc8a"
+        }
+      },
+      "zipPath": "qa/final-sprite-acceleration/MERCURY_FINAL_ACCELERATION_QA_ARCHIVES.zip",
+      "zipBlob": "c068e06b7a23b9dbf4fa9c9c2314df86d2c48ed2",
+      "zipRef": "c3c8eab8c07fb9bb57778e3c4c7967af880c4688",
+      "mode": "shared_species_palette",
+      "batchBlob": "313dc90d57d1b9dcbf0e10940399f8e4834cd3e2"
+    },
+    {
+      "artworkKey": "grexclub|pixelsha256:c22fef75c146c6995fa535387aa2849b845eb8d382a3686e8c88151064a97b53",
+      "archiveSha256": "255962707070065bc73373b5a2e6c2f1a2d67f7d0a5aa16b1d3097deefe61cba",
+      "archiveGitBlob": "6d84f21bb7923a714e59b3e589ece0dc51ec0de5",
+      "entry": "archives/grexclub-255962707070.narc",
+      "byteOffset": 304564,
+      "byteLength": 13124,
+      "members": 4,
+      "routes": {
+        "back": {
+          "character": 2,
+          "palette": 0,
+          "characterSha256": "6d623fb0a419ba22ee310c5bfc4401ff1fd609827515efe2a450e930d6f34708",
+          "paletteSha256": "0b1db6ccf349aff73cec1b301435af05893a3fd40409bedd038da3a659abb999",
+          "expectedFrameSha256": "3c3a8c6383c2ac9cfe3d2248acfa28db3ae48ac30464acac59e172c25708feaf"
+        },
+        "shiny_back": {
+          "character": 2,
+          "palette": 1,
+          "characterSha256": "6d623fb0a419ba22ee310c5bfc4401ff1fd609827515efe2a450e930d6f34708",
+          "paletteSha256": "2233319269b55cfc578143d4cde39b79fd8d0e8669ea63f0a21fc97a55e0b5ea",
+          "expectedFrameSha256": "3ede04b7d8b8492ed1e1f1a9deb35ad1dc56a5cbd673e9fdc01b4cefcf8c3900"
+        },
+        "front": {
+          "character": 3,
+          "palette": 0,
+          "characterSha256": "05e715396ff86ce9a1a5d8c503c665b8ec9691bb57baac5579ff697a48252314",
+          "paletteSha256": "0b1db6ccf349aff73cec1b301435af05893a3fd40409bedd038da3a659abb999",
+          "expectedFrameSha256": "3130ec72f667d15a76f286fd3a71aeeadb6eed83bdefe93cc3221449beee01cb"
+        },
+        "shiny_front": {
+          "character": 3,
+          "palette": 1,
+          "characterSha256": "05e715396ff86ce9a1a5d8c503c665b8ec9691bb57baac5579ff697a48252314",
+          "paletteSha256": "2233319269b55cfc578143d4cde39b79fd8d0e8669ea63f0a21fc97a55e0b5ea",
+          "expectedFrameSha256": "9ca0ea12a4edab52f5737bf09e159fd7bef815c477e4e2ec467ebf9ee157d913"
+        }
+      },
+      "zipPath": "qa/final-sprite-acceleration/MERCURY_FINAL_ACCELERATION_QA_ARCHIVES.zip",
+      "zipBlob": "c068e06b7a23b9dbf4fa9c9c2314df86d2c48ed2",
+      "zipRef": "c3c8eab8c07fb9bb57778e3c4c7967af880c4688",
+      "mode": "shared_species_palette",
+      "batchBlob": "313dc90d57d1b9dcbf0e10940399f8e4834cd3e2"
+    },
+    {
+      "artworkKey": "hauntray|pixelsha256:ee7acdf931b5717d4cc645cb979545a3e61f3492ca355a38f28a3e4134880b82",
+      "archiveSha256": "4be44bf9d41c7317aee6ad74ee30678ec80abe68d87443c92307ae03e476b0ea",
+      "archiveGitBlob": "89f60e025ccfb6b85168374de8d3f97e73fe5374",
+      "entry": "archives/hauntray-4be44bf9d41c.narc",
+      "byteOffset": 317753,
+      "byteLength": 13124,
+      "members": 4,
+      "routes": {
+        "back": {
+          "character": 2,
+          "palette": 0,
+          "characterSha256": "2c11622b9b1972c1a96240b8af80a93dfcb179c99a603242674671b01a42a46b",
+          "paletteSha256": "ad5cacef6948c428cf90d57f62c4e9a95fbb14f6e212d6cd1146d62b20ad949a",
+          "expectedFrameSha256": "b836371e82c8d3eedb9420ce342c9ebc76b7b5f71f408c5e6800dac644d2bc65"
+        },
+        "shiny_back": {
+          "character": 2,
+          "palette": 1,
+          "characterSha256": "2c11622b9b1972c1a96240b8af80a93dfcb179c99a603242674671b01a42a46b",
+          "paletteSha256": "178fc93fbd8fbe52d7b778a4d6fb99ad5451a767981b01c3686d7efcf9f432fc",
+          "expectedFrameSha256": "5052619ba829791660a25aa24b799a23a9d5d64afed1eb14f9eda01228a7f6bf"
+        },
+        "front": {
+          "character": 3,
+          "palette": 0,
+          "characterSha256": "38811a100588d1eebea2c7373232f95049d80ccfc9b80159cfab5db149da2527",
+          "paletteSha256": "ad5cacef6948c428cf90d57f62c4e9a95fbb14f6e212d6cd1146d62b20ad949a",
+          "expectedFrameSha256": "dcb7004ba668f60a9a6a03bf8821cc1d2094e9d86c42df4468b9f57e7d8f6ea9"
+        },
+        "shiny_front": {
+          "character": 3,
+          "palette": 1,
+          "characterSha256": "38811a100588d1eebea2c7373232f95049d80ccfc9b80159cfab5db149da2527",
+          "paletteSha256": "178fc93fbd8fbe52d7b778a4d6fb99ad5451a767981b01c3686d7efcf9f432fc",
+          "expectedFrameSha256": "191dd2c9852de7ba153fd29386cb57e566bda90b29e747cab3f998492231b099"
+        }
+      },
+      "zipPath": "qa/final-sprite-acceleration/MERCURY_FINAL_ACCELERATION_QA_ARCHIVES.zip",
+      "zipBlob": "c068e06b7a23b9dbf4fa9c9c2314df86d2c48ed2",
+      "zipRef": "c3c8eab8c07fb9bb57778e3c4c7967af880c4688",
+      "mode": "shared_species_palette",
+      "batchBlob": "313dc90d57d1b9dcbf0e10940399f8e4834cd3e2"
+    }
+  ],
+  "verifiedMemberPairs": 96,
+  "nativeRuntime": false,
+  "production": false
+}
