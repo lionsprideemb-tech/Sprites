@@ -1,8 +1,8 @@
 {
   "schema": "mercury-compact-resume-v1",
-  "verifiedCheckpointCommit": "7f12d5f89102a8ca5ed2bc129c3d0d346f3b7d52",
+  "verifiedCheckpointCommit": "e294cd16b4aa9255a67ef2a76da0bcf8753fa74c",
   "checkpointPath": "qa/final-sprite-completion/CHECKPOINT.json",
-  "checkpointBlob": "ff2c97a473e25c6517a9b829d597914032fc969c",
+  "checkpointBlob": "de7b8ca81abf16baaca1151c91890656751b9ab6",
   "gateBlob": "94b3a58b8d51d4c579001c6ffc1914d1b5a10c10",
   "ledgerBlob": "686fd93d34bb39055c0d6cbbf3bcdc5566fcd51a",
   "runnerBlob": "917240025ab58fee9b636172cb3dd5ab2a8a5d97",
@@ -50,7 +50,7 @@
   "next": {
     "cohort": "FINAL_RESCUE_AND_REGISTRY",
     "offset": 0,
-    "firstName": "Wailmer — Alternate (Form 1)",
+    "firstName": "Original artwork recovery and exact registry reconciliation",
     "eligible": 0,
     "batchSize": 3,
     "nextLabel": "88_FINAL_RESCUE",
@@ -60,5 +60,31 @@
     "completedBulkOffset": 200
   },
   "policy": "Offline QA only; no production IDs, main changes, ROM changes, invented artwork or approvals. Preserve Delta Flygon unapproved. Check latest branch head and reconcile any batches after checkpoint before resuming. All ordinary conversions and prior-manifest retests are exhausted; no retest repetition without a new lossless method or original source.",
-  "archiveStorage": "First 33 new archives in existing ZIP; all 210 in pinned batch JSON manifest with SHA-256 and Git digests."
+  "archiveStorage": "First 33 new archives in existing ZIP; all 210 in pinned batch JSON manifest with SHA-256 and Git digests.",
+  "registryHoldPixelProbe": {
+    "path": "qa/final-sprite-completion/REGISTRY_HOLD_PIXEL_PROBE_WAIL_FAMILY.json",
+    "blob": "40195318471f55f3e28eacd71f1d98abaaf87286",
+    "rows": [
+      {
+        "artworkKey": "wailmer-alternate-form-1|gitblob:3a5b7da3d29d1b5c26c57613924db1233188caf9",
+        "decision": "keep",
+        "statusByView": {
+          "shinyFront": "PALETTE_HOLD",
+          "shinyBack": "PIXEL_CANDIDATE",
+          "front": "PALETTE_HOLD",
+          "back": "PIXEL_CANDIDATE"
+        }
+      },
+      {
+        "artworkKey": "wailord-alternate-form-1|gitblob:223044ea3bab61de68a33089f5fa5a30ae2e9432",
+        "decision": "keep",
+        "statusByView": {
+          "front": "PIXEL_CANDIDATE",
+          "shinyFront": "PIXEL_CANDIDATE",
+          "shinyBack": "OVERSIZE_HOLD",
+          "back": "OVERSIZE_HOLD"
+        }
+      }
+    ]
+  }
 }
