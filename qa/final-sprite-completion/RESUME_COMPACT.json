@@ -48,14 +48,14 @@
     "sourceQuartetsRecovered": 0
   },
   "next": {
-    "cohort": "NATIVE_PALETTE_AND_RESOURCE_ADAPTER",
-    "firstName": "Build isolated native palette/resource adapter and host compatibility tests; investigate safe palette capacity and generated icon candidate distinction; no production integration",
-    "offset": 0,
-    "eligible": 0,
+    "cohort": "NATIVE_SCREEN_RESOURCE_CONTRACT_AND_GENERATED_ICON_SCREEN",
+    "firstName": "Audit actual party/PC screen OBJ reservation and mapping, develop isolated resource container validation and continue generated icon screen from offset 10",
+    "offset": 10,
+    "eligible": 336,
     "priorManifestRemainingUntested": 0,
     "completedBulkOffset": 200
   },
-  "policy": "Offline QA only; no production IDs, main changes, ROM changes, invented artwork or approvals. Preserve Delta Flygon unapproved. Check latest branch head and reconcile any batches after checkpoint before resuming. All ordinary conversions and prior-manifest retests are exhausted; no retest repetition without a new lossless method or original source. Release 9 offline lock does not establish native game readiness; do not repeat exhausted source or scale searches unless new evidence exists. Release 10: all 417 accessible archive binaries and 1668 resource member pairs verified; nine historical binary locators remain unresolved. Symbolic handles only; no production integration. Release 11 adds eight offline icon layout candidates and tested symbolic route gates; no native runtime or approval inferred. Release 12 completed eligible original icon inventory scan, with 66 offline candidate icons and one 16-color hold. Native bank allocation and runtime remain gated.",
+  "policy": "Offline QA only; no production IDs, main changes, ROM changes, invented artwork or approvals. Preserve Delta Flygon unapproved. Check latest branch head and reconcile any batches after checkpoint before resuming. All ordinary conversions and prior-manifest retests are exhausted; no retest repetition without a new lossless method or original source. Release 9 offline lock does not establish native game readiness; do not repeat exhausted source or scale searches unless new evidence exists. Release 10: all 417 accessible archive binaries and 1668 resource member pairs verified; nine historical binary locators remain unresolved. Symbolic handles only; no production integration. Release 11 adds eight offline icon layout candidates and tested symbolic route gates; no native runtime or approval inferred. Release 12 completed eligible original icon inventory scan, with 66 offline candidate icons and one 16-color hold. Native bank allocation and runtime remain gated. Release 13 adds host-only native resource staging and two exact experimental Lilleo payloads; generated candidate QA separate from original artwork approval.",
   "archiveStorage": "First 33 new archives in existing ZIP; all 210 in pinned batch JSON manifest with SHA-256 and Git digests.",
   "registryHoldPixelProbe": {
     "path": "qa/final-sprite-completion/REGISTRY_HOLD_PIXEL_PROBE_WAIL_FAMILY.json",
@@ -281,6 +281,54 @@
       "One shiny Lilleo icon has 16 opaque RGB555 colors; 4bpp transparency leaves 15. No recolor approved.",
       "29 symbolic palettes are greedy candidates, not native bank allocations. All 66 candidate tiles verified through symbolic palette roundtrip; upstream cell/animation/palette/routing blobs re-read; no native execution.",
       "147 source icon files excluded by current routing eligibility; 9 missing archive binaries and 21 registry holds unchanged. No new recovery evidence."
+    ]
+  },
+  "release13": {
+    "evidenceCommit": "66723888febbbf0c3c6964de02d7a820f8a1091c",
+    "evidence": {
+      "r13_native_resource_adapter.js": "1314133d85ad0e6e80b61c99a55121d067db9c61",
+      "r13_native_resource_adapter_tests.js": "f5cf4293284936d41269b7b8065313e0ffefd8c0",
+      "R13_ADAPTER_HOST_RESULTS.json": "1fab115179a927aa8e09706aa6c7774ba53f2851",
+      "R13_LILLEO_LOSSLESS_ALTERNATIVES.json": "ab806ce3551dbd29b486f769bf0d5f6ec6929c0f",
+      "R13_LILLEO_SPLIT_4BPP.json": "8bcee12f4279dd1646f5949e25e25886b4693fee",
+      "R13_GENERATED_ICONS_01.json": "29b0f9ef1a35842dee386337da2546cf0fbf2eec",
+      "R13_NATIVE_STATIC_CONTRACT.json": "5f733acd78e11119bbad2fc764ab793affb16d51"
+    },
+    "summary": {
+      "originalIconCandidates": 66,
+      "originalIconStandard4bppHold": 1,
+      "lilleoOfflineExperimentalRoutes": 2,
+      "lilleoNativeApproved": false,
+      "adapterAssetsTested": 66,
+      "adapterPositiveTests": 72,
+      "adapterNegativeTests": 11,
+      "corruptAssetRejected": 1,
+      "standardObjPaletteSlotsPerEngine": 16,
+      "exampleThreeReservedMaxCustomSlots": 13,
+      "symbolicBanks": 29,
+      "generatedInventory": 382,
+      "generatedEligible": 346,
+      "generatedTested": 10,
+      "generatedTechnicalPasses": 10,
+      "generatedUnapproved": true,
+      "generatedNextOffset": 10,
+      "verifiedArchiveBinaries": 417,
+      "missingHistoricalArchiveBinaries": 9,
+      "registryHoldsRemaining": 21,
+      "nativeCompilerVerified": false,
+      "nativeEmulatorVerified": false,
+      "mainUnchanged": true
+    },
+    "mainPins": {
+      "Sprites": "f15c4671bf7afb15450fc7801bde17aefcdc4f7e",
+      "Mercury-redux-dex": "faa7cb4016d8030fb4661b49114352d79cac7944",
+      "platinum-modern-ds": "5525e961a1fb98c62bd53bc4a27b0276a39f6719"
+    },
+    "limitations": [
+      "Adapter is executable host model staging raw character/palette payloads, not native NCGR/NCLR loader or VBlank implementation. Example 3 reserved slots and 32KiB tile budget are hypothetical, actual screen reservations unverified.",
+      "Lilleo 8bpp and four-object split 4bpp are exact RGB555/alpha experimental payloads only; no original edited or production route cleared.",
+      "Generated candidates are pre-existing derived icons, tested separately, no approval. 336 eligible candidates remain untested in R13 inventory.",
+      "No new evidence for nine missing archives or 21 registry holds. Canonical registry and main pins preserved, native compatibility unverified."
     ]
   }
 }
