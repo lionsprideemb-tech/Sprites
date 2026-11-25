@@ -1,0 +1,73 @@
+{
+  "schema": "mercury-r18-palette-window-host-tests-v1",
+  "baseline": "dfa2445e2608a6b321a3b9ebad9d0e14ebb0da63",
+  "inputBlobs": {
+    "pkg": "44df3622141699c68999cd3ad602d31cc82052d8",
+    "auth": "a54bddf2f88402b869e0418ff8fce4ea7f5dd9f7",
+    "contract": "cd4aa561f244c2f4dfdee0c359f61e02e8cb9b4a"
+  },
+  "summary": {
+    "strictCandidateRejections": 824,
+    "strictCanonicalPasses": 66,
+    "hypotheticalSingleCandidatePasses": 824,
+    "actualCandidateSelectionPasses": 412,
+    "exactBankSharePasses": 2,
+    "negativeTests": 21,
+    "windowResults": {
+      "party_6": {
+        "windows": 407,
+        "pass": 407,
+        "hold": 0,
+        "minDistinctBanks": 2,
+        "maxDistinctBanks": 6,
+        "experimentalCapacity": 9
+      },
+      "pc_3": {
+        "windows": 410,
+        "pass": 76,
+        "hold": 334,
+        "minDistinctBanks": 2,
+        "maxDistinctBanks": 6,
+        "experimentalCapacity": 5
+      },
+      "pc_6": {
+        "windows": 407,
+        "pass": 8,
+        "hold": 399,
+        "minDistinctBanks": 4,
+        "maxDistinctBanks": 12,
+        "experimentalCapacity": 5
+      },
+      "pc_30": {
+        "windows": 383,
+        "pass": 0,
+        "hold": 383,
+        "minDistinctBanks": 22,
+        "maxDistinctBanks": 60,
+        "experimentalCapacity": 5
+      },
+      "pc_60": {
+        "windows": 353,
+        "pass": 0,
+        "hold": 353,
+        "minDistinctBanks": 48,
+        "maxDistinctBanks": 120,
+        "experimentalCapacity": 5
+      }
+    },
+    "scrollSteps": 1960,
+    "scrollSuccess": 491,
+    "scrollExhaustion": 1469,
+    "cleanupPasses": 4,
+    "atomicFailureChecks": 1469,
+    "canonicalRouteChecks": 1302
+  },
+  "productionAllowed": false,
+  "limitations": [
+    "Host JavaScript executed actual pinned candidate palettes and authority records, not native SDK or OAM hardware.",
+    "Strict mode has zero verified free slots; experimental mode explicitly simulates all unknown slots as free, which is NOT authorization to use them.",
+    "PC experimental allocator assigns exact normal/shaded banks independently; would require explicit engine route changes, not vanilla fixed base offsets.",
+    "Full palette arrays share only on exact equality; no recolor, remapping, or fallback art.",
+    "Sliding windows are deterministic contiguous manifest windows, not actual user parties or box composition; failure keeps prior state intact."
+  ]
+}
