@@ -48,8 +48,8 @@
     "sourceQuartetsRecovered": 0
   },
   "next": {
-    "cohort": "OFFLINE_DS_DEPENDENCY_RECOVERY_PAUSED",
-    "firstName": "Normal R32 paused. Resume offline DS only with genuinely new authorized dependency ingress or complete platform-compatible offline bundle; verify bytes and closure, restore isolated toolchain and run compiler/emulator smoke. No paid runs.",
+    "cohort": "OFFLINE_DS_AWAIT_USER_WHEEL",
+    "firstName": "Await exact official py-desmume 0.0.9 CPython 3.13 Linux x86_64 wheel or single-wheel ZIP. Verify SHA-256 and execute isolated emulator initialization, then plan remaining dependency closure. R32 paused.",
     "offset": 346,
     "eligible": 0,
     "priorManifestRemainingUntested": 0,
@@ -1374,6 +1374,18 @@
       "Recovery script verifies input packages and compiles existing tests; does not install packages or implement full bootstrap.",
       "No new dependency binaries recovered. Missing package network ingress and dependency closure remain actual blockers.",
       "No external environment or new service account authorized; no CI invoked. No emulator installed or smoke executed."
-    ]
+    ],
+    "iphoneIntake": {
+      "status": "AWAITING_OFFICIAL_WHEEL_ATTACHMENT",
+      "evidenceCommit": "8910d3793d900ade9882384230321d39ecb9be30",
+      "evidenceBlob": "ace6837dfd6ab92f122f7e6a13efcaee7540900d",
+      "scriptBlob": "4e1f8f0e191df4cb4dc8a60641f45295f616b6e3",
+      "negativeIntakeTests": 7,
+      "actualBinariesRecovered": 0,
+      "emulatorVerified": false,
+      "meson": "1.12.0",
+      "metroskrew": "0.1.3",
+      "productionAllowed": false
+    }
   }
 }
