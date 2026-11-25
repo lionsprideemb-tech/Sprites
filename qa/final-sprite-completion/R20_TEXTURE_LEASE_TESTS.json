@@ -1,0 +1,53 @@
+{
+  "schema": "mercury-r20-preview-lease-host-v1",
+  "baseline": "6cf254f7cf63e2b5c62566767a5b57f95130819d",
+  "inputs": {
+    "stage": [
+      "b75736b96b4db8fd4af989e14759d70dc9909907",
+      "c84bc42eb9f7d4996a072c8f7b1a2c9c1c9dc244",
+      "25874e0e9d4057e192fe9311ea198bcdb83e0bf2",
+      "c9cb60ad81b0b203b729a5e62f46db23733ac8da"
+    ],
+    "pal": "44df3622141699c68999cd3ad602d31cc82052d8",
+    "auth": "a54bddf2f88402b869e0418ff8fce4ea7f5dd9f7"
+  },
+  "summary": {
+    "assets": 412,
+    "pixelChecks": 843776,
+    "strictReject": 412,
+    "windows": {
+      "30": {
+        "count": 383,
+        "pass": 383,
+        "maxT": 15360,
+        "maxP": 1920,
+        "previewReservedT": 32768,
+        "previewReservedP": 192
+      },
+      "60": {
+        "count": 353,
+        "pass": 353,
+        "maxT": 30720,
+        "maxP": 3840,
+        "previewReservedT": 32768,
+        "previewReservedP": 192
+      }
+    },
+    "transfers": 93299,
+    "transferBytes": 18865408,
+    "protectedByteChecks": 37936960,
+    "selectionChecks": 33494,
+    "scrollTransitions": 8,
+    "scrollUpdates": 240,
+    "finalSnaps": 8,
+    "negative": 8,
+    "cleanup": 2
+  },
+  "limitations": [
+    "Experimental pool assumes everything beyond default preview ranges is available; other native allocations not proven absent. Strict mode denies all custom allocations.",
+    "Preview sentinel bytes are synthetic; no native preview graphics loaded. Palette reservation conservatively covers six CPU palette banks (192 bytes), default VRAM transfer four banks (128 bytes).",
+    "Host transfer simulation is atomic by prevalidation, not native DMA synchronization; no actual UI draw, GX texture rasterization, depth/priority or scroll task interleaving verified.",
+    "Fixed-point BG offset sequence follows pinned arithmetic and final snap, not the complete asynchronous sprite column lifecycle. Selection uses preloaded palette states."
+  ],
+  "productionAllowed": false
+}
