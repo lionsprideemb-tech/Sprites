@@ -48,14 +48,14 @@
     "sourceQuartetsRecovered": 0
   },
   "next": {
-    "cohort": "FINAL_ICON_IDENTITY_AND_NATIVE_RESOURCE_HANDOFF",
-    "firstName": "Consolidate all 346 generated technical passes against exact original icon provenance, prepare per-screen 512-byte PC and 1024-byte party staging, and verify full resource contract without approvals or native production IDs",
+    "cohort": "NATIVE_ICON_PALETTE_ALLOCATION_AND_ACCEPTANCE",
+    "firstName": "Investigate exact native per-screen palette reservations and normal/shaded routing; verify staged payloads with independent native tooling if available; reconcile source authority and registry holds only on new evidence.",
     "offset": 346,
     "eligible": 0,
     "priorManifestRemainingUntested": 0,
     "completedBulkOffset": 200
   },
-  "policy": "Offline QA only; no production IDs, main changes, ROM changes, invented artwork or approvals. Preserve Delta Flygon unapproved. Check latest branch head and reconcile any batches after checkpoint before resuming. All ordinary conversions and prior-manifest retests are exhausted; no retest repetition without a new lossless method or original source. Release 9 offline lock does not establish native game readiness; do not repeat exhausted source or scale searches unless new evidence exists. Release 10: all 417 accessible archive binaries and 1668 resource member pairs verified; nine historical binary locators remain unresolved. Symbolic handles only; no production integration. Release 11 adds eight offline icon layout candidates and tested symbolic route gates; no native runtime or approval inferred. Release 12 completed eligible original icon inventory scan, with 66 offline candidate icons and one 16-color hold. Native bank allocation and runtime remain gated. Release 13 adds host-only native resource staging and two exact experimental Lilleo payloads; generated candidate QA separate from original artwork approval. Release 14 adds 84 separate generated icon technical passes and 95 host-validated prototype containers; no production bindings or runtime acceptance. Release 15 completed all 346 eligible generated icon technical tests; generated art remains unapproved. Exact pinned PC audit and independently compiled host C checker persisted; no native runtime acceptance.",
+  "policy": "Offline QA only; no production IDs, main changes, ROM changes, invented artwork or approvals. Preserve Delta Flygon unapproved. Check latest branch head and reconcile any batches after checkpoint before resuming. All ordinary conversions and prior-manifest retests are exhausted; no retest repetition without a new lossless method or original source. Release 9 offline lock does not establish native game readiness; do not repeat exhausted source or scale searches unless new evidence exists. Release 10: all 417 accessible archive binaries and 1668 resource member pairs verified; nine historical binary locators remain unresolved. Symbolic handles only; no production integration. Release 11 adds eight offline icon layout candidates and tested symbolic route gates; no native runtime or approval inferred. Release 12 completed eligible original icon inventory scan, with 66 offline candidate icons and one 16-color hold. Native bank allocation and runtime remain gated. Release 13 adds host-only native resource staging and two exact experimental Lilleo payloads; generated candidate QA separate from original artwork approval. Release 14 adds 84 separate generated icon technical passes and 95 host-validated prototype containers; no production bindings or runtime acceptance. Release 15 completed all 346 eligible generated icon technical tests; generated art remains unapproved. Exact pinned PC audit and independently compiled host C checker persisted; no native runtime acceptance. Release 16 all 412 raw icon payloads staged and host SHA-256 verified; 381 artwork keys, no original/generated exact-key or decoded-pixel matches; no native palette slots or production assignments, generated art unapproved.",
   "archiveStorage": "First 33 new archives in existing ZIP; all 210 in pinned batch JSON manifest with SHA-256 and Git digests.",
   "registryHoldPixelProbe": {
     "path": "qa/final-sprite-completion/REGISTRY_HOLD_PIXEL_PROBE_WAIL_FAMILY.json",
@@ -443,6 +443,48 @@
       "Pinned PC implementation uses 512-byte first-frame character loads and normal/shaded palettes at offsets 2/6; other reserved palettes still unverified.",
       "Independent compiled host C checker passed one actual NCGR/NCLR pair and 28 corruptions, not native compiler or SDK acceptance. GCC and libpng present, nitrogfx/ARM compiler/melonDS absent, public upstream network checkout blocked by DNS.",
       "No new evidence for nine archive binaries or 21 registry holds; Lilleo remains experimental."
+    ]
+  },
+  "release16": {
+    "evidenceCommit": "2571e38848f8d274483d980d5a70ed1353bf0a22",
+    "evidenceBlob": "34cbf81f4611998934e0d80a6cb446cd13a90df1",
+    "stageBlobs": {
+      "qa/final-sprite-completion/R16_ICON_STAGE_01.json": "b75736b96b4db8fd4af989e14759d70dc9909907",
+      "qa/final-sprite-completion/R16_ICON_STAGE_02.json": "c84bc42eb9f7d4996a072c8f7b1a2c9c1c9dc244",
+      "qa/final-sprite-completion/R16_ICON_STAGE_03.json": "25874e0e9d4057e192fe9311ea198bcdb83e0bf2",
+      "qa/final-sprite-completion/R16_ICON_STAGE_04.json": "c9cb60ad81b0b203b729a5e62f46db23733ac8da"
+    },
+    "summary": {
+      "original": 66,
+      "generated": 346,
+      "staged": 412,
+      "uniqueArtworkKeys": 381,
+      "uniqueDecodedRgb555AlphaImages": 412,
+      "exactArtworkPairs": 0,
+      "sameArtworkAndPixels": 0,
+      "sameArtworkDifferentPixels": 0,
+      "crossIdentityPixelPairs": 0,
+      "generatedWithOriginalIdentity": 0,
+      "duplicatePixelGroups": 0,
+      "decodedPixels": 843776,
+      "partyPayloadBytes": 421888,
+      "pcPayloadBytes": 210944,
+      "priorTileDigestsReverified": 412,
+      "pcDigestsComputed": 412,
+      "negativeTests": 8,
+      "resolvedPriorTransientHolds": 1,
+      "nativeSlotsAllocated": 0,
+      "productionBindings": 0
+    },
+    "mainPins": {
+      "Sprites": "f15c4671bf7afb15450fc7801bde17aefcdc4f7e",
+      "Mercury-redux-dex": "faa7cb4016d8030fb4661b49114352d79cac7944",
+      "platinum-modern-ds": "5525e961a1fb98c62bd53bc4a27b0276a39f6719"
+    },
+    "limitations": [
+      "Compared prior packed DS RGB555/alpha images, not fresh source PNG RGBA; no visual/source approval inferred.",
+      "Reverified prior tile SHA-256 using host JS and tested PC first-frame bytes. Raw staged payloads are not native NCGR/NCLR or game runtime acceptance.",
+      "Actual normal/shaded palette allocation remains unresolved; slots null. No new production bindings. Lilleo experimental."
     ]
   }
 }
