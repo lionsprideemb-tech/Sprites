@@ -1,0 +1,403 @@
+{
+  "schema": "mercury-r11-symbolic-graphics-bridge-qa-v1",
+  "baseline": "6c1919c633e05e202b09d7abd560f7cb9297758c",
+  "handoffBlob": "8d66a6d81d9144019f5384c73dee30eb872192f6",
+  "routeBlobs": [
+    "db1da64fa76cf4cb87d8f6d1ad19d4b59b529e54",
+    "1a0e97508062621396089228bb2bb32c989a9c6c",
+    "40a5e84b12bf03aacbd4339dc848331b0ebae933",
+    "c83ab8fb3385991795932f8bd4f44229d3cc605e"
+  ],
+  "diagnostics": [
+    {
+      "path": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Icons/BASCULIN_2.png",
+      "sourceBlob": "358bb2287ce65324c62736dcbde6b8508469a913",
+      "differences": [
+        {
+          "x": 33,
+          "y": 27,
+          "referenceRGBA": "fffbfbfd",
+          "actualRGBA": "ffffffff",
+          "reference555": 32767,
+          "actual555": 32767,
+          "alphaMismatch": false
+        },
+        {
+          "x": 97,
+          "y": 27,
+          "referenceRGBA": "fffbfbfd",
+          "actualRGBA": "ffffffff",
+          "reference555": 32767,
+          "actual555": 32767,
+          "alphaMismatch": false
+        },
+        {
+          "x": 28,
+          "y": 29,
+          "referenceRGBA": "ffffffff",
+          "actualRGBA": "fff9f9f9",
+          "reference555": 32767,
+          "actual555": 32767,
+          "alphaMismatch": false
+        },
+        {
+          "x": 29,
+          "y": 29,
+          "referenceRGBA": "ffffffff",
+          "actualRGBA": "fff9f9f9",
+          "reference555": 32767,
+          "actual555": 32767,
+          "alphaMismatch": false
+        },
+        {
+          "x": 92,
+          "y": 29,
+          "referenceRGBA": "ffffffff",
+          "actualRGBA": "fff9f9f9",
+          "reference555": 32767,
+          "actual555": 32767,
+          "alphaMismatch": false
+        },
+        {
+          "x": 93,
+          "y": 29,
+          "referenceRGBA": "ffffffff",
+          "actualRGBA": "fff9f9f9",
+          "reference555": 32767,
+          "actual555": 32767,
+          "alphaMismatch": false
+        }
+      ],
+      "rgbaMismatch": 6,
+      "rgb555Mismatch": 0,
+      "status": "HOLD_NO_ART_CHANGE_AUTHORIZED"
+    },
+    {
+      "path": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Icons shiny/BASCULIN_2.png",
+      "sourceBlob": "c579471fcea00d4ffc43cd383aadc6fbd70a185c",
+      "differences": [
+        {
+          "x": 33,
+          "y": 27,
+          "referenceRGBA": "fffbfbfd",
+          "actualRGBA": "ffffffff",
+          "reference555": 32767,
+          "actual555": 32767,
+          "alphaMismatch": false
+        },
+        {
+          "x": 97,
+          "y": 27,
+          "referenceRGBA": "fffbfbfd",
+          "actualRGBA": "ffffffff",
+          "reference555": 32767,
+          "actual555": 32767,
+          "alphaMismatch": false
+        },
+        {
+          "x": 28,
+          "y": 29,
+          "referenceRGBA": "ffffffff",
+          "actualRGBA": "fff9f9f9",
+          "reference555": 32767,
+          "actual555": 32767,
+          "alphaMismatch": false
+        },
+        {
+          "x": 29,
+          "y": 29,
+          "referenceRGBA": "ffffffff",
+          "actualRGBA": "fff9f9f9",
+          "reference555": 32767,
+          "actual555": 32767,
+          "alphaMismatch": false
+        },
+        {
+          "x": 92,
+          "y": 29,
+          "referenceRGBA": "ffffffff",
+          "actualRGBA": "fff9f9f9",
+          "reference555": 32767,
+          "actual555": 32767,
+          "alphaMismatch": false
+        },
+        {
+          "x": 93,
+          "y": 29,
+          "referenceRGBA": "ffffffff",
+          "actualRGBA": "fff9f9f9",
+          "reference555": 32767,
+          "actual555": 32767,
+          "alphaMismatch": false
+        }
+      ],
+      "rgbaMismatch": 6,
+      "rgb555Mismatch": 0,
+      "status": "HOLD_NO_ART_CHANGE_AUTHORIZED"
+    }
+  ],
+  "holds": [
+    {
+      "artworkKey": "absol-mega-z|pixelsha256:87c2b9e8499af78e7c0a863fbaeda14ec3c393e229d7d36cf7b40330faaeb999",
+      "routingState": "HOLD_NO_EXACT_REGISTRY_JOIN",
+      "reviewCandidates": [],
+      "registryStatus": "PROTECTED_HISTORICAL_FORM_ROUTE_CANDIDATE",
+      "protectedFormAliases": [
+        "SPECIES_ABSOL_MEGA_Z"
+      ],
+      "placementRoles": [],
+      "disposition": "RETAIN_HOLD_NO_NEW_EXACT_MEMBERSHIP_AUTHORITY"
+    },
+    {
+      "artworkKey": "arcanine-mega|pixelsha256:f7fc0934a11f8c8b58c8bc1d6b04cb9de9b0938e3941d147599c993071a1a491",
+      "routingState": "HOLD_MULTIPLE_HISTORICAL_IDENTITIES",
+      "reviewCandidates": [
+        {
+          "reviewId": "R0077",
+          "status": "HOLD_DUPLICATE_DISPLAY_IDENTITY",
+          "typeStatus": null,
+          "placementOverlapKeys": []
+        },
+        {
+          "reviewId": "R0078",
+          "status": "HOLD_DUPLICATE_DISPLAY_IDENTITY",
+          "typeStatus": null,
+          "placementOverlapKeys": []
+        }
+      ],
+      "registryStatus": null,
+      "protectedFormAliases": [],
+      "placementRoles": [],
+      "disposition": "RETAIN_HOLD_NO_NEW_EXACT_MEMBERSHIP_AUTHORITY"
+    },
+    {
+      "artworkKey": "articuno-galarian|pixelsha256:d2a6b5762cf3ae0b7c4c0c2e63fca8151ae55c572a59645f9a169dd7914f371e",
+      "routingState": "HOLD_NO_EXACT_REGISTRY_JOIN",
+      "reviewCandidates": [],
+      "registryStatus": "PROTECTED_HISTORICAL_FORM_ROUTE_CANDIDATE",
+      "protectedFormAliases": [
+        "SPECIES_ARTICUNO_GALAR"
+      ],
+      "placementRoles": [],
+      "disposition": "RETAIN_HOLD_NO_NEW_EXACT_MEMBERSHIP_AUTHORITY"
+    },
+    {
+      "artworkKey": "baxcalibur-mega|pixelsha256:d8fb2814f78175ed44956235a5c360a2cb706dffd910282649991d215dc75663",
+      "routingState": "HOLD_NO_EXACT_REGISTRY_JOIN",
+      "reviewCandidates": [],
+      "registryStatus": "PROTECTED_HISTORICAL_FORM_ROUTE_CANDIDATE",
+      "protectedFormAliases": [
+        "SPECIES_BAXCALIBUR_MEGA"
+      ],
+      "placementRoles": [],
+      "disposition": "RETAIN_HOLD_NO_NEW_EXACT_MEMBERSHIP_AUTHORITY"
+    },
+    {
+      "artworkKey": "carnivine-bluetowel-alternate-form-form-1|gitblob:0877e2f0f44bca1f8bada73eb6a387980897e5d8",
+      "routingState": "HOLD_NO_EXACT_REGISTRY_JOIN",
+      "reviewCandidates": [],
+      "registryStatus": "ALTERNATIVE_ART_IDENTITY_HOLD",
+      "protectedFormAliases": [],
+      "placementRoles": [],
+      "disposition": "RETAIN_HOLD_NO_NEW_EXACT_MEMBERSHIP_AUTHORITY"
+    },
+    {
+      "artworkKey": "castform-4|pixelsha256:c22dc8e2682c34b2980c242541da06115f759e8675472ee2efc18e3e813e7f7f",
+      "routingState": "HOLD_NO_EXACT_REGISTRY_JOIN",
+      "reviewCandidates": [],
+      "registryStatus": "ARTWORK_ONLY_NO_EXACT_PLACEMENT",
+      "protectedFormAliases": [],
+      "placementRoles": [],
+      "disposition": "RETAIN_HOLD_NO_NEW_EXACT_MEMBERSHIP_AUTHORITY"
+    },
+    {
+      "artworkKey": "castform-5|pixelsha256:3d8893029b2b05b6f58ef1ba7bf7688dc561aac4c3a392488030b454cbaf767c",
+      "routingState": "HOLD_NO_EXACT_REGISTRY_JOIN",
+      "reviewCandidates": [],
+      "registryStatus": "ARTWORK_ONLY_NO_EXACT_PLACEMENT",
+      "protectedFormAliases": [],
+      "placementRoles": [],
+      "disposition": "RETAIN_HOLD_NO_NEW_EXACT_MEMBERSHIP_AUTHORITY"
+    },
+    {
+      "artworkKey": "castform-6|pixelsha256:f8b49c9cc4012a4eece6a2c450e64fa57fb8b67a4c04948f8fcfea77019e7cda",
+      "routingState": "HOLD_NO_EXACT_REGISTRY_JOIN",
+      "reviewCandidates": [],
+      "registryStatus": "ARTWORK_ONLY_NO_EXACT_PLACEMENT",
+      "protectedFormAliases": [],
+      "placementRoles": [],
+      "disposition": "RETAIN_HOLD_NO_NEW_EXACT_MEMBERSHIP_AUTHORITY"
+    },
+    {
+      "artworkKey": "corsola-galarian|pixelsha256:2b038eb500279e10d40b1ad251f18edc1c478a397d614734fc16f9940304624d",
+      "routingState": "HOLD_NO_EXACT_REGISTRY_JOIN",
+      "reviewCandidates": [],
+      "registryStatus": "PROTECTED_HISTORICAL_FORM_ROUTE_CANDIDATE",
+      "protectedFormAliases": [
+        "SPECIES_CORSOLA_GALAR"
+      ],
+      "placementRoles": [],
+      "disposition": "RETAIN_HOLD_NO_NEW_EXACT_MEMBERSHIP_AUTHORITY"
+    },
+    {
+      "artworkKey": "doperami|pixelsha256:8b9a19ae2e2aa0933e93f151bec8c63b5f3c279ab31694ba1f6b480cc4071c66",
+      "routingState": "HOLD_NO_EXACT_REGISTRY_JOIN",
+      "reviewCandidates": [],
+      "registryStatus": "ARTWORK_ONLY_NO_EXACT_PLACEMENT",
+      "protectedFormAliases": [],
+      "placementRoles": [],
+      "disposition": "RETAIN_HOLD_NO_NEW_EXACT_MEMBERSHIP_AUTHORITY"
+    },
+    {
+      "artworkKey": "dynabit|pixelsha256:c6e06ba337c4d1bc22cebb84e0b00a37f731322a5600155a8bf1a4934cfe326e",
+      "routingState": "HOLD_NO_EXACT_REGISTRY_JOIN",
+      "reviewCandidates": [],
+      "registryStatus": "ARTWORK_ONLY_NO_EXACT_PLACEMENT",
+      "protectedFormAliases": [],
+      "placementRoles": [],
+      "disposition": "RETAIN_HOLD_NO_NEW_EXACT_MEMBERSHIP_AUTHORITY"
+    },
+    {
+      "artworkKey": "gabite-bluetowel-alternate-forms-form-2|gitblob:4375a9c1c8ecdf63dc013934afc954b6ee58b2c1",
+      "routingState": "HOLD_NO_EXACT_REGISTRY_JOIN",
+      "reviewCandidates": [],
+      "registryStatus": "ALTERNATIVE_ART_IDENTITY_HOLD",
+      "protectedFormAliases": [],
+      "placementRoles": [],
+      "disposition": "RETAIN_HOLD_NO_NEW_EXACT_MEMBERSHIP_AUTHORITY"
+    },
+    {
+      "artworkKey": "garchomp-alternate-form-2|gitblob:96b739b22e37382b2c0a421f894293e95ce31380",
+      "routingState": "HOLD_NO_EXACT_REGISTRY_JOIN",
+      "reviewCandidates": [],
+      "registryStatus": "ALTERNATIVE_ART_IDENTITY_HOLD",
+      "protectedFormAliases": [],
+      "placementRoles": [],
+      "disposition": "RETAIN_HOLD_NO_NEW_EXACT_MEMBERSHIP_AUTHORITY"
+    },
+    {
+      "artworkKey": "garchomp-alternate-mega-form-3|gitblob:9566d16dad74ebbd4328956eb1d0091e12660a49",
+      "routingState": "HOLD_NO_EXACT_REGISTRY_JOIN",
+      "reviewCandidates": [],
+      "registryStatus": "ALTERNATIVE_ART_IDENTITY_HOLD",
+      "protectedFormAliases": [],
+      "placementRoles": [],
+      "disposition": "RETAIN_HOLD_NO_NEW_EXACT_MEMBERSHIP_AUTHORITY"
+    },
+    {
+      "artworkKey": "garchomp-mega-z|pixelsha256:03baa6f9614080306f2a6f3e6d5ab65d39dce4aed7b6f0a839653b1298f83818",
+      "routingState": "HOLD_NO_EXACT_REGISTRY_JOIN",
+      "reviewCandidates": [],
+      "registryStatus": "PROTECTED_HISTORICAL_FORM_ROUTE_CANDIDATE",
+      "protectedFormAliases": [
+        "SPECIES_GARCHOMP_MEGA_Z"
+      ],
+      "placementRoles": [],
+      "disposition": "RETAIN_HOLD_NO_NEW_EXACT_MEMBERSHIP_AUTHORITY"
+    },
+    {
+      "artworkKey": "gible-bluetowel-alternate-forms-form-2|gitblob:fd3419147466c422568cc3140abdb0886cb9e75c",
+      "routingState": "HOLD_NO_EXACT_REGISTRY_JOIN",
+      "reviewCandidates": [],
+      "registryStatus": "ALTERNATIVE_ART_IDENTITY_HOLD",
+      "protectedFormAliases": [],
+      "placementRoles": [],
+      "disposition": "RETAIN_HOLD_NO_NEW_EXACT_MEMBERSHIP_AUTHORITY"
+    },
+    {
+      "artworkKey": "golisopod-mega|pixelsha256:d91ed60fb7dd67eebf9153ceae11cc7d6b8f39b4117f4a83cb7d2b80b163dd82",
+      "routingState": "HOLD_NO_EXACT_REGISTRY_JOIN",
+      "reviewCandidates": [],
+      "registryStatus": "PROTECTED_HISTORICAL_FORM_ROUTE_CANDIDATE",
+      "protectedFormAliases": [
+        "SPECIES_GOLISOPOD_MEGA"
+      ],
+      "placementRoles": [],
+      "disposition": "RETAIN_HOLD_NO_NEW_EXACT_MEMBERSHIP_AUTHORITY"
+    },
+    {
+      "artworkKey": "lilligant-alternate-form-2|gitblob:85eb77e825627d80daddddb78fd30d7699487c78",
+      "routingState": "HOLD_NO_EXACT_REGISTRY_JOIN",
+      "reviewCandidates": [],
+      "registryStatus": "ALTERNATIVE_ART_IDENTITY_HOLD",
+      "protectedFormAliases": [],
+      "placementRoles": [],
+      "disposition": "RETAIN_HOLD_NO_NEW_EXACT_MEMBERSHIP_AUTHORITY"
+    },
+    {
+      "artworkKey": "lilligant-alternate-form-2|gitblob:e66c78562e4d3e9cedad4520db04a7b053906f7f",
+      "routingState": "HOLD_NO_EXACT_REGISTRY_JOIN",
+      "reviewCandidates": [],
+      "registryStatus": "ALTERNATIVE_ART_IDENTITY_HOLD",
+      "protectedFormAliases": [],
+      "placementRoles": [],
+      "disposition": "RETAIN_HOLD_NO_NEW_EXACT_MEMBERSHIP_AUTHORITY"
+    },
+    {
+      "artworkKey": "reuniclus-mega|pixelsha256:f50fb00ac39083297287d70b9bef76ee6ed470c44dccd6bbdf9f1f16d8a7b53e",
+      "routingState": "HOLD_MULTIPLE_HISTORICAL_IDENTITIES",
+      "reviewCandidates": [
+        {
+          "reviewId": "R0737",
+          "status": "HOLD_DUPLICATE_DISPLAY_IDENTITY",
+          "typeStatus": null,
+          "placementOverlapKeys": [
+            "reuniclus-redux-mega|pixelsha256:9543e0396e9bf0560c68d000747669863d511d24eac15fd39784d395f2442403"
+          ]
+        },
+        {
+          "reviewId": "R0738",
+          "status": "HOLD_DUPLICATE_DISPLAY_IDENTITY",
+          "typeStatus": null,
+          "placementOverlapKeys": [
+            "reuniclus-redux-mega|pixelsha256:9543e0396e9bf0560c68d000747669863d511d24eac15fd39784d395f2442403"
+          ]
+        }
+      ],
+      "registryStatus": null,
+      "protectedFormAliases": [],
+      "placementRoles": [],
+      "disposition": "RETAIN_HOLD_NO_NEW_EXACT_MEMBERSHIP_AUTHORITY"
+    },
+    {
+      "artworkKey": "toxtricity-mega|pixelsha256:132e48da18c4075ea18d439ee0a3d6930dc5a97bf6b846ff54ba2ac72221ebde",
+      "routingState": "HOLD_MULTIPLE_HISTORICAL_IDENTITIES",
+      "reviewCandidates": [
+        {
+          "reviewId": "R0901",
+          "status": "HOLD_DUPLICATE_DISPLAY_IDENTITY",
+          "typeStatus": null,
+          "placementOverlapKeys": []
+        },
+        {
+          "reviewId": "R0902",
+          "status": "HOLD_DUPLICATE_DISPLAY_IDENTITY",
+          "typeStatus": null,
+          "placementOverlapKeys": []
+        }
+      ],
+      "registryStatus": null,
+      "protectedFormAliases": [],
+      "placementRoles": [],
+      "disposition": "RETAIN_HOLD_NO_NEW_EXACT_MEMBERSHIP_AUTHORITY"
+    }
+  ],
+  "summary": {
+    "archiveRouteRecords": 417,
+    "memberPairsChecked": 1668,
+    "positiveQARouteRequests": 1584,
+    "negativeRequestsRejected": 1939,
+    "registryHolds": 21,
+    "canonicalSymbolsRejected": 1025
+  },
+  "main": {
+    "Sprites": "f15c4671bf7afb15450fc7801bde17aefcdc4f7e",
+    "Mercury-redux-dex": "faa7cb4016d8030fb4661b49114352d79cac7944",
+    "platinum-modern-ds": "5525e961a1fb98c62bd53bc4a27b0276a39f6719"
+  },
+  "productionAllowed": false,
+  "limitations": [
+    "Tests exercise pinned route metadata, not native engine or fresh archive bytes.",
+    "No new authoritative registry evidence or missing binary package located; no holds cleared."
+  ]
+}
