@@ -1,0 +1,23 @@
+{
+  "schema": "mercury-r12-host-test-v1",
+  "baseline": "79f15c647b8492feec50764ca17e2d378c9eb576",
+  "moduleBlob": "d419c9819360b487667c352c9315f8cb1413f251",
+  "testBlob": "bd47f0556470ff629476bd60455d45131a41a72f",
+  "handoffBlob": "8d66a6d81d9144019f5384c73dee30eb872192f6",
+  "routeBlobs": [
+    "db1da64fa76cf4cb87d8f6d1ad19d4b59b529e54",
+    "1a0e97508062621396089228bb2bb32c989a9c6c",
+    "40a5e84b12bf03aacbd4339dc848331b0ebae933",
+    "c83ab8fb3385991795932f8bd4f44229d3cc605e"
+  ],
+  "registryBlob": "6715f35fc91e7d524ac39d8fbb05499640ff09f0",
+  "result": {
+    "positive": 1584,
+    "negative": 2004,
+    "construct": 13,
+    "icon": 8
+  },
+  "execution": "host JavaScript, actual pinned manifests",
+  "nativeRuntime": false,
+  "productionAllowed": false
+}
