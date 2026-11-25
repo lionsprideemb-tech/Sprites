@@ -1,0 +1,75 @@
+{
+  "sourceRef": "45ed14104b70f9d02ac9cbea430d29394201f877",
+  "upstreamPaletteBlob": "65deabb632f60fe5518b161da7d1b1c978a69faf",
+  "reports": [
+    {
+      "artworkKey": "basstile-1|pixelsha256:36e9731d296bf8da027b1a60026acde14070f92ae8fd4686b99d13bf35ef970d",
+      "path": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Icons/BASSTILE_1.png",
+      "gitBlob": "a88748a7347b2c12ad6d9094b2852d703869614a",
+      "sha256": "d5b4f42632100a2b374336694e06bc13a855ad7d175a05515d88d5d22f943371",
+      "canvas": [
+        128,
+        64
+      ],
+      "opaqueRGB555": 9,
+      "partialAlpha": 0,
+      "eligibleExistingBanks": [],
+      "approved": false,
+      "factors": [
+        {
+          "factor": 2,
+          "dimensions": [
+            64,
+            32
+          ],
+          "mismatch": 0
+        },
+        {
+          "factor": 4,
+          "dimensions": [
+            32,
+            16
+          ],
+          "mismatch": 1824
+        }
+      ],
+      "nativeLayout32x64": false,
+      "approvedBinding": false
+    },
+    {
+      "artworkKey": "basstile-2|pixelsha256:c763a15e0209d1eb74518effe557265aaddf03498fbfc63d62a1493ddf6311c6",
+      "path": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Icons/BASSTILE_2.png",
+      "gitBlob": "b92b1494152f313b35107f8acefc6a485c0e0911",
+      "sha256": "e6e1f656654d25450ecd39ef800aad9a541a1d692f381a5f12d26771a5303604",
+      "canvas": [
+        128,
+        64
+      ],
+      "opaqueRGB555": 9,
+      "partialAlpha": 0,
+      "eligibleExistingBanks": [],
+      "approved": false,
+      "factors": [
+        {
+          "factor": 2,
+          "dimensions": [
+            64,
+            32
+          ],
+          "mismatch": 0
+        },
+        {
+          "factor": 4,
+          "dimensions": [
+            32,
+            16
+          ],
+          "mismatch": 1856
+        }
+      ],
+      "nativeLayout32x64": false,
+      "approvedBinding": false
+    }
+  ],
+  "production": false
+}
