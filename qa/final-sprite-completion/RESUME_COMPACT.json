@@ -48,14 +48,14 @@
     "sourceQuartetsRecovered": 0
   },
   "next": {
-    "cohort": "NATIVE_ICON_AND_RESOURCE_BRIDGE",
-    "firstName": "Expand exact icon layout conversion and native bridge; locate nine original archive binaries",
+    "cohort": "NATIVE_ICON_INVENTORY_AND_HOST_BRIDGE",
+    "firstName": "Expand original icon inventory and exact DS layout conversion; persist reusable fail-closed graphics bridge and host tests; investigate new evidence for held records",
     "offset": 0,
     "eligible": 0,
     "priorManifestRemainingUntested": 0,
     "completedBulkOffset": 200
   },
-  "policy": "Offline QA only; no production IDs, main changes, ROM changes, invented artwork or approvals. Preserve Delta Flygon unapproved. Check latest branch head and reconcile any batches after checkpoint before resuming. All ordinary conversions and prior-manifest retests are exhausted; no retest repetition without a new lossless method or original source. Release 9 offline lock does not establish native game readiness; do not repeat exhausted source or scale searches unless new evidence exists. Release 10: all 417 accessible archive binaries and 1668 resource member pairs verified; nine historical binary locators remain unresolved. Symbolic handles only; no production integration.",
+  "policy": "Offline QA only; no production IDs, main changes, ROM changes, invented artwork or approvals. Preserve Delta Flygon unapproved. Check latest branch head and reconcile any batches after checkpoint before resuming. All ordinary conversions and prior-manifest retests are exhausted; no retest repetition without a new lossless method or original source. Release 9 offline lock does not establish native game readiness; do not repeat exhausted source or scale searches unless new evidence exists. Release 10: all 417 accessible archive binaries and 1668 resource member pairs verified; nine historical binary locators remain unresolved. Symbolic handles only; no production integration. Release 11 adds eight offline icon layout candidates and tested symbolic route gates; no native runtime or approval inferred.",
   "archiveStorage": "First 33 new archives in existing ZIP; all 210 in pinned batch JSON manifest with SHA-256 and Git digests.",
   "registryHoldPixelProbe": {
     "path": "qa/final-sprite-completion/REGISTRY_HOLD_PIXEL_PROBE_WAIL_FAMILY.json",
@@ -193,6 +193,41 @@
       "Host gcc/clang/make/ninja available; ARM GCC, DS ROM tooling and emulator executables were not found on PATH. No native compiler or emulator acceptance claimed.",
       "Symbolic artwork handles are not production IDs; registry ambiguity, icon shared-bank routing, native runtime and save compatibility remain gated.",
       "No existing archive digests, historical artwork, votes or approved decisions changed."
+    ]
+  },
+  "release11": {
+    "evidenceCommit": "ea89955e136787a1b9318d7ec4e386345c3205ef",
+    "evidence": {
+      "R11_ICON_SHARED_PALETTE_QA.json": "1aa1a254111d335010ec07dda63984a05f071810",
+      "R11_GRAPHICS_BRIDGE_QA.json": "39f07704817eadb1857ec55a4f41d72f57293fa0",
+      "R11_RGB555_ICON_RESCUE.json": "e9fda1afc471ffe0fa7df29164d56262645d1101"
+    },
+    "summary": {
+      "originalIconFilesTested": 8,
+      "strictRgbaLayoutPasses": 6,
+      "rgb555ExactOnlyLayoutPasses": 2,
+      "newLayoutPasses": 6,
+      "cumulativeOriginalLayoutPasses": 8,
+      "sourcePixelsVerified": 65536,
+      "packedPixelsVerified": 16384,
+      "sharedSymbolicBanks": 2,
+      "sharedSymbolicBankRoutes": 6,
+      "basculinAdditionalSymbolicBanks": 1,
+      "productionIconBindings": 0,
+      "routeMetadataPairsChecked": 1668,
+      "positiveQARouteRequests": 1584,
+      "negativeRequestsRejected": 1939,
+      "registryHoldsRemaining": 21,
+      "verifiedArchiveBinaries": 417,
+      "missingHistoricalArchiveBinaries": 9,
+      "mainUnchanged": true,
+      "nativeCompilerVerified": false,
+      "nativeEmulatorVerified": false
+    },
+    "limitations": [
+      "Basculin normal and shiny have six RGBA mismatches each but zero RGB555/alpha mismatches; identical packed tile digest retained as two provenance records.",
+      "Graphics lookup tested in host JavaScript against verified metadata; not native runtime acceptance.",
+      "No new original archive package or authoritative registry join recovered; 21 registry holds and nine missing archives remain excluded from eligible graphics lookup."
     ]
   }
 }
