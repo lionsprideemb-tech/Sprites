@@ -1,0 +1,64 @@
+{
+  "schema": "mercury-r15-pinned-pc-and-independent-container-v1",
+  "baseline": "e2910d7aad7c264c1ae2037bbd83c63468eed839",
+  "upstreamRef": "c248fb3f8cc9934ded800e489567c5c0eeee92eb",
+  "pinnedPcSources": {
+    "src/applications/pc_boxes/ov19_021D61B0.c": "3d5d958211d73e173a382d1fe2cd1f61c8dffa15",
+    "src/applications/pc_boxes/ov19_021D79F8.c": "0e6fbaf5e0c2b171d3adebe63a8e8bbc9789ea98",
+    "src/applications/pc_boxes/ov19_021D8B54.c": "1025d99ed949dd44a9f5cee436c3c55799ac39ae",
+    "src/applications/pc_boxes/ov19_021DA270.c": "2b53038127ecd5b38929a73146e32d7eb95630e7"
+  },
+  "findings": {
+    "mainMapping": "1D 64K",
+    "subMapping": "1D 32K",
+    "mainObjKiB": 64,
+    "subObjKiB": 16,
+    "extendedObjPalettes": false,
+    "mainOam": 128,
+    "spriteListCapacity": 128,
+    "normalIconPaletteBase": 2,
+    "shadedIconPaletteBase": 6,
+    "canonicalThreeBankNormal": [
+      2,
+      3,
+      4
+    ],
+    "canonicalThreeBankShaded": [
+      6,
+      7,
+      8
+    ],
+    "otherSlotsUnknown": true,
+    "boxArrays": 2,
+    "iconsPerArray": 30,
+    "iconLoadBytes": 512,
+    "narcReadBytes": 640,
+    "notes": [
+      "PC uses only first 512 tile bytes; sets character mapping from current hardware. Two 30-slot arrays initialize and delete; scrolling uses VBlank task. Native code creates palette-tinted variants for multi-select, so treating custom bank allocation as a single palette per icon is insufficient for PC compatibility.",
+      "Source: ov19_021DA270.c lines 19-89,119-185,280-289; ov19_021D79F8.c lines 104-130,249-315; ov19_021D61B0.c lines 220-265,291-316,1531-1540."
+    ]
+  },
+  "independentHostC": {
+    "sourceBlob": "bb95b4dcc5dbc95893da02ad3973307f75d8fd98",
+    "sourceSha256": "533f1b56031880d0ec56e2e1b5aa4c5aae7206f26be3a11cd0aa3799d5b78a19",
+    "command": "gcc -std=c11 -Wall -Wextra -Werror -O2 r15_check.c -o r15_check; ./r15_check sample.ncgr sample.nclr",
+    "samplePath": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Icons shiny/CABATmA.png",
+    "sourceEvidenceBlob": "f42ffda997d9e352c0fda1d5cdbcd68a7ad05e10",
+    "ncgrSha256": "f1898deb977604853dc5993e868bc82ed5b75b490c01e6524842e05f1ad6b1ad",
+    "nclrSha256": "bacb689e6f6b8adda189e2b16d56d8bcd5de2ea604b2804309eb883a494445ab",
+    "output": "NCGR=1072 NCLR=72 pixels=2048 opaque=536 negative=28 PASS",
+    "samplePairs": 1,
+    "negativeTests": 28
+  },
+  "environment": {
+    "gcc": true,
+    "make": true,
+    "libpng": "1.6.48",
+    "nitrogfx": false,
+    "armCompiler": false,
+    "melonDS": false,
+    "publicUpstreamCheckout": "git ls-remote failed: Could not resolve host github.com"
+  },
+  "nativeRuntimeVerified": false,
+  "productionAllowed": false
+}
