@@ -1,0 +1,60 @@
+{
+  "schema": "mercury-r22-sdk-adapter-acceptance-v1",
+  "baseline": "583bd7dee7603f4e32546b0b31e7c51dd00d9d24",
+  "sourceBlob": "3e5114c02abf80c9ce1bc21c85378711cd2b6dd1",
+  "sourceSha256": "51857c276b36dc2bf87a6f5cd27f855c89388dcbcd0d660ed1fcfeab28ee70ba",
+  "tests": {
+    "hostCommand": "gcc -std=c11 -Wall -Wextra -Werror -O2 -DHOST_TEST r22_sdk_adapter.c -o host && ./host",
+    "hostOutput": "824 SDK mock sequences; 224128 owned bytes; 412 monotonic epochs PASS",
+    "syntheticInputs": true,
+    "nativeDefaultGate": "independent host link without SDK mocks; native-default rejects both transfer types",
+    "armOptimizedSha256": "2709449b0f4e3aef01fcdb7bcc4d0e725cea37099aafade106d4a26c1e714a94",
+    "armUnoptimizedSha256": "dc861beab056513f5cadcf091bdbd367d9aa3133ab5f95acf79917576b0cf2da",
+    "armCommand": "clang --target=arm-none-eabi -mcpu=arm946e-s -marm -ffreestanding -std=c11 -Wall -Wextra -Werror -O2/-O0 -c r22_sdk_adapter.c",
+    "armUnoptimizedUndefinedSDKSymbols": [
+      "DC_FlushRange",
+      "GX_BeginLoadTex",
+      "GX_LoadTex",
+      "GX_EndLoadTex",
+      "GX_BeginLoadTexPltt",
+      "GX_LoadTexPltt",
+      "GX_EndLoadTexPltt"
+    ],
+    "armExecuted": false,
+    "fullSDKLinked": false
+  },
+  "party": {
+    "upstreamRef": "c248fb3f8cc9934ded800e489567c5c0eeee92eb",
+    "resourceDefinition": "f92ae136b636d226648bac6228142a777446cf25",
+    "resourceBuild": "0897e469ad4167f205cdbe6981d5e3c8c356311b",
+    "graphicsBuild": "80bb788fd96374c0d26a0ac74301f4d53a02f38e",
+    "spriteSystem": "b5535941955172943ff372bc1c82fbcb2c79724c",
+    "spriteTransfer": "1c5f9a66809b8d235bd707ece3b0e4d191680e1f",
+    "spriteResource": "3f57cea5c2a38de8ac7c4eb6ca59141b970fedcd",
+    "plttTransfer": "3daea75579df500cc843a0664fe10fe602fcaceb",
+    "findings": [
+      "load_in_slot is number of palettes, not absolute slot, confirmed by PlttTransferTask.numPalettes and UpdateTransferSize.",
+      "Resource list declares main 2 shared + 1 status + 3 member + 1 held; sub 1 touch. Ordered whole-range requests start at cleared offset 0, consistent with member slots 3–5 and held slot 6. Runtime generated resdat order, all later allocations and hardware state not independently executed; no native free slots authorized.",
+      "Party member cells and animation use shared_cell_32k_NCER/shared_anim_32k_NANR; preserve both."
+    ],
+    "mainDeclaredBanks": 7,
+    "subDeclaredBanks": 1,
+    "verifiedFree": []
+  },
+  "hooks": {
+    "pcTransfer": "Proposed after existing preview updates in a serialized safe transfer phase; actual task insertion and native screen timing not verified.",
+    "pcDraw": "Proposed before frame swap in BoxGraphics task; BG0 priority 1 and OBJ coexistence require native acceptance.",
+    "party": "Existing PartyMenu_DrawMemberSpeciesIcon and PartyMenu_LoadMemberSpeciesIcon; original stock fallback remains unchanged."
+  },
+  "limitations": [
+    "Single private static context, monotonic nonzero epochs, busy reentrancy rejected; caller must serialize across interrupts; no synchronization primitive installed.",
+    "HOST_TEST opens experimental addresses only for mocks; native default denies all transfers and optimizer may remove SDK calls. Unoptimized ARM object contains unresolved SDK symbols, not SDK linkage or native execution.",
+    "No new exact archive binaries or registry authority recovered; do not repeat exhausted searches. Native build/emulator not available in current runtime; no paid service or external transfer."
+  ],
+  "mainPins": {
+    "Sprites": "f15c4671bf7afb15450fc7801bde17aefcdc4f7e",
+    "Mercury-redux-dex": "faa7cb4016d8030fb4661b49114352d79cac7944",
+    "platinum-modern-ds": "5525e961a1fb98c62bd53bc4a27b0276a39f6719"
+  },
+  "productionAllowed": false
+}
