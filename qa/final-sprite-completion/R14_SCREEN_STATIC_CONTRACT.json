@@ -1,0 +1,69 @@
+{
+  "schema": "mercury-r14-screen-static-contract-v1",
+  "party": {
+    "ref": "c248fb3f8cc9934ded800e489567c5c0eeee92eb",
+    "sources": {
+      "src/applications/party_menu/sprites.c": "822f06c0341d95925cca9fc154b258a6d20e938d",
+      "src/applications/party_menu/main.c": "039bc375950477096a395f39c4c5c3cb68c19ff3",
+      "include/applications/party_menu/defs.h": "1bec6bff613befc3da754cb105524a18775d5473"
+    },
+    "evidence": {
+      "mapping": "1D 32K both engines",
+      "mainObjBankKiB": 64,
+      "subObjBankKiB": 16,
+      "extendedObjPalettes": false,
+      "mainIconPaletteBase": 3,
+      "canonicalIconBanks": [
+        3,
+        4,
+        5
+      ],
+      "oamEntriesPerEngine": 128,
+      "affineSlotsPerEngine": 32,
+      "transferQueueCapacity": 32,
+      "memberIcons": 6,
+      "memberResourceIds": "4 + slot",
+      "spriteListCapacity": 35,
+      "sourceReferences": [
+        "sprites.c:34-69,75-127",
+        "main.c:671-732",
+        "defs.h: party sprite enum"
+      ],
+      "lifecycle": "Replace character resource, assign palette index plus 3; direct reload at existing image proxy address; free NCGR and close NARC; VBlank transfers OAM; exit disables VBlank and frees sprites and transfer queue.",
+      "otherPaletteReservations": "UNKNOWN; generated resdat files not found at pinned ref. No custom palette slot declared free."
+    }
+  },
+  "pcComparison": {
+    "ref": "485c400f9d7bad10d906d556ba23e5e46d5b3e5e",
+    "sources": {
+      "src/applications/pc_boxes/graphics.c": "a8757fccdc5060dcaab83d6f588c06935fadf3bb",
+      "src/applications/pc_boxes/view.c": "43107c63bba3fa2f4de4476824e7d0f1d92cbd72",
+      "src/applications/pc_boxes/icon_helper.c": "07ba5eabb5328485c7bbff316166be0c3a74418e"
+    },
+    "evidence": {
+      "mapping": "main 1D 64K, sub 1D 32K",
+      "mainObjBankKiB": 64,
+      "subObjBankKiB": 16,
+      "extendedObjPalettes": false,
+      "mainIconPaletteBase": 2,
+      "additionalPaletteLoadBase": 6,
+      "spriteListCapacity": 128,
+      "boxIconArrays": 2,
+      "sourceReferences": [
+        "graphics.c:182-227,253-278,347-354,1381-1390",
+        "view.c:111-124,265-292",
+        "icon_helper.c:28-43,88-105,150,184,285"
+      ],
+      "lifecycle": "Two icon arrays initialized/deleted; scroll VBlank task; OAM transfer; NARC and sprite cleanup.",
+      "otherPaletteReservations": "UNKNOWN",
+      "authority": "Newer upstream comparison only; paths absent at project-pinned ref. Do not assume exact PC compatibility."
+    }
+  },
+  "lilleo": {
+    "standardOneObject4bpp": "HOLD",
+    "split4bpp": "Would require four objects per icon rather than one, extra palette routing and cell changes; party sprite list cap does not prove capacity for these extra objects.",
+    "eightBpp": "Standard 256-color palette occupies the same 512-byte OBJ palette space as 16 4bpp banks; both screen source audits disable extended OBJ palettes; no safe coexistence established."
+  },
+  "productionAllowed": false,
+  "nativeRuntime": false
+}
