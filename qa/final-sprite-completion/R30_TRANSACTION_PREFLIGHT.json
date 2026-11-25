@@ -1,0 +1,66 @@
+{
+  "schema": "mercury-r30-transaction-preflight-v1",
+  "inputs": {
+    "authority": "480cd770f9b9e154a5ee19ce3a1f91a13c171df7",
+    "handoff": "33ee4b396686176a2b5723896adc0e6f59091450",
+    "registry": "d126281bf59b13de3addae51181251fce6a4d1e6",
+    "previousC": "b575d569693a388276db92ed45fc0654db30ffc9"
+  },
+  "compiled": {
+    "fixtureBlob": "de6f646e80069e1bd1bdf14d84ff8ab031d8fb6c",
+    "sourceBlob": "98ec13138ba305da213e760d1ae706915c2bb7f7",
+    "fixtureSha256": "0c5d3c36e68a1abf67bf5eb0eaef299f4f1d7acc8fa29e353f4904d2eac2b6ce",
+    "sourceSha256": "cfebe31296f42ed5fb759b4f4d0bea2f9e5adac23048f33ac4b08887ef4eceae",
+    "compiler": "cc (Debian 14.2.0-19) 14.2.0",
+    "command": "cc -std=c11 -Wall -Wextra -Werror -pedantic -fsanitize=undefined -o r30_transaction r30_transaction.c && ./r30_transaction",
+    "stdout": "registry checks: 674\ntransaction checks: 2714\nPASS: 3388 host checks; production bindings disabled",
+    "exitCode": 0,
+    "gitBlobMatch": true,
+    "registryPairs": 71,
+    "reviewRows": 68,
+    "sourceConfirmed": 10,
+    "missingSymbols": 2,
+    "authorityHolds": 44,
+    "otherRouteHolds": 15,
+    "productionBindings": 0
+  },
+  "nativeReadiness": {
+    "repo": "lionsprideemb-tech/platinum-modern-ds",
+    "pin": "5525e961a1fb98c62bd53bc4a27b0276a39f6719",
+    "readmeBlob": "5bea6068442459330383b627d36391d3868e4f74",
+    "pivotBlob": "9f11f6a72eb33796a6884734819b518a5e7d4a75",
+    "runtime": "pret/pokeplatinum via platinum-overlay",
+    "required": "pinned upstream toolchain, make configure, make check, runtime proof",
+    "localAvailable": [
+      "cc",
+      "make",
+      "ninja"
+    ],
+    "localNotFound": [
+      "arm-none-eabi-gcc",
+      "arm-none-eabi-as",
+      "ndstool",
+      "meson",
+      "wine",
+      "melonDS",
+      "melonds",
+      "desmume",
+      "mgba"
+    ],
+    "devkitEnvironmentUnset": true,
+    "nativeBuild": false,
+    "emulator": false
+  },
+  "limitations": [
+    "Staged copy transaction tests simulate writes and stat recalculation failures; no actual engine setters or concurrency tested.",
+    "Save buffer is an untouched host canary, not a native save serialization test.",
+    "Party identity token and generation are host simulation; party remap, capture, escape, link/multi battle and native reset still require adapter integration.",
+    "No new authority or archive evidence; prior holds retained. No native compiler or emulator found in checked local paths; no installation or CI run."
+  ],
+  "mainPins": {
+    "Sprites": "f15c4671bf7afb15450fc7801bde17aefcdc4f7e",
+    "Mercury-redux-dex": "faa7cb4016d8030fb4661b49114352d79cac7944",
+    "platinum-modern-ds": "5525e961a1fb98c62bd53bc4a27b0276a39f6719"
+  },
+  "productionAllowed": false
+}
