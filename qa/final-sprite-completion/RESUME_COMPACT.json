@@ -48,14 +48,14 @@
     "sourceQuartetsRecovered": 0
   },
   "next": {
-    "cohort": "PC_TEXTURE_PREVIEW_COEXISTENCE_AND_NATIVE_TRANSFER_PLAN",
-    "firstName": "Investigate exact preview texture/palette allocations and lifecycle, implement tested bounded 4bpp texture lease and transfer planner, native 184px scroll and selection routing, preserve strict zero verified free memory gate.",
+    "cohort": "NATIVE_PC_TEXTURE_LIFECYCLE_AND_DRAW_CONTRACT",
+    "firstName": "Implement isolated native-facing draw and transfer lifecycle with exact preview/other VRAM reservations, column lifecycle, DMA lifetime, layer/priority and geometry; no production allocation before native acceptance. Investigate party route independently.",
     "offset": 346,
     "eligible": 0,
     "priorManifestRemainingUntested": 0,
     "completedBulkOffset": 200
   },
-  "policy": "Offline QA only; no production IDs, main changes, ROM changes, invented artwork or approvals. Preserve Delta Flygon unapproved. Check latest branch head and reconcile any batches after checkpoint before resuming. All ordinary conversions and prior-manifest retests are exhausted; no retest repetition without a new lossless method or original source. Release 9 offline lock does not establish native game readiness; do not repeat exhausted source or scale searches unless new evidence exists. Release 10: all 417 accessible archive binaries and 1668 resource member pairs verified; nine historical binary locators remain unresolved. Symbolic handles only; no production integration. Release 11 adds eight offline icon layout candidates and tested symbolic route gates; no native runtime or approval inferred. Release 12 completed eligible original icon inventory scan, with 66 offline candidate icons and one 16-color hold. Native bank allocation and runtime remain gated. Release 13 adds host-only native resource staging and two exact experimental Lilleo payloads; generated candidate QA separate from original artwork approval. Release 14 adds 84 separate generated icon technical passes and 95 host-validated prototype containers; no production bindings or runtime acceptance. Release 15 completed all 346 eligible generated icon technical tests; generated art remains unapproved. Exact pinned PC audit and independently compiled host C checker persisted; no native runtime acceptance. Release 16 all 412 raw icon payloads staged and host SHA-256 verified; 381 artwork keys, no original/generated exact-key or decoded-pixel matches; no native palette slots or production assignments, generated art unapproved. Release 17 exact PC shade transform exhaustive host C and JS parity, ARM9-targeted object compiled only; 412 normal/shaded prototype packages, exact accepted battle-art associations, zero stock palette fits or approved icon bindings; no free slot verified. Release 18 strict zero-free-slot policy, experimental palette-window manager tested with all 412 candidates; full PC windows fail exact-palette capacity, pinned SDK transfer bounds investigated, no native acceptance. Release 19 host-only direct-color and 4bpp texture rendering tests preserve exact RGB555/alpha; no native VRAM allocation or engine acceptance; full boxes fit hypothetical texture capacity only.",
+  "policy": "Offline QA only; no production IDs, main changes, ROM changes, invented artwork or approvals. Preserve Delta Flygon unapproved. Check latest branch head and reconcile any batches after checkpoint before resuming. All ordinary conversions and prior-manifest retests are exhausted; no retest repetition without a new lossless method or original source. Release 9 offline lock does not establish native game readiness; do not repeat exhausted source or scale searches unless new evidence exists. Release 10: all 417 accessible archive binaries and 1668 resource member pairs verified; nine historical binary locators remain unresolved. Symbolic handles only; no production integration. Release 11 adds eight offline icon layout candidates and tested symbolic route gates; no native runtime or approval inferred. Release 12 completed eligible original icon inventory scan, with 66 offline candidate icons and one 16-color hold. Native bank allocation and runtime remain gated. Release 13 adds host-only native resource staging and two exact experimental Lilleo payloads; generated candidate QA separate from original artwork approval. Release 14 adds 84 separate generated icon technical passes and 95 host-validated prototype containers; no production bindings or runtime acceptance. Release 15 completed all 346 eligible generated icon technical tests; generated art remains unapproved. Exact pinned PC audit and independently compiled host C checker persisted; no native runtime acceptance. Release 16 all 412 raw icon payloads staged and host SHA-256 verified; 381 artwork keys, no original/generated exact-key or decoded-pixel matches; no native palette slots or production assignments, generated art unapproved. Release 17 exact PC shade transform exhaustive host C and JS parity, ARM9-targeted object compiled only; 412 normal/shaded prototype packages, exact accepted battle-art associations, zero stock palette fits or approved icon bindings; no free slot verified. Release 18 strict zero-free-slot policy, experimental palette-window manager tested with all 412 candidates; full PC windows fail exact-palette capacity, pinned SDK transfer bounds investigated, no native acceptance. Release 19 host-only direct-color and 4bpp texture rendering tests preserve exact RGB555/alpha; no native VRAM allocation or engine acceptance; full boxes fit hypothetical texture capacity only. Release 20 default preview texture reservation 32768 bytes and palette conservative 192 bytes, hypothetical pool tested with all 412 candidates and exact offset arithmetic; native GX sampling and DMA/priority still unverified.",
   "archiveStorage": "First 33 new archives in existing ZIP; all 210 in pinned batch JSON manifest with SHA-256 and Git digests.",
   "registryHoldPixelProbe": {
     "path": "qa/final-sprite-completion/REGISTRY_HOLD_PIXEL_PROBE_WAIL_FAMILY.json",
@@ -749,6 +749,75 @@
       "Linear nibble layout is host experiment; actual GX texture sampling, modulation, depth, alpha, priority, UI layering, VRAM sharing and timing require native tests.",
       "Separate texture allocations, normal and selected palette variants, no production IDs or approval.",
       "Pinned NCLR loader does not clamp size; source-derived 512-byte payload, compiled artifact not available. Native scroll 184px over 30 updates, not host 168px seven-step approximation."
+    ]
+  },
+  "release20": {
+    "evidenceCommit": "29a4ebc0fbf9adc80510e889b0a0c94931f2ac75",
+    "nativeContractBlob": "f8d0244289d9b797018d486e9f045db42e22b9f0",
+    "leaseSourceBlob": "0cff6355aa3797d57af754e7eba778bca0710303",
+    "leaseTestsBlob": "ba25e41095660e709d8765f149c166db85f0fc37",
+    "boundsSourceBlob": "5469fbcad17251d16e404f4364a41950e6d1cd25",
+    "summary": {
+      "assets": 412,
+      "pixelChecks": 843776,
+      "strictReject": 412,
+      "windows": {
+        "30": {
+          "count": 383,
+          "pass": 383,
+          "maxT": 15360,
+          "maxP": 1920,
+          "previewReservedT": 32768,
+          "previewReservedP": 192
+        },
+        "60": {
+          "count": 353,
+          "pass": 353,
+          "maxT": 30720,
+          "maxP": 3840,
+          "previewReservedT": 32768,
+          "previewReservedP": 192
+        }
+      },
+      "transfers": 93299,
+      "transferBytes": 18865408,
+      "protectedByteChecks": 37936960,
+      "selectionChecks": 33494,
+      "scrollTransitions": 8,
+      "scrollUpdates": 240,
+      "finalSnaps": 8,
+      "negative": 8,
+      "cleanup": 2
+    },
+    "previewDefault": {
+      "defaultTexture": {
+        "base": 0,
+        "bytes": 32768
+      },
+      "defaultPalette": {
+        "base": 0,
+        "bytes": 128
+      },
+      "cpuPaletteBufferBytes": 192,
+      "conservativeProtectedPaletteBytes": 192,
+      "notes": "Manager setters can alter bases/sizes. No complete call graph proof that no other caller or resource uses remaining VRAM. PC preview creation at (44,84,0), transfer through PokemonSpriteManager_UpdateCharAndPltt. Frame task resets G3X and matrix stack, sets software sprite camera, draws manager then swaps Z buffers. BG0 priority 1, original icons are OBJ; same BG0 layer cannot necessarily reproduce OBJ priority relationship. Native geometry/alpha/UI layer compatibility unverified."
+    },
+    "independentHostScrollCases": 31744,
+    "arm9TargetObjectCompiled": true,
+    "armExecuted": false,
+    "nativeFullBuild": false,
+    "emulatorVerified": false,
+    "productionAllowed": false,
+    "mainPins": {
+      "Sprites": "f15c4671bf7afb15450fc7801bde17aefcdc4f7e",
+      "Mercury-redux-dex": "faa7cb4016d8030fb4661b49114352d79cac7944",
+      "platinum-modern-ds": "5525e961a1fb98c62bd53bc4a27b0276a39f6719"
+    },
+    "limitations": [
+      "Experimental pool assumes everything beyond default preview ranges is available; other native allocations not proven absent. Strict mode denies all custom allocations.",
+      "Preview sentinel bytes are synthetic; no native preview graphics loaded. Palette reservation conservatively covers six CPU palette banks (192 bytes), default VRAM transfer four banks (128 bytes).",
+      "Host transfer simulation is atomic by prevalidation, not native DMA synchronization; no actual UI draw, GX texture rasterization, depth/priority or scroll task interleaving verified.",
+      "Fixed-point BG offset sequence follows pinned arithmetic and final snap, not the complete asynchronous sprite column lifecycle. Selection uses preloaded palette states."
     ]
   }
 }
