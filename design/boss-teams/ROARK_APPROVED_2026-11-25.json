@@ -1,0 +1,271 @@
+{
+  "schema": "mercury-boss-design-authority-v1",
+  "status": "OWNER_APPROVED_DESIGN_PENDING_NATIVE_QA",
+  "date": "2026-11-25",
+  "authority": "Explicit current conversation approval of revised Roark teams, difficulty names and identical player level caps; not a claim of native implementation or earlier exact historical approval.",
+  "global": {
+    "difficulties": [
+      "Trainer",
+      "Ace Trainer",
+      "Pro Trainer"
+    ],
+    "playerLevelCap": "same per progression milestone across all difficulties",
+    "noMegaBeforeFantina": true,
+    "firstFullSixPokemonGym": "Fantina",
+    "innatesToggle": "off disables innates, selected primary remains",
+    "fairAI": true
+  },
+  "gym": {
+    "number": 1,
+    "name": "Roark",
+    "cap": 17,
+    "mega": false
+  },
+  "teams": {
+    "Trainer": [
+      {
+        "species": "Geodude",
+        "level": 12,
+        "primary": "Sturdy",
+        "innates": [
+          "Battle Armor",
+          "Sand Force",
+          "Inner Focus"
+        ],
+        "item": null,
+        "nature": "Hardy",
+        "moves": [
+          "Rock Tomb",
+          "Magnitude",
+          "Defense Curl",
+          "Tackle"
+        ]
+      },
+      {
+        "species": "Onix",
+        "level": 15,
+        "primary": "Rock Head",
+        "innates": [
+          "Battle Armor",
+          "Sand Force",
+          "Inner Focus"
+        ],
+        "item": "Oran Berry",
+        "nature": "Hardy",
+        "moves": [
+          "Rock Tomb",
+          "Bulldoze",
+          "Bind",
+          "Slam"
+        ]
+      },
+      {
+        "species": "Cranidos",
+        "level": 15,
+        "primary": "Sheer Force",
+        "innates": [
+          "Tough Claws",
+          "Battle Armor",
+          "Inner Focus"
+        ],
+        "item": null,
+        "nature": "Hardy",
+        "moves": [
+          "Rock Tomb",
+          "Headbutt",
+          "Pursuit",
+          "Focus Energy"
+        ]
+      }
+    ],
+    "Ace Trainer": [
+      {
+        "species": "Geodude",
+        "level": 14,
+        "primary": "Sturdy",
+        "innates": [
+          "Battle Armor",
+          "Sand Force",
+          "Inner Focus"
+        ],
+        "item": null,
+        "nature": "Impish",
+        "moves": [
+          "Rock Tomb",
+          "Bulldoze",
+          "Defense Curl",
+          "Fire Punch"
+        ]
+      },
+      {
+        "species": "Nacli",
+        "level": 15,
+        "primary": "Purifying Salt",
+        "innates": [
+          "Clear Body",
+          "Battle Armor",
+          "Self-Sufficient"
+        ],
+        "item": "Oran Berry",
+        "nature": "Careful",
+        "moves": [
+          "Smack Down",
+          "Mud Shot",
+          "Salt Cure",
+          "Protect"
+        ]
+      },
+      {
+        "species": "Onix",
+        "level": 15,
+        "primary": "Rock Head",
+        "innates": [
+          "Battle Armor",
+          "Sand Force",
+          "Inner Focus"
+        ],
+        "item": null,
+        "nature": "Impish",
+        "moves": [
+          "Rock Tomb",
+          "Bulldoze",
+          "Dragon Tail",
+          "Body Press"
+        ]
+      },
+      {
+        "species": "Cranidos",
+        "level": 17,
+        "primary": "Sheer Force",
+        "innates": [
+          "Tough Claws",
+          "Battle Armor",
+          "Inner Focus"
+        ],
+        "item": "Oran Berry",
+        "nature": "Adamant",
+        "moves": [
+          "Rock Tomb",
+          "Headbutt",
+          "Fire Punch",
+          "Thunder Punch"
+        ]
+      }
+    ],
+    "Pro Trainer": [
+      {
+        "species": "Geodude",
+        "level": 16,
+        "primary": "Sturdy",
+        "innates": [
+          "Battle Armor",
+          "Sand Force",
+          "Inner Focus"
+        ],
+        "item": "Oran Berry",
+        "nature": "Impish",
+        "moves": [
+          "Stealth Rock",
+          "Rock Tomb",
+          "Bulldoze",
+          "Fire Punch"
+        ]
+      },
+      {
+        "species": "Nacli",
+        "level": 15,
+        "primary": "Purifying Salt",
+        "innates": [
+          "Clear Body",
+          "Battle Armor",
+          "Self-Sufficient"
+        ],
+        "item": "Oran Berry",
+        "nature": "Careful",
+        "moves": [
+          "Smack Down",
+          "Mud Shot",
+          "Salt Cure",
+          "Protect"
+        ]
+      },
+      {
+        "species": "Onix",
+        "level": 15,
+        "primary": "Rock Head",
+        "innates": [
+          "Battle Armor",
+          "Sand Force",
+          "Inner Focus"
+        ],
+        "item": null,
+        "nature": "Impish",
+        "moves": [
+          "Rock Tomb",
+          "Bulldoze",
+          "Dragon Tail",
+          "Body Press"
+        ]
+      },
+      {
+        "species": "Lileep",
+        "level": 16,
+        "primary": "Storm Drain",
+        "innates": [
+          "Suction Cups",
+          "Battle Armor",
+          "Overcoat"
+        ],
+        "item": "Oran Berry",
+        "nature": "Calm",
+        "moves": [
+          "Mega Drain",
+          "Ancient Power",
+          "Acid",
+          "Ingrain"
+        ]
+      },
+      {
+        "species": "Cranidos",
+        "level": 17,
+        "primary": "Sheer Force",
+        "innates": [
+          "Tough Claws",
+          "Battle Armor",
+          "Inner Focus"
+        ],
+        "item": "Hard Stone",
+        "nature": "Jolly",
+        "moves": [
+          "Rock Tomb",
+          "Headbutt",
+          "Fire Punch",
+          "Thunder Punch"
+        ]
+      }
+    ]
+  },
+  "priorDesignParameters": {
+    "ivPerStat": {
+      "Trainer": 15,
+      "Ace Trainer": 22,
+      "Pro Trainer": 31
+    },
+    "evs": {
+      "Trainer": "none",
+      "Ace Trainer": "none",
+      "Pro Trainer": "limited; exact values not approved"
+    },
+    "rewardProposal": {
+      "badge": "Coal Badge",
+      "tm": "Rock Tomb",
+      "fieldPermission": "Rock Smash"
+    }
+  },
+  "qaHolds": [
+    "Verify species-fixed innates and primary ability slots against final authority; do not overwrite species ability data from team proposals.",
+    "Verify move access, items, AI, damage, caps and counterplay on native DS; Lileep innate list remains proposal pending verification.",
+    "No gameplay or source modification; do not infer prior exact historical approvals."
+  ],
+  "productionAllowed": false
+}
