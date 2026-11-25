@@ -1,0 +1,76 @@
+{
+  "schema": "mercury-r9-original-icon-probe-v1",
+  "sourceRef": "45ed14104b70f9d02ac9cbea430d29394201f877",
+  "upstreamPaletteBlob": "65deabb632f60fe5518b161da7d1b1c978a69faf",
+  "reports": [
+    {
+      "artworkKey": "basculin-2|pixelsha256:486ae1b46fc4ba5ea1afc3bdbf1756a6cc50a22aa15f67b6e067833fb90cb17e",
+      "path": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Icons/BASCULIN_2.png",
+      "gitBlob": "358bb2287ce65324c62736dcbde6b8508469a913",
+      "sha256": "14b1a3a688cab0000b841a7a4356766bf2dc7abad5dd2cfbcdcfaec580e40efb",
+      "canvas": [
+        128,
+        64
+      ],
+      "opaqueRGB555": 12,
+      "partialAlpha": 0,
+      "eligibleExistingBanks": [],
+      "approved": false,
+      "nativeLayout32x64": false,
+      "nativeRuntimeVerified": false,
+      "approvedBinding": false
+    },
+    {
+      "artworkKey": "basculin-2|pixelsha256:486ae1b46fc4ba5ea1afc3bdbf1756a6cc50a22aa15f67b6e067833fb90cb17e",
+      "path": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Icons shiny/BASCULIN_2.png",
+      "gitBlob": "c579471fcea00d4ffc43cd383aadc6fbd70a185c",
+      "sha256": "82c8ea51f4bfec2c0b632dc7a49572ff17d582a6d3f30ec81e4022dd2cb769b5",
+      "canvas": [
+        128,
+        64
+      ],
+      "opaqueRGB555": 12,
+      "partialAlpha": 0,
+      "eligibleExistingBanks": [],
+      "approved": false,
+      "nativeLayout32x64": false,
+      "nativeRuntimeVerified": false,
+      "approvedBinding": false
+    },
+    {
+      "artworkKey": "basstile|pixelsha256:e42ca66813b13486469cd1543a7ef08bb2ace60586d907fcd16168243303a283",
+      "path": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Icons/BASSTILE.png",
+      "gitBlob": "e6337d06d31556318b8ad95f7756d144d9a6c846",
+      "sha256": "33a549c352139ec628432eaa07a4caf4b200306670e99587032c6de18712fe6c",
+      "canvas": [
+        128,
+        64
+      ],
+      "opaqueRGB555": 9,
+      "partialAlpha": 0,
+      "eligibleExistingBanks": [],
+      "approved": false,
+      "nativeLayout32x64": false,
+      "nativeRuntimeVerified": false,
+      "approvedBinding": false
+    },
+    {
+      "artworkKey": "basstile|pixelsha256:e42ca66813b13486469cd1543a7ef08bb2ace60586d907fcd16168243303a283",
+      "path": "DS_CUSTOM_LIBRARY/packs/Mikitari/Fakemon Pack/Icons shiny/BASSTILE.png",
+      "gitBlob": "22f593ef9a1a29380d3e6797b2da334c09ebcdbf",
+      "sha256": "b29f6e6908d89992b2f54b3478d4512c51c275d5fc5980f752c79389bde18da0",
+      "canvas": [
+        128,
+        64
+      ],
+      "opaqueRGB555": 9,
+      "partialAlpha": 0,
+      "eligibleExistingBanks": [],
+      "approved": false,
+      "nativeLayout32x64": false,
+      "nativeRuntimeVerified": false,
+      "approvedBinding": false
+    }
+  ],
+  "production": false
+}
