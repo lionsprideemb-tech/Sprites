@@ -1,0 +1,17 @@
+/* R19 host-only 4bpp linear texture layout and reservation model; not native GX execution. */
+function runTexture(stages,pkg){
+ const req=(x,m)=>{if(!x)throw Error(m)},ABC="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
+ function decode(s){req(typeof s==="string"&&s.length%4===0&&/^[A-Za-z0-9+/]*={0,2}$/.test(s),"B64");let a=[];for(let i=0;i<s.length;i+=4){let v=(ABC.indexOf(s[i])<<18)|(ABC.indexOf(s[i+1])<<12)|((ABC.indexOf(s[i+2])&63)<<6)|(ABC.indexOf(s[i+3])&63);a.push(v>>16&255);if(s[i+2]!=="=")a.push(v>>8&255);if(s[i+3]!=="=")a.push(v&255)}return a}
+ function allocate(ranges,base,size,length,alignment){req(Number.isInteger(base)&&Number.isInteger(size)&&Number.isInteger(length)&&Number.isInteger(alignment)&&base>=0&&size>=0&&length>0&&alignment>0,"PARAM");let off=Math.ceil(base/alignment)*alignment;for(let r of [...ranges].sort((a,b)=>a.start-b.start)){req(Number.isInteger(r.start)&&Number.isInteger(r.end)&&r.start>=base&&r.end<=base+size&&r.end>=r.start,"RANGE");if(r.end<=off)continue;if(off+length<=r.start)break;off=Math.ceil(r.end/alignment)*alignment;}if(off+length>base+size)return null;return off;}
+ let rows=stages.flatMap(s=>s.rows),textures=[];req(rows.length===412&&pkg.rows.length===412,"COUNT");let pixelChecks=0;
+ for(let i=0;i<rows.length;i++){let r=rows[i],p=pkg.rows[i],t=decode(r.pcBase64),linear=new Uint8Array(512);req(t.length===512&&r.artworkKey===p.artworkKey&&r.sourceBlob===p.sourceBlob&&!r.productionAllowed&&!p.productionAllowed,"IDENTITY");for(let y=0;y<32;y++)for(let x=0;x<32;x+=2){let offset=((y>>3)*4+(x>>3))*32+(y&7)*4+((x&7)>>1);linear[y*16+(x>>1)]=t[offset];}
+ for(let tile=0;tile<16;tile++)for(let j=0;j<64;j++){let x=(tile&3)*8+(j&7),y=(tile>>2)*8+(j>>3),a=(t[tile*32+(j>>1)]>>(4*(j&1)))&15,b=(linear[y*16+(x>>1)]>>(4*(x&1)))&15;req(a===b,"INDEX");for(let pal of [p.normalPalette,p.shadedPalette]){req((a?32768|pal[a]:0)===(b?32768|pal[b]:0),"PIXEL");pixelChecks++;}}textures.push({linear,normal:p.normalPalette,selected:p.shadedPalette});}
+ let result={},checked=0;
+ for(let size of [30,60]){let windows=0,passes=0,maxTex=0,maxPal=0;for(let i=0;i<=textures.length-size;i++){let list=textures.slice(i,i+size),tr=[],pr=[],keys=new Map();for(let t of list){let addr=allocate(tr,0,131072,512,8);req(addr!==null,"TEX");tr.push({start:addr,end:addr+512});for(let p of [t.normal,t.selected]){let k=p.join(",");if(!keys.has(k)){let pa=allocate(pr,0,32768,32,32);req(pa!==null,"PAL");pr.push({start:pa,end:pa+32});keys.set(k,pa);}}}let tx=Math.max(...tr.map(x=>x.end)),pa=Math.max(...pr.map(x=>x.end));maxTex=Math.max(maxTex,tx);maxPal=Math.max(maxPal,pa);windows++;passes++;checked+=list.length;}
+ result[size]={windows,passes,maxTextureBytes:maxTex,maxPaletteBytes:maxPal};}
+ // Strict reservation policy: no verified free ranges means no allocation.
+ let strictReject=0,negative=0;for(let t of textures){req(allocate([{start:0,end:131072}],0,131072,512,8)===null,"STRICT");strictReject++;}
+ for(let f of [()=>allocate([],0,128,0,8),()=>allocate([],0,128,32,0),()=>allocate([{start:0,end:129}],0,128,32,8)]){try{f()}catch(e){negative++;}}req(negative===3&&allocate([{start:0,end:64}],0,128,64,8)===64&&allocate([{start:0,end:64}],0,128,65,8)===null,"BOUNDS");
+ return {assets:412,pixelChecks,windows:result,texturePlacements:checked,strictRejections:strictReject,negative,productionAllowed:false};
+}
+if(typeof module!=="undefined")module.exports={runTexture};
