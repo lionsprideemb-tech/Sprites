@@ -48,14 +48,14 @@
     "sourceQuartetsRecovered": 0
   },
   "next": {
-    "cohort": "PC_GRAPHICS_ARCHITECTURE_CAPACITY",
-    "firstName": "Evaluate lossless PC tile/background rendering and palette capacity, exact SDK NCLR unpacked size, bounded transfer staging, ARM9 executable test where available; preserve existing candidates.",
+    "cohort": "PC_TEXTURE_PREVIEW_COEXISTENCE_AND_NATIVE_TRANSFER_PLAN",
+    "firstName": "Investigate exact preview texture/palette allocations and lifecycle, implement tested bounded 4bpp texture lease and transfer planner, native 184px scroll and selection routing, preserve strict zero verified free memory gate.",
     "offset": 346,
     "eligible": 0,
     "priorManifestRemainingUntested": 0,
     "completedBulkOffset": 200
   },
-  "policy": "Offline QA only; no production IDs, main changes, ROM changes, invented artwork or approvals. Preserve Delta Flygon unapproved. Check latest branch head and reconcile any batches after checkpoint before resuming. All ordinary conversions and prior-manifest retests are exhausted; no retest repetition without a new lossless method or original source. Release 9 offline lock does not establish native game readiness; do not repeat exhausted source or scale searches unless new evidence exists. Release 10: all 417 accessible archive binaries and 1668 resource member pairs verified; nine historical binary locators remain unresolved. Symbolic handles only; no production integration. Release 11 adds eight offline icon layout candidates and tested symbolic route gates; no native runtime or approval inferred. Release 12 completed eligible original icon inventory scan, with 66 offline candidate icons and one 16-color hold. Native bank allocation and runtime remain gated. Release 13 adds host-only native resource staging and two exact experimental Lilleo payloads; generated candidate QA separate from original artwork approval. Release 14 adds 84 separate generated icon technical passes and 95 host-validated prototype containers; no production bindings or runtime acceptance. Release 15 completed all 346 eligible generated icon technical tests; generated art remains unapproved. Exact pinned PC audit and independently compiled host C checker persisted; no native runtime acceptance. Release 16 all 412 raw icon payloads staged and host SHA-256 verified; 381 artwork keys, no original/generated exact-key or decoded-pixel matches; no native palette slots or production assignments, generated art unapproved. Release 17 exact PC shade transform exhaustive host C and JS parity, ARM9-targeted object compiled only; 412 normal/shaded prototype packages, exact accepted battle-art associations, zero stock palette fits or approved icon bindings; no free slot verified. Release 18 strict zero-free-slot policy, experimental palette-window manager tested with all 412 candidates; full PC windows fail exact-palette capacity, pinned SDK transfer bounds investigated, no native acceptance.",
+  "policy": "Offline QA only; no production IDs, main changes, ROM changes, invented artwork or approvals. Preserve Delta Flygon unapproved. Check latest branch head and reconcile any batches after checkpoint before resuming. All ordinary conversions and prior-manifest retests are exhausted; no retest repetition without a new lossless method or original source. Release 9 offline lock does not establish native game readiness; do not repeat exhausted source or scale searches unless new evidence exists. Release 10: all 417 accessible archive binaries and 1668 resource member pairs verified; nine historical binary locators remain unresolved. Symbolic handles only; no production integration. Release 11 adds eight offline icon layout candidates and tested symbolic route gates; no native runtime or approval inferred. Release 12 completed eligible original icon inventory scan, with 66 offline candidate icons and one 16-color hold. Native bank allocation and runtime remain gated. Release 13 adds host-only native resource staging and two exact experimental Lilleo payloads; generated candidate QA separate from original artwork approval. Release 14 adds 84 separate generated icon technical passes and 95 host-validated prototype containers; no production bindings or runtime acceptance. Release 15 completed all 346 eligible generated icon technical tests; generated art remains unapproved. Exact pinned PC audit and independently compiled host C checker persisted; no native runtime acceptance. Release 16 all 412 raw icon payloads staged and host SHA-256 verified; 381 artwork keys, no original/generated exact-key or decoded-pixel matches; no native palette slots or production assignments, generated art unapproved. Release 17 exact PC shade transform exhaustive host C and JS parity, ARM9-targeted object compiled only; 412 normal/shaded prototype packages, exact accepted battle-art associations, zero stock palette fits or approved icon bindings; no free slot verified. Release 18 strict zero-free-slot policy, experimental palette-window manager tested with all 412 candidates; full PC windows fail exact-palette capacity, pinned SDK transfer bounds investigated, no native acceptance. Release 19 host-only direct-color and 4bpp texture rendering tests preserve exact RGB555/alpha; no native VRAM allocation or engine acceptance; full boxes fit hypothetical texture capacity only.",
   "archiveStorage": "First 33 new archives in existing ZIP; all 210 in pinned batch JSON manifest with SHA-256 and Git digests.",
   "registryHoldPixelProbe": {
     "path": "qa/final-sprite-completion/REGISTRY_HOLD_PIXEL_PROBE_WAIL_FAMILY.json",
@@ -632,6 +632,123 @@
       "PC experimental allocator assigns exact normal/shaded banks independently; would require explicit engine route changes, not vanilla fixed base offsets.",
       "Full palette arrays share only on exact equality; no recolor, remapping, or fallback art.",
       "Sliding windows are deterministic contiguous manifest windows, not actual user parties or box composition; failure keeps prior state intact."
+    ]
+  },
+  "release19": {
+    "evidenceCommit": "f6886897d528632361984698bc53d3350cf54969",
+    "nativeBoundsBlob": "10b4272491860abee54cda8edd7b09a220b2bb82",
+    "renderSourceBlob": "84151c4c25c4d1b62c5e8be652649491b3701707",
+    "renderEvidenceBlob": "585c55fd9bef3f8496a8e5c766d48b44a11ec8b3",
+    "textureSourceBlob": "aca66401065ebd6482d6acb25ec553b8568d04d5",
+    "textureEvidenceBlob": "75075e794d19a56660c573658feb056c7d5d8328",
+    "renderSummary": {
+      "icons": 412,
+      "normalChecks": 421888,
+      "shadeChecks": 421888,
+      "opaque": 197092,
+      "transparent": 224796,
+      "opaqueBlack": 7167,
+      "results": {
+        "6": {
+          "windows": 407,
+          "activeNormalMax": 6,
+          "activeMixedMax": 6,
+          "normalPlusSelectedMax": 12,
+          "active16NormalPass": 407,
+          "active16MixedPass": 407,
+          "active5MixedPass": 38,
+          "unionNormalMin": 21,
+          "unionNormalMax": 84,
+          "unionMixedMin": 29,
+          "unionMixedMax": 84,
+          "indexed8NormalPass": 407,
+          "indexed8MixedPass": 407,
+          "exactDirectColorPass": 407
+        },
+        "30": {
+          "windows": 383,
+          "activeNormalMax": 30,
+          "activeMixedMax": 30,
+          "normalPlusSelectedMax": 60,
+          "active16NormalPass": 42,
+          "active16MixedPass": 0,
+          "active5MixedPass": 0,
+          "unionNormalMin": 106,
+          "unionNormalMax": 352,
+          "unionMixedMin": 132,
+          "unionMixedMax": 354,
+          "indexed8NormalPass": 94,
+          "indexed8MixedPass": 57,
+          "exactDirectColorPass": 383
+        },
+        "60": {
+          "windows": 353,
+          "activeNormalMax": 60,
+          "activeMixedMax": 60,
+          "normalPlusSelectedMax": 120,
+          "active16NormalPass": 0,
+          "active16MixedPass": 0,
+          "active5MixedPass": 0,
+          "unionNormalMin": 201,
+          "unionNormalMax": 624,
+          "unionMixedMin": 275,
+          "unionMixedMax": 641,
+          "indexed8NormalPass": 20,
+          "indexed8MixedPass": 0,
+          "exactDirectColorPass": 353
+        }
+      },
+      "eightChecks": 10868736,
+      "scrollFrames": 98,
+      "compositePixels": 4816896,
+      "canonicalChecks": 56448,
+      "directSpriteBytes": 2048,
+      "oneBoxDirectBytes": 61440,
+      "twoBoxDirectBytes": 122880,
+      "visibleBitmapBytes": 98304,
+      "hardware256SquareBitmapBytes": 131072,
+      "productionAllowed": false
+    },
+    "textureSummary": {
+      "assets": 412,
+      "pixelChecks": 843776,
+      "windows": {
+        "30": {
+          "windows": 383,
+          "passes": 383,
+          "maxTextureBytes": 15360,
+          "maxPaletteBytes": 1920
+        },
+        "60": {
+          "windows": 353,
+          "passes": 353,
+          "maxTextureBytes": 30720,
+          "maxPaletteBytes": 3840
+        }
+      },
+      "texturePlacements": 32670,
+      "strictRejections": 412,
+      "negative": 3,
+      "productionAllowed": false
+    },
+    "nativeFullBuild": false,
+    "emulatorVerified": false,
+    "productionAllowed": false,
+    "mainPins": {
+      "Sprites": "f15c4671bf7afb15450fc7801bde17aefcdc4f7e",
+      "Mercury-redux-dex": "faa7cb4016d8030fb4661b49114352d79cac7944",
+      "platinum-modern-ds": "5525e961a1fb98c62bd53bc4a27b0276a39f6719"
+    },
+    "limitations": [
+      "Host pixel reference, not SDK or emulator execution. Direct RGB555 bit15 marks opaque even when RGB is black.",
+      "Contiguous windows use manifest ordering; not all possible parties or boxes. Active palette count assumes per-icon palette switching, not original fixed normal/selected bank routes.",
+      "Composite uses source 24px spacing but host-defined top-left anchor, draw order, rectangular clipping, selection schedule and scroll steps; canonical test is synthetic stock-palette overlay, not actual canonical icon graphics.",
+      "One 256x256 direct-color bitmap consumes 128 KiB, currently allocated main BG bank in entirety; requires screen redesign. Direct-color OBJ size exceeds existing 64 KiB for two boxes, one box leaves only 4 KiB for other OBJ assets.",
+      "No native allocations, artwork approvals or new art.",
+      "Assumes hypothetical 128KiB texture and 32KiB texture palette address windows, not verified available space. Strict reservation policy rejects all candidates.",
+      "Linear nibble layout is host experiment; actual GX texture sampling, modulation, depth, alpha, priority, UI layering, VRAM sharing and timing require native tests.",
+      "Separate texture allocations, normal and selected palette variants, no production IDs or approval.",
+      "Pinned NCLR loader does not clamp size; source-derived 512-byte payload, compiled artifact not available. Native scroll 184px over 30 updates, not host 168px seven-step approximation."
     ]
   }
 }
