@@ -1,0 +1,50 @@
+{
+  "schema": "mercury-r23-isolated-native-acceptance-handoff-v1",
+  "baseline": "6141e028149fda798ed02e35a48bfffdd3ef29c2",
+  "inputs": {
+    "adapter": "3e5114c02abf80c9ce1bc21c85378711cd2b6dd1",
+    "acceptance": "e35c12fe5e7f7ae75eaf8e5b62201f695d32026f"
+  },
+  "sourceBlob": "7eabc63166b4017f7af091ef2c58a7fcb8c5b4c9",
+  "gateTestBlob": "41ba775584a0929815b4097a7a7b6e3dfa899e18",
+  "handoffBlob": "fddecac198b45494839f6b9a1a1e808454aaed99",
+  "sourceSha256": "e0ebc0962ccff5a29e3b011ed181fdb0b06b8387cffa9263af7981f193efae20",
+  "hostOutput": "65 isolated harness mock sequences; 35360 fenced bytes; wrong-bank/IRQ/reentry/stale-epoch gates PASS",
+  "gateOutput": "256 default-gate calls denied; no SDK linkage needed PASS",
+  "armDefaultObjectSha256": "dce336e8b7bcc308f036db3c95ad9f03207f22b13bb7201d142927fcfa2e6e78",
+  "armIsolatedDeclarationShimObjectSha256": "155dbc3cb98820c3a0bea309a85bcbbffc36c9d67d9425101ccdd874cd3d245b",
+  "armExecuted": false,
+  "fullSDKLinked": false,
+  "emulatorVerified": false,
+  "sourcePins": {
+    "platinum": "c248fb3f8cc9934ded800e489567c5c0eeee92eb",
+    "sdk": "eaae40f199c0a8827947afbc33227b6ba2f9d45c",
+    "osSystemHeader": "7cbcf66903bd3809b8effcae5efcf7134a932d45",
+    "osSystemSource": "703540d8503b76e03314a2c0b8979811f2e69e64",
+    "gxLoadHeader": "eeb19a5ca7d0cf70cb5c6d2d00937ce251172b24",
+    "gxBanks": "8e6ed5f29a0d6b6dccb0caed6725bd834fa7b164",
+    "dcCache": "7569d202d310b4fc1ee5cef298049d1599db7c68",
+    "partySprites": "822f06c0341d95925cca9fc154b258a6d20e938d",
+    "paletteAllocator": "3daea75579df500cc843a0664fe10fe602fcaceb",
+    "pcMain": "3d5d958211d73e173a382d1fe2cd1f61c8dffa15",
+    "pcIcon": "2b53038127ecd5b38929a73146e32d7eb95630e7"
+  },
+  "findings": [
+    "Existing party allocator supports free-space requests; whole-range reservation ignores TryGetDestOffsets return. No verified free slots or resource IDs authorized.",
+    "PC BG0 3D priority 1, BG1 0, BG2 1, BG3 3. No native layering acceptance.",
+    "Pinned SDK provides OS_DisableInterrupts/OS_RestoreInterrupts and OS_GetProcMode; harness protects its local busy/epoch state with short critical sections, not the entire GX subsystem.",
+    "Read-only platinum-modern-ds Actions run history accessible; most recent returned run 2026-11-12, successful. Workflow listing unavailable; current billing/quota and execution access not established. No workflow dispatched.",
+    "Local gcc/clang/ld.lld available; no qemu-arm, qemu-system-arm, melonDS, desmume, arm-none-eabi-gcc or meson on PATH; no unicorn. Complete SDK checkout unavailable."
+  ],
+  "limitations": [
+    "Native acceptance function is callable test source, not a complete runnable native executable; active ARM object uses declaration-only shim, not full SDK headers or link.",
+    "Scratch harness writes address zero only under explicit isolated build flags; caller must exclusively own bank A/F/G, no concurrent GX/DMA or render tasks. Never use in live PC. Default build denies all requests.",
+    "Mock tests do not demonstrate hardware readback, rasterization or native interrupt timing. New archive/registry evidence not found; no exhausted recovery probes repeated."
+  ],
+  "mainPins": {
+    "Sprites": "f15c4671bf7afb15450fc7801bde17aefcdc4f7e",
+    "Mercury-redux-dex": "faa7cb4016d8030fb4661b49114352d79cac7944",
+    "platinum-modern-ds": "5525e961a1fb98c62bd53bc4a27b0276a39f6719"
+  },
+  "productionAllowed": false
+}
