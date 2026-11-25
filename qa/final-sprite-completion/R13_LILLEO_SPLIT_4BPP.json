@@ -1,0 +1,147 @@
+{
+  "schema": "mercury-r13-lilleo-split-4bpp-experiment-v1",
+  "sourceBlob": "825945cf93a50e56340505653761528fa7110998",
+  "artworkKey": "lilleo|pixelsha256:da819772837893ac8e25e66666a2a1443f29b17628d489b800d0bd7b867a5171",
+  "pieces": [
+    {
+      "x": 0,
+      "y": 0,
+      "palette": [
+        0,
+        6342,
+        6349,
+        10619,
+        14843,
+        16957,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "opaqueColors": 5,
+      "frameTileSha256": [
+        "323ca22ac838cf908bf938fd439ee4329ce494f888a108bc7f6ac354993611ca",
+        "323ca22ac838cf908bf938fd439ee4329ce494f888a108bc7f6ac354993611ca"
+      ],
+      "frameTileBase64": [
+        "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAARAAAAIQAAACEAAAAQAAAAAAAAAAAAAAAAAAAAAAEBEQASFVURMVU1IVVVRTM=",
+        "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAARAAAAIQAAACEAAAAQAAAAAAAAAAAAAAAAAAAAAAEBEQASFVURMVU1IVVVRTM="
+      ],
+      "frameBytes": 128,
+      "verifiedPixels": 512
+    },
+    {
+      "x": 16,
+      "y": 0,
+      "palette": [
+        0,
+        6342,
+        6349,
+        10619,
+        14843,
+        16957,
+        32767,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "opaqueColors": 6,
+      "frameTileSha256": [
+        "3d7fa8af78913c530e9c9de4001915926e676b40e092aa7c1b054b80a5bf6a83",
+        "3d7fa8af78913c530e9c9de4001915926e676b40e092aa7c1b054b80a5bf6a83"
+      ],
+      "frameTileBase64": [
+        "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAARARABIgEQFiIBQVMiATEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAEAAAA=",
+        "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAARARABIgEQFiIBQVMiATEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAEAAAA="
+      ],
+      "frameBytes": 128,
+      "verifiedPixels": 512
+    },
+    {
+      "x": 0,
+      "y": 16,
+      "palette": [
+        0,
+        5291,
+        6342,
+        6347,
+        6349,
+        6419,
+        8536,
+        10570,
+        10619,
+        14843,
+        16915,
+        16957,
+        17974,
+        20120,
+        22199,
+        32767
+      ],
+      "opaqueColors": 15,
+      "frameTileSha256": [
+        "bbce85f77020a8105725915630e3af73600ab070e055ca248dc8b22b7aa7b336",
+        "bbce85f77020a8105725915630e3af73600ab070e055ca248dc8b22b7aa7b336"
+      ],
+      "frameTileBase64": [
+        "AAAAIAAAAHIAAADyAAAA4gAAACAAAAAAAAAAAAAAAAC1VVuZVmZ1WGd24odm5vJWd9pvVcLXXSUgUlVlACBlZgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFJVZgBSVWcgUyJnMkICYiAiADIAACAhAAAAIgAAAAA=",
+        "AAAAIAAAAHIAAADyAAAA4gAAACAAAAAAAAAAAAAAAAC1VVuZVmZ1WGd24odm5vJWd9pvVcLXXSUgUlVlACBlZgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFJVZgBSVWcgUyJnMkICYiAiADIAACAhAAAAIgAAAAA="
+      ],
+      "frameBytes": 128,
+      "verifiedPixels": 512
+    },
+    {
+      "x": 16,
+      "y": 16,
+      "palette": [
+        0,
+        6342,
+        6349,
+        6384,
+        6419,
+        8536,
+        10570,
+        10619,
+        14843,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "opaqueColors": 8,
+      "frameTileSha256": [
+        "30b068921c92d02f51b20744e1299b64d065d8d05ed94a8f6a9d02c5ea023c2e",
+        "30b068921c92d02f51b20744e1299b64d065d8d05ed94a8f6a9d02c5ea023c2e"
+      ],
+      "frameTileBase64": [
+        "FwAQFBgAEBUUABAVAQAQEwERMQEVVWUBVVVVAVVVVQEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEVURQFlFEQUFQFBEhUAIRISABABEgAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=",
+        "FwAQFBgAEBUUABAVAQAQEwERMQEVVWUBVVVVAVVVVQEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEVURQFlFEQUFQFBEhUAIRISABABEgAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA="
+      ],
+      "frameBytes": 128,
+      "verifiedPixels": 512
+    }
+  ],
+  "verifiedPixels": 2048,
+  "totalTileBytes": 1024,
+  "objectsPerFrame": 4,
+  "paletteCandidates": 4,
+  "productionAllowed": false,
+  "limitations": [
+    "Four independently paletted 16x16 OBJ pieces; host tile reconstruction only. Requires new NCER/OAM placement and verified palette allocation; not compatible with current one-object cell contract."
+  ]
+}
