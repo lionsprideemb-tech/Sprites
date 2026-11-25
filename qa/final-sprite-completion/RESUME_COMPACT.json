@@ -48,14 +48,14 @@
     "sourceQuartetsRecovered": 0
   },
   "next": {
-    "cohort": "GENERATED_ICON_COMPLETION_AND_NATIVE_CONTAINER_ACCEPTANCE",
-    "firstName": "Continue verified generated icon driver from offset 94; locate exact pinned PC implementation and independent native container compiler evidence",
-    "offset": 94,
-    "eligible": 252,
+    "cohort": "FINAL_ICON_IDENTITY_AND_NATIVE_RESOURCE_HANDOFF",
+    "firstName": "Consolidate all 346 generated technical passes against exact original icon provenance, prepare per-screen 512-byte PC and 1024-byte party staging, and verify full resource contract without approvals or native production IDs",
+    "offset": 346,
+    "eligible": 0,
     "priorManifestRemainingUntested": 0,
     "completedBulkOffset": 200
   },
-  "policy": "Offline QA only; no production IDs, main changes, ROM changes, invented artwork or approvals. Preserve Delta Flygon unapproved. Check latest branch head and reconcile any batches after checkpoint before resuming. All ordinary conversions and prior-manifest retests are exhausted; no retest repetition without a new lossless method or original source. Release 9 offline lock does not establish native game readiness; do not repeat exhausted source or scale searches unless new evidence exists. Release 10: all 417 accessible archive binaries and 1668 resource member pairs verified; nine historical binary locators remain unresolved. Symbolic handles only; no production integration. Release 11 adds eight offline icon layout candidates and tested symbolic route gates; no native runtime or approval inferred. Release 12 completed eligible original icon inventory scan, with 66 offline candidate icons and one 16-color hold. Native bank allocation and runtime remain gated. Release 13 adds host-only native resource staging and two exact experimental Lilleo payloads; generated candidate QA separate from original artwork approval. Release 14 adds 84 separate generated icon technical passes and 95 host-validated prototype containers; no production bindings or runtime acceptance.",
+  "policy": "Offline QA only; no production IDs, main changes, ROM changes, invented artwork or approvals. Preserve Delta Flygon unapproved. Check latest branch head and reconcile any batches after checkpoint before resuming. All ordinary conversions and prior-manifest retests are exhausted; no retest repetition without a new lossless method or original source. Release 9 offline lock does not establish native game readiness; do not repeat exhausted source or scale searches unless new evidence exists. Release 10: all 417 accessible archive binaries and 1668 resource member pairs verified; nine historical binary locators remain unresolved. Symbolic handles only; no production integration. Release 11 adds eight offline icon layout candidates and tested symbolic route gates; no native runtime or approval inferred. Release 12 completed eligible original icon inventory scan, with 66 offline candidate icons and one 16-color hold. Native bank allocation and runtime remain gated. Release 13 adds host-only native resource staging and two exact experimental Lilleo payloads; generated candidate QA separate from original artwork approval. Release 14 adds 84 separate generated icon technical passes and 95 host-validated prototype containers; no production bindings or runtime acceptance. Release 15 completed all 346 eligible generated icon technical tests; generated art remains unapproved. Exact pinned PC audit and independently compiled host C checker persisted; no native runtime acceptance.",
   "archiveStorage": "First 33 new archives in existing ZIP; all 210 in pinned batch JSON manifest with SHA-256 and Git digests.",
   "registryHoldPixelProbe": {
     "path": "qa/final-sprite-completion/REGISTRY_HOLD_PIXEL_PROBE_WAIL_FAMILY.json",
@@ -380,6 +380,69 @@
       "Pinned party source checked, generated resdat unavailable; exact free palette slots unknown. PC newer upstream comparison is not pinned-runtime acceptance.",
       "All 84 newly screened generated candidates are existing derived artwork and remain unapproved. 252 eligible remain.",
       "Lilleo split objects and 8bpp routes remain experimental; extended OBJ palette support disabled in inspected screen code. No new recovery evidence for nine archives or 21 registry holds."
+    ]
+  },
+  "release15": {
+    "evidenceCommit": "d1cf6e33f2f6ce35475fedc2f4cb3b8991065b4b",
+    "evidence": {
+      "R14_GENERATED_ICONS_09.json": "5619fea486c9bcc5613f8d57195794d6ba596fdb",
+      "R14_GENERATED_ICONS_10.json": "6c834e47eaee7dba25f08431679899f6cb8d418d",
+      "R14_GENERATED_ICONS_11.json": "334c629b2c310ebbeaab69628bf375dd0de3c15d",
+      "R14_GENERATED_ICONS_12.json": "c54e71de14597b0363b498e245e99c97cb1ef418",
+      "R14_GENERATED_ICONS_13.json": "9b14454129fcb6ae33fc88881e7483f98827c911",
+      "R14_GENERATED_ICONS_14.json": "f32adb3b061eebef6bc1096e647da48d81894a7d",
+      "R14_GENERATED_ICONS_15.json": "14a165032781731d208088210900e6e52377b259",
+      "R14_GENERATED_ICONS_16.json": "5bc7cd30373e440fb81bcfaa74cd0a002c9b15d0",
+      "R14_GENERATED_ICONS_17.json": "57d96e9c58f07544e62ff786596adccdbfce29a5",
+      "R14_GENERATED_ICONS_18.json": "7dd606fa82b7ed77862eab2019c786f1d3e09820",
+      "R14_GENERATED_ICONS_19.json": "61652020ce62c935d89f2201813f5f6fa6786eb3",
+      "R14_GENERATED_ICONS_20.json": "d497dfb9d7fc2cabd4cefb99e5be68297da90d40",
+      "R14_GENERATED_ICONS_21.json": "09bc7f21ca99faa4296c405c2a6e47b4edcf2ed1",
+      "R14_GENERATED_ICONS_22.json": "82723ac775dcd99a48f77f2356cd3e4f8abb7657",
+      "R14_GENERATED_ICONS_23.json": "531fe7f9966783bdaca006f233e86f1e7bd6141b",
+      "R14_GENERATED_ICONS_24.json": "3c15a494b61faa1a42a5870f7437388c47dbe58e",
+      "R14_GENERATED_ICONS_25.json": "c7ea13a7a9f5aefe20fb9d0a215244665eecf497",
+      "R14_GENERATED_ICONS_26.json": "0f3fa4f57e0d0ff261c27d4941e5e2c310654562",
+      "R14_GENERATED_ICONS_27.json": "4b9e26507bd2daa72b42f27a3b6729ee99f31283",
+      "R14_GENERATED_ICONS_28.json": "3ee6397f0a76a4cc98e9cd4a961b7ecf3ac84bfd",
+      "R14_GENERATED_ICONS_29.json": "094762ee52a94cc110f38d9a81e523f2a6ef0f87",
+      "R14_GENERATED_ICONS_25_RETEST.json": "534d10092d9879194dc5c534963170c3cfe4ba17",
+      "r15_check.c": "bb95b4dcc5dbc95893da02ad3973307f75d8fd98",
+      "R15_NATIVE_PC_AND_C_CHECK.json": "9bab943c2f584e9f9075b1c8f39ff7261b62e7fa"
+    },
+    "summary": {
+      "generatedInventory": 382,
+      "generatedEligible": 346,
+      "generatedNewUniqueTested": 252,
+      "generatedNewPasses": 252,
+      "generatedCumulativePasses": 346,
+      "generatedRemaining": 0,
+      "generatedExcluded": 36,
+      "generatedApproved": 0,
+      "transientSourceFailureResolved": 1,
+      "originalIconCandidates": 66,
+      "prototypeContainers": 95,
+      "independentHostCContainerPairs": 1,
+      "independentHostCNegativeTests": 28,
+      "pinnedPcStaticAudit": true,
+      "actualFreePaletteSlotsVerified": false,
+      "verifiedArchiveBinaries": 417,
+      "missingHistoricalArchiveBinaries": 9,
+      "registryHoldsRemaining": 21,
+      "nativeCompilerVerified": false,
+      "nativeEmulatorVerified": false,
+      "mainUnchanged": true
+    },
+    "mainPins": {
+      "Sprites": "f15c4671bf7afb15450fc7801bde17aefcdc4f7e",
+      "Mercury-redux-dex": "faa7cb4016d8030fb4661b49114352d79cac7944",
+      "platinum-modern-ds": "5525e961a1fb98c62bd53bc4a27b0276a39f6719"
+    },
+    "limitations": [
+      "Generated technical passes do not approve generated art, nor establish native resource bindings; one transient fetch failure at offset 286 was recovered by exact-source retest.",
+      "Pinned PC implementation uses 512-byte first-frame character loads and normal/shaded palettes at offsets 2/6; other reserved palettes still unverified.",
+      "Independent compiled host C checker passed one actual NCGR/NCLR pair and 28 corruptions, not native compiler or SDK acceptance. GCC and libpng present, nitrogfx/ARM compiler/melonDS absent, public upstream network checkout blocked by DNS.",
+      "No new evidence for nine archive binaries or 21 registry holds; Lilleo remains experimental."
     ]
   }
 }
