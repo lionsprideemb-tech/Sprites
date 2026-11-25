@@ -1412,6 +1412,17 @@
       "fullNativeBuild": false,
       "gameplayVerified": false,
       "productionAllowed": false
+    },
+    "backup": {
+      "status": "PARTIAL_BUNDLE_VERIFIED_GITHUB_BINARY_STORAGE_BLOCKED",
+      "evidenceBlob": "3019dc4e302486f0c1c6105ce6687afc58cb3a01",
+      "runnerBlob": "d7e6c8a35f117b1437f8fc7fa6a956449901841e",
+      "zipSha256": "601bd00c6a7588ba031076571dd03ba0f50cd91af83e151739daa57d2e98d762",
+      "packages": 2,
+      "frames": 240,
+      "cleanDirectoryRestore": true,
+      "githubBinaries": false,
+      "fullToolchain": false
     }
   }
 }
