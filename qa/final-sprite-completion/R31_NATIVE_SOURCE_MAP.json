@@ -1,0 +1,216 @@
+{
+  "schema": "mercury-r31-native-source-map-v1",
+  "inputs": {
+    "registryFixture": "de6f646e80069e1bd1bdf14d84ff8ab031d8fb6c",
+    "transactionSource": "98ec13138ba305da213e760d1ae706915c2bb7f7",
+    "preflight": "459f8fe3cac0513d314f4e08bb6f604353aa78d0"
+  },
+  "mainPins": {
+    "Sprites": "f15c4671bf7afb15450fc7801bde17aefcdc4f7e",
+    "Mercury-redux-dex": "faa7cb4016d8030fb4661b49114352d79cac7944",
+    "platinum-modern-ds": "5525e961a1fb98c62bd53bc4a27b0276a39f6719"
+  },
+  "upstream": {
+    "repository": "pret/pokeplatinum",
+    "pin": "c248fb3f8cc9934ded800e489567c5c0eeee92eb",
+    "lockBlob": "e9b94a9653c1c67bba59a9fef035044cec5b1f8d",
+    "workflowBlobs": {
+      "pt01": "322c62bcb5bae020c09259c7e2aa9a74fbc767dc",
+      "pt04hRuntime": "e5e38ef9c0ff0af0f7bcdc0c195082d16e4141806",
+      "pt05b": "b952a7bedf73e5222ea4193554d839925baff327"
+    },
+    "buildSequence": [
+      "Ubuntu 24.04 dependencies incl. gcc-arm-none-eabi, bison, flex",
+      "exact pinned checkout",
+      "rsync project overlay",
+      "make skrew",
+      "make configure",
+      "make check; later harness uses make rom and py-desmume"
+    ]
+  },
+  "nativeSourceMap": [
+    {
+      "path": "include/struct_defs/pokemon.h",
+      "blob": "e7c2c204a39a7adcfe067c5e4b0b97f7ba465cb4",
+      "lines": [
+        17,
+        65
+      ],
+      "finding": "16-bit species; five-bit persistent form; do not write raw packed or encrypted storage"
+    },
+    {
+      "path": "include/pokemon.h",
+      "blob": "d0a00bd97412231f6ea8287110c35e19021b16ad",
+      "lines": [
+        141,
+        158,
+        177,
+        645
+      ],
+      "finding": "Pokemon_CalcLevelAndStats/GetValue/SetValue/Copy API"
+    },
+    {
+      "path": "src/pokemon.c",
+      "blob": "2700366a181d78c2c6543f3846bc9e94165086e0",
+      "ranges": [
+        [
+          554,
+          565
+        ],
+        [
+          630,
+          649
+        ],
+        [
+          1374,
+          1388
+        ],
+        [
+          1604,
+          1618
+        ],
+        [
+          4098,
+          4110
+        ]
+      ],
+      "finding": "void setters; use u16 species and u8 form values; copy stages full struct; real stat calculation and HP logic need runtime verification"
+    },
+    {
+      "path": "src/party.c",
+      "blob": "5ed4482eac604467323ef29cab9d793a3a4b3062",
+      "ranges": [
+        [
+          84,
+          145
+        ]
+      ],
+      "finding": "Party_GetCurrentCount and slot accessor; swaps copy whole Pokemon; SaveData_GetParty returns save-table party"
+    },
+    {
+      "path": "include/party.h",
+      "blob": "a0dd896281beeb09edebf7ba05dbae4ea82f3ccc",
+      "lines": [
+        24,
+        25,
+        28,
+        30
+      ],
+      "finding": "actual party API declarations"
+    },
+    {
+      "path": "src/battle/battle_system.c",
+      "blob": "808d7c0d0b8664ee60dd915f4712f523f8dd46ec",
+      "ranges": [
+        [
+          124,
+          160
+        ],
+        [
+          926,
+          971
+        ]
+      ],
+      "finding": "2v2 and enemy tag select battler party; ordinary doubles use battler & 1; Burmy cleanup existing form example"
+    },
+    {
+      "path": "src/battle/battle_main.c",
+      "blob": "dc92931edbefbc89c8f65090f7c6c01ee556da0e",
+      "ranges": [
+        [
+          682,
+          713
+        ]
+      ],
+      "finding": "restore before Party_Copy to DTO and Heap_Free; capture processing also occurs before copyback"
+    },
+    {
+      "path": "include/savedata.h",
+      "blob": "37d1be9f036301301a2ed86e3a9d4357953d1130",
+      "lines": [
+        82,
+        83,
+        86,
+        87,
+        97,
+        98,
+        99
+      ],
+      "finding": "native save APIs; no save calls from temporary form transaction"
+    }
+  ],
+  "projectOverlay": {
+    "path": "platinum-overlay/src/battle/battle_lib.c",
+    "blob": "20138327d33eefc260d91762c8bae5c99ac1ca32",
+    "lines": [
+      72,
+      74,
+      132,
+      6438,
+      6446
+    ],
+    "finding": "battleMons species/formNum cache and separate party copy/setter paths; synchronize battle view after native transition before accepting adapter"
+  },
+  "historicalSave": {
+    "blob": "caa58a3301c10157237e9873f6ab9d7291bdca7d",
+    "harnessBlob": "da02da50b1d1def3828e2039214c7baecd9f3ffc",
+    "finding": "reported prior PT04H canonical save/reset/reload pass; not rerun or artifact verified in R31"
+  },
+  "execution": {
+    "priorRetest": {
+      "fixtureBlob": "de6f646e80069e1bd1bdf14d84ff8ab031d8fb6c",
+      "sourceBlob": "98ec13138ba305da213e760d1ae706915c2bb7f7",
+      "checks": 3388,
+      "exitCode": 0
+    },
+    "newPrototype": {
+      "sourceBlob": "15cea2efd5ee4325a5ed9b3f97f6f5290171d393",
+      "sha256": "04ee38a95b75626dd75e94296a779d45fb25ea89909f036b272861a60b416af7",
+      "command": "cc -std=c11 -Wall -Wextra -Werror -pedantic -fsanitize=undefined -o r31_party_adapter r31_party_adapter.c && ./r31_party_adapter",
+      "stdout": "PASS: 3578 party mapping and copyback host checks; native binding disabled",
+      "exitCode": 0,
+      "gitBlobMatch": true,
+      "checks": 3578
+    },
+    "local": {
+      "compiler": "cc Debian 14.2.0-19",
+      "armProbe": "clang --target=arm-none-eabi -mcpu=arm946e-s emitted ELF 32-bit ARM EABI5 relocatable; not full DS build",
+      "available": [
+        "cc",
+        "clang",
+        "make",
+        "ninja",
+        "git",
+        "pkg-config",
+        "python3",
+        "wget",
+        "xz",
+        "rsync",
+        "jq"
+      ],
+      "missing": [
+        "arm-none-eabi-gcc",
+        "arm-none-eabi-as",
+        "ndstool",
+        "meson",
+        "bison",
+        "flex",
+        "skrew",
+        "wine",
+        "desmume",
+        "melonDS",
+        "py-desmume"
+      ],
+      "devkitEnvUnset": true,
+      "publicGithubHead": "DNS resolution failed in container",
+      "externalFreeEnvironmentVerified": false,
+      "ciTriggered": false
+    }
+  },
+  "limitations": [
+    "Adapter uses host structs, fixture form numbers and synthetic HP/stat calculation; no actual engine calls or DS compilation.",
+    "Party swap refusal tested, not remap recovery. Actual battle cache, native HP and ability rules, capture/escape, link/multi cleanup, atomic native copyback, and save/load acceptance still required.",
+    "No new authority or archive evidence; no production binding."
+  ],
+  "productionAllowed": false
+}
