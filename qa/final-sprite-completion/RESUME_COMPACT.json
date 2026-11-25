@@ -1,8 +1,8 @@
 {
   "schema": "mercury-compact-resume-v1",
-  "verifiedCheckpointCommit": "e294cd16b4aa9255a67ef2a76da0bcf8753fa74c",
+  "verifiedCheckpointCommit": "4404d4603343b46c400c8548ec23f5cf5fc6fe65",
   "checkpointPath": "qa/final-sprite-completion/CHECKPOINT.json",
-  "checkpointBlob": "de7b8ca81abf16baaca1151c91890656751b9ab6",
+  "checkpointBlob": "9e060a594a14a11ba2c93f5f8f03b168e32ce15e",
   "gateBlob": "94b3a58b8d51d4c579001c6ffc1914d1b5a10c10",
   "ledgerBlob": "686fd93d34bb39055c0d6cbbf3bcdc5566fcd51a",
   "runnerBlob": "917240025ab58fee9b636172cb3dd5ab2a8a5d97",
@@ -48,18 +48,14 @@
     "sourceQuartetsRecovered": 0
   },
   "next": {
-    "cohort": "FINAL_RESCUE_AND_REGISTRY",
+    "cohort": "NATIVE_RESOURCE_HANDOFF_AND_ARCHIVE_LOCATORS",
     "offset": 0,
-    "firstName": "Original artwork recovery and exact registry reconciliation",
+    "firstName": "426 offline archives and native icon routing",
     "eligible": 0,
-    "batchSize": 3,
-    "nextLabel": "88_FINAL_RESCUE",
-    "nextExactHoldOffset": 18,
-    "nextPriorManifestHoldOffset": 33,
     "priorManifestRemainingUntested": 0,
     "completedBulkOffset": 200
   },
-  "policy": "Offline QA only; no production IDs, main changes, ROM changes, invented artwork or approvals. Preserve Delta Flygon unapproved. Check latest branch head and reconcile any batches after checkpoint before resuming. All ordinary conversions and prior-manifest retests are exhausted; no retest repetition without a new lossless method or original source.",
+  "policy": "Offline QA only; no production IDs, main changes, ROM changes, invented artwork or approvals. Preserve Delta Flygon unapproved. Check latest branch head and reconcile any batches after checkpoint before resuming. All ordinary conversions and prior-manifest retests are exhausted; no retest repetition without a new lossless method or original source. Release 9 offline lock does not establish native game readiness; do not repeat exhausted source or scale searches unless new evidence exists.",
   "archiveStorage": "First 33 new archives in existing ZIP; all 210 in pinned batch JSON manifest with SHA-256 and Git digests.",
   "registryHoldPixelProbe": {
     "path": "qa/final-sprite-completion/REGISTRY_HOLD_PIXEL_PROBE_WAIL_FAMILY.json",
@@ -84,6 +80,61 @@
           "shinyBack": "OVERSIZE_HOLD",
           "back": "OVERSIZE_HOLD"
         }
+      }
+    ]
+  },
+  "release9": {
+    "evidence": {
+      "offlineLock": "3b5676bda5d55ee120f54d9f09605ffb9534e6ca",
+      "sourceRecovery": "b5d0c4b883b0150ac8164fca1ead327587f98357",
+      "integerScaleScreen": "1058cd8fe01ca85adfca237ad1d186d62802f090",
+      "integerScaleTests": "8995b419a50136d0e58110b4715bd2115d104883",
+      "unassignedMedia": "aab80da76e6d2e11777397cf4fba689c59d02628",
+      "originalIconProbe": "cf582819be0b4508f9a32d45c46348d71d64a344",
+      "wailRegistryAuthority": "6715f35fc91e7d524ac39d8fbb05499640ff09f0",
+      "wailPixelProbe": "40195318471f55f3e28eacd71f1d98abaaf87286"
+    },
+    "summary": {
+      "archiveRecords": 426,
+      "uniqueArtworkKeys": 426,
+      "uniqueArchiveDigests": 426,
+      "excludedUnverified": 285,
+      "trackedExclusions": 134,
+      "otherExcluded": 151,
+      "archiveBytesReverifiedThisRelease": 8,
+      "originalSourcesInvestigated": 82,
+      "originalQuartetsRecovered": 0,
+      "oversizedViewsScreened": 62,
+      "exactPixelCandidatesTested": 12,
+      "integerFactorTests": 25,
+      "losslessRescues": 0,
+      "unassignedWorkbookMediaDecoded": 7,
+      "originalIconFilesTested": 4,
+      "nativeIconPasses": 0,
+      "nativeRuntimeVerified": false
+    },
+    "wailRegistry": [
+      {
+        "reviewId": "R0477",
+        "historicalTypes": [
+          "Water",
+          "Ghost"
+        ],
+        "sourceTypes": [
+          "Flying"
+        ],
+        "disposition": "EXCLUDE_PENDING_TYPE_AUTHORITY_AND_TECHNICAL_RESCUE"
+      },
+      {
+        "reviewId": "R0479",
+        "historicalTypes": [
+          "Water",
+          "Ghost"
+        ],
+        "sourceTypes": [
+          "Flying"
+        ],
+        "disposition": "EXCLUDE_PENDING_TYPE_AUTHORITY_AND_TECHNICAL_RESCUE"
       }
     ]
   }
