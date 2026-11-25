@@ -48,14 +48,14 @@
     "sourceQuartetsRecovered": 0
   },
   "next": {
-    "cohort": "INDEPENDENT_INTEGRATION_WORK_OR_AUTHORIZED_NATIVE_EXECUTION",
-    "firstName": "Do not repeat offline graphics tests. Native acceptance requires genuinely available SDK/emulator execution; otherwise prioritize independent registry/resource handoff and exact source recovery only with new evidence.",
+    "cohort": "EXACT_EVOLUTION_PARENT_AND_FORM_AUTHORITY",
+    "firstName": "Resolve 18 unresolved donor parent references using original constant-level donor authority, including semicolon-delimited parent/requirement pairs; validate graph semantics, form identity and explicit overrides. Preserve unconfirmed edges and missing archive holds, no production IDs. Native graphics only with genuinely available execution.",
     "offset": 346,
     "eligible": 0,
     "priorManifestRemainingUntested": 0,
     "completedBulkOffset": 200
   },
-  "policy": "Offline QA only; no production IDs, main changes, ROM changes, invented artwork or approvals. Preserve Delta Flygon unapproved. Check latest branch head and reconcile any batches after checkpoint before resuming. All ordinary conversions and prior-manifest retests are exhausted; no retest repetition without a new lossless method or original source. Release 9 offline lock does not establish native game readiness; do not repeat exhausted source or scale searches unless new evidence exists. Release 10: all 417 accessible archive binaries and 1668 resource member pairs verified; nine historical binary locators remain unresolved. Symbolic handles only; no production integration. Release 11 adds eight offline icon layout candidates and tested symbolic route gates; no native runtime or approval inferred. Release 12 completed eligible original icon inventory scan, with 66 offline candidate icons and one 16-color hold. Native bank allocation and runtime remain gated. Release 13 adds host-only native resource staging and two exact experimental Lilleo payloads; generated candidate QA separate from original artwork approval. Release 14 adds 84 separate generated icon technical passes and 95 host-validated prototype containers; no production bindings or runtime acceptance. Release 15 completed all 346 eligible generated icon technical tests; generated art remains unapproved. Exact pinned PC audit and independently compiled host C checker persisted; no native runtime acceptance. Release 16 all 412 raw icon payloads staged and host SHA-256 verified; 381 artwork keys, no original/generated exact-key or decoded-pixel matches; no native palette slots or production assignments, generated art unapproved. Release 17 exact PC shade transform exhaustive host C and JS parity, ARM9-targeted object compiled only; 412 normal/shaded prototype packages, exact accepted battle-art associations, zero stock palette fits or approved icon bindings; no free slot verified. Release 18 strict zero-free-slot policy, experimental palette-window manager tested with all 412 candidates; full PC windows fail exact-palette capacity, pinned SDK transfer bounds investigated, no native acceptance. Release 19 host-only direct-color and 4bpp texture rendering tests preserve exact RGB555/alpha; no native VRAM allocation or engine acceptance; full boxes fit hypothetical texture capacity only. Release 20 default preview texture reservation 32768 bytes and palette conservative 192 bytes, hypothetical pool tested with all 412 candidates and exact offset arithmetic; native GX sampling and DMA/priority still unverified. Release 21 host scrolling column handshake, owned DMA lifetime and party route tested with all 412 candidates; C ownership core compiled for ARM9, SDK EndLoad fences confirmed from pinned source only. No native free slots or full engine acceptance. Release 22 direct SDK-facing adapter host mock and fail-closed native-default tests; no actual SDK linkage, native transfer, free memory authorization or emulator acceptance. Party resource table declares seven main and one sub bank; no production allocation. Release 23 isolated callable acceptance harness, default gate and handoff verified; no complete native executable, SDK link, hardware readback or free execution entitlement confirmed. Preserve all prior holds.",
+  "policy": "Offline QA only; no production IDs, main changes, ROM changes, invented artwork or approvals. Preserve Delta Flygon unapproved. Check latest branch head and reconcile any batches after checkpoint before resuming. All ordinary conversions and prior-manifest retests are exhausted; no retest repetition without a new lossless method or original source. Release 9 offline lock does not establish native game readiness; do not repeat exhausted source or scale searches unless new evidence exists. Release 10: all 417 accessible archive binaries and 1668 resource member pairs verified; nine historical binary locators remain unresolved. Symbolic handles only; no production integration. Release 11 adds eight offline icon layout candidates and tested symbolic route gates; no native runtime or approval inferred. Release 12 completed eligible original icon inventory scan, with 66 offline candidate icons and one 16-color hold. Native bank allocation and runtime remain gated. Release 13 adds host-only native resource staging and two exact experimental Lilleo payloads; generated candidate QA separate from original artwork approval. Release 14 adds 84 separate generated icon technical passes and 95 host-validated prototype containers; no production bindings or runtime acceptance. Release 15 completed all 346 eligible generated icon technical tests; generated art remains unapproved. Exact pinned PC audit and independently compiled host C checker persisted; no native runtime acceptance. Release 16 all 412 raw icon payloads staged and host SHA-256 verified; 381 artwork keys, no original/generated exact-key or decoded-pixel matches; no native palette slots or production assignments, generated art unapproved. Release 17 exact PC shade transform exhaustive host C and JS parity, ARM9-targeted object compiled only; 412 normal/shaded prototype packages, exact accepted battle-art associations, zero stock palette fits or approved icon bindings; no free slot verified. Release 18 strict zero-free-slot policy, experimental palette-window manager tested with all 412 candidates; full PC windows fail exact-palette capacity, pinned SDK transfer bounds investigated, no native acceptance. Release 19 host-only direct-color and 4bpp texture rendering tests preserve exact RGB555/alpha; no native VRAM allocation or engine acceptance; full boxes fit hypothetical texture capacity only. Release 20 default preview texture reservation 32768 bytes and palette conservative 192 bytes, hypothetical pool tested with all 412 candidates and exact offset arithmetic; native GX sampling and DMA/priority still unverified. Release 21 host scrolling column handshake, owned DMA lifetime and party route tested with all 412 candidates; C ownership core compiled for ARM9, SDK EndLoad fences confirmed from pinned source only. No native free slots or full engine acceptance. Release 22 direct SDK-facing adapter host mock and fail-closed native-default tests; no actual SDK linkage, native transfer, free memory authorization or emulator acceptance. Party resource table declares seven main and one sub bank; no production allocation. Release 23 isolated callable acceptance harness, default gate and handoff verified; no complete native executable, SDK link, hardware readback or free execution entitlement confirmed. Preserve all prior holds. Release 24 executable QA symbolic namespaces preserve canonical IDs and sentinels, 2146 offline serialization roundtrips and 396 QA-only artwork routes; 30 archive/registry holds unchanged. Donor evolution references are not approved native edges; no cartridge save mutation.",
   "archiveStorage": "First 33 new archives in existing ZIP; all 210 in pinned batch JSON manifest with SHA-256 and Git digests.",
   "registryHoldPixelProbe": {
     "path": "qa/final-sprite-completion/REGISTRY_HOLD_PIXEL_PROBE_WAIL_FAMILY.json",
@@ -929,6 +929,46 @@
       "Native acceptance function is callable test source, not a complete runnable native executable; active ARM object uses declaration-only shim, not full SDK headers or link.",
       "Scratch harness writes address zero only under explicit isolated build flags; caller must exclusively own bank A/F/G, no concurrent GX/DMA or render tasks. Never use in live PC. Default build denies all requests.",
       "Mock tests do not demonstrate hardware readback, rasterization or native interrupt timing. New archive/registry evidence not found; no exhausted recovery probes repeated."
+    ]
+  },
+  "release24": {
+    "evidenceCommit": "28ba78f9c518509e54120ee4a4ad387ee630611e",
+    "engineContractBlob": "e720bd0fd6ccf256e947afd845ded2a8c6551481",
+    "registrySourceBlob": "e44e4efabde996fc9873f04d621a3b641e98feee",
+    "registryHandoffBlob": "62df9b95c6aa1108b9a3bb414b8169db7c5c7b41",
+    "summary": {
+      "roundTrips": 2146,
+      "negative": 2135,
+      "routePass": 396,
+      "routeHold": 30,
+      "historicalRows": 574,
+      "formGroups": 547,
+      "formAliasCount": 576,
+      "ambiguousFormAliases": 0,
+      "donorReferences": 287,
+      "donorReferenceCounts": {
+        "DONOR_REFERENCE_UNIQUE_QA_ONLY": 269,
+        "HOLD_UNRESOLVED_PARENT": 18
+      },
+      "unresolvedEvolutionWarnings": 5,
+      "canonicalNativeIdsVerified": 1025,
+      "customNativeIdsAllocated": 0,
+      "artworkRecords": 711
+    },
+    "nativeSaveTestRerun": false,
+    "nativeFullBuild": false,
+    "emulatorVerified": false,
+    "productionAllowed": false,
+    "mainPins": {
+      "Sprites": "f15c4671bf7afb15450fc7801bde17aefcdc4f7e",
+      "Mercury-redux-dex": "faa7cb4016d8030fb4661b49114352d79cac7944",
+      "platinum-modern-ds": "5525e961a1fb98c62bd53bc4a27b0276a39f6719"
+    },
+    "limitations": [
+      "Canonical ID values preserve the existing engine map; custom review and protected-form keys are QA identities, not production species or form IDs.",
+      "Donor parent matching uses exact case-insensitive display name and is a candidate reference only; no evolution methods, new edges or approvals inferred.",
+      "JSON save envelope is offline QA interchange, not Nintendo DS save serialization. No cartridge persistence acceptance.",
+      "Historical and placement archive routes remain QA only. No new archive binary or registry authority recovered."
     ]
   }
 }
