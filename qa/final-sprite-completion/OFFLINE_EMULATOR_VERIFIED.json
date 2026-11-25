@@ -1,0 +1,52 @@
+{
+  "schema": "mercury-offline-emulator-recovery-v1",
+  "priorCheckpoint": "23efe58c936e7f8662ca29b6afdd5f5f5b7d831f",
+  "mainPins": {
+    "Sprites": "f15c4671bf7afb15450fc7801bde17aefcdc4f7e",
+    "Mercury-redux-dex": "faa7cb4016d8030fb4661b49114352d79cac7944",
+    "platinum-modern-ds": "5525e961a1fb98c62bd53bc4a27b0276a39f6719"
+  },
+  "wheel": {
+    "file": "py_desmume-0.0.9-cp313-cp313-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl",
+    "bytes": 3447469,
+    "sha256": "4fcb17e824dd5ab2f1baa3fdd930dd9af6f7176b8c9d7dc9bd329d45df1ac5bd",
+    "source": "official PyPI distribution supplied by user",
+    "package": "py-desmume 0.0.9",
+    "runtime": "DeSmuME 0.9.12 x64",
+    "userAttachment": "file_00000000eb148212b680bf7fdc0e7f2f",
+    "durableBinaryInGitHub": false
+  },
+  "execution": {
+    "verifiedIntakeBlob": "4e1f8f0e191df4cb4dc8a60641f45295f616b6e3",
+    "init": "PASS: emulator initialized and destroyed; no ROM loaded",
+    "install": "pip install --no-index --no-deps --disable-pip-version-check --target <isolated-dir> <verified-wheel>",
+    "probeBlob": "095ca08eaed6dbf1bb24e006d9651a4b0f3bb24b",
+    "probeSha256": "dd122fd07a6eda6cc907b92efefe967313c9264f200ef837b8a4270ea0ab4a19",
+    "probeCommand": "SDL_VIDEODRIVER=dummy SDL_AUDIODRIVER=dummy PYTHONPATH=<isolated-dir> HOME=<isolated-home> python emulator_execution_probe.py",
+    "frames": 120,
+    "initialMemory": "0x0",
+    "finalMemory": "0x4d455243",
+    "screenshot": [
+      256,
+      384
+    ],
+    "exitCode": 0,
+    "sourceBlobMatched": true,
+    "firstProbeAttempt": "failed due to using read_long on wrong accessor; corrected to memory.unsigned.read_long; successful rerun and exact committed script independently executed",
+    "syntheticProgramOnly": true,
+    "commercialRomLoaded": false,
+    "nativeGameplayVerified": false
+  },
+  "compiler": {
+    "fullToolchainRecovered": false,
+    "nextCandidate": "gcc-arm-none-eabi_14.2.rel1-1_amd64.deb",
+    "candidateSha256": "99252fdda02ad134e8c3c344d3c843f7aa5c0d006e92a5b3d53daf4bd935b5d3",
+    "note": "GNU ARM candidate is not full pinned toolchain; Meson 1.12.0, Metroskrew 0.1.3, remaining dependencies and exact source recovery still required."
+  },
+  "limitations": [
+    "Wheel bytes retained in user attachment/local session, not committed to GitHub. Reattach or recover exact official wheel for fresh session; no promise of durable local binary access.",
+    "Synthetic DS probe proves CPU and emulator execution, memory read and screenshot API, not Mercury Redux native gameplay or save compatibility.",
+    "No full build, purchases, CI, deployments, main or playable ROM changes. R32 paused."
+  ],
+  "productionAllowed": false
+}
