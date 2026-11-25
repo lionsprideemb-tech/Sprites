@@ -1,0 +1,115 @@
+{
+  "schema": "mercury-offline-ds-environment-preflight-v1",
+  "release31Preserved": "4a7084027ddf74cf73569271cb028fdaac1e6cfe",
+  "mainPins": {
+    "Sprites": "f15c4671bf7afb15450fc7801bde17aefcdc4f7e",
+    "Mercury-redux-dex": "faa7cb4016d8030fb4661b49114352d79cac7944",
+    "platinum-modern-ds": "5525e961a1fb98c62bd53bc4a27b0276a39f6719"
+  },
+  "upstream": "pret/pokeplatinum@c248fb3f8cc9934ded800e489567c5c0eeee92eb",
+  "workflowPins": {
+    "pt01": "322c62bcb5bae020c09259c7e2aa9a74fbc767dc",
+    "pt04h": "e5e38ef9c0ff0af0f7bcdc0c195082d16e4141806"
+  },
+  "local": {
+    "architecture": "x86_64",
+    "os": "Debian GNU/Linux 13.3",
+    "python": "3.13.5",
+    "available": [
+      "cc",
+      "clang",
+      "ld.lld",
+      "make",
+      "ninja",
+      "git",
+      "pkg-config",
+      "python3",
+      "wget",
+      "xz",
+      "rsync",
+      "jq",
+      "dpkg-deb",
+      "libSDL2-2.0.so.0"
+    ],
+    "missing": [
+      "arm-none-eabi-gcc",
+      "arm-none-eabi-as",
+      "bison",
+      "flex",
+      "skrew",
+      "desmume",
+      "py-desmume"
+    ],
+    "cache": "APT archive cache contains no .deb; no user pip cache; searched local paths for toolchain/emulator files without matches"
+  },
+  "network": [
+    {
+      "url": "https://github.com",
+      "result": "DNS failure (curl 6)"
+    },
+    {
+      "url": "https://pypi.org/simple/py-desmume/",
+      "result": "DNS timeout (curl 28)"
+    },
+    {
+      "url": "https://deb.debian.org/debian/",
+      "result": "DNS failure (curl 6)"
+    },
+    {
+      "url": "https://deb.debian.org/debian/pool/main/d/desmume/desmume_0.9.13-4_amd64.deb",
+      "result": "Public web fetch inaccessible; container download bridge rejected URL; no package bytes recovered"
+    }
+  ],
+  "historicalArtifact": {
+    "repo": "lionsprideemb-tech/platinum-modern-ds",
+    "run": 35916432761,
+    "returnedArtifacts": 0,
+    "repoWideListing": "endpoint rejected; cannot assert all artifacts unavailable",
+    "librarySearch": "No matching toolchain bundle surfaced; not exhaustive"
+  },
+  "candidates": [
+    {
+      "file": "desmume_0.9.13-4_amd64.deb",
+      "size": 870292,
+      "sha256": "977146d8bb2907517ef934e149b0e14568f39d7c8d6ace87bfcc71caf83b611f",
+      "metadata": "https://packages.debian.org/trixie/amd64/desmume/download",
+      "url": "https://deb.debian.org/debian/pool/main/d/desmume/desmume_0.9.13-4_amd64.deb",
+      "state": "MISSING",
+      "note": "GUI/CLI Debian package does not establish py-desmume automation compatibility"
+    },
+    {
+      "file": "gcc-arm-none-eabi_14.2.rel1-1_amd64.deb",
+      "size": 58042936,
+      "sha256": "99252fdda02ad134e8c3c344d3c843f7aa5c0d006e92a5b3d53daf4bd935b5d3",
+      "metadata": "https://packages.debian.org/trixie/amd64/gcc-arm-none-eabi/download",
+      "url": "https://deb.debian.org/debian/pool/main/g/gcc-arm-none-eabi/gcc-arm-none-eabi_14.2.rel1-1_amd64.deb",
+      "state": "MISSING",
+      "note": "Debian candidate not confirmed equivalent to pinned Ubuntu workflow; dependency closure unresolved"
+    }
+  ],
+  "execution": {
+    "scriptBlob": "8827b2791e69bad7786b480a115d2b21abc435b3",
+    "command": "python3 offline_preflight.py --packages <local-package-dir> --sources <directory-containing-pinned-R30-R31-files>",
+    "integritySelftests": 5,
+    "r30Checks": 3388,
+    "r31Checks": 3578,
+    "armLink": "ELF32 little-endian ARM executable; clang --target=arm-none-eabi -mcpu=arm946e-s -ffreestanding -nostdlib -fuse-ld=lld; verified ELF machine and executable type; not executed",
+    "gitBlobMatch": true,
+    "packagesVerified": 0,
+    "fullNativeBuild": false,
+    "emulatorSmoke": false
+  },
+  "recovery": [
+    "Restore offline_preflight.py and three exact QA blobs from GitHub QA branch to fresh local directory; run script with local package directory and QA source path.",
+    "Obtain authorized, complete platform-compatible dependency bundle containing verified packages and required Python automation bindings, Metroskrew and dependencies; preserve source/version/license/size/SHA256 manifest. No paid compute or uploads assumed.",
+    "Verify package bytes and dependency closure before isolated extraction; do not change system or spoof the native compiler. Check py-desmume library import and emulator initialization before attempting any ROM.",
+    "Recover exact pinned upstream source and exact private overlay into authorized environment; verify Git identities. Use separate copy for native build smoke, never modify playable ROM. Only after toolchain/emulator pass and authorization run native integration acceptance.",
+    "Persist recovery manifest, scripts, exact source IDs, evidence and new QA results in isolated GitHub branch; no commercial ROM or unauthorized binaries. Full package byte persistence is not yet achieved."
+  ],
+  "limitations": [
+    "Recovery script verifies input packages and compiles existing tests; does not install packages or implement full bootstrap.",
+    "No new dependency binaries recovered. Missing package network ingress and dependency closure remain actual blockers.",
+    "No external environment or new service account authorized; no CI invoked. No emulator installed or smoke executed."
+  ],
+  "productionAllowed": false
+}
