@@ -1,0 +1,238 @@
+{
+  "schema": "mercury-registry-hold-pixel-probe-v1",
+  "ref": "45ed14104b70f9d02ac9cbea430d29394201f877",
+  "ledgerBlob": "686fd93d34bb39055c0d6cbbf3bcdc5566fcd51a",
+  "runnerBlob": "917240025ab58fee9b636172cb3dd5ab2a8a5d97",
+  "reports": [
+    {
+      "artworkKey": "wailmer-alternate-form-1|gitblob:3a5b7da3d29d1b5c26c57613924db1233188caf9",
+      "decision": "keep",
+      "views": {
+        "shinyFront": {
+          "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/wailmer-alternate-form-1/shiny_front.png",
+          "gitBlob": "1ca5c2ca7fffe651248dd80d2595a011a7ebb100",
+          "canvas": [
+            160,
+            160
+          ],
+          "bounds": [
+            13,
+            28,
+            141,
+            126
+          ],
+          "collapsedSize": [
+            64,
+            49
+          ],
+          "factor": 2,
+          "partialAlpha": 0,
+          "opaqueRGB": 16,
+          "opaque555": 16,
+          "status": "PALETTE_HOLD",
+          "sourceSha256": "66ef5d4b0bec616239717316178b11b5bf75f573685b74551ed791a45e024ee8"
+        },
+        "shinyBack": {
+          "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/wailmer-alternate-form-1/shiny_back.png",
+          "gitBlob": "f8594403572011131e16b4336fc940c4020e2004",
+          "canvas": [
+            192,
+            192
+          ],
+          "bounds": [
+            20,
+            46,
+            156,
+            140
+          ],
+          "collapsedSize": [
+            68,
+            47
+          ],
+          "factor": 2,
+          "partialAlpha": 0,
+          "opaqueRGB": 14,
+          "opaque555": 14,
+          "status": "PIXEL_CANDIDATE",
+          "offset": [
+            6,
+            17
+          ],
+          "frameSha256": "72130e5bcc87e935e328a754eae2688adc7d55e3681829b3b1ca828b29b1104a",
+          "sourceSha256": "eb28533eed300a01664c0162939456296206c16eab8f4d1a4280ccdc875e8985"
+        },
+        "front": {
+          "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/wailmer-alternate-form-1/front.png",
+          "gitBlob": "3a5b7da3d29d1b5c26c57613924db1233188caf9",
+          "canvas": [
+            160,
+            160
+          ],
+          "bounds": [
+            16,
+            28,
+            144,
+            126
+          ],
+          "collapsedSize": [
+            64,
+            49
+          ],
+          "factor": 2,
+          "partialAlpha": 0,
+          "opaqueRGB": 17,
+          "opaque555": 17,
+          "status": "PALETTE_HOLD",
+          "sourceSha256": "52a5914f691a4124f9d7f30320749a66396155bafa3be0c2c779b41a3edfbe98"
+        },
+        "back": {
+          "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/wailmer-alternate-form-1/back.png",
+          "gitBlob": "8bd3ed0bc6f7c842d6235422d92028d53258ef85",
+          "canvas": [
+            192,
+            192
+          ],
+          "bounds": [
+            20,
+            46,
+            156,
+            140
+          ],
+          "collapsedSize": [
+            68,
+            47
+          ],
+          "factor": 2,
+          "partialAlpha": 0,
+          "opaqueRGB": 14,
+          "opaque555": 14,
+          "status": "PIXEL_CANDIDATE",
+          "offset": [
+            6,
+            17
+          ],
+          "frameSha256": "1912c23ae4629b97be76cb3f8f24f50af94b5d764333c2b112e1540c0a2d0c09",
+          "sourceSha256": "95589122334563c3bc16cdc81fd01ee7548f906a5e4afcada4e28947d1415142"
+        }
+      },
+      "registryDisposition": "UNRESOLVED_METADATA_OR_PLACEMENT",
+      "productionAllowed": false,
+      "archiveCreated": false
+    },
+    {
+      "artworkKey": "wailord-alternate-form-1|gitblob:223044ea3bab61de68a33089f5fa5a30ae2e9432",
+      "decision": "keep",
+      "views": {
+        "front": {
+          "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/wailord-alternate-form-1/front.png",
+          "gitBlob": "223044ea3bab61de68a33089f5fa5a30ae2e9432",
+          "canvas": [
+            160,
+            160
+          ],
+          "bounds": [
+            0,
+            10,
+            160,
+            148
+          ],
+          "collapsedSize": [
+            80,
+            69
+          ],
+          "factor": 2,
+          "partialAlpha": 0,
+          "opaqueRGB": 15,
+          "opaque555": 15,
+          "status": "PIXEL_CANDIDATE",
+          "offset": [
+            0,
+            6
+          ],
+          "frameSha256": "f83e0471bc8ffe74f973f124550581b37361c6f3a6d8a2556277655d399d62a6",
+          "sourceSha256": "61a2124a8cf4876ed4d84e66a02711c7617fbdf07d049563860441a7f387000a"
+        },
+        "shinyFront": {
+          "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/wailord-alternate-form-1/shiny_front.png",
+          "gitBlob": "252a3aeae8fd21e2eaf064b80ef3688652e23900",
+          "canvas": [
+            192,
+            192
+          ],
+          "bounds": [
+            14,
+            31,
+            174,
+            169
+          ],
+          "collapsedSize": [
+            80,
+            69
+          ],
+          "factor": 2,
+          "partialAlpha": 0,
+          "opaqueRGB": 15,
+          "opaque555": 15,
+          "status": "PIXEL_CANDIDATE",
+          "offset": [
+            0,
+            6
+          ],
+          "frameSha256": "af9b6ef01f2327be64754a1ec3352ad22cb59b1f94e292c73ff58691a2937280",
+          "sourceSha256": "424fcb674668501fb5f18c98420f415315d0fac6a7d8f66e6b7164d92bbe9041"
+        },
+        "shinyBack": {
+          "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/wailord-alternate-form-1/shiny_back.png",
+          "gitBlob": "33c5a7123bc50ae8c006794fb751fc43784c3656",
+          "canvas": [
+            192,
+            192
+          ],
+          "bounds": [
+            1,
+            33,
+            192,
+            169
+          ],
+          "collapsedSize": [
+            191,
+            136
+          ],
+          "factor": 1,
+          "partialAlpha": 0,
+          "opaqueRGB": 13,
+          "opaque555": 13,
+          "status": "OVERSIZE_HOLD",
+          "sourceSha256": "643d8e160df286e17c8c3236a515505f0949f47b9268660ce26096f23706ddd2"
+        },
+        "back": {
+          "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/wailord-alternate-form-1/back.png",
+          "gitBlob": "6997b7e48a4550bb526fd42cef884441cce36abd",
+          "canvas": [
+            192,
+            192
+          ],
+          "bounds": [
+            0,
+            34,
+            192,
+            170
+          ],
+          "collapsedSize": [
+            96,
+            68
+          ],
+          "factor": 2,
+          "partialAlpha": 0,
+          "opaqueRGB": 13,
+          "opaque555": 13,
+          "status": "OVERSIZE_HOLD",
+          "sourceSha256": "2ebff94621e60446c7dbc37dd7e80e6fb2fa0afa6e0246345a7e4b45600f0d5a"
+        }
+      },
+      "registryDisposition": "UNRESOLVED_METADATA_OR_PLACEMENT",
+      "productionAllowed": false,
+      "archiveCreated": false
+    }
+  ]
+}
