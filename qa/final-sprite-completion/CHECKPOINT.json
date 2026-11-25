@@ -1,6 +1,6 @@
 {
   "schema": "mercury-final-usable-sprite-completion-checkpoint-v1",
-  "parent": "0a20f9939d4393582c5b6d9fc581ac62c813970f",
+  "parent": "d0c60b8d5d97b3c7d708d5ce6289b7821e3bca64",
   "gateBlob": "94b3a58b8d51d4c579001c6ffc1914d1b5a10c10",
   "ledgerBlob": "686fd93d34bb39055c0d6cbbf3bcdc5566fcd51a",
   "runnerBlob": "917240025ab58fee9b636172cb3dd5ab2a8a5d97",
@@ -15035,7 +15035,11 @@
     "Batches 68–78: final 32 eligible historical conversions verified from committed bytes using both archive digests. Eligible bulk queue exhausted, two registry-blocked artwork sets remain awaiting. Reviewed exact workbook source mapping (blob 6d7228caeb24288ef210b1b7c3fe9ba7df5a3121) for Umbreon, Venusaur and Volbeat: [{\"name\":\"platinum-redux-umbreon\",\"row\":65,\"slots\":[\"front\",\"back\",\"shiny\"],\"details\":{\"frontShinyForegroundMaskEqual\":true,\"shinyMatchesBackMask\":false}},{\"name\":\"platinum-redux-venusaur\",\"row\":3,\"slots\":[\"front\",\"back\",\"shiny\"],\"details\":{\"frontShinyForegroundMaskEqual\":false,\"shinyMatchesBackMask\":false}},{\"name\":\"platinum-redux-volbeat\",\"row\":92,\"slots\":[\"front\",\"back\",\"shiny\"],\"details\":{\"frontShinyForegroundMaskEqual\":true,\"shinyMatchesBackMask\":false}}]. No original shiny backs established; no fabricated replacement. Prior manifest holds not yet retested: 27. All outputs remain offline and non-production.",
     "Batches 79–87: all 27 remaining prior-manifest hold rows retested from pinned original blobs with verified runner. All remain excluded; no additional archives, artwork or approvals. View results: {\"PIXEL_CANDIDATE\":22,\"OVERSIZE_HOLD\":37,\"PALETTE_HOLD\":46,\"PARTIAL_ALPHA_HOLD\":3}. All 50 remaining technical holds now have exact retest evidence. 82 incomplete source sets and 2 registry blockers remain; native icon/runtime acceptance not established.",
     "Wail family diagnostic: all eight original source blobs verified; Wailmer front and shiny front exceed the opaque palette budget; Wailord back and shiny back exceed 80x80. Both historical KEEP decisions preserved; registry placement unresolved; no archive created or gate relaxed.",
-    "Release 9: source trees and workbook provenance reconciled for 82 incomplete records, no original missing views established; all 7 unassigned media decoded without provenance assignment. General integer scaling rejects all 25 tested factors. 426 distinct archive identities and digests consolidated; 8 individual archives and 3 prior ZIP digests freshly checked. Wail family historical Water/Ghost vs source Flying remains unresolved; both KEEP decisions and pixel holds retained. Four original icons fail current layout/bank conditions; native runtime not established."
+    "Release 9: source trees and workbook provenance reconciled for 82 incomplete records, no original missing views established; all 7 unassigned media decoded without provenance assignment. General integer scaling rejects all 25 tested factors. 426 distinct archive identities and digests consolidated; 8 individual archives and 3 prior ZIP digests freshly checked. Wail family historical Water/Ghost vs source Flying remains unresolved; both KEEP decisions and pixel holds retained. Four original icons fail current layout/bank conditions; native runtime not established.",
+    "Nine earliest archives were delivered in Mercury_Native_Graphics_Bridge_QA.zip; exact package was not located through available files. Abra rebuild digest differs; no replacement authorized or stored.",
+    "Host gcc/clang/make/ninja available; ARM GCC, DS ROM tooling and emulator executables were not found on PATH. No native compiler or emulator acceptance claimed.",
+    "Symbolic artwork handles are not production IDs; registry ambiguity, icon shared-bank routing, native runtime and save compatibility remain gated.",
+    "No existing archive digests, historical artwork, votes or approved decisions changed."
   ],
   "registryHoldPixelProbe": {
     "path": "qa/final-sprite-completion/REGISTRY_HOLD_PIXEL_PROBE_WAIL_FAMILY.json",
@@ -15418,5 +15422,62 @@
       }
     ],
     "policy": "426 archived candidates only; all 285 other artwork records excluded from playable workload without deleting decisions. No production allowed."
+  },
+  "release10": {
+    "evidence": {
+      "R10_SYMBOLIC_RESOURCE_HANDOFF.json": "8d66a6d81d9144019f5384c73dee30eb872192f6",
+      "R10_PRIOR_ARCHIVE_LOCATORS.json": "835bf4b65858051d33d05bcd0380df337ff3f52a",
+      "R10_ICON_NATIVE_PROBE.json": "423b0ef4075417fe63b6300aab99492ea0c50676",
+      "R10_ICON_LOSSLESS_LAYOUT.json": "953eb552914795363886069fdca3f3cbf8ccd1a1",
+      "R10_NEW_NATIVE_MEMBER_ROUTES.json": "db1da64fa76cf4cb87d8f6d1ad19d4b59b529e54",
+      "R10_PRIOR_NATIVE_MEMBER_ROUTES_01.json": "1a0e97508062621396089228bb2bb32c989a9c6c",
+      "R10_PRIOR_NATIVE_MEMBER_ROUTES_02.json": "40a5e84b12bf03aacbd4339dc848331b0ebae933",
+      "R10_PRIOR_NATIVE_MEMBER_ROUTES_03.json": "c83ab8fb3385991795932f8bd4f44229d3cc605e",
+      "R10_PACK_01.json": "dcbe23c2c4d188d3422355642cd7fb0fa680f521",
+      "R10_PACK_02.json": "febeed87aba0f7adbae3b914d7e1fee16f6b434e",
+      "R10_PACK_03.json": "bbcb3b4d0b4d16c144cbfa5dd5c6e46041156151",
+      "R10_PACK_04.json": "309b2fbc8250d2441dbee7bde07365129603f755",
+      "R10_PACK_05.json": "d083710a91e9f6c6b6a766d062bfef9079315de9"
+    },
+    "summary": {
+      "preservedArchivePasses": 426,
+      "verifiedArchiveBinaries": 417,
+      "missingHistoricalArchiveBinaries": 9,
+      "verifiedCharacterPalettePairs": 1668,
+      "newZipPackages": 5,
+      "newZipArchives": 210,
+      "newZipBytes": 2807910,
+      "symbolicHandles": 426,
+      "symbolicDispositions": {
+        "HOLD_ORIGINAL_BINARY_MISSING": 9,
+        "HOLD_NO_EXACT_REGISTRY_JOIN": 18,
+        "EXACT_HISTORICAL_ART_JOIN_QA_ONLY": 327,
+        "HOLD_MULTIPLE_HISTORICAL_IDENTITIES": 3,
+        "PLACEMENT_EVIDENCE_QA_ONLY": 69
+      },
+      "originalIconSourcesTested": 2,
+      "losslessIconLayouts": 2,
+      "iconPixelsVerified": 4096,
+      "nativeIconBankMatches": 0,
+      "approvedIconBindings": 0,
+      "canonicalPreserved": 1025,
+      "artworkPreserved": 711,
+      "votesPreserved": 166,
+      "unverifiedExcluded": 285,
+      "deltaFlygon": "UNAPPROVED",
+      "nativeCompilerVerified": false,
+      "nativeEmulatorVerified": false
+    },
+    "mainPins": {
+      "Sprites": "f15c4671bf7afb15450fc7801bde17aefcdc4f7e",
+      "Mercury-redux-dex": "faa7cb4016d8030fb4661b49114352d79cac7944",
+      "platinum-modern-ds": "5525e961a1fb98c62bd53bc4a27b0276a39f6719"
+    },
+    "limitations": [
+      "Nine earliest archives were delivered in Mercury_Native_Graphics_Bridge_QA.zip; exact package was not located through available files. Abra rebuild digest differs; no replacement authorized or stored.",
+      "Host gcc/clang/make/ninja available; ARM GCC, DS ROM tooling and emulator executables were not found on PATH. No native compiler or emulator acceptance claimed.",
+      "Symbolic artwork handles are not production IDs; registry ambiguity, icon shared-bank routing, native runtime and save compatibility remain gated.",
+      "No existing archive digests, historical artwork, votes or approved decisions changed."
+    ]
   }
 }
