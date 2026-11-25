@@ -1,0 +1,40 @@
+{
+  "schema": "mercury-r19-native-graphics-source-and-bounds-v1",
+  "baseline": "48c2fbf5ae70fe40b4a55d5fc12d46d4901eb302",
+  "sources": {
+    "nitroSystemRef": "21c8fd078fdda34f3c2622ef0751d00adaacf890",
+    "nclrLoader": "eff5776af356749b078fc22ddc5ccf65c3492154",
+    "paletteStruct": "73a6df5442bb0f849448d4b15837257817408aea",
+    "imageLoader": "871ea8ee9ee7fef5473275344def8696175b6013",
+    "sdkObjTransfer": "899922208aab297226edfa129d3a11581bdc8bbe",
+    "platinumRef": "c248fb3f8cc9934ded800e489567c5c0eeee92eb",
+    "pcInit": "3d5d958211d73e173a382d1fe2cd1f61c8dffa15",
+    "pcScroll": "0e6fbaf5e0c2b171d3adebe63a8e8bbc9789ea98",
+    "pcIcon": "2b53038127ecd5b38929a73146e32d7eb95630e7",
+    "sharedJasc": "65deabb632f60fe5518b161da7d1b1c978a69faf",
+    "packer": "073b4dea4b07080801290866432b86799e19c7dc",
+    "writer": "f97ab184e0e3def99640d1c8f6d08c0336ddca9a",
+    "cli": "e7cc8b3583fc58a564446149910ca12fb4572d24"
+  },
+  "findings": [
+    "Pinned NNS_G2dGetUnpackedPaletteData finds PLTT and calls NNS_G2dUnpackNCL; that function adjusts pRawData only, does not modify szByte. Struct order fmt, bExtendedPlt, szByte, pointer makes serialized szByte offset 32 in normal NCLR. PCMP lookup is separate.",
+    "Pinned JASC has 256 entries; packer uses -bitdepth 4 and writer default padding. Source-derived expected uncompressed shared NCLR payload size 512, total file 552; exact built artifact not retrieved or SDK executed. With full payload at PC offsets 64 or 192 the end offsets 576/704 exceed 512. 96-byte three-bank transfer would fit at both addresses, but no production change authorized.",
+    "PC source sets main BG bank B 128KiB, sub BG C 128KiB, OBJ E 64KiB, sub OBJ I 16KiB, texture A and texture palette F/G. Extended BG/OBJ palettes disabled. Main mode 0 uses BG0 3D and BG1/2/3 existing UI. A bitmap layer or extended OBJ palettes would require remapping and lifecycle changes.",
+    "Existing PC 3D path initialized and PokemonSpriteManager allocated. Texture space is not established free; 4bpp textures are a promising alternative only if preview coexistence, priorities, geometry, transparency and bank allocation are verified.",
+    "Native scroll displacement (21+2)*8 = 184px over 30 updates; R19 composite simulation used a host 168px displacement and seven steps, not exact native timing. Native icon anchor x=112+offset+24*column and y=40+24*row; no native cell pivot equivalence claimed."
+  ],
+  "tests": {
+    "renderSource": "84151c4c25c4d1b62c5e8be652649491b3701707",
+    "renderEvidence": "585c55fd9bef3f8496a8e5c766d48b44a11ec8b3",
+    "textureSource": "aca66401065ebd6482d6acb25ec553b8568d04d5",
+    "textureEvidence": "75075e794d19a56660c573658feb056c7d5d8328"
+  },
+  "nativeFullBuild": false,
+  "emulatorVerified": false,
+  "productionAllowed": false,
+  "mainPins": {
+    "Sprites": "f15c4671bf7afb15450fc7801bde17aefcdc4f7e",
+    "Mercury-redux-dex": "faa7cb4016d8030fb4661b49114352d79cac7944",
+    "platinum-modern-ds": "5525e961a1fb98c62bd53bc4a27b0276a39f6719"
+  }
+}
