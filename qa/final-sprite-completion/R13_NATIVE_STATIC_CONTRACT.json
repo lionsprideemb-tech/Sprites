@@ -1,0 +1,250 @@
+{
+  "schema": "mercury-r13-native-static-contract-v1",
+  "upstream": "pret/pokeplatinum",
+  "ref": "c248fb3f8cc9934ded800e489567c5c0eeee92eb",
+  "evidence": {
+    "src/pltt_transfer.c": {
+      "sha": "3daea75579df500cc843a0664fe10fe602fcaceb",
+      "lines": [
+        {
+          "line": 13,
+          "content": "#define NUM_VRAM_PALETTES     16"
+        },
+        {
+          "line": 15,
+          "content": "#define PLTT_RANGE_SIZE       (PALETTE_SIZE_BYTES * NUM_VRAM_PALETTES)"
+        },
+        {
+          "line": 16,
+          "content": "#define PLTT_EXT_RANGE_SIZE   (PALETTE_SIZE_EXT_BYTES * NUM_VRAM_PALETTES)"
+        },
+        {
+          "line": 60,
+          "content": "static int FindAvailableTransferSlot(u16 palette, int size);"
+        },
+        {
+          "line": 81,
+          "content": "void PlttTransfer_MarkReservedSlots(u16 reservedMask, NNS_G2D_VRAM_TYPE vramType)"
+        },
+        {
+          "line": 167,
+          "content": "        VramTransfer_Request(NNS_GFD_DST_2D_OBJ_PLTT_MAIN, task->baseAddrMain, data->pRawData, task->numPalettes * PALETTE_SIZE_BYTES);"
+        },
+        {
+          "line": 171,
+          "content": "        VramTransfer_Request(NNS_GFD_DST_2D_OBJ_PLTT_SUB, task->baseAddrSub, data->pRawData, task->numPalettes * PALETTE_SIZE_BYTES);"
+        },
+        {
+          "line": 240,
+          "content": "    } else if (paletteProxy->fmt == GX_TEXFMT_PLTT256) {"
+        },
+        {
+          "line": 310,
+          "content": "        offsetMain = FindAvailableTransferSlot(sTaskManager->vramTransferMain, task->numPalettes);"
+        },
+        {
+          "line": 318,
+          "content": "        offsetSub = FindAvailableTransferSlot(sTaskManager->vramTransferSub, task->numPalettes);"
+        },
+        {
+          "line": 332,
+          "content": "    task->data->szByte = task->numPalettes * PALETTE_SIZE_BYTES;"
+        },
+        {
+          "line": 384,
+          "content": "    task->data->szByte = task->numPalettes * PALETTE_SIZE_BYTES;"
+        },
+        {
+          "line": 414,
+          "content": "static int FindAvailableTransferSlot(u16 palette, int size)"
+        },
+        {
+          "line": 417,
+          "content": "    for (slot = 0; slot < NUM_VRAM_PALETTES; slot++) {"
+        },
+        {
+          "line": 420,
+          "content": "            if (slot + colorIdx >= NUM_VRAM_PALETTES) {"
+        },
+        {
+          "line": 433,
+          "content": "    if (slot >= NUM_VRAM_PALETTES) {"
+        },
+        {
+          "line": 473,
+          "content": "        if (offsetMain + (task->numPalettes * PALETTE_SIZE_BYTES) > sizeMain) {"
+        },
+        {
+          "line": 483,
+          "content": "        if (offsetSub + (task->numPalettes * PALETTE_SIZE_BYTES) > sizeSub) {"
+        },
+        {
+          "line": 498,
+          "content": "        *offsetMain += task->numPalettes * PALETTE_SIZE_BYTES;"
+        },
+        {
+          "line": 502,
+          "content": "        *offsetSub += task->numPalettes * PALETTE_SIZE_BYTES;"
+        }
+      ]
+    },
+    "src/char_transfer.c": {
+      "sha": "1faef4df4b95ccaff4385dcf76cb3f4608a304a3",
+      "lines": [
+        {
+          "line": 65,
+          "content": "static GXOBJVRamModeChar UpdateMappingTypeFromHardware(CharTransferTask *task, NNS_G2D_VRAM_TYPE vramType);"
+        },
+        {
+          "line": 148,
+          "content": "void CharTransfer_ReserveVramRange(u32 offset, u32 size, NNS_G2D_VRAM_TYPE vramType)"
+        },
+        {
+          "line": 375,
+          "content": "BOOL CharTransfer_AllocRange(int size, BOOL atEnd, NNS_G2D_VRAM_TYPE vramType, CharTransferAllocation *allocation)"
+        },
+        {
+          "line": 567,
+          "content": "static GXOBJVRamModeChar UpdateMappingTypeFromHardware(CharTransferTask *task, NNS_G2D_VRAM_TYPE vramType)"
+        },
+        {
+          "line": 660,
+          "content": "    int mappingType = task->useHardwareMappingType ? UpdateMappingTypeFromHardware(task, vramType) : vramType;"
+        },
+        {
+          "line": 692,
+          "content": "    int mappingType = task->useHardwareMappingType ? UpdateMappingTypeFromHardware(task, vramType) : vramType;"
+        }
+      ]
+    },
+    "src/sprite_transfer.c": {
+      "sha": "1c5f9a66809b8d235bd707ece3b0e4d191680e1f",
+      "lines": [
+        {
+          "line": 152,
+          "content": "    template.plttIndex = SpriteResource_GetPaletteIndex(resource);"
+        },
+        {
+          "line": 175,
+          "content": "    template.plttIndex = SpriteResource_GetPaletteIndex(resource);"
+        },
+        {
+          "line": 192,
+          "content": "    PlttTransfer_ReplacePlttData(SpriteResource_GetID(resource), SpriteResource_GetPaletteFade(resource));"
+        },
+        {
+          "line": 219,
+          "content": "        return PlttTransfer_ToggleExtPalette(resourceID, imageProxy);"
+        }
+      ]
+    },
+    "src/sprite_system.c": {
+      "sha": "b5535941955172943ff372bc1c82fbcb2c79724c",
+      "lines": [
+        {
+          "line": 299,
+          "content": "        Sprite_SetExplicitPalette(sprite, plttIdx);"
+        },
+        {
+          "line": 386,
+          "content": "s8 SpriteSystem_LoadPlttResObj(SpriteSystem *spriteSys, SpriteManager *spriteMan, enum NarcID narcID, int memberIdx, BOOL compressed, int paletteIdx, enum NNS_G2D_VRAM_TYPE vramType, int resourceID)"
+        },
+        {
+          "line": 411,
+          "content": "s8 SpriteSystem_LoadPlttResObjFromOpenNarc(SpriteSystem *spriteSys, SpriteManager *spriteMan, NARC *narc, int memberIdx, BOOL compressed, int paletteIdx, enum NNS_G2D_VRAM_TYPE vramType, int resourceID)"
+        },
+        {
+          "line": 439,
+          "content": "    int paletteOffset = SpriteSystem_LoadPlttResObj(spriteSys, spriteMan, narcID, memberIdx, compressed, paletteIdx, vramType, resourceID);"
+        },
+        {
+          "line": 441,
+          "content": "        PaletteData_LoadBufferFromHardware(paletteData, bufferID, PLTT_DEST(paletteOffset), paletteIdx * PALETTE_SIZE_BYTES);"
+        },
+        {
+          "line": 449,
+          "content": "    int paletteOffset = SpriteSystem_LoadPlttResObjFromOpenNarc(spriteSys, spriteMan, narc, memberIdx, compressed, paletteIdx, vramType, resourceID);"
+        },
+        {
+          "line": 451,
+          "content": "        PaletteData_LoadBufferFromHardware(paletteData, bufferID, PLTT_DEST(paletteOffset), paletteIdx * PALETTE_SIZE_BYTES);"
+        },
+        {
+          "line": 562,
+          "content": "        Sprite_SetExplicitPalette(managedSprite->sprite, spritePalette + template->plttIdx);"
+        },
+        {
+          "line": 845,
+          "content": "void Sprite_SetExplicitPalette2(Sprite *sprite, int palette)"
+        },
+        {
+          "line": 847,
+          "content": "    Sprite_SetExplicitPalette(sprite, palette);"
+        },
+        {
+          "line": 850,
+          "content": "void ManagedSprite_SetExplicitPalette(ManagedSprite *managedSprite, int paletteIdx)"
+        },
+        {
+          "line": 852,
+          "content": "    Sprite_SetExplicitPalette2(managedSprite->sprite, paletteIdx);"
+        },
+        {
+          "line": 857,
+          "content": "    Sprite_SetExplicitPaletteOffset(sprite, paletteOffset);"
+        },
+        {
+          "line": 860,
+          "content": "void ManagedSprite_SetExplicitPaletteOffset(ManagedSprite *managedSprite, int paletteOffset)"
+        }
+      ]
+    },
+    "src/pokemon_icon.c": {
+      "sha": "e6eb5d350c505c63550823b502fb91e18d3c8187",
+      "lines": [
+        {
+          "line": 47,
+          "content": "    form = Pokemon_SanitizeFormId(species, form);"
+        },
+        {
+          "line": 87,
+          "content": "    if (species > NATIONAL_DEX_COUNT) {"
+        },
+        {
+          "line": 115,
+          "content": "const u8 PokeIconPaletteIndex(u32 species, u32 form, u32 isEgg)"
+        },
+        {
+          "line": 123,
+          "content": "    } else if (species > NATIONAL_DEX_COUNT) {"
+        },
+        {
+          "line": 147,
+          "content": "    return sPokemonIconPaletteIndex[species];"
+        },
+        {
+          "line": 160,
+          "content": "    return PokeIconPaletteIndex(species, form, isEgg);"
+        },
+        {
+          "line": 170,
+          "content": "    return shared_pals_NCLR;"
+        }
+      ]
+    }
+  },
+  "findings": {
+    "standardObjSlotsPerEngine": 16,
+    "standardBankBytes": 32,
+    "standardPaletteBytes": 512,
+    "iconTileBytes": 1024,
+    "staticSharedCandidateBanks": 29,
+    "staticAllBanksFit": false,
+    "optimisticThreeReservedCustomSlots": 13,
+    "actualScreenReservedMasksVerified": false,
+    "actualScreenTileVramVerified": false,
+    "canonicalEngineCompatibility": "NOT_RUNTIME_VERIFIED",
+    "recommended": "Stage only visible icon banks, respect per-screen reserved masks and actual allocator, retain canonical path unchanged; schedule atomic VBlank changes only after native validation."
+  },
+  "productionAllowed": false
+}
