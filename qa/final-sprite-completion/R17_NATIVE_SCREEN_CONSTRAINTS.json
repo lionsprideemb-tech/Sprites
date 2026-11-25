@@ -1,0 +1,152 @@
+{
+  "schema": "mercury-r17-native-screen-constraints-v1",
+  "baseline": "62dea55a7363615a29df9bf5d58866e45b4d007b",
+  "upstreamRef": "c248fb3f8cc9934ded800e489567c5c0eeee92eb",
+  "sources": {
+    "party sprites.c": "822f06c0341d95925cca9fc154b258a6d20e938d",
+    "party main.c": "039bc375950477096a395f39c4c5c3cb68c19ff3",
+    "PC ov19_021DA270.c": "2b53038127ecd5b38929a73146e32d7eb95630e7",
+    "PC ov19_021D61B0.c": "3d5d958211d73e173a382d1fe2cd1f61c8dffa15",
+    "PC ov19_021D8B54.c": "1025d99ed949dd44a9f5cee436c3c55799ac39ae",
+    "PC ov19_021DA814.c": "ec1dd85bb850f9b5501a3efb40e4d2d349bfc33d",
+    "PC ov19_021DA92C.c": "831dfdfc1a6809608f7dc95da2a905bf477b7964",
+    "graphics.c": "18e444f9c0eaf0f37609579c85cf00d0543d3f04",
+    "pokemon_icon.c": "e6eb5d350c505c63550823b502fb91e18d3c8187",
+    "nitrogfx writer": "f97ab184e0e3def99640d1c8f6d08c0336ddca9a",
+    "nitrogfx CLI": "e7cc8b3583fc58a564446149910ca12fb4572d24",
+    "icon packer": "073b4dea4b07080801290866432b86799e19c7dc",
+    "stock JASC palette": "65deabb632f60fe5518b161da7d1b1c978a69faf"
+  },
+  "party": {
+    "stock": [
+      3,
+      4,
+      5
+    ],
+    "otherReferenced": [
+      0,
+      1,
+      2,
+      6
+    ],
+    "unknown": [
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "references": [
+      "sprites.c:71-127,162-384; main.c cursor palette 0/1",
+      "resdat not available; sprite header palette fields are references, not full allocation proof"
+    ],
+    "verifiedFree": []
+  },
+  "pc": {
+    "stockNormal": [
+      2,
+      3,
+      4
+    ],
+    "stockSelected": [
+      6,
+      7,
+      8
+    ],
+    "otherReferenced": [
+      0,
+      1,
+      10,
+      11,
+      12
+    ],
+    "unknown": [
+      5,
+      9,
+      13,
+      14,
+      15
+    ],
+    "verifiedFree": [],
+    "references": [
+      "ov19_021DA270.c:29-44,151,185,287-289",
+      "ov19_021D61B0.c:237,1897-1926",
+      "ov19_021D8B54.c:829-831; ov19_021DA814.c:42; ov19_021DA92C.c:214,414,423"
+    ],
+    "stockPaddedPaletteRisk": "Pinned JASC source contains 256 colors; packer uses -bitdepth 4 and writer defaults to padding. Native SDK load bounds or clamping not executed; do not assume full palette range writes or treat zero padding as free."
+  },
+  "nativeIndexGuard": "PokeIconPaletteIndex maps species above NATIONAL_DEX_COUNT to SPECIES_NONE and handles a fixed list of form offsets. Custom species/form support requires explicit engine changes; no production ID assigned.",
+  "compile": {
+    "sourceBlob": "fe8205c27ebb22cfc84f8531d08e86af9b1ea3e6",
+    "sourceSha256": "9db01790f02efa58a6703f12fbbdb7925098607da32077bd003fcd567ba3a54a",
+    "hostCommand": "gcc -DHOST_TEST -std=c11 -Wall -Wextra -Werror -O2 shade.c -o shade && ./shade",
+    "hostOutput": "32768 colors PASS; FNV1a=8edbfe45; black=00af white=42bf tint=057f",
+    "armCommand": "clang --target=arm-none-eabi -mcpu=arm946e-s -marm -ffreestanding -std=c11 -Wall -Wextra -Werror -O2 -c shade.c -o shade_arm9.o",
+    "armObjectSha256": "2b9af7050751e3687f57c3d553c396a087886aa2e9372998cc3398ee68175a89",
+    "armObjectType": "ELF32 little endian relocatable ARM EABI5; mercury_pc_shade global function",
+    "armObjectExecuted": false,
+    "fullNativeBuild": false,
+    "emulatorExecuted": false,
+    "environment": "Clang supports ARM; gcc and ninja present. devkitARM, nitrogfx, melonDS absent from PATH; public git checkout DNS failure. Free public candidates https://github.com/devkitPro/libnds and https://github.com/melonDS-emu/melonDS; no installation or purchases."
+  },
+  "packagesBlob": "44df3622141699c68999cd3ad602d31cc82052d8",
+  "authorityBlob": "a54bddf2f88402b869e0418ff8fce4ea7f5dd9f7",
+  "summary": {
+    "staged": 412,
+    "original": 66,
+    "generated": 346,
+    "exhaustiveShadeColors": 32768,
+    "hostCParity": "8edbfe45",
+    "normalPixelChecks": 843776,
+    "shadedPixelChecks": 843776,
+    "opaquePixels": 394184,
+    "transparentPixels": 449592,
+    "normalNclr": 412,
+    "shadedNclr": 412,
+    "ncgrPrototypeRoundTrips": 412,
+    "pcPrefixChecks": 412,
+    "uniqueUsedColorSets": 387,
+    "exactStockBankFits": 0,
+    "malformedContainerRejections": 8,
+    "productionBindings": 0
+  },
+  "authority": {
+    "ORIGINAL": {
+      "total": 66,
+      "acceptedBattleArt": 66,
+      "rejectedBattleArt": 0,
+      "exactGeneratedSourceProvenance": 0,
+      "availableArchive": 66,
+      "exactHistoricalRoute": 0,
+      "placementRoute": 66,
+      "iconApprovalVerified": 0,
+      "routeStateCounts": {
+        "PLACEMENT_EVIDENCE_QA_ONLY": 66
+      }
+    },
+    "GENERATED": {
+      "total": 346,
+      "acceptedBattleArt": 346,
+      "rejectedBattleArt": 0,
+      "exactGeneratedSourceProvenance": 346,
+      "availableArchive": 346,
+      "exactHistoricalRoute": 324,
+      "placementRoute": 22,
+      "iconApprovalVerified": 0,
+      "routeStateCounts": {
+        "EXACT_HISTORICAL_ART_JOIN_QA_ONLY": 324,
+        "PLACEMENT_EVIDENCE_QA_ONLY": 22
+      }
+    }
+  },
+  "limitations": [
+    "Party and PC slot references are not exhaustive native occupancy proof.",
+    "All packaging host prototypes; no SDK or native runtime acceptance.",
+    "No new original archive recovery or registry authority; all nine missing binaries and 21 registry holds unchanged."
+  ],
+  "productionAllowed": false
+}
