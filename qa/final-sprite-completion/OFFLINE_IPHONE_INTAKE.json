@@ -1,0 +1,54 @@
+{
+  "schema": "mercury-offline-iphone-intake-v1",
+  "previousCheckpoint": "8a10aa0730d4df39e6a5807bbd90e13fbb9f8ede",
+  "priorRecovery": "0abd455144ebe138812b52b1afb032b2c7ec2c11",
+  "mainPins": {
+    "Sprites": "f15c4671bf7afb15450fc7801bde17aefcdc4f7e",
+    "Mercury-redux-dex": "faa7cb4016d8030fb4661b49114352d79cac7944",
+    "platinum-modern-ds": "5525e961a1fb98c62bd53bc4a27b0276a39f6719"
+  },
+  "emulator": {
+    "filename": "py_desmume-0.0.9-cp313-cp313-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl",
+    "url": "https://files.pythonhosted.org/packages/f7/06/2f7ac6d7d4d3e691c2c2b142a0e5d76b371efcaaa211d94a96813a335525/py_desmume-0.0.9-cp313-cp313-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl",
+    "sha256": "4fcb17e824dd5ab2f1baa3fdd930dd9af6f7176b8c9d7dc9bd329d45df1ac5bd",
+    "metadata": "https://pypi.org/project/py-desmume/0.0.9/",
+    "sizeApprox": "3.4 MB",
+    "localPython": "3.13.5",
+    "localArch": "x86_64",
+    "glibc": "2.41",
+    "pillow": "12.3.0",
+    "sdl2Load": "passed ctypes CDLL libSDL2-2.0.so.0",
+    "downloadAttempts": [
+      "public web fetch rejected application/octet-stream",
+      "container.download failed; no wheel bytes created"
+    ],
+    "status": "AWAITING_USER_FILE_TRANSFER",
+    "intakeScript": "4e1f8f0e191df4cb4dc8a60641f45295f616b6e3",
+    "negativeIntakeTests": 7,
+    "actualEmulatorInit": false
+  },
+  "buildSource": {
+    "pin": "c248fb3f8cc9934ded800e489567c5c0eeee92eb",
+    "makefile": "4294e769c468e201e73cf10f31f22cc0921b76bd",
+    "install": "07d36f6cad03b9ec125869bd760d9c2628121492",
+    "meson": "37b6e562bdd35299982dce2f9a614155aed0e2c8",
+    "skrewDownloader": "001af60c591d4639bde54bafd6c2ee7f36363f31",
+    "crossFile": "dd3b62130594cca9ca5ffdb8aa68b4251d0084c3",
+    "mesonVersion": "1.12.0",
+    "metroskrewVersion": "0.1.3",
+    "sdk": "2.0/sp2p2",
+    "requirements": "GNU ARM tools and host dependencies plus exact Metroskrew SDK wrappers and Meson; compiler availability alone is insufficient. Verify legitimate distribution terms and checksums before import. Pinned sources and full dependency closure still missing."
+  },
+  "transfer": [
+    "Safari download official wheel to Files Downloads",
+    "Attach unmodified wheel; if file picker rejects it, compress single wheel to ZIP in Files and attach ZIP",
+    "Run intake script checksum and isolated init; do not claim positive test until actual wheel supplied",
+    "Only after transfer succeeds plan remaining compiler bundle"
+  ],
+  "limits": [
+    "No actual wheel obtained or emulator executed; synthetic negative intake checks only",
+    "No complete offline package or durable binary bundle yet",
+    "No purchases, CI, external account, unauthorized uploads, main or ROM changes; R32 paused"
+  ],
+  "productionAllowed": false
+}
