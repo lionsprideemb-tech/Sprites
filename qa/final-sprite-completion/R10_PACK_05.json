@@ -1,0 +1,267 @@
+{
+  "start": 60,
+  "end": 71,
+  "count": 32,
+  "bytes": 427894,
+  "gitBlob": "2fac45086f802e8df209d4882d84733426d7c4b9",
+  "sha256": "c9ccc210d0434f0119c8d3474169ba21848508411ed171f7d250f11a7f926e43",
+  "rows": [
+    {
+      "artworkKey": "torrentula|pixelsha256:d2956d56e3e3596fc3d8ec66ff144a12afc92ab80bc893e44430a7f50bbee82a",
+      "archiveSha256": "0df8bea2dbb7b41cd3af95efff7742ec359757d00b40a72836db39554853586a",
+      "archiveGitBlob": "a8084e93d2d89e201b46e2a4ffedc83554c002ff",
+      "entry": "archives/0df8bea2dbb7b41cd3af95efff7742ec359757d00b40a72836db39554853586a.narc",
+      "byteOffset": 108,
+      "byteLength": 13124
+    },
+    {
+      "artworkKey": "tortemple|pixelsha256:42aec8b06d3dd1bda10f11f5a3e65c0bfd92b374899173e07625940a8c9afe67",
+      "archiveSha256": "9dbc4ebdef8e46b4b340a5066b541c65715981fc6cb8dae134bfd2720afe1fa7",
+      "archiveGitBlob": "6715f661be81ef46fc7c15434dd874122a68c786",
+      "entry": "archives/9dbc4ebdef8e46b4b340a5066b541c65715981fc6cb8dae134bfd2720afe1fa7.narc",
+      "byteOffset": 13340,
+      "byteLength": 13124
+    },
+    {
+      "artworkKey": "toucannon-mega|pixelsha256:4b36f7e8c8878a2dd1f8d785439059a94c14828c0ed9ee331f5f318dacb50fce",
+      "archiveSha256": "031494b3980ac42415a6cd714cdc8ebcedec795bbe7cdda21f6cdd289c11c938",
+      "archiveGitBlob": "afb45328fc2b3fd528bafdc0724cd079cd5dd833",
+      "entry": "archives/031494b3980ac42415a6cd714cdc8ebcedec795bbe7cdda21f6cdd289c11c938.narc",
+      "byteOffset": 26572,
+      "byteLength": 13284
+    },
+    {
+      "artworkKey": "toxel-redux|pixelsha256:30c158c558c285628f362f0c150d8c5f5f4cf147d8b9f0953cfb1d610c89caeb",
+      "archiveSha256": "a181fefb2505ccf883686798a7998accddd04d44c97f2e2daaa9974344285852",
+      "archiveGitBlob": "f9adc24c720174ea77638edc55a0d31ebd12a2a5",
+      "entry": "archives/a181fefb2505ccf883686798a7998accddd04d44c97f2e2daaa9974344285852.narc",
+      "byteOffset": 39964,
+      "byteLength": 13124
+    },
+    {
+      "artworkKey": "toxtricity-redux|pixelsha256:1b35bb34ee2512b296b1805296393074fe1550782365e39a6711f5b48fe4507c",
+      "archiveSha256": "8f02af96d372198b6631bbddbbd889b21437ac75d252a52859083bc3b85dad89",
+      "archiveGitBlob": "456412e3e42a80510486a3289de1ea38ee1ffa1e",
+      "entry": "archives/8f02af96d372198b6631bbddbbd889b21437ac75d252a52859083bc3b85dad89.narc",
+      "byteOffset": 53196,
+      "byteLength": 13124
+    },
+    {
+      "artworkKey": "toxtricity-redux-fuzz|pixelsha256:1c205cb3c244ba9eebcfe671b06c447c0e24fc4bd064d6db133862092244df72",
+      "archiveSha256": "d1b8d902a84bd5d302bdcfb9d5cead703f749993ae7a68b4bc2369baed05799e",
+      "archiveGitBlob": "20bef2aefb9d75ec42040e21bcf96c80a78bb6af",
+      "entry": "archives/d1b8d902a84bd5d302bdcfb9d5cead703f749993ae7a68b4bc2369baed05799e.narc",
+      "byteOffset": 66428,
+      "byteLength": 13124
+    },
+    {
+      "artworkKey": "toxtricity-redux-fuzz-mega|pixelsha256:06a658c3e67405f441e973fcbcb42fd504ff3ae8970c6c95a017ef6806688bda",
+      "archiveSha256": "cf45d186a2b054cc6933427a19dc5016eba4f60e497ed9a3008a4f9fbcb4099b",
+      "archiveGitBlob": "914ca199db6992c5698fa6f05ecf903f4f265582",
+      "entry": "archives/cf45d186a2b054cc6933427a19dc5016eba4f60e497ed9a3008a4f9fbcb4099b.narc",
+      "byteOffset": 79660,
+      "byteLength": 13124
+    },
+    {
+      "artworkKey": "typhlosion-hisuian-mega|pixelsha256:55c9fae1ff1dfb42b686b6cb73397bedd6cf1e77bebf0914af88f72c3399e835",
+      "archiveSha256": "e98dd4ef5991684c3a3d728f8cc2f410a7effe0ab78ea3cf12436bf3804dbd7b",
+      "archiveGitBlob": "26247aa59e9381b818eddd96e642be9c9a69a6ab",
+      "entry": "archives/e98dd4ef5991684c3a3d728f8cc2f410a7effe0ab78ea3cf12436bf3804dbd7b.narc",
+      "byteOffset": 92892,
+      "byteLength": 13124
+    },
+    {
+      "artworkKey": "typhlosion-mega|pixelsha256:57ab7713a9aca0e21e0b3998a52ae08bc702fd4b6fc0f644147d733161c07ae3",
+      "archiveSha256": "d225e7d52b38b2ac08c45b14b042792b5f335dec8b22b0d7b37193e4187d1c0e",
+      "archiveGitBlob": "e728fe255a541a90699c9b29fea6ae46183bde6e",
+      "entry": "archives/d225e7d52b38b2ac08c45b14b042792b5f335dec8b22b0d7b37193e4187d1c0e.narc",
+      "byteOffset": 106124,
+      "byteLength": 13284
+    },
+    {
+      "artworkKey": "tyranjoula|pixelsha256:75d02488ff9778456a6e1f99f45f050ecbc2fdb41ab875e821241125d5bff462",
+      "archiveSha256": "d470a4e09c067bc11b8b3261f557478e96928b73105df71dcc83bac046bfe4b3",
+      "archiveGitBlob": "69640a32b0d9115cdd89d5c6292f8121b586cdd7",
+      "entry": "archives/d470a4e09c067bc11b8b3261f557478e96928b73105df71dcc83bac046bfe4b3.narc",
+      "byteOffset": 119516,
+      "byteLength": 13124
+    },
+    {
+      "artworkKey": "ursaluna-mega|pixelsha256:3237b9a2bafc6be8081e08db717227c1cf690c19f41658265c06726752ec94fe",
+      "archiveSha256": "76b4feb2d3cfd761655c560530f2e1ee3ae7594dc2e00b01007b3e42cdb0c25d",
+      "archiveGitBlob": "2df4d6cf73aa919881afdca306e3e7880170e5c9",
+      "entry": "archives/76b4feb2d3cfd761655c560530f2e1ee3ae7594dc2e00b01007b3e42cdb0c25d.narc",
+      "byteOffset": 132748,
+      "byteLength": 13124
+    },
+    {
+      "artworkKey": "uxie-redux|pixelsha256:1096d2a3f3e18581e57a59a098c2c6e059f25fdef42a017a606e41b440441a2d",
+      "archiveSha256": "06afdb513b4bfaa6f311db3829f34c945da0fca9baa1c7e1d1481d21f60c43fd",
+      "archiveGitBlob": "40f47669d4c6c5425f4c5df686d367cc82f1dbc1",
+      "entry": "archives/06afdb513b4bfaa6f311db3829f34c945da0fca9baa1c7e1d1481d21f60c43fd.narc",
+      "byteOffset": 145980,
+      "byteLength": 13124
+    },
+    {
+      "artworkKey": "vanillish-redux|pixelsha256:06d9b01711ab0e2bf61a94dad4bf5242a1b3b85cecd3509de4c8ef52afa79c19",
+      "archiveSha256": "dc2e830dbced73e4aa23b55a37d74ff6913a42b9b8fb58efc040284f0347157f",
+      "archiveGitBlob": "6742dc73c907b6cb19d0915e0b22664e9fa73e91",
+      "entry": "archives/dc2e830dbced73e4aa23b55a37d74ff6913a42b9b8fb58efc040284f0347157f.narc",
+      "byteOffset": 159212,
+      "byteLength": 13124
+    },
+    {
+      "artworkKey": "vanillite-redux|pixelsha256:e92271ed64720e0e46363dac8773375b9c00b13161d62d1ecc7ae67e3b18484d",
+      "archiveSha256": "91dbe1283457aae177e62fda82b9b38a72f6876ce3b36f7ac4461310780ea3be",
+      "archiveGitBlob": "0ca5a4154ac6f816779b654bfd5b67e5bc7bb9df",
+      "entry": "archives/91dbe1283457aae177e62fda82b9b38a72f6876ce3b36f7ac4461310780ea3be.narc",
+      "byteOffset": 172444,
+      "byteLength": 13124
+    },
+    {
+      "artworkKey": "vanilluxe-mega|pixelsha256:0fd02532e51ea6b9f7e3baec3d915fb96ffe6ec987fe3e180fc2ef7140758242",
+      "archiveSha256": "f116fc638bb3eb8159fd3f89ca70823c1e046d45bfc3d6449fea790dee82af9c",
+      "archiveGitBlob": "599fa121abb4edbfe8322bf1fa838edbd09bc976",
+      "entry": "archives/f116fc638bb3eb8159fd3f89ca70823c1e046d45bfc3d6449fea790dee82af9c.narc",
+      "byteOffset": 185676,
+      "byteLength": 13124
+    },
+    {
+      "artworkKey": "vanilluxe-redux|pixelsha256:400fd2d6e7beef1b545aea16286765844719898e742959f2602e6f9e58c7475a",
+      "archiveSha256": "3c3e0232f6a228df49ae38e67ccf1fef14d79235e95471e828ff5c91a739d02b",
+      "archiveGitBlob": "315aa8a5975ad01ddd1d6c06fb5001b10c900870",
+      "entry": "archives/3c3e0232f6a228df49ae38e67ccf1fef14d79235e95471e828ff5c91a739d02b.narc",
+      "byteOffset": 198908,
+      "byteLength": 13124
+    },
+    {
+      "artworkKey": "vanilluxe-redux-mega|pixelsha256:00d288b1ad6b386f1f6028256d5a67039da97e414b36cbc8badf113c26090259",
+      "archiveSha256": "d9bbf6cbba6d832611081238e8ad3cdcfcc68fe569b6712ab621a3854d5dbba6",
+      "archiveGitBlob": "e001e8face4ad4f2b3a849e19a4400a706c961fd",
+      "entry": "archives/d9bbf6cbba6d832611081238e8ad3cdcfcc68fe569b6712ab621a3854d5dbba6.narc",
+      "byteOffset": 212140,
+      "byteLength": 13124
+    },
+    {
+      "artworkKey": "venusaur-mega-x|pixelsha256:ee908b11113e5d767e7aa3abb97e25c9bf73880d012bc0c603d5862eb671a0f3",
+      "archiveSha256": "31eb26b4f08f9c4438d4714c68c77958e3086bc7f8eec48042716eecf7349e16",
+      "archiveGitBlob": "73bb9a9fcc4d6f83632bcf94f3a50f0445ab6903",
+      "entry": "archives/31eb26b4f08f9c4438d4714c68c77958e3086bc7f8eec48042716eecf7349e16.narc",
+      "byteOffset": 225372,
+      "byteLength": 13124
+    },
+    {
+      "artworkKey": "victini-primal|pixelsha256:5718c63b453ba06f97ef06950efbb50f5e69c400c88a149e73aadc04e9a8cc32",
+      "archiveSha256": "dc4db1e21c09d646b3c808f6cbc77519befc4165c2a870eecdb5b3d56af974e8",
+      "archiveGitBlob": "2bbbfd60cb9831e9bcb468d4eed4e91425e94510",
+      "entry": "archives/dc4db1e21c09d646b3c808f6cbc77519befc4165c2a870eecdb5b3d56af974e8.narc",
+      "byteOffset": 238604,
+      "byteLength": 13284
+    },
+    {
+      "artworkKey": "victreebel-redux|pixelsha256:a9ec2e4ef0947fbfb134c1640536fa54645425a96287d6201dc8ab624241619d",
+      "archiveSha256": "8dbd415ca5739d4e3c42eb7df88d3a212b39136f24fb04a0340ccf9ba8cd8945",
+      "archiveGitBlob": "3a0c9a0f3d1a7bc776ce40a589fac7d43f06a34f",
+      "entry": "archives/8dbd415ca5739d4e3c42eb7df88d3a212b39136f24fb04a0340ccf9ba8cd8945.narc",
+      "byteOffset": 251996,
+      "byteLength": 13124
+    },
+    {
+      "artworkKey": "volcarona-redux|pixelsha256:d8cab88976b08cae33251016c63595ebfeb201e64af7124a17e024c54a65db6c",
+      "archiveSha256": "e58b0f587b01d50ce9a09de956028e8f89094bad5e2709fa08f748ef3ad12c57",
+      "archiveGitBlob": "8707d1ac7332369f8137461a9a88f4047c7897fc",
+      "entry": "archives/e58b0f587b01d50ce9a09de956028e8f89094bad5e2709fa08f748ef3ad12c57.narc",
+      "byteOffset": 265228,
+      "byteLength": 13124
+    },
+    {
+      "artworkKey": "weavile-mega|pixelsha256:c16b3d870bcaeaa33bdf3da11a460f27be4d557eb441e73638cc70d25c72e968",
+      "archiveSha256": "773af69afd9c1a2c19dcc6b53684d8fd4cfac3899475cce49ef0d3715132e39b",
+      "archiveGitBlob": "59271ae11d897bc3a552016a553de71845b05f70",
+      "entry": "archives/773af69afd9c1a2c19dcc6b53684d8fd4cfac3899475cce49ef0d3715132e39b.narc",
+      "byteOffset": 278460,
+      "byteLength": 13124
+    },
+    {
+      "artworkKey": "weedle-redux|pixelsha256:3f759ccd2f62992fbd62b9a603171a360fab006c90df82c9a5a61d2fc604357e",
+      "archiveSha256": "a7d8a729641bf192a9a5ae9170f27752ea5045b31d24207329d38c460edfb9f9",
+      "archiveGitBlob": "523f57b1f47fe58c815c187517d8d799fc155cf7",
+      "entry": "archives/a7d8a729641bf192a9a5ae9170f27752ea5045b31d24207329d38c460edfb9f9.narc",
+      "byteOffset": 291692,
+      "byteLength": 13124
+    },
+    {
+      "artworkKey": "weepinbell-redux|pixelsha256:b71158378caf5adaa68cc3b704dd40bd7507c03f43a6295d0e285af24ffc7921",
+      "archiveSha256": "c5c0e4007acd0c38ad73daf83a6d42397598ecca843b4f9bba27a177cda43cc2",
+      "archiveGitBlob": "a1d39ac2853182746bb5ef846f7f729ec7766c6f",
+      "entry": "archives/c5c0e4007acd0c38ad73daf83a6d42397598ecca843b4f9bba27a177cda43cc2.narc",
+      "byteOffset": 304924,
+      "byteLength": 13124
+    },
+    {
+      "artworkKey": "whismur-redux|pixelsha256:8fcd5b7c6acc4af68f32ae2cef7da21a18ba01afcbe60d39a0f4e84b4177f54f",
+      "archiveSha256": "0a1f580f920f476a41951d879ee8b574fd9eeb42a975aa935697f3f9da530f56",
+      "archiveGitBlob": "a63717a2ab54dd35d0c2030202c60dd67c494750",
+      "entry": "archives/0a1f580f920f476a41951d879ee8b574fd9eeb42a975aa935697f3f9da530f56.narc",
+      "byteOffset": 318156,
+      "byteLength": 13124
+    },
+    {
+      "artworkKey": "wigglytuff-apex|pixelsha256:39f338d7138625fd4416ce9643fbdc0ad89ddb7f170a2983e2ee6845906043fb",
+      "archiveSha256": "ae4d77238d0d942f9644e514da8bb54a4b1c23fc4d3c3bb9c366c557c2ac1167",
+      "archiveGitBlob": "0187c2c5bf08d949bb79229ec6718aea38b18b7f",
+      "entry": "archives/ae4d77238d0d942f9644e514da8bb54a4b1c23fc4d3c3bb9c366c557c2ac1167.narc",
+      "byteOffset": 331388,
+      "byteLength": 13124
+    },
+    {
+      "artworkKey": "wigglytuff-mega-x|pixelsha256:91c8fe591c5ae8fa1cf4f98a231c2bfbf40491af2ac8f67cd1d465e1e2f42ea9",
+      "archiveSha256": "a1304e4b2c264d7550f34c0871308d68ebffb9ea36007622f7589b2a5441f39d",
+      "archiveGitBlob": "2415e66c1e202e6f8caae61a0c8115352e3a2210",
+      "entry": "archives/a1304e4b2c264d7550f34c0871308d68ebffb9ea36007622f7589b2a5441f39d.narc",
+      "byteOffset": 344620,
+      "byteLength": 13124
+    },
+    {
+      "artworkKey": "wigglytuff-primal|pixelsha256:4065f03008ea67e718fb90c7ae7c1d501c4646c311dd0279a91258cc9746b7c9",
+      "archiveSha256": "2b13ffc4ad7b2867e848c8fcdf8b4548c048586965cb8ae76fd7cb2e5b454ec5",
+      "archiveGitBlob": "96a1c4cc6ef1469e18478b196717f32a0973778a",
+      "entry": "archives/2b13ffc4ad7b2867e848c8fcdf8b4548c048586965cb8ae76fd7cb2e5b454ec5.narc",
+      "byteOffset": 357852,
+      "byteLength": 13124
+    },
+    {
+      "artworkKey": "wispywaspy|pixelsha256:187b583b6cfae6218353cdd1c16c5468727fa50b3b44089934dc5007303329d2",
+      "archiveSha256": "c64774d6d4a38ce319a082ce07b73cb77674d3d5e8a22e9ce123261c892f3c63",
+      "archiveGitBlob": "3ec16472fd16cf19d8a194b142cbaeaa402cb249",
+      "entry": "archives/c64774d6d4a38ce319a082ce07b73cb77674d3d5e8a22e9ce123261c892f3c63.narc",
+      "byteOffset": 371084,
+      "byteLength": 13124
+    },
+    {
+      "artworkKey": "wispywaspy-hivemind|pixelsha256:bb0638d16e80749486397257f5629fdaabb215fab1c74422d780378bb85414d8",
+      "archiveSha256": "bc1ad98eb159c1048fe1a35cea731d3e472e89d8477a0ecc64e04c7642891ab0",
+      "archiveGitBlob": "87983eaeae5f396bf0fe0f684b42498a1117c3c9",
+      "entry": "archives/bc1ad98eb159c1048fe1a35cea731d3e472e89d8477a0ecc64e04c7642891ab0.narc",
+      "byteOffset": 384316,
+      "byteLength": 13124
+    },
+    {
+      "artworkKey": "yveltal-mega|pixelsha256:61922bcef97e6d654a1d8933a16d81a1d11e0cce284d0f808904c27ec21d2736",
+      "archiveSha256": "d7eb3989d6f8d79ee51f9f37f7f63b8e0280b6c0509bcf02d82fb4744c2734ed",
+      "archiveGitBlob": "2d2d19a19ff8870dcbb7c32208affe19722853bf",
+      "entry": "archives/d7eb3989d6f8d79ee51f9f37f7f63b8e0280b6c0509bcf02d82fb4744c2734ed.narc",
+      "byteOffset": 397548,
+      "byteLength": 13124
+    },
+    {
+      "artworkKey": "zapdos-ex|pixelsha256:3b588fa34a58eaec86c562bb13696e16f0ac888158ff400d1e6c972547bde0a8",
+      "archiveSha256": "b0b2ed07235aa1afb261311d021d2926cfde24c48dd8bcc696ec288d889199da",
+      "archiveGitBlob": "bec125187598236efed2fb013230a0167f0b8f13",
+      "entry": "archives/b0b2ed07235aa1afb261311d021d2926cfde24c48dd8bcc696ec288d889199da.narc",
+      "byteOffset": 410780,
+      "byteLength": 13124
+    }
+  ],
+  "path": "qa/final-sprite-completion/handoff/R10_ARCHIVES_05.zip"
+}
