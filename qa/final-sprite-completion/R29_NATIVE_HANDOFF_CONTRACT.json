@@ -1,0 +1,73 @@
+{
+  "schema": "mercury-r29-native-handoff-contract-v1",
+  "inputs": {
+    "authority": "480cd770f9b9e154a5ee19ce3a1f91a13c171df7",
+    "registry": "d126281bf59b13de3addae51181251fce6a4d1e6",
+    "engineContract": "e720bd0fd6ccf256e947afd845ded2a8c6551481",
+    "oricorioPrototype": "6bbb1d7732cc66942ea2d62a33e1608cfe290e87"
+  },
+  "hostExecution": {
+    "sourceBlob": "b575d569693a388276db92ed45fc0654db30ffc9",
+    "compiler": "cc (Debian 14.2.0-19) 14.2.0",
+    "command": "cc -std=c11 -Wall -Wextra -Werror -pedantic -fsanitize=undefined -o r29_native_handoff r29_native_handoff.c && ./r29_native_handoff",
+    "stdout": "PASS: 123 host C checks; production bindings disabled",
+    "exitCode": 0,
+    "gitBlobVerified": true,
+    "fixtureRegistryOnly": true,
+    "nativeTargetBuild": false,
+    "emulator": false
+  },
+  "registry": {
+    "historicalRows": 68,
+    "pairs": 71,
+    "sourceConfirmedQaOnly": 10,
+    "productionBindings": 0,
+    "allPriorRowsPreserved": true
+  },
+  "authority": {
+    "timingRecords": 43,
+    "differingLevels": 37,
+    "matchingLevels": 6,
+    "explicitSupersessionFound": 0,
+    "donorIdentitiesConfirmed": 2,
+    "nativeTargetSymbolsRecovered": 0
+  },
+  "engineConstraints": [
+    "Engine ID map preserves canonical 1–1025, none 0, Egg 1026 and Bad Egg 1027. No custom IDs allocated.",
+    "Existing engine audit records 16-bit species storage, 5-bit persistent form storage, dynamic dex bitset and save table sizing. Extended forms require separate architecture; no new native save layout or migration proposed.",
+    "Existing historical PT04H report states representative Gen IX party and Pecharunt passed native save/reset/load. R24 did not rerun this test or fetch its binary artifact.",
+    "Existing canonical evolution installer supports fallback evolution methods; R24 does not apply or extend those fallbacks to custom forms. Donor requirements preserved verbatim, not native methods.",
+    "269 unique case-insensitive display-name matches are donor reference candidates only, 18 unresolved donor parent strings remain held; five explicit warnings remain held. No new authoritative evidence to clear the 21 archive registry holds or recover nine missing binaries."
+  ],
+  "adapterRequirements": [
+    {
+      "stage": "symbolic lookup",
+      "gate": "Only QA_INSPECT; reject duplicate/missing keys. No numeric species IDs or save writes."
+    },
+    {
+      "stage": "route activation",
+      "gate": "Require owner/authority method, exact approved artwork and current target, native method and condition verification, conflict/precedence resolution and native acceptance; no activation in this release."
+    },
+    {
+      "stage": "battle entry",
+      "gate": "Trusted battle instance generation, owning party and slot, exact original species and Oricorionite; store origin only after successful transition in future native adapter; host prototype is synchronous and does not model failed native setters."
+    },
+    {
+      "stage": "restoration",
+      "gate": "Faint/end-battle only; verify current Mega, trusted origin, owner and slot. Native adapter must atomically apply species and recalc stats before clearing record; host prototype returns proposed target and clears immediately."
+    },
+    {
+      "stage": "battle cleanup",
+      "gate": "Do not discard pending original forms. Reset lifecycle only when all entries restored; validate switch, capture, escape, link/multi battle, save/reset, party slot remap and failure rollback in native integration."
+    }
+  ],
+  "holds": [
+    "43 locked Mercury timing candidates vs donor authority; no explicit per-route supersession recovered",
+    "Two exact standard donor Mega identities lack current GBA constants; no Redux substitution",
+    "Tsareena artwork hold",
+    "Three branch predicates and original donor enum unresolved",
+    "Honedge/Doublade/Regalibur/Arbalistia permanent methods unconfirmed",
+    "All other historical, sprite, archive, form and native holds remain"
+  ],
+  "productionAllowed": false
+}
