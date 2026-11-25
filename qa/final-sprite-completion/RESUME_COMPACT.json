@@ -48,8 +48,8 @@
     "sourceQuartetsRecovered": 0
   },
   "next": {
-    "cohort": "OFFLINE_DS_COMPILER_ACQUISITION",
-    "firstName": "Emulator restored and synthetic DS execution verified; acquire verified GNU ARM compiler and binutils plus pinned Meson and Metroskrew dependencies through authorized iPhone transfer. No CI; R32 paused.",
+    "cohort": "OFFLINE_DS_GNU_BINUTILS_ACQUISITION",
+    "firstName": "Await verified official GNU ARM binutils Debian package. Test full GNU compile/assemble/link and DeSmuME. Then pinned Meson, Metroskrew and dependency/source closure. No CI; R32 paused.",
     "offset": 346,
     "eligible": 0,
     "priorManifestRemainingUntested": 0,
@@ -1349,7 +1349,7 @@
     ]
   },
   "offlineDS": {
-    "status": "EMULATOR_RECOVERED_COMPILER_PENDING",
+    "status": "GCC_AND_EMULATOR_RECOVERED_NATIVE_TOOLCHAIN_PENDING",
     "evidenceCommit": "3c15f4ed7abb21ecb4fed850891681d70cf32ff7",
     "release31Preserved": "4a7084027ddf74cf73569271cb028fdaac1e6cfe",
     "evidence": {
@@ -1397,6 +1397,18 @@
       "memoryMarkerVerified": true,
       "screenshotVerified": true,
       "actualBinariesRecovered": 1,
+      "fullNativeBuild": false,
+      "gameplayVerified": false,
+      "productionAllowed": false
+    },
+    "gccRecovery": {
+      "status": "VERIFIED_HYBRID_ARM_EXECUTION",
+      "evidenceCommit": "37291c1fb9ed34ba920d344deecc9e0a0cfd571b",
+      "evidenceBlob": "5a2e7ef12e8d050fe457cc5f8b7ee74e0cf90fa8",
+      "probeBlob": "53e24d0596ee0f41183064080144395c09a759c4",
+      "gccSha256": "99252fdda02ad134e8c3c344d3c843f7aa5c0d006e92a5b3d53daf4bd935b5d3",
+      "frames": 120,
+      "actualBinariesRecovered": 2,
       "fullNativeBuild": false,
       "gameplayVerified": false,
       "productionAllowed": false
