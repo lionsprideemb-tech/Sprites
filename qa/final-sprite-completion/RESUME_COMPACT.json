@@ -48,14 +48,14 @@
     "sourceQuartetsRecovered": 0
   },
   "next": {
-    "cohort": "NATIVE_ICON_INVENTORY_AND_HOST_BRIDGE",
-    "firstName": "Expand original icon inventory and exact DS layout conversion; persist reusable fail-closed graphics bridge and host tests; investigate new evidence for held records",
+    "cohort": "NATIVE_PALETTE_AND_RESOURCE_ADAPTER",
+    "firstName": "Build isolated native palette/resource adapter and host compatibility tests; investigate safe palette capacity and generated icon candidate distinction; no production integration",
     "offset": 0,
     "eligible": 0,
     "priorManifestRemainingUntested": 0,
     "completedBulkOffset": 200
   },
-  "policy": "Offline QA only; no production IDs, main changes, ROM changes, invented artwork or approvals. Preserve Delta Flygon unapproved. Check latest branch head and reconcile any batches after checkpoint before resuming. All ordinary conversions and prior-manifest retests are exhausted; no retest repetition without a new lossless method or original source. Release 9 offline lock does not establish native game readiness; do not repeat exhausted source or scale searches unless new evidence exists. Release 10: all 417 accessible archive binaries and 1668 resource member pairs verified; nine historical binary locators remain unresolved. Symbolic handles only; no production integration. Release 11 adds eight offline icon layout candidates and tested symbolic route gates; no native runtime or approval inferred.",
+  "policy": "Offline QA only; no production IDs, main changes, ROM changes, invented artwork or approvals. Preserve Delta Flygon unapproved. Check latest branch head and reconcile any batches after checkpoint before resuming. All ordinary conversions and prior-manifest retests are exhausted; no retest repetition without a new lossless method or original source. Release 9 offline lock does not establish native game readiness; do not repeat exhausted source or scale searches unless new evidence exists. Release 10: all 417 accessible archive binaries and 1668 resource member pairs verified; nine historical binary locators remain unresolved. Symbolic handles only; no production integration. Release 11 adds eight offline icon layout candidates and tested symbolic route gates; no native runtime or approval inferred. Release 12 completed eligible original icon inventory scan, with 66 offline candidate icons and one 16-color hold. Native bank allocation and runtime remain gated.",
   "archiveStorage": "First 33 new archives in existing ZIP; all 210 in pinned batch JSON manifest with SHA-256 and Git digests.",
   "registryHoldPixelProbe": {
     "path": "qa/final-sprite-completion/REGISTRY_HOLD_PIXEL_PROBE_WAIL_FAMILY.json",
@@ -228,6 +228,59 @@
       "Basculin normal and shiny have six RGBA mismatches each but zero RGB555/alpha mismatches; identical packed tile digest retained as two provenance records.",
       "Graphics lookup tested in host JavaScript against verified metadata; not native runtime acceptance.",
       "No new original archive package or authoritative registry join recovered; 21 registry holds and nine missing archives remain excluded from eligible graphics lookup."
+    ]
+  },
+  "release12": {
+    "evidenceCommit": "17ed71c7dd314f04787853a91d782df4ae0ff597",
+    "evidence": {
+      "R12_SYMBOLIC_ICON_BANKS.json": "cb72d80d6b1d6acafef0529d4c16431cfa8e8fcd",
+      "R12_HOST_TEST_RESULTS.json": "2679cc58591a5f38f39e73a3e2e4184a8f31e070",
+      "r12_graphics_bridge.js": "227f921a7694f0d9d4362cd5bd18209ce1f20e83",
+      "r12_graphics_bridge_tests.js": "8f51bcf95e8c561b0f0644aae4f58a101aab46cb",
+      "R12_ICONS_01.json": "d15ca8e40c5f8266b5fb697de990af5abb97665b",
+      "R12_ICONS_02.json": "f3d347d6e222818b2d3815b0b202b4152686727d",
+      "R12_ICONS_03.json": "db45693cbf503000ac64e7121b80deefc4d570cf",
+      "R12_ICONS_04.json": "2b34354b40392b465da6c23507f864d4a15f2250",
+      "R12_ICONS_05.json": "96685287520922580f8da9735432cc4636c08406",
+      "R12_ICONS_06.json": "e63a218ef5c655ccd3c3ff11cb63f55d6fa73472",
+      "r12_icon_batch_driver.js": "4c24c3782be99a52174daca7df0d7681cd6165a5"
+    },
+    "summary": {
+      "originalIconInventory": 214,
+      "eligibleOriginalIconInventory": 67,
+      "eligibleTested": 67,
+      "newTested": 59,
+      "newRgbaExactPasses": 58,
+      "cumulativeIconCandidates": 66,
+      "cumulativeRgbaExact": 64,
+      "cumulativeRgb555Only": 2,
+      "paletteHold": 1,
+      "excludedInventory": 147,
+      "sharedSymbolicBanks": 29,
+      "packedPixelsVerified": 135168,
+      "existingBankMatches": 0,
+      "productionIconBindings": 0,
+      "positiveQARouteRequests": 1584,
+      "negativeRequestsRejected": 2005,
+      "malformedManifestRejections": 13,
+      "syntheticIconTests": 8,
+      "postValidationMutationTests": 2,
+      "verifiedArchiveBinaries": 417,
+      "missingHistoricalArchiveBinaries": 9,
+      "registryHoldsRemaining": 21,
+      "mainUnchanged": true,
+      "nativeCompilerVerified": false,
+      "nativeEmulatorVerified": false
+    },
+    "mainPins": {
+      "Sprites": "f15c4671bf7afb15450fc7801bde17aefcdc4f7e",
+      "Mercury-redux-dex": "faa7cb4016d8030fb4661b49114352d79cac7944",
+      "platinum-modern-ds": "5525e961a1fb98c62bd53bc4a27b0276a39f6719"
+    },
+    "limitations": [
+      "One shiny Lilleo icon has 16 opaque RGB555 colors; 4bpp transparency leaves 15. No recolor approved.",
+      "29 symbolic palettes are greedy candidates, not native bank allocations. All 66 candidate tiles verified through symbolic palette roundtrip; upstream cell/animation/palette/routing blobs re-read; no native execution.",
+      "147 source icon files excluded by current routing eligibility; 9 missing archive binaries and 21 registry holds unchanged. No new recovery evidence."
     ]
   }
 }
