@@ -1423,6 +1423,21 @@
       "cleanDirectoryRestore": true,
       "githubBinaries": false,
       "fullToolchain": false
+    },
+    "libraryRecovery": {
+      "status": "PERSONAL_LIBRARY_ROUND_TRIP_VERIFIED",
+      "bundleName": "Mercury-Offline-Recovery-Partial.zip",
+      "sha256": "601bd00c6a7588ba031076571dd03ba0f50cd91af83e151739daa57d2e98d762",
+      "bytes": 61508089,
+      "zipCRC": "PASS",
+      "packageDigests": 2,
+      "scriptDigests": 4,
+      "restoredFrames": 240,
+      "restoredInSeparateDirectory": true,
+      "githubBinaryStorage": false,
+      "independentFreshSessionVerified": false,
+      "remainingAcquisition": "Work cloud browser candidate, not tested; normal local network unavailable. No further downloads completed.",
+      "productionAllowed": false
     }
   }
 }
