@@ -1,0 +1,27 @@
+{
+  "schema": "mercury-r24-engine-contract-v1",
+  "sourceBlob": "e44e4efabde996fc9873f04d621a3b641e98feee",
+  "handoffBlob": "62df9b95c6aa1108b9a3bb414b8169db7c5c7b41",
+  "mainPins": {
+    "Sprites": "f15c4671bf7afb15450fc7801bde17aefcdc4f7e",
+    "Mercury-redux-dex": "faa7cb4016d8030fb4661b49114352d79cac7944",
+    "platinum-modern-ds": "5525e961a1fb98c62bd53bc4a27b0276a39f6719"
+  },
+  "engineSources": {
+    "canonical": "f0406eb2d84fcd6597b2862200b8b167d7bcfd16",
+    "registryBuilder": "ec72cced807cc8d769a4915eb01661af72e16439",
+    "idMap": "aaa23b39d8d9275563d9d7a087aaee306488f222",
+    "limitsAudit": "f00a8ec55eeadb1767e4bf037968edc5cc930426",
+    "canonicalEvolutionInstaller": "414e516acf0efd359e544cc89579b9dcb59eb43f",
+    "historicalGen9SaveReport": "caa58a3301c10157237e9873f6ab9d7291bdca7d"
+  },
+  "findings": [
+    "Engine ID map preserves canonical 1–1025, none 0, Egg 1026 and Bad Egg 1027. No custom IDs allocated.",
+    "Existing engine audit records 16-bit species storage, 5-bit persistent form storage, dynamic dex bitset and save table sizing. Extended forms require separate architecture; no new native save layout or migration proposed.",
+    "Existing historical PT04H report states representative Gen IX party and Pecharunt passed native save/reset/load. R24 did not rerun this test or fetch its binary artifact.",
+    "Existing canonical evolution installer supports fallback evolution methods; R24 does not apply or extend those fallbacks to custom forms. Donor requirements preserved verbatim, not native methods.",
+    "269 unique case-insensitive display-name matches are donor reference candidates only, 18 unresolved donor parent strings remain held; five explicit warnings remain held. No new authoritative evidence to clear the 21 archive registry holds or recover nine missing binaries."
+  ],
+  "nativeAcceptanceUnchanged": true,
+  "productionAllowed": false
+}
