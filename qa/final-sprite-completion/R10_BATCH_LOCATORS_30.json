@@ -1,0 +1,1808 @@
+{
+  "start": 30,
+  "end": 45,
+  "totalGroups": 71,
+  "results": [
+    {
+      "artworkKey": "nidoking-mega|pixelsha256:a7a24d0785928925908f08c5874a246a755ff44e25dafc80268059d29da07b4e",
+      "archiveSha256": "04348961470e6ebbf47294f4d29321f808c335b91d98478a7aab08f1d7fc0267",
+      "archiveGitBlob": "7e0d610cbf9c77a7e2b8b03eb70df121500995c6",
+      "batchBlob": "a417a76d2cbd82fdf02b7d6b82eeceaceb16a358",
+      "batchPath": "qa/final-sprite-completion/BATCH_35_HISTORICAL.json",
+      "byteLength": 13124,
+      "members": 4,
+      "routes": {
+        "back": {
+          "character": 2,
+          "palette": 0,
+          "characterSha256": "c7b55a44c7ecff934fc1f81530100f544d305ef60f699adabe1936ce98263c97",
+          "paletteSha256": "20690cc8342e81e0d8e9f2768df6dd6869c51057bc208d717686235df12d5bd4",
+          "expectedFrameSha256": "ac58a680dcf5c2b12c6d5c9642ae61ff78c2c75530adf62decacf5e946e00d25"
+        },
+        "shiny_back": {
+          "character": 2,
+          "palette": 1,
+          "characterSha256": "c7b55a44c7ecff934fc1f81530100f544d305ef60f699adabe1936ce98263c97",
+          "paletteSha256": "abf3a8b9b0c2b17d07b98accb24137b0d7521b31169414ae382e94bfb948e3ac",
+          "expectedFrameSha256": "be3fb9c34ea3e64cb71474c6eb60120a837bd4f30460cd1232dd83fd06d35a02"
+        },
+        "front": {
+          "character": 3,
+          "palette": 0,
+          "characterSha256": "70093c6c3dfca18ece031a7ec0e4da3e6aa4b015070c8759a2d0c1f2b968cc75",
+          "paletteSha256": "20690cc8342e81e0d8e9f2768df6dd6869c51057bc208d717686235df12d5bd4",
+          "expectedFrameSha256": "c5714f65fb8b6b29373233d6335b0eec9b325747bb616221f86f68d4e262f3d2"
+        },
+        "shiny_front": {
+          "character": 3,
+          "palette": 1,
+          "characterSha256": "70093c6c3dfca18ece031a7ec0e4da3e6aa4b015070c8759a2d0c1f2b968cc75",
+          "paletteSha256": "abf3a8b9b0c2b17d07b98accb24137b0d7521b31169414ae382e94bfb948e3ac",
+          "expectedFrameSha256": "9815c5f6a554c2d0307f00ab83b65d65b9d7d7513d3fb27763dbbe5ef4372cfd"
+        }
+      },
+      "mode": "shared_species_palette"
+    },
+    {
+      "artworkKey": "nidoqueen-mega|pixelsha256:b8e1822402b272c81ba02601e1c84a5843c7bb955a243b1c7bb1b11f4ddebdf7",
+      "archiveSha256": "2e395068d288638270e8d0267dedd7da7f56f1a370364666b7acda0509cb741c",
+      "archiveGitBlob": "717a6ada41fcb4a0859bcc30cd413255be3d47bb",
+      "batchBlob": "a417a76d2cbd82fdf02b7d6b82eeceaceb16a358",
+      "batchPath": "qa/final-sprite-completion/BATCH_35_HISTORICAL.json",
+      "byteLength": 13124,
+      "members": 4,
+      "routes": {
+        "back": {
+          "character": 2,
+          "palette": 0,
+          "characterSha256": "c470ea4dd5dd5d375afa2c0aa19f9520e4cf073cc02bed1cb28a96721a18b8ab",
+          "paletteSha256": "2b78ac029c8f65c70c3b599bc897eebe8497148faf20cbf8d60d89c575b462f7",
+          "expectedFrameSha256": "a0d828026c38c01b0cd5fe2098d02079e2eeb09ecccb9948242b247314b16d65"
+        },
+        "shiny_back": {
+          "character": 2,
+          "palette": 1,
+          "characterSha256": "c470ea4dd5dd5d375afa2c0aa19f9520e4cf073cc02bed1cb28a96721a18b8ab",
+          "paletteSha256": "b8a7eb1a49706cb3e947e4b82d6a900f4430826f17b578c79c7972b24bdaf622",
+          "expectedFrameSha256": "5574d83b9f9e8e468c281bec10dbca31fc9be3f4e0c5937b0631bbc87106808e"
+        },
+        "front": {
+          "character": 3,
+          "palette": 0,
+          "characterSha256": "f9ecc0aab600b04fdfc16c190fe3b07477fad70c1936fd2757f45ced4f46f5de",
+          "paletteSha256": "2b78ac029c8f65c70c3b599bc897eebe8497148faf20cbf8d60d89c575b462f7",
+          "expectedFrameSha256": "aa7c9ef4f0a7e1970861f0c4bd30aa6eab16a304d60cef626c71f5bc771a18a4"
+        },
+        "shiny_front": {
+          "character": 3,
+          "palette": 1,
+          "characterSha256": "f9ecc0aab600b04fdfc16c190fe3b07477fad70c1936fd2757f45ced4f46f5de",
+          "paletteSha256": "b8a7eb1a49706cb3e947e4b82d6a900f4430826f17b578c79c7972b24bdaf622",
+          "expectedFrameSha256": "4efa93e10538cb8c567612605176256eb753a7285c7a566e2157ab503d0de349"
+        }
+      },
+      "mode": "shared_species_palette"
+    },
+    {
+      "artworkKey": "orbeetle-mega|pixelsha256:95d76e9a0385e07b48201dc8c5d2da589648978b9d8f7b737a608dd9cc546063",
+      "archiveSha256": "e1f8f9b9c804f56970f2504069b71f9613b420ae71e2747af84b57c65b13c3de",
+      "archiveGitBlob": "69a20d5c3595ab110447921859fb7d837b4f11ec",
+      "batchBlob": "a417a76d2cbd82fdf02b7d6b82eeceaceb16a358",
+      "batchPath": "qa/final-sprite-completion/BATCH_35_HISTORICAL.json",
+      "byteLength": 13284,
+      "members": 6,
+      "routes": {
+        "back": {
+          "character": 2,
+          "palette": 0,
+          "characterSha256": "0f57ed3719d5089778107b1d38e117a030ad9f1d6dbc52cafb42ef3e917ed250",
+          "paletteSha256": "ac471e5b0f7b7ecc04ebfb1b59b83c35436bff291ad9d50a911271600853366c",
+          "expectedFrameSha256": "d035b38b958d77aa27cd12f3b787a5f8586cc20f9f67f7f05a7057ff9febabbe"
+        },
+        "shiny_back": {
+          "character": 2,
+          "palette": 1,
+          "characterSha256": "0f57ed3719d5089778107b1d38e117a030ad9f1d6dbc52cafb42ef3e917ed250",
+          "paletteSha256": "e363c86f0892f0f861b582e13f91ccd1aee456919e2e21fc6b985495587b5275",
+          "expectedFrameSha256": "f7f796f69f47c929fc7fe2afffdcf58feca6afd20a200e74cc0a00ee43b60bd2"
+        },
+        "front": {
+          "character": 5,
+          "palette": 3,
+          "characterSha256": "e97c55dec4f011a782c0ba8ec9e3f189eefc54e2182f0fe427fc79955acaa044",
+          "paletteSha256": "d1cad2a97777c0a234ca5cf66a54f1767cb196721c4b6afbcd30e35092c9183d",
+          "expectedFrameSha256": "7051f64ca0f3de7163df980af40b9e7c6a3ddebaffdfee8f859f67f39ec9a6cb"
+        },
+        "shiny_front": {
+          "character": 5,
+          "palette": 4,
+          "characterSha256": "e97c55dec4f011a782c0ba8ec9e3f189eefc54e2182f0fe427fc79955acaa044",
+          "paletteSha256": "b89a8ae4a2764717a253594b3639b5e9fbb6c6c129f4a079a6b351dbc09deeab",
+          "expectedFrameSha256": "98fd1fcfe07d9bc08d41a81f557485ec81710d295ca5ed010fe9331b4b27634d"
+        }
+      },
+      "mode": "view_specific"
+    },
+    {
+      "artworkKey": "orchestot|pixelsha256:9bc0da18e14f7294d784f4f99a1bf976be75194df1bcf29d543997127df58158",
+      "archiveSha256": "fc5df58d344971d91d8f99b784af1b2a8427121877aff8a697f187c6ef3cad47",
+      "archiveGitBlob": "c2c446abcd17bf4f21090a649badf53541cb62db",
+      "batchBlob": "7931b1c2c30fb6854a88325927c277d1e096f675",
+      "batchPath": "qa/final-sprite-completion/BATCH_36_HISTORICAL.json",
+      "byteLength": 13124,
+      "members": 4,
+      "routes": {
+        "back": {
+          "character": 2,
+          "palette": 0,
+          "characterSha256": "8afa14603ad64d25bbe001b48551f41180f8e5344d0a0aab449082f9a36bd64a",
+          "paletteSha256": "f6cf4fb3fa298966a6ff1ca8753ce97161bb1296725f1d87a417b25ce8018814",
+          "expectedFrameSha256": "f905e72e3b3678b38f522559168d2ab6ed16b0a3b341fab3b88c466a387a73d1"
+        },
+        "shiny_back": {
+          "character": 2,
+          "palette": 1,
+          "characterSha256": "8afa14603ad64d25bbe001b48551f41180f8e5344d0a0aab449082f9a36bd64a",
+          "paletteSha256": "21c6e89169279972a81812641eac8783fb6f7a30363fb3120b01527147d6fc35",
+          "expectedFrameSha256": "1e1bc662bb8f1cdae1ac863a2e69989b6181d7fe57a0d2ae457de0ca79a6a3f7"
+        },
+        "front": {
+          "character": 3,
+          "palette": 0,
+          "characterSha256": "2accbc7df44c0e03e21a3331afd20ce2eabec4f55de070bf7a88017def8fdde0",
+          "paletteSha256": "f6cf4fb3fa298966a6ff1ca8753ce97161bb1296725f1d87a417b25ce8018814",
+          "expectedFrameSha256": "775ecc1a51831cd80de019889855ec882226d3e7ef89a43336478b85294d4190"
+        },
+        "shiny_front": {
+          "character": 3,
+          "palette": 1,
+          "characterSha256": "2accbc7df44c0e03e21a3331afd20ce2eabec4f55de070bf7a88017def8fdde0",
+          "paletteSha256": "21c6e89169279972a81812641eac8783fb6f7a30363fb3120b01527147d6fc35",
+          "expectedFrameSha256": "168475959beb97f4648ad34d38b19382f9e16062ef19b73e2674265a25b19e87"
+        }
+      },
+      "mode": "shared_species_palette"
+    },
+    {
+      "artworkKey": "oricorio-mega|pixelsha256:85bd6ca064681eef6f5cbeead771c0d5dc748d2f97463cdc5e67719ab1199bc7",
+      "archiveSha256": "a6f8182a2a6c9f0ecffdad21cc61786326d737647116f2d1ef0edeecfdb0ea26",
+      "archiveGitBlob": "77d9d68daf15aceb35b57e17d3b610b9ade2df85",
+      "batchBlob": "7931b1c2c30fb6854a88325927c277d1e096f675",
+      "batchPath": "qa/final-sprite-completion/BATCH_36_HISTORICAL.json",
+      "byteLength": 13124,
+      "members": 4,
+      "routes": {
+        "back": {
+          "character": 2,
+          "palette": 0,
+          "characterSha256": "641f85f29e98004c6412792f6f7abae8d90eea4c001221af16af320caa9ae9d0",
+          "paletteSha256": "ef5c360a2884b9aea33e28fc6ef397b1170c017b5d8c13eb0df5d7466f9b7fa5",
+          "expectedFrameSha256": "8501df5c34830d85c79849300afcadd1864f5f8065cea481a818e835095c9c3f"
+        },
+        "shiny_back": {
+          "character": 2,
+          "palette": 1,
+          "characterSha256": "641f85f29e98004c6412792f6f7abae8d90eea4c001221af16af320caa9ae9d0",
+          "paletteSha256": "015e201a5d5768a2f5cf45865a95f51d3d3d184da2a4aa497ae6a4fc905e0c7a",
+          "expectedFrameSha256": "772b771dc04e5af20ba7cbbc533372c0231f81b4ad6f449a2ed49ee2fb63d0fb"
+        },
+        "front": {
+          "character": 3,
+          "palette": 0,
+          "characterSha256": "15db82d3f1e4d09faf7b228c0399a95cd1ca78241567b7419d8f45d29b450de4",
+          "paletteSha256": "ef5c360a2884b9aea33e28fc6ef397b1170c017b5d8c13eb0df5d7466f9b7fa5",
+          "expectedFrameSha256": "6f31638de4015824af6c2a1548dd89fb4e51a9a510fd086368a660a8b8b8b913"
+        },
+        "shiny_front": {
+          "character": 3,
+          "palette": 1,
+          "characterSha256": "15db82d3f1e4d09faf7b228c0399a95cd1ca78241567b7419d8f45d29b450de4",
+          "paletteSha256": "015e201a5d5768a2f5cf45865a95f51d3d3d184da2a4aa497ae6a4fc905e0c7a",
+          "expectedFrameSha256": "488e7de71067edd1e9156f0f220695d099b2d42c6fd2fe364dbfeef13d17a691"
+        }
+      },
+      "mode": "shared_species_palette"
+    },
+    {
+      "artworkKey": "phanfernal|pixelsha256:fe21ad1ec72a855db003d58b8c9f833a02b15e42cbf0dc3f9a9a164696fb1c08",
+      "archiveSha256": "436f91446a6ef96f95f7307de3c11fa8c9a23d272c759f8768a3f4bca32bcca0",
+      "archiveGitBlob": "deea6b8663bf125292f2fc549f80863a255b278f",
+      "batchBlob": "7931b1c2c30fb6854a88325927c277d1e096f675",
+      "batchPath": "qa/final-sprite-completion/BATCH_36_HISTORICAL.json",
+      "byteLength": 13124,
+      "members": 4,
+      "routes": {
+        "back": {
+          "character": 2,
+          "palette": 0,
+          "characterSha256": "85a7302b0f7c1015e1d90aef47cea57427077d704aabd52ba607fe516b53f474",
+          "paletteSha256": "1123709bbdcf9d8598bb088ab7a8414937dbbbabf512f271b94d7714693748e7",
+          "expectedFrameSha256": "0b249e3d71f7605cc8a2097534ad6b352b6d4c5de2d73a90a412cdeb55abad20"
+        },
+        "shiny_back": {
+          "character": 2,
+          "palette": 1,
+          "characterSha256": "85a7302b0f7c1015e1d90aef47cea57427077d704aabd52ba607fe516b53f474",
+          "paletteSha256": "0032eaf6f5b97b8f3f4de7908ead29ad62868013e8be832381244a267f74fbd4",
+          "expectedFrameSha256": "a298edb0da4c1bd0d9b5e1ffcb205b4e685557292f9e70429c478384923ee4dd"
+        },
+        "front": {
+          "character": 3,
+          "palette": 0,
+          "characterSha256": "b8864cf89b18c829ca30e47f517c9060c8fff6f6dd1d42f015fef6e05a56a9d2",
+          "paletteSha256": "1123709bbdcf9d8598bb088ab7a8414937dbbbabf512f271b94d7714693748e7",
+          "expectedFrameSha256": "65128692bdd4d929cfec620a5f327bcf9e5de6d093c57be7adfd9e96946f9d0d"
+        },
+        "shiny_front": {
+          "character": 3,
+          "palette": 1,
+          "characterSha256": "b8864cf89b18c829ca30e47f517c9060c8fff6f6dd1d42f015fef6e05a56a9d2",
+          "paletteSha256": "0032eaf6f5b97b8f3f4de7908ead29ad62868013e8be832381244a267f74fbd4",
+          "expectedFrameSha256": "b26fff43f35201a0550a0f97ef60a6741eb74dcbf4437d7818b9797446f4e3be"
+        }
+      },
+      "mode": "shared_species_palette"
+    },
+    {
+      "artworkKey": "phantowl|pixelsha256:1ff7a619f7e455d76ac382f93e1201605a17d8c09dc6f5b003527276067594a3",
+      "archiveSha256": "420cc8b9652fea46aac0611bf6af961ffaec2e46bbe5c7b6e42f572ea2f8fc07",
+      "archiveGitBlob": "ba3e0ec15d6ea11b617070cbbabf0b2d44aee43d",
+      "batchBlob": "356f316206edc4f27b852c52d49b6cf053e8f42b",
+      "batchPath": "qa/final-sprite-completion/BATCH_37_HISTORICAL.json",
+      "byteLength": 13124,
+      "members": 4,
+      "routes": {
+        "back": {
+          "character": 2,
+          "palette": 0,
+          "characterSha256": "1099bafcd5c754d544738433409c9392a2554564a564283454b5a239a1882fc1",
+          "paletteSha256": "7988548961984991f847a8d08533ade176247dc12c9e0d930c0dabf2464262a4",
+          "expectedFrameSha256": "31e48d739354858064c22ae91b398dd62f763a68420fd9a070d0575603899ad7"
+        },
+        "shiny_back": {
+          "character": 2,
+          "palette": 1,
+          "characterSha256": "1099bafcd5c754d544738433409c9392a2554564a564283454b5a239a1882fc1",
+          "paletteSha256": "528019cec78e89ea15d9b8eae8bb18656e4c9a33f7c9272da518bf82d1acaa61",
+          "expectedFrameSha256": "765083967d5df9644ffe40de4a9e1a8bc2af384e2e6cd78b2cadd1dfb494f901"
+        },
+        "front": {
+          "character": 3,
+          "palette": 0,
+          "characterSha256": "ca92f70f834e84c3d5ce0d7c0be3ff7a02ecc2e1d4b7f9fcab9d132f92e2f876",
+          "paletteSha256": "7988548961984991f847a8d08533ade176247dc12c9e0d930c0dabf2464262a4",
+          "expectedFrameSha256": "c44796970e7d8446fe1cdf9dbbfe8d4166a669a78436ce7c894778bffe690b9f"
+        },
+        "shiny_front": {
+          "character": 3,
+          "palette": 1,
+          "characterSha256": "ca92f70f834e84c3d5ce0d7c0be3ff7a02ecc2e1d4b7f9fcab9d132f92e2f876",
+          "paletteSha256": "528019cec78e89ea15d9b8eae8bb18656e4c9a33f7c9272da518bf82d1acaa61",
+          "expectedFrameSha256": "3e6cccda06bb1f389451e81b9d5393f044fe8b985e4d2194eb4f9c1b9bb7b08a"
+        }
+      },
+      "mode": "shared_species_palette"
+    },
+    {
+      "artworkKey": "piloswine-redux|pixelsha256:1f0c8504f8f840340bde206f7d9c31e2e0ba05ee5107f869f90712e4570fa7d9",
+      "archiveSha256": "72dd2a452c0d98d2edae0c4e38a20f62671391ccddaea855775d88007a37ae59",
+      "archiveGitBlob": "4e10e64f41e477c344d4292ae3286de15ccc23c1",
+      "batchBlob": "356f316206edc4f27b852c52d49b6cf053e8f42b",
+      "batchPath": "qa/final-sprite-completion/BATCH_37_HISTORICAL.json",
+      "byteLength": 13124,
+      "members": 4,
+      "routes": {
+        "back": {
+          "character": 2,
+          "palette": 0,
+          "characterSha256": "a0bfd0ea1e7a8bde9445201068e18f640b1d647a061c13d786dedd3abd2a1f9e",
+          "paletteSha256": "7eaa535a63f02cb35e29d8e1178bfe25006d8e82c9ed9e91f9485a1642627ac1",
+          "expectedFrameSha256": "8c819ebe25fd682828a5c7f7854a55aeb5b61f6bd4be1dd38d5be6f7ff840ea7"
+        },
+        "shiny_back": {
+          "character": 2,
+          "palette": 1,
+          "characterSha256": "a0bfd0ea1e7a8bde9445201068e18f640b1d647a061c13d786dedd3abd2a1f9e",
+          "paletteSha256": "5b3d412c625e867b2fb7a968f9bbdef6cdbc1b85f9dd6f63e40c59a98e525015",
+          "expectedFrameSha256": "834085b7bdc451c21cac3d002dd445be6457c069879635b1e36a3344c95101b9"
+        },
+        "front": {
+          "character": 3,
+          "palette": 0,
+          "characterSha256": "b870c9454599a750d1148501f65583f407338aa47578f12d24aaecdd31354633",
+          "paletteSha256": "7eaa535a63f02cb35e29d8e1178bfe25006d8e82c9ed9e91f9485a1642627ac1",
+          "expectedFrameSha256": "354562cf75577dc80dce87ef2bce1f0ddd906a8d35ed25f4ebce355f86997275"
+        },
+        "shiny_front": {
+          "character": 3,
+          "palette": 1,
+          "characterSha256": "b870c9454599a750d1148501f65583f407338aa47578f12d24aaecdd31354633",
+          "paletteSha256": "5b3d412c625e867b2fb7a968f9bbdef6cdbc1b85f9dd6f63e40c59a98e525015",
+          "expectedFrameSha256": "0758178d5960115c8f6ee0248cd8f81f2eeb0b615d4613f2586e782b95baa332"
+        }
+      },
+      "mode": "shared_species_palette"
+    },
+    {
+      "artworkKey": "plundertow|pixelsha256:5523d32ccff849944a87aebce08675d4ff59e84ade7ab518432aa76102ddb207",
+      "archiveSha256": "93242920027842255e690562414f2971a54df193da400321055d53eaeccdc2d1",
+      "archiveGitBlob": "dc96d95d4c2b2deb1e1f5ef4d933372518cdd831",
+      "batchBlob": "356f316206edc4f27b852c52d49b6cf053e8f42b",
+      "batchPath": "qa/final-sprite-completion/BATCH_37_HISTORICAL.json",
+      "byteLength": 13124,
+      "members": 4,
+      "routes": {
+        "back": {
+          "character": 2,
+          "palette": 0,
+          "characterSha256": "2d52d26492d8a2c33a997cd1f53afd1119edf7b1a8ed542eb4bc18e22bf4e5d8",
+          "paletteSha256": "cf91e2cbaa69a104edc007159214c609e38c27ceaca55e4ade266dc2dd323171",
+          "expectedFrameSha256": "0d3a4f37c142e55d0daa2511364b3455004510e7cefa36d21339c81634aa7b4b"
+        },
+        "shiny_back": {
+          "character": 2,
+          "palette": 1,
+          "characterSha256": "2d52d26492d8a2c33a997cd1f53afd1119edf7b1a8ed542eb4bc18e22bf4e5d8",
+          "paletteSha256": "d52d3bcc476ccb75a928de0f00bb0c83d60edf064b3feee1825310c6fe4061ef",
+          "expectedFrameSha256": "c2187a8b02c132da58dbba2cfd6de2c5b99f896dc2797033060c3b455f4e2931"
+        },
+        "front": {
+          "character": 3,
+          "palette": 0,
+          "characterSha256": "cab1a5cb014060a7109918ab5155e134340e15e311ff08f63614d1184660d931",
+          "paletteSha256": "cf91e2cbaa69a104edc007159214c609e38c27ceaca55e4ade266dc2dd323171",
+          "expectedFrameSha256": "4d63d99d274200afb97abcc4ae249245955bfa8726790611e1ab5e89a40f62f9"
+        },
+        "shiny_front": {
+          "character": 3,
+          "palette": 1,
+          "characterSha256": "cab1a5cb014060a7109918ab5155e134340e15e311ff08f63614d1184660d931",
+          "paletteSha256": "d52d3bcc476ccb75a928de0f00bb0c83d60edf064b3feee1825310c6fe4061ef",
+          "expectedFrameSha256": "3b9da2d71a018eb7b7a05fbec4cc8778135ed68cd607262fc37f09e02457a3d8"
+        }
+      },
+      "mode": "shared_species_palette"
+    },
+    {
+      "artworkKey": "polartic|pixelsha256:cbe0819124be193c10b738e6771e372fc4b453baefb2384531b14006d3c851cd",
+      "archiveSha256": "d306fe16d1f661ae57e71ce5386a2de48781051fef54ebc7063080311a19ab25",
+      "archiveGitBlob": "a0a0bdbee40c3075352eb5146bfaa04f68e226b5",
+      "batchBlob": "8bb4440ee4e4649ce4da3f209fc8c9345a3be01e",
+      "batchPath": "qa/final-sprite-completion/BATCH_38_HISTORICAL.json",
+      "byteLength": 13124,
+      "members": 4,
+      "routes": {
+        "back": {
+          "character": 2,
+          "palette": 0,
+          "characterSha256": "dc7dbc3903cff1b639f3598cf61796991ad24d59ee24b172768efc5faa033ba5",
+          "paletteSha256": "36108dfecfadb3f8d7111e00717c1d9f7f643ffb6e4d221cb6b3351ec3a041bb",
+          "expectedFrameSha256": "2e0be4824204a5d88937b3755af6dac880c2eb78f24e89aaa7cffaa8981454e7"
+        },
+        "shiny_back": {
+          "character": 2,
+          "palette": 1,
+          "characterSha256": "dc7dbc3903cff1b639f3598cf61796991ad24d59ee24b172768efc5faa033ba5",
+          "paletteSha256": "8513e308bfed2da96ab0be6d44ee11e2987177566bc2b702b987d5d2cc7c25f7",
+          "expectedFrameSha256": "02bc2280d5b37b2663d63bf846dbb38bd64ef0d9eedd16dc2becb32921ad0f64"
+        },
+        "front": {
+          "character": 3,
+          "palette": 0,
+          "characterSha256": "556771028f77b89c08dce63ed10f626f20f4ed7ebc23d2320b95e31a2832ffe9",
+          "paletteSha256": "36108dfecfadb3f8d7111e00717c1d9f7f643ffb6e4d221cb6b3351ec3a041bb",
+          "expectedFrameSha256": "f55d5b9d76a8051a6905d4d4da8ba2b282ba896f7be1f8dfe372034da1840bb8"
+        },
+        "shiny_front": {
+          "character": 3,
+          "palette": 1,
+          "characterSha256": "556771028f77b89c08dce63ed10f626f20f4ed7ebc23d2320b95e31a2832ffe9",
+          "paletteSha256": "8513e308bfed2da96ab0be6d44ee11e2987177566bc2b702b987d5d2cc7c25f7",
+          "expectedFrameSha256": "c4760d9d476053a9a728d13ccf662a4460a5c80b016c35431c0c211a3c7e85c3"
+        }
+      },
+      "mode": "shared_species_palette"
+    },
+    {
+      "artworkKey": "polartic-bluemoon|pixelsha256:cec60d7b3ffb1ccc96d69c651e0878bc8d8639feca5b846ad460129b66bc88c6",
+      "archiveSha256": "a8dd5d9c7d719659f42ca0dc11ac82f987426cc1c29368eda6c07fdf7129bbd2",
+      "archiveGitBlob": "333ab8d0c044e780347b1baea43ebc6660128f74",
+      "batchBlob": "8bb4440ee4e4649ce4da3f209fc8c9345a3be01e",
+      "batchPath": "qa/final-sprite-completion/BATCH_38_HISTORICAL.json",
+      "byteLength": 13124,
+      "members": 4,
+      "routes": {
+        "back": {
+          "character": 2,
+          "palette": 0,
+          "characterSha256": "6369ded40af23461502d455cf88de6f9eb3b0d5bcfb886cfb0920f6f18c314fe",
+          "paletteSha256": "1308a0b4ec56648103f93e22f476e1f6817502e61d076178caa7be72cdf51fc2",
+          "expectedFrameSha256": "9ae0dc100bed8becf77c8b96163a57ad5e9580ce4fd2fadcd48261c6c3191caa"
+        },
+        "shiny_back": {
+          "character": 2,
+          "palette": 1,
+          "characterSha256": "6369ded40af23461502d455cf88de6f9eb3b0d5bcfb886cfb0920f6f18c314fe",
+          "paletteSha256": "fcf0e0c1d1fad3dc54265758a7d5c94b92283ac59201ca2d3d24c96309a86bb0",
+          "expectedFrameSha256": "c483cc2b2a72e9d6635d4880b038e3b4ccb2536d5b5281ab18f793da296950ec"
+        },
+        "front": {
+          "character": 3,
+          "palette": 0,
+          "characterSha256": "f6b93f524d6df4c49796aa404a041a614863354986abc27fdb66243e327f80ce",
+          "paletteSha256": "1308a0b4ec56648103f93e22f476e1f6817502e61d076178caa7be72cdf51fc2",
+          "expectedFrameSha256": "c1941a5b0535bb7b0ed63cec5c6943fea7cb14af9cac4faca2e9618f5609f160"
+        },
+        "shiny_front": {
+          "character": 3,
+          "palette": 1,
+          "characterSha256": "f6b93f524d6df4c49796aa404a041a614863354986abc27fdb66243e327f80ce",
+          "paletteSha256": "fcf0e0c1d1fad3dc54265758a7d5c94b92283ac59201ca2d3d24c96309a86bb0",
+          "expectedFrameSha256": "88438ddbf825ba398b054cad9481fed0a857f1900b14ea88ffa88f80ddd582b1"
+        }
+      },
+      "mode": "shared_species_palette"
+    },
+    {
+      "artworkKey": "polteageist-redux|pixelsha256:1a3e23640c8e6b94ce9c3b84ce7783c5b6e868c68fcc94431b6665c94529f828",
+      "archiveSha256": "c10e0f40d89ad8edee8cbde5a9857085fe1d9d4786ebbd2244e0e45678193c91",
+      "archiveGitBlob": "07fbffd64631de799742a5ad19306680ca91a88c",
+      "batchBlob": "8bb4440ee4e4649ce4da3f209fc8c9345a3be01e",
+      "batchPath": "qa/final-sprite-completion/BATCH_38_HISTORICAL.json",
+      "byteLength": 13124,
+      "members": 4,
+      "routes": {
+        "back": {
+          "character": 2,
+          "palette": 0,
+          "characterSha256": "6fc87f12e2a037292dfcd8dbbdc7b6ecbf779f4d671f6cc0969974c9890458e3",
+          "paletteSha256": "64ccb6105f22c943e07fee499420a48f4c05ee7fb2e2b55fbee718fea3211eca",
+          "expectedFrameSha256": "b5fe9615f491bcf65d442886b65c8c02bfcd6e5c854f1c7a0b3167d0ad943f0a"
+        },
+        "shiny_back": {
+          "character": 2,
+          "palette": 1,
+          "characterSha256": "6fc87f12e2a037292dfcd8dbbdc7b6ecbf779f4d671f6cc0969974c9890458e3",
+          "paletteSha256": "41dafae25bc3b984f530483b0f3000c1aef04d5dad6bffe4fe7a150aada6eb0b",
+          "expectedFrameSha256": "cb87b11c14aaef081960160fa4095f79a65b3323ed06acc3d65357bf591e9968"
+        },
+        "front": {
+          "character": 3,
+          "palette": 0,
+          "characterSha256": "96e1cc8f3eec7acd492ecb13397dd956d8f664ee00b3265ee410d68587827af2",
+          "paletteSha256": "64ccb6105f22c943e07fee499420a48f4c05ee7fb2e2b55fbee718fea3211eca",
+          "expectedFrameSha256": "29e3307fdfaa10ec0a644de6e1f9e7c74278e480b95220e4daec9a393ac71bdc"
+        },
+        "shiny_front": {
+          "character": 3,
+          "palette": 1,
+          "characterSha256": "96e1cc8f3eec7acd492ecb13397dd956d8f664ee00b3265ee410d68587827af2",
+          "paletteSha256": "41dafae25bc3b984f530483b0f3000c1aef04d5dad6bffe4fe7a150aada6eb0b",
+          "expectedFrameSha256": "3bcbc94d24e05fcd46094c67e3ce75bb5d9d4d49fd478ac18c64cb7169eac715"
+        }
+      },
+      "mode": "shared_species_palette"
+    },
+    {
+      "artworkKey": "popcorm|pixelsha256:02b245c622e7445ed93eedd11f497ce319594b00b21975d5635577fd4981ec4a",
+      "archiveSha256": "c377dac887e7714733395546a74ee7a1b79eef22fb438835bd84b00257c60685",
+      "archiveGitBlob": "8236f342cd3f765ad7819cbe1d9611d4168cca59",
+      "batchBlob": "8464b68af665346f193717481dfbebe4666980b5",
+      "batchPath": "qa/final-sprite-completion/BATCH_39_HISTORICAL.json",
+      "byteLength": 13124,
+      "members": 4,
+      "routes": {
+        "back": {
+          "character": 2,
+          "palette": 0,
+          "characterSha256": "d834ca3a7f7d05696a9e943713e5ed9e613e0504724793032092b526b24d0d77",
+          "paletteSha256": "6f88909bf151739e175e73d00c3f393e46b3023a880a0a6292bfe45aeb5e2b6a",
+          "expectedFrameSha256": "a9f35142760d1523eb072d4818c949de8607b3af76c7998ae804c6495f292034"
+        },
+        "shiny_back": {
+          "character": 2,
+          "palette": 1,
+          "characterSha256": "d834ca3a7f7d05696a9e943713e5ed9e613e0504724793032092b526b24d0d77",
+          "paletteSha256": "c670d8a121425114b019d8b0bdd2729018d7b73eee1377fdaf93f96de5eaf567",
+          "expectedFrameSha256": "97ffadcb994e98fbfb974b2e128d6b4c4e46f7769a6471e52db10131db2e0a70"
+        },
+        "front": {
+          "character": 3,
+          "palette": 0,
+          "characterSha256": "024a7ee43f02018d284140e45f843cb999ae25060d327608ebc2946ad5e4b599",
+          "paletteSha256": "6f88909bf151739e175e73d00c3f393e46b3023a880a0a6292bfe45aeb5e2b6a",
+          "expectedFrameSha256": "104c36cad360be851bd848b801b543f67c18d199a65387b31b85e56f6ca79109"
+        },
+        "shiny_front": {
+          "character": 3,
+          "palette": 1,
+          "characterSha256": "024a7ee43f02018d284140e45f843cb999ae25060d327608ebc2946ad5e4b599",
+          "paletteSha256": "c670d8a121425114b019d8b0bdd2729018d7b73eee1377fdaf93f96de5eaf567",
+          "expectedFrameSha256": "aa8e368603985aa4a179b6fb304b60b678becf807d12547d01885ce1e7f8e1f6"
+        }
+      },
+      "mode": "shared_species_palette"
+    },
+    {
+      "artworkKey": "popcorm-mega|pixelsha256:6170d33d7c4899f5197583e44112cf75dec73a89093f1bc243722510af6c40ca",
+      "archiveSha256": "2448a90d28d94306b922115db6e9a3381d6c0cc8ad1dcc55849e3e6872aaf126",
+      "archiveGitBlob": "504fd2a844ab6b4db8abe596661897b7b83e8f1d",
+      "batchBlob": "8464b68af665346f193717481dfbebe4666980b5",
+      "batchPath": "qa/final-sprite-completion/BATCH_39_HISTORICAL.json",
+      "byteLength": 13124,
+      "members": 4,
+      "routes": {
+        "back": {
+          "character": 2,
+          "palette": 0,
+          "characterSha256": "c983386988c4cc83c1b98ac09d37fa47be95de1fac240193d3ccc63faa755e0a",
+          "paletteSha256": "6f88909bf151739e175e73d00c3f393e46b3023a880a0a6292bfe45aeb5e2b6a",
+          "expectedFrameSha256": "b17268f54854e2660278684a7e9393e5eafa7ccc6d6b6090ebde3e2abc6dda0d"
+        },
+        "shiny_back": {
+          "character": 2,
+          "palette": 1,
+          "characterSha256": "c983386988c4cc83c1b98ac09d37fa47be95de1fac240193d3ccc63faa755e0a",
+          "paletteSha256": "c670d8a121425114b019d8b0bdd2729018d7b73eee1377fdaf93f96de5eaf567",
+          "expectedFrameSha256": "497a81f92158607dbaa0976cf55fe0462ca81504ed92d2853bd6d81fa5002c61"
+        },
+        "front": {
+          "character": 3,
+          "palette": 0,
+          "characterSha256": "95a848feaa37724477ca54db7b9d14f348ab99d567322f03539111e90a060c88",
+          "paletteSha256": "6f88909bf151739e175e73d00c3f393e46b3023a880a0a6292bfe45aeb5e2b6a",
+          "expectedFrameSha256": "480807c7c033355573b2f2654d7746613515b4f218d362f84cb3f977c3071ea8"
+        },
+        "shiny_front": {
+          "character": 3,
+          "palette": 1,
+          "characterSha256": "95a848feaa37724477ca54db7b9d14f348ab99d567322f03539111e90a060c88",
+          "paletteSha256": "c670d8a121425114b019d8b0bdd2729018d7b73eee1377fdaf93f96de5eaf567",
+          "expectedFrameSha256": "6a80acdffce06f9040d4c65ff118ea11eab326d57673aa5bc808758be17257ff"
+        }
+      },
+      "mode": "shared_species_palette"
+    },
+    {
+      "artworkKey": "primarina-mega|pixelsha256:9da5ad6b4ced9af7349e0607cad279b9bcdfdc6f163abab9d5213d7cd1f0a947",
+      "archiveSha256": "ef742f7f0480db02644eccee37178133af33e056a82f7b7d7d72fb755ebcb2b6",
+      "archiveGitBlob": "9a2030423add7664f38376a70102c4e88ecc25cd",
+      "batchBlob": "8464b68af665346f193717481dfbebe4666980b5",
+      "batchPath": "qa/final-sprite-completion/BATCH_39_HISTORICAL.json",
+      "byteLength": 13124,
+      "members": 4,
+      "routes": {
+        "back": {
+          "character": 2,
+          "palette": 0,
+          "characterSha256": "dcce95f6d9fd07317f2a6a1d986858c0a41be444fd93f7a1dc150fd5c22fcfc0",
+          "paletteSha256": "41c97c770e8ec791c5b8f4f5a9775d5da74c681d20c920795109b95a00ee99be",
+          "expectedFrameSha256": "eb42f4d61e7848cc46731e8168ab87888fb7acd80f5ae7c621087a53730eb694"
+        },
+        "shiny_back": {
+          "character": 2,
+          "palette": 1,
+          "characterSha256": "dcce95f6d9fd07317f2a6a1d986858c0a41be444fd93f7a1dc150fd5c22fcfc0",
+          "paletteSha256": "9069282b874c1f7db744318056b8f8027d4a8fbb84bdc67354b385b5f7b79bf3",
+          "expectedFrameSha256": "f9c944bb519da321a941d474760c0e09f3aed96a853964336dd4b98ff96e9138"
+        },
+        "front": {
+          "character": 3,
+          "palette": 0,
+          "characterSha256": "4d3fd72c125ffe9288e29c88857d73031bcd7df685ec439864163b8cda9580b7",
+          "paletteSha256": "41c97c770e8ec791c5b8f4f5a9775d5da74c681d20c920795109b95a00ee99be",
+          "expectedFrameSha256": "f5f5baaccd4ed51e00512c2edc64750bf2d9ffd0787290cf7b690ef9e68c631c"
+        },
+        "shiny_front": {
+          "character": 3,
+          "palette": 1,
+          "characterSha256": "4d3fd72c125ffe9288e29c88857d73031bcd7df685ec439864163b8cda9580b7",
+          "paletteSha256": "9069282b874c1f7db744318056b8f8027d4a8fbb84bdc67354b385b5f7b79bf3",
+          "expectedFrameSha256": "36282e6b5e51c0d45627e366b22e92d5bb526cccdf60c5af93fdb583c26fc76a"
+        }
+      },
+      "mode": "shared_species_palette"
+    },
+    {
+      "artworkKey": "quagsire-mega|pixelsha256:fea02e0c3ed33cabfc677cfb6b7f1e3c902213244a2a7a1a70a8c61eefba7783",
+      "archiveSha256": "780a0211edd048ccd391e40e2ea2d69bddfbdc07aa051e44fc6522831eedb1d9",
+      "archiveGitBlob": "e570929516436c47b810d574013735d7d6de14d4",
+      "batchBlob": "a5c0fa005bb4d8c73a3c8a9b53dd21b6e817720f",
+      "batchPath": "qa/final-sprite-completion/BATCH_40_HISTORICAL.json",
+      "byteLength": 13124,
+      "members": 4,
+      "routes": {
+        "back": {
+          "character": 2,
+          "palette": 0,
+          "characterSha256": "7f357fd4d3197a215699855ae6555ec314806d412f79789e3eeac57a8a17b2e4",
+          "paletteSha256": "cf26893fa232a7b469929f9469d01b559d83c63b5a2d1ff347a5649dceb94c14",
+          "expectedFrameSha256": "4a99127c56754d62b6e23142ab884f0f0fc327fd9239a30e94ddfb0ba000e60b"
+        },
+        "shiny_back": {
+          "character": 2,
+          "palette": 1,
+          "characterSha256": "7f357fd4d3197a215699855ae6555ec314806d412f79789e3eeac57a8a17b2e4",
+          "paletteSha256": "f51abe15020d748908795d47735056f2da3e60ce1ef1303d8c731f798aaecf47",
+          "expectedFrameSha256": "d344a2c30a5c4af0dd70420cfa7e6bedfc2ecc33e505232c3b91fc1186762fd4"
+        },
+        "front": {
+          "character": 3,
+          "palette": 0,
+          "characterSha256": "e8234e4e8c9c3fd14335c7183e05b554b5b46287f6c6705693f99a4c95509d4a",
+          "paletteSha256": "cf26893fa232a7b469929f9469d01b559d83c63b5a2d1ff347a5649dceb94c14",
+          "expectedFrameSha256": "d7ddff2f7564cf8beb77314dbaf45f802cbf9bcf47129b281c97e403c7b85878"
+        },
+        "shiny_front": {
+          "character": 3,
+          "palette": 1,
+          "characterSha256": "e8234e4e8c9c3fd14335c7183e05b554b5b46287f6c6705693f99a4c95509d4a",
+          "paletteSha256": "f51abe15020d748908795d47735056f2da3e60ce1ef1303d8c731f798aaecf47",
+          "expectedFrameSha256": "7d958951ec8f4a46a6715ef6e7014c721c11b20dba0bd8eae36ca2ca927d176d"
+        }
+      },
+      "mode": "shared_species_palette"
+    },
+    {
+      "artworkKey": "quaquaval-mega|pixelsha256:08bb13ae087b55d3e47e79446527de12e38d392d54d0bf23bea389bb465474a7",
+      "archiveSha256": "7bce6fe66b194562edc7117e9dd237fd836c7f04aa34b8252953cc931cfd3283",
+      "archiveGitBlob": "0afbd21f016fc722446815dfa0b8824483074980",
+      "batchBlob": "a5c0fa005bb4d8c73a3c8a9b53dd21b6e817720f",
+      "batchPath": "qa/final-sprite-completion/BATCH_40_HISTORICAL.json",
+      "byteLength": 13124,
+      "members": 4,
+      "routes": {
+        "back": {
+          "character": 2,
+          "palette": 0,
+          "characterSha256": "7f468386428e40ad3953bf8ffcd6fbc89decd7018e0d264144152513716eea31",
+          "paletteSha256": "a54590fb81e14d1347a09fe6c689523af85673c9130dd687d7b7222b83d94d93",
+          "expectedFrameSha256": "36a28644332e8e9987b5127c79f4f196c6bb030dfc6c39f7fb65aaee9d24ec50"
+        },
+        "shiny_back": {
+          "character": 2,
+          "palette": 1,
+          "characterSha256": "7f468386428e40ad3953bf8ffcd6fbc89decd7018e0d264144152513716eea31",
+          "paletteSha256": "abeb6b03140fc82b2535627f926930fc1d8ecdaac5393c242bd8d13f54722648",
+          "expectedFrameSha256": "4e1d6c856b4d0fa730fd8e2699ffa00ca6fcec65a4d52a928cd27c00fa7374e0"
+        },
+        "front": {
+          "character": 3,
+          "palette": 0,
+          "characterSha256": "d3cb8052195291d60f599525c1ccb5cc956182f19e1f7f3d82797949273f2c0b",
+          "paletteSha256": "a54590fb81e14d1347a09fe6c689523af85673c9130dd687d7b7222b83d94d93",
+          "expectedFrameSha256": "4a8f5065a7e654da28b2a641835bd14682698eaaca3c2b828402dd5f31afb310"
+        },
+        "shiny_front": {
+          "character": 3,
+          "palette": 1,
+          "characterSha256": "d3cb8052195291d60f599525c1ccb5cc956182f19e1f7f3d82797949273f2c0b",
+          "paletteSha256": "abeb6b03140fc82b2535627f926930fc1d8ecdaac5393c242bd8d13f54722648",
+          "expectedFrameSha256": "c5370cdbcf9a71add5392e263ee26d913beb241e69c149b741a3e55183f011d9"
+        }
+      },
+      "mode": "shared_species_palette"
+    },
+    {
+      "artworkKey": "queengambit|pixelsha256:d66a963726c98e52a4f0e7323f1f4475a6947964655236d97bca47f702c07129",
+      "archiveSha256": "0c5abc988384d4fee7044e4c64b28728b20c00d37a808ef21a13eb754aba698d",
+      "archiveGitBlob": "f742954d6fa77239d01757f0311c62ab4119604d",
+      "batchBlob": "a5c0fa005bb4d8c73a3c8a9b53dd21b6e817720f",
+      "batchPath": "qa/final-sprite-completion/BATCH_40_HISTORICAL.json",
+      "byteLength": 13124,
+      "members": 4,
+      "routes": {
+        "back": {
+          "character": 2,
+          "palette": 0,
+          "characterSha256": "9c8da2b01238130b6d62523a3c98c8db2c9498b4385edf6201e3ec674ef3f76a",
+          "paletteSha256": "c5b04a88673beceee052922c860d203609feec977c5d6b1f04d018db1400207a",
+          "expectedFrameSha256": "6a12391e12dd00c76df24e1b752e2c19835f897924b324918401b8bc369bd0ef"
+        },
+        "shiny_back": {
+          "character": 2,
+          "palette": 1,
+          "characterSha256": "9c8da2b01238130b6d62523a3c98c8db2c9498b4385edf6201e3ec674ef3f76a",
+          "paletteSha256": "7472e883cd7fc0e4ba8a690bdc842b2ddf3597915b6a62147a72c3ff138f446c",
+          "expectedFrameSha256": "eadec747b05f69af8acdf074eea114245214c94130f1927902122ff01a6f0448"
+        },
+        "front": {
+          "character": 3,
+          "palette": 0,
+          "characterSha256": "cfc038cb848a468f84f20b2c5e444ee2bafb0f3b01a53dfee9266d250c9b3ab6",
+          "paletteSha256": "c5b04a88673beceee052922c860d203609feec977c5d6b1f04d018db1400207a",
+          "expectedFrameSha256": "65d495ddf6ce8612954b9e405096de36198b037e9b565d3151e0649de155a74b"
+        },
+        "shiny_front": {
+          "character": 3,
+          "palette": 1,
+          "characterSha256": "cfc038cb848a468f84f20b2c5e444ee2bafb0f3b01a53dfee9266d250c9b3ab6",
+          "paletteSha256": "7472e883cd7fc0e4ba8a690bdc842b2ddf3597915b6a62147a72c3ff138f446c",
+          "expectedFrameSha256": "f89fc6bd102c9b0ac05303aa459c7c56df1177c317d6721d6540a8b3033ded7c"
+        }
+      },
+      "mode": "shared_species_palette"
+    },
+    {
+      "artworkKey": "ralts-redux|pixelsha256:1994713b39f617666f31c52252cf56b090a62767686d920e825fb93aa11bdba2",
+      "archiveSha256": "be6dade9c84aabefaf2d46c6e3d941c9c9fd53c319e8b804a8dc5f09e24f05f2",
+      "archiveGitBlob": "b80175b15935f5f836a237a53e55681e46b6a84c",
+      "batchBlob": "11e437bb7252eb03b7ddf23d2ff08095a37ed29f",
+      "batchPath": "qa/final-sprite-completion/BATCH_41_HISTORICAL.json",
+      "byteLength": 13124,
+      "members": 4,
+      "routes": {
+        "back": {
+          "character": 2,
+          "palette": 0,
+          "characterSha256": "f5adff300c364dbd0b7be7693b757d34579ffcc097cb87058eb7560148349415",
+          "paletteSha256": "f6b8bcd4c62f6536d4bd089163fa70e094305ad171d2240ca0c6b962f9b5c557",
+          "expectedFrameSha256": "2f1df6e98e28cc152c30a3b508ef43f945b8b5f0567c275c77574eea8010c4f1"
+        },
+        "shiny_back": {
+          "character": 2,
+          "palette": 1,
+          "characterSha256": "f5adff300c364dbd0b7be7693b757d34579ffcc097cb87058eb7560148349415",
+          "paletteSha256": "7552a5dc1ea2a565d3ff59ca9b9086dfb7704eb9fd10371e6213527d4a245b4b",
+          "expectedFrameSha256": "a245bd9e42b2d960be00421a0f06126221b708c837dcf5cdd91b5d4a8ae95a9a"
+        },
+        "front": {
+          "character": 3,
+          "palette": 0,
+          "characterSha256": "bce63b99a780e507649d99ba784afc9cfe98a66a9a296841f300b208fd6bdb36",
+          "paletteSha256": "f6b8bcd4c62f6536d4bd089163fa70e094305ad171d2240ca0c6b962f9b5c557",
+          "expectedFrameSha256": "147615d927ba9b5a8eeeaf45693d49b6280e0123254384fb23df450c4a4e05ae"
+        },
+        "shiny_front": {
+          "character": 3,
+          "palette": 1,
+          "characterSha256": "bce63b99a780e507649d99ba784afc9cfe98a66a9a296841f300b208fd6bdb36",
+          "paletteSha256": "7552a5dc1ea2a565d3ff59ca9b9086dfb7704eb9fd10371e6213527d4a245b4b",
+          "expectedFrameSha256": "2b8c9e9f34d0134497b33b3431bb6f3ce2c2c724c99909f27905f8ad518deab0"
+        }
+      },
+      "mode": "shared_species_palette"
+    },
+    {
+      "artworkKey": "rapidash-mega|pixelsha256:aae315b063de11c4fc18028613c46bcf5d8680a79a785ec0b34a44fc153db51f",
+      "archiveSha256": "a9817933108d6f7856ed1b6eb42a273718439dcf413e44dc5c8187bc8576e1e4",
+      "archiveGitBlob": "1280a397ad4b5ac926d8ce6513d92d90a643f3a9",
+      "batchBlob": "11e437bb7252eb03b7ddf23d2ff08095a37ed29f",
+      "batchPath": "qa/final-sprite-completion/BATCH_41_HISTORICAL.json",
+      "byteLength": 13124,
+      "members": 4,
+      "routes": {
+        "back": {
+          "character": 2,
+          "palette": 0,
+          "characterSha256": "1be6a5e89b678f27b44927e4b050fd14f3c98632c5179f095b87ddf7bb4ec170",
+          "paletteSha256": "32a18fbe9a5ee5ca0754f8cd4b21b4416dd89cd431742b213a31250e6f665d31",
+          "expectedFrameSha256": "3095948511f49a0ee90fd64079951ecc9f5bea8f1bd16fbe848881da3fae29e3"
+        },
+        "shiny_back": {
+          "character": 2,
+          "palette": 1,
+          "characterSha256": "1be6a5e89b678f27b44927e4b050fd14f3c98632c5179f095b87ddf7bb4ec170",
+          "paletteSha256": "fd1076022f9bd1279f6b51b5ab4a468a9e63d9d7b8e5281e3d9dc7965fb785e3",
+          "expectedFrameSha256": "632ca349ec536bd49a2e68e57e4431c5bb7e3b270041ef59b1e1ff1d00603b02"
+        },
+        "front": {
+          "character": 3,
+          "palette": 0,
+          "characterSha256": "92cdac682a7bb7d66aa73c29dad8421d75d72c725d43e7ce6081572eddbb7510",
+          "paletteSha256": "32a18fbe9a5ee5ca0754f8cd4b21b4416dd89cd431742b213a31250e6f665d31",
+          "expectedFrameSha256": "aec8b800784cc508b33f027c305ba7b69d98f3e5063e7898a0ac1d9c27c607c2"
+        },
+        "shiny_front": {
+          "character": 3,
+          "palette": 1,
+          "characterSha256": "92cdac682a7bb7d66aa73c29dad8421d75d72c725d43e7ce6081572eddbb7510",
+          "paletteSha256": "fd1076022f9bd1279f6b51b5ab4a468a9e63d9d7b8e5281e3d9dc7965fb785e3",
+          "expectedFrameSha256": "c27091eebcc3ee3e16375e6d2ad9c081596495ff3808bca4a552f32b273652a7"
+        }
+      },
+      "mode": "shared_species_palette"
+    },
+    {
+      "artworkKey": "rapidash-mega-galarian|pixelsha256:f85a51efe3ec82cb0e7e4bffe830c51ce476ee80d1df3daff0f2da76cd9a80a6",
+      "archiveSha256": "21718e1b9d1e3e66472d1f98d05561b5b49bbfcd1890eecb62a263f57defa481",
+      "archiveGitBlob": "3452d1898a47b582a2c043dfc33f0aef540b32b6",
+      "batchBlob": "11e437bb7252eb03b7ddf23d2ff08095a37ed29f",
+      "batchPath": "qa/final-sprite-completion/BATCH_41_HISTORICAL.json",
+      "byteLength": 13124,
+      "members": 4,
+      "routes": {
+        "back": {
+          "character": 2,
+          "palette": 0,
+          "characterSha256": "dc42e5e89d723ebf090a4a022d934390d66e015c5ec435674632e65c2a33519a",
+          "paletteSha256": "35449432c77e7d387ed488b6b55fc535c45b9a42d08f300e6096409b6aaa9a96",
+          "expectedFrameSha256": "ffb1bc77f26c203d84be11722b3020caf772302cc792421d1cadae656d749423"
+        },
+        "shiny_back": {
+          "character": 2,
+          "palette": 1,
+          "characterSha256": "dc42e5e89d723ebf090a4a022d934390d66e015c5ec435674632e65c2a33519a",
+          "paletteSha256": "8cc2446af98089b615ce5008e38d7b851c749a5cbc2e62d6305112cf60287622",
+          "expectedFrameSha256": "48ad1b803f0dcec5c1f157a74e789b9be4405bf8abdb3d9daf5314e28f91fa1d"
+        },
+        "front": {
+          "character": 3,
+          "palette": 0,
+          "characterSha256": "ec9b7d8c8b493bffdb62195c8215b228a367120bec8ce2bd170242b3806ceec2",
+          "paletteSha256": "35449432c77e7d387ed488b6b55fc535c45b9a42d08f300e6096409b6aaa9a96",
+          "expectedFrameSha256": "38c15f36b383782c677d714be2ab9c7d2472d45b6250eb094a7ac14c4f1e367a"
+        },
+        "shiny_front": {
+          "character": 3,
+          "palette": 1,
+          "characterSha256": "ec9b7d8c8b493bffdb62195c8215b228a367120bec8ce2bd170242b3806ceec2",
+          "paletteSha256": "8cc2446af98089b615ce5008e38d7b851c749a5cbc2e62d6305112cf60287622",
+          "expectedFrameSha256": "a8dede31b05a9a3db967b39fbc9ee0a7fc8497f323e121511955085369177dca"
+        }
+      },
+      "mode": "shared_species_palette"
+    },
+    {
+      "artworkKey": "ratfioso|pixelsha256:49dd54af0dfd1eed8915f828c65977a3d8370211fadc6f61508af068f29cc4e2",
+      "archiveSha256": "3c6e3876370fdda5a0610dc6dc33263523200f153fe56e9bb348cc12d25c724f",
+      "archiveGitBlob": "aea8e05f38d9d95399be82f53589b6b340d47717",
+      "batchBlob": "0140f8a90b380fe5544063988b831890a5f2062d",
+      "batchPath": "qa/final-sprite-completion/BATCH_42_HISTORICAL.json",
+      "byteLength": 13124,
+      "members": 4,
+      "routes": {
+        "back": {
+          "character": 2,
+          "palette": 0,
+          "characterSha256": "8d4519924d26f29d8f1c16407fed71491c9a4a3c73528471a30cff4728673345",
+          "paletteSha256": "ccc843b3cd712fd6ffe134b5073f5a9123894cf07b492ef92e7b548a1e519cb5",
+          "expectedFrameSha256": "08deadc5652a822f06ed6c0433ab1b25a27f8bbf0e8fec346c1c56713004925c"
+        },
+        "shiny_back": {
+          "character": 2,
+          "palette": 1,
+          "characterSha256": "8d4519924d26f29d8f1c16407fed71491c9a4a3c73528471a30cff4728673345",
+          "paletteSha256": "ccc843b3cd712fd6ffe134b5073f5a9123894cf07b492ef92e7b548a1e519cb5",
+          "expectedFrameSha256": "08deadc5652a822f06ed6c0433ab1b25a27f8bbf0e8fec346c1c56713004925c"
+        },
+        "front": {
+          "character": 3,
+          "palette": 0,
+          "characterSha256": "5776981fd73b0994e872a43a67763ee89b7450bbc17c6b166daa2b49e720be6f",
+          "paletteSha256": "ccc843b3cd712fd6ffe134b5073f5a9123894cf07b492ef92e7b548a1e519cb5",
+          "expectedFrameSha256": "d5b8a2e2d7ee4d6c779e6efea20d16da2ee98ab6327020e2ac90a654b44268be"
+        },
+        "shiny_front": {
+          "character": 3,
+          "palette": 1,
+          "characterSha256": "5776981fd73b0994e872a43a67763ee89b7450bbc17c6b166daa2b49e720be6f",
+          "paletteSha256": "ccc843b3cd712fd6ffe134b5073f5a9123894cf07b492ef92e7b548a1e519cb5",
+          "expectedFrameSha256": "d5b8a2e2d7ee4d6c779e6efea20d16da2ee98ab6327020e2ac90a654b44268be"
+        }
+      },
+      "mode": "shared_species_palette"
+    },
+    {
+      "artworkKey": "raticate-redux|pixelsha256:52d264ad90ceccf5ae64511bfc5154b97c5f7a31c7f453e142898f70b0e3d279",
+      "archiveSha256": "8817615afa9a3a07fbc88d7978865e59cb3442e443065e0ab852d2eafe4a14f8",
+      "archiveGitBlob": "2e1012a7fe7ea06db460f29bbbc846a2ca8d23e3",
+      "batchBlob": "0140f8a90b380fe5544063988b831890a5f2062d",
+      "batchPath": "qa/final-sprite-completion/BATCH_42_HISTORICAL.json",
+      "byteLength": 13124,
+      "members": 4,
+      "routes": {
+        "back": {
+          "character": 2,
+          "palette": 0,
+          "characterSha256": "dd0b5b002666b4adf65b4e6dadd4303ff10c9745cd1822d1f0ef5e387d87b9ba",
+          "paletteSha256": "7d40e9aae23eec0411efb38a187c7796011c87dacf299b4d69ea538a34b0fcb8",
+          "expectedFrameSha256": "55189c0759db651230e524dcfa57c9fddddc03e97b6bd3961b592c90f00cd3af"
+        },
+        "shiny_back": {
+          "character": 2,
+          "palette": 1,
+          "characterSha256": "dd0b5b002666b4adf65b4e6dadd4303ff10c9745cd1822d1f0ef5e387d87b9ba",
+          "paletteSha256": "34e4282eb11f8c9af5d34177091f91ca2fa7d7c18b82a148237f037fa74e6f72",
+          "expectedFrameSha256": "24695042bc55aa913b5abe1bbd138fa75aa24c56abd2ba2a3659b2dc75e6c749"
+        },
+        "front": {
+          "character": 3,
+          "palette": 0,
+          "characterSha256": "c4c7b10b883829cff4f81ff6c5373df66d2110b9d9c1286b1aa606c3cf0fb35a",
+          "paletteSha256": "7d40e9aae23eec0411efb38a187c7796011c87dacf299b4d69ea538a34b0fcb8",
+          "expectedFrameSha256": "ce9adcbc21636c3b73854b22edb9608e7a97112fd6b1342197f914d7506e07d3"
+        },
+        "shiny_front": {
+          "character": 3,
+          "palette": 1,
+          "characterSha256": "c4c7b10b883829cff4f81ff6c5373df66d2110b9d9c1286b1aa606c3cf0fb35a",
+          "paletteSha256": "34e4282eb11f8c9af5d34177091f91ca2fa7d7c18b82a148237f037fa74e6f72",
+          "expectedFrameSha256": "ef9d0d9c2fc56ccdb051d45ac99c1d1bf6d48fc24966504deede2ff5a77414ba"
+        }
+      },
+      "mode": "shared_species_palette"
+    },
+    {
+      "artworkKey": "ratiking|pixelsha256:75924b6bdaed51696c0e5da1f2ec6724755dbfd3c4fd4e0cbaf557eb09421dc1",
+      "archiveSha256": "5b61b3213fc7d544d4e21eaecd0ef107d3b0ee6bb079b397ac31be626fcbfa29",
+      "archiveGitBlob": "d63403132312226b18e2efb093dfdc94619e41bf",
+      "batchBlob": "0140f8a90b380fe5544063988b831890a5f2062d",
+      "batchPath": "qa/final-sprite-completion/BATCH_42_HISTORICAL.json",
+      "byteLength": 13124,
+      "members": 4,
+      "routes": {
+        "back": {
+          "character": 2,
+          "palette": 0,
+          "characterSha256": "3ca5db0f7d1249519e64c4cc2cbdad97d013e6cd7c953f34aad6a53d94eba80f",
+          "paletteSha256": "0aa12a3bddd5d6aa0dcd289235d827ead23d3dcd33a6b5923fd60ebb751b6f63",
+          "expectedFrameSha256": "4027e6fceceedc46f65be56679e062ac4a96bba662325892f3516e2ee7a37c7a"
+        },
+        "shiny_back": {
+          "character": 2,
+          "palette": 1,
+          "characterSha256": "3ca5db0f7d1249519e64c4cc2cbdad97d013e6cd7c953f34aad6a53d94eba80f",
+          "paletteSha256": "3f74bd2b8c903c7aa0e88f16ed7209d09f6fc5c5036b2fd15d74dfcbdd8acd00",
+          "expectedFrameSha256": "21cbddf8233ccdf43599d5693b9d556c58efe420b5501d5d04d323a658d83590"
+        },
+        "front": {
+          "character": 3,
+          "palette": 0,
+          "characterSha256": "27dc20d9ecb1d8265d2f3d1d960917601968b20bf00d236e2c425255b9cdf706",
+          "paletteSha256": "0aa12a3bddd5d6aa0dcd289235d827ead23d3dcd33a6b5923fd60ebb751b6f63",
+          "expectedFrameSha256": "599219fa991542f94dbb128b07f46bad5625da9d04deeda4a4b17b8289baedb1"
+        },
+        "shiny_front": {
+          "character": 3,
+          "palette": 1,
+          "characterSha256": "27dc20d9ecb1d8265d2f3d1d960917601968b20bf00d236e2c425255b9cdf706",
+          "paletteSha256": "3f74bd2b8c903c7aa0e88f16ed7209d09f6fc5c5036b2fd15d74dfcbdd8acd00",
+          "expectedFrameSha256": "6850a4310bc3546f67622ef108580383382a546a96fe15797e6143de7f2dd4b5"
+        }
+      },
+      "mode": "shared_species_palette"
+    },
+    {
+      "artworkKey": "rattata-redux|pixelsha256:78c245dc4241697bbb745046ad13e1c78a636a7be7e41c98a9e4d9c204299214",
+      "archiveSha256": "3ac923781ad98ad5e4c12b4fdb36c37027f28cbdcb8f931241ddf66b2db0b43f",
+      "archiveGitBlob": "419af1b4da32901bb8ac0b15d3e7cb81a6e69c23",
+      "batchBlob": "f79d5137ca50c5ab2531902119b375acdf62921d",
+      "batchPath": "qa/final-sprite-completion/BATCH_43_HISTORICAL.json",
+      "byteLength": 13284,
+      "members": 6,
+      "routes": {
+        "back": {
+          "character": 2,
+          "palette": 0,
+          "characterSha256": "f5a34a7d5cb260deabc3ffa6c65ee7469fdb69b2e876b9637cb673fdf6e6365c",
+          "paletteSha256": "d1d139c60e65f871a6dc617aca6fb493ad6967153ed10d70c19cc13fdc7ddf06",
+          "expectedFrameSha256": "5716f1503bd781f906c5c62a9a3870adbb267c2562e031b411a9eb3c0a834f6c"
+        },
+        "shiny_back": {
+          "character": 2,
+          "palette": 1,
+          "characterSha256": "f5a34a7d5cb260deabc3ffa6c65ee7469fdb69b2e876b9637cb673fdf6e6365c",
+          "paletteSha256": "b3f80a3b616e5aef93d47c0b0ee01f3b7d33aefeaf317673f1f42ae610040612",
+          "expectedFrameSha256": "5b904a52406f522d3fa88eab57b194fba980819d0979c08776c964c891857247"
+        },
+        "front": {
+          "character": 5,
+          "palette": 3,
+          "characterSha256": "cbe705d8e9b996c05affe54bbb4a54bb6656542843be4aa769b551c3e0388402",
+          "paletteSha256": "444d37a564c2f75a13881dace7d9c16a4475c57fa32c3c542acfa346e5fca812",
+          "expectedFrameSha256": "ce478bd224812328e24189ddfa9f7b31ad602d05fd0ac7714865245bd7968d71"
+        },
+        "shiny_front": {
+          "character": 5,
+          "palette": 4,
+          "characterSha256": "cbe705d8e9b996c05affe54bbb4a54bb6656542843be4aa769b551c3e0388402",
+          "paletteSha256": "f62228f2ef5e084a6b57228770b34e93dd02607a5ccf9804ec2fc0e1b140f5f1",
+          "expectedFrameSha256": "5dd62aab9963dd787ffee69684542df8667c992af098cfadcba9a56b7e6ed1fb"
+        }
+      },
+      "mode": "view_specific"
+    },
+    {
+      "artworkKey": "relicanth-mega|pixelsha256:82d67aaaa726c26fe83862c95d2075672838f2df54f518d45a84607fe73b812c",
+      "archiveSha256": "98ed854ba98f3cff7975cf3f7c9a75b820bbebd03609695355489600cf73b7b4",
+      "archiveGitBlob": "3af921e180acbdb06610a28bcfd2c766a19d4030",
+      "batchBlob": "f79d5137ca50c5ab2531902119b375acdf62921d",
+      "batchPath": "qa/final-sprite-completion/BATCH_43_HISTORICAL.json",
+      "byteLength": 13124,
+      "members": 4,
+      "routes": {
+        "back": {
+          "character": 2,
+          "palette": 0,
+          "characterSha256": "7154bc949a56687f4d8a8819291214d53f059d6ba9c566aa063f4c476bd9a15f",
+          "paletteSha256": "65e9330f9f12728b6f982b55d7139a55f601e4e76d31b0cea9f8afa883793cf6",
+          "expectedFrameSha256": "3edb88014470204e3f8f90cbc5dde911dfbff8c2f7cdb590a6451d907e8e133c"
+        },
+        "shiny_back": {
+          "character": 2,
+          "palette": 1,
+          "characterSha256": "7154bc949a56687f4d8a8819291214d53f059d6ba9c566aa063f4c476bd9a15f",
+          "paletteSha256": "ad8ea66c26bf7b8dd42205bdd91a9ca0706fe8d02c1fb43a60f3172d509e988a",
+          "expectedFrameSha256": "b546d060f82ce1fd3c8561e98efaa2df3030ba98f3cb81c8be282e1d2597fb4a"
+        },
+        "front": {
+          "character": 3,
+          "palette": 0,
+          "characterSha256": "709c7be3c49dcd47f793ee358fe978ae51edabd79f2c09575ee38c095026b90d",
+          "paletteSha256": "65e9330f9f12728b6f982b55d7139a55f601e4e76d31b0cea9f8afa883793cf6",
+          "expectedFrameSha256": "e9e5995d26e834c09276dcdc19023085430b0d013e20c2a566beae6fa97cd40e"
+        },
+        "shiny_front": {
+          "character": 3,
+          "palette": 1,
+          "characterSha256": "709c7be3c49dcd47f793ee358fe978ae51edabd79f2c09575ee38c095026b90d",
+          "paletteSha256": "ad8ea66c26bf7b8dd42205bdd91a9ca0706fe8d02c1fb43a60f3172d509e988a",
+          "expectedFrameSha256": "6a23cc95e2d046c28a225fb4357f47b4f324899117b62d9f80ffa3193a5b72eb"
+        }
+      },
+      "mode": "shared_species_palette"
+    },
+    {
+      "artworkKey": "reuniclus-redux|pixelsha256:1d1b196a05742934dd1e32802656d4e3474de4bd1986ffca0fcac85c5f40fa06",
+      "archiveSha256": "8e191c58c643c0bde68bea00f207810928a9e075f1114a550d590fc6e8d44131",
+      "archiveGitBlob": "7bbb6f98b3b5cc994470f2a02b6b4c25b53565f1",
+      "batchBlob": "f79d5137ca50c5ab2531902119b375acdf62921d",
+      "batchPath": "qa/final-sprite-completion/BATCH_43_HISTORICAL.json",
+      "byteLength": 13124,
+      "members": 4,
+      "routes": {
+        "back": {
+          "character": 2,
+          "palette": 0,
+          "characterSha256": "7cda58e55b462280e7ed0c081ccc420c2e86007f1c8085f9b0fbd9de4765618a",
+          "paletteSha256": "be23460bb3741c0bb24cf0a2715ef0eee7b271411226ec339d19e4024dd04964",
+          "expectedFrameSha256": "46c0305fc8d6ec958db9ff31d39c12e6cb7c68879c8a0cd629284763a403b5a4"
+        },
+        "shiny_back": {
+          "character": 2,
+          "palette": 1,
+          "characterSha256": "7cda58e55b462280e7ed0c081ccc420c2e86007f1c8085f9b0fbd9de4765618a",
+          "paletteSha256": "dbce12c84e08affd053f1f98d02368634f71b796a806e0e5234ce37aa83700e0",
+          "expectedFrameSha256": "0f959461ebc13cdc3ad2c49014cf01da597951070ef160f842f949af3131e974"
+        },
+        "front": {
+          "character": 3,
+          "palette": 0,
+          "characterSha256": "dec4341f161d1787386d6fb23f9229341fc3672a490b8ad3d38d9b99b1fe42af",
+          "paletteSha256": "be23460bb3741c0bb24cf0a2715ef0eee7b271411226ec339d19e4024dd04964",
+          "expectedFrameSha256": "2c473663f03419b1157ad7b4d69a0f5e6a42371e3084403a97a495bc488e6f01"
+        },
+        "shiny_front": {
+          "character": 3,
+          "palette": 1,
+          "characterSha256": "dec4341f161d1787386d6fb23f9229341fc3672a490b8ad3d38d9b99b1fe42af",
+          "paletteSha256": "dbce12c84e08affd053f1f98d02368634f71b796a806e0e5234ce37aa83700e0",
+          "expectedFrameSha256": "1d45c62c8f68147accc8c0f24edae668eb5fdc3a0da2d8dbc78a397897e1b357"
+        }
+      },
+      "mode": "shared_species_palette"
+    },
+    {
+      "artworkKey": "rexcadrill|pixelsha256:269e3b6329006b5c123424c6537b5932ec53b98553b7f5b8e55159b97ab0570a",
+      "archiveSha256": "061f0d0ea044bb580a9e47e802324841ced341d430056e6381777af1c6b229e3",
+      "archiveGitBlob": "874d92c7db915b3ba5f348e818805cae38ea00a2",
+      "batchBlob": "f23571f08812d172b7da5609895302ae9cce878f",
+      "batchPath": "qa/final-sprite-completion/BATCH_44_HISTORICAL.json",
+      "byteLength": 13284,
+      "members": 6,
+      "routes": {
+        "back": {
+          "character": 2,
+          "palette": 0,
+          "characterSha256": "4572544a46c78607850504f5c55940073a804811c74402f40361f8d4204407dc",
+          "paletteSha256": "d03bba647ff6ba4ed40579a3ca712013f14bcf75edeacbf2d568036cda434069",
+          "expectedFrameSha256": "f62fa6a83c262c5ef06f0b800b48b66496841b97bb44feb074df6f74286c9f00"
+        },
+        "shiny_back": {
+          "character": 2,
+          "palette": 1,
+          "characterSha256": "4572544a46c78607850504f5c55940073a804811c74402f40361f8d4204407dc",
+          "paletteSha256": "25ab2d870c89bd2ac11f94d6b95db85a742c7d48a1c8843172c2ca5844a72286",
+          "expectedFrameSha256": "dddf1ef383e8708a69b4fc9adc4260c22d66e1e4b48a96b3b7b98f11ac51b37b"
+        },
+        "front": {
+          "character": 5,
+          "palette": 3,
+          "characterSha256": "6d9eff03721f374665025132ad4d39fb947d43bc178c7bcc854909ba4d72a8eb",
+          "paletteSha256": "495ebdb0b7e57f47cba258006b995cf84f12891f1d729679c0c9cc9961d65596",
+          "expectedFrameSha256": "2523fd3c10b26e9f0ac2da64ce413d23f68ff5466f001d595492d28a244223bf"
+        },
+        "shiny_front": {
+          "character": 5,
+          "palette": 4,
+          "characterSha256": "6d9eff03721f374665025132ad4d39fb947d43bc178c7bcc854909ba4d72a8eb",
+          "paletteSha256": "c972330d89f3f30b036f05c756e5af833ab9fc08f471fc9bef9cb18a9cb6d3c9",
+          "expectedFrameSha256": "9ed506d8521dfe38d17bc69ea80db6943b09107894c85cda7e1d07c46bde0b52"
+        }
+      },
+      "mode": "view_specific"
+    },
+    {
+      "artworkKey": "ribombee-mega|pixelsha256:c8e43bde36d74ed71bc8ce0de0a55f729966e38638fe2c6104eb6fa4dcb368ca",
+      "archiveSha256": "6e8ac5df6e9c69825d7dee1fbf6476ae87b91c3f5bfcd01c79fc703e45f8a06b",
+      "archiveGitBlob": "58cc82ec47659e069286736c6f9fe225837dfcdb",
+      "batchBlob": "f23571f08812d172b7da5609895302ae9cce878f",
+      "batchPath": "qa/final-sprite-completion/BATCH_44_HISTORICAL.json",
+      "byteLength": 13124,
+      "members": 4,
+      "routes": {
+        "back": {
+          "character": 2,
+          "palette": 0,
+          "characterSha256": "2587e8c3643fb2ef713c43cdf34104dbfb956744ec53405e7e1929ea61e8bfec",
+          "paletteSha256": "86b8ccbe15deb7576e99acf2799a4e747ae81f13fa0062e38fc26c861822d4d0",
+          "expectedFrameSha256": "24ec5cf9851d8b7d0a5e2495e8c32b59daf1d8801341b21a5915e537b17e9b0c"
+        },
+        "shiny_back": {
+          "character": 2,
+          "palette": 1,
+          "characterSha256": "2587e8c3643fb2ef713c43cdf34104dbfb956744ec53405e7e1929ea61e8bfec",
+          "paletteSha256": "5bbf7a25889873d6ae196a3db99042ecb0313778a1cd748fdfcb32bd50d1d7d0",
+          "expectedFrameSha256": "0e80c35b26dc2e881e14c7873de28cd487555a6faf4ad7a0486e925de37571c3"
+        },
+        "front": {
+          "character": 3,
+          "palette": 0,
+          "characterSha256": "2c823e2981bc496af067aea4c2e8a6b680a4dbb4b5875972bbd71f4bc88f545d",
+          "paletteSha256": "86b8ccbe15deb7576e99acf2799a4e747ae81f13fa0062e38fc26c861822d4d0",
+          "expectedFrameSha256": "8f5415015fd053ca916a537f1641607388888c33954fd456d0d959e6e41078df"
+        },
+        "shiny_front": {
+          "character": 3,
+          "palette": 1,
+          "characterSha256": "2c823e2981bc496af067aea4c2e8a6b680a4dbb4b5875972bbd71f4bc88f545d",
+          "paletteSha256": "5bbf7a25889873d6ae196a3db99042ecb0313778a1cd748fdfcb32bd50d1d7d0",
+          "expectedFrameSha256": "9eed379c3b2da5bd9f8ae689142ae87298920d7dd6cbbf40ca6b4e911f050cb7"
+        }
+      },
+      "mode": "shared_species_palette"
+    },
+    {
+      "artworkKey": "ribombee-redux|pixelsha256:f053f90499999691c45e1ab10ca6d3abcd7c9eb32560fd518334e204dd812a60",
+      "archiveSha256": "ff60db24eaedc01e76fa99dc2bc8973302a721ee0ceaabc35eae74b98e36d0c2",
+      "archiveGitBlob": "f495a41d30d14e0246b8571182b8c3b600b0857f",
+      "batchBlob": "f23571f08812d172b7da5609895302ae9cce878f",
+      "batchPath": "qa/final-sprite-completion/BATCH_44_HISTORICAL.json",
+      "byteLength": 13124,
+      "members": 4,
+      "routes": {
+        "back": {
+          "character": 2,
+          "palette": 0,
+          "characterSha256": "621a0b342c85cd27a1e3ad96a5636b02cdbcc46e04d9bd24282abe3b0ce8a659",
+          "paletteSha256": "95eb4b83f6aebae754d30c55ea7c2053d2560c4b5d1d6c0f0e55abc3c65eb132",
+          "expectedFrameSha256": "2b61f86a75464479baf05afeac31e11d48bcd938c5d2ff1e38d720725c1d4b82"
+        },
+        "shiny_back": {
+          "character": 2,
+          "palette": 1,
+          "characterSha256": "621a0b342c85cd27a1e3ad96a5636b02cdbcc46e04d9bd24282abe3b0ce8a659",
+          "paletteSha256": "5023b5d3dad48cffce2d020e68dd977f1f05969dc912402beb4f66c11a5d3bdd",
+          "expectedFrameSha256": "b796d39ca46b993a8342b5e5533fb1b21f603c08f33403ae2521af3a942b726e"
+        },
+        "front": {
+          "character": 3,
+          "palette": 0,
+          "characterSha256": "57b8fb09d50277e8333170c252da16d715eed30aba60c4c358d5bca8f485a1a0",
+          "paletteSha256": "95eb4b83f6aebae754d30c55ea7c2053d2560c4b5d1d6c0f0e55abc3c65eb132",
+          "expectedFrameSha256": "d1b7b136d0ad9d24bb6b332688b19b146f9ca9bfb99f88d7b7534d6a1c43ab81"
+        },
+        "shiny_front": {
+          "character": 3,
+          "palette": 1,
+          "characterSha256": "57b8fb09d50277e8333170c252da16d715eed30aba60c4c358d5bca8f485a1a0",
+          "paletteSha256": "5023b5d3dad48cffce2d020e68dd977f1f05969dc912402beb4f66c11a5d3bdd",
+          "expectedFrameSha256": "38d9e8d90f181d703d66696c8ff3c9cfcfddeb92fb72b4549427e98ca8eedbe9"
+        }
+      },
+      "mode": "shared_species_palette"
+    },
+    {
+      "artworkKey": "ribombee-redux-mega|pixelsha256:bc2b3fb56525900d48a29ec46a455cce31b26817373bceb8ec30d4bc393b9a7a",
+      "archiveSha256": "5a54ba9f50280645f72a4c183bcf5b6b5e5ca81525def67b70fc79da78ebf8d2",
+      "archiveGitBlob": "0df79178ccd70924729e9efbdafad8a820003c52",
+      "batchBlob": "3c76b3e44d833d69be7e45be117f96edf318d00c",
+      "batchPath": "qa/final-sprite-completion/BATCH_47_HISTORICAL.json",
+      "byteLength": 13124,
+      "members": 4,
+      "routes": {
+        "back": {
+          "character": 2,
+          "palette": 0,
+          "characterSha256": "6d6e60a42815ca425c7e6529f048158381641b60be573073ce90884ab1dc564e",
+          "paletteSha256": "95eb4b83f6aebae754d30c55ea7c2053d2560c4b5d1d6c0f0e55abc3c65eb132",
+          "expectedFrameSha256": "0430ae481b06cd67f55a56335b22fe2c94a32c2c2e1972c3a9410b95bbc71c60"
+        },
+        "shiny_back": {
+          "character": 2,
+          "palette": 1,
+          "characterSha256": "6d6e60a42815ca425c7e6529f048158381641b60be573073ce90884ab1dc564e",
+          "paletteSha256": "5023b5d3dad48cffce2d020e68dd977f1f05969dc912402beb4f66c11a5d3bdd",
+          "expectedFrameSha256": "ce61aec7b97c5764ab0985a547f8e10d60d56b11f960fe5965ba40821c03c5e0"
+        },
+        "front": {
+          "character": 3,
+          "palette": 0,
+          "characterSha256": "6ca792d039444979f645b1e1169d0f728ad5e2b88a005352e24dec133d62e49a",
+          "paletteSha256": "95eb4b83f6aebae754d30c55ea7c2053d2560c4b5d1d6c0f0e55abc3c65eb132",
+          "expectedFrameSha256": "46bb11cb3ece70efdea9b3196a8844ec1e77b3367d1bd7488e50b4fd094be7fb"
+        },
+        "shiny_front": {
+          "character": 3,
+          "palette": 1,
+          "characterSha256": "6ca792d039444979f645b1e1169d0f728ad5e2b88a005352e24dec133d62e49a",
+          "paletteSha256": "5023b5d3dad48cffce2d020e68dd977f1f05969dc912402beb4f66c11a5d3bdd",
+          "expectedFrameSha256": "d79dc971b1520ca7391e662399e8084a1a043958c776ab2bcc8a3f0688353f65"
+        }
+      },
+      "mode": "shared_species_palette"
+    },
+    {
+      "artworkKey": "rillaboom-mega|pixelsha256:bfa2facae6317d23c36a2d1d50336a63ed48102364142a331f481dfd1379926e",
+      "archiveSha256": "a4763f891c8766a6f3d2c9ccac1b9df7a5ee9d4bc82bdc91b4f946c6e2d85712",
+      "archiveGitBlob": "33fe84043b62ad0569edde653cb43ff00f03d870",
+      "batchBlob": "3c76b3e44d833d69be7e45be117f96edf318d00c",
+      "batchPath": "qa/final-sprite-completion/BATCH_47_HISTORICAL.json",
+      "byteLength": 13284,
+      "members": 6,
+      "routes": {
+        "back": {
+          "character": 2,
+          "palette": 0,
+          "characterSha256": "4421bb5347a054c5021a625ac38428af15a3e314e431aef0279797fdbf44e378",
+          "paletteSha256": "bea970f745cecd0cbb3763eb7a01df033ab74e0c83a94dd0bf4d1b50217f0fc1",
+          "expectedFrameSha256": "e815719273ed1257dbd7c4173c0a901d8ce2092e6628c692c91b847c69dc4f5c"
+        },
+        "shiny_back": {
+          "character": 2,
+          "palette": 1,
+          "characterSha256": "4421bb5347a054c5021a625ac38428af15a3e314e431aef0279797fdbf44e378",
+          "paletteSha256": "ef93c23e627030960a990871a7d1b7a864ee2046aa3bece62565650843a30a76",
+          "expectedFrameSha256": "1846e4dabfcab8cb20370510ee90fd8c3f4ebab2591bbc754304dedac5c4a314"
+        },
+        "front": {
+          "character": 5,
+          "palette": 3,
+          "characterSha256": "71cf809178d92ab0806d9e02dd08e80a6539f1d10930bafab108cb81d109c3c4",
+          "paletteSha256": "b90e4eb5068b0383e603917c6a11beb2a2a9d3826748a36cba447a10bc8711d4",
+          "expectedFrameSha256": "3c9f528ab17bbcd8d4b2be3eb0a3ac0af742c8f0c07a54763a2b369197fb3636"
+        },
+        "shiny_front": {
+          "character": 5,
+          "palette": 4,
+          "characterSha256": "71cf809178d92ab0806d9e02dd08e80a6539f1d10930bafab108cb81d109c3c4",
+          "paletteSha256": "da81f385d463482d066763cb423218f600222ec62446ea9b0698a088654c1e65",
+          "expectedFrameSha256": "bb02449e6b05c4d261b8d097196979e8df728fec757be0689e75d19519d16091"
+        }
+      },
+      "mode": "view_specific"
+    },
+    {
+      "artworkKey": "roserade-mega|pixelsha256:ed384ee551169249eab905051adf66cfce738ca4481f9fdf9205921d2b9e28e8",
+      "archiveSha256": "5a76a618459f1dd8180d7c5ebd5b9ba08dc3556316abbc41a832211249314afc",
+      "archiveGitBlob": "ffe35bd65d0cf19a18be015fe117b8cc3a3ec792",
+      "batchBlob": "3c76b3e44d833d69be7e45be117f96edf318d00c",
+      "batchPath": "qa/final-sprite-completion/BATCH_47_HISTORICAL.json",
+      "byteLength": 13124,
+      "members": 4,
+      "routes": {
+        "back": {
+          "character": 2,
+          "palette": 0,
+          "characterSha256": "ba7d91200bc6793b813f62795028e17986e3b7d07a09bb310f15562d5b057149",
+          "paletteSha256": "61b9b4e690d181b11cee4e05b10cc6c2ea06b5cfbd4c6abf976a0c0e5bc5f9e5",
+          "expectedFrameSha256": "9f1b40684adbd65c926dc6b1b500f2fed867ebe7da6a80e5c4d31bda12032553"
+        },
+        "shiny_back": {
+          "character": 2,
+          "palette": 1,
+          "characterSha256": "ba7d91200bc6793b813f62795028e17986e3b7d07a09bb310f15562d5b057149",
+          "paletteSha256": "6f5378a1c54858082751ed74c349025827354906007fb3357cc7f5a4dd970a5f",
+          "expectedFrameSha256": "96030ad48dfbb6678b020063928e46eeecd8b54d55c11aa2cea76b371f721338"
+        },
+        "front": {
+          "character": 3,
+          "palette": 0,
+          "characterSha256": "691bb1c6f42671d69913f4e1fd256ef785b6b1d49ac85d96a16939265eb337ab",
+          "paletteSha256": "61b9b4e690d181b11cee4e05b10cc6c2ea06b5cfbd4c6abf976a0c0e5bc5f9e5",
+          "expectedFrameSha256": "995686f1c7c5e45adf02218c70fb2cc1926dce8acee2e7c69734aceb0faef854"
+        },
+        "shiny_front": {
+          "character": 3,
+          "palette": 1,
+          "characterSha256": "691bb1c6f42671d69913f4e1fd256ef785b6b1d49ac85d96a16939265eb337ab",
+          "paletteSha256": "6f5378a1c54858082751ed74c349025827354906007fb3357cc7f5a4dd970a5f",
+          "expectedFrameSha256": "b96d1e939611b19cd077e1d5eaf2872cb85fcb76d663856708f2f3ac488b5539"
+        }
+      },
+      "mode": "shared_species_palette"
+    },
+    {
+      "artworkKey": "sableye-mega-redux|pixelsha256:d7b28d8f2cb42cd840c7a5d6a6e8a9652ba4e41976c2d053a0d16759f75c660e",
+      "archiveSha256": "b94b3dc68ee86d9743fc116d1bffce0b9e5381fb17dfb7a566afac3feeea69d0",
+      "archiveGitBlob": "81b50e5fe98070356dd74334e6e6ad35356ab722",
+      "batchBlob": "6c7d228879b77772e95b293a86f39b90f3dc7cb1",
+      "batchPath": "qa/final-sprite-completion/BATCH_48_HISTORICAL.json",
+      "byteLength": 13284,
+      "members": 6,
+      "routes": {
+        "back": {
+          "character": 2,
+          "palette": 0,
+          "characterSha256": "acd2e0f18a744471f7d1c84805566e7b833454e9aabaf0b441d6529828d68ce9",
+          "paletteSha256": "4ff5637574043cbd64ef603577d113cded37dbd69c700da853babd4e125f6936",
+          "expectedFrameSha256": "59fe586019883ad54875081c6fe48a103ea37edae999186fbe7bf014ea21b9a5"
+        },
+        "shiny_back": {
+          "character": 2,
+          "palette": 1,
+          "characterSha256": "acd2e0f18a744471f7d1c84805566e7b833454e9aabaf0b441d6529828d68ce9",
+          "paletteSha256": "90b0a882ac1d5c72d7b1c9f29a2d941473b44bbb1a1edcb7c707dbb78f5c06ba",
+          "expectedFrameSha256": "06ade02c28a80f5f44f3fe1abf30f2f3373e793dbf6bc5c93d84bf5e25cf2bf7"
+        },
+        "front": {
+          "character": 5,
+          "palette": 3,
+          "characterSha256": "9d425af3c09d95bb10f07ebba3fe738fd267504a7fface7a48ff8f2b072e3929",
+          "paletteSha256": "09468d10a464c46cd374f05a6674023bb43c0bdef9406ac8836648565e53f302",
+          "expectedFrameSha256": "d9cbce10ddd42604fd8536e982c2ac5531ea057d4b8fac13471c9b72b6924e46"
+        },
+        "shiny_front": {
+          "character": 5,
+          "palette": 4,
+          "characterSha256": "9d425af3c09d95bb10f07ebba3fe738fd267504a7fface7a48ff8f2b072e3929",
+          "paletteSha256": "07f1cb68d5ba76220ec5a448c1297890f9950b82552b606ba9f47845beed4771",
+          "expectedFrameSha256": "65e713819b46ecc0183b4fc653b9da06acf023c0b94be774b492356dc6b2cedf"
+        }
+      },
+      "mode": "view_specific"
+    },
+    {
+      "artworkKey": "sableye-redux|pixelsha256:e96e4454dd7af2b9cc1c77fbedda478d4cde8f10c8c9377c67c504e909dbdb3d",
+      "archiveSha256": "5e5f9195956fcbcc1983346a8fd3f4b2d7e8a360026964835d71510433ba9bbe",
+      "archiveGitBlob": "9f554185392df321a5f9bd4f8243f135c6faa89c",
+      "batchBlob": "6c7d228879b77772e95b293a86f39b90f3dc7cb1",
+      "batchPath": "qa/final-sprite-completion/BATCH_48_HISTORICAL.json",
+      "byteLength": 13284,
+      "members": 6,
+      "routes": {
+        "back": {
+          "character": 2,
+          "palette": 0,
+          "characterSha256": "dea8c4cbaeee0a5a0c50b9b37cd096acdfe025435b67986acf4924ea70c2f076",
+          "paletteSha256": "21e9ffbe20f9ac017e23db5d91a624cad19072c95bcd55cac5391fec93ff9a9c",
+          "expectedFrameSha256": "7563356d7171d7557c121f853b3c90a9676eb802c98ac35ef5c94cbc72fdfc3b"
+        },
+        "shiny_back": {
+          "character": 2,
+          "palette": 1,
+          "characterSha256": "dea8c4cbaeee0a5a0c50b9b37cd096acdfe025435b67986acf4924ea70c2f076",
+          "paletteSha256": "4dac8c2e7d7e10f310bb5c7001bc21fe7688a824e77e98e0c69a8a98cbf1ac43",
+          "expectedFrameSha256": "8293dd3516fc67424b1ca634b4dc3c117d83ce0ba91e02023c338fdf50edcf32"
+        },
+        "front": {
+          "character": 5,
+          "palette": 3,
+          "characterSha256": "f4113a5f9fe5655261cde622da35f7985ab63d80a0d9aa0cbb36c912e53ec75f",
+          "paletteSha256": "202491b8fd22cda21e6d375920bf1082b62557c03c44fc924987be1580c32a28",
+          "expectedFrameSha256": "128cee7b000abda397eabc67cbaa26723eae34d0a93ec70067798556e244d7d8"
+        },
+        "shiny_front": {
+          "character": 5,
+          "palette": 4,
+          "characterSha256": "f4113a5f9fe5655261cde622da35f7985ab63d80a0d9aa0cbb36c912e53ec75f",
+          "paletteSha256": "8930e6913642a16f37ee896a523d94e11077ba91d41afbf37b18da85ce69686a",
+          "expectedFrameSha256": "cfa1a7fcc298f1dbc2102da3ed5fc499c980945db1d128e6703fd056ccf9a87d"
+        }
+      },
+      "mode": "view_specific"
+    },
+    {
+      "artworkKey": "sagaracas|pixelsha256:02a764e44ed570bc77e6f3182c0f8fc8d35079fde84bcee261daa8a7539e154f",
+      "archiveSha256": "bbfa3d0f98fd99b7455026987a0c013ccef5913d4760b39ee9bf5d1e7502de65",
+      "archiveGitBlob": "98adb7cbe1c947355c92ca7426f5331057ddbd24",
+      "batchBlob": "6c7d228879b77772e95b293a86f39b90f3dc7cb1",
+      "batchPath": "qa/final-sprite-completion/BATCH_48_HISTORICAL.json",
+      "byteLength": 13284,
+      "members": 6,
+      "routes": {
+        "back": {
+          "character": 2,
+          "palette": 0,
+          "characterSha256": "be7601c8342a4afbfaf49613e49b4e27ad5d1297bde25e50ee4472f48b649e46",
+          "paletteSha256": "11182bad87d288df84c8b7447e09257ad7ea219eceab98fd76014bfe987c645a",
+          "expectedFrameSha256": "450c7a4a8fb077631b456030a8a2cef8242602bf6ca45c2b4c6e5cd121097c62"
+        },
+        "shiny_back": {
+          "character": 2,
+          "palette": 1,
+          "characterSha256": "be7601c8342a4afbfaf49613e49b4e27ad5d1297bde25e50ee4472f48b649e46",
+          "paletteSha256": "2567a440ed0ff784a608ad096d7a3209827b4fe49284e09abafa39c8af09b9ae",
+          "expectedFrameSha256": "4bb142f4a1aab7108ff66431fdfc63e5376851bfe5a0c2ccd94662a99f6e7e1b"
+        },
+        "front": {
+          "character": 5,
+          "palette": 3,
+          "characterSha256": "29834a63a80987afb10cd1539db6ac99bffd129d4d9393c894a34305a655cabd",
+          "paletteSha256": "9d7a619e606342f83967b3e9a3f9503517fa9d50e313e700c434a7b3dd0c6f48",
+          "expectedFrameSha256": "369f363e1720beeb4afe4397759a861c5229d13e1812892473c70383a0aa86c8"
+        },
+        "shiny_front": {
+          "character": 5,
+          "palette": 4,
+          "characterSha256": "29834a63a80987afb10cd1539db6ac99bffd129d4d9393c894a34305a655cabd",
+          "paletteSha256": "dc086b59e8414ffb8543b98070084d853404de4d6082a75c85a01334f991f9b4",
+          "expectedFrameSha256": "df6a8d76f58e5f4efb75f260588302ebf1a9789a86a74744ba5342f699159e78"
+        }
+      },
+      "mode": "view_specific"
+    },
+    {
+      "artworkKey": "salazarus|pixelsha256:ebbc4b6babf8ea3bf9b742e3b9feab5004f45377370a03ec9a2a9fefb0085f0f",
+      "archiveSha256": "ab469eb05c89690356d123c7069736b86da1fdabff4c5be405f80c6e6b7f66c5",
+      "archiveGitBlob": "837cb7990f2915d23448f3e98811f0ee5ed0e06e",
+      "batchBlob": "57643de61f8019649b427cc1e89b92dfc39b4e5a",
+      "batchPath": "qa/final-sprite-completion/BATCH_49_HISTORICAL.json",
+      "byteLength": 13124,
+      "members": 4,
+      "routes": {
+        "back": {
+          "character": 2,
+          "palette": 0,
+          "characterSha256": "6a8555922e1508da8c12863e344053f5b47dd5a993f698c5498e6d8470e59420",
+          "paletteSha256": "56739546384cc4630bce4fd9dbcb5b4e763072fd1530f696ab5acf37766b9fe3",
+          "expectedFrameSha256": "72672f654f56a2b6c864e2b41c9ea80fedba61ee34ada730f0b81688c81540bf"
+        },
+        "shiny_back": {
+          "character": 2,
+          "palette": 1,
+          "characterSha256": "6a8555922e1508da8c12863e344053f5b47dd5a993f698c5498e6d8470e59420",
+          "paletteSha256": "8dd72955f92feb215a1bd9e682d6476ff3af8b4c99d0c52ff817ec029b5201e3",
+          "expectedFrameSha256": "9a9c11993df5067172db354d82ddc883b223f24a9b9873c702b03d8c4baabc10"
+        },
+        "front": {
+          "character": 3,
+          "palette": 0,
+          "characterSha256": "eb0bf599119e3bd2459c8331b457f511851c2776cd4cb8957203fe3586776f09",
+          "paletteSha256": "56739546384cc4630bce4fd9dbcb5b4e763072fd1530f696ab5acf37766b9fe3",
+          "expectedFrameSha256": "d51f66737960de6a7101a1e2ec85a9db4de0827e2f6d08aaa3b444b59f21d81b"
+        },
+        "shiny_front": {
+          "character": 3,
+          "palette": 1,
+          "characterSha256": "eb0bf599119e3bd2459c8331b457f511851c2776cd4cb8957203fe3586776f09",
+          "paletteSha256": "8dd72955f92feb215a1bd9e682d6476ff3af8b4c99d0c52ff817ec029b5201e3",
+          "expectedFrameSha256": "9c1ff171d159af8ebc85cc3b534a43028a2f6c4a98061c220977fec56d05acb1"
+        }
+      },
+      "mode": "shared_species_palette"
+    },
+    {
+      "artworkKey": "samurott-hisuian-mega|pixelsha256:006423d512604f59c26824bca38c5d30e3a555216b46b5b79db041586a8916e3",
+      "archiveSha256": "aa6713d902a23fdddcabb52feef57492ae8d68365113912510a2d65582ad1d75",
+      "archiveGitBlob": "ed6f61bcd34a59ad3cf88dd8058bcb60e8500df3",
+      "batchBlob": "57643de61f8019649b427cc1e89b92dfc39b4e5a",
+      "batchPath": "qa/final-sprite-completion/BATCH_49_HISTORICAL.json",
+      "byteLength": 13124,
+      "members": 4,
+      "routes": {
+        "back": {
+          "character": 2,
+          "palette": 0,
+          "characterSha256": "142a49952fc5cae8a293de4fb5add09372c966d35b923767aacb3943a85f967f",
+          "paletteSha256": "be2a7793c454d19c53dff4e53863da393b5805ae7d5e5c30eac5c642fdc1d6ef",
+          "expectedFrameSha256": "5de0f8444389403e9ad50da86dae00b141034ef54dad8417cac87d76293a8ea4"
+        },
+        "shiny_back": {
+          "character": 2,
+          "palette": 1,
+          "characterSha256": "142a49952fc5cae8a293de4fb5add09372c966d35b923767aacb3943a85f967f",
+          "paletteSha256": "afbf2d08fc8c9a47dc162ffc77c8a8fd274b077e5b8a7de0980af57d2a02a9bb",
+          "expectedFrameSha256": "018789260b41369478125a29ddf78736da9eec2b0084e86f8a64dcff2925bce3"
+        },
+        "front": {
+          "character": 3,
+          "palette": 0,
+          "characterSha256": "e797fa17eebb89ef10c55bf328d6a18c1f687fbb2bc54586097bdbcbd786932f",
+          "paletteSha256": "be2a7793c454d19c53dff4e53863da393b5805ae7d5e5c30eac5c642fdc1d6ef",
+          "expectedFrameSha256": "b0588de05834fd2ae20b9e75b8c9818f7eb96063d0c7d999c02013635695d881"
+        },
+        "shiny_front": {
+          "character": 3,
+          "palette": 1,
+          "characterSha256": "e797fa17eebb89ef10c55bf328d6a18c1f687fbb2bc54586097bdbcbd786932f",
+          "paletteSha256": "afbf2d08fc8c9a47dc162ffc77c8a8fd274b077e5b8a7de0980af57d2a02a9bb",
+          "expectedFrameSha256": "65184e980445c0885091e9ed99dd6cb406649179930a73a65e347a462cf7258b"
+        }
+      },
+      "mode": "shared_species_palette"
+    },
+    {
+      "artworkKey": "samurott-mega|pixelsha256:a7f695bc8fa7a3caf09e41182047e1ab058749bb54324e048c5f2bd9dc112f9f",
+      "archiveSha256": "884fb3a2767e04c191f27d41c679cc51299497d8b954af9a5482918cabc8f7ac",
+      "archiveGitBlob": "9342a80b3928bf715b4b8f24bcfeb7f30724fb80",
+      "batchBlob": "57643de61f8019649b427cc1e89b92dfc39b4e5a",
+      "batchPath": "qa/final-sprite-completion/BATCH_49_HISTORICAL.json",
+      "byteLength": 13124,
+      "members": 4,
+      "routes": {
+        "back": {
+          "character": 2,
+          "palette": 0,
+          "characterSha256": "cc00a86002bf9e42583eead5175516e2d6c9d2e023ef5bb34b90ad748d8e6036",
+          "paletteSha256": "71c3c3a70cfed0162a31b04f4dd6765461bc497363e1f57807f6f3816b200573",
+          "expectedFrameSha256": "578d40588b9b4d6f59fa895bdba6284d5dea3bfb37fefba018e1091fe090de05"
+        },
+        "shiny_back": {
+          "character": 2,
+          "palette": 1,
+          "characterSha256": "cc00a86002bf9e42583eead5175516e2d6c9d2e023ef5bb34b90ad748d8e6036",
+          "paletteSha256": "887e05d4826b0bdca3e25fb8525e0d7a84dda86a54c7070f22bf170119f991be",
+          "expectedFrameSha256": "5457dec47a7cb91c7c949a9cf76fa3da1cb34ef1f8925df093d25470bd266f2f"
+        },
+        "front": {
+          "character": 3,
+          "palette": 0,
+          "characterSha256": "579adbe02bcb94808bce991fc6188673e1172c8fa9c6a06cfeaf90e650ccdeea",
+          "paletteSha256": "71c3c3a70cfed0162a31b04f4dd6765461bc497363e1f57807f6f3816b200573",
+          "expectedFrameSha256": "375b6885b05a998a061ad2f52d9ae8978957ce6556b17092d76498ac58bf96f6"
+        },
+        "shiny_front": {
+          "character": 3,
+          "palette": 1,
+          "characterSha256": "579adbe02bcb94808bce991fc6188673e1172c8fa9c6a06cfeaf90e650ccdeea",
+          "paletteSha256": "887e05d4826b0bdca3e25fb8525e0d7a84dda86a54c7070f22bf170119f991be",
+          "expectedFrameSha256": "7e4e68c73ebaf2dba30c5bc900b5e81bbf7ed6c22609ea8e8d29e6d22bd07d93"
+        }
+      },
+      "mode": "shared_species_palette"
+    },
+    {
+      "artworkKey": "sandaconda-mega|pixelsha256:7cb28fbbd0088e7b0a33526c9e18500e513038f5dfdcefde8e5a03e7dfd07a92",
+      "archiveSha256": "2f58120487f02267b6ec30c443738894932e67771639039d5b9215f1aec9fd3c",
+      "archiveGitBlob": "8c0ee9714f02ce962b0eced40a2ea8b6c4a9b9af",
+      "batchBlob": "cb7be27e4100ffbb67ea7a238b9b7d284ed3be01",
+      "batchPath": "qa/final-sprite-completion/BATCH_50_HISTORICAL.json",
+      "byteLength": 13124,
+      "members": 4,
+      "routes": {
+        "back": {
+          "character": 2,
+          "palette": 0,
+          "characterSha256": "d700599a59985634c6ec804ea8846da70f7d754a43325c409650af680cfb2797",
+          "paletteSha256": "8610536088461178951403b0b0fddda4eced286571aad015dbd35a068d4c2e42",
+          "expectedFrameSha256": "210da82949a75572dfee4cf9813395b46b5d0aae8448d236799307ea1f9ab166"
+        },
+        "shiny_back": {
+          "character": 2,
+          "palette": 1,
+          "characterSha256": "d700599a59985634c6ec804ea8846da70f7d754a43325c409650af680cfb2797",
+          "paletteSha256": "7eb3412d1dcb33d466083c65316e037ad34f071f1e814ba8a0cb0d97b2ba0592",
+          "expectedFrameSha256": "59a5ce6c715a79ef3d2aa3b6cb75b80c528c427cb0d152cf3c376ff474847ff3"
+        },
+        "front": {
+          "character": 3,
+          "palette": 0,
+          "characterSha256": "b42005340602db45bc9ae0218c4fbe0d58d818855174917af5405f14b8049503",
+          "paletteSha256": "8610536088461178951403b0b0fddda4eced286571aad015dbd35a068d4c2e42",
+          "expectedFrameSha256": "b2afcb87351a7e467b6f7de25724d0bd298436c8d498c0229346c1a255747b41"
+        },
+        "shiny_front": {
+          "character": 3,
+          "palette": 1,
+          "characterSha256": "b42005340602db45bc9ae0218c4fbe0d58d818855174917af5405f14b8049503",
+          "paletteSha256": "7eb3412d1dcb33d466083c65316e037ad34f071f1e814ba8a0cb0d97b2ba0592",
+          "expectedFrameSha256": "d9e16a0acecb1034a4d4aa86ce391d8f09566b25589e3e9ed769362efdb98c78"
+        }
+      },
+      "mode": "shared_species_palette"
+    },
+    {
+      "artworkKey": "sandslash-alolan-mega|pixelsha256:67ecdde3cb308125d879d9210897768a47ee8995324f761e0272e4c75e81b68d",
+      "archiveSha256": "d9a7491a89d738159089f1bf075eed94b435909af57322091e22ef08efeaffd6",
+      "archiveGitBlob": "115dca9dd8452d3c637177586e61714c0f542d96",
+      "batchBlob": "cb7be27e4100ffbb67ea7a238b9b7d284ed3be01",
+      "batchPath": "qa/final-sprite-completion/BATCH_50_HISTORICAL.json",
+      "byteLength": 13124,
+      "members": 4,
+      "routes": {
+        "back": {
+          "character": 2,
+          "palette": 0,
+          "characterSha256": "7d2cf4a26c4cb754079c893fc6af17ae06ac17ea79dae1a771c2d362e300d4eb",
+          "paletteSha256": "0b7526ae360a5876db99bbb85576d8f44be76f3623ad34c6cd7dd680bde3aa12",
+          "expectedFrameSha256": "63766db81ae8d0600fbbd20d8d906bfc879a0cbf5d93339bcd6841ce9829f38a"
+        },
+        "shiny_back": {
+          "character": 2,
+          "palette": 1,
+          "characterSha256": "7d2cf4a26c4cb754079c893fc6af17ae06ac17ea79dae1a771c2d362e300d4eb",
+          "paletteSha256": "f9fb1715f2fd5dfa706b86ffdf8daf50788b668c30445af98e1f7a4c85a9c943",
+          "expectedFrameSha256": "61661d5a35c32d154d1e9d406787c2ed2193f266987f6fd6f8ff64e5a22150dd"
+        },
+        "front": {
+          "character": 3,
+          "palette": 0,
+          "characterSha256": "4402e0a96566aa59100465365ae98e07d0a0083b345237fdd2bd2e3e8db3b87f",
+          "paletteSha256": "0b7526ae360a5876db99bbb85576d8f44be76f3623ad34c6cd7dd680bde3aa12",
+          "expectedFrameSha256": "04f939aee94b26b550f9953c50e80c756b273d0fe923a0c986f8f90a1e239d52"
+        },
+        "shiny_front": {
+          "character": 3,
+          "palette": 1,
+          "characterSha256": "4402e0a96566aa59100465365ae98e07d0a0083b345237fdd2bd2e3e8db3b87f",
+          "paletteSha256": "f9fb1715f2fd5dfa706b86ffdf8daf50788b668c30445af98e1f7a4c85a9c943",
+          "expectedFrameSha256": "0aebbd6f3da4e93e6988f718fcfab15fab791fe130bddde92509834ae3d946f0"
+        }
+      },
+      "mode": "shared_species_palette"
+    },
+    {
+      "artworkKey": "sandslash-mega|pixelsha256:8e151f94ed0338a9cf497caf2a52be4c196f8454481811d020c7ce7f398c189e",
+      "archiveSha256": "e190a1423dbadb6901bcd58da0329853786e6a8505a569af2926554f411b4e58",
+      "archiveGitBlob": "6a33546382b63f4029a3349ebb481f9ef47e7c1a",
+      "batchBlob": "cb7be27e4100ffbb67ea7a238b9b7d284ed3be01",
+      "batchPath": "qa/final-sprite-completion/BATCH_50_HISTORICAL.json",
+      "byteLength": 13124,
+      "members": 4,
+      "routes": {
+        "back": {
+          "character": 2,
+          "palette": 0,
+          "characterSha256": "98179351d396606e81d885ebe035c1c14aaef93d0cd335957b1db0b772dccba6",
+          "paletteSha256": "76badb05158558fa789fe9539a625c281318cd7d0c7fffd9160853b723e2b1b3",
+          "expectedFrameSha256": "afcef3240789ac6ac0fba98d8e1bf5c7cb3ca7a2b553d08cfa91f7cdcd88fc51"
+        },
+        "shiny_back": {
+          "character": 2,
+          "palette": 1,
+          "characterSha256": "98179351d396606e81d885ebe035c1c14aaef93d0cd335957b1db0b772dccba6",
+          "paletteSha256": "c1856f11ed984575f73a0cfe84107b5f99dd96d6364bb456da185dd237461534",
+          "expectedFrameSha256": "4733db5edba36bc9965fa8481d1ceb383bb08df1633f849dad6b2cba6e9c13b6"
+        },
+        "front": {
+          "character": 3,
+          "palette": 0,
+          "characterSha256": "046ec5df2b33bd803c4161101250f647642eb488daf867434ed66146d4e014f7",
+          "paletteSha256": "76badb05158558fa789fe9539a625c281318cd7d0c7fffd9160853b723e2b1b3",
+          "expectedFrameSha256": "6bdea5779fcd3a535063251791cb2c8b6a6cf300119354b479b4934d0d57fe79"
+        },
+        "shiny_front": {
+          "character": 3,
+          "palette": 1,
+          "characterSha256": "046ec5df2b33bd803c4161101250f647642eb488daf867434ed66146d4e014f7",
+          "paletteSha256": "c1856f11ed984575f73a0cfe84107b5f99dd96d6364bb456da185dd237461534",
+          "expectedFrameSha256": "cfb40ba4f4e855e118e81368a423e1833f8c3f7ba339ad79d7c33fd860ac66c6"
+        }
+      },
+      "mode": "shared_species_palette"
+    },
+    {
+      "artworkKey": "scizor-redux|pixelsha256:f91beb456e05f37ee08d75b274f22b1b15f5dbc586db93e1bf2c5f47c70958f7",
+      "archiveSha256": "35bab064ccf5656392aec8eab4ed42adc67ec5d31383b43f9c997485ff45f7d3",
+      "archiveGitBlob": "293488fca3ab8608df7f5b673c41498bfd1c355e",
+      "batchBlob": "bc1041c60638347f894e0eca90ce449be90f82d6",
+      "batchPath": "qa/final-sprite-completion/BATCH_51_HISTORICAL.json",
+      "byteLength": 13124,
+      "members": 4,
+      "routes": {
+        "back": {
+          "character": 2,
+          "palette": 0,
+          "characterSha256": "010bb734ca69b4b800880ffb5b0c7c1c79b6a13eee69ddd7f9da07082802af80",
+          "paletteSha256": "050b7cb86734bfffd180925e021945aca3bfd5ec531cd2839fd3eb69d14ad77c",
+          "expectedFrameSha256": "8677e18c665de5aa11438c570b702c3ce15dee78fd2b171f899af7412fe47021"
+        },
+        "shiny_back": {
+          "character": 2,
+          "palette": 1,
+          "characterSha256": "010bb734ca69b4b800880ffb5b0c7c1c79b6a13eee69ddd7f9da07082802af80",
+          "paletteSha256": "d2ec5717764b0040d179d6764d37e5417100d589bc4337d00ee5e06eaae2667f",
+          "expectedFrameSha256": "74d600305263401cc29e7d59351db365b0c299b2c70be47c7e86187c7e314d70"
+        },
+        "front": {
+          "character": 3,
+          "palette": 0,
+          "characterSha256": "547d58427dedd9b5bbe5b0254368deaa03e207e4361b15e3c170d67661887c58",
+          "paletteSha256": "050b7cb86734bfffd180925e021945aca3bfd5ec531cd2839fd3eb69d14ad77c",
+          "expectedFrameSha256": "7713c9547d234e4ab87fc86262869a10610f50110627b95f009fd10db49c03b1"
+        },
+        "shiny_front": {
+          "character": 3,
+          "palette": 1,
+          "characterSha256": "547d58427dedd9b5bbe5b0254368deaa03e207e4361b15e3c170d67661887c58",
+          "paletteSha256": "d2ec5717764b0040d179d6764d37e5417100d589bc4337d00ee5e06eaae2667f",
+          "expectedFrameSha256": "46789ee4b0ac4f069a89325a0152483b9ce8960dead383b610c6154a4c6f94a1"
+        }
+      },
+      "mode": "shared_species_palette"
+    },
+    {
+      "artworkKey": "scizor-redux-mega|pixelsha256:a192488c3090117ec527116aa8ec1c63bf718d3ec45f138cc8914f6ae441e7f7",
+      "archiveSha256": "392de22fe3457535614117660c3725a5144c72447a0e151a5a8a433f2ecb0dd5",
+      "archiveGitBlob": "a73bce1648bcd5819a3253e802d14b607edb4286",
+      "batchBlob": "bc1041c60638347f894e0eca90ce449be90f82d6",
+      "batchPath": "qa/final-sprite-completion/BATCH_51_HISTORICAL.json",
+      "byteLength": 13124,
+      "members": 4,
+      "routes": {
+        "back": {
+          "character": 2,
+          "palette": 0,
+          "characterSha256": "8ad3149046c634501ab66a9d7e0d46438044be3683be9a21338b928593851190",
+          "paletteSha256": "6686248e35c07e340c043d91ec4b450f3c3aad2f4a75124c715945de7914d42f",
+          "expectedFrameSha256": "44b3070965f74abf2ec229a8e79227c8b36e4cdf77c30b9e674cdea828390282"
+        },
+        "shiny_back": {
+          "character": 2,
+          "palette": 1,
+          "characterSha256": "8ad3149046c634501ab66a9d7e0d46438044be3683be9a21338b928593851190",
+          "paletteSha256": "102e6b34418633644a7f48dc83fa6e528ba97ffbd5905a3e465098fade5bee59",
+          "expectedFrameSha256": "c6bbad6ead8963379f2d60a334c4341ec65e096085995598a6a06181c77d6da8"
+        },
+        "front": {
+          "character": 3,
+          "palette": 0,
+          "characterSha256": "4adb9b99778c40ded8105592b2ed2fd18722874930929461161f90761cce5d81",
+          "paletteSha256": "6686248e35c07e340c043d91ec4b450f3c3aad2f4a75124c715945de7914d42f",
+          "expectedFrameSha256": "c3abb9fbee800996e1576ac77e8bf9c29bf369603341eda10ef552f717338dea"
+        },
+        "shiny_front": {
+          "character": 3,
+          "palette": 1,
+          "characterSha256": "4adb9b99778c40ded8105592b2ed2fd18722874930929461161f90761cce5d81",
+          "paletteSha256": "102e6b34418633644a7f48dc83fa6e528ba97ffbd5905a3e465098fade5bee59",
+          "expectedFrameSha256": "06ca770fce16a16d417607ef945e4e2110fa11552b24137d753be27f9ba17af9"
+        }
+      },
+      "mode": "shared_species_palette"
+    },
+    {
+      "artworkKey": "scrafster|pixelsha256:205cf911d29a8ee64e7f5ef1bf29e0fa8970d4af0efac9e5b30b58850fcb5455",
+      "archiveSha256": "92f3d6134e03d393e73377136e8e0381cbaeec662fe918869d130b70ae4a53d8",
+      "archiveGitBlob": "60ad863de0b4d512a68e348ba169501d87f51088",
+      "batchBlob": "bc1041c60638347f894e0eca90ce449be90f82d6",
+      "batchPath": "qa/final-sprite-completion/BATCH_51_HISTORICAL.json",
+      "byteLength": 13124,
+      "members": 4,
+      "routes": {
+        "back": {
+          "character": 2,
+          "palette": 0,
+          "characterSha256": "270b58a9df73a997d2cac8ef38b912d0a4482713f7729e235db59f8761cc87e3",
+          "paletteSha256": "d63d8d066d3af867a33f655056c79ea5a3fdf109cf81d30c74d1268542f13b9f",
+          "expectedFrameSha256": "942788e868f7a9828eb193504ba362f31559677c24c08101b3eaf0d8fb692adc"
+        },
+        "shiny_back": {
+          "character": 2,
+          "palette": 1,
+          "characterSha256": "270b58a9df73a997d2cac8ef38b912d0a4482713f7729e235db59f8761cc87e3",
+          "paletteSha256": "7d31236bb2bf4b078376aed2a93aede7ad7a15e6eb299757f648f316b49f7098",
+          "expectedFrameSha256": "4707ed2bdf8a24254d3de982dd2afe449eefdea3157faf9c0d3b4263eb5f7a44"
+        },
+        "front": {
+          "character": 3,
+          "palette": 0,
+          "characterSha256": "cbef583b6aeef785184572142fbe76a41386d76676cfc03480e11b59904ac247",
+          "paletteSha256": "d63d8d066d3af867a33f655056c79ea5a3fdf109cf81d30c74d1268542f13b9f",
+          "expectedFrameSha256": "5829e7ad86e4f06deb4df5785d484fbb0931c4e8e7390b9fb0f9fd63ba8a8d8c"
+        },
+        "shiny_front": {
+          "character": 3,
+          "palette": 1,
+          "characterSha256": "cbef583b6aeef785184572142fbe76a41386d76676cfc03480e11b59904ac247",
+          "paletteSha256": "7d31236bb2bf4b078376aed2a93aede7ad7a15e6eb299757f648f316b49f7098",
+          "expectedFrameSha256": "b8342cc984147be43c7611b98a700c4805a5433d532a186965aef97041ee0145"
+        }
+      },
+      "mode": "shared_species_palette"
+    }
+  ],
+  "production": false
+}
