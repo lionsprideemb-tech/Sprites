@@ -1,0 +1,327 @@
+{
+  "schema": "mercury-r9-general-integer-scale-pixels-v1",
+  "screenBlob": "1058cd8fe01ca85adfca237ad1d186d62802f090",
+  "sourceRef": "45ed14104b70f9d02ac9cbea430d29394201f877",
+  "selfTests": 2,
+  "reports": [
+    {
+      "key": "escavalier-alternate-form-1|gitblob:459cf0f78607d3d9afb54afc623464a5621291d9",
+      "slot": "back",
+      "w": 138,
+      "h": 174,
+      "fs": [
+        3,
+        6
+      ],
+      "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/escavalier-alternate-form-1/back.png",
+      "gitBlob": "e048594ae325c8107df9d296ed45bdcc9a178cb9",
+      "batchBlob": "59d875b6e0e99e11cd4ef84f7840d625efd5348a",
+      "sourceSha256": "112b11bfd9eff665cc61f686555191fbd9018c2128ad7b7cbb186c1f852cf5cf",
+      "tests": [
+        {
+          "factor": 3,
+          "mismatches": 2829,
+          "exact": false
+        },
+        {
+          "factor": 6,
+          "mismatches": 4116,
+          "exact": false
+        }
+      ]
+    },
+    {
+      "key": "escavalier-alternate-form-1|gitblob:459cf0f78607d3d9afb54afc623464a5621291d9",
+      "slot": "shiny_back",
+      "w": 138,
+      "h": 174,
+      "fs": [
+        3,
+        6
+      ],
+      "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/escavalier-alternate-form-1/shiny_back.png",
+      "gitBlob": "092f34fc58cfae4e06717095318304f907f4d06c",
+      "batchBlob": "59d875b6e0e99e11cd4ef84f7840d625efd5348a",
+      "sourceSha256": "9f3bf5dea2b92f7df5f06f9831d1008c66a56bc2564852b2d87dd467e56dbcea",
+      "tests": [
+        {
+          "factor": 3,
+          "mismatches": 2829,
+          "exact": false
+        },
+        {
+          "factor": 6,
+          "mismatches": 4116,
+          "exact": false
+        }
+      ]
+    },
+    {
+      "key": "feraligatr-alternate-form-1|gitblob:a7cfbe510876ab0ad88c2181ae35344d347f7496",
+      "slot": "front",
+      "w": 154,
+      "h": 182,
+      "fs": [
+        7,
+        14
+      ],
+      "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/feraligatr-alternate-form-1/front.png",
+      "gitBlob": "a7cfbe510876ab0ad88c2181ae35344d347f7496",
+      "batchBlob": "59d875b6e0e99e11cd4ef84f7840d625efd5348a",
+      "sourceSha256": "10ed5ceb9810b3b0bd33cac45882e96138675479361b78ac5f77f4e0b603cfd6",
+      "tests": [
+        {
+          "factor": 7,
+          "mismatches": 9171,
+          "exact": false
+        },
+        {
+          "factor": 14,
+          "mismatches": 11574,
+          "exact": false
+        }
+      ]
+    },
+    {
+      "key": "feraligatr-alternate-form-1|gitblob:a7cfbe510876ab0ad88c2181ae35344d347f7496",
+      "slot": "shiny_front",
+      "w": 154,
+      "h": 182,
+      "fs": [
+        7,
+        14
+      ],
+      "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/feraligatr-alternate-form-1/shiny_front.png",
+      "gitBlob": "07a86586e186be237ea5f7f3f6db0a59d4782c6b",
+      "batchBlob": "59d875b6e0e99e11cd4ef84f7840d625efd5348a",
+      "sourceSha256": "f2f81b58443163f7006c4fe16986b0eb07ab415b25681f5b26b0f9250e74a16d",
+      "tests": [
+        {
+          "factor": 7,
+          "mismatches": 9171,
+          "exact": false
+        },
+        {
+          "factor": 14,
+          "mismatches": 11574,
+          "exact": false
+        }
+      ]
+    },
+    {
+      "key": "golem-bluetowel-alternate-forms-form-2|gitblob:615e298bd6c171c2c58a33f22794146b434b35f2",
+      "slot": "front",
+      "w": 126,
+      "h": 112,
+      "fs": [
+        7,
+        14
+      ],
+      "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/golem-bluetowel-alternate-forms-form-2/front.png",
+      "gitBlob": "615e298bd6c171c2c58a33f22794146b434b35f2",
+      "batchBlob": "1be878d421085a92748f414cca9bc9723a455bdd",
+      "sourceSha256": "c42486690316ae2dcd4de421892950b22f0bef367bf909454837ef48e9d7c06f",
+      "tests": [
+        {
+          "factor": 7,
+          "mismatches": 6518,
+          "exact": false
+        },
+        {
+          "factor": 14,
+          "mismatches": 8504,
+          "exact": false
+        }
+      ]
+    },
+    {
+      "key": "kommo-o-alternate-form-1|gitblob:6586252f759ab9a6e9204fb0b9f4ffea13bb26a7",
+      "slot": "front",
+      "w": 182,
+      "h": 154,
+      "fs": [
+        7,
+        14
+      ],
+      "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/kommo-o-alternate-form-1/front.png",
+      "gitBlob": "6586252f759ab9a6e9204fb0b9f4ffea13bb26a7",
+      "batchBlob": "bc2a8c8c4e9e9643c4a69e2f716a311099594b38",
+      "sourceSha256": "9b96f5d75e489a74733bf94fe75d13be4ddc79a5491f5c5d1fa8dae5c1174aaf",
+      "tests": [
+        {
+          "factor": 7,
+          "mismatches": 11115,
+          "exact": false
+        },
+        {
+          "factor": 14,
+          "mismatches": 14012,
+          "exact": false
+        }
+      ]
+    },
+    {
+      "key": "kommo-o-alternate-form-1|gitblob:6586252f759ab9a6e9204fb0b9f4ffea13bb26a7",
+      "slot": "shiny_front",
+      "w": 182,
+      "h": 154,
+      "fs": [
+        7,
+        14
+      ],
+      "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/kommo-o-alternate-form-1/shiny_front.png",
+      "gitBlob": "9e631b0a35baaf972c780cfd2cd44ee2ed8c94bb",
+      "batchBlob": "bc2a8c8c4e9e9643c4a69e2f716a311099594b38",
+      "sourceSha256": "94f1fbbb89d59350b25653a7e771bed6b3b7ede02dcb96e7cf2728d0900878bf",
+      "tests": [
+        {
+          "factor": 7,
+          "mismatches": 11140,
+          "exact": false
+        },
+        {
+          "factor": 14,
+          "mismatches": 14000,
+          "exact": false
+        }
+      ]
+    },
+    {
+      "key": "noivern-alternate-form-1|gitblob:702dccf95d3abb15f45f2daddf100533102a8b38",
+      "slot": "front",
+      "w": 192,
+      "h": 138,
+      "fs": [
+        3,
+        6
+      ],
+      "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/noivern-alternate-form-1/front.png",
+      "gitBlob": "702dccf95d3abb15f45f2daddf100533102a8b38",
+      "batchBlob": "5ee9f43b16fd8546a9b301ee64c00bdcc3d12cb7",
+      "sourceSha256": "7b54379c4842323eaf042c6760b2f61783615fd35c0d7e60a2b9422f63662a37",
+      "tests": [
+        {
+          "factor": 3,
+          "mismatches": 5065,
+          "exact": false
+        },
+        {
+          "factor": 6,
+          "mismatches": 7500,
+          "exact": false
+        }
+      ]
+    },
+    {
+      "key": "noivern-alternate-form-1|gitblob:702dccf95d3abb15f45f2daddf100533102a8b38",
+      "slot": "shiny_front",
+      "w": 192,
+      "h": 138,
+      "fs": [
+        3,
+        6
+      ],
+      "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/noivern-alternate-form-1/shiny_front.png",
+      "gitBlob": "03a15f194ca9567fd81941e9cdd194093472d603",
+      "batchBlob": "5ee9f43b16fd8546a9b301ee64c00bdcc3d12cb7",
+      "sourceSha256": "d3b1574afb50f4fddcbcc3d839be88716f1fa6d2030f3665d049ec2bbcabc9ac",
+      "tests": [
+        {
+          "factor": 3,
+          "mismatches": 5066,
+          "exact": false
+        },
+        {
+          "factor": 6,
+          "mismatches": 7508,
+          "exact": false
+        }
+      ]
+    },
+    {
+      "key": "politoed-alternate-form-1|gitblob:3557a9575049444d944fa200f3ace60c9f8a8ac4",
+      "slot": "back",
+      "w": 78,
+      "h": 114,
+      "fs": [
+        3,
+        6
+      ],
+      "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/politoed-alternate-form-1/back.png",
+      "gitBlob": "17977065e3e8a30f27203b8d5d0a6dbea3a4e418",
+      "batchBlob": "5ee9f43b16fd8546a9b301ee64c00bdcc3d12cb7",
+      "sourceSha256": "691ab1028da2d03581553f7df6a3710b060142e02e941c6b2bcc3720711b7a4e",
+      "tests": [
+        {
+          "factor": 3,
+          "mismatches": 1779,
+          "exact": false
+        },
+        {
+          "factor": 6,
+          "mismatches": 2702,
+          "exact": false
+        }
+      ]
+    },
+    {
+      "key": "politoed-alternate-form-1|gitblob:3557a9575049444d944fa200f3ace60c9f8a8ac4",
+      "slot": "front",
+      "w": 100,
+      "h": 110,
+      "fs": [
+        5,
+        10
+      ],
+      "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/politoed-alternate-form-1/front.png",
+      "gitBlob": "3557a9575049444d944fa200f3ace60c9f8a8ac4",
+      "batchBlob": "5ee9f43b16fd8546a9b301ee64c00bdcc3d12cb7",
+      "sourceSha256": "7ba9db73f7e6cbf87f85cea71e56e897a34c2be3c80231206346a5e4d82043e0",
+      "tests": [
+        {
+          "factor": 5,
+          "mismatches": 3656,
+          "exact": false
+        },
+        {
+          "factor": 10,
+          "mismatches": 4762,
+          "exact": false
+        }
+      ]
+    },
+    {
+      "key": "poliwhirl-alternate-form-1|gitblob:60399e19564ba579de33816276c973f6405440dd",
+      "slot": "front",
+      "w": 132,
+      "h": 88,
+      "fs": [
+        11,
+        22,
+        44
+      ],
+      "path": "DS_CUSTOM_LIBRARY/recovered/Reborn_Plates_Legacy/poliwhirl-alternate-form-1/front.png",
+      "gitBlob": "60399e19564ba579de33816276c973f6405440dd",
+      "batchBlob": "a8a93311ceb1e16b9021f591ec31839dbc784b5f",
+      "sourceSha256": "7dd1aa4400e9e656534f244f3862df11d5436740c683a77fbe1661279bccbcac",
+      "tests": [
+        {
+          "factor": 11,
+          "mismatches": 5584,
+          "exact": false
+        },
+        {
+          "factor": 22,
+          "mismatches": 7173,
+          "exact": false
+        },
+        {
+          "factor": 44,
+          "mismatches": 7672,
+          "exact": false
+        }
+      ]
+    }
+  ],
+  "production": false
+}
