@@ -1,0 +1,89 @@
+{
+  "schema": "mercury-r19-lossless-pc-host-v1",
+  "baseline": "48c2fbf5ae70fe40b4a55d5fc12d46d4901eb302",
+  "inputBlobs": {
+    "stages": [
+      "b75736b96b4db8fd4af989e14759d70dc9909907",
+      "c84bc42eb9f7d4996a072c8f7b1a2c9c1c9dc244",
+      "25874e0e9d4057e192fe9311ea198bcdb83e0bf2",
+      "c9cb60ad81b0b203b729a5e62f46db23733ac8da"
+    ],
+    "palettes": "44df3622141699c68999cd3ad602d31cc82052d8",
+    "authority": "a54bddf2f88402b869e0418ff8fce4ea7f5dd9f7"
+  },
+  "summary": {
+    "icons": 412,
+    "normalChecks": 421888,
+    "shadeChecks": 421888,
+    "opaque": 197092,
+    "transparent": 224796,
+    "opaqueBlack": 7167,
+    "results": {
+      "6": {
+        "windows": 407,
+        "activeNormalMax": 6,
+        "activeMixedMax": 6,
+        "normalPlusSelectedMax": 12,
+        "active16NormalPass": 407,
+        "active16MixedPass": 407,
+        "active5MixedPass": 38,
+        "unionNormalMin": 21,
+        "unionNormalMax": 84,
+        "unionMixedMin": 29,
+        "unionMixedMax": 84,
+        "indexed8NormalPass": 407,
+        "indexed8MixedPass": 407,
+        "exactDirectColorPass": 407
+      },
+      "30": {
+        "windows": 383,
+        "activeNormalMax": 30,
+        "activeMixedMax": 30,
+        "normalPlusSelectedMax": 60,
+        "active16NormalPass": 42,
+        "active16MixedPass": 0,
+        "active5MixedPass": 0,
+        "unionNormalMin": 106,
+        "unionNormalMax": 352,
+        "unionMixedMin": 132,
+        "unionMixedMax": 354,
+        "indexed8NormalPass": 94,
+        "indexed8MixedPass": 57,
+        "exactDirectColorPass": 383
+      },
+      "60": {
+        "windows": 353,
+        "activeNormalMax": 60,
+        "activeMixedMax": 60,
+        "normalPlusSelectedMax": 120,
+        "active16NormalPass": 0,
+        "active16MixedPass": 0,
+        "active5MixedPass": 0,
+        "unionNormalMin": 201,
+        "unionNormalMax": 624,
+        "unionMixedMin": 275,
+        "unionMixedMax": 641,
+        "indexed8NormalPass": 20,
+        "indexed8MixedPass": 0,
+        "exactDirectColorPass": 353
+      }
+    },
+    "eightChecks": 10868736,
+    "scrollFrames": 98,
+    "compositePixels": 4816896,
+    "canonicalChecks": 56448,
+    "directSpriteBytes": 2048,
+    "oneBoxDirectBytes": 61440,
+    "twoBoxDirectBytes": 122880,
+    "visibleBitmapBytes": 98304,
+    "hardware256SquareBitmapBytes": 131072,
+    "productionAllowed": false
+  },
+  "limitations": [
+    "Host pixel reference, not SDK or emulator execution. Direct RGB555 bit15 marks opaque even when RGB is black.",
+    "Contiguous windows use manifest ordering; not all possible parties or boxes. Active palette count assumes per-icon palette switching, not original fixed normal/selected bank routes.",
+    "Composite uses source 24px spacing but host-defined top-left anchor, draw order, rectangular clipping, selection schedule and scroll steps; canonical test is synthetic stock-palette overlay, not actual canonical icon graphics.",
+    "One 256x256 direct-color bitmap consumes 128 KiB, currently allocated main BG bank in entirety; requires screen redesign. Direct-color OBJ size exceeds existing 64 KiB for two boxes, one box leaves only 4 KiB for other OBJ assets.",
+    "No native allocations, artwork approvals or new art."
+  ]
+}
