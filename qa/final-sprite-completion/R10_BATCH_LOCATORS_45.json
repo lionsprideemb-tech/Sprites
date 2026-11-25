@@ -1,0 +1,1728 @@
+{
+  "start": 45,
+  "end": 60,
+  "totalGroups": 71,
+  "results": [
+    {
+      "artworkKey": "scyther-mega|pixelsha256:35ccf8168065c6e8ab6c73414c6fb373a10a43baca15dca8d03d40fecdbf605d",
+      "archiveSha256": "d554cc13079db12db79bd460a95548b7c836af63eebb2b29f684638087783e5e",
+      "archiveGitBlob": "3ee7a2e62590b7cdb773f79a52b293cf4539b5b0",
+      "batchBlob": "8183bc21efb0fe7afdacccd9551c36ae0f2b506e",
+      "batchPath": "qa/final-sprite-completion/BATCH_52_HISTORICAL.json",
+      "byteLength": 13124,
+      "members": 4,
+      "routes": {
+        "back": {
+          "character": 2,
+          "palette": 0,
+          "characterSha256": "8c2c5e0ed47445d94b709c681b02f0080440b1642457e22fddc83b33ffa3db3f",
+          "paletteSha256": "9fe0b1ccd8b2bc1f0de71e6e34b25b40b8a1b20a5282c77f35b6a3386d0eaf6e",
+          "expectedFrameSha256": "d07e365a459df8250ec679d68d6c7f1de6ce80300886ba13f9b6cae19a1d86dc"
+        },
+        "shiny_back": {
+          "character": 2,
+          "palette": 1,
+          "characterSha256": "8c2c5e0ed47445d94b709c681b02f0080440b1642457e22fddc83b33ffa3db3f",
+          "paletteSha256": "e4fd42f931ef1b76afd428abb3a7551d8760ede928bb9efee354fff49d102ae6",
+          "expectedFrameSha256": "5657be0739c40684189038371bf2a18abb5ba8138d03ba24d4fa73430dd57df9"
+        },
+        "front": {
+          "character": 3,
+          "palette": 0,
+          "characterSha256": "5848693581c6e312d158740c813be48cf989ee4cad0f867b7ef8c0be3f3f0217",
+          "paletteSha256": "9fe0b1ccd8b2bc1f0de71e6e34b25b40b8a1b20a5282c77f35b6a3386d0eaf6e",
+          "expectedFrameSha256": "f887b2d09b17ba1a599600e4c5c63be1a7586797cab380dcfa695c9c4e8f67f2"
+        },
+        "shiny_front": {
+          "character": 3,
+          "palette": 1,
+          "characterSha256": "5848693581c6e312d158740c813be48cf989ee4cad0f867b7ef8c0be3f3f0217",
+          "paletteSha256": "e4fd42f931ef1b76afd428abb3a7551d8760ede928bb9efee354fff49d102ae6",
+          "expectedFrameSha256": "14716194145826a805453f0107515967e2b9cfa15a3a7e0c79f0ba85d70df497"
+        }
+      },
+      "mode": "shared_species_palette"
+    },
+    {
+      "artworkKey": "scyther-redux|pixelsha256:a31a646dc054c0050e34b3e1bdce4eedb1998d5ba92faa6dd0e23d83fa08e7f3",
+      "archiveSha256": "df01480b34c2c3478978a8948b40be5e52752886f1d012b6ca45c4031f271303",
+      "archiveGitBlob": "b5928ff046c4ea9d4b11e2a736c73b59a74c99ab",
+      "batchBlob": "8183bc21efb0fe7afdacccd9551c36ae0f2b506e",
+      "batchPath": "qa/final-sprite-completion/BATCH_52_HISTORICAL.json",
+      "byteLength": 13124,
+      "members": 4,
+      "routes": {
+        "back": {
+          "character": 2,
+          "palette": 0,
+          "characterSha256": "06f0c5bdfe9052fcc9664c271f5ea28744973d915d178b971cad17a82de0d9b2",
+          "paletteSha256": "24efad0af1dbc48097076ad5bad29273a78ec1ea0e9d05e124d5f31c23b6a019",
+          "expectedFrameSha256": "92c23f7e80d367d7290f50121f37e0ea33685e1a7749930e75dc60765198b180"
+        },
+        "shiny_back": {
+          "character": 2,
+          "palette": 1,
+          "characterSha256": "06f0c5bdfe9052fcc9664c271f5ea28744973d915d178b971cad17a82de0d9b2",
+          "paletteSha256": "91315f18b5a16857697d23ff99b21df1ccba046163ba49516e3c1a41626e963b",
+          "expectedFrameSha256": "4013be07c139b385cf589f9dbc98f9453f9e87ef8bd8ad98554dbe3f8387b398"
+        },
+        "front": {
+          "character": 3,
+          "palette": 0,
+          "characterSha256": "52342d2acffd22875974b3392985a1a7fa2c6840905f6cf4e4d7a9ba77ce6243",
+          "paletteSha256": "24efad0af1dbc48097076ad5bad29273a78ec1ea0e9d05e124d5f31c23b6a019",
+          "expectedFrameSha256": "d61273cc1125ef331609f22020100a5c045345ac812849fd40b292b32614db80"
+        },
+        "shiny_front": {
+          "character": 3,
+          "palette": 1,
+          "characterSha256": "52342d2acffd22875974b3392985a1a7fa2c6840905f6cf4e4d7a9ba77ce6243",
+          "paletteSha256": "91315f18b5a16857697d23ff99b21df1ccba046163ba49516e3c1a41626e963b",
+          "expectedFrameSha256": "5bce9d114962049be55aee2e1827bed8ae5d8a54d6d0fca17274e64af96c4fc7"
+        }
+      },
+      "mode": "shared_species_palette"
+    },
+    {
+      "artworkKey": "scyther-redux-mega|pixelsha256:bb86cc2e756dbd2169bc9a419960008bf1c35119427f08f74f61e4bbe31ecf6a",
+      "archiveSha256": "47cd566b7ca76cf9bb77f015d3aefa9960cb4ac93cd508ec7f6ba01dc35e4b59",
+      "archiveGitBlob": "15bf64d29cd8c3d91e8e351396845512777f643c",
+      "batchBlob": "8183bc21efb0fe7afdacccd9551c36ae0f2b506e",
+      "batchPath": "qa/final-sprite-completion/BATCH_52_HISTORICAL.json",
+      "byteLength": 13124,
+      "members": 4,
+      "routes": {
+        "back": {
+          "character": 2,
+          "palette": 0,
+          "characterSha256": "71ef1902cf71b3509098fc344c3a6f4571378d4a876514cc81337f9c73a1d7b6",
+          "paletteSha256": "2438ae50ce3c2f7820fe62971e69020efcefa44da39a406ba54bc65250ab848a",
+          "expectedFrameSha256": "2a059ef70e72815ed9239ebc8122fe7fcc71498a831b44c4460746b499f5dea1"
+        },
+        "shiny_back": {
+          "character": 2,
+          "palette": 1,
+          "characterSha256": "71ef1902cf71b3509098fc344c3a6f4571378d4a876514cc81337f9c73a1d7b6",
+          "paletteSha256": "5e1da572d49d9c174f5abd892c435c97d7c2bb849ef4d1f8bd321a180abacd22",
+          "expectedFrameSha256": "d378dd045202b1f4ba1f5ae34b1d825abffc89acd0152f4e9e25134825ea28c9"
+        },
+        "front": {
+          "character": 3,
+          "palette": 0,
+          "characterSha256": "3f0963f33840eb363c5e9954809af7ee0fb5a70c64915b15414c09505643a13b",
+          "paletteSha256": "2438ae50ce3c2f7820fe62971e69020efcefa44da39a406ba54bc65250ab848a",
+          "expectedFrameSha256": "22ba376c46cb0ad087c32aa7e3cb1f683eea58b04843ba57b7053bd30c783613"
+        },
+        "shiny_front": {
+          "character": 3,
+          "palette": 1,
+          "characterSha256": "3f0963f33840eb363c5e9954809af7ee0fb5a70c64915b15414c09505643a13b",
+          "paletteSha256": "5e1da572d49d9c174f5abd892c435c97d7c2bb849ef4d1f8bd321a180abacd22",
+          "expectedFrameSha256": "f57bf869d312bf7bbe2adde6fd8d302fdab2ec0821398b124cad95292f7f766e"
+        }
+      },
+      "mode": "shared_species_palette"
+    },
+    {
+      "artworkKey": "seel-redux|pixelsha256:8a92090c806206c72897d640f566aa9054306afbfa9a70f85c418f1f43ecff29",
+      "archiveSha256": "4694e856a248c4c04b7e0943c38a2a0d392598f45efac45b57e0f865bc1f6a8a",
+      "archiveGitBlob": "dc13f1a18dcd08818166e2638a18921bd0c68c04",
+      "batchBlob": "9ca6c55b46d680a03b2c67ce56832ebe7fdc3701",
+      "batchPath": "qa/final-sprite-completion/BATCH_53_HISTORICAL.json",
+      "byteLength": 13124,
+      "members": 4,
+      "routes": {
+        "back": {
+          "character": 2,
+          "palette": 0,
+          "characterSha256": "af75ce815d17fc4e6965e750e251ec7301a1a1c15ed414e8b66644f74b5ca747",
+          "paletteSha256": "43b1fefd4748a68abbe50b46902b36d2d57107783c52f274a9bdc39cbae1114e",
+          "expectedFrameSha256": "f0b3a84ef10e23697436609003a7f8ffa5d18b825120ebb5b94dd5abd014eccd"
+        },
+        "shiny_back": {
+          "character": 2,
+          "palette": 1,
+          "characterSha256": "af75ce815d17fc4e6965e750e251ec7301a1a1c15ed414e8b66644f74b5ca747",
+          "paletteSha256": "77253a95dc0b3a7c4c0a5a5aedb93474d56c8fcbcdc726d3f2f10aaa117e1e93",
+          "expectedFrameSha256": "f4849cacf9475a8920261151d6f1cfee32ff1881c979d110e390ecbcf17a9f2c"
+        },
+        "front": {
+          "character": 3,
+          "palette": 0,
+          "characterSha256": "cf0441a0900967da21c7018d491bba35cb227bd119431fa8eea6919f0b3efad1",
+          "paletteSha256": "43b1fefd4748a68abbe50b46902b36d2d57107783c52f274a9bdc39cbae1114e",
+          "expectedFrameSha256": "5fad98c2cac6d4df390bb9e369b2d5a3b856b9cf0d1441637400c4f68ed34db1"
+        },
+        "shiny_front": {
+          "character": 3,
+          "palette": 1,
+          "characterSha256": "cf0441a0900967da21c7018d491bba35cb227bd119431fa8eea6919f0b3efad1",
+          "paletteSha256": "77253a95dc0b3a7c4c0a5a5aedb93474d56c8fcbcdc726d3f2f10aaa117e1e93",
+          "expectedFrameSha256": "6d9e001be1ee5c61e38302260026fd3c3e95c43f958ae6573508056342d07921"
+        }
+      },
+      "mode": "shared_species_palette"
+    },
+    {
+      "artworkKey": "seerkat|pixelsha256:3ce08b75e96a36450770d63c11e51a1792d07c0e931b8239fb6890e5126805f3",
+      "archiveSha256": "8f1bc5a0f0474d03eddb07b87d72e7e5799edf19aceb704a0f2628ea318d0a91",
+      "archiveGitBlob": "6a93a01793c20e1cc227ed0fc5540f2da46f3d9f",
+      "batchBlob": "9ca6c55b46d680a03b2c67ce56832ebe7fdc3701",
+      "batchPath": "qa/final-sprite-completion/BATCH_53_HISTORICAL.json",
+      "byteLength": 13124,
+      "members": 4,
+      "routes": {
+        "back": {
+          "character": 2,
+          "palette": 0,
+          "characterSha256": "abd5517c5dc831e6bf336fc46dd9de1ba36b89fedc64b271db1e67b8a01a9c6d",
+          "paletteSha256": "665145f5aac03f9c4b0ecfec71f36a5e483b7d09a2e6fc82047331e816e0aa3d",
+          "expectedFrameSha256": "6caff0c5af130f6fb2f2aefcd2119108dfcccfc0b9abdb0e1de20e794cd6656c"
+        },
+        "shiny_back": {
+          "character": 2,
+          "palette": 1,
+          "characterSha256": "abd5517c5dc831e6bf336fc46dd9de1ba36b89fedc64b271db1e67b8a01a9c6d",
+          "paletteSha256": "afcb3985d7b83403e8fece2965ad32637fc0eaf9d2863ef8274b3d9589a9db74",
+          "expectedFrameSha256": "c557f7f0c64a582ac5494f092fc9bc8720d5f94dd50dba8e8e321acca171c3dd"
+        },
+        "front": {
+          "character": 3,
+          "palette": 0,
+          "characterSha256": "676561ca7c420021a876f51cb3710649ae534515670ecf1554516c83aa74c450",
+          "paletteSha256": "665145f5aac03f9c4b0ecfec71f36a5e483b7d09a2e6fc82047331e816e0aa3d",
+          "expectedFrameSha256": "67eb498e806460f70172f5529de00a0ace3d59b4153ab38466dc6b2317f05135"
+        },
+        "shiny_front": {
+          "character": 3,
+          "palette": 1,
+          "characterSha256": "676561ca7c420021a876f51cb3710649ae534515670ecf1554516c83aa74c450",
+          "paletteSha256": "afcb3985d7b83403e8fece2965ad32637fc0eaf9d2863ef8274b3d9589a9db74",
+          "expectedFrameSha256": "43e658f3a58e868bb042523737596abc4b841637c371f18e2d1fa38afcdccca0"
+        }
+      },
+      "mode": "shared_species_palette"
+    },
+    {
+      "artworkKey": "selenumbra|pixelsha256:c1ae8ad38f2ec4b6e36b86b7713e0f8d460e943eb4730159e4ed46e04b86a5d2",
+      "archiveSha256": "14635fa8b955982428238ccd8de046e47205ec2067f5603774e4bfb1080cdf78",
+      "archiveGitBlob": "58cffb12fb42e7130cf47aa4f9244a4a93cb9119",
+      "batchBlob": "9ca6c55b46d680a03b2c67ce56832ebe7fdc3701",
+      "batchPath": "qa/final-sprite-completion/BATCH_53_HISTORICAL.json",
+      "byteLength": 13124,
+      "members": 4,
+      "routes": {
+        "back": {
+          "character": 2,
+          "palette": 0,
+          "characterSha256": "6071e68d093e513b8e0dcf5b368fc63385604eae664267dab59cffa5812779de",
+          "paletteSha256": "81425be4b07b88d3fddddf35c16cbedc9807740f63fd8f42e125fa06c02d0207",
+          "expectedFrameSha256": "3cf9a838c4b436a02684f752148d27b1372b16cc1fa09a1cb26b539bf0e3400a"
+        },
+        "shiny_back": {
+          "character": 2,
+          "palette": 1,
+          "characterSha256": "6071e68d093e513b8e0dcf5b368fc63385604eae664267dab59cffa5812779de",
+          "paletteSha256": "e6e877c2f3f5b21f07004ac2d3ba667b34872a61011dcef635971b70e53e28c0",
+          "expectedFrameSha256": "fe2602248854938d4a1e93df50470b0313e43638945c1fd5fd1e8216b84f5f37"
+        },
+        "front": {
+          "character": 3,
+          "palette": 0,
+          "characterSha256": "54c0ab4606743d77ce399f12a62d818bbc166f168e8ad4f7a78a9eeb5231597e",
+          "paletteSha256": "81425be4b07b88d3fddddf35c16cbedc9807740f63fd8f42e125fa06c02d0207",
+          "expectedFrameSha256": "b872ccb8701fb4fc1c8548d10ada78a379923a6694fdca3d2ffcf37ad58d33b1"
+        },
+        "shiny_front": {
+          "character": 3,
+          "palette": 1,
+          "characterSha256": "54c0ab4606743d77ce399f12a62d818bbc166f168e8ad4f7a78a9eeb5231597e",
+          "paletteSha256": "e6e877c2f3f5b21f07004ac2d3ba667b34872a61011dcef635971b70e53e28c0",
+          "expectedFrameSha256": "97b162e75391ac0d688f2b61dbabbf396ceb9f2493bd2b2f99a502d6063174e4"
+        }
+      },
+      "mode": "shared_species_palette"
+    },
+    {
+      "artworkKey": "serperior-mega|pixelsha256:e025bbb312bde3106429e3de375824a38195f1bed8591b26800af4f5090e371d",
+      "archiveSha256": "ccf96c4b218ff704ea7269fdca1842c9d2cf98d867a27bce6490780ea9f2a5c0",
+      "archiveGitBlob": "45f697c3967f1db94667337ebbb8df36f46211aa",
+      "batchBlob": "d408d68a0ca116812b1ad8f7ba20375e65424824",
+      "batchPath": "qa/final-sprite-completion/BATCH_55_HISTORICAL.json",
+      "byteLength": 13124,
+      "members": 4,
+      "routes": {
+        "back": {
+          "character": 2,
+          "palette": 0,
+          "characterSha256": "6ab1e85639a4bb7ec73e6cf8443c9e5f9d3641e3ee943c16a1cc0f30467b7c3e",
+          "paletteSha256": "d5af1b079a14928789ecbaf6558666244987e6dd9c2b832359ad095fff409a2d",
+          "expectedFrameSha256": "5363771fee8aab5810503654fb1f115ba0983ed96408870142027cd4b7889e6b"
+        },
+        "shiny_back": {
+          "character": 2,
+          "palette": 1,
+          "characterSha256": "6ab1e85639a4bb7ec73e6cf8443c9e5f9d3641e3ee943c16a1cc0f30467b7c3e",
+          "paletteSha256": "112f016f5b4c62a368122fcf8f6df5e9eb1c7c00af8de37101a8cb5fb9d8a7ea",
+          "expectedFrameSha256": "1f9d7be3c5cb3611812eb8b03ebd74874923c809a9883723a3e3d013def7e143"
+        },
+        "front": {
+          "character": 3,
+          "palette": 0,
+          "characterSha256": "abadbb505b6ea9b0ef2d72c0c63641e260333980ee96ac1f32a942b93ed7a10e",
+          "paletteSha256": "d5af1b079a14928789ecbaf6558666244987e6dd9c2b832359ad095fff409a2d",
+          "expectedFrameSha256": "23ab8e0a17f290ce75b91f7560cae10008160b700f07cf0ca91233766d59caf3"
+        },
+        "shiny_front": {
+          "character": 3,
+          "palette": 1,
+          "characterSha256": "abadbb505b6ea9b0ef2d72c0c63641e260333980ee96ac1f32a942b93ed7a10e",
+          "paletteSha256": "112f016f5b4c62a368122fcf8f6df5e9eb1c7c00af8de37101a8cb5fb9d8a7ea",
+          "expectedFrameSha256": "0678986a5e9c08f0197581d4df716c64133a2c6aad9d2aa8bfe2c04dd02438ee"
+        }
+      },
+      "mode": "shared_species_palette"
+    },
+    {
+      "artworkKey": "shedinja-mega|pixelsha256:36edfa8d8b8fc971f339ca5c7ec0e344634880672a5ca2ed8f34b409368e37f6",
+      "archiveSha256": "4381b1ef6524220a59ea728d1bbef9dce07a81598d43263605e12b0515b2895b",
+      "archiveGitBlob": "5e269ae55460e1b5f0b756eb525b385b551d5578",
+      "batchBlob": "d408d68a0ca116812b1ad8f7ba20375e65424824",
+      "batchPath": "qa/final-sprite-completion/BATCH_55_HISTORICAL.json",
+      "byteLength": 13124,
+      "members": 4,
+      "routes": {
+        "back": {
+          "character": 2,
+          "palette": 0,
+          "characterSha256": "f5ec829e340161ccb8687229232c1c89fe81ac9f20b0eadd0242bb9e3cc68e8e",
+          "paletteSha256": "6c2591773d0f4b2940896b61ae01da319b8174a9b1f96587338256c55f4c9acb",
+          "expectedFrameSha256": "ba4fbfff35164e326f3b0b944af8336cf50ae5af5d363ad26a989f49b3ff4bb7"
+        },
+        "shiny_back": {
+          "character": 2,
+          "palette": 1,
+          "characterSha256": "f5ec829e340161ccb8687229232c1c89fe81ac9f20b0eadd0242bb9e3cc68e8e",
+          "paletteSha256": "a41a2fd1565b92db18766a8b52164710b7e48b5d95b636c765ae880299666079",
+          "expectedFrameSha256": "7e223e469e45c1d675107119cd7d40ee485e841b785154aa27e55a488da414b9"
+        },
+        "front": {
+          "character": 3,
+          "palette": 0,
+          "characterSha256": "f352a99842bdf5da6832f90f7f0f0d55a4bc30239eadce195dbbc1b99b2fbb91",
+          "paletteSha256": "6c2591773d0f4b2940896b61ae01da319b8174a9b1f96587338256c55f4c9acb",
+          "expectedFrameSha256": "f4b2d2371b08f5946d8975428c36e1e35c80633953664db61bf65db4b7846ca2"
+        },
+        "shiny_front": {
+          "character": 3,
+          "palette": 1,
+          "characterSha256": "f352a99842bdf5da6832f90f7f0f0d55a4bc30239eadce195dbbc1b99b2fbb91",
+          "paletteSha256": "a41a2fd1565b92db18766a8b52164710b7e48b5d95b636c765ae880299666079",
+          "expectedFrameSha256": "eb75d87523edb11b6020ca1b891dcc5b97e82e988152e3e8b5c3fac33afd665d"
+        }
+      },
+      "mode": "shared_species_palette"
+    },
+    {
+      "artworkKey": "shinx-redux|pixelsha256:84a6880e3381a1e49698149e8eb56b21048ef5058c9f0605bc305fe66ae67c80",
+      "archiveSha256": "eb88ac22bc2b2088b0d0324299aab6138c09f09311f94df43c3694d84fbfa0ed",
+      "archiveGitBlob": "494df51d5a9eb9a6d903b92926a59bc68430d682",
+      "batchBlob": "d408d68a0ca116812b1ad8f7ba20375e65424824",
+      "batchPath": "qa/final-sprite-completion/BATCH_55_HISTORICAL.json",
+      "byteLength": 13124,
+      "members": 4,
+      "routes": {
+        "back": {
+          "character": 2,
+          "palette": 0,
+          "characterSha256": "93751b1d080b01358edce43e9fdf0438855157b669858fd71581cc1506b10881",
+          "paletteSha256": "e53697b021c5c4ebdcebc175b26d40e6e5924d3566a8622d4b236fbfd5e3b408",
+          "expectedFrameSha256": "9fe09a81f4f4295eb50303d9a67d024a19928e42c8007c59bae7b218294be730"
+        },
+        "shiny_back": {
+          "character": 2,
+          "palette": 1,
+          "characterSha256": "93751b1d080b01358edce43e9fdf0438855157b669858fd71581cc1506b10881",
+          "paletteSha256": "54b3be43933af43ac1a1dd2e90b40636a9ba957a4fca914b08b50e9fe20d86fd",
+          "expectedFrameSha256": "d7229eeae5cd0c2a0f55da27c223fa3d3c5b1d560742b9e80ce2c9150b8e4064"
+        },
+        "front": {
+          "character": 3,
+          "palette": 0,
+          "characterSha256": "ec3d8d1cc770c8d28fd3848363c34f9ef5e9b52a389279df6a87679b4d8897d1",
+          "paletteSha256": "e53697b021c5c4ebdcebc175b26d40e6e5924d3566a8622d4b236fbfd5e3b408",
+          "expectedFrameSha256": "9a7eb4a1694feedf4339f3b4de912d31dfe38123343954e639a1298e7f8ee7d6"
+        },
+        "shiny_front": {
+          "character": 3,
+          "palette": 1,
+          "characterSha256": "ec3d8d1cc770c8d28fd3848363c34f9ef5e9b52a389279df6a87679b4d8897d1",
+          "paletteSha256": "54b3be43933af43ac1a1dd2e90b40636a9ba957a4fca914b08b50e9fe20d86fd",
+          "expectedFrameSha256": "e37cc58055878a170bfce0f276e4382e055bb77d43427277a73d8df0d73b1c56"
+        }
+      },
+      "mode": "shared_species_palette"
+    },
+    {
+      "artworkKey": "shuckle-mega|pixelsha256:b7ca32df9c5d4999bc88a355695a169880a5cb0e293f0504ac93d0260cf68b19",
+      "archiveSha256": "be3455811e3e68e49e0ed3256feb9b5b4af656aec241751c9e04442a49f9e478",
+      "archiveGitBlob": "5ae354a17ce289a178b94495bad2309b7c0a9389",
+      "batchBlob": "9255f725958cae90c32d03f2da9572271278adb1",
+      "batchPath": "qa/final-sprite-completion/BATCH_56_HISTORICAL.json",
+      "byteLength": 13124,
+      "members": 4,
+      "routes": {
+        "back": {
+          "character": 2,
+          "palette": 0,
+          "characterSha256": "4711f117237bc703de2a71567631a057f1fe0b9252617e2b1a09e5f8feafb450",
+          "paletteSha256": "eb3fa3cd0fbf30d11869c1d766c95d426c9e2862d9caefe7516d319f911f3e74",
+          "expectedFrameSha256": "069961cb898a1cfe848554982a2335dbcbccc58b56e5a677f1c168584a974301"
+        },
+        "shiny_back": {
+          "character": 2,
+          "palette": 1,
+          "characterSha256": "4711f117237bc703de2a71567631a057f1fe0b9252617e2b1a09e5f8feafb450",
+          "paletteSha256": "ab3db82cd4a10f5e086e98780e9a22a548f225cf07df9ad1e0e3ec65f9dbb615",
+          "expectedFrameSha256": "ef78152f466671261ceed9313ee11a3ce1c42c2807484feb57de73c474a76c0a"
+        },
+        "front": {
+          "character": 3,
+          "palette": 0,
+          "characterSha256": "792b69eb2e5b3604194f36e2002916320efd58ef4780af18150b86f817a44e99",
+          "paletteSha256": "eb3fa3cd0fbf30d11869c1d766c95d426c9e2862d9caefe7516d319f911f3e74",
+          "expectedFrameSha256": "551b1689c265ae4b8f8a58544cc3374dac030301d8d40b5a7ad280544a7732b7"
+        },
+        "shiny_front": {
+          "character": 3,
+          "palette": 1,
+          "characterSha256": "792b69eb2e5b3604194f36e2002916320efd58ef4780af18150b86f817a44e99",
+          "paletteSha256": "ab3db82cd4a10f5e086e98780e9a22a548f225cf07df9ad1e0e3ec65f9dbb615",
+          "expectedFrameSha256": "d4d471236bc6c02e2448ff12681b3569669504b1a81d6fb35ef8c8f91c88c48c"
+        }
+      },
+      "mode": "shared_species_palette"
+    },
+    {
+      "artworkKey": "sinistea-redux|pixelsha256:98499e1ae6b05cac8628c46c6f8bb7f5d9a3509f16401654cd65f153f76d1ba0",
+      "archiveSha256": "893ae5f04094cbe53203df442cd675395f092ed45e072d15366812e49ffb39af",
+      "archiveGitBlob": "d7219ec96e6de26112e9185f6534828479190a6f",
+      "batchBlob": "9255f725958cae90c32d03f2da9572271278adb1",
+      "batchPath": "qa/final-sprite-completion/BATCH_56_HISTORICAL.json",
+      "byteLength": 13124,
+      "members": 4,
+      "routes": {
+        "back": {
+          "character": 2,
+          "palette": 0,
+          "characterSha256": "7cbc6319d00a7eb62baf873d4157fe6659b4591bf356b0a34c0bfaba6940948e",
+          "paletteSha256": "54fff82aba9a180aca4d8a31ef0027a96ed794c9c9c8b0d7c3e0428b9a1513a9",
+          "expectedFrameSha256": "920b20907fc4632265a9c94e4bbcb728b08ac33da13683f34f5217d083c92de4"
+        },
+        "shiny_back": {
+          "character": 2,
+          "palette": 1,
+          "characterSha256": "7cbc6319d00a7eb62baf873d4157fe6659b4591bf356b0a34c0bfaba6940948e",
+          "paletteSha256": "bbbcd345dc1a24ab834f7926cadba89c1ee18475927a6a8357df15e7a00b4e92",
+          "expectedFrameSha256": "39f3122a0bb6120bf4cce43fa8ba9b90ebd6013e282d12d0a916c95d3d80486c"
+        },
+        "front": {
+          "character": 3,
+          "palette": 0,
+          "characterSha256": "0a7c59851fd9547cdc6eec52f7871dfc829049215d20e192a91daa2b5308064a",
+          "paletteSha256": "54fff82aba9a180aca4d8a31ef0027a96ed794c9c9c8b0d7c3e0428b9a1513a9",
+          "expectedFrameSha256": "5d67944d45ae5ac3a995e37d46477af244f143a0328fd0a00f69472b24dc2c5f"
+        },
+        "shiny_front": {
+          "character": 3,
+          "palette": 1,
+          "characterSha256": "0a7c59851fd9547cdc6eec52f7871dfc829049215d20e192a91daa2b5308064a",
+          "paletteSha256": "bbbcd345dc1a24ab834f7926cadba89c1ee18475927a6a8357df15e7a00b4e92",
+          "expectedFrameSha256": "1b9118a9e294f66d72d59233904886a61dfebdc7dac957ecad567773e84d98c9"
+        }
+      },
+      "mode": "shared_species_palette"
+    },
+    {
+      "artworkKey": "skarmory-redux|pixelsha256:5d50a5d062e98e13018b7725f260703209f1e54c56ac3dabcb437dd0dc19ccfa",
+      "archiveSha256": "27941208a31a95369493a0995660b1977930b596aad31e1726f31515bcef145b",
+      "archiveGitBlob": "009abe8954485dbbcc8b9920c1d530badda1d86f",
+      "batchBlob": "9255f725958cae90c32d03f2da9572271278adb1",
+      "batchPath": "qa/final-sprite-completion/BATCH_56_HISTORICAL.json",
+      "byteLength": 13124,
+      "members": 4,
+      "routes": {
+        "back": {
+          "character": 2,
+          "palette": 0,
+          "characterSha256": "5e351e2526878978b7ea220de2bb50c28599f6c275682c94175fee70b9112251",
+          "paletteSha256": "55759f744363af902a3ce3bf3bc15a1e6ea0cf4a8f80c749bfdd9e7faf451e05",
+          "expectedFrameSha256": "640bbb5af903765f5ffb0e9be5ccb72b11b6a811131b88e514477a6ee36a58a4"
+        },
+        "shiny_back": {
+          "character": 2,
+          "palette": 1,
+          "characterSha256": "5e351e2526878978b7ea220de2bb50c28599f6c275682c94175fee70b9112251",
+          "paletteSha256": "cb6cfda0ff20c18ae289ce347365a9a12b3aaab167c9132ca57c11e906b239e3",
+          "expectedFrameSha256": "aec59aae3928bae30c660b82e62aa367d6a8df95e47361a7806b2a3da477c059"
+        },
+        "front": {
+          "character": 3,
+          "palette": 0,
+          "characterSha256": "b80f959f3d68dbfb3136b0c76866be5ebda7696d1f7c302e1fcab43cd7c62780",
+          "paletteSha256": "55759f744363af902a3ce3bf3bc15a1e6ea0cf4a8f80c749bfdd9e7faf451e05",
+          "expectedFrameSha256": "64934f6d6d43c2a4d6ae8e24c8edb1b98869fe4050872d60e14904cba5ab799c"
+        },
+        "shiny_front": {
+          "character": 3,
+          "palette": 1,
+          "characterSha256": "b80f959f3d68dbfb3136b0c76866be5ebda7696d1f7c302e1fcab43cd7c62780",
+          "paletteSha256": "cb6cfda0ff20c18ae289ce347365a9a12b3aaab167c9132ca57c11e906b239e3",
+          "expectedFrameSha256": "f696111e62854d1093539e550cf78d4f7a1c994bcaf3bf6674989765ef5df97e"
+        }
+      },
+      "mode": "shared_species_palette"
+    },
+    {
+      "artworkKey": "skeledirge-mega|pixelsha256:04882116d6fdea69c9cc648017e76370ce24fa37778e92cbf5c9285a4e929ddc",
+      "archiveSha256": "e2fba7e7235e62c2772879f6803824c5c6ac6f4131971438d60c5678f75f105f",
+      "archiveGitBlob": "b79f03ac07c84024606bf9a312a9fd4123ca506c",
+      "batchBlob": "f0c8fab1348c6983c622a908fb7c0ac3eb2853fa",
+      "batchPath": "qa/final-sprite-completion/BATCH_57_HISTORICAL.json",
+      "byteLength": 13124,
+      "members": 4,
+      "routes": {
+        "back": {
+          "character": 2,
+          "palette": 0,
+          "characterSha256": "de5799c8c72568b93a6cf5326c6611a33d8c98179523faf93ad5d071321db005",
+          "paletteSha256": "c331e38afe1c27642fed0e20f0a7c21d664294ecce2dee85b8a41764ec3a3cb2",
+          "expectedFrameSha256": "4e510dcd8c1e3d79813514710e01d7993f59e26c89acf4309291ec2da2478d06"
+        },
+        "shiny_back": {
+          "character": 2,
+          "palette": 1,
+          "characterSha256": "de5799c8c72568b93a6cf5326c6611a33d8c98179523faf93ad5d071321db005",
+          "paletteSha256": "7bef22f85fc51a05ae25da6bfeedb3d23a03bf6b2369bb024aecca3c8968a552",
+          "expectedFrameSha256": "e2ab823609432c282a88e856b2e8d90ea8bf05f24ba79fc1bd41bb5c01383df8"
+        },
+        "front": {
+          "character": 3,
+          "palette": 0,
+          "characterSha256": "7cc5f849bd241822ea6bb0a1f81a7bab24d48032f610a08ceec08aedaa8f6de6",
+          "paletteSha256": "c331e38afe1c27642fed0e20f0a7c21d664294ecce2dee85b8a41764ec3a3cb2",
+          "expectedFrameSha256": "7f99a746919b3897a4d61df810b334928182e2c07624fbcce4d0bdbdd3950504"
+        },
+        "shiny_front": {
+          "character": 3,
+          "palette": 1,
+          "characterSha256": "7cc5f849bd241822ea6bb0a1f81a7bab24d48032f610a08ceec08aedaa8f6de6",
+          "paletteSha256": "7bef22f85fc51a05ae25da6bfeedb3d23a03bf6b2369bb024aecca3c8968a552",
+          "expectedFrameSha256": "8d8c7f39d8db0ed6bab97d1686fe4c6471042437662fd0e38bc80132a7251046"
+        }
+      },
+      "mode": "shared_species_palette"
+    },
+    {
+      "artworkKey": "skulberus|pixelsha256:d2469fc50620951a6851c843c33d3cb832a3a2fb9ca70835ab4478f6f85453ec",
+      "archiveSha256": "60a66e9d0c5ca1a8e6b48455f390616286b66b710d9e1e386eee56b242d16f1b",
+      "archiveGitBlob": "f9e3d7545bc457cc316d530ba01659dd174f0509",
+      "batchBlob": "f0c8fab1348c6983c622a908fb7c0ac3eb2853fa",
+      "batchPath": "qa/final-sprite-completion/BATCH_57_HISTORICAL.json",
+      "byteLength": 13124,
+      "members": 4,
+      "routes": {
+        "back": {
+          "character": 2,
+          "palette": 0,
+          "characterSha256": "107c97b82b6f5119d51a550003c143af5e88bcd8f6794d4f3e6791a51412d707",
+          "paletteSha256": "ab3c1d07e19c4aaf1fd5454e55d28b5bbc505ae9d9eb817246324e9a614a3157",
+          "expectedFrameSha256": "1cfff802f6808dc499d602d5b466733de15b63debd311c7f2ff0092f43f9b16b"
+        },
+        "shiny_back": {
+          "character": 2,
+          "palette": 1,
+          "characterSha256": "107c97b82b6f5119d51a550003c143af5e88bcd8f6794d4f3e6791a51412d707",
+          "paletteSha256": "7a4fa31cd1b2aa6473519c3e129892c61338cc6559e176dd5e033c4fa5157097",
+          "expectedFrameSha256": "029d8e539cae532cc0f7f45579d67260f5862ad115c6ee219236625caa36a60d"
+        },
+        "front": {
+          "character": 3,
+          "palette": 0,
+          "characterSha256": "3b54e1bc2e22b895f8f8214c00887f287420854b1299539ed8947f9d5f0c3d6b",
+          "paletteSha256": "ab3c1d07e19c4aaf1fd5454e55d28b5bbc505ae9d9eb817246324e9a614a3157",
+          "expectedFrameSha256": "a80d5572794941cc0e3396c26458085551594caac813a0c479f7f6cf16d32f3c"
+        },
+        "shiny_front": {
+          "character": 3,
+          "palette": 1,
+          "characterSha256": "3b54e1bc2e22b895f8f8214c00887f287420854b1299539ed8947f9d5f0c3d6b",
+          "paletteSha256": "7a4fa31cd1b2aa6473519c3e129892c61338cc6559e176dd5e033c4fa5157097",
+          "expectedFrameSha256": "f6ea84a02ba9806ec3f60bb812556570d5e559f8de21865d8126a2478ac56212"
+        }
+      },
+      "mode": "shared_species_palette"
+    },
+    {
+      "artworkKey": "slaking-mega-ape-shift|pixelsha256:e120ffd80a924f387f2811ebea4111bc0de5820302c46e5c1124e5fb3e55a6c0",
+      "archiveSha256": "194a372166a2d74745f40b143d9929197b497f7cef214906a0c606fbcd5fe593",
+      "archiveGitBlob": "286a4c50d82585df0b7766b8ab1205164c4676e4",
+      "batchBlob": "f0c8fab1348c6983c622a908fb7c0ac3eb2853fa",
+      "batchPath": "qa/final-sprite-completion/BATCH_57_HISTORICAL.json",
+      "byteLength": 13124,
+      "members": 4,
+      "routes": {
+        "back": {
+          "character": 2,
+          "palette": 0,
+          "characterSha256": "d3904ce513e37f788011fad617bc4eec5d941d5540131ab4e2dda1e239438941",
+          "paletteSha256": "5eddb0931d21f1b37ecf9253a4449b02ca15eb02982fdd92ca7e790c8f9a9103",
+          "expectedFrameSha256": "4ee2b39724ab3aa0e2498057db295a4cf7ece52eeca76352c8ed14fe84d63092"
+        },
+        "shiny_back": {
+          "character": 2,
+          "palette": 1,
+          "characterSha256": "d3904ce513e37f788011fad617bc4eec5d941d5540131ab4e2dda1e239438941",
+          "paletteSha256": "c04f63fad9a0671387a21898c6ed5f37d2529a331e9a8d0aa0508c939b84fc8a",
+          "expectedFrameSha256": "d64cd9ecc5226f708364dd6457b5c485e3b5262f2603c0c96de7f1acc52bea48"
+        },
+        "front": {
+          "character": 3,
+          "palette": 0,
+          "characterSha256": "cb62d835300292544e4a91ad0d8a40c03d80659179ee78820abc64acffe68670",
+          "paletteSha256": "5eddb0931d21f1b37ecf9253a4449b02ca15eb02982fdd92ca7e790c8f9a9103",
+          "expectedFrameSha256": "2352e8d805255f14796a01bc50c29b6509f15283871b846a00cc6cc0af5398fc"
+        },
+        "shiny_front": {
+          "character": 3,
+          "palette": 1,
+          "characterSha256": "cb62d835300292544e4a91ad0d8a40c03d80659179ee78820abc64acffe68670",
+          "paletteSha256": "c04f63fad9a0671387a21898c6ed5f37d2529a331e9a8d0aa0508c939b84fc8a",
+          "expectedFrameSha256": "1d1086d25f6559be8c69ca9e53cf379b76c902cad3e28044ea93b2547b633dd6"
+        }
+      },
+      "mode": "shared_species_palette"
+    },
+    {
+      "artworkKey": "slowbro-mega-galarian|pixelsha256:0a9cee17a3e9cdfce0f9a71a13e6a480f7cbfdd56cf06d3822ae797c0e8e39c1",
+      "archiveSha256": "efcdbd0ee08d271df62cbfcefc10c82b3eb2766db046e5b8c2ec404ce7e019dc",
+      "archiveGitBlob": "ee139bb1913754c8de6e7513a5d58fc9d80e5db5",
+      "batchBlob": "6828e75d3e609e7b7c40df6d00e624df8f94c91b",
+      "batchPath": "qa/final-sprite-completion/BATCH_58_HISTORICAL.json",
+      "byteLength": 13124,
+      "members": 4,
+      "routes": {
+        "back": {
+          "character": 2,
+          "palette": 0,
+          "characterSha256": "104119e30148f3ab16a8a2fe879cc21e34b40a8cb5159e0ba0e70320b056a7a7",
+          "paletteSha256": "79793f510e74d7aafecce0c1345bf01264dab832dc7f28fb57abf5ce73a489c1",
+          "expectedFrameSha256": "a1d44348cbb620a052ee9de7b79845e6856f5c50f28f7371b88cb8f8cbacb850"
+        },
+        "shiny_back": {
+          "character": 2,
+          "palette": 1,
+          "characterSha256": "104119e30148f3ab16a8a2fe879cc21e34b40a8cb5159e0ba0e70320b056a7a7",
+          "paletteSha256": "3b3788a2030bd08fa95b098aeda3263acfc1955d15b8039e7939519e33aeedef",
+          "expectedFrameSha256": "8e544d9c9f16ed309edfe57e0b3a27cff394656ad04c90c5e2a6efad530caf18"
+        },
+        "front": {
+          "character": 3,
+          "palette": 0,
+          "characterSha256": "8b4b0f79830def54a2a4adee10bddee9adf1cbd0f184a778473a1fd323264be6",
+          "paletteSha256": "79793f510e74d7aafecce0c1345bf01264dab832dc7f28fb57abf5ce73a489c1",
+          "expectedFrameSha256": "b3e5f5f7299cda2e24f87fc17730346d86244e8f1e19d0daa98e80a084904e10"
+        },
+        "shiny_front": {
+          "character": 3,
+          "palette": 1,
+          "characterSha256": "8b4b0f79830def54a2a4adee10bddee9adf1cbd0f184a778473a1fd323264be6",
+          "paletteSha256": "3b3788a2030bd08fa95b098aeda3263acfc1955d15b8039e7939519e33aeedef",
+          "expectedFrameSha256": "bc3596429c1a816f14c82d5f2d7bf784f1befa358e2ac6ab99935aadde6b2a43"
+        }
+      },
+      "mode": "shared_species_palette"
+    },
+    {
+      "artworkKey": "slowking-mega|pixelsha256:a36b72298a3c28b27e666e581e69b60ea95f78a453fbff90b0d744f84ac6fd7c",
+      "archiveSha256": "c91bcaa233ca79602ac8a65640c8a2496047a664ba3e4ae28484824a866624ed",
+      "archiveGitBlob": "3a1f2f454a27e1f5f8a13c5c527e0cc0a2985d5e",
+      "batchBlob": "6828e75d3e609e7b7c40df6d00e624df8f94c91b",
+      "batchPath": "qa/final-sprite-completion/BATCH_58_HISTORICAL.json",
+      "byteLength": 13124,
+      "members": 4,
+      "routes": {
+        "back": {
+          "character": 2,
+          "palette": 0,
+          "characterSha256": "17b781fa116a9b599878a97e39f36d49fb257d114b82dd64b891a78701451fd5",
+          "paletteSha256": "0c566ff283d05b498f325f3e86178b935617ee868b480bbac236e75c01bea752",
+          "expectedFrameSha256": "ae040d46c2160cf91c0f5eb7e92d1ac87f2bd6ee95d88472d50e92f1f695dc57"
+        },
+        "shiny_back": {
+          "character": 2,
+          "palette": 1,
+          "characterSha256": "17b781fa116a9b599878a97e39f36d49fb257d114b82dd64b891a78701451fd5",
+          "paletteSha256": "5a3a7f71c0124aef50b715d78a82cfabf7c420d4c7c06152e2bff45438dfbb93",
+          "expectedFrameSha256": "3a6dfd6033acc76281b8b79267f702c462df514dafa86119439fc1abda7ab22a"
+        },
+        "front": {
+          "character": 3,
+          "palette": 0,
+          "characterSha256": "3bdc6d203ad3216a4cb32a9d4964ad532e0c742e141946c3a419a18e2bdb48b8",
+          "paletteSha256": "0c566ff283d05b498f325f3e86178b935617ee868b480bbac236e75c01bea752",
+          "expectedFrameSha256": "9ec5c46f509b7a6151401052acdf2937bec565c1943a57c84f9ea9bd2df170b3"
+        },
+        "shiny_front": {
+          "character": 3,
+          "palette": 1,
+          "characterSha256": "3bdc6d203ad3216a4cb32a9d4964ad532e0c742e141946c3a419a18e2bdb48b8",
+          "paletteSha256": "5a3a7f71c0124aef50b715d78a82cfabf7c420d4c7c06152e2bff45438dfbb93",
+          "expectedFrameSha256": "5dc8c6546c3ba97a1bb750199bf149f467d6ba70f46f98ae5fa305c7410e12a9"
+        }
+      },
+      "mode": "shared_species_palette"
+    },
+    {
+      "artworkKey": "slowking-mega-galarian|pixelsha256:35cfbfa7686b71e7b5834d806de9cc6ec238971b073c9a2b11ecf0b265860001",
+      "archiveSha256": "3695c289f57b6d91c905caafdc7e7ddec0877364fc20659ff525e5156aabb62f",
+      "archiveGitBlob": "7800ca3fb0d12d73e076ce7d2887f926c66eda1f",
+      "batchBlob": "6828e75d3e609e7b7c40df6d00e624df8f94c91b",
+      "batchPath": "qa/final-sprite-completion/BATCH_58_HISTORICAL.json",
+      "byteLength": 13124,
+      "members": 4,
+      "routes": {
+        "back": {
+          "character": 2,
+          "palette": 0,
+          "characterSha256": "c5a4b9e182e3c7855e99c4068fa78d04fcbb2fb9e131cdaa250b5bfcd456a5d0",
+          "paletteSha256": "2928c405375147faefe97a22ca68cdc97f0d44dec5fb214476016761aaedf4f4",
+          "expectedFrameSha256": "7ca6abbca2ce395e41aa0481a70010a11987dfac1ae5715ebb1f0678b6847a51"
+        },
+        "shiny_back": {
+          "character": 2,
+          "palette": 1,
+          "characterSha256": "c5a4b9e182e3c7855e99c4068fa78d04fcbb2fb9e131cdaa250b5bfcd456a5d0",
+          "paletteSha256": "cf6bdf0aff59a778d975dbcc6c4cfa6c6fe3af1e90c6f088d857853b91d5c376",
+          "expectedFrameSha256": "f0197dda8cb7c0cf9be249bc0c10b77d48982ce1244138dc4a2779e5c0579476"
+        },
+        "front": {
+          "character": 3,
+          "palette": 0,
+          "characterSha256": "f6f68bef2b2e0d4159307aacac3306677e7b9bd4e14af1bebc14a89d1490bc4e",
+          "paletteSha256": "2928c405375147faefe97a22ca68cdc97f0d44dec5fb214476016761aaedf4f4",
+          "expectedFrameSha256": "8398ca3f1c68a7c82086b28be0646c958371789c6a29973ef2aebd8b1c925c75"
+        },
+        "shiny_front": {
+          "character": 3,
+          "palette": 1,
+          "characterSha256": "f6f68bef2b2e0d4159307aacac3306677e7b9bd4e14af1bebc14a89d1490bc4e",
+          "paletteSha256": "cf6bdf0aff59a778d975dbcc6c4cfa6c6fe3af1e90c6f088d857853b91d5c376",
+          "expectedFrameSha256": "2cc0e1f1faf0ebfb0ea7225f180e5287e6ecedaf4d30a5de543a2061b66dfa9e"
+        }
+      },
+      "mode": "shared_species_palette"
+    },
+    {
+      "artworkKey": "sneasler-mega|pixelsha256:34760cf440a8a9dfb0c4b8e87d792e57c922666c61a0f551db5f936489b69c36",
+      "archiveSha256": "8b2a74c447976402ef259a55a3b21a3dea2d5277b84447e5036d8d0195ef16c5",
+      "archiveGitBlob": "e3df3a91ff9fcb5d64aa8691f21e71930772b0e8",
+      "batchBlob": "824f4c5d5f7ddbc3e69dffdc98110764834b8cb5",
+      "batchPath": "qa/final-sprite-completion/BATCH_59_HISTORICAL.json",
+      "byteLength": 13124,
+      "members": 4,
+      "routes": {
+        "back": {
+          "character": 2,
+          "palette": 0,
+          "characterSha256": "40f6ec07c1a66294fd1ffc3174a0fac237b2e652ad09d1e0423e5b317aa3fd1c",
+          "paletteSha256": "3675b06a236689bab16280bde61c871d62cc6418f1381fbc4be2b27450936fe3",
+          "expectedFrameSha256": "c16e114a467e56e51805e8f33d8300a0aa510181342a77b5a431f8d4e7d21df7"
+        },
+        "shiny_back": {
+          "character": 2,
+          "palette": 1,
+          "characterSha256": "40f6ec07c1a66294fd1ffc3174a0fac237b2e652ad09d1e0423e5b317aa3fd1c",
+          "paletteSha256": "fe4721acffe707c74e4618c6188ed751e718bb44ce8a11bb5c47db01cd7fe348",
+          "expectedFrameSha256": "9d3087113c95e67d490b67c9e3b3f68a48189c9b638752be8aebcce2ac5617e9"
+        },
+        "front": {
+          "character": 3,
+          "palette": 0,
+          "characterSha256": "f52419836f64e4e9dc835492c8c2405e7a6389c395733a62fc62c56ec0908539",
+          "paletteSha256": "3675b06a236689bab16280bde61c871d62cc6418f1381fbc4be2b27450936fe3",
+          "expectedFrameSha256": "0f751d4036925e71ef725c2e6193ca17b1aac63fa8cd2a51259790b3e2650639"
+        },
+        "shiny_front": {
+          "character": 3,
+          "palette": 1,
+          "characterSha256": "f52419836f64e4e9dc835492c8c2405e7a6389c395733a62fc62c56ec0908539",
+          "paletteSha256": "fe4721acffe707c74e4618c6188ed751e718bb44ce8a11bb5c47db01cd7fe348",
+          "expectedFrameSha256": "71401b0e0231cc677d6c0bcd970f7d2869e01aa439bc46468bf6b002e1eca4c4"
+        }
+      },
+      "mode": "shared_species_palette"
+    },
+    {
+      "artworkKey": "snorlax-mega|pixelsha256:d351aa89e6547ab0afd91817e2d3bffed8fc3ea8df3411a316deda213ba8fd42",
+      "archiveSha256": "7483df493ea823c695aec948ac4c9975ebbc88545c80746bbfde85147aff12ca",
+      "archiveGitBlob": "7cac86178bf09e1dace692dc7170d87294cd0203",
+      "batchBlob": "824f4c5d5f7ddbc3e69dffdc98110764834b8cb5",
+      "batchPath": "qa/final-sprite-completion/BATCH_59_HISTORICAL.json",
+      "byteLength": 13124,
+      "members": 4,
+      "routes": {
+        "back": {
+          "character": 2,
+          "palette": 0,
+          "characterSha256": "286bc5b4f30bc2eda3dc2090380df30a82e761b83065fc999063ce313ed52b48",
+          "paletteSha256": "e623dd7c1903acddb3fa5aaf4689221568ae9d95e3057722af392200cf04575f",
+          "expectedFrameSha256": "180d384275f78b4dce030e13eacda50eaf1b385896ec60f8fed6b99b9c374cc3"
+        },
+        "shiny_back": {
+          "character": 2,
+          "palette": 1,
+          "characterSha256": "286bc5b4f30bc2eda3dc2090380df30a82e761b83065fc999063ce313ed52b48",
+          "paletteSha256": "4b0e53e7db5df409459f5942f67054dafca9ab768552b9c884ab7745d11b6471",
+          "expectedFrameSha256": "e6bcc37591aea6bf1183445137bb02252700f39d65d6b82b9b41c5b2ef2b6660"
+        },
+        "front": {
+          "character": 3,
+          "palette": 0,
+          "characterSha256": "3c89ef0bd8f15db697e5008702b888ee4c6e0cdf90fcfefd8f7aa5af92412c8d",
+          "paletteSha256": "e623dd7c1903acddb3fa5aaf4689221568ae9d95e3057722af392200cf04575f",
+          "expectedFrameSha256": "cf2b5b9c50e5771598e5b0ee3257b69e94761d804e22211a9c3032b8f5fa54d0"
+        },
+        "shiny_front": {
+          "character": 3,
+          "palette": 1,
+          "characterSha256": "3c89ef0bd8f15db697e5008702b888ee4c6e0cdf90fcfefd8f7aa5af92412c8d",
+          "paletteSha256": "4b0e53e7db5df409459f5942f67054dafca9ab768552b9c884ab7745d11b6471",
+          "expectedFrameSha256": "196843c71b00ca011d83271a11dcbb544739feb6425260adc2cab7b96b2314f6"
+        }
+      },
+      "mode": "shared_species_palette"
+    },
+    {
+      "artworkKey": "snorlax-redux|pixelsha256:d791afbf9136d92582ae597be65e4e3972f1c8425fd1217c2eab60cf9d87bb53",
+      "archiveSha256": "c6a86577efbf49f0582fad34a27ff880e840f67963d1029dba16182e24fd097a",
+      "archiveGitBlob": "fc99b8fe084688ad66eda35877db4b07ccf4e4e3",
+      "batchBlob": "824f4c5d5f7ddbc3e69dffdc98110764834b8cb5",
+      "batchPath": "qa/final-sprite-completion/BATCH_59_HISTORICAL.json",
+      "byteLength": 13124,
+      "members": 4,
+      "routes": {
+        "back": {
+          "character": 2,
+          "palette": 0,
+          "characterSha256": "599167679bc88e68f2ef8aa1b27cedcd8814da5e99c95c7e5b2d5ea21646a573",
+          "paletteSha256": "5e0d03e9711bc434439fbcb3e3f8f2e792c229f76d41cc420a00278239bcbd00",
+          "expectedFrameSha256": "8c59f3de7a87085a95df1397ea93ae44c04aa6edebe605cc283283558ef5dc90"
+        },
+        "shiny_back": {
+          "character": 2,
+          "palette": 1,
+          "characterSha256": "599167679bc88e68f2ef8aa1b27cedcd8814da5e99c95c7e5b2d5ea21646a573",
+          "paletteSha256": "7580ec8aeb6ae3a6749046b67b88e9d2f00f8a56b4b3abe7b1c7979d198152bc",
+          "expectedFrameSha256": "4d8adb9b7ca16bce7e9dd5953ebd06e2f2aa1bf968ecb95b8046e9b2a20a11b1"
+        },
+        "front": {
+          "character": 3,
+          "palette": 0,
+          "characterSha256": "d7eef6cddb82f4243e26f5dff9cb2caf35be5b720612ba9c075e7526a9e197b0",
+          "paletteSha256": "5e0d03e9711bc434439fbcb3e3f8f2e792c229f76d41cc420a00278239bcbd00",
+          "expectedFrameSha256": "3fbdbafbb6f54dc7665f2392f0f10e257cdd9dd4f529948fda8a496dced97fbb"
+        },
+        "shiny_front": {
+          "character": 3,
+          "palette": 1,
+          "characterSha256": "d7eef6cddb82f4243e26f5dff9cb2caf35be5b720612ba9c075e7526a9e197b0",
+          "paletteSha256": "7580ec8aeb6ae3a6749046b67b88e9d2f00f8a56b4b3abe7b1c7979d198152bc",
+          "expectedFrameSha256": "08e10bac83207f17bef226b682ad4d01deb16ccb499b75fd2b41b1c4e9f5fa69"
+        }
+      },
+      "mode": "shared_species_palette"
+    },
+    {
+      "artworkKey": "snorlax-redux-mega|pixelsha256:cc2d3e199df60d36fa2ffd8379e910d1f08585e188fa57356da6df9f4bc7017e",
+      "archiveSha256": "bee32e811fa44e394dce712b116e9fd5e7e677bc69bd944e241de99eb36ed241",
+      "archiveGitBlob": "df9f515fa054c06a9079164f570c49159194e09d",
+      "batchBlob": "a55b8c9e10f1dde610441d1c5d371f31858d388d",
+      "batchPath": "qa/final-sprite-completion/BATCH_60_HISTORICAL.json",
+      "byteLength": 13124,
+      "members": 4,
+      "routes": {
+        "back": {
+          "character": 2,
+          "palette": 0,
+          "characterSha256": "f5431e1e2b3d3ba23cd9a4dbebe02eb0689f94977aed0788bb74b99e05d191b2",
+          "paletteSha256": "3c33b5651e9593d23229596ada34506507b76b81f3d4c09c9eeeb1909593425f",
+          "expectedFrameSha256": "68bdd6bdd014b54295f5b45eced1a7575822ab7fe83a8d67d65b3ba251e0192f"
+        },
+        "shiny_back": {
+          "character": 2,
+          "palette": 1,
+          "characterSha256": "f5431e1e2b3d3ba23cd9a4dbebe02eb0689f94977aed0788bb74b99e05d191b2",
+          "paletteSha256": "caeb9c6b70cbbfea36a971de0703af162673803bcdada376e282f17711be9c87",
+          "expectedFrameSha256": "ddc69f55f05b7739fb508e68e6c0ab7e3548b405702cb56e0679729f11ab014e"
+        },
+        "front": {
+          "character": 3,
+          "palette": 0,
+          "characterSha256": "82820a1ddc1ac3578752bb41dc37f1de928f8b6a5eb806ea8cc82f0bddf6a711",
+          "paletteSha256": "3c33b5651e9593d23229596ada34506507b76b81f3d4c09c9eeeb1909593425f",
+          "expectedFrameSha256": "71fd457568b05ca1cc7426e21b82fc4532d6f031092d4275430cdc4f9192b226"
+        },
+        "shiny_front": {
+          "character": 3,
+          "palette": 1,
+          "characterSha256": "82820a1ddc1ac3578752bb41dc37f1de928f8b6a5eb806ea8cc82f0bddf6a711",
+          "paletteSha256": "caeb9c6b70cbbfea36a971de0703af162673803bcdada376e282f17711be9c87",
+          "expectedFrameSha256": "35463e492d8e0e551104626560a575c21e5f4416237d04df870f7a5fa6480260"
+        }
+      },
+      "mode": "shared_species_palette"
+    },
+    {
+      "artworkKey": "solosis-redux|pixelsha256:3a2d76ae6aa045fb7db491281a78e08931569ed67dba66104f2f68700e8ce8ab",
+      "archiveSha256": "dc0d32010ed1be3b96ff938904fb2ca00abd03c3d7342dc6f4917e535361ea46",
+      "archiveGitBlob": "f25b5b92a7496ccc8e41bb1f9ce9cd7675840048",
+      "batchBlob": "a55b8c9e10f1dde610441d1c5d371f31858d388d",
+      "batchPath": "qa/final-sprite-completion/BATCH_60_HISTORICAL.json",
+      "byteLength": 13124,
+      "members": 4,
+      "routes": {
+        "back": {
+          "character": 2,
+          "palette": 0,
+          "characterSha256": "ee541aa0413e61998d5d6e17b19393bd1d2837a9605e297aff3f2e009d911e34",
+          "paletteSha256": "b8889800dac333ef6225e6be35284b2fe44714e4b3554a7fd10d0b93d05966e8",
+          "expectedFrameSha256": "77f8dccc89958d8c72c4c935dd5e4d3ed17040cacb21c015739f4b0ecef51582"
+        },
+        "shiny_back": {
+          "character": 2,
+          "palette": 1,
+          "characterSha256": "ee541aa0413e61998d5d6e17b19393bd1d2837a9605e297aff3f2e009d911e34",
+          "paletteSha256": "d01c74a4ce0909686aff4dd5d8c70ab6bece35ee126130854a616251846b60f7",
+          "expectedFrameSha256": "52816936634b1fa20109504c5c1efbca918dadbd5fbef64619cd7fa462ad9679"
+        },
+        "front": {
+          "character": 3,
+          "palette": 0,
+          "characterSha256": "d69d09d84ea92c720bd5ddf190422a39bfd446d629b248118f9f22853804e316",
+          "paletteSha256": "b8889800dac333ef6225e6be35284b2fe44714e4b3554a7fd10d0b93d05966e8",
+          "expectedFrameSha256": "a5216ef0933340681e923a753377a772e6c441346fcfc4fd5e52252491a6e86c"
+        },
+        "shiny_front": {
+          "character": 3,
+          "palette": 1,
+          "characterSha256": "d69d09d84ea92c720bd5ddf190422a39bfd446d629b248118f9f22853804e316",
+          "paletteSha256": "d01c74a4ce0909686aff4dd5d8c70ab6bece35ee126130854a616251846b60f7",
+          "expectedFrameSha256": "af7936a3bd6ebb72e6490035fa7211bd52eacddc3f034b907b879e8a055a5dc5"
+        }
+      },
+      "mode": "shared_species_palette"
+    },
+    {
+      "artworkKey": "solrock-system|pixelsha256:541defff6d6a052e7d8033c9d401c279202c037f95a0c9417b7620976d347824",
+      "archiveSha256": "e6ed9544b4192dfc690384117e5fe9d67b5f722cf98b4cb3d595573a9c990c12",
+      "archiveGitBlob": "90e71aac73b393dedb2511df12e953918c71aaa6",
+      "batchBlob": "a55b8c9e10f1dde610441d1c5d371f31858d388d",
+      "batchPath": "qa/final-sprite-completion/BATCH_60_HISTORICAL.json",
+      "byteLength": 13124,
+      "members": 4,
+      "routes": {
+        "back": {
+          "character": 2,
+          "palette": 0,
+          "characterSha256": "2911cee71491ddad0730849ceb625e731c98d5f6686700f42ef0738740d29837",
+          "paletteSha256": "1114ba51a057e003b3fcc2d401fc20886f99373074dfeadbf84e5a7171b42529",
+          "expectedFrameSha256": "4f3b05845904d8f114fb007154840538c73e757d4152acea81b3f1a6a9183097"
+        },
+        "shiny_back": {
+          "character": 2,
+          "palette": 1,
+          "characterSha256": "2911cee71491ddad0730849ceb625e731c98d5f6686700f42ef0738740d29837",
+          "paletteSha256": "91c8d482b3a46adc618c7d8d7e1da77af8440f7531b79b482fc4a1db139a8845",
+          "expectedFrameSha256": "873f2430906924e9551b557231dea94bbfd383bb3ccf2832783c0ccd059d84b8"
+        },
+        "front": {
+          "character": 3,
+          "palette": 0,
+          "characterSha256": "fe52a946576874f6cf5e8f6595b5aa701218e0d07de50441799437f0dfb23873",
+          "paletteSha256": "1114ba51a057e003b3fcc2d401fc20886f99373074dfeadbf84e5a7171b42529",
+          "expectedFrameSha256": "a297a5f23fa9882d4d34254169b0cc9c419c0da4606893f1997d74bdd798b293"
+        },
+        "shiny_front": {
+          "character": 3,
+          "palette": 1,
+          "characterSha256": "fe52a946576874f6cf5e8f6595b5aa701218e0d07de50441799437f0dfb23873",
+          "paletteSha256": "91c8d482b3a46adc618c7d8d7e1da77af8440f7531b79b482fc4a1db139a8845",
+          "expectedFrameSha256": "0fa755c0ac3af4d361a5f545ef41ec25c6efce4eae646d9213d48f429d49cbde"
+        }
+      },
+      "mode": "shared_species_palette"
+    },
+    {
+      "artworkKey": "sopranice|pixelsha256:c578d734ba88113861e321d45628a9c9390c1375f0d1fc2839e0ab9c09b1f3c5",
+      "archiveSha256": "9bb114cfcc2450fae030ea530e217c3141d973e797bf5990baaf29aefa61195f",
+      "archiveGitBlob": "0b2c033ff474784585b75b7c1980a0f4c80cad39",
+      "batchBlob": "9571db18e78894a39b6beeb98f54723bcbb4b145",
+      "batchPath": "qa/final-sprite-completion/BATCH_61_HISTORICAL.json",
+      "byteLength": 13124,
+      "members": 4,
+      "routes": {
+        "back": {
+          "character": 2,
+          "palette": 0,
+          "characterSha256": "9319903866a7fee82e0e1d1d7e0b154d6a8f218df7dd4e53ee14aece390e0016",
+          "paletteSha256": "fe765945df80e224777ee268acda3641be0aef530d3100cbb7a21923f1dbc8dc",
+          "expectedFrameSha256": "c8431004d47d840a328fdff06b75f8bb28f3c34e25d39110a614d96683b755f6"
+        },
+        "shiny_back": {
+          "character": 2,
+          "palette": 1,
+          "characterSha256": "9319903866a7fee82e0e1d1d7e0b154d6a8f218df7dd4e53ee14aece390e0016",
+          "paletteSha256": "747c77d7e03dbe10c4be26dd4754a5851f1e6690577a1d4950a93e78284b915d",
+          "expectedFrameSha256": "3801c7adc4a96756c3e84c3857e061f8895529347e12dd3b6f412aa0798b048f"
+        },
+        "front": {
+          "character": 3,
+          "palette": 0,
+          "characterSha256": "033bed97e17d8720f496fcaeb1af7c353746d450e5dfe4962766955dfc7bbb47",
+          "paletteSha256": "fe765945df80e224777ee268acda3641be0aef530d3100cbb7a21923f1dbc8dc",
+          "expectedFrameSha256": "a9ae3c586c803c862f6d4b587c0673e2eba2a6f4d5b872b3839a27798f2b7070"
+        },
+        "shiny_front": {
+          "character": 3,
+          "palette": 1,
+          "characterSha256": "033bed97e17d8720f496fcaeb1af7c353746d450e5dfe4962766955dfc7bbb47",
+          "paletteSha256": "747c77d7e03dbe10c4be26dd4754a5851f1e6690577a1d4950a93e78284b915d",
+          "expectedFrameSha256": "7ada01449e7ac149d8b4d9b94ad46fb30cd43f5b8dde85a7904cb975d3726d53"
+        }
+      },
+      "mode": "shared_species_palette"
+    },
+    {
+      "artworkKey": "spearow-redux|pixelsha256:245e73a8a1c97b2a3727e96641f7e2620b9020851d17095e4f376db644f7e4b8",
+      "archiveSha256": "f4a837fe68ae5c0ce6845487af66105c2747fe2de660a0cdd1bd7d3f81e84c6d",
+      "archiveGitBlob": "e131daa6af3ba35c258ce8821319f945f6b3ff71",
+      "batchBlob": "9571db18e78894a39b6beeb98f54723bcbb4b145",
+      "batchPath": "qa/final-sprite-completion/BATCH_61_HISTORICAL.json",
+      "byteLength": 13124,
+      "members": 4,
+      "routes": {
+        "back": {
+          "character": 2,
+          "palette": 0,
+          "characterSha256": "e2d62d77fee215c4a04554f4be64cc6291b72bd658c563908cf11232ad6a8232",
+          "paletteSha256": "40d2a12423f1af5911f1bada2263695c6f9c97dca110a6a2866bf37c9be5a8e1",
+          "expectedFrameSha256": "504cd5b0625a73974c3ceb2043a75defdfc723adb81c118ea4bd633e85875396"
+        },
+        "shiny_back": {
+          "character": 2,
+          "palette": 1,
+          "characterSha256": "e2d62d77fee215c4a04554f4be64cc6291b72bd658c563908cf11232ad6a8232",
+          "paletteSha256": "9ab47abe7ee97421d911e5effa32a798bb9e9472bb6dfef693aeb40f1644572c",
+          "expectedFrameSha256": "48ad3f3840e6b3d8dbcbdb4380ea448ba1cf130d3f61edf09284eb1de9ecdc36"
+        },
+        "front": {
+          "character": 3,
+          "palette": 0,
+          "characterSha256": "01e4139694bc8a0607cbe93a9167e0ad9402136048c10ffc2b7ca2896ae2e325",
+          "paletteSha256": "40d2a12423f1af5911f1bada2263695c6f9c97dca110a6a2866bf37c9be5a8e1",
+          "expectedFrameSha256": "7bbaef8e96f3ffc463b9750ea2a4c7393ed75a5679a114cf8b3ea2862f029358"
+        },
+        "shiny_front": {
+          "character": 3,
+          "palette": 1,
+          "characterSha256": "01e4139694bc8a0607cbe93a9167e0ad9402136048c10ffc2b7ca2896ae2e325",
+          "paletteSha256": "9ab47abe7ee97421d911e5effa32a798bb9e9472bb6dfef693aeb40f1644572c",
+          "expectedFrameSha256": "5f7862fee5341fa6c7dd5725b38ce42cf4a8cf2eb86178cb851e65dd40933ef0"
+        }
+      },
+      "mode": "shared_species_palette"
+    },
+    {
+      "artworkKey": "spindaze|pixelsha256:a8c271add7b11a3d1cb085829efcee5209f1f0f02d5a9f9ad74f45e3b0cb1607",
+      "archiveSha256": "c1a3b52a7f1199b7167660fa11c3d90a46e520bde9a8d7fa6b3f17327600dc6b",
+      "archiveGitBlob": "d6d0fead97017cb950dd2d605151d1a90bc7a26b",
+      "batchBlob": "9571db18e78894a39b6beeb98f54723bcbb4b145",
+      "batchPath": "qa/final-sprite-completion/BATCH_61_HISTORICAL.json",
+      "byteLength": 13124,
+      "members": 4,
+      "routes": {
+        "back": {
+          "character": 2,
+          "palette": 0,
+          "characterSha256": "7ac25b07358c2e445bd7a830807910ea39c7342c779dbec76eb99c8115d9c838",
+          "paletteSha256": "cc18472f60a769ddf41db4c3a34723172afbda440b2f53a4b693612a2d062751",
+          "expectedFrameSha256": "0b697c145956d3dc0c551d2516cec07bcb740b0c6faa267331830cdbe0e1f617"
+        },
+        "shiny_back": {
+          "character": 2,
+          "palette": 1,
+          "characterSha256": "7ac25b07358c2e445bd7a830807910ea39c7342c779dbec76eb99c8115d9c838",
+          "paletteSha256": "25158b9587fa1ce230c70ee7f308035c03977fc1ae021f7c36237263d8743d2c",
+          "expectedFrameSha256": "b69b1bca0381b1bc119e921c55d9e01a9e626fe67f20ff55431ab5d63601b1b9"
+        },
+        "front": {
+          "character": 3,
+          "palette": 0,
+          "characterSha256": "86fc6970b9ea55f4a9f192cf78f8ff3b4ab8fc2b31e1ef9f753b5241aa38bbc8",
+          "paletteSha256": "cc18472f60a769ddf41db4c3a34723172afbda440b2f53a4b693612a2d062751",
+          "expectedFrameSha256": "06204dc091a3b70dd46e52fde2b28fd98deb397d701aad8e23a799087db18e1f"
+        },
+        "shiny_front": {
+          "character": 3,
+          "palette": 1,
+          "characterSha256": "86fc6970b9ea55f4a9f192cf78f8ff3b4ab8fc2b31e1ef9f753b5241aa38bbc8",
+          "paletteSha256": "25158b9587fa1ce230c70ee7f308035c03977fc1ae021f7c36237263d8743d2c",
+          "expectedFrameSha256": "71ce1b51e6c7dd03e593a4a5cb606329bf90ae42984f91d4af4f0fd7aa2d9a72"
+        }
+      },
+      "mode": "shared_species_palette"
+    },
+    {
+      "artworkKey": "spiritomb-redux|pixelsha256:b9723824837874d9b937669298f4a3c014863e01a85ad1e873865946bf88427c",
+      "archiveSha256": "bd8e6f086d7d4a94f62ab71b87eab5dcf3a72b891c5ca652e26cc6ba87f5f90c",
+      "archiveGitBlob": "b188bbe084c733989df8c56c2eb85f8ebcb9c879",
+      "batchBlob": "33e5a3d0ce7b1ca5d71acbc3c5ad329129a606d9",
+      "batchPath": "qa/final-sprite-completion/BATCH_62_HISTORICAL.json",
+      "byteLength": 13124,
+      "members": 4,
+      "routes": {
+        "back": {
+          "character": 2,
+          "palette": 0,
+          "characterSha256": "05c4bb12bd05f04f963baf93d118cc6e48330da00be9e2f023ee2bd7ac2e46a1",
+          "paletteSha256": "45767b624aa58c5fb257d3f21084c9bc7fcbb7de1b158cf3892db9791c5527fb",
+          "expectedFrameSha256": "3bf269bead690336bf68b2e4248adb4302bc18353e7acb62144bad473bf7ddcd"
+        },
+        "shiny_back": {
+          "character": 2,
+          "palette": 1,
+          "characterSha256": "05c4bb12bd05f04f963baf93d118cc6e48330da00be9e2f023ee2bd7ac2e46a1",
+          "paletteSha256": "fe07b4c56e8ff77d55c3c253b78a331710bdada34aa4448bb5388fd455db09cc",
+          "expectedFrameSha256": "6d2126d08f26e1074ead8c1c9795428dd4f594eb1a9014d2c98e7df8db55265a"
+        },
+        "front": {
+          "character": 3,
+          "palette": 0,
+          "characterSha256": "ece2c0e2ac567ac8a2424f79b96dabd499a3fdd456da7f7ad4f5f51beed825d5",
+          "paletteSha256": "45767b624aa58c5fb257d3f21084c9bc7fcbb7de1b158cf3892db9791c5527fb",
+          "expectedFrameSha256": "2779b57b0df6da09f58dc0b3496767e68b3f7bdc46d6abc47e7be56c92737e14"
+        },
+        "shiny_front": {
+          "character": 3,
+          "palette": 1,
+          "characterSha256": "ece2c0e2ac567ac8a2424f79b96dabd499a3fdd456da7f7ad4f5f51beed825d5",
+          "paletteSha256": "fe07b4c56e8ff77d55c3c253b78a331710bdada34aa4448bb5388fd455db09cc",
+          "expectedFrameSha256": "01051275c1bae7198a628f244a201deac9704196db83eb8dcaa70517bc9cebc0"
+        }
+      },
+      "mode": "shared_species_palette"
+    },
+    {
+      "artworkKey": "storming|pixelsha256:f06929932f360da1b1b18f54f4904d8b97590b8ea1f4f1445336c74ab2ce85a6",
+      "archiveSha256": "7f526a03a8ba52b35f35e07b1860e711a2e790dd71c02959192a488ddc3c0e33",
+      "archiveGitBlob": "bfd0dcd3906247aebc952a827d7d5eb6f48d6b0b",
+      "batchBlob": "33e5a3d0ce7b1ca5d71acbc3c5ad329129a606d9",
+      "batchPath": "qa/final-sprite-completion/BATCH_62_HISTORICAL.json",
+      "byteLength": 13124,
+      "members": 4,
+      "routes": {
+        "back": {
+          "character": 2,
+          "palette": 0,
+          "characterSha256": "7ec529df7584269d5642d9b4c6daf9bce63058562dd4a258789a75a24e28c9e5",
+          "paletteSha256": "dd803a78e64b68bb5d92630928a660060f02c4bb4c0b8d4639c746b038f7562c",
+          "expectedFrameSha256": "847f7bcf23420bc6c2a871b99d43e01de43ca813a912149b50ef6896a49b2924"
+        },
+        "shiny_back": {
+          "character": 2,
+          "palette": 1,
+          "characterSha256": "7ec529df7584269d5642d9b4c6daf9bce63058562dd4a258789a75a24e28c9e5",
+          "paletteSha256": "cf980ab25461489262d8b218f319878a70501476a8471eb5a454e909c0e3c33a",
+          "expectedFrameSha256": "56393db68e3cab565ba7f82a8a549dc2cd25be411832121f375d1ccc8f9e3d38"
+        },
+        "front": {
+          "character": 3,
+          "palette": 0,
+          "characterSha256": "7702ad0551eb12096764458fed99b7e5dda3b04dd2a5f11214a5bea34bcded3e",
+          "paletteSha256": "dd803a78e64b68bb5d92630928a660060f02c4bb4c0b8d4639c746b038f7562c",
+          "expectedFrameSha256": "14e76ac4edb4f6b6a186f9164cc7b17cef4cfbb8800a3e55997b190a9823ab99"
+        },
+        "shiny_front": {
+          "character": 3,
+          "palette": 1,
+          "characterSha256": "7702ad0551eb12096764458fed99b7e5dda3b04dd2a5f11214a5bea34bcded3e",
+          "paletteSha256": "cf980ab25461489262d8b218f319878a70501476a8471eb5a454e909c0e3c33a",
+          "expectedFrameSha256": "96d736965c5610b875a325b6d62fb103a67e7e67e3c0ee0b3424b7d24c0f0b81"
+        }
+      },
+      "mode": "shared_species_palette"
+    },
+    {
+      "artworkKey": "stufful-redux|pixelsha256:cc10e466751d682cd53772b4b60857c8b0aa8d0a20ccfe4a25981def71720562",
+      "archiveSha256": "db1594cb1b9bf2ecbc63f39da53cdbc91615c50758028596ad1251ba12c9cf34",
+      "archiveGitBlob": "17d14081335f2738f315df30e603e17e552511d0",
+      "batchBlob": "33e5a3d0ce7b1ca5d71acbc3c5ad329129a606d9",
+      "batchPath": "qa/final-sprite-completion/BATCH_62_HISTORICAL.json",
+      "byteLength": 13124,
+      "members": 4,
+      "routes": {
+        "back": {
+          "character": 2,
+          "palette": 0,
+          "characterSha256": "dca27c5f094bc5b114a152fd79b41ff5945474012287563c8689e1c4f78f9cf6",
+          "paletteSha256": "dde247f966766d619d26775044ad2f3f1e27bf75e1f778a7c4ae21cc06cda773",
+          "expectedFrameSha256": "fe3a7cec0813188aa1592e660e0ad2438000ada49e4f18767db63bee52692599"
+        },
+        "shiny_back": {
+          "character": 2,
+          "palette": 1,
+          "characterSha256": "dca27c5f094bc5b114a152fd79b41ff5945474012287563c8689e1c4f78f9cf6",
+          "paletteSha256": "6f6244eea899375d3c4ee886574b516168ed597b4e489e5f35edef347af68850",
+          "expectedFrameSha256": "c21e96b841060eaff0d9932782216f83136eb971192ecf9a1cd5b5fa47cb25cc"
+        },
+        "front": {
+          "character": 3,
+          "palette": 0,
+          "characterSha256": "dbb121599a44ff8bc899a26df5c43438c4884f5f16d60495bd0c39c4e263c279",
+          "paletteSha256": "dde247f966766d619d26775044ad2f3f1e27bf75e1f778a7c4ae21cc06cda773",
+          "expectedFrameSha256": "452be93565597af42f2371a5266b6628ae7f09325e9e082bf9548c4491f4f108"
+        },
+        "shiny_front": {
+          "character": 3,
+          "palette": 1,
+          "characterSha256": "dbb121599a44ff8bc899a26df5c43438c4884f5f16d60495bd0c39c4e263c279",
+          "paletteSha256": "6f6244eea899375d3c4ee886574b516168ed597b4e489e5f35edef347af68850",
+          "expectedFrameSha256": "5e6a6f93b7fcf930e8433b9752cb8cc3fe53ecc1af2da5ad0fbe979af66c651a"
+        }
+      },
+      "mode": "shared_species_palette"
+    },
+    {
+      "artworkKey": "swablu-redux|pixelsha256:fff09df8fd79dbb9d4c41789f54a9e35c7d49ff4b4134a89fb0b0d32ba300b9d",
+      "archiveSha256": "5431917b4621e23a772f1959d9714a6686a9fa8ce73675c89da9e3395f62d518",
+      "archiveGitBlob": "6d1c479611471150217258f8227a61594bab04c3",
+      "batchBlob": "17147e04a68d92e6ee69c9598dcbc0c0ca6d73ac",
+      "batchPath": "qa/final-sprite-completion/BATCH_63_HISTORICAL.json",
+      "byteLength": 13124,
+      "members": 4,
+      "routes": {
+        "back": {
+          "character": 2,
+          "palette": 0,
+          "characterSha256": "0134c6f22389e0b82af9b7e04a40ba3654e7e192c78f715da12eadca9058bf68",
+          "paletteSha256": "7aad3f0bf68af1ed2bc189818e6f37a3defbe002bff4d08cad91b82c4738eb8d",
+          "expectedFrameSha256": "90cdaf891cde8fa63690bbc7087a2240f59ac5dd06990be3bda5b055d96db261"
+        },
+        "shiny_back": {
+          "character": 2,
+          "palette": 1,
+          "characterSha256": "0134c6f22389e0b82af9b7e04a40ba3654e7e192c78f715da12eadca9058bf68",
+          "paletteSha256": "f10cae68ac72c204c9346fff8f9e1e60e34ea88440420ce98f0a26d6a93b9e78",
+          "expectedFrameSha256": "a0e000facb7dd1e7a7a28791d901c84f83bcf45c1b520094cc1b738f62634035"
+        },
+        "front": {
+          "character": 3,
+          "palette": 0,
+          "characterSha256": "c57c57acc836a5e2115ef3ad55d2521718993474226d1049263f1911cd527c01",
+          "paletteSha256": "7aad3f0bf68af1ed2bc189818e6f37a3defbe002bff4d08cad91b82c4738eb8d",
+          "expectedFrameSha256": "d531ccf161eb0db3429c65422b770efa10b80f8e056b6349972f1a5d7172742c"
+        },
+        "shiny_front": {
+          "character": 3,
+          "palette": 1,
+          "characterSha256": "c57c57acc836a5e2115ef3ad55d2521718993474226d1049263f1911cd527c01",
+          "paletteSha256": "f10cae68ac72c204c9346fff8f9e1e60e34ea88440420ce98f0a26d6a93b9e78",
+          "expectedFrameSha256": "1e89b33a7adc672929f24fc37daf9635ed9b6ad83f59afb532d4f799b1c71799"
+        }
+      },
+      "mode": "shared_species_palette"
+    },
+    {
+      "artworkKey": "swalot-mega|pixelsha256:05c6fbf871814bcb10f5e85347c09a198e6ddda327b868c7c104923807aacd7d",
+      "archiveSha256": "dd9849a4e2931d9c368c224cc8d3ed95581906b8b10ea38eb405cbf94c7a6567",
+      "archiveGitBlob": "797f03709bd7f05f19aa9caf937b0af0a59601a0",
+      "batchBlob": "17147e04a68d92e6ee69c9598dcbc0c0ca6d73ac",
+      "batchPath": "qa/final-sprite-completion/BATCH_63_HISTORICAL.json",
+      "byteLength": 13284,
+      "members": 6,
+      "routes": {
+        "back": {
+          "character": 2,
+          "palette": 0,
+          "characterSha256": "c092606098d2ab84ba7fd431eb7e4c29f0879cf88fe641a5a1d0d04ee3cf9574",
+          "paletteSha256": "92d7232b2c49c86128ef47693fc0ed95a50f48978a2c9d2735ad0ba9c99b8fbb",
+          "expectedFrameSha256": "ccf13ab3a8d80e90727f2f2cd73c0c03e1d3980bf7da9b5ceeaf6f1ea1dde93e"
+        },
+        "shiny_back": {
+          "character": 2,
+          "palette": 1,
+          "characterSha256": "c092606098d2ab84ba7fd431eb7e4c29f0879cf88fe641a5a1d0d04ee3cf9574",
+          "paletteSha256": "0a467656719f302b1eee4dfe4c5e3d0fb090ab8cab4779bba45855e98a4aabd7",
+          "expectedFrameSha256": "5cce43727e772230f7227ae8091b9473a6c2125eb5f29e569c507658b33d5aeb"
+        },
+        "front": {
+          "character": 5,
+          "palette": 3,
+          "characterSha256": "edb78240a725091b720b25393a01b1b6ae8b10a511e3a4586a4a7c704d93fb07",
+          "paletteSha256": "a2aa98dd28e493b1d3e5f32adcd4d518c9f50460d6b34381e996c91732a26a7f",
+          "expectedFrameSha256": "6a9f75589f92f1205408bfe0ee0f43d18dc28cd5270c09512f662da3d164e857"
+        },
+        "shiny_front": {
+          "character": 5,
+          "palette": 4,
+          "characterSha256": "edb78240a725091b720b25393a01b1b6ae8b10a511e3a4586a4a7c704d93fb07",
+          "paletteSha256": "a91df0a0bfb17d0b6e8f314f4360ee8a7e4ad1a16f04a00598e6cc62a6ee65f7",
+          "expectedFrameSha256": "30344b130d7fe975a6c001513704cc997bc4e2fce84fb7467afa7c963ea31b72"
+        }
+      },
+      "mode": "view_specific"
+    },
+    {
+      "artworkKey": "swampage|pixelsha256:2e2cdccf591e65079c2c220f5e0e9fc569ef0938eb488e6cb0a46dc3d182548b",
+      "archiveSha256": "3a68c8bd66c76fa0b595681a98ffb615789691988ce8b236214a810df7bded85",
+      "archiveGitBlob": "82a9ab863a08bb73738110fc3cde478ff0fb05f9",
+      "batchBlob": "17147e04a68d92e6ee69c9598dcbc0c0ca6d73ac",
+      "batchPath": "qa/final-sprite-completion/BATCH_63_HISTORICAL.json",
+      "byteLength": 13124,
+      "members": 4,
+      "routes": {
+        "back": {
+          "character": 2,
+          "palette": 0,
+          "characterSha256": "dbc12dd46f10887afaeaaadc9dc3e422355f960feff6bf2233873bc44d90ad54",
+          "paletteSha256": "32e428b6e4ed70920e70363f4f60aceb4037dd61dd4afdbf9108238908b62a16",
+          "expectedFrameSha256": "784b7d35e0a7b5f671d4df713ed578b3d0f9e712426ff1802070aff967e78cbb"
+        },
+        "shiny_back": {
+          "character": 2,
+          "palette": 1,
+          "characterSha256": "dbc12dd46f10887afaeaaadc9dc3e422355f960feff6bf2233873bc44d90ad54",
+          "paletteSha256": "932dbf52e0fc206af7d72ca4326480c05d43d50435fbc3beef5c9e05c44e0750",
+          "expectedFrameSha256": "ab0f7fd2dc9e27186c7cc033148d743245d5ee6705f8223a0f8f2b66dd0090c3"
+        },
+        "front": {
+          "character": 3,
+          "palette": 0,
+          "characterSha256": "024b4c4a072ca7e76025e79928b458c1704c84a3bc318ed96386cd7f15339d49",
+          "paletteSha256": "32e428b6e4ed70920e70363f4f60aceb4037dd61dd4afdbf9108238908b62a16",
+          "expectedFrameSha256": "90863fd391b651034fbe1f026588f490322a0022abfd65f51ab76c8c2d25d655"
+        },
+        "shiny_front": {
+          "character": 3,
+          "palette": 1,
+          "characterSha256": "024b4c4a072ca7e76025e79928b458c1704c84a3bc318ed96386cd7f15339d49",
+          "paletteSha256": "932dbf52e0fc206af7d72ca4326480c05d43d50435fbc3beef5c9e05c44e0750",
+          "expectedFrameSha256": "a0bfd2aecd9d306988c6a901a778b506ffac8100285e753ba2b26c17639e99e4"
+        }
+      },
+      "mode": "shared_species_palette"
+    },
+    {
+      "artworkKey": "swinub-redux|pixelsha256:1a9ef728d592700b73ccd6b034a914b177b6ad66e692d03471ecb76d27398152",
+      "archiveSha256": "214cf14ee45b05d380fec1802538802a857ab5eab7ff0480d16298b8e01509f4",
+      "archiveGitBlob": "974b216c66e856688dc902f6fa6a7adbafa18aac",
+      "batchBlob": "8d67fa9258258265918df78e7a4185da5d88bb09",
+      "batchPath": "qa/final-sprite-completion/BATCH_64_HISTORICAL.json",
+      "byteLength": 13124,
+      "members": 4,
+      "routes": {
+        "back": {
+          "character": 2,
+          "palette": 0,
+          "characterSha256": "fbae7e32a242acff53683230f1f17cac4e71a5d99704da420c3ba89aaa1e657f",
+          "paletteSha256": "fd2c4b2ca9dce721f0945245ba5cfa55b7dfa40d548222af9c0af897f843715d",
+          "expectedFrameSha256": "2d228a69839edf09cce91b80b3b9f5c6931e2d12011d1ad842c1bb93ab475934"
+        },
+        "shiny_back": {
+          "character": 2,
+          "palette": 1,
+          "characterSha256": "fbae7e32a242acff53683230f1f17cac4e71a5d99704da420c3ba89aaa1e657f",
+          "paletteSha256": "f3e649fb8cbecf9fd75fdde1f0b4c8af6878c070cb70791cc45be0c92f154f19",
+          "expectedFrameSha256": "82324b8defc3e7d53baf22dbe2b3c035050c9d17429dd608aec0af9c306b34f1"
+        },
+        "front": {
+          "character": 3,
+          "palette": 0,
+          "characterSha256": "9c0dbb51dc871af0adcc3859b9e59a6114d1f6d287cad3f40ad82742f6fde1ef",
+          "paletteSha256": "fd2c4b2ca9dce721f0945245ba5cfa55b7dfa40d548222af9c0af897f843715d",
+          "expectedFrameSha256": "3c48c1c8a691460c02e15c97eb8ccaf0ae08161e06d32482daa73a9fd0d77093"
+        },
+        "shiny_front": {
+          "character": 3,
+          "palette": 1,
+          "characterSha256": "9c0dbb51dc871af0adcc3859b9e59a6114d1f6d287cad3f40ad82742f6fde1ef",
+          "paletteSha256": "f3e649fb8cbecf9fd75fdde1f0b4c8af6878c070cb70791cc45be0c92f154f19",
+          "expectedFrameSha256": "ae1e356fbe547eddca9b57e9a98998d0297860fded8125851f09d94d7cb26242"
+        }
+      },
+      "mode": "shared_species_palette"
+    },
+    {
+      "artworkKey": "talonflame-mega|pixelsha256:197fc86a75d983e245e81e4e4dab73b2d4d5ead6de7d7ca962da3e35ab136362",
+      "archiveSha256": "5e4ddf04174756521af3ec9703f7607263b0b024392824abf7412cb80fd4a3b3",
+      "archiveGitBlob": "f73d1a2a03732fbbae0dc087e72742412166560f",
+      "batchBlob": "8d67fa9258258265918df78e7a4185da5d88bb09",
+      "batchPath": "qa/final-sprite-completion/BATCH_64_HISTORICAL.json",
+      "byteLength": 13124,
+      "members": 4,
+      "routes": {
+        "back": {
+          "character": 2,
+          "palette": 0,
+          "characterSha256": "861a61a1c5b67a7dc234769b21d35faddd182b28d8b6b101057da9eb3763689e",
+          "paletteSha256": "d4727947508a9742b6fc3ced6f93b7370d67809de196486238fa80db257cc4bd",
+          "expectedFrameSha256": "25efc5f33d0ffae088f8d4de5804667afc33aa66b552f3029f53ab0f3a5ca018"
+        },
+        "shiny_back": {
+          "character": 2,
+          "palette": 1,
+          "characterSha256": "861a61a1c5b67a7dc234769b21d35faddd182b28d8b6b101057da9eb3763689e",
+          "paletteSha256": "15ce4974ecad05b7e08f6d9767799040db93b73d83b8f8b0f17476af80579f23",
+          "expectedFrameSha256": "6a5f3ead4fe58e6c70df182830651c743e93d0b30e96ea6cecfd2b20a05e4db2"
+        },
+        "front": {
+          "character": 3,
+          "palette": 0,
+          "characterSha256": "6f63f6f823baf39706b4b46475aa3b1c118099dd0dc972f9796ce7614ffce8b1",
+          "paletteSha256": "d4727947508a9742b6fc3ced6f93b7370d67809de196486238fa80db257cc4bd",
+          "expectedFrameSha256": "203f04d040e011df85ac698f3f126936eafca11e636848b284552d0b0cf21ccb"
+        },
+        "shiny_front": {
+          "character": 3,
+          "palette": 1,
+          "characterSha256": "6f63f6f823baf39706b4b46475aa3b1c118099dd0dc972f9796ce7614ffce8b1",
+          "paletteSha256": "15ce4974ecad05b7e08f6d9767799040db93b73d83b8f8b0f17476af80579f23",
+          "expectedFrameSha256": "778a5a3a2e91792c1c803b5fe898041c4a9e30a97351667ec7ab42bcdf704369"
+        }
+      },
+      "mode": "shared_species_palette"
+    },
+    {
+      "artworkKey": "tatsugiri-mega|pixelsha256:e32e9f413d20296f303339d4cebb365d0bfc059ba0dde0fc9ef59fda1923e42c",
+      "archiveSha256": "8bffec60bc7c6feb8f80d85d21a40ad596b76b21523027383b1ac1569735626c",
+      "archiveGitBlob": "6cb404738afbeda5d04c913a51ea70b36e10e04c",
+      "batchBlob": "8d67fa9258258265918df78e7a4185da5d88bb09",
+      "batchPath": "qa/final-sprite-completion/BATCH_64_HISTORICAL.json",
+      "byteLength": 13124,
+      "members": 4,
+      "routes": {
+        "back": {
+          "character": 2,
+          "palette": 0,
+          "characterSha256": "d675b51c29b233953544c1639c0522c45434afeefad5245188401753a8e7edf6",
+          "paletteSha256": "52b9e781f3ee100a21ff722702933ce6e3fcd33804c31a4b3358b6ca1e63427e",
+          "expectedFrameSha256": "d90c4119728f2c5b2269fc7e0fb9d5be4c1eec9617d143cdd20c1efdd6e844a2"
+        },
+        "shiny_back": {
+          "character": 2,
+          "palette": 1,
+          "characterSha256": "d675b51c29b233953544c1639c0522c45434afeefad5245188401753a8e7edf6",
+          "paletteSha256": "18d7e8e56d5a6f091f9716632df6e83b1132acc24448b3e4326fc63d25f55c23",
+          "expectedFrameSha256": "3c42396a44f984a2a5ae2cf484ea3794c177c4393b545029e6e8efe04639c5b1"
+        },
+        "front": {
+          "character": 3,
+          "palette": 0,
+          "characterSha256": "eb389389a68e7e4a8ffa6503590fe95ff59a62cb71ab7d3c58959c9462845853",
+          "paletteSha256": "52b9e781f3ee100a21ff722702933ce6e3fcd33804c31a4b3358b6ca1e63427e",
+          "expectedFrameSha256": "5167a5f30d08219878027be76b6635a1c7cc1d056a278c167317db329ddc2037"
+        },
+        "shiny_front": {
+          "character": 3,
+          "palette": 1,
+          "characterSha256": "eb389389a68e7e4a8ffa6503590fe95ff59a62cb71ab7d3c58959c9462845853",
+          "paletteSha256": "18d7e8e56d5a6f091f9716632df6e83b1132acc24448b3e4326fc63d25f55c23",
+          "expectedFrameSha256": "9e5d25f8d27bf135717ef0149328668aa132b43a5f1cb5a011e1a2d8f33d0dc0"
+        }
+      },
+      "mode": "shared_species_palette"
+    },
+    {
+      "artworkKey": "tentagrewl|pixelsha256:d5267743720bb8f5046a56b8c1c3e702e047ed28af4f721bac28d58f417323dd",
+      "archiveSha256": "ffdae7b7ba5e04ad8b74f4bb7f7859cea1442565aed5af125ff19cb6fc2ea172",
+      "archiveGitBlob": "255540658d00340be586a32ecb3e73616d9462f2",
+      "batchBlob": "d7f98cc406c660388cedfa7e8824c843db3f7132",
+      "batchPath": "qa/final-sprite-completion/BATCH_65_HISTORICAL.json",
+      "byteLength": 13124,
+      "members": 4,
+      "routes": {
+        "back": {
+          "character": 2,
+          "palette": 0,
+          "characterSha256": "f1d70840fd2d3c0c98debf5603f624188ffdcbfff7f91ff321c75eeb73d5f80e",
+          "paletteSha256": "32a641b1df81a82c8e3a6fdf9b9ff07d790f4ee8a986786ea6acbf0668d543fe",
+          "expectedFrameSha256": "b81c22a05ff3717afa9f29c924fe3cdf7c06dbb3f3f46f938a4987e2c5c76cfa"
+        },
+        "shiny_back": {
+          "character": 2,
+          "palette": 1,
+          "characterSha256": "f1d70840fd2d3c0c98debf5603f624188ffdcbfff7f91ff321c75eeb73d5f80e",
+          "paletteSha256": "4e9645102e0088f39d6de54ea5bc7db6c89960bd4d787b847393685effb93e9a",
+          "expectedFrameSha256": "f7c58ccbb535a7f0ccd40ad4a2773c4fc93aaea4c8571e716c09feb7f1b3f7c6"
+        },
+        "front": {
+          "character": 3,
+          "palette": 0,
+          "characterSha256": "656e83d894cebe86eb425b5173fc5c6eb9976b52e82f155b4c1983fbb98d4067",
+          "paletteSha256": "32a641b1df81a82c8e3a6fdf9b9ff07d790f4ee8a986786ea6acbf0668d543fe",
+          "expectedFrameSha256": "1a30dde15224882f6c4397b0243ab72296c3fef93b3ca16910c74d958f8a7b35"
+        },
+        "shiny_front": {
+          "character": 3,
+          "palette": 1,
+          "characterSha256": "656e83d894cebe86eb425b5173fc5c6eb9976b52e82f155b4c1983fbb98d4067",
+          "paletteSha256": "4e9645102e0088f39d6de54ea5bc7db6c89960bd4d787b847393685effb93e9a",
+          "expectedFrameSha256": "5cc34b272a7d6e509fe48fb564ef8587aa670110a59795aa7bac9890e8521603"
+        }
+      },
+      "mode": "shared_species_palette"
+    },
+    {
+      "artworkKey": "tinkatink-redux|pixelsha256:029367268a1ad240a47d6a5b1d78f53db49da8d50925b6cf45af48166a07b375",
+      "archiveSha256": "0077a683681cc2b5445f4db4520ab45367818ad6d1d048eab0c6a49b57f2d1f0",
+      "archiveGitBlob": "cf1bcc833a947e47c181bff0de8a34b02a07c28f",
+      "batchBlob": "d7f98cc406c660388cedfa7e8824c843db3f7132",
+      "batchPath": "qa/final-sprite-completion/BATCH_65_HISTORICAL.json",
+      "byteLength": 13124,
+      "members": 4,
+      "routes": {
+        "back": {
+          "character": 2,
+          "palette": 0,
+          "characterSha256": "11ea263e6340cb1a67b2c56b9c11e8bde82c9893e878c0826dbe8b332d83b500",
+          "paletteSha256": "be645963bb6f8d06f073fda78b61998adc23eeead7a13e1e31755e24f0b7021c",
+          "expectedFrameSha256": "4af4d52c59391c9e1a0c996d3851090b58952c8ec203dc1eec2c632c957f74a1"
+        },
+        "shiny_back": {
+          "character": 2,
+          "palette": 1,
+          "characterSha256": "11ea263e6340cb1a67b2c56b9c11e8bde82c9893e878c0826dbe8b332d83b500",
+          "paletteSha256": "fcf5a9a9b379701d4fa4aaa6d02f81cc715e1c6f38e291c172b38870135c95cc",
+          "expectedFrameSha256": "9b5173a3cdeb4bca25de3f534e29740f90c6a9aa192b1abae75afc164bd3ebe2"
+        },
+        "front": {
+          "character": 3,
+          "palette": 0,
+          "characterSha256": "b4ed81cd1f782dcc7717213bcaea113717f23e1ced2b92fbaa7a6a02a87294b2",
+          "paletteSha256": "be645963bb6f8d06f073fda78b61998adc23eeead7a13e1e31755e24f0b7021c",
+          "expectedFrameSha256": "cf14867b58d2bb67829e30acd68e9cf6e18129494b0655f329fc742ae4dfc6a5"
+        },
+        "shiny_front": {
+          "character": 3,
+          "palette": 1,
+          "characterSha256": "b4ed81cd1f782dcc7717213bcaea113717f23e1ced2b92fbaa7a6a02a87294b2",
+          "paletteSha256": "fcf5a9a9b379701d4fa4aaa6d02f81cc715e1c6f38e291c172b38870135c95cc",
+          "expectedFrameSha256": "0ae74733f4edf8168a78c026dde96dbc11eeb93b4d9818faa2c02d2eb843d862"
+        }
+      },
+      "mode": "shared_species_palette"
+    },
+    {
+      "artworkKey": "tinkaton-mega|pixelsha256:ec5f4c6023b47917cf0cd522bde04ce89a7b9319a788151c7a19235d961243e9",
+      "archiveSha256": "d53f7266f20d7d53b140a63ce45e4283536dd1c416b2d817f7569a31255c87ed",
+      "archiveGitBlob": "2f8aec31e17ce64ad399f5e9f9a61836afc90347",
+      "batchBlob": "d7f98cc406c660388cedfa7e8824c843db3f7132",
+      "batchPath": "qa/final-sprite-completion/BATCH_65_HISTORICAL.json",
+      "byteLength": 13124,
+      "members": 4,
+      "routes": {
+        "back": {
+          "character": 2,
+          "palette": 0,
+          "characterSha256": "425ea6c1067393dfd8e7fc56f8ce8b71523d7644c7d7b2420ba6201ccca7ed6e",
+          "paletteSha256": "a9f36f4874b2a455387080cd6644858d4c49f0dbb46acef0dc3e3d4ffbf0cf78",
+          "expectedFrameSha256": "e25bf28f79a9ced48013cd267f0a3cb43dab1b7c9f8d3f7e27c4465f5f974613"
+        },
+        "shiny_back": {
+          "character": 2,
+          "palette": 1,
+          "characterSha256": "425ea6c1067393dfd8e7fc56f8ce8b71523d7644c7d7b2420ba6201ccca7ed6e",
+          "paletteSha256": "d6fd782a9b634abbe9da91b86bb36798e7c183512f961db9f990dff38ea832e5",
+          "expectedFrameSha256": "5adef9bdd6db9d5d886ae75f98780c1944fd787837945abba9c370cc077046e9"
+        },
+        "front": {
+          "character": 3,
+          "palette": 0,
+          "characterSha256": "aad5e872dc84c1ec0f4a0fd28577d111f59563e41e20c4f218f15652aefd6b5e",
+          "paletteSha256": "a9f36f4874b2a455387080cd6644858d4c49f0dbb46acef0dc3e3d4ffbf0cf78",
+          "expectedFrameSha256": "4e7efc122c4cda8563cd94615565460439b022c0262ac11dba0bb42b835171af"
+        },
+        "shiny_front": {
+          "character": 3,
+          "palette": 1,
+          "characterSha256": "aad5e872dc84c1ec0f4a0fd28577d111f59563e41e20c4f218f15652aefd6b5e",
+          "paletteSha256": "d6fd782a9b634abbe9da91b86bb36798e7c183512f961db9f990dff38ea832e5",
+          "expectedFrameSha256": "18bacc228618d98f55b1b1d689fc9bde4789083ea690aeefbcc9dd9bdaa7e921"
+        }
+      },
+      "mode": "shared_species_palette"
+    },
+    {
+      "artworkKey": "geodude-bluetowel-alternate-forms-form-2|gitblob:23842ac728ca55d76b68a397ac1cff471042906a",
+      "archiveSha256": "55c207c26b815020110374f30f9987d9a54cbe9de341b752de2f59e936727a42",
+      "archiveGitBlob": "820311c2b5566f227665ef2a0af975c1adc3e4a5",
+      "batchBlob": "1be878d421085a92748f414cca9bc9723a455bdd",
+      "batchPath": "qa/final-sprite-completion/BATCH_66_HOLD_RECHECK.json",
+      "byteLength": 13124,
+      "members": 4,
+      "routes": {
+        "back": {
+          "character": 2,
+          "palette": 0,
+          "characterSha256": "f4ea5ab564781df314af0ee707c91758beba0f1862f36ddd03c4c3b7aa572f6d",
+          "paletteSha256": "96fa4807c9c1debf08b17527e764a132767146e257515a03ca872bcd4f61bf8e",
+          "expectedFrameSha256": "862c4421f00d3f6329815e37356b827e4e70b74d0501e19c1eb0f857caf1a634"
+        },
+        "shiny_back": {
+          "character": 2,
+          "palette": 1,
+          "characterSha256": "f4ea5ab564781df314af0ee707c91758beba0f1862f36ddd03c4c3b7aa572f6d",
+          "paletteSha256": "72dfda712b5d2a870d874cb8d0e1d50f09a7178c1090cf7e028e79b8f37ad21c",
+          "expectedFrameSha256": "5eeb092deb4173c5d5a3504418eb8a13ff55c3a7b0a22cd7df89cf617868eb5b"
+        },
+        "front": {
+          "character": 3,
+          "palette": 0,
+          "characterSha256": "3d498f15f193d75af7a7ba98d738738e39abf7c8961465541a649d1614e3f73f",
+          "paletteSha256": "96fa4807c9c1debf08b17527e764a132767146e257515a03ca872bcd4f61bf8e",
+          "expectedFrameSha256": "6e33edd87a87c9314e36bf9310835747fd2924cf58d2bed18db7db8fccda8bbe"
+        },
+        "shiny_front": {
+          "character": 3,
+          "palette": 1,
+          "characterSha256": "3d498f15f193d75af7a7ba98d738738e39abf7c8961465541a649d1614e3f73f",
+          "paletteSha256": "72dfda712b5d2a870d874cb8d0e1d50f09a7178c1090cf7e028e79b8f37ad21c",
+          "expectedFrameSha256": "890fa67431fc2905e5f1eb782b3a3ecfdc3a1a32cb1d541b21504c307e9abba6"
+        }
+      },
+      "mode": "shared_species_palette"
+    },
+    {
+      "artworkKey": "tinkaton-redux|pixelsha256:d4a3ab099e19802476d140589213a9d07ec697d393a50d2bdb037968df72a3ec",
+      "archiveSha256": "49de8792f75c84e51a6e931b5fbd05779792ad5812681b89a5222fcd831b1c46",
+      "archiveGitBlob": "8ad5bdd337f993c3f7f172081fd1af748cb45a39",
+      "batchBlob": "22eb594dfac2f69d1f3722c2bdcdadcae85166da",
+      "batchPath": "qa/final-sprite-completion/BATCH_67_HISTORICAL.json",
+      "byteLength": 13124,
+      "members": 4,
+      "routes": {
+        "back": {
+          "character": 2,
+          "palette": 0,
+          "characterSha256": "4c5b621a4b22824f5749fca2d2f6a459b15e6bd9fe1c5db813ed6c74ae4cac36",
+          "paletteSha256": "c354969e0cce71f13e2aba62c009b0dad980ed6ed68bc54e17cf4f05c12f8875",
+          "expectedFrameSha256": "f46b04f3c1bdc9ddcbc123586b8f1b8e65141b7da50a435ffe54e4bf8779e075"
+        },
+        "shiny_back": {
+          "character": 2,
+          "palette": 1,
+          "characterSha256": "4c5b621a4b22824f5749fca2d2f6a459b15e6bd9fe1c5db813ed6c74ae4cac36",
+          "paletteSha256": "9d0b12cf12bc90c35e91e90a21f18c552a843046b938f459910272b6d5e05ccf",
+          "expectedFrameSha256": "716294cec36e944c51aa902f0f25b9629efcb598f598a2c59c3578ec966e578c"
+        },
+        "front": {
+          "character": 3,
+          "palette": 0,
+          "characterSha256": "eb5d41622bbaf9080a32dd4b2b3bb4b6e1ff322ca6810833d9715304e481084f",
+          "paletteSha256": "c354969e0cce71f13e2aba62c009b0dad980ed6ed68bc54e17cf4f05c12f8875",
+          "expectedFrameSha256": "bdf6de124022e362d71b4b4b8beacc541ec35b4f4e8c530c8351dfc33c184223"
+        },
+        "shiny_front": {
+          "character": 3,
+          "palette": 1,
+          "characterSha256": "eb5d41622bbaf9080a32dd4b2b3bb4b6e1ff322ca6810833d9715304e481084f",
+          "paletteSha256": "9d0b12cf12bc90c35e91e90a21f18c552a843046b938f459910272b6d5e05ccf",
+          "expectedFrameSha256": "fd304c1d558ed946fafee42706937dd36e304a5678f8dc5ac7a8f8ea2465d012"
+        }
+      },
+      "mode": "shared_species_palette"
+    },
+    {
+      "artworkKey": "tinkaton-redux-mega|pixelsha256:ae7daa37c02137e40ec514e43d2df7db489f2e6b5662289d398c64bd71962505",
+      "archiveSha256": "a5b3737864f4b86ca3f6a7904d73a79c22c85d00f32e5f625d3fd0c0d66ba560",
+      "archiveGitBlob": "7a6f1edd882a885a7fb3ce6bf4354a232902736d",
+      "batchBlob": "22eb594dfac2f69d1f3722c2bdcdadcae85166da",
+      "batchPath": "qa/final-sprite-completion/BATCH_67_HISTORICAL.json",
+      "byteLength": 13124,
+      "members": 4,
+      "routes": {
+        "back": {
+          "character": 2,
+          "palette": 0,
+          "characterSha256": "66e384779bab7bd09e7d7469d242b00f31006d6b3639c5d7d6b848ac087db807",
+          "paletteSha256": "69a35b09e8faac0ce8f51730996b03d89fb61ad33145577aac9a5d0b510b0086",
+          "expectedFrameSha256": "169a08a1e02b80748ae1515d20c8ce9d46a18d89893650c20c7b2c1777f17adf"
+        },
+        "shiny_back": {
+          "character": 2,
+          "palette": 1,
+          "characterSha256": "66e384779bab7bd09e7d7469d242b00f31006d6b3639c5d7d6b848ac087db807",
+          "paletteSha256": "fb6ee59995525a0157889744f20f6d3a26d0c95bd518d283e47ab1545475e7f1",
+          "expectedFrameSha256": "a6c67321a94989e581f83c579f9ca51dc40a61993bc573664de89e7743aef978"
+        },
+        "front": {
+          "character": 3,
+          "palette": 0,
+          "characterSha256": "7390ef60f0a3548df006b03f102a2f8f88f95a327ffe381c5ebc27a95a11097d",
+          "paletteSha256": "69a35b09e8faac0ce8f51730996b03d89fb61ad33145577aac9a5d0b510b0086",
+          "expectedFrameSha256": "dbe8e05102ebcf1543d8892ba76a369dc59ae22669ecf28fe1f6d894815becbb"
+        },
+        "shiny_front": {
+          "character": 3,
+          "palette": 1,
+          "characterSha256": "7390ef60f0a3548df006b03f102a2f8f88f95a327ffe381c5ebc27a95a11097d",
+          "paletteSha256": "fb6ee59995525a0157889744f20f6d3a26d0c95bd518d283e47ab1545475e7f1",
+          "expectedFrameSha256": "1efbc2a83d561eaa3eedac9d6610c2b0f0630e1b25f5a3baadeabd3eabcfbb31"
+        }
+      },
+      "mode": "shared_species_palette"
+    },
+    {
+      "artworkKey": "tinkatuff-redux|pixelsha256:446e42208d9591efcf571da8c17d1c9cd31c6db3ab2ae421aa27fe4a48dcad13",
+      "archiveSha256": "2c413e0a69e61a79e0df034da1f4f9bcbe9ea5f85eaa88776b05c3b3a71dadc6",
+      "archiveGitBlob": "575b8b3e21bed6d0969a5519705fa77b0c00eb9a",
+      "batchBlob": "22eb594dfac2f69d1f3722c2bdcdadcae85166da",
+      "batchPath": "qa/final-sprite-completion/BATCH_67_HISTORICAL.json",
+      "byteLength": 13124,
+      "members": 4,
+      "routes": {
+        "back": {
+          "character": 2,
+          "palette": 0,
+          "characterSha256": "5463e058ecb686c351321ff14ac964f852bcccf9aea7a23fe9eb3c227359b970",
+          "paletteSha256": "be645963bb6f8d06f073fda78b61998adc23eeead7a13e1e31755e24f0b7021c",
+          "expectedFrameSha256": "6b9ef48473db3fd0972c7f4db22ae7e68656f2ac4c4a1e7b87855d4b201326b9"
+        },
+        "shiny_back": {
+          "character": 2,
+          "palette": 1,
+          "characterSha256": "5463e058ecb686c351321ff14ac964f852bcccf9aea7a23fe9eb3c227359b970",
+          "paletteSha256": "9e37d579d9ba9b273936d91abb32743e2a0945fd0dd4c9cde7fa19b1ea3dc502",
+          "expectedFrameSha256": "b3769dfe4e6de9c787e0dd9b15db52dfdd0157e4356616221c2bdfb26ef8bc61"
+        },
+        "front": {
+          "character": 3,
+          "palette": 0,
+          "characterSha256": "774d5792360614095dcf36d30c2dddb622e6e53a656d08a8c527f8b5842a6f98",
+          "paletteSha256": "be645963bb6f8d06f073fda78b61998adc23eeead7a13e1e31755e24f0b7021c",
+          "expectedFrameSha256": "542e00de935b05492980da7682152f034f6292ababce3c7afc3d7bc43e966baa"
+        },
+        "shiny_front": {
+          "character": 3,
+          "palette": 1,
+          "characterSha256": "774d5792360614095dcf36d30c2dddb622e6e53a656d08a8c527f8b5842a6f98",
+          "paletteSha256": "9e37d579d9ba9b273936d91abb32743e2a0945fd0dd4c9cde7fa19b1ea3dc502",
+          "expectedFrameSha256": "151103215e370aa2d577992116b573f6613acac0cd448e2154b9c8083d32741b"
+        }
+      },
+      "mode": "shared_species_palette"
+    }
+  ],
+  "production": false
+}
