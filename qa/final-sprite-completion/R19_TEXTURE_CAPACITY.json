@@ -1,0 +1,39 @@
+{
+  "schema": "mercury-r19-texture-capacity-v1",
+  "inputBlobs": {
+    "stages": [
+      "b75736b96b4db8fd4af989e14759d70dc9909907",
+      "c84bc42eb9f7d4996a072c8f7b1a2c9c1c9dc244",
+      "25874e0e9d4057e192fe9311ea198bcdb83e0bf2",
+      "c9cb60ad81b0b203b729a5e62f46db23733ac8da"
+    ],
+    "palettes": "44df3622141699c68999cd3ad602d31cc82052d8"
+  },
+  "summary": {
+    "assets": 412,
+    "pixelChecks": 843776,
+    "windows": {
+      "30": {
+        "windows": 383,
+        "passes": 383,
+        "maxTextureBytes": 15360,
+        "maxPaletteBytes": 1920
+      },
+      "60": {
+        "windows": 353,
+        "passes": 353,
+        "maxTextureBytes": 30720,
+        "maxPaletteBytes": 3840
+      }
+    },
+    "texturePlacements": 32670,
+    "strictRejections": 412,
+    "negative": 3,
+    "productionAllowed": false
+  },
+  "limitations": [
+    "Assumes hypothetical 128KiB texture and 32KiB texture palette address windows, not verified available space. Strict reservation policy rejects all candidates.",
+    "Linear nibble layout is host experiment; actual GX texture sampling, modulation, depth, alpha, priority, UI layering, VRAM sharing and timing require native tests.",
+    "Separate texture allocations, normal and selected palette variants, no production IDs or approval."
+  ]
+}
