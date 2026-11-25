@@ -1,0 +1,57 @@
+{
+  "schema": "mercury-r18-pinned-sdk-load-bounds-v1",
+  "baseline": "dfa2445e2608a6b321a3b9ebad9d0e14ebb0da63",
+  "sourcePins": {
+    "platinum": {
+      "ref": "c248fb3f8cc9934ded800e489567c5c0eeee92eb",
+      "nitroSystemWrap": "0ce433ba91451435bec237238da76dd19778ab0d",
+      "nitroSdkWrap": "3f8b1606f2d45abf76b3039a524cdfd1024f4091",
+      "mesonBuild": "37b6e562bdd35299982dce2f9a614155aed0e2c8",
+      "install": "07d36f6cad03b9ec125869bd760d9c2628121492"
+    },
+    "nitroSystem": {
+      "repository": "ntrtwl/NitroSystem",
+      "ref": "21c8fd078fdda34f3c2622ef0751d00adaacf890",
+      "imageSource": "871ea8ee9ee7fef5473275344def8696175b6013",
+      "imageHeader": "b8a48c8158d82378fbd99110dd6674f7e72798c7"
+    },
+    "nitroSdk": {
+      "repository": "ntrtwl/NitroSDK",
+      "ref": "eaae40f199c0a8827947afbc33227b6ba2f9d45c",
+      "gxLoad2d": "899922208aab297226edfa129d3a11581bdc8bbe"
+    }
+  },
+  "findings": [
+    "NNS_G2dLoadPalette passes pSrcData->szByte and supplied address to DoLoadingPalette_ (g2d_Image.c:365-376). Nonextended main OBJ sends exact bytes to GX_LoadOBJPltt (180-207).",
+    "NNS_G2dLoadPaletteEx uses 32 bytes per PLTT16 palette and indexed offsets from PCMP (219-250); not a generic bounds clamp.",
+    "GX_LoadOBJPltt and GXS_LoadOBJPltt assert offset+szByte <= respective hardware OBJ palette size and even alignment, then DMA-copy requested bytes (gx_load2d.c:30-47). No clamp shown; assertion behavior depends on build configuration.",
+    "If unpacked shared palette size is 512 bytes, PC base offsets 64 and 192 would produce end offsets 576 and 704 against standard 512-byte OBJ palette capacity. This is a conditional risk, not observed runtime overflow; exact SDK unpacked palette size and compiled NCLR still unverified.",
+    "No currently verified free native slots. Experimental PC windows show that simply using five unknown slots cannot support full boxes even if all five become available."
+  ],
+  "environment": {
+    "hostGcc": "/usr/bin/gcc",
+    "clang": "17.0.0",
+    "ninja": "/usr/bin/ninja",
+    "notOnPath": [
+      "arm-none-eabi-gcc",
+      "arm-none-eabi-as",
+      "nitrogfx",
+      "melonDS",
+      "melonds",
+      "desmume",
+      "qemu-system-arm",
+      "meson"
+    ],
+    "fullNativeBuild": false,
+    "emulatorExecuted": false,
+    "notes": "Pinned upstream INSTALL and meson build require additional tools/dependencies; no installation, purchases or external private-source transfer attempted. Previous network restriction not retested in this release."
+  },
+  "sourceBlob": "d31be486707d95d2083441c0ac24989e8da68f86",
+  "testsBlob": "41c1d37208ccc4b9db224790ab2e8e18f7f75840",
+  "mainPins": {
+    "Sprites": "f15c4671bf7afb15450fc7801bde17aefcdc4f7e",
+    "Mercury-redux-dex": "faa7cb4016d8030fb4661b49114352d79cac7944",
+    "platinum-modern-ds": "5525e961a1fb98c62bd53bc4a27b0276a39f6719"
+  },
+  "productionAllowed": false
+}
