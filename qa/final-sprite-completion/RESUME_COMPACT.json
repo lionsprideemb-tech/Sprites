@@ -48,14 +48,14 @@
     "sourceQuartetsRecovered": 0
   },
   "next": {
-    "cohort": "NATIVE_SCREEN_RESOURCE_CONTRACT_AND_GENERATED_ICON_SCREEN",
-    "firstName": "Audit actual party/PC screen OBJ reservation and mapping, develop isolated resource container validation and continue generated icon screen from offset 10",
-    "offset": 10,
-    "eligible": 336,
+    "cohort": "GENERATED_ICON_COMPLETION_AND_NATIVE_CONTAINER_ACCEPTANCE",
+    "firstName": "Continue verified generated icon driver from offset 94; locate exact pinned PC implementation and independent native container compiler evidence",
+    "offset": 94,
+    "eligible": 252,
     "priorManifestRemainingUntested": 0,
     "completedBulkOffset": 200
   },
-  "policy": "Offline QA only; no production IDs, main changes, ROM changes, invented artwork or approvals. Preserve Delta Flygon unapproved. Check latest branch head and reconcile any batches after checkpoint before resuming. All ordinary conversions and prior-manifest retests are exhausted; no retest repetition without a new lossless method or original source. Release 9 offline lock does not establish native game readiness; do not repeat exhausted source or scale searches unless new evidence exists. Release 10: all 417 accessible archive binaries and 1668 resource member pairs verified; nine historical binary locators remain unresolved. Symbolic handles only; no production integration. Release 11 adds eight offline icon layout candidates and tested symbolic route gates; no native runtime or approval inferred. Release 12 completed eligible original icon inventory scan, with 66 offline candidate icons and one 16-color hold. Native bank allocation and runtime remain gated. Release 13 adds host-only native resource staging and two exact experimental Lilleo payloads; generated candidate QA separate from original artwork approval.",
+  "policy": "Offline QA only; no production IDs, main changes, ROM changes, invented artwork or approvals. Preserve Delta Flygon unapproved. Check latest branch head and reconcile any batches after checkpoint before resuming. All ordinary conversions and prior-manifest retests are exhausted; no retest repetition without a new lossless method or original source. Release 9 offline lock does not establish native game readiness; do not repeat exhausted source or scale searches unless new evidence exists. Release 10: all 417 accessible archive binaries and 1668 resource member pairs verified; nine historical binary locators remain unresolved. Symbolic handles only; no production integration. Release 11 adds eight offline icon layout candidates and tested symbolic route gates; no native runtime or approval inferred. Release 12 completed eligible original icon inventory scan, with 66 offline candidate icons and one 16-color hold. Native bank allocation and runtime remain gated. Release 13 adds host-only native resource staging and two exact experimental Lilleo payloads; generated candidate QA separate from original artwork approval. Release 14 adds 84 separate generated icon technical passes and 95 host-validated prototype containers; no production bindings or runtime acceptance.",
   "archiveStorage": "First 33 new archives in existing ZIP; all 210 in pinned batch JSON manifest with SHA-256 and Git digests.",
   "registryHoldPixelProbe": {
     "path": "qa/final-sprite-completion/REGISTRY_HOLD_PIXEL_PROBE_WAIL_FAMILY.json",
@@ -329,6 +329,57 @@
       "Lilleo 8bpp and four-object split 4bpp are exact RGB555/alpha experimental payloads only; no original edited or production route cleared.",
       "Generated candidates are pre-existing derived icons, tested separately, no approval. 336 eligible candidates remain untested in R13 inventory.",
       "No new evidence for nine missing archives or 21 registry holds. Canonical registry and main pins preserved, native compatibility unverified."
+    ]
+  },
+  "release14": {
+    "evidenceCommit": "57548b861e9c78f229ac46bf6ba010f77c204d78",
+    "evidence": {
+      "r14_generated_icon_driver.js": "cb6db3781a71c19a8f2c377a469b9e91fdac195c",
+      "r14_icon_containers.js": "faeff63e004a3b968a519f3e6f79a736741e80c0",
+      "R14_ICON_CONTAINER_QA.json": "f42ffda997d9e352c0fda1d5cdbcd68a7ad05e10",
+      "R14_SCREEN_STATIC_CONTRACT.json": "6867abb0798922c13b1cfcc4b6dcc4b950a99c6f",
+      "R14_GENERATED_ICONS_02.json": "75eb695324ff5fcca56bbd9ad5a66fd9ba448ad9",
+      "R14_GENERATED_ICONS_03.json": "e986221182ac69077f0d95a2a020f5e4e79107bd",
+      "R14_GENERATED_ICONS_04.json": "7e7d8610e62aef3457c78db7ea801505b95f21cb",
+      "R14_GENERATED_ICONS_05.json": "4ad7ca97b99fc22e96be4968313163a340ac6026",
+      "R14_GENERATED_ICONS_06.json": "774d43fdaf713454f72aa1c03c39bf6e9e32434e",
+      "R14_GENERATED_ICONS_07.json": "bd3aa0b9338aa0dd180df397bb264e2d8816bc6b",
+      "R14_GENERATED_ICONS_08.json": "32d64fe93fb656980762c3887e613ca63f430bba"
+    },
+    "summary": {
+      "originalIconCandidates": 66,
+      "ncgrPrototypeContainers": 66,
+      "nclrPrototypeContainers": 29,
+      "containerPixelRoundtrip": 135168,
+      "malformedContainerRejections": 28,
+      "generatedEligible": 346,
+      "generatedNewTested": 84,
+      "generatedNewPasses": 84,
+      "generatedCumulativeTested": 94,
+      "generatedCumulativePasses": 94,
+      "generatedRemaining": 252,
+      "generatedNextOffset": 94,
+      "partyPinnedStaticAudit": true,
+      "pcNewerComparisonOnly": true,
+      "actualFreePaletteSlotsVerified": false,
+      "lilleoNativeApproved": false,
+      "verifiedArchiveBinaries": 417,
+      "missingHistoricalArchiveBinaries": 9,
+      "registryHoldsRemaining": 21,
+      "nativeCompilerVerified": false,
+      "nativeEmulatorVerified": false,
+      "mainUnchanged": true
+    },
+    "mainPins": {
+      "Sprites": "f15c4671bf7afb15450fc7801bde17aefcdc4f7e",
+      "Mercury-redux-dex": "faa7cb4016d8030fb4661b49114352d79cac7944",
+      "platinum-modern-ds": "5525e961a1fb98c62bd53bc4a27b0276a39f6719"
+    },
+    "limitations": [
+      "NCGR and NCLR prototypes verified with a host writer/reader based on pinned nitrogfx source; no independent native compiler or SDK execution. Single-bank NCLR is unpadded, unlike potentially padded shared resource.",
+      "Pinned party source checked, generated resdat unavailable; exact free palette slots unknown. PC newer upstream comparison is not pinned-runtime acceptance.",
+      "All 84 newly screened generated candidates are existing derived artwork and remain unapproved. 252 eligible remain.",
+      "Lilleo split objects and 8bpp routes remain experimental; extended OBJ palette support disabled in inspected screen code. No new recovery evidence for nine archives or 21 registry holds."
     ]
   }
 }
