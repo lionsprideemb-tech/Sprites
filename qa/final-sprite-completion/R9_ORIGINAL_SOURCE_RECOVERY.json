@@ -1,0 +1,4942 @@
+{
+  "schema": "mercury-r9-original-source-recovery-lock-v1",
+  "baseline": "c42cc3dcba99d839bda9a1a2e60a46a43105404d",
+  "sourceTrees": [
+    "c59b6753772aef57b72348a32ff4c8c4aeff3068",
+    "621919c950be140ba2baed510cc3345472a259c0"
+  ],
+  "workbookBlob": "6d7228caeb24288ef210b1b7c3fe9ba7df5a3121",
+  "summary": {
+    "rows": 82,
+    "workbook": 77,
+    "legacy": 5,
+    "embeddedUniqueBlobs": 433,
+    "candidateUniqueBlobs": 426,
+    "candidateOnlyBlobs": [],
+    "unassignedMedia": [
+      "fe3bc457bb70876c8f4b90c8213893606ea57caf",
+      "e7d10ba92061eecd227f56240e435e69a8b34135",
+      "6cb479baa871f7bd11328295ab92dad31dbd72b3",
+      "50f9529834757843399e3d17b00956e947f33509",
+      "b7ef9b0849a5fb76cd0a9853b0b55fc5e9c1eb9f",
+      "6dc71c346f4750d4c2b60ea15c3ce7bc39151637",
+      "965f404fd573d797cd16e2c11aed491c27831b12"
+    ],
+    "originalQuartetsRecovered": 0
+  },
+  "rows": [
+    {
+      "artworkKey": "breloom-alternate-form-3|gitblob:037b02fb419902e179dadee63499792268e54261",
+      "reviewId": "R0421",
+      "decision": "keep",
+      "source": "Reborn / Plates of Arceus",
+      "missing": [
+        "shinyFront",
+        "shinyBack"
+      ],
+      "donorKeys": [],
+      "evidence": {
+        "files": [
+          {
+            "path": "breloom-alternate-form-3/back.png",
+            "sha": "686decd4d167451333976359cac01c592f60dccc"
+          },
+          {
+            "path": "breloom-alternate-form-3/front.png",
+            "sha": "037b02fb419902e179dadee63499792268e54261"
+          }
+        ],
+        "normalPinsPresent": true
+      },
+      "disposition": "EXCLUDE_MISSING_ORIGINAL_VIEWS",
+      "productionAllowed": false
+    },
+    {
+      "artworkKey": "combee-alternate-form-1|gitblob:86f2206f561d9bee895a82eef93229d55fc8b389",
+      "reviewId": "R0607",
+      "decision": "keep",
+      "source": "Reborn / Plates of Arceus",
+      "missing": [
+        "shinyFront",
+        "shinyBack"
+      ],
+      "donorKeys": [],
+      "evidence": {
+        "files": [
+          {
+            "path": "combee-alternate-form-1/back.png",
+            "sha": "df446be87693b01af92b14e9f13665c482cbfa75"
+          },
+          {
+            "path": "combee-alternate-form-1/front.png",
+            "sha": "86f2206f561d9bee895a82eef93229d55fc8b389"
+          }
+        ],
+        "normalPinsPresent": true
+      },
+      "disposition": "EXCLUDE_MISSING_ORIGINAL_VIEWS",
+      "productionAllowed": false
+    },
+    {
+      "artworkKey": "crustle-alternate-form-1|gitblob:520b310c1f881c630e5e892bb2810c87bb48b87c",
+      "reviewId": "R0718",
+      "decision": "keep",
+      "source": "Reborn / Plates of Arceus",
+      "missing": [
+        "shinyFront",
+        "shinyBack"
+      ],
+      "donorKeys": [],
+      "evidence": {
+        "files": [
+          {
+            "path": "crustle-alternate-form-1/back.png",
+            "sha": "e332bb6e47125b75e0acb23c7ad640ce206ff18a"
+          },
+          {
+            "path": "crustle-alternate-form-1/front.png",
+            "sha": "520b310c1f881c630e5e892bb2810c87bb48b87c"
+          }
+        ],
+        "normalPinsPresent": true
+      },
+      "disposition": "EXCLUDE_MISSING_ORIGINAL_VIEWS",
+      "productionAllowed": false
+    },
+    {
+      "artworkKey": "dwebble-alternate-form-1|gitblob:5f4294ed3b910dfef87bb4135491a9a96aa0c70c",
+      "reviewId": "R0717",
+      "decision": "keep",
+      "source": "Reborn / Plates of Arceus",
+      "missing": [
+        "shinyFront",
+        "shinyBack"
+      ],
+      "donorKeys": [],
+      "evidence": {
+        "files": [
+          {
+            "path": "dwebble-alternate-form-1/back.png",
+            "sha": "a27caa3c6da04fff13bddd200e9c6e4476a6b178"
+          },
+          {
+            "path": "dwebble-alternate-form-1/front.png",
+            "sha": "5f4294ed3b910dfef87bb4135491a9a96aa0c70c"
+          }
+        ],
+        "normalPinsPresent": true
+      },
+      "disposition": "EXCLUDE_MISSING_ORIGINAL_VIEWS",
+      "productionAllowed": false
+    },
+    {
+      "artworkKey": "platinum-redux-absol|gitblob:6f708288e677ad16eb7a4a7efe19366c9e4a7e47",
+      "reviewId": "R0535",
+      "decision": "keep",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "missing": [
+        "shinyBack"
+      ],
+      "donorKeys": [],
+      "evidence": {
+        "workbookRow": 108,
+        "normalPairMatches": [
+          108
+        ],
+        "sourceViews": {
+          "front": {
+            "source_member": "xl/media/image295.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0073_image295.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 2886,
+            "sha256": "a9a8fbbe1e0c01ae8c1a157ee235dcd26ffc4d965d128be6358e1b31261c9627",
+            "gitBlob": "6f708288e677ad16eb7a4a7efe19366c9e4a7e47",
+            "cell": "L108"
+          },
+          "back": {
+            "source_member": "xl/media/image310.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0247_image310.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 3025,
+            "sha256": "04f22198d3b68149256a596eaeb4979ee945e0a841d762fa6dff6300b3194e0b",
+            "gitBlob": "198a6a6674940c7422a2f056f614f5f7971ab1d5",
+            "cell": "M108"
+          },
+          "shiny": {
+            "source_member": "xl/media/image320.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0130_image320.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 2886,
+            "sha256": "909f87b49ea290cf7c6fe72061e7e47e04bd23ae648844dcf27801ec2d5f96bc",
+            "gitBlob": "7ba13a7368e2915810dc781e6eebdbbc4aaee6e9",
+            "cell": "N108"
+          }
+        },
+        "allPinnedMediaPresent": true,
+        "shinyBackCellPresent": false,
+        "priorPixelMappingCandidate": true
+      },
+      "disposition": "EXCLUDE_MISSING_ORIGINAL_VIEWS",
+      "productionAllowed": false
+    },
+    {
+      "artworkKey": "platinum-redux-arbok|gitblob:3c031739870cff5587bc1b4df64f90be42a5c995",
+      "reviewId": "R0030",
+      "decision": "keep",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "missing": [
+        "shinyBack"
+      ],
+      "donorKeys": [],
+      "evidence": {
+        "workbookRow": 9,
+        "normalPairMatches": [
+          9
+        ],
+        "sourceViews": {
+          "front": {
+            "source_member": "xl/media/image9.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0272_image9.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 3727,
+            "sha256": "771327a6c00aa79164b755bdd5a7c6e2a2a2f5578af0a06a6f2224755b5aabfb",
+            "gitBlob": "3c031739870cff5587bc1b4df64f90be42a5c995",
+            "cell": "L9"
+          },
+          "back": {
+            "source_member": "xl/media/image31.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0024_image31.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 3510,
+            "sha256": "a050fe63c26626884d65b3e7def540b85f7483a34cc0f4ddbf25baeb221cb58e",
+            "gitBlob": "687a38d0117ebca105a9789448b11dd4c981e4ef",
+            "cell": "M9"
+          },
+          "shiny": {
+            "source_member": "xl/media/image10.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0322_image10.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 3653,
+            "sha256": "9cdaf976933a1d9391e689a9dee0be4b559360078e80b023666966730c5b605a",
+            "gitBlob": "449edeb2f8845cdec02f15af8a0b9254e60c50f9",
+            "cell": "N9"
+          }
+        },
+        "allPinnedMediaPresent": true,
+        "shinyBackCellPresent": false,
+        "priorPixelMappingCandidate": true
+      },
+      "disposition": "EXCLUDE_MISSING_ORIGINAL_VIEWS",
+      "productionAllowed": false
+    },
+    {
+      "artworkKey": "platinum-redux-ariados|gitblob:ca3ed1490868275140b15c7dd3fcef401af763cc",
+      "reviewId": "R0291",
+      "decision": "keep",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "missing": [
+        "shinyFront",
+        "shinyBack"
+      ],
+      "donorKeys": [],
+      "evidence": {
+        "workbookRow": 57,
+        "normalPairMatches": [
+          57
+        ],
+        "sourceViews": {
+          "front": {
+            "source_member": "xl/media/image156.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0238_image156.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 2756,
+            "sha256": "95fbeac947a4d23fa40cb8a21f878281523b4081d39587173e66577c24dfc4ca",
+            "gitBlob": "ca3ed1490868275140b15c7dd3fcef401af763cc",
+            "cell": "L57"
+          },
+          "back": {
+            "source_member": "xl/media/image153.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0392_image153.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 2953,
+            "sha256": "95afb6b969d04361db4efe789a616ff647009c371bc6b685fcb4a9db00c1e2f6",
+            "gitBlob": "b980e7937655828e4076c9a4f72a5b42626a918b",
+            "cell": "M57"
+          },
+          "shiny": {
+            "source_member": "xl/media/image162.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0107_image162.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 2799,
+            "sha256": "daf7bdc2990e5dca571fd1bafaf0b4ce8958093ce450ad5a06a76593655139e5",
+            "gitBlob": "3158252dbdc9d9d89c52390f65a8d6980ce5fa5f",
+            "cell": "N57"
+          }
+        },
+        "allPinnedMediaPresent": true,
+        "shinyBackCellPresent": false,
+        "priorPixelMappingCandidate": false
+      },
+      "disposition": "EXCLUDE_MISSING_ORIGINAL_VIEWS",
+      "productionAllowed": false
+    },
+    {
+      "artworkKey": "platinum-redux-banette|gitblob:f9ff5d850e66cd532eab7cd631f93b5b49074ab4",
+      "reviewId": "R0524",
+      "decision": "keep",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "missing": [
+        "shinyBack"
+      ],
+      "donorKeys": [],
+      "evidence": {
+        "workbookRow": 106,
+        "normalPairMatches": [
+          106
+        ],
+        "sourceViews": {
+          "front": {
+            "source_member": "xl/media/image304.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0338_image304.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 3386,
+            "sha256": "c40b726af1fbe28bf173e0a8621353cc4d749d9b0f4c0c685e6a8528cc54bbae",
+            "gitBlob": "f9ff5d850e66cd532eab7cd631f93b5b49074ab4",
+            "cell": "L106"
+          },
+          "back": {
+            "source_member": "xl/media/image293.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0172_image293.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 3184,
+            "sha256": "8aff757a4641eca4c3d7385c747df885812901337a6650cc03973a75be8d96d2",
+            "gitBlob": "4caffde0b7b5e9f7c1dc4a8e48ddc665a70b428b",
+            "cell": "M106"
+          },
+          "shiny": {
+            "source_member": "xl/media/image333.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0402_image333.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 3386,
+            "sha256": "416a25d678b2dc2eb4b499c31b3ff7d6d94d4644269454cd94756222e9c218f6",
+            "gitBlob": "628b6c15f0606f0bca5e746f117705a9cb939295",
+            "cell": "N106"
+          }
+        },
+        "allPinnedMediaPresent": true,
+        "shinyBackCellPresent": false,
+        "priorPixelMappingCandidate": true
+      },
+      "disposition": "EXCLUDE_MISSING_ORIGINAL_VIEWS",
+      "productionAllowed": false
+    },
+    {
+      "artworkKey": "platinum-redux-bastiodon|gitblob:c32f5d23e26dadc86fe5f08239d2628508818bca",
+      "reviewId": "R0603",
+      "decision": "keep",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "missing": [
+        "shinyBack"
+      ],
+      "donorKeys": [],
+      "evidence": {
+        "workbookRow": 121,
+        "normalPairMatches": [
+          121
+        ],
+        "sourceViews": {
+          "front": {
+            "source_member": "xl/media/image347.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0339_image347.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 3721,
+            "sha256": "3aa352e790ced16d6175c32b27de1c0de578fac02b99dbeaf9d32a7fcab907ab",
+            "gitBlob": "c32f5d23e26dadc86fe5f08239d2628508818bca",
+            "cell": "L121"
+          },
+          "back": {
+            "source_member": "xl/media/image349.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0218_image349.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 3438,
+            "sha256": "5a6a664e91d93579785c0729978e29a78c8bf049c35ebfc0a41cbfcbd7c0e398",
+            "gitBlob": "a38b7058ff719017451257eeef08e8e3fa8940e7",
+            "cell": "M121"
+          },
+          "shiny": {
+            "source_member": "xl/media/image348.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0384_image348.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 3721,
+            "sha256": "2172ff5027e17ace50ec63fb0693a63903e99ca4171287f38be3921a8ff90275",
+            "gitBlob": "e9f9e35696290cda3a539277b696309f85f21f97",
+            "cell": "N121"
+          }
+        },
+        "allPinnedMediaPresent": true,
+        "shinyBackCellPresent": false,
+        "priorPixelMappingCandidate": false
+      },
+      "disposition": "EXCLUDE_MISSING_ORIGINAL_VIEWS",
+      "productionAllowed": false
+    },
+    {
+      "artworkKey": "platinum-redux-beautifly|gitblob:7cd6a9f827f795948877a2d3b16244b64eddadf0",
+      "reviewId": "R0405",
+      "decision": "keep",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "missing": [
+        "shinyFront",
+        "shinyBack"
+      ],
+      "donorKeys": [],
+      "evidence": {
+        "workbookRow": 83,
+        "normalPairMatches": [
+          83
+        ],
+        "sourceViews": {
+          "front": {
+            "source_member": "xl/media/image240.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0068_image240.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 2754,
+            "sha256": "a3c04e2b195b9818e64e47d486de1a8855fc1b4d1ba20c33d5afa98f76f65ba4",
+            "gitBlob": "7cd6a9f827f795948877a2d3b16244b64eddadf0",
+            "cell": "L83"
+          },
+          "back": {
+            "source_member": "xl/media/image238.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0147_image238.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 3997,
+            "sha256": "396f73b14ea4532dbd404f97e7b269bc1a85c5b0cc5acb61c809c9df5e1697c9",
+            "gitBlob": "e33ed6b4a0aee4b598de620ea996c20567ca9cbe",
+            "cell": "M83"
+          },
+          "shiny": {
+            "source_member": "xl/media/image244.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0263_image244.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 2704,
+            "sha256": "3e7a0b08b5fbff68c7166a263d47f3814515b7588036b6c711888b33d905d9ba",
+            "gitBlob": "e8d96f352df1e942555fd4cd61613245b563fe46",
+            "cell": "N83"
+          }
+        },
+        "allPinnedMediaPresent": true,
+        "shinyBackCellPresent": false,
+        "priorPixelMappingCandidate": false
+      },
+      "disposition": "EXCLUDE_MISSING_ORIGINAL_VIEWS",
+      "productionAllowed": false
+    },
+    {
+      "artworkKey": "platinum-redux-bellossom|gitblob:f665e8972c1e7d383985e7f590773612b8896e41",
+      "reviewId": "R0062",
+      "decision": "keep",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "missing": [
+        "shinyBack"
+      ],
+      "donorKeys": [],
+      "evidence": {
+        "workbookRow": 59,
+        "normalPairMatches": [
+          59
+        ],
+        "sourceViews": {
+          "front": {
+            "source_member": "xl/media/image173.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0286_image173.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 2826,
+            "sha256": "dcc71fe13fb0dd5650f4004a00599c2040986ee48641cb7e88cb992b3daf713d",
+            "gitBlob": "f665e8972c1e7d383985e7f590773612b8896e41",
+            "cell": "L59"
+          },
+          "back": {
+            "source_member": "xl/media/image159.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0049_image159.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 3600,
+            "sha256": "2cbfc9e7599a2d344ce0e5cb7eb1508993ad4c7fb0c9aa5b361877755c566855",
+            "gitBlob": "3a4c80cc2567773841043bec2952305fc3e2ee13",
+            "cell": "M59"
+          },
+          "shiny": {
+            "source_member": "xl/media/image164.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0215_image164.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 2826,
+            "sha256": "c9cca1b2075e2fe504f4fa4044aeab6602d96f6d61ff5909eb8f1f7d9a8e5079",
+            "gitBlob": "e707b34ec2de6e654ffb84c74dd51a36c2d8710b",
+            "cell": "N59"
+          }
+        },
+        "allPinnedMediaPresent": true,
+        "shinyBackCellPresent": false,
+        "priorPixelMappingCandidate": true
+      },
+      "disposition": "EXCLUDE_MISSING_ORIGINAL_VIEWS",
+      "productionAllowed": false
+    },
+    {
+      "artworkKey": "platinum-redux-blastoise|gitblob:c8d60f2b52772f5493b9ee1e9e53774d65e32509",
+      "reviewId": "R0006",
+      "decision": "keep",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "missing": [
+        "shinyBack"
+      ],
+      "donorKeys": [],
+      "evidence": {
+        "workbookRow": 5,
+        "normalPairMatches": [
+          5
+        ],
+        "sourceViews": {
+          "front": {
+            "source_member": "xl/media/image11.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0253_image11.png",
+            "width": 160,
+            "height": 80,
+            "mode": "RGB",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 5979,
+            "sha256": "f98a7a8211d980428099768c9f52e9f692ea47599065a858ab4df0adc4faf0b2",
+            "gitBlob": "c8d60f2b52772f5493b9ee1e9e53774d65e32509",
+            "cell": "L5"
+          },
+          "back": {
+            "source_member": "xl/media/image29.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0141_image29.png",
+            "width": 160,
+            "height": 80,
+            "mode": "RGB",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 4925,
+            "sha256": "a2a702ef409251adb5576fbcbbaa961f681c082d4b775a6766540fb345bafeeb",
+            "gitBlob": "26cfe9aa0d9be4b273f0ac1770d4a32672ac0270",
+            "cell": "M5"
+          },
+          "shiny": {
+            "source_member": "xl/media/image12.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0194_image12.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 4310,
+            "sha256": "9c451b34f8023107d0c793e4293e431a6081f8943ae55770ec96b28d5b02d569",
+            "gitBlob": "8a322f82cd07021116209b182ff21b0df38c5ec9",
+            "cell": "N5"
+          }
+        },
+        "allPinnedMediaPresent": true,
+        "shinyBackCellPresent": false,
+        "priorPixelMappingCandidate": true
+      },
+      "disposition": "EXCLUDE_MISSING_ORIGINAL_VIEWS",
+      "productionAllowed": false
+    },
+    {
+      "artworkKey": "platinum-redux-bronzong|gitblob:2d3bd0d2643725e8a99d3516112ab33106c09391",
+      "reviewId": "R0634",
+      "decision": "keep",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "missing": [
+        "shinyBack"
+      ],
+      "donorKeys": [],
+      "evidence": {
+        "workbookRow": 127,
+        "normalPairMatches": [
+          127
+        ],
+        "sourceViews": {
+          "front": {
+            "source_member": "xl/media/image371.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0214_image371.png",
+            "width": 160,
+            "height": 80,
+            "mode": "RGB",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 4745,
+            "sha256": "71facd0d18aa32ecc31fa0dcc51491d61097cfb0b3e1f91f4568b6295bfa2f4d",
+            "gitBlob": "2d3bd0d2643725e8a99d3516112ab33106c09391",
+            "cell": "L127"
+          },
+          "back": {
+            "source_member": "xl/media/image359.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0125_image359.png",
+            "width": 160,
+            "height": 80,
+            "mode": "RGB",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 5200,
+            "sha256": "61612a35a12e1e35d035bbcc319c5ef6030b38a4ef552d2d74728a8069668a6f",
+            "gitBlob": "d3151e09597fb5a88d9cb32462eb3df74c4fe7dd",
+            "cell": "M127"
+          },
+          "shiny": {
+            "source_member": "xl/media/image369.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0419_image369.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 3424,
+            "sha256": "b7f7bf662dac9d898d1a81b4216b597a673268b388982cf27e67c11e37b94fe2",
+            "gitBlob": "d91558ebc37566fbea953629bfa01838913b2a49",
+            "cell": "N127"
+          }
+        },
+        "allPinnedMediaPresent": true,
+        "shinyBackCellPresent": false,
+        "priorPixelMappingCandidate": true
+      },
+      "disposition": "EXCLUDE_MISSING_ORIGINAL_VIEWS",
+      "productionAllowed": false
+    },
+    {
+      "artworkKey": "platinum-redux-celebi|gitblob:b4a15a96b40334640ef14a0506c119cf06358df0",
+      "reviewId": "R0391",
+      "decision": "keep",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "missing": [
+        "shinyBack"
+      ],
+      "donorKeys": [],
+      "evidence": {
+        "workbookRow": 78,
+        "normalPairMatches": [
+          78
+        ],
+        "sourceViews": {
+          "front": {
+            "source_member": "xl/media/image216.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0171_image216.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 2253,
+            "sha256": "2317fb38208db5c3223193d9638609295be1de28773fec1551d7d01b6865a4ed",
+            "gitBlob": "b4a15a96b40334640ef14a0506c119cf06358df0",
+            "cell": "L78"
+          },
+          "back": {
+            "source_member": "xl/media/image225.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0010_image225.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 3414,
+            "sha256": "4ffb9f607abf101686917f25ef2624859ed73986b6ad5ea4ef3eb20ba152577b",
+            "gitBlob": "1345cf6014ccfc03d9e1e52eb7329123bc7b69f1",
+            "cell": "M78"
+          },
+          "shiny": {
+            "source_member": "xl/media/image235.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0136_image235.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 2253,
+            "sha256": "c0d55e0a3b30cbe9c25ccec9ca4dd1f751622cac0b4e912dd1c12297cf92b09f",
+            "gitBlob": "208d3baf20f8858d698951b4be9697c386976838",
+            "cell": "N78"
+          }
+        },
+        "allPinnedMediaPresent": true,
+        "shinyBackCellPresent": false,
+        "priorPixelMappingCandidate": true
+      },
+      "disposition": "EXCLUDE_MISSING_ORIGINAL_VIEWS",
+      "productionAllowed": false
+    },
+    {
+      "artworkKey": "platinum-redux-charizard|gitblob:deedf2109f89aa41d1e55518b41a1e9c51dbcbb9",
+      "reviewId": "R0004",
+      "decision": "keep",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "missing": [
+        "shinyBack"
+      ],
+      "donorKeys": [],
+      "evidence": {
+        "workbookRow": 4,
+        "normalPairMatches": [
+          4
+        ],
+        "sourceViews": {
+          "front": {
+            "source_member": "xl/media/image13.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0131_image13.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 4704,
+            "sha256": "cf24f1395fc3890318b97e3ef096e6c67a0924ebe2c63258b798f324ee443851",
+            "gitBlob": "deedf2109f89aa41d1e55518b41a1e9c51dbcbb9",
+            "cell": "L4"
+          },
+          "back": {
+            "source_member": "xl/media/image2.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0420_image2.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 4642,
+            "sha256": "ee92ebee2051daf1cce5f038d33337a4d29bf22845ae30571ea7d9885cba079c",
+            "gitBlob": "5d90ce868c91b374243ef03db97cf9e97c8f5075",
+            "cell": "M4"
+          },
+          "shiny": {
+            "source_member": "xl/media/image18.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0267_image18.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 4704,
+            "sha256": "9b9d70b591fd723a83a5fc403267643e192028780ce9e31872384b425476c67f",
+            "gitBlob": "b68e7307586dca2d858dce85bf293c117e389ef6",
+            "cell": "N4"
+          }
+        },
+        "allPinnedMediaPresent": true,
+        "shinyBackCellPresent": false,
+        "priorPixelMappingCandidate": true
+      },
+      "disposition": "EXCLUDE_MISSING_ORIGINAL_VIEWS",
+      "productionAllowed": false
+    },
+    {
+      "artworkKey": "platinum-redux-clefable|gitblob:6d87237191f344454836f418c964c5fd2717059c",
+      "reviewId": "R0046",
+      "decision": "keep",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "missing": [
+        "shinyBack"
+      ],
+      "donorKeys": [],
+      "evidence": {
+        "workbookRow": 13,
+        "normalPairMatches": [
+          13
+        ],
+        "sourceViews": {
+          "front": {
+            "source_member": "xl/media/image47.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0083_image47.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 2952,
+            "sha256": "182913b0466d465463d1a4617df9fca05190b89abc905e6049afa91ce77fa527",
+            "gitBlob": "6d87237191f344454836f418c964c5fd2717059c",
+            "cell": "L13"
+          },
+          "back": {
+            "source_member": "xl/media/image51.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0223_image51.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 3109,
+            "sha256": "5bc02015378a81ed881c20ac25f78eca639c2851e5e4ddab6de8ca2d85195b1f",
+            "gitBlob": "fcd1eedad679c5ac81842449cabc938272e8a300",
+            "cell": "M13"
+          },
+          "shiny": {
+            "source_member": "xl/media/image39.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0399_image39.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 2948,
+            "sha256": "5fc7b06c0d772d0a294f8ddbb125191b2f624db3c424d92729b0657fb565ae8d",
+            "gitBlob": "96f1490de6ee0a2734081e87641f71b49ab22021",
+            "cell": "N13"
+          }
+        },
+        "allPinnedMediaPresent": true,
+        "shinyBackCellPresent": false,
+        "priorPixelMappingCandidate": true
+      },
+      "disposition": "EXCLUDE_MISSING_ORIGINAL_VIEWS",
+      "productionAllowed": false
+    },
+    {
+      "artworkKey": "platinum-redux-crawdaunt|gitblob:21241178017dc689494db2f2d52bee00258a9153",
+      "reviewId": "R0510",
+      "decision": "keep",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "missing": [
+        "shinyBack"
+      ],
+      "donorKeys": [],
+      "evidence": {
+        "workbookRow": 104,
+        "normalPairMatches": [
+          104
+        ],
+        "sourceViews": {
+          "front": {
+            "source_member": "xl/media/image296.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0023_image296.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 4034,
+            "sha256": "e9bcd44251f8ef58c0f6af10d3c0b6238480538df4743bce41e5919fc9a718ef",
+            "gitBlob": "21241178017dc689494db2f2d52bee00258a9153",
+            "cell": "L104"
+          },
+          "back": {
+            "source_member": "xl/media/image305.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0382_image305.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 3846,
+            "sha256": "5951b8feb8d7c876fff99739ef97230348bfb62f174d8ee0ff9ea725535ccd08",
+            "gitBlob": "677d9c1f31c38584b6a4f47688e2f57d288afe0b",
+            "cell": "M104"
+          },
+          "shiny": {
+            "source_member": "xl/media/image313.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0065_image313.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 4034,
+            "sha256": "f47ad291aca546897d6449860fd4c082bc9f1bb6a030c72fa2b0df850ccbc7fc",
+            "gitBlob": "1e01b478224f7d26762760bc7c21bc613c770297",
+            "cell": "N104"
+          }
+        },
+        "allPinnedMediaPresent": true,
+        "shinyBackCellPresent": false,
+        "priorPixelMappingCandidate": true
+      },
+      "disposition": "EXCLUDE_MISSING_ORIGINAL_VIEWS",
+      "productionAllowed": false
+    },
+    {
+      "artworkKey": "platinum-redux-dugtrio|gitblob:d73cd8930e46e9bc4962f54219ee0d03ff971c70",
+      "reviewId": "R0068",
+      "decision": "keep",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "missing": [
+        "shinyBack"
+      ],
+      "donorKeys": [],
+      "evidence": {
+        "workbookRow": 17,
+        "normalPairMatches": [
+          17
+        ],
+        "sourceViews": {
+          "front": {
+            "source_member": "xl/media/image37.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0357_image37.png",
+            "width": 160,
+            "height": 80,
+            "mode": "RGB",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 3030,
+            "sha256": "6835a11e562e70206e8df4b365e0f365bdf21144359c390a8aba9da3a7aaeb54",
+            "gitBlob": "d73cd8930e46e9bc4962f54219ee0d03ff971c70",
+            "cell": "L17"
+          },
+          "back": {
+            "source_member": "xl/media/image8.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0224_image8.png",
+            "width": 160,
+            "height": 80,
+            "mode": "RGB",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 4058,
+            "sha256": "5a52045bfc1c01037293680b35cb771e334f175c1ce5ce25249d636e767b134d",
+            "gitBlob": "fb8e42dd8b304051fe9750657d92381bb64a452e",
+            "cell": "M17"
+          },
+          "shiny": {
+            "source_member": "xl/media/image36.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0320_image36.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 2977,
+            "sha256": "d86d340be03f830a02cc3de04eab7bb2f2ae8ee0a8e12b60b9182515b46f6fb2",
+            "gitBlob": "8cf9bfae5efad389222728b53b1e7bf2bc03a780",
+            "cell": "N17"
+          }
+        },
+        "allPinnedMediaPresent": true,
+        "shinyBackCellPresent": false,
+        "priorPixelMappingCandidate": true
+      },
+      "disposition": "EXCLUDE_MISSING_ORIGINAL_VIEWS",
+      "productionAllowed": false
+    },
+    {
+      "artworkKey": "platinum-redux-electivire|gitblob:0c185e7f6dc8b5a476491800b4aae6dbcda68c62",
+      "reviewId": "R0206",
+      "decision": "keep",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "missing": [
+        "shinyBack"
+      ],
+      "donorKeys": [],
+      "evidence": {
+        "workbookRow": 134,
+        "normalPairMatches": [
+          134
+        ],
+        "sourceViews": {
+          "front": {
+            "source_member": "xl/media/image377.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0017_image377.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 5135,
+            "sha256": "3841d3ba8b92888f379a13e9e385d916d797bc1f7fe77b00f17ee9d448a92917",
+            "gitBlob": "0c185e7f6dc8b5a476491800b4aae6dbcda68c62",
+            "cell": "L134"
+          },
+          "back": {
+            "source_member": "xl/media/image387.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0149_image387.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 4146,
+            "sha256": "925a0e7e3d4da3af0d92cc744028c025204cee9366e00703c4a004e00e3cb95c",
+            "gitBlob": "6439b280037bc9a9678d6024f3392a378f01d4f8",
+            "cell": "M134"
+          },
+          "shiny": {
+            "source_member": "xl/media/image385.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0041_image385.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 5135,
+            "sha256": "ce423a05229302a796f6c21bc458b79c66d077a772358b63439bea8ee7262242",
+            "gitBlob": "49d4dac1a7726e00cd1d6f6dbbe645677c82514e",
+            "cell": "N134"
+          }
+        },
+        "allPinnedMediaPresent": true,
+        "shinyBackCellPresent": false,
+        "priorPixelMappingCandidate": true
+      },
+      "disposition": "EXCLUDE_MISSING_ORIGINAL_VIEWS",
+      "productionAllowed": false
+    },
+    {
+      "artworkKey": "platinum-redux-electrode|gitblob:83a2dad9abaf95fd4353803c64eb9e2ab990ccaf",
+      "reviewId": "R0157",
+      "decision": "keep",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "missing": [
+        "shinyBack"
+      ],
+      "donorKeys": [],
+      "evidence": {
+        "workbookRow": 31,
+        "normalPairMatches": [
+          31
+        ],
+        "sourceViews": {
+          "front": {
+            "source_member": "xl/media/image99.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0127_image99.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 2620,
+            "sha256": "0346d84a4d9d94d169a6e014d2642eac5e336c0fba3c627bad86a865adb2977b",
+            "gitBlob": "83a2dad9abaf95fd4353803c64eb9e2ab990ccaf",
+            "cell": "L31"
+          },
+          "back": {
+            "source_member": "xl/media/image78.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0048_image78.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 3250,
+            "sha256": "bd10e8c649909e71c3a4d933c2649e44cd54509acc1866c6ee5b02ed44a2a238",
+            "gitBlob": "ca5797ff2efeaa5175622581cd6eb05385457e01",
+            "cell": "M31"
+          },
+          "shiny": {
+            "source_member": "xl/media/image88.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0412_image88.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 2620,
+            "sha256": "c41e724fafd3d69c78363ad2e3b95d90f29d81f40b96d1b9dcee263385436a83",
+            "gitBlob": "618b4d923ce3ffbc44edf1d81fab50b30578297a",
+            "cell": "N31"
+          }
+        },
+        "allPinnedMediaPresent": true,
+        "shinyBackCellPresent": false,
+        "priorPixelMappingCandidate": true
+      },
+      "disposition": "EXCLUDE_MISSING_ORIGINAL_VIEWS",
+      "productionAllowed": false
+    },
+    {
+      "artworkKey": "platinum-redux-entei|gitblob:fb3d8fcbdd8263209439d5384d03f1c9b3db6300",
+      "reviewId": "R0377",
+      "decision": "keep",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "missing": [
+        "shinyBack"
+      ],
+      "donorKeys": [],
+      "evidence": {
+        "workbookRow": 75,
+        "normalPairMatches": [
+          75
+        ],
+        "sourceViews": {
+          "front": {
+            "source_member": "xl/media/image203.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0350_image203.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 4617,
+            "sha256": "8926af57b6439b8e3173f86dd19fc14e0717b72f913655fd4c4e7fc9d8444f4e",
+            "gitBlob": "fb3d8fcbdd8263209439d5384d03f1c9b3db6300",
+            "cell": "L75"
+          },
+          "back": {
+            "source_member": "xl/media/image208.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0158_image208.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 3830,
+            "sha256": "a1332f14e0d0df80305d9eecd1eb6db7c29ac3769e73fd771164e29add6e34e5",
+            "gitBlob": "6344d8ff008e61d59692fa1775ba96793541225c",
+            "cell": "M75"
+          },
+          "shiny": {
+            "source_member": "xl/media/image215.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0207_image215.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 4617,
+            "sha256": "8ea45575791fdc2418deab04afea8cf43a7669eb25626149ff9579f5ad74bb7a",
+            "gitBlob": "2157aaaf274cfd943c9db8a41d371ec3738bb247",
+            "cell": "N75"
+          }
+        },
+        "allPinnedMediaPresent": true,
+        "shinyBackCellPresent": false,
+        "priorPixelMappingCandidate": true
+      },
+      "disposition": "EXCLUDE_MISSING_ORIGINAL_VIEWS",
+      "productionAllowed": false
+    },
+    {
+      "artworkKey": "platinum-redux-espeon|gitblob:8a90080a46752face16cd3d81ed10f1460becc38",
+      "reviewId": "R0232",
+      "decision": "keep",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "missing": [
+        "shinyBack"
+      ],
+      "donorKeys": [],
+      "evidence": {
+        "workbookRow": 64,
+        "normalPairMatches": [
+          64
+        ],
+        "sourceViews": {
+          "front": {
+            "source_member": "xl/media/image167.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0026_image167.png",
+            "width": 160,
+            "height": 80,
+            "mode": "RGB",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 4313,
+            "sha256": "ae9364cd9c66b49e404f79e5d416052ab84364c55f46818ffbd7a3e012cc8a39",
+            "gitBlob": "8a90080a46752face16cd3d81ed10f1460becc38",
+            "cell": "L64"
+          },
+          "back": {
+            "source_member": "xl/media/image185.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0126_image185.png",
+            "width": 160,
+            "height": 80,
+            "mode": "RGB",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 4165,
+            "sha256": "cb1e72e015de317b8fb72724fffe009fbd54b0a56142148e7c13bc9459d07dd5",
+            "gitBlob": "c3ca7d458eaf4b5b5d4c8c1fedf63ce87c2d7e22",
+            "cell": "M64"
+          },
+          "shiny": {
+            "source_member": "xl/media/image189.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0330_image189.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 3358,
+            "sha256": "72d119f1e0af68d0a8f3d146ca5cc1dc8ebc08c3c457b241b9e860038d418f5c",
+            "gitBlob": "5e0883f5aa2542b37919a339887e9f80a7655d70",
+            "cell": "N64"
+          }
+        },
+        "allPinnedMediaPresent": true,
+        "shinyBackCellPresent": false,
+        "priorPixelMappingCandidate": true
+      },
+      "disposition": "EXCLUDE_MISSING_ORIGINAL_VIEWS",
+      "productionAllowed": false
+    },
+    {
+      "artworkKey": "platinum-redux-fearow|gitblob:5bff211e6a0ddfebf1cc06e480d114ab8a6f65fc",
+      "reviewId": "R0028",
+      "decision": "keep",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "missing": [
+        "shinyBack"
+      ],
+      "donorKeys": [],
+      "evidence": {
+        "workbookRow": 8,
+        "normalPairMatches": [
+          8
+        ],
+        "sourceViews": {
+          "front": {
+            "source_member": "xl/media/image23.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0424_image23.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 4518,
+            "sha256": "c70a8635ff11f0baa3d564f79b930b80571f1039773ab139f057a9e8947e5441",
+            "gitBlob": "5bff211e6a0ddfebf1cc06e480d114ab8a6f65fc",
+            "cell": "L8"
+          },
+          "back": {
+            "source_member": "xl/media/image25.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0333_image25.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 4000,
+            "sha256": "6062d1c6fca18c76b1d9c0a0ef59fdd6bc223ed393d51239ab46e43db545ff15",
+            "gitBlob": "e4a9466a26ad01845103f4b9072e15a4396b4fb8",
+            "cell": "M8"
+          },
+          "shiny": {
+            "source_member": "xl/media/image34.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0168_image34.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 4518,
+            "sha256": "7a2ad3b869b1802387c2c599ac3c40f0e5f720cc9317ee555376ceae3504f325",
+            "gitBlob": "0b2d8ee3d6e105afe786e29b0cc9c50aa85d7b48",
+            "cell": "N8"
+          }
+        },
+        "allPinnedMediaPresent": true,
+        "shinyBackCellPresent": false,
+        "priorPixelMappingCandidate": true
+      },
+      "disposition": "EXCLUDE_MISSING_ORIGINAL_VIEWS",
+      "productionAllowed": false
+    },
+    {
+      "artworkKey": "platinum-redux-furret|gitblob:b8114f973f4bfd7a7d2d34508fb2994838dc6b9a",
+      "reviewId": "R0284",
+      "decision": "keep",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "missing": [
+        "shinyFront",
+        "shinyBack"
+      ],
+      "donorKeys": [],
+      "evidence": {
+        "workbookRow": 54,
+        "normalPairMatches": [
+          54
+        ],
+        "sourceViews": {
+          "front": {
+            "source_member": "xl/media/image158.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0195_image158.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 3177,
+            "sha256": "5d88349966f30d8d6f314b964eeef9c6626708b93f679ce08e0a2422e8f81339",
+            "gitBlob": "b8114f973f4bfd7a7d2d34508fb2994838dc6b9a",
+            "cell": "L54"
+          },
+          "back": {
+            "source_member": "xl/media/image222.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0189_image222.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 2491,
+            "sha256": "f13566c227bd17396fcdf9bc5dd685e503154959bcbdf0ad2a19424203e51907",
+            "gitBlob": "e113b24eccdf460a74700ec382da362c7e631111",
+            "cell": "M54"
+          },
+          "shiny": {
+            "source_member": "xl/media/image136.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0013_image136.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 3230,
+            "sha256": "5a63eba2f256c4e72ea18622d0ba78b6fbed4112b83d2a95a8dc21561b65cc07",
+            "gitBlob": "523054a4ef1d85ef96a21e8f764533aa6b48d188",
+            "cell": "N54"
+          }
+        },
+        "allPinnedMediaPresent": true,
+        "shinyBackCellPresent": false,
+        "priorPixelMappingCandidate": false
+      },
+      "disposition": "EXCLUDE_MISSING_ORIGINAL_VIEWS",
+      "productionAllowed": false
+    },
+    {
+      "artworkKey": "platinum-redux-gardevoir|gitblob:9d34cba572b2fabe54724e2aaaca3b745c7cb3c5",
+      "reviewId": "R0412",
+      "decision": "keep",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "missing": [
+        "shinyBack"
+      ],
+      "donorKeys": [],
+      "evidence": {
+        "workbookRow": 84,
+        "normalPairMatches": [
+          84
+        ],
+        "sourceViews": {
+          "front": {
+            "source_member": "xl/media/image230.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0304_image230.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 4234,
+            "sha256": "cd8e703626b24a257ec7d12e4c8a9e9f6163897ec4c196ab3b34d621c5d245fd",
+            "gitBlob": "9d34cba572b2fabe54724e2aaaca3b745c7cb3c5",
+            "cell": "L84"
+          },
+          "back": {
+            "source_member": "xl/media/image262.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0317_image262.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 3693,
+            "sha256": "e2b79c1cc55d82ba1f9b65bc6282a2365107240eaef3f709a510c93204c75131",
+            "gitBlob": "564ecb2928e63e77e600f6255498588a1ab691a6",
+            "cell": "M84"
+          },
+          "shiny": {
+            "source_member": "xl/media/image233.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0006_image233.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 4234,
+            "sha256": "a3cccb1bae9dd1691df6679b8a691712744f9cbc0093312dcf8682763b85ab7f",
+            "gitBlob": "71a0d26d0ea26745b6b2c0fc03189a05e7059eca",
+            "cell": "N84"
+          }
+        },
+        "allPinnedMediaPresent": true,
+        "shinyBackCellPresent": false,
+        "priorPixelMappingCandidate": false
+      },
+      "disposition": "EXCLUDE_MISSING_ORIGINAL_VIEWS",
+      "productionAllowed": false
+    },
+    {
+      "artworkKey": "platinum-redux-gyarados|gitblob:db6f0206957b1c80aeb47126e27a2638c8fd9698",
+      "reviewId": "R0217",
+      "decision": "keep",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "missing": [
+        "shinyBack"
+      ],
+      "donorKeys": [],
+      "evidence": {
+        "workbookRow": 40,
+        "normalPairMatches": [
+          40
+        ],
+        "sourceViews": {
+          "front": {
+            "source_member": "xl/media/image109.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0201_image109.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 4336,
+            "sha256": "5521f242eb92d16353ac1ae7b422d95b23a562153a08177763d7fe8c1c4e74ec",
+            "gitBlob": "db6f0206957b1c80aeb47126e27a2638c8fd9698",
+            "cell": "L40"
+          },
+          "back": {
+            "source_member": "xl/media/image103.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0371_image103.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 3706,
+            "sha256": "5b7afab4a404c9ae08cd1ee9cc44475d380f53cc452d6f551c0937967a159a0d",
+            "gitBlob": "d9b87c8826b254b34b8ea6c64fd7f8bf92d2d8a3",
+            "cell": "M40"
+          },
+          "shiny": {
+            "source_member": "xl/media/image174.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0352_image174.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 4336,
+            "sha256": "bf6fe7d73d5e8b3c0abfbc529a861fdba427cb1f6f8e7beae0410d4f182b8b5b",
+            "gitBlob": "3a9ee9efedfec6597bbfc45915368e59aedd69f9",
+            "cell": "N40"
+          }
+        },
+        "allPinnedMediaPresent": true,
+        "shinyBackCellPresent": false,
+        "priorPixelMappingCandidate": true
+      },
+      "disposition": "EXCLUDE_MISSING_ORIGINAL_VIEWS",
+      "productionAllowed": false
+    },
+    {
+      "artworkKey": "platinum-redux-hippowdon|gitblob:54246a5279265a7b0d10edd56f6fed4deac0357a",
+      "reviewId": "R0649",
+      "decision": "keep",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "missing": [
+        "shinyBack"
+      ],
+      "donorKeys": [],
+      "evidence": {
+        "workbookRow": 130,
+        "normalPairMatches": [
+          130
+        ],
+        "sourceViews": {
+          "front": {
+            "source_member": "xl/media/image381.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0235_image381.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 3703,
+            "sha256": "db81c37060a98e93e4d7c77b4a437fe51cc7658587b14907675dbb16e577f8c4",
+            "gitBlob": "54246a5279265a7b0d10edd56f6fed4deac0357a",
+            "cell": "L130"
+          },
+          "back": {
+            "source_member": "xl/media/image378.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0090_image378.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 3130,
+            "sha256": "78d9b5caf949edfab1ba2e730613f8f50da9fbcf3899d55c921dc4d6a591ce10",
+            "gitBlob": "cb79257ea354adc90ebb493c693d053bb7ffdb3d",
+            "cell": "M130"
+          },
+          "shiny": {
+            "source_member": "xl/media/image376.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0401_image376.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 3703,
+            "sha256": "47ccb8b0238262b926ad7a0a95a0557323f68f25c4eeee43cfee4bc85d70d278",
+            "gitBlob": "2c4a600c3dda445f596020d2d0b6b045eb628ad2",
+            "cell": "N130"
+          }
+        },
+        "allPinnedMediaPresent": true,
+        "shinyBackCellPresent": false,
+        "priorPixelMappingCandidate": true
+      },
+      "disposition": "EXCLUDE_MISSING_ORIGINAL_VIEWS",
+      "productionAllowed": false
+    },
+    {
+      "artworkKey": "platinum-redux-hitmonchan|gitblob:4d302e092beb6002143f4560d69ff8cfc265309a",
+      "reviewId": "R0166",
+      "decision": "keep",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "missing": [
+        "shinyBack"
+      ],
+      "donorKeys": [],
+      "evidence": {
+        "workbookRow": 34,
+        "normalPairMatches": [
+          34
+        ],
+        "sourceViews": {
+          "front": {
+            "source_member": "xl/media/image83.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0213_image83.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 2693,
+            "sha256": "569e27e5f67f64ba2e1dac9f25f523296d067d855436f841ad35ab1e0f0147c9",
+            "gitBlob": "4d302e092beb6002143f4560d69ff8cfc265309a",
+            "cell": "L34"
+          },
+          "back": {
+            "source_member": "xl/media/image79.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0096_image79.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 3115,
+            "sha256": "e47e9647ad486b8e1b94082c052117e5bf7991e11f9d4cc61879c4236ec203eb",
+            "gitBlob": "c473b5d9e65e32656e4d9df0d51e5a7f4442b20d",
+            "cell": "M34"
+          },
+          "shiny": {
+            "source_member": "xl/media/image96.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0323_image96.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 2693,
+            "sha256": "ea5f0e10eb6031d3a8af58d5ecbd7277d2cbd757f55fb6de364cf39d7212faf2",
+            "gitBlob": "b260b7884cafe7a85c6f098d3b34f60e1446967c",
+            "cell": "N34"
+          }
+        },
+        "allPinnedMediaPresent": true,
+        "shinyBackCellPresent": false,
+        "priorPixelMappingCandidate": false
+      },
+      "disposition": "EXCLUDE_MISSING_ORIGINAL_VIEWS",
+      "productionAllowed": false
+    },
+    {
+      "artworkKey": "platinum-redux-hitmonlee|gitblob:1e5af4d215ab4b8439bee18247c22507b350a627",
+      "reviewId": "R0163",
+      "decision": "keep",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "missing": [
+        "shinyBack"
+      ],
+      "donorKeys": [],
+      "evidence": {
+        "workbookRow": 33,
+        "normalPairMatches": [
+          33
+        ],
+        "sourceViews": {
+          "front": {
+            "source_member": "xl/media/image160.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0019_image160.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 2421,
+            "sha256": "acb57c17b11e7469ffdadb7f6de7e4b36105449786ec72c09d1853f40831689f",
+            "gitBlob": "1e5af4d215ab4b8439bee18247c22507b350a627",
+            "cell": "L33"
+          },
+          "back": {
+            "source_member": "xl/media/image89.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0255_image89.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 3325,
+            "sha256": "a598bc5efff591886499efd7985e3abd7c3a2681a8fc88e7d3b2edf65dbe9194",
+            "gitBlob": "e081f174c598abc5298e38d3a1f84f7c6df39a30",
+            "cell": "M33"
+          },
+          "shiny": {
+            "source_member": "xl/media/image67.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0387_image67.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 2421,
+            "sha256": "12f48cc6c952981dd545cd1e8c05cd3614b14183981f2bea55ce3573db687333",
+            "gitBlob": "cf12edb7f5308520ee8e8df1858945036a24d8f8",
+            "cell": "N33"
+          }
+        },
+        "allPinnedMediaPresent": true,
+        "shinyBackCellPresent": false,
+        "priorPixelMappingCandidate": true
+      },
+      "disposition": "EXCLUDE_MISSING_ORIGINAL_VIEWS",
+      "productionAllowed": false
+    },
+    {
+      "artworkKey": "platinum-redux-illumise|gitblob:4910bef875c1816bf35b09566560baa0e7acebfa",
+      "reviewId": "R0468",
+      "decision": "keep",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "missing": [
+        "shinyBack"
+      ],
+      "donorKeys": [],
+      "evidence": {
+        "workbookRow": 93,
+        "normalPairMatches": [
+          93
+        ],
+        "sourceViews": {
+          "front": {
+            "source_member": "xl/media/image269.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0376_image269.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 2820,
+            "sha256": "5b2ed2b97c7c88b477111c1b238cf82c7f11606f58c92efc9f6f232d53ec6900",
+            "gitBlob": "4910bef875c1816bf35b09566560baa0e7acebfa",
+            "cell": "L93"
+          },
+          "back": {
+            "source_member": "xl/media/image267.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0287_image267.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 3438,
+            "sha256": "fa7780144028cb2ce6bd23d5add6c1030b0cb303b2d42370ff9424822254887c",
+            "gitBlob": "8eddd19f7cba66d232a07bf01c9e93ae7bf8024c",
+            "cell": "M93"
+          },
+          "shiny": {
+            "source_member": "xl/media/image260.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0381_image260.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 2820,
+            "sha256": "98b66038ea50238c6e734d499c9fdadc09ed5c355d4337bd92840eff5a93e3b6",
+            "gitBlob": "af16c95c598ea36326e3a90209f8d38565afffee",
+            "cell": "N93"
+          }
+        },
+        "allPinnedMediaPresent": true,
+        "shinyBackCellPresent": false,
+        "priorPixelMappingCandidate": true
+      },
+      "disposition": "EXCLUDE_MISSING_ORIGINAL_VIEWS",
+      "productionAllowed": false
+    },
+    {
+      "artworkKey": "platinum-redux-jolteon|gitblob:0644646843ac691733a2e7c7c01cbe0ebed0a667",
+      "reviewId": "R0227",
+      "decision": "keep",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "missing": [
+        "shinyBack"
+      ],
+      "donorKeys": [],
+      "evidence": {
+        "workbookRow": 43,
+        "normalPairMatches": [
+          43
+        ],
+        "sourceViews": {
+          "front": {
+            "source_member": "xl/media/image117.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0318_image117.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 3221,
+            "sha256": "eb6f46dfab7fe91cc9aa153e3aaeb5819085affaa5c4aebed9494631d0440fcb",
+            "gitBlob": "0644646843ac691733a2e7c7c01cbe0ebed0a667",
+            "cell": "L43"
+          },
+          "back": {
+            "source_member": "xl/media/image121.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0209_image121.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 4539,
+            "sha256": "9ae91d9887d9df2c8c50597a4bd68d121159028e471bd639f78fa41759f18855",
+            "gitBlob": "e562ad9c7f0f96c406faf006405f233ee355f673",
+            "cell": "M43"
+          },
+          "shiny": {
+            "source_member": "xl/media/image112.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0071_image112.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 3221,
+            "sha256": "b92fec75beeb929bae9fcffa961ebcf1423a43f1727ad891e7a46c666d6560c6",
+            "gitBlob": "a22d3874df37be6ea3bcf848fd5f59217e2598f8",
+            "cell": "N43"
+          }
+        },
+        "allPinnedMediaPresent": true,
+        "shinyBackCellPresent": false,
+        "priorPixelMappingCandidate": true
+      },
+      "disposition": "EXCLUDE_MISSING_ORIGINAL_VIEWS",
+      "productionAllowed": false
+    },
+    {
+      "artworkKey": "platinum-redux-kabutops|gitblob:d9ef67d76ed520c5507a2730ae20ceb17ab6bce3",
+      "reviewId": "R0247",
+      "decision": "keep",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "missing": [
+        "shinyBack"
+      ],
+      "donorKeys": [],
+      "evidence": {
+        "workbookRow": 46,
+        "normalPairMatches": [
+          46
+        ],
+        "sourceViews": {
+          "front": {
+            "source_member": "xl/media/image120.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0047_image120.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 3914,
+            "sha256": "a9cf233e4e3f7a35ed7b08065ea64ad788d29c649956c2a4537285a9d5333128",
+            "gitBlob": "d9ef67d76ed520c5507a2730ae20ceb17ab6bce3",
+            "cell": "L46"
+          },
+          "back": {
+            "source_member": "xl/media/image114.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0150_image114.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 3454,
+            "sha256": "4d416373845a933526aff163482655f552d0a9b5f7e0dc29fd9ae929222e4f53",
+            "gitBlob": "cd6461aed13fae845881afe5052c1fde097a1d91",
+            "cell": "M46"
+          },
+          "shiny": {
+            "source_member": "xl/media/image139.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0290_image139.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 3914,
+            "sha256": "d2be9411db7b7768acdc8eabcddaba4cafe84da317c0cef46ccab7a059174b72",
+            "gitBlob": "4bd542e9cd5819df46ebbcee81ce149fdf48bebd",
+            "cell": "N46"
+          }
+        },
+        "allPinnedMediaPresent": true,
+        "shinyBackCellPresent": false,
+        "priorPixelMappingCandidate": true
+      },
+      "disposition": "EXCLUDE_MISSING_ORIGINAL_VIEWS",
+      "productionAllowed": false
+    },
+    {
+      "artworkKey": "platinum-redux-kangaskhan|gitblob:e23a154a3bdd27a6f7a455d5d24c999d48a22f45",
+      "reviewId": "R0186",
+      "decision": "keep",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "missing": [
+        "shinyBack"
+      ],
+      "donorKeys": [],
+      "evidence": {
+        "workbookRow": 36,
+        "normalPairMatches": [
+          36
+        ],
+        "sourceViews": {
+          "front": {
+            "source_member": "xl/media/image85.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0063_image85.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 3402,
+            "sha256": "c2bb4d8503818cc53bdd7c7bb8c48690a102cc119e48f63a713245f86588ba23",
+            "gitBlob": "e23a154a3bdd27a6f7a455d5d24c999d48a22f45",
+            "cell": "L36"
+          },
+          "back": {
+            "source_member": "xl/media/image80.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0346_image80.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 3157,
+            "sha256": "fb1653a01089d9addb6bf7d112c95859b2d18cb42368f96bf32dabf1de3b38c8",
+            "gitBlob": "059613e8d680487921f5672b27826cbe5ac9d7af",
+            "cell": "M36"
+          },
+          "shiny": {
+            "source_member": "xl/media/image106.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0088_image106.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 3402,
+            "sha256": "ea733f70b6c70f02d0b99aa88be5fd8e2dee13597fa835be27c352af62ecedd1",
+            "gitBlob": "88feccab3e910ab11ef6f00e57106c4ecca926c5",
+            "cell": "N36"
+          }
+        },
+        "allPinnedMediaPresent": true,
+        "shinyBackCellPresent": false,
+        "priorPixelMappingCandidate": true
+      },
+      "disposition": "EXCLUDE_MISSING_ORIGINAL_VIEWS",
+      "productionAllowed": false
+    },
+    {
+      "artworkKey": "platinum-redux-kingler|gitblob:3d778716e3dd81e14b5c264fc7a1aa420f86c530",
+      "reviewId": "R0155",
+      "decision": "keep",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "missing": [
+        "shinyBack"
+      ],
+      "donorKeys": [],
+      "evidence": {
+        "workbookRow": 30,
+        "normalPairMatches": [
+          30
+        ],
+        "sourceViews": {
+          "front": {
+            "source_member": "xl/media/image93.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0378_image93.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 3340,
+            "sha256": "27e5e8048a654b6734f1cfbfedce5ca77a6629603dbe26997790e1580a62f625",
+            "gitBlob": "3d778716e3dd81e14b5c264fc7a1aa420f86c530",
+            "cell": "L30"
+          },
+          "back": {
+            "source_member": "xl/media/image74.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0245_image74.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 3180,
+            "sha256": "fa259e95c19877f7dfc0ae568096aea49ebfa22989142b74d4fcd7c22cb78567",
+            "gitBlob": "b8ca3099bc10ab8b96b365c20ddb0592b0e093f8",
+            "cell": "M30"
+          },
+          "shiny": {
+            "source_member": "xl/media/image97.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0249_image97.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 3340,
+            "sha256": "ed148839f2f1b6d1b0cef49f8119e016a09757d5cb56bc8d0ec238b73e894e4e",
+            "gitBlob": "e0b99c8cf357e02762f48261aeae3746e4f495f8",
+            "cell": "N30"
+          }
+        },
+        "allPinnedMediaPresent": true,
+        "shinyBackCellPresent": false,
+        "priorPixelMappingCandidate": true
+      },
+      "disposition": "EXCLUDE_MISSING_ORIGINAL_VIEWS",
+      "productionAllowed": false
+    },
+    {
+      "artworkKey": "platinum-redux-lapras|gitblob:a4327c784faeb05890a01aae375d0b2927d41b55",
+      "reviewId": "R0222",
+      "decision": "keep",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "missing": [
+        "shinyBack"
+      ],
+      "donorKeys": [],
+      "evidence": {
+        "workbookRow": 41,
+        "normalPairMatches": [
+          41
+        ],
+        "sourceViews": {
+          "front": {
+            "source_member": "xl/media/image111.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0334_image111.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 3129,
+            "sha256": "5fbd8caf7477977a793e3afbd828449197079b17e3762e144b237b9a720a3f4a",
+            "gitBlob": "a4327c784faeb05890a01aae375d0b2927d41b55",
+            "cell": "L41"
+          },
+          "back": {
+            "source_member": "xl/media/image102.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0275_image102.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 3615,
+            "sha256": "a009edb60ad1be7038505c6f2f456e646289d0122f9440b17967d43034b94c61",
+            "gitBlob": "dcb15cee9b2b093cb70bd3b327f4c3d5cd3b13d0",
+            "cell": "M41"
+          },
+          "shiny": {
+            "source_member": "xl/media/image115.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0198_image115.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 3103,
+            "sha256": "04e9f41a0b4b612fe74de9ec53eb54e401d8e6916d6bf483b5b4bb41e69c0e10",
+            "gitBlob": "a0acb59c3e4bad20bd41fed23230e81b151fbb49",
+            "cell": "N41"
+          }
+        },
+        "allPinnedMediaPresent": true,
+        "shinyBackCellPresent": false,
+        "priorPixelMappingCandidate": true
+      },
+      "disposition": "EXCLUDE_MISSING_ORIGINAL_VIEWS",
+      "productionAllowed": false
+    },
+    {
+      "artworkKey": "platinum-redux-ledian|gitblob:b914845b18027fe376ef8b21d655f49ec3e76ec6",
+      "reviewId": "R0289",
+      "decision": "keep",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "missing": [
+        "shinyFront",
+        "shinyBack"
+      ],
+      "donorKeys": [],
+      "evidence": {
+        "workbookRow": 56,
+        "normalPairMatches": [
+          56
+        ],
+        "sourceViews": {
+          "front": {
+            "source_member": "xl/media/image150.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0159_image150.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 2796,
+            "sha256": "d1c728a787d3a11afb8f193ce82b2fed3e21278a15040720f1725e6bb61a48ac",
+            "gitBlob": "b914845b18027fe376ef8b21d655f49ec3e76ec6",
+            "cell": "L56"
+          },
+          "back": {
+            "source_member": "xl/media/image155.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0293_image155.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 2935,
+            "sha256": "fea0e7db20bdcbd3d1995c9a039146c9be9c1db47273c22cac04e9850836dcc9",
+            "gitBlob": "2b965479b63ea704bcc8d2fddf2473d7764d1074",
+            "cell": "M56"
+          },
+          "shiny": {
+            "source_member": "xl/media/image157.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0151_image157.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 2752,
+            "sha256": "33dee4b23030bf05e3963df0cef833434dadb1435a07e8fc99398374f26edf33",
+            "gitBlob": "a73da5424d50e817351c5ef9f48c1fd9d8c38d86",
+            "cell": "N56"
+          }
+        },
+        "allPinnedMediaPresent": true,
+        "shinyBackCellPresent": false,
+        "priorPixelMappingCandidate": false
+      },
+      "disposition": "EXCLUDE_MISSING_ORIGINAL_VIEWS",
+      "productionAllowed": false
+    },
+    {
+      "artworkKey": "platinum-redux-lugia|gitblob:8b8f4af4b12c469ecd43fc933eb512ae28341a46",
+      "reviewId": "R0390",
+      "decision": "keep",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "missing": [
+        "shinyBack"
+      ],
+      "donorKeys": [],
+      "evidence": {
+        "workbookRow": 77,
+        "normalPairMatches": [
+          77
+        ],
+        "sourceViews": {
+          "front": {
+            "source_member": "xl/media/image207.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0117_image207.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 4048,
+            "sha256": "4c53d66267eaab74dd2ac92dab301f4c0b6f4c79c4a0ab7e8d99801f24440fe3",
+            "gitBlob": "8b8f4af4b12c469ecd43fc933eb512ae28341a46",
+            "cell": "L77"
+          },
+          "back": {
+            "source_member": "xl/media/image219.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0337_image219.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 2925,
+            "sha256": "3fed939d66789ee6a9fe529d77c5141a9d9673b73076a336fda0f4c4d4a3d3ca",
+            "gitBlob": "eee926ce9136db04b727a9c9cb514e478b15d23d",
+            "cell": "M77"
+          },
+          "shiny": {
+            "source_member": "xl/media/image213.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0302_image213.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 4047,
+            "sha256": "70a23090f4556c45de60b50d8e129789c780732eecc29d7fc4aee538f5d0c19e",
+            "gitBlob": "1037f53c1d31f0391584ea316cb9bfeec61a06b7",
+            "cell": "N77"
+          }
+        },
+        "allPinnedMediaPresent": true,
+        "shinyBackCellPresent": false,
+        "priorPixelMappingCandidate": true
+      },
+      "disposition": "EXCLUDE_MISSING_ORIGINAL_VIEWS",
+      "productionAllowed": false
+    },
+    {
+      "artworkKey": "platinum-redux-lunatone|gitblob:9eef08b396feab6fb23457fbc2e29ad25925441d",
+      "reviewId": "R0508",
+      "decision": "keep",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "missing": [
+        "shinyBack"
+      ],
+      "donorKeys": [],
+      "evidence": {
+        "workbookRow": 103,
+        "normalPairMatches": [
+          103
+        ],
+        "sourceViews": {
+          "front": {
+            "source_member": "xl/media/image286.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0113_image286.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 3266,
+            "sha256": "ed5f2602a4843f22d68cf7348bde5f657593c5350dfdcf4740e75ae4c73f5c88",
+            "gitBlob": "9eef08b396feab6fb23457fbc2e29ad25925441d",
+            "cell": "L103"
+          },
+          "back": {
+            "source_member": "xl/media/image288.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0097_image288.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 3862,
+            "sha256": "969ef0dcc2819165ff9f2b3a5dfce883f622c553ba01184f9057d445dcf620fe",
+            "gitBlob": "6171f029c1663a29c33723b27bee9eaff8f19258",
+            "cell": "M103"
+          },
+          "shiny": {
+            "source_member": "xl/media/image297.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0398_image297.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 3260,
+            "sha256": "b4aae5344664f2b0589418caeb1bdaeb4d1f503d0462cecdf37fc47af3df6937",
+            "gitBlob": "59b678e4ba910b4c0352572f7fcc5429556b2a52",
+            "cell": "N103"
+          }
+        },
+        "allPinnedMediaPresent": true,
+        "shinyBackCellPresent": false,
+        "priorPixelMappingCandidate": true
+      },
+      "disposition": "EXCLUDE_MISSING_ORIGINAL_VIEWS",
+      "productionAllowed": false
+    },
+    {
+      "artworkKey": "platinum-redux-luxray|gitblob:9834819e65039fc0277b9249ff1729bbab6b4ba5",
+      "reviewId": "R0595",
+      "decision": "keep",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "missing": [
+        "shinyFront",
+        "shinyBack"
+      ],
+      "donorKeys": [],
+      "evidence": {
+        "workbookRow": 119,
+        "normalPairMatches": [
+          119
+        ],
+        "sourceViews": {
+          "front": {
+            "source_member": "xl/media/image341.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0321_image341.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 3673,
+            "sha256": "50b0cdc2501b4217ba0dc0e2bb95b853184acc37b19a833ed27f6f15a5aa6882",
+            "gitBlob": "9834819e65039fc0277b9249ff1729bbab6b4ba5",
+            "cell": "L119"
+          },
+          "back": {
+            "source_member": "xl/media/image340.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0335_image340.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 3540,
+            "sha256": "40c57e0df1b250842cce5b1512ce9a7c61b3270372a15c0458910a62c58b0e8c",
+            "gitBlob": "cd86f56c3aecc6f8e8bac26b2eb46d0bb6e913c4",
+            "cell": "M119"
+          },
+          "shiny": {
+            "source_member": "xl/media/image362.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0082_image362.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 3664,
+            "sha256": "49261b6852dd61bc3ca5b06bc3ec5db40107df60fa5cc9e52576b2cd599cc9d7",
+            "gitBlob": "cba9e71337f09090ac3a1b69766d158e55a7dc8e",
+            "cell": "N119"
+          }
+        },
+        "allPinnedMediaPresent": true,
+        "shinyBackCellPresent": false,
+        "priorPixelMappingCandidate": false
+      },
+      "disposition": "EXCLUDE_MISSING_ORIGINAL_VIEWS",
+      "productionAllowed": false
+    },
+    {
+      "artworkKey": "platinum-redux-machamp|gitblob:0d89e12f0816779902f5c148b7ce58c35df491af",
+      "reviewId": "R0100",
+      "decision": "keep",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "missing": [
+        "shinyBack"
+      ],
+      "donorKeys": [],
+      "evidence": {
+        "workbookRow": 22,
+        "normalPairMatches": [
+          22
+        ],
+        "sourceViews": {
+          "front": {
+            "source_member": "xl/media/image56.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0128_image56.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 4403,
+            "sha256": "66647ceff03136a043a3e3b74c028320bb9120facf73c27556571652800a312b",
+            "gitBlob": "0d89e12f0816779902f5c148b7ce58c35df491af",
+            "cell": "L22"
+          },
+          "back": {
+            "source_member": "xl/media/image52.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0359_image52.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 4183,
+            "sha256": "b893c67368864da99bbfed03a0f48dc20b21da9ab3ccbfa8681bf28b79e59716",
+            "gitBlob": "e178a832853b9aa3a8dc2bfcaf75636db7679371",
+            "cell": "M22"
+          },
+          "shiny": {
+            "source_member": "xl/media/image68.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0329_image68.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 4403,
+            "sha256": "128ece7db402544b419e733bf76007dc7c7dc55f36ecff28338c590c7fcdf277",
+            "gitBlob": "085662d70fcc96809762a3f73fa518e4770bd826",
+            "cell": "N22"
+          }
+        },
+        "allPinnedMediaPresent": true,
+        "shinyBackCellPresent": false,
+        "priorPixelMappingCandidate": true
+      },
+      "disposition": "EXCLUDE_MISSING_ORIGINAL_VIEWS",
+      "productionAllowed": false
+    },
+    {
+      "artworkKey": "platinum-redux-magmortar|gitblob:4dea6e4b251285b638ca80d65e1fb81da76636e8",
+      "reviewId": "R0211",
+      "decision": "keep",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "missing": [
+        "shinyBack"
+      ],
+      "donorKeys": [],
+      "evidence": {
+        "workbookRow": 135,
+        "normalPairMatches": [
+          135
+        ],
+        "sourceViews": {
+          "front": {
+            "source_member": "xl/media/image388.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0303_image388.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 3977,
+            "sha256": "21dd1a2b17817c5634cf562f5c248a8909b960061121cce03e24366d8f347d6f",
+            "gitBlob": "4dea6e4b251285b638ca80d65e1fb81da76636e8",
+            "cell": "L135"
+          },
+          "back": {
+            "source_member": "xl/media/image398.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0364_image398.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 3591,
+            "sha256": "6c04d5f8cbb7d637e858482ae1432b80f17fa90a7c68e371f9b6e685e633b053",
+            "gitBlob": "3feafb12f546a43e9c5f933440daca40e88f7d33",
+            "cell": "M135"
+          },
+          "shiny": {
+            "source_member": "xl/media/image424.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0306_image424.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 3977,
+            "sha256": "151d3d0fccc1e2804b45c2b5c8d6735f9f091a71560c7517a550695f7bed18c2",
+            "gitBlob": "d9911d2815ebe5c1d510b69f02d2160da3751804",
+            "cell": "N135"
+          }
+        },
+        "allPinnedMediaPresent": true,
+        "shinyBackCellPresent": false,
+        "priorPixelMappingCandidate": true
+      },
+      "disposition": "EXCLUDE_MISSING_ORIGINAL_VIEWS",
+      "productionAllowed": false
+    },
+    {
+      "artworkKey": "platinum-redux-manectric|gitblob:67d2411544f138c58e0f39687dee5e4494df4102",
+      "reviewId": "R0462",
+      "decision": "keep",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "missing": [
+        "shinyBack"
+      ],
+      "donorKeys": [],
+      "evidence": {
+        "workbookRow": 91,
+        "normalPairMatches": [
+          91
+        ],
+        "sourceViews": {
+          "front": {
+            "source_member": "xl/media/image252.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0296_image252.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 3228,
+            "sha256": "44ca93a9a740872d42c6fa344574d7f5044f7568f137a7c17053e6a47bb2304e",
+            "gitBlob": "67d2411544f138c58e0f39687dee5e4494df4102",
+            "cell": "L91"
+          },
+          "back": {
+            "source_member": "xl/media/image409.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0143_image409.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 2702,
+            "sha256": "dee5551e45067380c32417635d1ab538b9bc87e95beac7b64d44b225512cc740",
+            "gitBlob": "5b700e60c40a633452b204f1d68fbc23a48610ed",
+            "cell": "M91"
+          },
+          "shiny": {
+            "source_member": "xl/media/image255.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0351_image255.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 3228,
+            "sha256": "57222b8ab909860af1475547babe526a71b7339c630cccf83078814d2cdbb4d9",
+            "gitBlob": "3d6f7ce3f5d95aa42732162c3c3b7d7caa377a77",
+            "cell": "N91"
+          }
+        },
+        "allPinnedMediaPresent": true,
+        "shinyBackCellPresent": false,
+        "priorPixelMappingCandidate": true
+      },
+      "disposition": "EXCLUDE_MISSING_ORIGINAL_VIEWS",
+      "productionAllowed": false
+    },
+    {
+      "artworkKey": "platinum-redux-marowak|gitblob:ce7ea6a0ab5128b390745a87f80aebccdc360e2f",
+      "reviewId": "R0160",
+      "decision": "keep",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "missing": [
+        "shinyBack"
+      ],
+      "donorKeys": [],
+      "evidence": {
+        "workbookRow": 32,
+        "normalPairMatches": [
+          32
+        ],
+        "sourceViews": {
+          "front": {
+            "source_member": "xl/media/image86.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0020_image86.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 3923,
+            "sha256": "30ed3f9d6cb2bc6a0857db22dc60e367ff55f3196991f04cd91c1aa13f7a6778",
+            "gitBlob": "ce7ea6a0ab5128b390745a87f80aebccdc360e2f",
+            "cell": "L32"
+          },
+          "back": {
+            "source_member": "xl/media/image70.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0099_image70.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 4321,
+            "sha256": "a93b43a70dcde4d35c2f581e9f938eed1f1b8e0ccc8607be78d408a4e2520197",
+            "gitBlob": "07333973697adfdd981763c9342e126d0da401e5",
+            "cell": "M32"
+          },
+          "shiny": {
+            "source_member": "xl/media/image110.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0386_image110.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 3929,
+            "sha256": "636e0bc9650e7cc47da447a3299c5f872cb4971139ade77a7ec63740a65d609f",
+            "gitBlob": "6f1ddc171f7c7aadddf54fe2e3f4a009918a291e",
+            "cell": "N32"
+          }
+        },
+        "allPinnedMediaPresent": true,
+        "shinyBackCellPresent": false,
+        "priorPixelMappingCandidate": false
+      },
+      "disposition": "EXCLUDE_MISSING_ORIGINAL_VIEWS",
+      "productionAllowed": false
+    },
+    {
+      "artworkKey": "platinum-redux-mawile|gitblob:5fbf58af18a1d6632dbfce7f0ebc0c7c9fee07d6",
+      "reviewId": "R0455",
+      "decision": "keep",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "missing": [
+        "shinyBack"
+      ],
+      "donorKeys": [],
+      "evidence": {
+        "workbookRow": 89,
+        "normalPairMatches": [
+          89
+        ],
+        "sourceViews": {
+          "front": {
+            "source_member": "xl/media/image251.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0108_image251.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 3958,
+            "sha256": "30e151eff0ca380f3999a07a35af7ddae24e35ecb3283c5fcc6f583158345d18",
+            "gitBlob": "5fbf58af18a1d6632dbfce7f0ebc0c7c9fee07d6",
+            "cell": "L89"
+          },
+          "back": {
+            "source_member": "xl/media/image335.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0305_image335.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 3798,
+            "sha256": "dc1f1b4a99440b1955f3afdd75565008c61a2c7467821c638af1604b026282d4",
+            "gitBlob": "ed565d1a724282902b09224e1b11735a28fd98a2",
+            "cell": "M89"
+          },
+          "shiny": {
+            "source_member": "xl/media/image263.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0148_image263.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 3958,
+            "sha256": "596141bd564f2053006fe0e99ddd59013ede64c28dbfeb1b46b689dcaae2cc6a",
+            "gitBlob": "10fd3d3a4d61d0af98c9fc5584146f383eb215a8",
+            "cell": "N89"
+          }
+        },
+        "allPinnedMediaPresent": true,
+        "shinyBackCellPresent": false,
+        "priorPixelMappingCandidate": true
+      },
+      "disposition": "EXCLUDE_MISSING_ORIGINAL_VIEWS",
+      "productionAllowed": false
+    },
+    {
+      "artworkKey": "platinum-redux-medicham|gitblob:6c6e707dad658fa5830d81c4f5bd6e4d530fa3f3",
+      "reviewId": "R0460",
+      "decision": "keep",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "missing": [
+        "shinyBack"
+      ],
+      "donorKeys": [],
+      "evidence": {
+        "workbookRow": 90,
+        "normalPairMatches": [
+          90
+        ],
+        "sourceViews": {
+          "front": {
+            "source_member": "xl/media/image257.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0045_image257.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 4521,
+            "sha256": "5aa5827c325a9447f4a7df5be00c5724a0c5269c677acd3aa06b63c60be44b7d",
+            "gitBlob": "6c6e707dad658fa5830d81c4f5bd6e4d530fa3f3",
+            "cell": "L90"
+          },
+          "back": {
+            "source_member": "xl/media/image259.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0175_image259.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 4091,
+            "sha256": "820dd56a6e0e55f63c742ad17d8dc66724c61c297c7828eeffa33159f16a391b",
+            "gitBlob": "6a31f64faf131b1f7d22deb1439f729feb4f3b1f",
+            "cell": "M90"
+          },
+          "shiny": {
+            "source_member": "xl/media/image253.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0233_image253.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 4521,
+            "sha256": "80128254da40d17d88277ca46deee1a0ad0e0cd4aaf651750b6e5f39fd43256f",
+            "gitBlob": "ebfd29a50f5456cfa0a180dee9fd9f9de1f98a42",
+            "cell": "N90"
+          }
+        },
+        "allPinnedMediaPresent": true,
+        "shinyBackCellPresent": false,
+        "priorPixelMappingCandidate": true
+      },
+      "disposition": "EXCLUDE_MISSING_ORIGINAL_VIEWS",
+      "productionAllowed": false
+    },
+    {
+      "artworkKey": "platinum-redux-meganium|gitblob:502beef6297338603eb316b15c63d44ee82ca3b2",
+      "reviewId": "R0271",
+      "decision": "keep",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "missing": [
+        "shinyBack"
+      ],
+      "donorKeys": [],
+      "evidence": {
+        "workbookRow": 51,
+        "normalPairMatches": [
+          51
+        ],
+        "sourceViews": {
+          "front": {
+            "source_member": "xl/media/image133.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0265_image133.png",
+            "width": 160,
+            "height": 80,
+            "mode": "RGB",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 3984,
+            "sha256": "14879d612286665db680374c8fa7417c77da5625c8688084cc17d668dfc58baf",
+            "gitBlob": "502beef6297338603eb316b15c63d44ee82ca3b2",
+            "cell": "L51"
+          },
+          "back": {
+            "source_member": "xl/media/image137.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0164_image137.png",
+            "width": 160,
+            "height": 80,
+            "mode": "RGB",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 4019,
+            "sha256": "0828e6ebd046d0e402cf57f3c69dd6259d2186770d3022cfab530e5ee73e864f",
+            "gitBlob": "3b6cc74c55d9a40401e64b6d3084cb57966f40b4",
+            "cell": "M51"
+          },
+          "shiny": {
+            "source_member": "xl/media/image148.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0259_image148.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 3571,
+            "sha256": "f64883a2315f1d98802f8186a37ba4a87d499712afcad99655912e76988d4075",
+            "gitBlob": "bd2dc6ebe34655fe5489ca61abf0d6e420130a56",
+            "cell": "N51"
+          }
+        },
+        "allPinnedMediaPresent": true,
+        "shinyBackCellPresent": false,
+        "priorPixelMappingCandidate": true
+      },
+      "disposition": "EXCLUDE_MISSING_ORIGINAL_VIEWS",
+      "productionAllowed": false
+    },
+    {
+      "artworkKey": "platinum-redux-mew|gitblob:a050a84184b63f1df7a5dcbaf7724e287f14171d",
+      "reviewId": "R0269",
+      "decision": "keep",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "missing": [
+        "shinyBack"
+      ],
+      "donorKeys": [],
+      "evidence": {
+        "workbookRow": 50,
+        "normalPairMatches": [
+          50
+        ],
+        "sourceViews": {
+          "front": {
+            "source_member": "xl/media/image128.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0003_image128.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 2430,
+            "sha256": "d0017d9ed60da5ce7078e6f3c1c87c358b34d86278883f0fc9178c300412f998",
+            "gitBlob": "a050a84184b63f1df7a5dcbaf7724e287f14171d",
+            "cell": "L50"
+          },
+          "back": {
+            "source_member": "xl/media/image130.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0066_image130.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 2742,
+            "sha256": "fab976aeed67ad297257cf0a06812aec6cdc2cf6e5e68d8fc49f5b8d51ef9c35",
+            "gitBlob": "4d4199281ad2164d24eafb3fcfb22cb1b12cce8f",
+            "cell": "M50"
+          },
+          "shiny": {
+            "source_member": "xl/media/image122.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0156_image122.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 2430,
+            "sha256": "774a0c903ef1d746a9c98cd4dc181dec25e404b67a5e23af76436655eab8565b",
+            "gitBlob": "f5e4b89a900edc35b4cc578d6894435d181158f2",
+            "cell": "N50"
+          }
+        },
+        "allPinnedMediaPresent": true,
+        "shinyBackCellPresent": false,
+        "priorPixelMappingCandidate": true
+      },
+      "disposition": "EXCLUDE_MISSING_ORIGINAL_VIEWS",
+      "productionAllowed": false
+    },
+    {
+      "artworkKey": "platinum-redux-mightyena|gitblob:eebdd7177f42b7e8bff98300ca63646ab361339f",
+      "reviewId": "R0401",
+      "decision": "keep",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "missing": [
+        "shinyFront",
+        "shinyBack"
+      ],
+      "donorKeys": [],
+      "evidence": {
+        "workbookRow": 81,
+        "normalPairMatches": [
+          81
+        ],
+        "sourceViews": {
+          "front": {
+            "source_member": "xl/media/image220.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0152_image220.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 3492,
+            "sha256": "90f2f7c4634765821e8b727c1632d8f96081a51d77907993dd98f0f99bdce4c3",
+            "gitBlob": "eebdd7177f42b7e8bff98300ca63646ab361339f",
+            "cell": "L81"
+          },
+          "back": {
+            "source_member": "xl/media/image224.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0064_image224.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 2887,
+            "sha256": "dcd66cfabe59fab8f643a430db7219c449d1dc830aba9c3c0690e1e2ae6c8b8a",
+            "gitBlob": "dbffb169317cab89f95e71ec9f532978cfe2cc92",
+            "cell": "M81"
+          },
+          "shiny": {
+            "source_member": "xl/media/image229.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0251_image229.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 3481,
+            "sha256": "c2de217d4026d37b3e86ceefbfd2d3954fad0cf52c5eb02d8ab1980682034714",
+            "gitBlob": "eb5e231f69422c461938bdc24f74477b4666927e",
+            "cell": "N81"
+          }
+        },
+        "allPinnedMediaPresent": true,
+        "shinyBackCellPresent": false,
+        "priorPixelMappingCandidate": false
+      },
+      "disposition": "EXCLUDE_MISSING_ORIGINAL_VIEWS",
+      "productionAllowed": false
+    },
+    {
+      "artworkKey": "platinum-redux-milotic|gitblob:be0feb5a939ee451c718ff99e033e5b998170303",
+      "reviewId": "R0519",
+      "decision": "keep",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "missing": [
+        "shinyFront",
+        "shinyBack"
+      ],
+      "donorKeys": [],
+      "evidence": {
+        "workbookRow": 105,
+        "normalPairMatches": [
+          105
+        ],
+        "sourceViews": {
+          "front": {
+            "source_member": "xl/media/image303.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0292_image303.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 3981,
+            "sha256": "c902b985c0a6bf0682321ea8a7353d37b19e59965fd4bb7b8aa56e5f3676d65e",
+            "gitBlob": "be0feb5a939ee451c718ff99e033e5b998170303",
+            "cell": "L105"
+          },
+          "back": {
+            "source_member": "xl/media/image309.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0181_image309.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 3057,
+            "sha256": "43b635b3428f5ee92fe7c0d8effe021a85d80f820e00055891dd2165c39f4eb7",
+            "gitBlob": "2a140686671ad190904e4462afb414a65f8c7dc9",
+            "cell": "M105"
+          },
+          "shiny": {
+            "source_member": "xl/media/image302.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0244_image302.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 4001,
+            "sha256": "c6fb95cacc2d1e5a3783a846745a699bb400ab0e14e6365703b9080dd28db1dd",
+            "gitBlob": "2b11e904e4f20b2601c73730548355a9e4fb7177",
+            "cell": "N105"
+          }
+        },
+        "allPinnedMediaPresent": true,
+        "shinyBackCellPresent": false,
+        "priorPixelMappingCandidate": false
+      },
+      "disposition": "EXCLUDE_MISSING_ORIGINAL_VIEWS",
+      "productionAllowed": false
+    },
+    {
+      "artworkKey": "platinum-redux-muk|gitblob:56a05eab6f26ad93075cd4d5439c4fa9442d86e5",
+      "reviewId": "R0136",
+      "decision": "keep",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "missing": [
+        "shinyBack"
+      ],
+      "donorKeys": [],
+      "evidence": {
+        "workbookRow": 28,
+        "normalPairMatches": [
+          28
+        ],
+        "sourceViews": {
+          "front": {
+            "source_member": "xl/media/image76.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0104_image76.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 3839,
+            "sha256": "854c0e042fe0a57618d738b4946ae5cc81af84864fd5b78c6f5c03ea39561099",
+            "gitBlob": "56a05eab6f26ad93075cd4d5439c4fa9442d86e5",
+            "cell": "L28"
+          },
+          "back": {
+            "source_member": "xl/media/image65.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0361_image65.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 3225,
+            "sha256": "2a746817b5f609ed7f2ab800ff239642357785544c50fceff3e024adcbcee7a7",
+            "gitBlob": "ae8c86ad3035ccd6b136b52d252d19bbf5e19503",
+            "cell": "M28"
+          },
+          "shiny": {
+            "source_member": "xl/media/image71.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0028_image71.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 3839,
+            "sha256": "a3799972556639d1542bde530cd3088ff800fcd24c2373d5f56d5e1584972ba1",
+            "gitBlob": "53a3700271980598d20ac9c1bd27b33317db433d",
+            "cell": "N28"
+          }
+        },
+        "allPinnedMediaPresent": true,
+        "shinyBackCellPresent": false,
+        "priorPixelMappingCandidate": true
+      },
+      "disposition": "EXCLUDE_MISSING_ORIGINAL_VIEWS",
+      "productionAllowed": false
+    },
+    {
+      "artworkKey": "platinum-redux-ninetales|gitblob:32e52844a978ae36d41de45845670f526b785599",
+      "reviewId": "R0050",
+      "decision": "keep",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "missing": [
+        "shinyBack"
+      ],
+      "donorKeys": [],
+      "evidence": {
+        "workbookRow": 14,
+        "normalPairMatches": [
+          14
+        ],
+        "sourceViews": {
+          "front": {
+            "source_member": "xl/media/image141.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0250_image141.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 4091,
+            "sha256": "df0db5154b854445e7f2002ab28223f85564111f4fc2c746d598897d52debfe0",
+            "gitBlob": "32e52844a978ae36d41de45845670f526b785599",
+            "cell": "L14"
+          },
+          "back": {
+            "source_member": "xl/media/image20.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0254_image20.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 3523,
+            "sha256": "990ce8464e8c74c0197fbad4bbc4a66f73b4f7decbcbbbb3102011314a68f75d",
+            "gitBlob": "56ceb7eb9df32f857d6b006371149078d945fbb8",
+            "cell": "M14"
+          },
+          "shiny": {
+            "source_member": "xl/media/image21.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0319_image21.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 4091,
+            "sha256": "96458cc4be2b7a950cfcedcb0facc16e8acdd450c2aeb61e9c1d7acd097e8912",
+            "gitBlob": "dc80373a5807b3eb524d23cd044684e4f799fd23",
+            "cell": "N14"
+          }
+        },
+        "allPinnedMediaPresent": true,
+        "shinyBackCellPresent": false,
+        "priorPixelMappingCandidate": false
+      },
+      "disposition": "EXCLUDE_MISSING_ORIGINAL_VIEWS",
+      "productionAllowed": false
+    },
+    {
+      "artworkKey": "platinum-redux-noctowl|gitblob:564f517f9d7ce024d9f5318e9a16c35edf4acc07",
+      "reviewId": "R0286",
+      "decision": "keep",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "missing": [
+        "shinyFront",
+        "shinyBack"
+      ],
+      "donorKeys": [],
+      "evidence": {
+        "workbookRow": 55,
+        "normalPairMatches": [
+          55
+        ],
+        "sourceViews": {
+          "front": {
+            "source_member": "xl/media/image145.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0054_image145.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 3590,
+            "sha256": "1e9716e4de0686760875ba78847724ac65f6e6b60131d9b7d53760becf67dd9c",
+            "gitBlob": "564f517f9d7ce024d9f5318e9a16c35edf4acc07",
+            "cell": "L55"
+          },
+          "back": {
+            "source_member": "xl/media/image152.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0043_image152.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 3378,
+            "sha256": "255a3f49a2bade0c9b7ff3d70a3398f7d09b70f27803ccf4a0abea635d4a3682",
+            "gitBlob": "081677925615594bd0b049b1eff731c5196bece4",
+            "cell": "M55"
+          },
+          "shiny": {
+            "source_member": "xl/media/image143.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0176_image143.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 3597,
+            "sha256": "9d38edd86d02d32c87f7436c9c4820067a5d0c274cc54b9367e3bf589c1867b5",
+            "gitBlob": "19aa1f9e6f323096401923615801329d493c1461",
+            "cell": "N55"
+          }
+        },
+        "allPinnedMediaPresent": true,
+        "shinyBackCellPresent": false,
+        "priorPixelMappingCandidate": false
+      },
+      "disposition": "EXCLUDE_MISSING_ORIGINAL_VIEWS",
+      "productionAllowed": false
+    },
+    {
+      "artworkKey": "platinum-redux-octillery|gitblob:8f73cc2768ba83e3d6d393476233b399be85f3f6",
+      "reviewId": "R0362",
+      "decision": "keep",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "missing": [
+        "shinyBack"
+      ],
+      "donorKeys": [],
+      "evidence": {
+        "workbookRow": 69,
+        "normalPairMatches": [
+          69
+        ],
+        "sourceViews": {
+          "front": {
+            "source_member": "xl/media/image182.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0366_image182.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 3711,
+            "sha256": "d1e48a4469fcf927d74fc32a8e1108592dd0bde631dd04ace3e2353f1869f819",
+            "gitBlob": "8f73cc2768ba83e3d6d393476233b399be85f3f6",
+            "cell": "L69"
+          },
+          "back": {
+            "source_member": "xl/media/image299.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0301_image299.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 3642,
+            "sha256": "f7a62cb0432fe1a31a0198b5a190a08b9af34d2df39b9b1807fcadb6001823c2",
+            "gitBlob": "0c0a39d4721e50de88c2575c3a1ed8066c0bbdd3",
+            "cell": "M69"
+          },
+          "shiny": {
+            "source_member": "xl/media/image187.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0226_image187.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 3711,
+            "sha256": "5c3658a67b0e3f7471e9021f43bfd17341362a04393cff1db10e46fb2dcf8c72",
+            "gitBlob": "66df060a67e2e5b534d4b32252f0810c3248992f",
+            "cell": "N69"
+          }
+        },
+        "allPinnedMediaPresent": true,
+        "shinyBackCellPresent": false,
+        "priorPixelMappingCandidate": true
+      },
+      "disposition": "EXCLUDE_MISSING_ORIGINAL_VIEWS",
+      "productionAllowed": false
+    },
+    {
+      "artworkKey": "platinum-redux-omastar|gitblob:8d37db1f2a678ecb0f0cf609b7229668c419b70d",
+      "reviewId": "R0244",
+      "decision": "keep",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "missing": [
+        "shinyBack"
+      ],
+      "donorKeys": [],
+      "evidence": {
+        "workbookRow": 45,
+        "normalPairMatches": [
+          45
+        ],
+        "sourceViews": {
+          "front": {
+            "source_member": "xl/media/image116.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0270_image116.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 3367,
+            "sha256": "14bfedf0db4e09f0667dc7e80f09627f81cb999552a4a2daa46cd3f7523a531a",
+            "gitBlob": "8d37db1f2a678ecb0f0cf609b7229668c419b70d",
+            "cell": "L45"
+          },
+          "back": {
+            "source_member": "xl/media/image140.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0311_image140.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 3763,
+            "sha256": "d9e57635e03a015fbbcf8414e9cb1d7c26b4de3f99f7501379d87204212a8bd1",
+            "gitBlob": "b2d792e6e913c54832b3f663fa19780e6175415e",
+            "cell": "M45"
+          },
+          "shiny": {
+            "source_member": "xl/media/image127.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0060_image127.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 3367,
+            "sha256": "4cf85ced8a2a144d49e267dc1f95ee001eaccef713ae92db6afdad35d008c859",
+            "gitBlob": "a61f709d092e72d682b8898c55c1e8424ad463cd",
+            "cell": "N45"
+          }
+        },
+        "allPinnedMediaPresent": true,
+        "shinyBackCellPresent": false,
+        "priorPixelMappingCandidate": true
+      },
+      "disposition": "EXCLUDE_MISSING_ORIGINAL_VIEWS",
+      "productionAllowed": false
+    },
+    {
+      "artworkKey": "platinum-redux-palkia|gitblob:632804ac1aded9d37bf4f2a97206ec623e02aa40",
+      "reviewId": "R0666",
+      "decision": "keep",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "missing": [
+        "shinyBack"
+      ],
+      "donorKeys": [],
+      "evidence": {
+        "workbookRow": 142,
+        "normalPairMatches": [
+          142
+        ],
+        "sourceViews": {
+          "front": {
+            "source_member": "xl/media/image418.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0089_image418.png",
+            "width": 160,
+            "height": 80,
+            "mode": "RGB",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 5586,
+            "sha256": "c4a0a5f18e6ebe04a2ef8c1e5bbb02f36dd21e1d6321928d56336e64ccde10ab",
+            "gitBlob": "632804ac1aded9d37bf4f2a97206ec623e02aa40",
+            "cell": "L142"
+          },
+          "back": {
+            "source_member": "xl/media/image405.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0426_image405.png",
+            "width": 160,
+            "height": 80,
+            "mode": "RGB",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 5380,
+            "sha256": "63fbec9d40b01648e38865a9996bc50ce8e41265b8d256e3a123bf7bde73dae1",
+            "gitBlob": "e7763489179a3e0d3fce804dbb8863878b41e4fc",
+            "cell": "M142"
+          },
+          "shiny": {
+            "source_member": "xl/media/image420.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0056_image420.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 4885,
+            "sha256": "f4f9bf9264dbb8c9d1b2a412d94ba06e9c4b5924efe26bcda710f48eda61a0ae",
+            "gitBlob": "9d06a3ed22d700ff1c0db35be617142cc2986219",
+            "cell": "N142"
+          }
+        },
+        "allPinnedMediaPresent": true,
+        "shinyBackCellPresent": false,
+        "priorPixelMappingCandidate": true
+      },
+      "disposition": "EXCLUDE_MISSING_ORIGINAL_VIEWS",
+      "productionAllowed": false
+    },
+    {
+      "artworkKey": "platinum-redux-persian|gitblob:0a93ed02915946d91d3764a893f8171ee249ce84",
+      "reviewId": "R0071",
+      "decision": "keep",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "missing": [
+        "shinyBack"
+      ],
+      "donorKeys": [],
+      "evidence": {
+        "workbookRow": 18,
+        "normalPairMatches": [
+          18
+        ],
+        "sourceViews": {
+          "front": {
+            "source_member": "xl/media/image43.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0236_image43.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 2793,
+            "sha256": "d18f15c53ba13f2ac90f102154846e70f2db067c910a9dd943398d3a490d1b65",
+            "gitBlob": "0a93ed02915946d91d3764a893f8171ee249ce84",
+            "cell": "L18"
+          },
+          "back": {
+            "source_member": "xl/media/image41.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0110_image41.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 2752,
+            "sha256": "e050cc5af5c8f35d1bf8e6ec210f14e44befa2b27893e666e3aa59c4a7fe4796",
+            "gitBlob": "df93c857389551ca90f710f3602270d8bdf1184c",
+            "cell": "M18"
+          },
+          "shiny": {
+            "source_member": "xl/media/image15.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0005_image15.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 2793,
+            "sha256": "1e6fee073d0c252a8c27ae966bc233fcedd603862ce9db1c6bc23973af3e3faf",
+            "gitBlob": "4ada4563dbefca3495b06490b48403dfc23a2526",
+            "cell": "N18"
+          }
+        },
+        "allPinnedMediaPresent": true,
+        "shinyBackCellPresent": false,
+        "priorPixelMappingCandidate": false
+      },
+      "disposition": "EXCLUDE_MISSING_ORIGINAL_VIEWS",
+      "productionAllowed": false
+    },
+    {
+      "artworkKey": "platinum-redux-porygon-z|gitblob:8ff8e2303341ee63dbdfe58129a9c40a8cc52473",
+      "reviewId": "R0242",
+      "decision": "keep",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "missing": [
+        "shinyBack"
+      ],
+      "donorKeys": [],
+      "evidence": {
+        "workbookRow": 139,
+        "normalPairMatches": [
+          139
+        ],
+        "sourceViews": {
+          "front": {
+            "source_member": "xl/media/image408.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0300_image408.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 3566,
+            "sha256": "86e54657723177c533c4c3323f07395e5a72cc2a9543f43d123f95fe852c713c",
+            "gitBlob": "8ff8e2303341ee63dbdfe58129a9c40a8cc52473",
+            "cell": "L139"
+          },
+          "back": {
+            "source_member": "xl/media/image390.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0279_image390.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 3753,
+            "sha256": "85fefac41512df3fee89320a364f88a3ec564dec482902f9bdea2baefa8b9e27",
+            "gitBlob": "ed223f15a07da10c156cb3f5fa8dc5ea7b184f54",
+            "cell": "M139"
+          },
+          "shiny": {
+            "source_member": "xl/media/image401.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0119_image401.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 3566,
+            "sha256": "f13ad6a61c1589bf2184b447f6a6391f9f1093271043ccfe1eaab451e35612f4",
+            "gitBlob": "be1730e1d5f27d99575dd637e21c62c251b14126",
+            "cell": "N139"
+          }
+        },
+        "allPinnedMediaPresent": true,
+        "shinyBackCellPresent": false,
+        "priorPixelMappingCandidate": true
+      },
+      "disposition": "EXCLUDE_MISSING_ORIGINAL_VIEWS",
+      "productionAllowed": false
+    },
+    {
+      "artworkKey": "platinum-redux-raikou|gitblob:4b5e0e0c19d1a6bcd361b3bcac9824696844f756",
+      "reviewId": "R0376",
+      "decision": "keep",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "missing": [
+        "shinyBack"
+      ],
+      "donorKeys": [],
+      "evidence": {
+        "workbookRow": 74,
+        "normalPairMatches": [
+          74
+        ],
+        "sourceViews": {
+          "front": {
+            "source_member": "xl/media/image191.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0034_image191.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 4941,
+            "sha256": "909045e954959415fc61b113a6b2ad830f62af3a3915c0b52602c54b2a0971a7",
+            "gitBlob": "4b5e0e0c19d1a6bcd361b3bcac9824696844f756",
+            "cell": "L74"
+          },
+          "back": {
+            "source_member": "xl/media/image201.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0046_image201.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 4388,
+            "sha256": "c7ad51ad97db5f79abc095b3b6111e72c614734b0cc634f9dbff52552b1c50bd",
+            "gitBlob": "0c0616d379e5556276aae26c4e7eaf2d0575b399",
+            "cell": "M74"
+          },
+          "shiny": {
+            "source_member": "xl/media/image206.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0289_image206.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 4941,
+            "sha256": "4b8afbe1de7ec85b645bc184442fbecf1d6bf9fb232d483f5184a52656f3aa7b",
+            "gitBlob": "5a57663108cb1d247865b87330d9c2eb30b4bb21",
+            "cell": "N74"
+          }
+        },
+        "allPinnedMediaPresent": true,
+        "shinyBackCellPresent": false,
+        "priorPixelMappingCandidate": true
+      },
+      "disposition": "EXCLUDE_MISSING_ORIGINAL_VIEWS",
+      "productionAllowed": false
+    },
+    {
+      "artworkKey": "platinum-redux-rampardos|gitblob:1e216983ee5243ed85f64c93e7b417b8dc9d9419",
+      "reviewId": "R0599",
+      "decision": "keep",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "missing": [
+        "shinyBack"
+      ],
+      "donorKeys": [],
+      "evidence": {
+        "workbookRow": 120,
+        "normalPairMatches": [
+          120
+        ],
+        "sourceViews": {
+          "front": {
+            "source_member": "xl/media/image403.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0002_image403.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 4385,
+            "sha256": "67485643cfed39543f068667ad6d9f4d96bd8849ec5a4b19aefdea63bc75c150",
+            "gitBlob": "1e216983ee5243ed85f64c93e7b417b8dc9d9419",
+            "cell": "L120"
+          },
+          "back": {
+            "source_member": "xl/media/image343.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0203_image343.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 3588,
+            "sha256": "a9f6a2cb08092278079c0a63bdc560e8faf4750a815ddf094cddaeb2147bce4c",
+            "gitBlob": "d87047821dcf541d6671e472667cb5105c42da46",
+            "cell": "M120"
+          },
+          "shiny": {
+            "source_member": "xl/media/image350.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0243_image350.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 4385,
+            "sha256": "3374a6eee96b216fc6792d5c3a70ccc96788f8398882259acaba9395ae1a0f53",
+            "gitBlob": "ae04c93d1a7d7a96a2ede8ff607625e87ebbd52f",
+            "cell": "N120"
+          }
+        },
+        "allPinnedMediaPresent": true,
+        "shinyBackCellPresent": false,
+        "priorPixelMappingCandidate": true
+      },
+      "disposition": "EXCLUDE_MISSING_ORIGINAL_VIEWS",
+      "productionAllowed": false
+    },
+    {
+      "artworkKey": "platinum-redux-rapidash|gitblob:5807f9c543391e1ca071de06fb06aac38edf3a82",
+      "reviewId": "R0111",
+      "decision": "keep",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "missing": [
+        "shinyBack"
+      ],
+      "donorKeys": [],
+      "evidence": {
+        "workbookRow": 24,
+        "normalPairMatches": [
+          24
+        ],
+        "sourceViews": {
+          "front": {
+            "source_member": "xl/media/image61.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0137_image61.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 4164,
+            "sha256": "981ac0abf9c681bb5d8d69080709f9d5f4c253b5631f76c53bc7b246a9b2e2b0",
+            "gitBlob": "5807f9c543391e1ca071de06fb06aac38edf3a82",
+            "cell": "L24"
+          },
+          "back": {
+            "source_member": "xl/media/image60.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0291_image60.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 4119,
+            "sha256": "90b72976ba67ceef2aef9a34d9f3ba6855e590100c6ef6e2a64e3375a00685ac",
+            "gitBlob": "0193d5303750745987d9a2088aff20c9ef72629e",
+            "cell": "M24"
+          },
+          "shiny": {
+            "source_member": "xl/media/image58.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0222_image58.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 4164,
+            "sha256": "d125361b8da9fd8efa854370fe13f94a6144d58678d9276e60b3c36ef566a561",
+            "gitBlob": "aed55aa2ee5cb0f67e685da5cdded781e7334e5a",
+            "cell": "N24"
+          }
+        },
+        "allPinnedMediaPresent": true,
+        "shinyBackCellPresent": false,
+        "priorPixelMappingCandidate": true
+      },
+      "disposition": "EXCLUDE_MISSING_ORIGINAL_VIEWS",
+      "productionAllowed": false
+    },
+    {
+      "artworkKey": "platinum-redux-raticate|gitblob:a06885f21664b0b3793aca90fdd576ed5a4aa60b",
+      "reviewId": "R0025",
+      "decision": "keep",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "missing": [
+        "shinyBack"
+      ],
+      "donorKeys": [],
+      "evidence": {
+        "workbookRow": 7,
+        "normalPairMatches": [
+          7
+        ],
+        "sourceViews": {
+          "front": {
+            "source_member": "xl/media/image44.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0394_image44.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 3222,
+            "sha256": "42807606c791bdeaa995a927dadd2a2fd0feb7e75c09b4adfcaa346de9abbab4",
+            "gitBlob": "a06885f21664b0b3793aca90fdd576ed5a4aa60b",
+            "cell": "L7"
+          },
+          "back": {
+            "source_member": "xl/media/image19.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0313_image19.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 2906,
+            "sha256": "1b7144fba6c6a64b9886c2d787c2afbb6b55fa174b81c3c4d31f480799106303",
+            "gitBlob": "7d96f50817c2d2179e720f750a79c365bf0dc772",
+            "cell": "M7"
+          },
+          "shiny": {
+            "source_member": "xl/media/image16.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0380_image16.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 3222,
+            "sha256": "bf5df45c6176515dc9e2dbab0458f36feb643a4dd2f51d8af11486bf411e936f",
+            "gitBlob": "017ba60d5108463fc213f4ccec538f0535485350",
+            "cell": "N7"
+          }
+        },
+        "allPinnedMediaPresent": true,
+        "shinyBackCellPresent": false,
+        "priorPixelMappingCandidate": false
+      },
+      "disposition": "EXCLUDE_MISSING_ORIGINAL_VIEWS",
+      "productionAllowed": false
+    },
+    {
+      "artworkKey": "platinum-redux-regice|gitblob:57c8c539fe2d8f529e0986f1b386666677c205af",
+      "reviewId": "R0563",
+      "decision": "keep",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "missing": [
+        "shinyBack"
+      ],
+      "donorKeys": [],
+      "evidence": {
+        "workbookRow": 112,
+        "normalPairMatches": [
+          112
+        ],
+        "sourceViews": {
+          "front": {
+            "source_member": "xl/media/image327.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0348_image327.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 3798,
+            "sha256": "a52b899457b41ba7bdfa096addb0edca826c8c8cdfa9ad5e1ca174d98d999582",
+            "gitBlob": "57c8c539fe2d8f529e0986f1b386666677c205af",
+            "cell": "L112"
+          },
+          "back": {
+            "source_member": "xl/media/image330.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0009_image330.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 3674,
+            "sha256": "29b98ff352ac80798ff54ea2d1f0094bc178b8bdcf9b1cb0da94f96a35198bd0",
+            "gitBlob": "368d4449d3414582b40e8affac4fb12f11d34aa5",
+            "cell": "M112"
+          },
+          "shiny": {
+            "source_member": "xl/media/image328.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0078_image328.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 3798,
+            "sha256": "cfc8132599bed1e74d270732f273082f707a7290b5f32e5e211003b60e12d801",
+            "gitBlob": "8c3c90c65418229b84941d75e8c4a6796ac2b11b",
+            "cell": "N112"
+          }
+        },
+        "allPinnedMediaPresent": true,
+        "shinyBackCellPresent": false,
+        "priorPixelMappingCandidate": true
+      },
+      "disposition": "EXCLUDE_MISSING_ORIGINAL_VIEWS",
+      "productionAllowed": false
+    },
+    {
+      "artworkKey": "platinum-redux-regirock|gitblob:3249a0930ef80e51e49392a1e28121ae1ffdf722",
+      "reviewId": "R0562",
+      "decision": "keep",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "missing": [
+        "shinyBack"
+      ],
+      "donorKeys": [],
+      "evidence": {
+        "workbookRow": 111,
+        "normalPairMatches": [
+          111
+        ],
+        "sourceViews": {
+          "front": {
+            "source_member": "xl/media/image319.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0370_image319.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 3724,
+            "sha256": "7ed7a8b29ce4d5e350fca8f89f55c6ff5c1c510f633c94c5662d39f233bb4116",
+            "gitBlob": "3249a0930ef80e51e49392a1e28121ae1ffdf722",
+            "cell": "L111"
+          },
+          "back": {
+            "source_member": "xl/media/image324.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0325_image324.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 4197,
+            "sha256": "92d6ef7e5cc3bb42319e1586526b26c4561c1a719c40eec3393a7e4b4e0fb965",
+            "gitBlob": "a070cf590467195efca5d71e33765f1f921a965d",
+            "cell": "M111"
+          },
+          "shiny": {
+            "source_member": "xl/media/image312.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0365_image312.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 3724,
+            "sha256": "1046536e0d4c3c743a2cbfef777ddc3c83b3ac08371dc434bab2384945943e46",
+            "gitBlob": "53dd1c865695f134621ae3771bb8c86b082ecdf3",
+            "cell": "N111"
+          }
+        },
+        "allPinnedMediaPresent": true,
+        "shinyBackCellPresent": false,
+        "priorPixelMappingCandidate": true
+      },
+      "disposition": "EXCLUDE_MISSING_ORIGINAL_VIEWS",
+      "productionAllowed": false
+    },
+    {
+      "artworkKey": "platinum-redux-registeel|gitblob:e6254a1fe102a481005d7523d55440dd039cfb93",
+      "reviewId": "R0564",
+      "decision": "keep",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "missing": [
+        "shinyBack"
+      ],
+      "donorKeys": [],
+      "evidence": {
+        "workbookRow": 113,
+        "normalPairMatches": [
+          113
+        ],
+        "sourceViews": {
+          "front": {
+            "source_member": "xl/media/image331.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0052_image331.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 3893,
+            "sha256": "df72aeeececa6d6303e391ea661e099999ef529af95d2386e8a2f5e6d4a95dda",
+            "gitBlob": "e6254a1fe102a481005d7523d55440dd039cfb93",
+            "cell": "L113"
+          },
+          "back": {
+            "source_member": "xl/media/image326.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0416_image326.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 3842,
+            "sha256": "e97515df601346712d6ff3e277b8953ba8a9ac838bddead7474d5b12fc38d9e3",
+            "gitBlob": "f13ec3966f70ed1fd36748d3cc15fdf614becb0c",
+            "cell": "M113"
+          },
+          "shiny": {
+            "source_member": "xl/media/image332.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0344_image332.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 3893,
+            "sha256": "51e21f70f107a6231056cede9354c249fa75bd37b127614a369b484620619fae",
+            "gitBlob": "35b0d96509d95a37c22f1a5fc2940e23c0c9cab8",
+            "cell": "N113"
+          }
+        },
+        "allPinnedMediaPresent": true,
+        "shinyBackCellPresent": false,
+        "priorPixelMappingCandidate": true
+      },
+      "disposition": "EXCLUDE_MISSING_ORIGINAL_VIEWS",
+      "productionAllowed": false
+    },
+    {
+      "artworkKey": "platinum-redux-skuntank|gitblob:a794912de493891f14a1f4412f9c91b3d8de1108",
+      "reviewId": "R0632",
+      "decision": "keep",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "missing": [
+        "shinyBack"
+      ],
+      "donorKeys": [],
+      "evidence": {
+        "workbookRow": 126,
+        "normalPairMatches": [
+          126
+        ],
+        "sourceViews": {
+          "front": {
+            "source_member": "xl/media/image370.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0030_image370.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 3491,
+            "sha256": "0e1d87fab1c67c5dadd6b8479752fafae35ababfb4526ad67bd2d5c29389ea68",
+            "gitBlob": "a794912de493891f14a1f4412f9c91b3d8de1108",
+            "cell": "L126"
+          },
+          "back": {
+            "source_member": "xl/media/image357.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0219_image357.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 3306,
+            "sha256": "4950afdd21acde4df4ef2868d02d7885cf10458d4238d44a90da6468b55f3579",
+            "gitBlob": "a2fc351dd66b13308b9df50b8d0721a9c087b17e",
+            "cell": "M126"
+          },
+          "shiny": {
+            "source_member": "xl/media/image361.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0029_image361.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 3491,
+            "sha256": "9243d6ce6b1ea19e12afe2982b12b522967cf7fa123b459eeae51ec905802716",
+            "gitBlob": "88d559b3ed1c265da9ede954f10e74533c149219",
+            "cell": "N126"
+          }
+        },
+        "allPinnedMediaPresent": true,
+        "shinyBackCellPresent": false,
+        "priorPixelMappingCandidate": false
+      },
+      "disposition": "EXCLUDE_MISSING_ORIGINAL_VIEWS",
+      "productionAllowed": false
+    },
+    {
+      "artworkKey": "platinum-redux-slaking|gitblob:2b1d9a1d938a22c44ba5dd464248201d56445b0b",
+      "reviewId": "R0424",
+      "decision": "keep",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "missing": [
+        "shinyBack"
+      ],
+      "donorKeys": [],
+      "evidence": {
+        "workbookRow": 85,
+        "normalPairMatches": [
+          85
+        ],
+        "sourceViews": {
+          "front": {
+            "source_member": "xl/media/image236.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0182_image236.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 3601,
+            "sha256": "99a5ecb80bb26a7d20c0201339653bbf1cf1bf3e933973daf245de1b449cdd49",
+            "gitBlob": "2b1d9a1d938a22c44ba5dd464248201d56445b0b",
+            "cell": "L85"
+          },
+          "back": {
+            "source_member": "xl/media/image241.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0011_image241.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 2608,
+            "sha256": "d45fc1cc986d46c0975d53483453012f6c0f6e93751b2cb164bb7e0fd0a2f6d9",
+            "gitBlob": "30e9eb3b84584f2072bc4a5d09c0df710c506b37",
+            "cell": "M85"
+          },
+          "shiny": {
+            "source_member": "xl/media/image311.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0427_image311.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 3594,
+            "sha256": "b962d09dbd44abd59b96883f20fa775eaa77b878dce6efa93f1622a7f0b92b6a",
+            "gitBlob": "68ff29bfbfc5594d00c1d4e77014c6c7db0f6dd4",
+            "cell": "N85"
+          }
+        },
+        "allPinnedMediaPresent": true,
+        "shinyBackCellPresent": false,
+        "priorPixelMappingCandidate": true
+      },
+      "disposition": "EXCLUDE_MISSING_ORIGINAL_VIEWS",
+      "productionAllowed": false
+    },
+    {
+      "artworkKey": "platinum-redux-snorlax|gitblob:47a8557e6510d4c849fc22136a5808cf15ba98b8",
+      "reviewId": "R0257",
+      "decision": "keep",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "missing": [
+        "shinyBack"
+      ],
+      "donorKeys": [],
+      "evidence": {
+        "workbookRow": 47,
+        "normalPairMatches": [
+          47
+        ],
+        "sourceViews": {
+          "front": {
+            "source_member": "xl/media/image135.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0154_image135.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 3776,
+            "sha256": "5d682e38b9d6c504016929309d092dc0884b214f84e20cfc9e1ec82558967b1b",
+            "gitBlob": "47a8557e6510d4c849fc22136a5808cf15ba98b8",
+            "cell": "L47"
+          },
+          "back": {
+            "source_member": "xl/media/image118.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0360_image118.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 4069,
+            "sha256": "fb901dd7e259dc2907a4e364b87cac33304604d722d019045d927ba6a8c19ed7",
+            "gitBlob": "ec22994a706d9f581a18a331efeb93e1efb94e5d",
+            "cell": "M47"
+          },
+          "shiny": {
+            "source_member": "xl/media/image131.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0349_image131.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 3776,
+            "sha256": "8903a92e18721b4b2e423491b02b94d36eaed269eb04f56e29f6878c2c7e1424",
+            "gitBlob": "9a83c1c1862947eb34797b25c797470344a3fb1f",
+            "cell": "N47"
+          }
+        },
+        "allPinnedMediaPresent": true,
+        "shinyBackCellPresent": false,
+        "priorPixelMappingCandidate": true
+      },
+      "disposition": "EXCLUDE_MISSING_ORIGINAL_VIEWS",
+      "productionAllowed": false
+    },
+    {
+      "artworkKey": "platinum-redux-stantler|gitblob:fd03d9f13da2fc3d2db97c176d604423f3a5b07a",
+      "reviewId": "R0373",
+      "decision": "keep",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "missing": [
+        "shinyBack"
+      ],
+      "donorKeys": [],
+      "evidence": {
+        "workbookRow": 71,
+        "normalPairMatches": [
+          71
+        ],
+        "sourceViews": {
+          "front": {
+            "source_member": "xl/media/image193.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0146_image193.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 2446,
+            "sha256": "39f7ed088cde7bec619611112fcfc6e3f48d5f64a90b0d3b888457ee18eb7629",
+            "gitBlob": "fd03d9f13da2fc3d2db97c176d604423f3a5b07a",
+            "cell": "L71"
+          },
+          "back": {
+            "source_member": "xl/media/image198.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0072_image198.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 2750,
+            "sha256": "d13c63021787b5ecfcb896ca508cd62acf7a01e5132ce18f4f38d492244e1191",
+            "gitBlob": "717fa530b2a43c27bf350fc030c73a7df89c0857",
+            "cell": "M71"
+          },
+          "shiny": {
+            "source_member": "xl/media/image211.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0417_image211.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 2446,
+            "sha256": "c8caa0cd804112be4af5bdb62d37c421fc1ce734bf4d69224198b70e0f771118",
+            "gitBlob": "d17e8e7e8c2a00db519fb334ab13af782406a694",
+            "cell": "N71"
+          }
+        },
+        "allPinnedMediaPresent": true,
+        "shinyBackCellPresent": false,
+        "priorPixelMappingCandidate": true
+      },
+      "disposition": "EXCLUDE_MISSING_ORIGINAL_VIEWS",
+      "productionAllowed": false
+    },
+    {
+      "artworkKey": "platinum-redux-staraptor|gitblob:dbf760cc454845571f94ab084d720f262c7f6004",
+      "reviewId": "R0587",
+      "decision": "keep",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "missing": [
+        "shinyBack"
+      ],
+      "donorKeys": [],
+      "evidence": {
+        "workbookRow": 117,
+        "normalPairMatches": [
+          117
+        ],
+        "sourceViews": {
+          "front": {
+            "source_member": "xl/media/image342.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0257_image342.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 3240,
+            "sha256": "61904ecf93140b3a9df936a47a36b62594499ecbd4ac2d269739862445e31cf6",
+            "gitBlob": "dbf760cc454845571f94ab084d720f262c7f6004",
+            "cell": "L117"
+          },
+          "back": {
+            "source_member": "xl/media/image346.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0074_image346.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 3323,
+            "sha256": "f873df1489ad327c4a20e481eb4b150cf3f690aa06fb5f599c740b5397ae51c7",
+            "gitBlob": "077c5c5f7770d10c7b6d3244bb7f837e805f2473",
+            "cell": "M117"
+          },
+          "shiny": {
+            "source_member": "xl/media/image344.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0142_image344.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 3240,
+            "sha256": "f4394d01a13fed0cef4870058e6b87742917f478a2b896c9e84ece9b3f046c81",
+            "gitBlob": "62458db34fc5ad4015bc2c54598a9ec2933c9924",
+            "cell": "N117"
+          }
+        },
+        "allPinnedMediaPresent": true,
+        "shinyBackCellPresent": false,
+        "priorPixelMappingCandidate": true
+      },
+      "disposition": "EXCLUDE_MISSING_ORIGINAL_VIEWS",
+      "productionAllowed": false
+    },
+    {
+      "artworkKey": "platinum-redux-sudowoodo|gitblob:907d0f8cf3a8d7c8d8ebf84ec2d50de8bd0d166e",
+      "reviewId": "R0303",
+      "decision": "keep",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "missing": [
+        "shinyBack"
+      ],
+      "donorKeys": [],
+      "evidence": {
+        "workbookRow": 61,
+        "normalPairMatches": [
+          61
+        ],
+        "sourceViews": {
+          "front": {
+            "source_member": "xl/media/image163.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0264_image163.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 3381,
+            "sha256": "3db6c5ea7f8954f38644895bfde727a2063aff5e0a721440af23f18705228494",
+            "gitBlob": "907d0f8cf3a8d7c8d8ebf84ec2d50de8bd0d166e",
+            "cell": "L61"
+          },
+          "back": {
+            "source_member": "xl/media/image195.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0260_image195.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 3194,
+            "sha256": "72109c53602c6db3b26c5a29269fbf8c7859e26d935be3965e388e389210184c",
+            "gitBlob": "dd42659fbafdc7113a712bbdfe6bb057a841091e",
+            "cell": "M61"
+          },
+          "shiny": {
+            "source_member": "xl/media/image166.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0094_image166.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 3392,
+            "sha256": "24faa3a0e2efe6239b956620fb2a78d79385bbdc679b09efcae39bc32091d407",
+            "gitBlob": "3177ac0ae30c9851949130d392d3774b2c49600f",
+            "cell": "N61"
+          }
+        },
+        "allPinnedMediaPresent": true,
+        "shinyBackCellPresent": false,
+        "priorPixelMappingCandidate": true
+      },
+      "disposition": "EXCLUDE_MISSING_ORIGINAL_VIEWS",
+      "productionAllowed": false
+    },
+    {
+      "artworkKey": "platinum-redux-suicune|gitblob:1402e7a03f5781d7011dcf802e791c78830a256f",
+      "reviewId": "R0378",
+      "decision": "keep",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "missing": [
+        "shinyBack"
+      ],
+      "donorKeys": [],
+      "evidence": {
+        "workbookRow": 76,
+        "normalPairMatches": [
+          76
+        ],
+        "sourceViews": {
+          "front": {
+            "source_member": "xl/media/image212.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0347_image212.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 4335,
+            "sha256": "ed21bef12b04f633cd6e467bedb7c532281231d904266093359cad0520908854",
+            "gitBlob": "1402e7a03f5781d7011dcf802e791c78830a256f",
+            "cell": "L76"
+          },
+          "back": {
+            "source_member": "xl/media/image226.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0377_image226.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 3883,
+            "sha256": "4d0c201490c108cd152fabc8d8c5526de8bd2748403aac88355d5977b2475073",
+            "gitBlob": "85cdcc9371fcfacd5b4b39e7ee1dc6bf13155b70",
+            "cell": "M76"
+          },
+          "shiny": {
+            "source_member": "xl/media/image205.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0242_image205.png",
+            "width": 160,
+            "height": 80,
+            "mode": "RGB",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 6739,
+            "sha256": "26023af006d52418015ecf9006849f5c526038a6e6fc2daf4d7d3d4b10cede96",
+            "gitBlob": "09d61037a79cd7cdb91bc8111c6ae20e4c0517fc",
+            "cell": "N76"
+          }
+        },
+        "allPinnedMediaPresent": true,
+        "shinyBackCellPresent": false,
+        "priorPixelMappingCandidate": true
+      },
+      "disposition": "EXCLUDE_MISSING_ORIGINAL_VIEWS",
+      "productionAllowed": false
+    },
+    {
+      "artworkKey": "platinum-redux-tauros|gitblob:6e664056f4183451f65e7b6b6edf834e8dd83f6b",
+      "reviewId": "R0214",
+      "decision": "keep",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "missing": [
+        "shinyBack"
+      ],
+      "donorKeys": [],
+      "evidence": {
+        "workbookRow": 39,
+        "normalPairMatches": [
+          39
+        ],
+        "sourceViews": {
+          "front": {
+            "source_member": "xl/media/image104.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0423_image104.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 3052,
+            "sha256": "891953797b5a712b8d1888a4f73dace7070aacf23afa7117cee1c8bc9b4337ac",
+            "gitBlob": "6e664056f4183451f65e7b6b6edf834e8dd83f6b",
+            "cell": "L39"
+          },
+          "back": {
+            "source_member": "xl/media/image107.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0140_image107.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 3412,
+            "sha256": "485872f46ba11ea0907dc5b6f9c5388bcdb9d50e402f50dc7dbf0da620607d3b",
+            "gitBlob": "d8b2c2d62867a9d7dd218cb65e14e8a49001a6b8",
+            "cell": "M39"
+          },
+          "shiny": {
+            "source_member": "xl/media/image95.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0363_image95.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 3052,
+            "sha256": "5d70e66d28cdac6f7eaca68dce1c46c40584bc3a15d2ea6c48101bb936d543f9",
+            "gitBlob": "fabccbcf948112af36545a78f039bdf562370f18",
+            "cell": "N39"
+          }
+        },
+        "allPinnedMediaPresent": true,
+        "shinyBackCellPresent": false,
+        "priorPixelMappingCandidate": true
+      },
+      "disposition": "EXCLUDE_MISSING_ORIGINAL_VIEWS",
+      "productionAllowed": false
+    },
+    {
+      "artworkKey": "platinum-redux-torkoal|gitblob:bbf58ca6e08c9dcaefb1aaad072de5cdcf7fb71a",
+      "reviewId": "R0485",
+      "decision": "keep",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "missing": [
+        "shinyBack"
+      ],
+      "donorKeys": [],
+      "evidence": {
+        "workbookRow": 96,
+        "normalPairMatches": [
+          96
+        ],
+        "sourceViews": {
+          "front": {
+            "source_member": "xl/media/image284.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0237_image284.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 2757,
+            "sha256": "9ed446314e2ee2de191de1af8b0ffbb7cac5f4e0c9fd0597173be60801f0cfd4",
+            "gitBlob": "bbf58ca6e08c9dcaefb1aaad072de5cdcf7fb71a",
+            "cell": "L96"
+          },
+          "back": {
+            "source_member": "xl/media/image266.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0120_image266.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 3412,
+            "sha256": "e0c2063cac05b52e061931be927b77bd7981923c5567e0e890f181dd05e4faff",
+            "gitBlob": "648270a7c351d679903d9bcbd062c51b3d6e58bc",
+            "cell": "M96"
+          },
+          "shiny": {
+            "source_member": "xl/media/image275.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0421_image275.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 2756,
+            "sha256": "663eb8262dcddb6783aa628471aa97ff4bab30eda1b57f67cf02b80f0fb5d9d1",
+            "gitBlob": "e67e874099304a34648791a11fc611c68e5aa858",
+            "cell": "N96"
+          }
+        },
+        "allPinnedMediaPresent": true,
+        "shinyBackCellPresent": false,
+        "priorPixelMappingCandidate": true
+      },
+      "disposition": "EXCLUDE_MISSING_ORIGINAL_VIEWS",
+      "productionAllowed": false
+    },
+    {
+      "artworkKey": "platinum-redux-typhlosion|gitblob:240bedac0270343e555ed575995f49175efff291",
+      "reviewId": "R0276",
+      "decision": "keep",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "missing": [
+        "shinyBack"
+      ],
+      "donorKeys": [],
+      "evidence": {
+        "workbookRow": 52,
+        "normalPairMatches": [
+          52
+        ],
+        "sourceViews": {
+          "front": {
+            "source_member": "xl/media/image125.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0400_image125.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 4178,
+            "sha256": "95a870cd79052e912184e35a376dcac3e6b3f9a1b4e19cba746c56f00965c4d6",
+            "gitBlob": "240bedac0270343e555ed575995f49175efff291",
+            "cell": "L52"
+          },
+          "back": {
+            "source_member": "xl/media/image147.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0429_image147.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 4026,
+            "sha256": "214b5160ead506afa2e8b310a0b99b455253e15edb2296940e107ca66bcc5940",
+            "gitBlob": "8c6fffc108d23a75d5b5cdf8fe538130d066808c",
+            "cell": "M52"
+          },
+          "shiny": {
+            "source_member": "xl/media/image177.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0101_image177.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 4178,
+            "sha256": "f7e508a32b9d227e9f9c1a83bb075690c377663d1eadd643de3b25a587efd9f5",
+            "gitBlob": "c43bfd48653c7566282229c53d1f798d6cb0d869",
+            "cell": "N52"
+          }
+        },
+        "allPinnedMediaPresent": true,
+        "shinyBackCellPresent": false,
+        "priorPixelMappingCandidate": true
+      },
+      "disposition": "EXCLUDE_MISSING_ORIGINAL_VIEWS",
+      "productionAllowed": false
+    },
+    {
+      "artworkKey": "platinum-redux-umbreon|gitblob:de88ca1a4b93447a276ab5061ee3afb94e7adeff",
+      "reviewId": "R0234",
+      "decision": "keep",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "missing": [
+        "shinyBack"
+      ],
+      "donorKeys": [],
+      "evidence": {
+        "workbookRow": 65,
+        "normalPairMatches": [
+          65
+        ],
+        "sourceViews": {
+          "front": {
+            "source_member": "xl/media/image175.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0406_image175.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 2524,
+            "sha256": "887bd02f38d449a7083809b551a5b6236ae7341c6b22b20c6ed8564d79e06af5",
+            "gitBlob": "de88ca1a4b93447a276ab5061ee3afb94e7adeff",
+            "cell": "L65"
+          },
+          "back": {
+            "source_member": "xl/media/image258.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0206_image258.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 3523,
+            "sha256": "b09e6b0563c61b147add06cd06748eec295bb6add34f27860a1669a1f53b9559",
+            "gitBlob": "552073fd12005486279bfb57ca884b4899c5d6d2",
+            "cell": "M65"
+          },
+          "shiny": {
+            "source_member": "xl/media/image186.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0178_image186.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 2524,
+            "sha256": "6853da58ba4e45c545fbfde8ee0ddb09c6a48be6015395cbd0976babb1b6e719",
+            "gitBlob": "b7486b4dae8522c2861522a1b0f9d217f0affb59",
+            "cell": "N65"
+          }
+        },
+        "allPinnedMediaPresent": true,
+        "shinyBackCellPresent": false,
+        "priorPixelMappingCandidate": true
+      },
+      "disposition": "EXCLUDE_MISSING_ORIGINAL_VIEWS",
+      "productionAllowed": false
+    },
+    {
+      "artworkKey": "platinum-redux-ursaring|gitblob:7d450653551a002ef1bdbde1dda467b67263da03",
+      "reviewId": "R0348",
+      "decision": "keep",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "missing": [
+        "shinyBack"
+      ],
+      "donorKeys": [],
+      "evidence": {
+        "workbookRow": 68,
+        "normalPairMatches": [
+          68
+        ],
+        "sourceViews": {
+          "front": {
+            "source_member": "xl/media/image181.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0431_image181.png",
+            "width": 160,
+            "height": 80,
+            "mode": "RGB",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 4160,
+            "sha256": "1d107f513fbab5e3d4328f68517c6125909fdfc74e2b195b4c4cacd00a2acce7",
+            "gitBlob": "7d450653551a002ef1bdbde1dda467b67263da03",
+            "cell": "L68"
+          },
+          "back": {
+            "source_member": "xl/media/image178.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0153_image178.png",
+            "width": 160,
+            "height": 80,
+            "mode": "RGB",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 3907,
+            "sha256": "9892a05ba1e431bf4a74be8ac069b5fd28bc4c88c0f8666ae37c10517fc4e162",
+            "gitBlob": "a4131494ea8b6e3e631fd3d7002b14dfab88a395",
+            "cell": "M68"
+          },
+          "shiny": {
+            "source_member": "xl/media/image190.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0132_image190.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 3767,
+            "sha256": "99918051f8fa5d29d3e5285edd8bff987c1e749853cde126265b24163892ad1f",
+            "gitBlob": "9d048dd21b5f880b5ca86e42dad849ae9a4d5c84",
+            "cell": "N68"
+          }
+        },
+        "allPinnedMediaPresent": true,
+        "shinyBackCellPresent": false,
+        "priorPixelMappingCandidate": true
+      },
+      "disposition": "EXCLUDE_MISSING_ORIGINAL_VIEWS",
+      "productionAllowed": false
+    },
+    {
+      "artworkKey": "platinum-redux-vaporeon|gitblob:e2822185a3646d1561497d42751db194793248f5",
+      "reviewId": "R0225",
+      "decision": "keep",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "missing": [
+        "shinyBack"
+      ],
+      "donorKeys": [],
+      "evidence": {
+        "workbookRow": 42,
+        "normalPairMatches": [
+          42
+        ],
+        "sourceViews": {
+          "front": {
+            "source_member": "xl/media/image113.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0015_image113.png",
+            "width": 160,
+            "height": 80,
+            "mode": "RGB",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 3171,
+            "sha256": "6cf3d726d009a1d115592f0023fa6ba8ec5fe7a1c3132ffa71b0f9931ced3900",
+            "gitBlob": "e2822185a3646d1561497d42751db194793248f5",
+            "cell": "L42"
+          },
+          "back": {
+            "source_member": "xl/media/image179.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0225_image179.png",
+            "width": 160,
+            "height": 80,
+            "mode": "RGB",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 3416,
+            "sha256": "cfa11f9aa44bf3d38cb36f6bf98aef9fa7888394534573608f6916f9fdddf182",
+            "gitBlob": "b2f51e987be194bab4e369328eb886ecbc11e2a6",
+            "cell": "M42"
+          },
+          "shiny": {
+            "source_member": "xl/media/image245.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0312_image245.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 2959,
+            "sha256": "98b6ef1eee0d72f1ef7ca42cb7b5279c5df47298fa0c0f80ed0db7f294f78bf1",
+            "gitBlob": "07a81b032cc9f4becf44b49d92473ca289375eee",
+            "cell": "N42"
+          }
+        },
+        "allPinnedMediaPresent": true,
+        "shinyBackCellPresent": false,
+        "priorPixelMappingCandidate": true
+      },
+      "disposition": "EXCLUDE_MISSING_ORIGINAL_VIEWS",
+      "productionAllowed": false
+    },
+    {
+      "artworkKey": "platinum-redux-venomoth|gitblob:6fe7fc7956ec66bdd215cbdbe8b2199ec8ff1ebb",
+      "reviewId": "R0066",
+      "decision": "keep",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "missing": [
+        "shinyBack"
+      ],
+      "donorKeys": [],
+      "evidence": {
+        "workbookRow": 16,
+        "normalPairMatches": [
+          16
+        ],
+        "sourceViews": {
+          "front": {
+            "source_member": "xl/media/image54.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0031_image54.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 3824,
+            "sha256": "2dda02b54572a077f174b2afc6f9b52354830e6f0731eaa9eca50cd1e41725fb",
+            "gitBlob": "6fe7fc7956ec66bdd215cbdbe8b2199ec8ff1ebb",
+            "cell": "L16"
+          },
+          "back": {
+            "source_member": "xl/media/image46.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0027_image46.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 4587,
+            "sha256": "0d70f85606be5d1d35ddafec559399559056d78936b0e8cf445396f15dbd3efd",
+            "gitBlob": "46634f6eea15cd0c4e1289a2aea78e746fc46254",
+            "cell": "M16"
+          },
+          "shiny": {
+            "source_member": "xl/media/image26.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0295_image26.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 3824,
+            "sha256": "eb5c1cbc750e8639be61e63d00622164a906f13c13b738f9b393715b54cedeec",
+            "gitBlob": "994aa898bac1d5e6cc27cec99b26dff64d26cb28",
+            "cell": "N16"
+          }
+        },
+        "allPinnedMediaPresent": true,
+        "shinyBackCellPresent": false,
+        "priorPixelMappingCandidate": true
+      },
+      "disposition": "EXCLUDE_MISSING_ORIGINAL_VIEWS",
+      "productionAllowed": false
+    },
+    {
+      "artworkKey": "platinum-redux-venusaur|gitblob:cefe24f3b615a6d657f51f42215b6c0ef432e7d9",
+      "reviewId": "R0002",
+      "decision": "keep",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "missing": [
+        "shinyFront",
+        "shinyBack"
+      ],
+      "donorKeys": [],
+      "evidence": {
+        "workbookRow": 3,
+        "normalPairMatches": [
+          3
+        ],
+        "sourceViews": {
+          "front": {
+            "source_member": "xl/media/image4.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0085_image4.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 3986,
+            "sha256": "90b894447cfb1cbf67131a95fc9eb42ea979af2f59b203a72289504a55868970",
+            "gitBlob": "cefe24f3b615a6d657f51f42215b6c0ef432e7d9",
+            "cell": "L3"
+          },
+          "back": {
+            "source_member": "xl/media/image38.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0409_image38.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 4143,
+            "sha256": "2848b60ad4893379563baded2302bed4bbb051cacfe45b1b716f7da1441e8fbd",
+            "gitBlob": "3cb8d5461f7e7adefe478c2bd7ed6ba9300e4c12",
+            "cell": "M3"
+          },
+          "shiny": {
+            "source_member": "xl/media/image3.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0356_image3.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 3989,
+            "sha256": "e75a52b805b88739a0703648c7d1166f2cc7c751dc61e768158c6e0c8300019e",
+            "gitBlob": "838fc0ed2933095406d4acfce7b4c0b17f1df65f",
+            "cell": "N3"
+          }
+        },
+        "allPinnedMediaPresent": true,
+        "shinyBackCellPresent": false,
+        "priorPixelMappingCandidate": false
+      },
+      "disposition": "EXCLUDE_MISSING_ORIGINAL_VIEWS",
+      "productionAllowed": false
+    },
+    {
+      "artworkKey": "platinum-redux-victreebel|gitblob:cdd5a60ca14c217e500a36a4e87ec65fe8a6320a",
+      "reviewId": "R0104",
+      "decision": "keep",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "missing": [
+        "shinyBack"
+      ],
+      "donorKeys": [],
+      "evidence": {
+        "workbookRow": 23,
+        "normalPairMatches": [
+          23
+        ],
+        "sourceViews": {
+          "front": {
+            "source_member": "xl/media/image64.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0087_image64.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 3186,
+            "sha256": "2384d1a48abcbc964f86466c33715b16cf7c3a8acb6a99cdd5d9f26b00f6c7ae",
+            "gitBlob": "cdd5a60ca14c217e500a36a4e87ec65fe8a6320a",
+            "cell": "L23"
+          },
+          "back": {
+            "source_member": "xl/media/image59.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0389_image59.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 3560,
+            "sha256": "678d1cf21b4d02a23a4374a8839e000048e60f8740f0fa2698d80ed465b733a8",
+            "gitBlob": "9c43d61a9f1586fc4cb7556ec83b3d6c1555a4d4",
+            "cell": "M23"
+          },
+          "shiny": {
+            "source_member": "xl/media/image73.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0396_image73.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 3186,
+            "sha256": "56aca428d9c91e9ec933029b6c5d2943f2175137517e11fa9be3cb4051146917",
+            "gitBlob": "f0a36d2812d4fa38dbfe23aea08f01faf6851127",
+            "cell": "N23"
+          }
+        },
+        "allPinnedMediaPresent": true,
+        "shinyBackCellPresent": false,
+        "priorPixelMappingCandidate": true
+      },
+      "disposition": "EXCLUDE_MISSING_ORIGINAL_VIEWS",
+      "productionAllowed": false
+    },
+    {
+      "artworkKey": "platinum-redux-volbeat|gitblob:df2a921af9512ca7ee00c8746d8dd46f160ee9c0",
+      "reviewId": "R0467",
+      "decision": "keep",
+      "source": "Platinum Redux 2.9.3 TC6",
+      "missing": [
+        "shinyBack"
+      ],
+      "donorKeys": [],
+      "evidence": {
+        "workbookRow": 92,
+        "normalPairMatches": [
+          92
+        ],
+        "sourceViews": {
+          "front": {
+            "source_member": "xl/media/image272.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0039_image272.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 2858,
+            "sha256": "82be386ad2f3a1411cdcf8d6616d02c06f60969ebd6629e768ddef9e2d791d76",
+            "gitBlob": "df2a921af9512ca7ee00c8746d8dd46f160ee9c0",
+            "cell": "L92"
+          },
+          "back": {
+            "source_member": "xl/media/image367.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0103_image367.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 3573,
+            "sha256": "906949e4d50896b3a76a6e694a96b98c10f8612e8c142534bea3bc8aa569efa3",
+            "gitBlob": "685c61b06928d221df7b406fc2f0323f1cfc8f63",
+            "cell": "M92"
+          },
+          "shiny": {
+            "source_member": "xl/media/image247.png",
+            "path": "DS_CUSTOM_LIBRARY/hack-packs/Platinum_Redux_Embedded_Sprites/all-embedded/0410_image247.png",
+            "width": 160,
+            "height": 80,
+            "mode": "P",
+            "has_alpha_or_transparency": false,
+            "sprite_like_candidate": true,
+            "bytes": 2858,
+            "sha256": "4cab661a9a4ad0bafcd4a590a59651d82c942a006448a3d7185a0190a8c45aed",
+            "gitBlob": "a5ceaf3c1d5c6da45283775b5787410c27893165",
+            "cell": "N92"
+          }
+        },
+        "allPinnedMediaPresent": true,
+        "shinyBackCellPresent": false,
+        "priorPixelMappingCandidate": true
+      },
+      "disposition": "EXCLUDE_MISSING_ORIGINAL_VIEWS",
+      "productionAllowed": false
+    },
+    {
+      "artworkKey": "vespiquen-alternate-form-1|gitblob:2bf8fe48bb0ba3f4a6046229b79ad9eda721cae7",
+      "reviewId": "R0608",
+      "decision": "keep",
+      "source": "Reborn / Plates of Arceus",
+      "missing": [
+        "shinyFront",
+        "shinyBack"
+      ],
+      "donorKeys": [],
+      "evidence": {
+        "files": [
+          {
+            "path": "vespiquen-alternate-form-1/back.png",
+            "sha": "895f739091f66523dfa209649654b2da80301859"
+          },
+          {
+            "path": "vespiquen-alternate-form-1/front.png",
+            "sha": "2bf8fe48bb0ba3f4a6046229b79ad9eda721cae7"
+          }
+        ],
+        "normalPinsPresent": true
+      },
+      "disposition": "EXCLUDE_MISSING_ORIGINAL_VIEWS",
+      "productionAllowed": false
+    }
+  ]
+}
