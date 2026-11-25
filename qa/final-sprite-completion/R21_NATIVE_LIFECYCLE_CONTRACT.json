@@ -1,0 +1,52 @@
+{
+  "schema": "mercury-r21-native-lifecycle-contract-v1",
+  "baseline": "2e08faea82688f8d9efa17e1135d5b698b90ea29",
+  "upstreamRef": "c248fb3f8cc9934ded800e489567c5c0eeee92eb",
+  "sourcePins": {
+    "pcScroll": "0e6fbaf5e0c2b171d3adebe63a8e8bbc9789ea98",
+    "pcMain": "3d5d958211d73e173a382d1fe2cd1f61c8dffa15",
+    "party": "822f06c0341d95925cca9fc154b258a6d20e938d",
+    "preview": "831dfdfc1a6809608f7dc95da2a905bf477b7964",
+    "otherPCScanned": [
+      "dfcd9911fa7f503d85b39fdc5af4be2d0d78a4a5",
+      "c91cd1bf422d9cc8ae026a34a8cbbdc5b3788a12",
+      "7336e8e1e293b41514c919b24a5c0940f12a4764",
+      "cc6bd803992d2d302bf4a23b357e9228315f2515",
+      "0125b12a32013642f3ce65df49b60bff8b0aa164"
+    ],
+    "sdkRef": "eaae40f199c0a8827947afbc33227b6ba2f9d45c",
+    "gxLoad3d": "09bb27ecb8579a81cca93e6480980957378695cb"
+  },
+  "findings": [
+    "GX_LoadTex and GX_LoadTexPltt perform asynchronous DMA; respective EndLoad functions call GXi_WaitDma and restore texture bank mapping. Integration should serialize Begin/Load/End, flush aligned owned source, fence only after End returns, and drain before teardown. No SDK call executed.",
+    "Native column visibility uses strict bounds 72+offset and 272+offset, phase initialized at 1, VBlank updates when phase<2, main prepares when phase=2. 30 updates then snap. R21 model covers both directions for offset 0 with full boxes; exact task scheduling not proven.",
+    "Party draw uses resource ID 4+slot, palette index +3. Reload uses image proxy address and GX_LoadOBJ then frees NCGR, sets explicit palette. Existing original animation cell resources still required. Hypothetical 7–15 custom palette slots remain unverified.",
+    "Five further PC modules scanned for direct G3/texture APIs and base setters; no direct matches. Not exhaustive transitive call graph or authoritative free VRAM proof.",
+    "Original PC icons are OBJ, BG0 3D priority 1. Replacing icons with 3D quads may change UI ordering; no native layer-equivalence proof."
+  ],
+  "cCore": {
+    "sourceBlob": "cad32afa0ffc4a50a40743b4ab6c438355919439",
+    "sha256": "d4e9ce55ce3bd8e44f45176ec1eeceae8ec03824ff5b560e590663d5cfad4f25",
+    "hostCommand": "gcc -std=c11 -Wall -Wextra -Werror -O2 -DHOST_TEST r21_lifecycle_core.c -o host && ./host",
+    "hostOutput": "256 lifetime cases; 131584 owned bytes; 5 bounds rejections PASS",
+    "armCommand": "clang --target=arm-none-eabi -mcpu=arm946e-s -marm -ffreestanding -std=c11 -Wall -Wextra -Werror -O2 -c r21_lifecycle_core.c -o arm9.o",
+    "armSha256": "eb7e6ddf4dfac45bb4c6e1bc29c060ec075d895b4937c83dd1654de31a250c2d",
+    "armObject": "ELF32 LSB relocatable ARM EABI5; four global functions",
+    "armExecuted": false,
+    "callerInvariants": [
+      "Unique nonzero epoch for each new lifecycle; never reinitialize active or draining state.",
+      "Caller serializes calls and owns state; no interrupt locking or actual DMA hooks implemented.",
+      "Caller supplies already-authorized region; bounds function does not itself authorize memory."
+    ]
+  },
+  "hostSource": "31cbd3f0eba8bdc19e91544389b18cb2044da08a",
+  "hostTests": "a7a2d87d6001e8dc8b0e4c0947124ced24dbd79f",
+  "mainPins": {
+    "Sprites": "f15c4671bf7afb15450fc7801bde17aefcdc4f7e",
+    "Mercury-redux-dex": "faa7cb4016d8030fb4661b49114352d79cac7944",
+    "platinum-modern-ds": "5525e961a1fb98c62bd53bc4a27b0276a39f6719"
+  },
+  "nativeFullBuild": false,
+  "emulatorVerified": false,
+  "productionAllowed": false
+}
