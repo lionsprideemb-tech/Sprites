@@ -1,0 +1,245 @@
+{
+  "schema": "mercury-boss-design-authority-v1",
+  "status": "OWNER_APPROVED_DESIGN_PENDING_NATIVE_QA",
+  "date": "2026-11-25",
+  "authority": "Explicit current conversation approval; reconstructed design record, not evidence of previous commits or native implementation.",
+  "baseCheckpoint": "4032f09b10117b505f11418335ca3dab3836afb3",
+  "gym": {
+    "number": 8,
+    "name": "Volkner",
+    "playerLevelCap": 60,
+    "identicalCapAllDifficulties": true
+  },
+  "teams": {
+    "Trainer": [
+      {
+        "species": "Raichu",
+        "level": 56,
+        "item": "Magnet",
+        "moves": [
+          "Thunderbolt",
+          "Grass Knot",
+          "Encore",
+          "Volt Switch"
+        ]
+      },
+      {
+        "species": "Rotom-Wash",
+        "level": 57,
+        "item": "Sitrus Berry",
+        "moves": [
+          "Hydro Pump",
+          "Thunderbolt",
+          "Will-O-Wisp",
+          "Volt Switch"
+        ]
+      },
+      {
+        "species": "Electivire",
+        "level": 58,
+        "item": "Expert Belt",
+        "moves": [
+          "Thunder Punch",
+          "Ice Punch",
+          "Fire Punch",
+          "Earthquake"
+        ]
+      },
+      {
+        "species": "Mega Luxray",
+        "level": 60,
+        "item": "Luxray Mega Stone (symbolic)",
+        "moves": [
+          "Thunder Fang",
+          "Crunch",
+          "Ice Fang",
+          "Fire Fang"
+        ]
+      }
+    ],
+    "Ace Trainer": [
+      {
+        "species": "Kilowattrel",
+        "level": 57,
+        "item": "Focus Sash",
+        "moves": [
+          "Thunderbolt",
+          "Air Slash",
+          "Volt Switch",
+          "Roost"
+        ]
+      },
+      {
+        "species": "Rotom-Wash",
+        "level": 58,
+        "item": "Sitrus Berry",
+        "moves": [
+          "Hydro Pump",
+          "Thunderbolt",
+          "Will-O-Wisp",
+          "Volt Switch"
+        ]
+      },
+      {
+        "species": "Magnezone",
+        "level": 58,
+        "item": "Air Balloon",
+        "moves": [
+          "Flash Cannon",
+          "Thunderbolt",
+          "Body Press",
+          "Thunder Wave"
+        ]
+      },
+      {
+        "species": "Electivire",
+        "level": 59,
+        "item": "Expert Belt",
+        "moves": [
+          "Thunder Punch",
+          "Ice Punch",
+          "Fire Punch",
+          "Earthquake"
+        ]
+      },
+      {
+        "species": "Mega Luxray",
+        "level": 60,
+        "item": "Luxray Mega Stone (symbolic)",
+        "moves": [
+          "Thunder Fang",
+          "Crunch",
+          "Ice Fang",
+          "Fire Fang"
+        ]
+      }
+    ],
+    "Pro Trainer": [
+      {
+        "species": "Kilowattrel",
+        "level": 59,
+        "item": "Focus Sash",
+        "moves": [
+          "Thunderbolt",
+          "Air Slash",
+          "Volt Switch",
+          "Roost"
+        ]
+      },
+      {
+        "species": "Rotom-Wash",
+        "level": 59,
+        "item": "Sitrus Berry",
+        "moves": [
+          "Hydro Pump",
+          "Thunderbolt",
+          "Will-O-Wisp",
+          "Volt Switch"
+        ]
+      },
+      {
+        "species": "Magnezone",
+        "level": 60,
+        "item": "Air Balloon",
+        "moves": [
+          "Flash Cannon",
+          "Thunderbolt",
+          "Body Press",
+          "Thunder Wave"
+        ]
+      },
+      {
+        "species": "Eelektross",
+        "level": 60,
+        "item": "Assault Vest",
+        "moves": [
+          "Thunderbolt",
+          "Giga Drain",
+          "Flamethrower",
+          "Knock Off"
+        ]
+      },
+      {
+        "species": "Electivire",
+        "level": 60,
+        "item": "Expert Belt",
+        "moves": [
+          "Thunder Punch",
+          "Ice Punch",
+          "Fire Punch",
+          "Earthquake"
+        ]
+      },
+      {
+        "species": "Mega Luxray",
+        "level": 60,
+        "item": "Luxray Mega Stone (symbolic)",
+        "moves": [
+          "Thunder Fang",
+          "Crunch",
+          "Ice Fang",
+          "Fire Fang"
+        ]
+      }
+    ]
+  },
+  "protectedDecisions": {
+    "groundingFailure": {
+      "electricVsGround": 0.5,
+      "eligibleElectricParalysisAgainstGround": true,
+      "thunderWaveIncluded": true,
+      "preserveOtherTypeInteractions": true,
+      "preserveElectricalAbsorptionAbilities": true,
+      "preserveGroundShock": true,
+      "preserveNormalGroundAttackDamage": true,
+      "duration": "Existing standard difficulty durations; exact values not recovered, do not invent."
+    },
+    "megaLuxray": {
+      "primary": "Voltage Hunter",
+      "innates": [
+        "Shocking Jaws",
+        "Intimidate",
+        "Lightning Rod"
+      ],
+      "preserveRegularLuxrayAbilities": true,
+      "preserveHistoricalArtwork": true,
+      "typing": "Electric/Dark (historical design)",
+      "fourBitingMoves": true
+    },
+    "kilowattrel": {
+      "primaryOptions": [
+        "Wind Power",
+        "Volt Absorb",
+        "Competitive"
+      ],
+      "innates": [
+        "Gale Wings",
+        "Keen Eye",
+        "Motor Drive"
+      ],
+      "replace": "Striker",
+      "replacement": "Gale Wings",
+      "historicalConflict": "Conflicting blank-innate record remains preserved; do not delete historical source."
+    },
+    "adaptiveAI": "Increasingly intelligent switching, coverage selection and tactical play; fair AI; innates toggle respects existing global rules."
+  },
+  "qa": {
+    "status": "NOT_RUN",
+    "requirements": [
+      "Resolve original species data and remaining Gym approvals without inference",
+      "Validate moves, item IDs, abilities and learnsets against project data",
+      "Verify all difficulty rosters and same player cap",
+      "Native Grounding Failure interactions, duration, absorptions and Ground Shock",
+      "Native Gale Wings full-health priority and loss below full HP; innate toggle",
+      "Native Mega Luxray form, four biting moves, ability dispatch and regular Luxray unchanged",
+      "Native AI and battle tests"
+    ],
+    "constraints": [
+      "No GitHub Actions",
+      "No main changes",
+      "No playable ROM modifications",
+      "No production species IDs",
+      "Preserve all historical artwork, approvals and source files"
+    ]
+  }
+}
