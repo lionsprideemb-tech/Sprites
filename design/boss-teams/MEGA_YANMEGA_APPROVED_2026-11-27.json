@@ -1,0 +1,120 @@
+{
+  "schema": "mercury-boss-design-authority-v1",
+  "status": "OWNER_APPROVED_DESIGN_PENDING_NATIVE_QA",
+  "authority": "Explicit approval in current conversation; new gameplay design, not a claim that the historical Stage20 R4 gameplay package was finalized.",
+  "baseCheckpoint": "ee8156400ef2d6de1e6ff999529b2759e53d5035",
+  "species": {
+    "name": "Mega Yanmega",
+    "base": "Yanmega",
+    "historicalRosterId": "R0310",
+    "publicSymbolicConstant": "SPECIES_YANMEGA_MEGA",
+    "productionId": null,
+    "types": [
+      "Bug",
+      "Dragon"
+    ],
+    "baseStats": {
+      "hp": 86,
+      "attack": 76,
+      "defense": 101,
+      "specialAttack": 151,
+      "specialDefense": 81,
+      "speed": 120,
+      "total": 615
+    },
+    "primary": {
+      "name": "Sonic Predator",
+      "damageMultiplier": 1.5,
+      "condition": "Damaging sound-based moves or the explicit Dragon Pulse exception; apply once per qualifying move. Dragon Pulse is not reclassified as sound-based."
+    },
+    "innates": [
+      "Speed Boost",
+      "Tinted Lens",
+      "Infiltrator"
+    ],
+    "learnsetAdditions": {
+      "moves": [
+        "Dragon Pulse",
+        "Boomburst",
+        "Snarl"
+      ],
+      "status": "OWNER_APPROVED_SUBJECT_TO_NATIVE_COMPATIBILITY_AND_ACCESSIBILITY",
+      "acquisitionMethods": null,
+      "policy": "Do not alter regular Yanmega's locked data or silently expand its learnset. Resolve legal form/family access before implementation; seek explicit reconciliation if base-family additions are required."
+    },
+    "megaStone": {
+      "name": "Yanmega Mega Stone",
+      "symbolicOnly": true,
+      "productionId": null
+    }
+  },
+  "historicalProtection": {
+    "artwork": "Stage20 R4 owner-approved visual is authoritative; R1-R3 superseded; exact R4 binaries still to recover. No new artwork or substitutions.",
+    "source": "Banished Platinum / Original Megas",
+    "regularYanmega": {
+      "preserve": true,
+      "types": [
+        "Bug",
+        "Flying"
+      ],
+      "baseStats": {
+        "hp": 86,
+        "attack": 76,
+        "defense": 86,
+        "specialAttack": 116,
+        "specialDefense": 56,
+        "speed": 95,
+        "total": 515
+      },
+      "primaryOptions": [
+        "Speed Boost",
+        "Tinted Lens",
+        "Frisk"
+      ],
+      "innates": [
+        "Compound Eyes",
+        "Infiltrator",
+        "Swarm"
+      ]
+    },
+    "references": [
+      "Stage23 integration master 2026-09-13, Mega Yanmega row (Stage20 R4 artwork authority; historical gameplay open)",
+      "MasterPokedex BATCH005 30Families 2026-09-04, locked Yanmega row",
+      "Sprites qa/final-pokedex-roster-reconciliation/DEX_OVERLAYS_06_11.json, R0310"
+    ]
+  },
+  "boss": {
+    "trainer": "Aaron",
+    "assignment": "Historically locked",
+    "approvedMegaMoves": [
+      "Bug Buzz",
+      "Dragon Pulse",
+      "Boomburst",
+      "Protect"
+    ],
+    "movesSubjectToNativeCompatibility": true,
+    "level": 65,
+    "levelStatus": "PROPOSED_NOT_APPROVED",
+    "remainingTeamsStatus": "PROPOSED_NOT_APPROVED",
+    "protectedFieldStatus": "PROPOSED_NOT_APPROVED"
+  },
+  "qa": {
+    "status": "NOT_RUN",
+    "requirements": [
+      "Resolve exact Stage20 R4 artwork binaries and native resource route; no older art fallback",
+      "Validate exact move data, sound flag and Dragon Pulse exception; no double multiplier",
+      "Test Soundproof blocks sound moves but not Dragon Pulse solely due to Sonic Predator",
+      "Test Tinted Lens stacking, immunity preservation, Infiltrator, Speed Boost, innate toggle and Mega activation",
+      "Verify Boomburst ally targeting, legal acquisition and persistence through Mega Evolution; preserve regular Yanmega's approved data",
+      "Test native damage rounding, battle AI, counterplay and all difficulties before implementation acceptance"
+    ]
+  },
+  "constraints": [
+    "Design authority only",
+    "No GitHub Actions",
+    "No main changes",
+    "No playable ROM modifications",
+    "No production IDs",
+    "No changes to historical files or artwork"
+  ]
+}
