@@ -1,0 +1,75 @@
+{
+  "schema": "mercury-boss-design-authority-v1",
+  "status": "OWNER_APPROVED_DESIGN_PENDING_HISTORICAL_RECONCILIATION_AND_NATIVE_QA",
+  "date": "2026-11-27",
+  "authority": "Explicit current conversation approval of both proposed innate sets; preserve all existing primary abilities.",
+  "parentCheckpoint": "78d5076cec5fe318d5072d3ff4696964e1710f9d",
+  "species": [
+    {
+      "name": "Vikavolt",
+      "symbol": "SPECIES_VIKAVOLT",
+      "types": [
+        "Bug",
+        "Electric"
+      ],
+      "historicalPrimaryOptions": [
+        "Levitate"
+      ],
+      "aaronSelectedPrimary": "Levitate",
+      "historicalInnates": [],
+      "approvedInnates": [
+        "Analytic",
+        "Battery",
+        "Electromorphosis"
+      ],
+      "historicalDescription": "Ground immune; Flying moves +25%. Preserve existing Levitate semantics."
+    },
+    {
+      "name": "Araquanid",
+      "symbol": "SPECIES_ARAQUANID",
+      "types": [
+        "Water",
+        "Bug"
+      ],
+      "historicalPrimaryOptions": [
+        "Water Bubble",
+        "Water Absorb"
+      ],
+      "aaronSelectedPrimary": "Water Bubble",
+      "aaronSelectedPrimaryStatus": "PROPOSED_PENDING_TEAM_APPROVAL",
+      "historicalInnates": [],
+      "approvedInnates": [
+        "Water Absorb",
+        "Battle Armor",
+        "Strong Jaw"
+      ],
+      "duplicateAbilityPolicy": "Preserve the Water Absorb primary option; test duplicate effective ability resolution when selected as primary and innate; do not grant duplicate activation or silently replace either slot."
+    }
+  ],
+  "source": {
+    "repo": "lionsprideemb-tech/Mercury-redux-dex",
+    "path": "data/pokedex/source_overlay_04.json.gz.b64",
+    "blob": "bc88ee755bafb16637803a63df885d5326e5923f",
+    "scope": "Recovered September source overlay explicitly lists empty innates for both; later records may supersede. Reconcile prior to runtime changes."
+  },
+  "preserve": [
+    "All historical primary options and species decisions",
+    "Aaron's approved Vikavolt substitution and Levitate selection",
+    "Collective Instinct",
+    "Resonance Chamber",
+    "Mega Yanmega",
+    "All artwork and existing native mechanics"
+  ],
+  "pending": [
+    "Native QA for each ability and innate toggle, duplicate Water Absorb dispatch, interactions, Battery doubles-only support and Analytic timing",
+    "Final team levels, items, natures, EVs, moves and AI remain pending approval",
+    "Vikavolt Energy Ball TM legality and remaining move/item compatibility"
+  ],
+  "constraints": [
+    "Design authority only",
+    "No GitHub Actions",
+    "No main changes",
+    "No playable ROM modifications",
+    "No production IDs"
+  ]
+}
