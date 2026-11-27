@@ -1,0 +1,55 @@
+{
+  "schema": "mercury-boss-design-authority-v1",
+  "status": "OWNER_APPROVED_ROSTER_SUBSTITUTION_PENDING_NATIVE_QA",
+  "authority": "Explicit current conversation approval; no global species changes authorized.",
+  "parent": "ea134b02773d058b4dbf0cf24ab3f7faad861331",
+  "boss": "Aaron",
+  "replace": "Galvantula",
+  "with": "Vikavolt",
+  "difficulties": [
+    "Trainer",
+    "Ace Trainer",
+    "Pro Trainer"
+  ],
+  "selectedPrimary": "Levitate",
+  "proposedLevels": {
+    "Trainer": 61,
+    "Ace Trainer": 63,
+    "Pro Trainer": 65
+  },
+  "proposedBuild": {
+    "item": "Leftovers",
+    "nature": "Modest",
+    "moves": [
+      "Thunderbolt",
+      "Bug Buzz",
+      "Sticky Web",
+      "Energy Ball"
+    ],
+    "status": "PENDING_TEAM_APPROVAL_AND_NATIVE_COMPATIBILITY"
+  },
+  "innates": {
+    "status": "HISTORICAL_RECOVERY_PENDING",
+    "values": null
+  },
+  "preserve": [
+    "Galvantula species design",
+    "Vikavolt species design",
+    "Collective Instinct",
+    "Resonance Chamber",
+    "Mega Yanmega",
+    "Shared player cap rule",
+    "Historical artwork and all species decisions"
+  ],
+  "pending": [
+    "Recover Vikavolt and Araquanid historical ability assignments",
+    "Validate legal move availability and native Levitate interactions",
+    "Finalize full teams"
+  ],
+  "constraints": [
+    "Design authority only",
+    "No GitHub Actions",
+    "No main changes",
+    "No playable ROM modifications"
+  ]
+}
