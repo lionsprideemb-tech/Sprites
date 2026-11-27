@@ -1,0 +1,59 @@
+{
+  "schema": "mercury-boss-field-authority-v1",
+  "status": "OWNER_APPROVED_HIERARCHY_PENDING_NATIVE_QA",
+  "date": "2026-11-27",
+  "authority": "Explicit current owner approval of hierarchy and identical player caps; individual Aaron fields remain in review.",
+  "baseCheckpoint": "22513f6aff4e0569f255110a0b445ef69c13159b",
+  "approved": {
+    "gymLeaders": {
+      "protectedFieldCount": 1
+    },
+    "eliteFour": {
+      "protectedFieldCount": 2,
+      "roles": [
+        "team-wide field",
+        "signature Mega-specific field"
+      ]
+    },
+    "championCynthia": {
+      "protectedFieldCount": "one unique field per Pokémon",
+      "appliesTo": "each member of her selected roster"
+    },
+    "difficulty": {
+      "names": [
+        "Trainer",
+        "Ace Trainer",
+        "Pro Trainer"
+      ],
+      "identicalPlayerLevelCapPerMilestone": true
+    },
+    "preserveHistoricalMechanics": true
+  },
+  "pendingDesign": {
+    "activationTiming": "Team field on battle start; Mega field when Mega evolves; Champion field on first entry of its associated Pokémon; proposed, not separately approved.",
+    "overlap": "Elite Four fields may coexist; Cynthia fields replace rather than accumulate; proposed, not separately approved.",
+    "duration": "Recover existing protected field duration rules; no invented turn counts.",
+    "playerEligibility": "Proposed individual field specifications will define eligible battlers and sides.",
+    "aaron": {
+      "teamField": null,
+      "megaField": null,
+      "status": "INDIVIDUAL_REVIEW_REQUIRED"
+    }
+  },
+  "qa": {
+    "status": "NOT_RUN",
+    "requirements": [
+      "Verify native field ownership, independent timers, protection, expiry and UI messaging",
+      "Verify switch, faint, Mega activation, battle reset and replay/save interactions",
+      "Validate Cynthia per-Pokémon identity and prevent unapproved stacking",
+      "Preserve all existing Gym field mechanics and shared level cap behavior"
+    ]
+  },
+  "constraints": [
+    "Design authority only",
+    "No GitHub Actions",
+    "No main changes",
+    "No playable ROM modifications",
+    "Preserve historical artwork, species and ability decisions"
+  ]
+}
