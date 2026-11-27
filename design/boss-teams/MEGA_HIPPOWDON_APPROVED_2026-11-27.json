@@ -1,0 +1,98 @@
+{
+  "schema": "mercury-boss-design-authority-v1",
+  "status": "OWNER_APPROVED_DESIGN_PENDING_NATIVE_QA",
+  "date": "2026-11-27",
+  "authority": "Explicit owner approval in current conversation; Quicksand supersedes only the historical Mega primary Sand Stream.",
+  "parent": "2df75087446ea1acf348039c31b6e4278c76de03",
+  "species": {
+    "name": "Mega Hippowdon",
+    "base": "Hippowdon",
+    "symbol": "SPECIES_HIPPOWDON_MEGA",
+    "productionId": null,
+    "types": [
+      "Ground",
+      "Rock"
+    ],
+    "stats": {
+      "hp": 108,
+      "atk": 142,
+      "def": 158,
+      "spa": 68,
+      "spd": 102,
+      "spe": 47,
+      "bst": 625
+    },
+    "primary": {
+      "name": "Quicksand",
+      "activation": "Summons a normal sandstorm on entry as Mega Hippowdon or upon Mega Evolution.",
+      "effect": "While the active ability holder is present during sandstorm, each susceptible grounded opponent loses one Speed stage at end of turn.",
+      "exemptions": [
+        "Ground-type",
+        "Rock-type",
+        "Steel-type",
+        "airborne Flying-type",
+        "airborne through Levitate",
+        "airborne through Air Balloon",
+        "Sand Rush",
+        "Sand Force",
+        "Sand Veil"
+      ],
+      "counterplay": "Preserve normal sandstorm immunities and grounded-state rules; Clear Body and other valid stat-drop prevention apply; Contrary reverses stat decrease under existing mechanics. Weather replacement and ability suppression retain normal behavior. Exact weather duration, full immunity predicate and end-turn sequencing require historical reconciliation and native QA.",
+      "historicalPrimary": "Sand Stream"
+    },
+    "innates": [
+      "Solid Rock",
+      "Sand Force",
+      "Stamina"
+    ],
+    "megaStone": "Hippowdonite",
+    "artwork": {
+      "authority": "Owner-approved dedicated Stage20 cement-mixer artwork; historical reviewer R0648",
+      "status": "Exact final Stage20 binary package recovery pending; no regular Hippowdon placeholder or older art substitution."
+    },
+    "regularHippowdon": "Preserve all existing stats, typing, ability options, innates and historical decisions."
+  },
+  "boss": {
+    "name": "Bertha",
+    "specialty": "Ground",
+    "megaMoves": [
+      "Earthquake",
+      "Stone Edge",
+      "Ice Fang",
+      "Slack Off"
+    ],
+    "movesStatus": "OWNER_APPROVED_SUBJECT_TO_NATIVE_COMPATIBILITY",
+    "playerCap": {
+      "value": 67,
+      "status": "PROPOSED_NOT_APPROVED"
+    },
+    "fields": {
+      "team": null,
+      "mega": null,
+      "status": "INDIVIDUAL_REVIEW_REQUIRED"
+    },
+    "teams": "PENDING_REVIEW"
+  },
+  "references": [
+    "MasterPokedex BATCH009 2026-09-04 locked Mega Hippowdon row",
+    "MEGA_INTEGRATION_MASTER_STAGE23 2026-09-13 row 60 Stage20 graphics authority",
+    "Aaron approved team commit 2df75087446ea1acf348039c31b6e4278c76de03"
+  ],
+  "qa": {
+    "status": "NOT_RUN",
+    "requirements": [
+      "Confirm exact historical immunity flags and weather duration; native sandstorm and Quicksand ability ownership on entry, Mega Evolution, switching, fainting, weather replacement and suppression.",
+      "Validate end-of-turn ordering, stage cap, Contrary, stat-drop blocking, grounded changes, both opponent slots in doubles, and no duplicate triggering.",
+      "Preserve Solid Rock, Sand Force, Stamina and regular Hippowdon; test innate toggle and interactions.",
+      "Confirm legal moves, Hippowdonite route, exact artwork package and symbolic resource binding; no production IDs.",
+      "Validate save/replay and native battle behavior."
+    ]
+  },
+  "constraints": [
+    "Design authority only",
+    "No GitHub Actions",
+    "No main changes",
+    "No playable ROM modifications",
+    "Preserve all historical artwork and species decisions except explicitly approved Mega primary replacement"
+  ]
+}
