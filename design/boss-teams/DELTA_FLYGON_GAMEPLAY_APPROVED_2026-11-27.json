@@ -1,0 +1,90 @@
+{
+  "schema": "mercury-boss-design-authority-v1",
+  "status": "OWNER_APPROVED_GAMEPLAY_PENDING_NATIVE_QA_AND_ARTWORK_APPROVAL",
+  "date": "2026-11-27",
+  "authority": "Explicit owner approval of handwritten final-form gameplay and revised Bertha build; no artwork approval or production integration implied.",
+  "parent": "c31013e6acb3b0975cd5df53544dd586c98cbf69",
+  "species": {
+    "name": "Delta Flygon",
+    "form": "Thracean / Desert Scarab",
+    "types": [
+      "Ground",
+      "Bug"
+    ],
+    "stats": {
+      "hp": 100,
+      "atk": 150,
+      "def": 100,
+      "spa": 10,
+      "spd": 120,
+      "spe": 40,
+      "bst": 520
+    },
+    "primary": {
+      "name": "Dust Wings",
+      "effect": "Adds one priority stage to Bug-type moves, including existing positive-priority moves; First Impression retains its normal first-turn eligibility.",
+      "nativeId": null
+    },
+    "innates": [
+      "Dragonize",
+      "Sand Force",
+      "Sand Stream"
+    ],
+    "learnsetAdditions": [
+      "Body Slam",
+      "First Impression",
+      "Leech Life",
+      "Lunge"
+    ],
+    "artwork": {
+      "status": "UNAPPROVED_CANDIDATE_PRESERVED",
+      "policy": "Preserve existing Desert Scarab DS64 candidate and all historical votes. No artwork approval, new artwork, replacement, or production binding."
+    },
+    "productionId": null
+  },
+  "boss": {
+    "name": "Bertha",
+    "difficulty": "Pro Trainer",
+    "replaces": "regular Flygon",
+    "level": 67,
+    "levelStatus": "PENDING_FINAL_TEAM_APPROVAL",
+    "nature": "Adamant",
+    "item": "Assault Vest",
+    "moves": [
+      "First Impression",
+      "Leech Life",
+      "Earthquake",
+      "Body Slam"
+    ],
+    "status": "OWNER_APPROVED_BUILD_PENDING_NATIVE_QA_AND_ARTWORK_APPROVAL"
+  },
+  "family": {
+    "preEvolutions": [
+      "Delta Trapinch",
+      "Delta Vibrava"
+    ],
+    "status": "DESIGN_REVIEW_PENDING",
+    "evolutionRoutes": null
+  },
+  "preserve": [
+    "Regular Trapinch/Vibrava/Flygon species mechanics",
+    "Bertha's Quicksand, Shifting Sands, Erosion and Mega Hippowdon",
+    "All historical decisions and artwork"
+  ],
+  "qa": {
+    "status": "NOT_RUN",
+    "requirements": [
+      "Verify Dust Wings additive priority, effective move typing, First Impression eligibility, switching, priority blocking, ability suppression and innate toggle.",
+      "Verify Dragonize conversion and historical modifier, Sand Force eligible moves, Sand Stream weather, Assault Vest compatibility, move access, native battle AI and replay.",
+      "Reconcile historical family identity and exact existing artwork before assigning any IDs or implementation."
+    ]
+  },
+  "constraints": [
+    "Design authority only",
+    "No GitHub Actions",
+    "No main changes",
+    "No playable ROM modifications",
+    "No production IDs",
+    "Do not approve artwork by implication"
+  ]
+}
