@@ -1,0 +1,64 @@
+{
+  "schema": "mercury-boss-field-authority-v1",
+  "status": "OWNER_APPROVED_DESIGN_PENDING_NATIVE_QA",
+  "date": "2026-11-27",
+  "authority": "Explicit current conversation approval of Shifting Sands and Erosion with proposed activation, independent durations and counterplay.",
+  "parent": "e620af881cffd85de725bbdaee8513e2a599b41b",
+  "boss": "Bertha",
+  "fields": [
+    {
+      "name": "Shifting Sands",
+      "role": "team",
+      "activation": "battle start",
+      "effect": "Ground-type damaging moves treat the Flying-type immunity component as neutral (1x) and bypass Levitate's Ground immunity. Retain all other type multipliers and distinct immunity sources. Applies to either side.",
+      "examples": {
+        "Staraptor": "1x",
+        "Skarmory": "2x",
+        "Rotom-Wash": "1x",
+        "Torterra": "0.5x"
+      },
+      "preserve": [
+        "Air Balloon",
+        "Earth Eater",
+        "other distinct Ground-immunity effects",
+        "Quicksand airborne exemptions",
+        "normal grounded-state rules and unrelated type interactions"
+      ],
+      "duration": "existing protected-field difficulty duration; exact values pending historical recovery",
+      "timer": "independent"
+    },
+    {
+      "name": "Erosion",
+      "role": "Mega-specific",
+      "activation": "Bertha's Mega Hippowdon Mega Evolves",
+      "effect": "At the end of each turn during sandstorm, susceptible active Pokemon on either side lose one Defense stage. Ground, Rock, Steel and Pokemon protected by sandstorm immunity effects are exempt.",
+      "preserve": [
+        "stat-drop prevention and Contrary",
+        "weather replacement",
+        "normal sandstorm effects",
+        "Quicksand independent Speed reduction"
+      ],
+      "duration": "existing protected-field difficulty duration; exact values pending historical recovery",
+      "timer": "independent"
+    }
+  ],
+  "coexistence": "Both fields can coexist until independently expired; no additional stacking or activation inferred.",
+  "preserve": [
+    "Mega Hippowdon approved Quicksand package",
+    "Aaron and previous boss design authority",
+    "all historical species and artwork decisions",
+    "identical player cap across difficulties"
+  ],
+  "pending": [
+    "Bertha roster and proposed cap 67 remain pending approval",
+    "Exact durations and weather immunity predicate",
+    "Native QA of immunity precedence (including multiple immunity sources), type multiplier composition, suppression, grounding, stat-drop prevention, Contrary, end-turn ordering, field expiry, reactivation, doubles, save/replay, UI messaging"
+  ],
+  "constraints": [
+    "Design authority only",
+    "No GitHub Actions",
+    "No main changes",
+    "No playable ROM modifications",
+    "No production IDs"
+  ]
+}
