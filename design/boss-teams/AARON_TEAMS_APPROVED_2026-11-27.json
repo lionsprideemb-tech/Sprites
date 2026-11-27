@@ -1,0 +1,316 @@
+{
+  "schema": "mercury-boss-design-authority-v1",
+  "status": "OWNER_APPROVED_DESIGN_PENDING_HISTORICAL_RECONCILIATION_AND_NATIVE_QA",
+  "authority": "Explicit current conversation approval of final Aaron teams and training/AI scaling; not native implementation.",
+  "parent": "e7ae6ac0e8ac94a3c8abdf30499888d18d49427e",
+  "boss": "Aaron",
+  "specialty": "Bug",
+  "sharedPlayerLevelCap": 65,
+  "teamOrder": {
+    "Trainer": [
+      [
+        "Vespiquen",
+        61
+      ],
+      [
+        "Vikavolt",
+        61
+      ],
+      [
+        "Araquanid",
+        62
+      ],
+      [
+        "Heracross",
+        63
+      ],
+      [
+        "Scizor",
+        64
+      ],
+      [
+        "Mega Yanmega",
+        65
+      ]
+    ],
+    "Ace Trainer": [
+      [
+        "Vikavolt",
+        63
+      ],
+      [
+        "Araquanid",
+        63
+      ],
+      [
+        "Kleavor",
+        64
+      ],
+      [
+        "Heracross",
+        64
+      ],
+      [
+        "Volcarona",
+        65
+      ],
+      [
+        "Mega Yanmega",
+        65
+      ]
+    ],
+    "Pro Trainer": [
+      [
+        "Vikavolt",
+        65
+      ],
+      [
+        "Araquanid",
+        65
+      ],
+      [
+        "Kleavor",
+        65
+      ],
+      [
+        "Scizor",
+        65
+      ],
+      [
+        "Volcarona",
+        65
+      ],
+      [
+        "Mega Yanmega",
+        65
+      ]
+    ]
+  },
+  "builds": {
+    "Vespiquen": {
+      "primary": "Intimidate",
+      "innates": [
+        "Queenly Majesty",
+        "Swarm",
+        "Healer"
+      ],
+      "item": "Leftovers",
+      "nature": "Impish",
+      "proEVs": {
+        "hp": 252,
+        "def": 252,
+        "spd": 4
+      },
+      "moves": [
+        "Attack Order",
+        "Defend Order",
+        "Roost",
+        "Toxic"
+      ]
+    },
+    "Vikavolt": {
+      "primary": "Levitate",
+      "innates": [
+        "Analytic",
+        "Battery",
+        "Electromorphosis"
+      ],
+      "item": "Leftovers",
+      "nature": "Modest",
+      "proEVs": {
+        "hp": 252,
+        "spa": 252,
+        "spd": 4
+      },
+      "moves": [
+        "Thunderbolt",
+        "Bug Buzz",
+        "Sticky Web",
+        "Energy Ball"
+      ]
+    },
+    "Araquanid": {
+      "primary": "Water Bubble",
+      "innates": [
+        "Water Absorb",
+        "Battle Armor",
+        "Strong Jaw"
+      ],
+      "item": "Assault Vest",
+      "nature": "Adamant",
+      "proEVs": {
+        "hp": 252,
+        "atk": 252,
+        "spd": 4
+      },
+      "moves": [
+        "Liquidation",
+        "Leech Life",
+        "Crunch",
+        "Mirror Coat"
+      ]
+    },
+    "Heracross": {
+      "primary": "Guts",
+      "innates": [
+        "Scrappy",
+        "Skill Link",
+        "Mold Breaker"
+      ],
+      "item": "Flame Orb",
+      "nature": "Jolly",
+      "proEVs": {
+        "atk": 252,
+        "spe": 252,
+        "hp": 4
+      },
+      "moves": [
+        "Close Combat",
+        "Pin Missile",
+        "Rock Blast",
+        "Facade"
+      ]
+    },
+    "Scizor": {
+      "primary": "Technician",
+      "innates": [
+        "Bulletproof",
+        "Battle Armor",
+        "Hyper Cutter"
+      ],
+      "item": "Metal Coat",
+      "nature": "Adamant",
+      "proEVs": {
+        "hp": 252,
+        "atk": 252,
+        "spd": 4
+      },
+      "moves": [
+        "Bullet Punch",
+        "U-turn",
+        "Swords Dance",
+        "Roost"
+      ]
+    },
+    "Kleavor": {
+      "primary": "Sharpness",
+      "innates": [
+        "Rock Head",
+        "Tough Claws",
+        "Sturdy"
+      ],
+      "item": "Scope Lens",
+      "nature": "Jolly",
+      "proEVs": {
+        "atk": 252,
+        "spe": 252,
+        "hp": 4
+      },
+      "moves": [
+        "Stone Axe",
+        "X-Scissor",
+        "Night Slash",
+        "Close Combat"
+      ]
+    },
+    "Volcarona": {
+      "primary": "Drought",
+      "innates": [
+        "Flash Fire",
+        "Competitive",
+        "Solar Power"
+      ],
+      "item": "Heavy-Duty Boots",
+      "nature": "Timid",
+      "proEVs": {
+        "spa": 252,
+        "spe": 252,
+        "spd": 4
+      },
+      "moves": [
+        "Quiver Dance",
+        "Fiery Dance",
+        "Bug Buzz",
+        "Giga Drain"
+      ]
+    },
+    "Mega Yanmega": {
+      "primary": "Sonic Predator",
+      "innates": [
+        "Speed Boost",
+        "Tinted Lens",
+        "Infiltrator"
+      ],
+      "item": "Yanmega Mega Stone",
+      "nature": "Modest",
+      "proEVs": {
+        "spa": 252,
+        "spe": 252,
+        "spd": 4
+      },
+      "moves": [
+        "Bug Buzz",
+        "Dragon Pulse",
+        "Boomburst",
+        "Protect"
+      ]
+    }
+  },
+  "training": {
+    "Trainer": {
+      "ivs": 15,
+      "evTotal": 0,
+      "ai": "Standard"
+    },
+    "Ace Trainer": {
+      "ivs": 25,
+      "evTotal": 256,
+      "ai": "Tactical",
+      "exactEVAllocation": "Pending review; no allocation inferred"
+    },
+    "Pro Trainer": {
+      "ivs": 31,
+      "evTotal": 508,
+      "ai": "Advanced",
+      "evAllocation": "Per-species proEVs"
+    }
+  },
+  "ai": {
+    "fairness": "No reading unselected player moves or inaccessible information; predictions use legally observable information",
+    "roles": {
+      "Vikavolt": "Sticky Web and predicted Ground move pivot",
+      "Araquanid": "Fire counter and Water immunity pivot",
+      "Heracross": "Physical wallbreaker",
+      "Scizor": "Physical pressure and priority",
+      "Kleavor": "Stone Axe hazards and Flying counter",
+      "Volcarona": "Safe Quiver Dance opportunities",
+      "Mega Yanmega": "Strategic Protect and Speed Boost, capitalize on Resonance Chamber"
+    },
+    "pro": "Avoid unnecessary Drought interference with Araquanid; preserve tactical counterplay"
+  },
+  "protectedFields": [
+    "Collective Instinct",
+    "Resonance Chamber"
+  ],
+  "references": {
+    "fields": "ea134b02773d058b4dbf0cf24ab3f7faad861331",
+    "mega": "22513f6aff4e0569f255110a0b445ef69c13159b",
+    "hierarchy": "5104fdb9ebac0dce26f2b6c39a23d8d8e4e68567",
+    "substitution": "78d5076cec5fe318d5072d3ff4696964e1710f9d",
+    "innates": "e7ae6ac0e8ac94a3c8abdf30499888d18d49427e"
+  },
+  "pending": [
+    "Recover exact historical protected-field durations",
+    "Confirm move and item compatibility including Energy Ball and legal Mega learnset acquisition",
+    "Resolve exact Ace EV allocation, IV/nature support, held-item duplication policy if any",
+    "Native AI and field/ability integration, damage, toggles, save/replay and battle QA",
+    "Exact Stage20 R4 artwork binaries"
+  ],
+  "constraints": [
+    "Design authority only",
+    "No GitHub Actions",
+    "No main changes",
+    "No playable ROM modifications",
+    "Preserve all historical species and artwork decisions"
+  ]
+}
