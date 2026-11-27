@@ -1,0 +1,42 @@
+{
+  "schema": "mercury-boss-field-authority-v1",
+  "status": "OWNER_APPROVED_DESIGN_PENDING_NATIVE_QA",
+  "authority": "Explicit current conversation approval",
+  "parent": "5104fdb9ebac0dce26f2b6c39a23d8d8e4e68567",
+  "boss": "Aaron",
+  "fields": [
+    {
+      "name": "Collective Instinct",
+      "role": "team",
+      "activation": "battle start",
+      "effect": "For each active Bug-type Pokemon, reduce direct attack damage by 10 percentage points per conscious Bug-type reserve teammate, capped at 30%. Active Pokemon and fainted Pokemon do not count. Applies equally to either side.",
+      "duration": "existing protected-field difficulty duration; exact values pending recovery",
+      "timer": "independent"
+    },
+    {
+      "name": "Resonance Chamber",
+      "role": "Mega-specific",
+      "activation": "Aaron's Mega Yanmega Mega Evolves",
+      "effect": "Damaging sound-based moves and Dragon Pulse lower the target's Special Defense by one stage after successfully dealing damage. Applies equally to either side. Dragon Pulse remains non-sound. Preserve Soundproof, type immunities, stat-drop prevention and existing interactions.",
+      "duration": "existing protected-field difficulty duration; exact values pending recovery",
+      "timer": "independent"
+    }
+  ],
+  "coexistence": "Both fields may be active simultaneously until independently expired.",
+  "preserve": [
+    "Sonic Predator and Mega Yanmega approved specification",
+    "All historical mechanics, species and artwork",
+    "Shared player level cap across Trainer, Ace Trainer, Pro Trainer"
+  ],
+  "pending": [
+    "Aaron's team rosters, levels, other movesets and items not approved by this record",
+    "Exact duration values",
+    "Native QA: ownership, doubles reserve counting, damage rounding, multi-hit event granularity, Substitute and spread targets, existing secondary effects, stat-drop prevention, Soundproof, immunity, expiry and no reactivation exploit"
+  ],
+  "constraints": [
+    "Design authority only",
+    "No GitHub Actions",
+    "No main changes",
+    "No playable ROM modifications"
+  ]
+}
